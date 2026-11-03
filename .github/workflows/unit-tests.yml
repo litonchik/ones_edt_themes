@@ -9,6 +9,16 @@ permissions:
   contents: read
 
 jobs:
+  publication:
+    name: Update site packaging tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - run: python3 -m unittest discover -s tests/publication -v
+
   model:
     name: Java 17 model tests
     runs-on: ubuntu-latest

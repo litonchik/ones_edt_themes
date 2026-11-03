@@ -4,13 +4,14 @@
 
 - [Установка, настройка, восстановление и удаление](user-guide.md).
 - [История версий](../CHANGELOG.md).
-- [Совместимость и ограничения 0.1.15](testing/visual-studio-dark-validation.md).
+- [Совместимость и ограничения 0.1.16](testing/edt-2026-compatibility-validation.md).
+- [Первый публичный релиз 0.1.16](releases/0.1.16.md).
 
 ## Для разработчика
 
 - [Участие в разработке и сборка](../CONTRIBUTING.md).
 - [Среда разработки: факты и история исследования](development-environment.md).
-- [Подготовка GitHub Releases](releasing.md).
+- [Подготовка GitHub Releases и сайта обновлений](releasing.md).
 - [Проверка подготовки репозитория](testing/repository-preparation.md).
 - [Съёмка галереи палитр для README](testing/readme-gallery-validation.md).
 - [Настройки EDT и native targets](reference/edt-2026.1-settings.md).

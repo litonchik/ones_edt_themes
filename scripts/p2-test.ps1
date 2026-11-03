@@ -2,6 +2,7 @@
 param(
     [ValidateSet('Install','Uninstall','Audit')][string]$Action = 'Install',
     [string]$Zip = '',
+    [string]$RepositoryUrl = '',
     [string]$EdtCopy = '',
     [string]$JavaHome = 'C:\Program Files\Axiom\AxiomJDK-Pro-17-Full',
     [string]$WorkRoot = ''
@@ -42,9 +43,17 @@ $minimal = Get-Content -LiteralPath $info | Where-Object {$_ -notmatch '^#|^(com
 ) | Set-Content -Encoding utf8 (Join-Path $config 'config.ini')
 $arguments = @("-Duser.home=$testHome","-Djava.io.tmpdir=$taskTemp","-Djdk.net.unixdomain.tmpdir=$taskTemp",'-Xms80m','-Xmx4096m','-jar',$launcher.FullName,'-install',$copy,'-configuration',$config,'-data',(Join-Path $work 'workspace'),'-nosplash','-application','org.eclipse.equinox.p2.director','-destination',$copy,'-profile','DefaultProfile','-bundlepool',$copy,'-roaming','-p2.os','win32','-p2.ws','win32','-p2.arch','x86_64','-consolelog')
 if ($Action -eq 'Install') {
-    if (-not $Zip) { $Zip = Join-Path $projectRoot 'dist/edt-themes-0.1.16.zip' }
-    $zipPath = (Resolve-Path -LiteralPath $Zip).Path
-    $arguments += @('-repository',('jar:'+([uri]$zipPath).AbsoluteUri+'!/'),'-installIU','ru.litonchik.edt.themes.feature.feature.group')
+    if ($RepositoryUrl) {
+        if ($Zip) { throw 'Укажите только Zip или RepositoryUrl' }
+        $siteUri = [uri]$RepositoryUrl
+        if (-not $siteUri.IsAbsoluteUri -or $siteUri.Scheme -ne 'https') { throw 'Нужен абсолютный HTTPS URL p2-репозитория' }
+        $repository = $siteUri.AbsoluteUri
+    } else {
+        if (-not $Zip) { $Zip = Join-Path $projectRoot 'dist/edt-themes-0.1.16.zip' }
+        $zipPath = (Resolve-Path -LiteralPath $Zip).Path
+        $repository = 'jar:'+([uri]$zipPath).AbsoluteUri+'!/'
+    }
+    $arguments += @('-repository',$repository,'-installIU','ru.litonchik.edt.themes.feature.feature.group')
     if (Select-String -LiteralPath $info -Pattern '^ru\.litonchik\.edt\.themes,' -Quiet) {
         $arguments += @('-uninstallIU','ru.litonchik.edt.themes.feature.feature.group')
     }
