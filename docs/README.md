@@ -14,6 +14,7 @@
 - [Подготовка GitHub Releases и сайта обновлений](releasing.md).
 - [Проверка подготовки репозитория](testing/repository-preparation.md).
 - [Съёмка галереи палитр для README](testing/readme-gallery-validation.md).
+- [Публикация релиза и проверка установки по URL](testing/update-site-validation.md).
 - [Настройки EDT и native targets](reference/edt-2026.1-settings.md).
 - [Редактор 17 ролей](reference/palette-editor.md).
 - [Шрифт кода](reference/code-font.md).

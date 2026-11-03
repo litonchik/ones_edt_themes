@@ -1,0 +1,101 @@
+WARNING: Using incubator modules: jdk.incubator.vector, jdk.incubator.foreign
+Configuration location:
+    file:/C:/Users/litonchik/Documents/Codex/edt_themes/.work/edt-test/configuration/
+Configuration file:
+    file:/C:/Users/litonchik/Documents/Codex/edt_themes/.work/edt-test/configuration/config.ini loaded
+Install location:
+    file:/C:/Users/litonchik/Documents/Codex/edt_themes/.work/edt-test/
+Framework located:
+    file:/C:/Users/litonchik/Documents/Codex/edt_themes/.work/edt-test/plugins/org.eclipse.osgi_3.18.600.v20231110-1900.jar
+Loading extension: reference:file:com.e1c.openjfx.swt.compat_17.0.3.jar
+	eclipse.properties not found
+Loading extension: reference:file:org.eclipse.equinox.weaving.hook_1.4.0.v20231130-2312.jar
+	eclipse.properties not found
+Loading extension: reference:file:org.eclipse.fx.osgi_3.9.0.202210162353.jar
+	eclipse.properties not found
+Loading extension: reference:file:org.eclipse.osgi.compatibility.state_1.2.900.v20231106-0859.jar
+	eclipse.properties not found
+Loading extension: reference:file:org.eclipse.osgi.nl_ru_4.23.0.v20230221055001.jar
+	eclipse.properties not found
+Framework classpath:
+    file:/C:/Users/litonchik/Documents/Codex/edt_themes/.work/edt-test/plugins/org.eclipse.osgi_3.18.600.v20231110-1900.jar
+    file:/C:/Users/litonchik/Documents/Codex/edt_themes/.work/edt-test/plugins/
+    file:/C:/Users/litonchik/Documents/Codex/edt_themes/.work/edt-test/plugins/com.e1c.openjfx.swt.compat_17.0.3.jar
+    file:/C:/Users/litonchik/Documents/Codex/edt_themes/.work/edt-test/plugins/org.eclipse.equinox.weaving.hook_1.4.0.v20231130-2312.jar
+    file:/C:/Users/litonchik/Documents/Codex/edt_themes/.work/edt-test/plugins/org.eclipse.fx.osgi_3.9.0.202210162353.jar
+    file:/C:/Users/litonchik/Documents/Codex/edt_themes/.work/edt-test/plugins/org.eclipse.osgi.compatibility.state_1.2.900.v20231106-0859.jar
+    file:/C:/Users/litonchik/Documents/Codex/edt_themes/.work/edt-test/plugins/org.eclipse.osgi.nl_ru_4.23.0.v20230221055001.jar
+Debug options:
+    file:/C:/Users/litonchik/Documents/Codex/ones_edt_theme_plugin/.options not found
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+!SESSION 2026-11-03 11:55:26.868 -----------------------------------------------
+eclipse.buildId=2026.1.3.25
+java.version=17.0.18
+java.vendor=Axiom JSC
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ru_RU
+Framework arguments:  -application ru.litonchik.edt.themes.probe.probe
+Command-line arguments:  -data C:\Users\litonchik\Documents\Codex\edt_themes\.work\url-runtime\workspace-probe -clean -application ru.litonchik.edt.themes.probe.probe -consolelog
+
+!ENTRY org.eclipse.core.resources 2 10035 2026-11-03 11:55:43.248
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+Warning: NLS unused message: InputStreamMonitor_label in: org.eclipse.debug.internal.core.DebugCoreMessages
+Warning: NLS unused message: OutputStreamMonitor_label in: org.eclipse.debug.internal.core.DebugCoreMessages
+
+!ENTRY com._1c.g5.v8.dt.core 1 0 2026-11-03 11:55:47.797
+!MESSAGE java.vm.name=OpenJDK 64-Bit Server VM
+
+!ENTRY com._1c.g5.v8.dt.core 1 0 2026-11-03 11:55:47.807
+!MESSAGE java.vm.info=mixed mode, sharing
+
+!ENTRY com._1c.g5.v8.dt.platform.services.core 2 0 2026-11-03 11:55:56.363
+!MESSAGE Error occured while searching web servers
+!STACK 0
+java.io.IOException: Cannot run program "wmic": CreateProcess error=2, �� ������� ����� ��������� ����
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1143)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1073)
+	at com._1c.g5.v8.dt.platform.services.core.webservers.ApacheWmicLookup.findApacheExcecutorLocations(ApacheWmicLookup.java:28)
+	at com._1c.g5.v8.dt.platform.services.core.webservers.AbstractWindowsApacheLookup.lookup(AbstractWindowsApacheLookup.java:40)
+	at com._1c.g5.v8.dt.internal.platform.services.core.webservers.WebServerManager.search(WebServerManager.java:277)
+	at com._1c.g5.v8.dt.internal.platform.services.core.webservers.WebServerManager.getWebServersResource(WebServerManager.java:203)
+	at com._1c.g5.v8.dt.internal.platform.services.core.webservers.WebServerManager.getAll(WebServerManager.java:169)
+	at com._1c.g5.v8.dt.internal.platform.services.core.webservers.WebServerManager.getAll(WebServerManager.java:162)
+	at com._1c.g5.v8.dt.internal.platform.services.core.webservers.WebServerManager.activate(WebServerManager.java:108)
+	at com._1c.g5.wiring.ManagedServicesSupport.activateManagedService(ManagedServicesSupport.java:40)
+	at com._1c.g5.internal.wiring.InjectorAwareManagedServiceRegistrationBuilder.prepareInstance(InjectorAwareManagedServiceRegistrationBuilder.java:61)
+	at com._1c.g5.internal.wiring.InjectorAwareManagedServiceRegistrationBuilder.prepareInstance(InjectorAwareManagedServiceRegistrationBuilder.java:1)
+	at com._1c.g5.internal.wiring.InjectorAwareServiceRegistrationBuilder.registerInjected(InjectorAwareServiceRegistrationBuilder.java:81)
+	at com._1c.g5.internal.wiring.InjectorAwareServiceRegistrationBuilder.registerInjected(InjectorAwareServiceRegistrationBuilder.java:63)
+	at com._1c.g5.v8.dt.internal.platform.services.core.PlatformServicesCore.lambda$8(PlatformServicesCore.java:481)
+	at com._1c.g5.internal.wiring.WiringPlugin$InitializationContext.lambda$0(WiringPlugin.java:329)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.io.IOException: CreateProcess error=2, �� ������� ����� ��������� ����
+	at java.base/java.lang.ProcessImpl.create(Native Method)
+	at java.base/java.lang.ProcessImpl.<init>(ProcessImpl.java:505)
+	at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:158)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1110)
+	... 19 more
+WARNING: Annotation classes from the 'javax.inject' or 'javax.annotation' package found.
+It is recommended to migrate to the corresponding replacements in the jakarta namespace.
+The Eclipse E4 Platform will remove support for those javax-annotations in a future release.
+To suppress this warning, set the VM property: -Declipse.e4.inject.javax.warning=false
+To disable processing of 'javax' annotations entirely, set the VM property: -Declipse.e4.inject.javax.disabled=true
+
+
+!ENTRY com.company1c.link.ide.edt 1 0 2026-11-03 11:55:58.092
+!MESSAGE iLOG: 1C:Link addon is initializing. Web config state is in C:\Users\litonchik\Documents\Codex\edt_themes\.work\url-runtime\workspace-probe\.metadata\.plugins\com.company1c.link.ide.edt
+Warning: NLS unused message: TextSearchVisitor_progress_updating_job in: org.eclipse.search.internal.ui.SearchMessages
+
+!ENTRY org.eclipse.ui.navigator 4 0 2026-11-03 11:56:01.023
+!MESSAGE An extension already exists with id "org.eclipse.wst.server.ui.ServersView.content.root".
+Warning: NLS unused message: GitPreferenceRoot_MergeGroupHeader in: org.eclipse.egit.ui.internal.uitext
+Warning: NLS unused message: GitPreferenceRoot_MergeMode_0_Label in: org.eclipse.egit.ui.internal.uitext
+Warning: NLS unused message: GitPreferenceRoot_MergeModeLabel in: org.eclipse.egit.ui.internal.uitext
+Warning: NLS unused message: BlockedJobsDialog_UserInterfaceTreeElement in: org.eclipse.ui.internal.progress.messages
+
+!ENTRY org.eclipse.e4.ui.workbench.swt 1 0 2026-11-03 11:56:08.480
+!MESSAGE Saving dialog settings

@@ -1,0 +1,15 @@
+JVM 17.0.18
+PASS cleanup restores test settings
+PASS cleanup cleared test personal keys darcula
+PASS cleanup cleared test personal keys monokai
+PASS cleanup cleared test personal keys one-dark-pro
+PASS cleanup cleared test personal keys dracula
+PASS cleanup cleared test personal keys github-dark-default
+PASS cleanup cleared test personal keys winter-is-coming-dark-blue
+PASS cleanup cleared test personal keys night-owl
+PASS cleanup cleared test personal keys ayu-dark
+PASS cleanup cleared test personal keys shades-of-purple
+PASS cleanup cleared test personal keys noctis-minimus
+PASS cleanup cleared test personal keys visual-studio-dark-cpp
+PASS cleanup journal empty
+PASS cleanup active profile cleared

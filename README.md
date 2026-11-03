@@ -66,6 +66,7 @@ Darcula и Dracula — разные схемы. Цвета адаптирова�
 
 Для 0.1.16 выполнены **79 unit tests**; результаты проверки трёх EDT, QL/DCS и семантических цветов:
 [отчёт и границы проверки](docs/testing/edt-2026-compatibility-validation.md).
+[Проверка публикации и установки по URL](docs/testing/update-site-validation.md).
 
 ## Разработка
 

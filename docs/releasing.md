@@ -50,6 +50,9 @@
 Адрес: <https://litonchik.github.io/ones_edt_themes/repository/>.
 
 В Settings → Pages источником публикации выбран **GitHub Actions**.
+Для окружения `github-pages` разрешены ветка `main` и теги `v*`:
+событие публикации релиза использует ref тега. Стандартное правило только для
+`main` блокирует deploy job релизного workflow.
 Workflow `Publish update site` запускается после публикации стабильного релиза
 либо вручную через Actions → Run workflow. Он всегда выбирает последний
 стабильный релиз GitHub, поэтому повторный запуск старого события не выбирает

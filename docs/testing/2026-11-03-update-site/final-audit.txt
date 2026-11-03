@@ -1,0 +1,1 @@
+PASS base inventory unchanged: 1267 ID/version pairs; no theme/probe bundles registered
