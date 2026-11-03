@@ -1,0 +1,338 @@
+/* Based on file "e4-dark_partstyle.css" from "org.eclipse.ui.themes" plugin */
+
+/* ################################ CSS for .MParts ########################## */
+
+.MPart {
+    font-family: '#org-eclipse-ui-workbench-TAB_TEXT_FONT';
+    background-color: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR';
+    color: '#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR';
+}
+
+.MPart.busy {
+    font-style: italic;
+}
+
+.MPart.highlighted {
+    font-weight: bold;
+}
+
+.MPart Composite,
+.MPart Composite > *,
+.MPart Composite > * > *,
+.MPart Label,
+.MPart ScrolledForm,
+.MPart Form,
+.MPart Section,
+.MPart ExpandableComposite,
+.MPart FormText,
+.MPart Link,
+.MPart Sash,
+.MPart Button,
+.MPart Group,
+.MPart SashForm,
+.MPart PageSiteComposite,
+.MPart DependenciesComposite,
+.MPart Text[style~='SWT.READ_ONLY'],
+.MPart FigureCanvas,
+.MPart ListEditorComposite,
+.MPart ScrolledComposite,
+.Mpart ScrolledComposite ProgressInfoItem,
+.MPart Form ScrolledPageBook,
+.MPart DependenciesComposite > SashForm > Section > * { /* Section > DependenciesComposite$... */
+    background-color: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR';
+    color: '#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR';
+}
+
+.MPart Section > Label,
+.MPart SubSection > Label,
+.MPart ObjectsSection > Label,
+.MPart RightsExtensionObjectSection > Label,
+.MPart RestrictionAccessSection > Label,
+.MPart MainSection > Label,
+.MPart AllTemplatesSection > Label,
+.MPart ExpandableComposite > Label,
+.MPart CommandsSection > Label,
+.MPart SubsystemsSection > Label {
+    background-color: inherit;
+    color: '#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR_TITLE';
+}
+
+.MPart Table,
+.MPart Browser,
+.Mpart OleFrame,
+.MPart ViewForm,
+.MPart ViewForm > CLabel,
+.MPart PageBook > Label,
+.MPart PageBook > SashForm {
+    background-color: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR';
+    color: '#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR';
+}
+
+.MPart DatePicker,
+.MPart DatePicker > Text,
+.MPart ScheduleDatePicker,
+.MPart ScheduleDatePicker > Text,
+.MPart CCombo,
+.MPart Spinner,
+.MPart Composite > StyledText,
+.MPart PageBook > SashForm Label,
+.MPart SashForm > Text[style~='SWT.BORDER'] {
+    background-color: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR';
+    color: '#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR';
+}
+
+.MPart FormHeading,
+.MPart FormHeading > TitleRegion,
+.MPart FormHeading > TitleRegion > Label,
+.MPart FormHeading > TitleRegion > StyledText {
+    background-color: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR_PAGE_TITLE';
+    color: '#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR_PAGE_TITLE';
+}
+
+.MPart FormHeading,
+.MPart FormHeading > TitleRegion {
+    swt-background-mode: none;
+}
+
+.MPart FormHeading > CLabel {
+    background-color: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR_PAGE_TITLE';
+}
+
+.MPartFormHeaderCLabelError {
+    color:'#org-eclipse-ui-workbench-FORM_HEADING_ERROR_COLOR';
+}
+
+.MPartFormHeaderCLabelWarning {
+    color:'#org-eclipse-ui-workbench-FORM_HEADING_WARNING_COLOR';
+}
+
+.MPartFormHeaderCLabelInfo {
+    color:'#org-eclipse-ui-workbench-FORM_HEADING_INFO_COLOR';
+}
+
+.MPartSashContainer {
+    background-color: '#com-_1c-g5-v8-dt-theming-ui-INACTIVE_PART_BACKGROUND_COLOR';
+    color:'#org-eclipse-ui-workbench-INACTIVE_TAB_SELECTED_TEXT_COLOR';
+}
+
+/* ------------------------------------------------------------- */
+
+#org-eclipse-jdt-ui-SourceView StyledText,
+#org-eclipse-wst-jsdt-ui-SourceView StyledText {
+    background-color: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR';
+}
+
+/* ------------------------------------------------------------- */
+
+#org-eclipse-ui-console-ConsoleView .MPart > Composite,
+#org-eclipse-ui-console-ConsoleView .MPart StyledText,
+#org-eclipse-ui-console-ConsoleView .MPart PageBook Label {
+    background-color: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR';
+    color: '#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR';
+}
+
+/* ------------------- Module Page Styles  --------------------- */
+
+#org-eclipse-e4-ui-compatibility-editor Canvas {
+    background-color: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR';
+}
+
+#org-eclipse-e4-ui-compatibility-editor Canvas > * {
+    background-color: '#com-_1c-g5-v8-dt-theming-ui-CONTROLS_BACKGROUND_COLOR';
+}
+
+#org-eclipse-e4-ui-compatibility-editor LayoutCanvas {
+    background-color: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR';
+    color: '#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR';
+}
+
+/* ################################ Styles for 1C components ########################## */
+
+.MPart PageBook > Label,
+.MPart Tree,
+.MPartStack.active .MPart PageBook > Label,
+.MPartStack.active .MPart Tree {
+    background-color: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR';
+    color: '#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR';
+}
+
+.Mpart Grid,
+.MPart DtLabel,
+.MPart PaletteColor,
+.MPart DtLayoutComposite,
+.MPart DtComparisonView,
+.MPart PropertiesScrolledComposite,
+.MPart PropertiesScrolledForm,
+.MPart SubsystemsSection,
+.MPart CommandsSection,
+.MPart ObjectsSection,
+.MPart ObjectsSection Link,
+.MPart RightsExtensionObjectSection,
+.MPart RightsExtensionObjectSection Link,
+.MPart RightsExtensionObjectSection,
+.MPart RestrictionAccessSection,
+.MPart HpwaEditorTemplateSection,
+.MPart HpwaEditorFormSection,
+.MPart HpwaEditor-HpwaEditorButtonsPanel,
+.MPart RoleDescriptionSection,
+.MPart RoleDescriptionSection Button,
+.MPart RestrictionTemplatesSection,
+.MPart AppearanceTemplateEditorExampleSection,
+.MPart AppearanceTemplateEditorAppearanceSection,
+.MPart AppearanceTemplateEditorAreasSection,
+.MPart DtLayoutComposite > Table > CCombo,
+.MPart ProgressInfoItem,
+.MPart DtComparisonView,
+.MPart DtComparisonView  Label,
+.MPart ProgressMonitorPart,
+.MPart Browser,
+.MPart AllTemplatesSection {
+    background-color: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR';
+    color: '#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR';
+
+    background-color-titlebar: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR_TITLE';
+    background-color-gradient-titlebar: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR_TITLE';
+    border-color-titlebar: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR_TITLE';
+    swt-titlebar-color: '#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR_TITLE';
+    tb-toggle-hover-color: '#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR_TITLE';
+    tb-toggle-color: '#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR_TITLE';
+}
+
+.MPartStack.active .Mpart Grid,
+.MPartStack.active .MPart DtLabel,
+.MPartStack.active .MPart PaletteColor,
+.MPartStack.active .MPart DtLayoutComposite,
+.MPartStack.active .MPart DtComparisonView,
+.MPartStack.active .MPart PropertiesScrolledComposite,
+.MPartStack.active .MPart PropertiesScrolledForm,
+.MPartStack.active .MPart SubsystemsSection,
+.MPartStack.active .MPart CommandsSection,
+.MPartStack.active .MPart ObjectsSection,
+.MPartStack.active .MPart ObjectsSection Link,
+.MPartStack.active .MPart RightsExtensionObjectSection,
+.MPartStack.active .MPart RightsExtensionObjectSection Link,
+.MPartStack.active .MPart RightsExtensionObjectSection,
+.MPartStack.active .MPart RestrictionAccessSection,
+.MPartStack.active .MPart HpwaEditorTemplateSection,
+.MPartStack.active .MPart HpwaEditorFormSection,
+.MPartStack.active .MPart HpwaEditor-HpwaEditorButtonsPanel,
+.MPartStack.active .MPart RoleDescriptionSection,
+.MPartStack.active .MPart RoleDescriptionSection Button,
+.MPartStack.active .MPart RestrictionTemplatesSection,
+.MPartStack.active .MPart AppearanceTemplateEditorExampleSection,
+.MPartStack.active .MPart AppearanceTemplateEditorAppearanceSection,
+.MPartStack.active .MPart AppearanceTemplateEditorAreasSection,
+.MPartStack.active .MPart DtLayoutComposite > Table > CCombo,
+.MPartStack.active .MPart ProgressInfoItem,
+.MPartStack.active .MPart DtComparisonView,
+.MPartStack.active .MPart DtComparisonView  Label,
+.MPartStack.active .MPart ProgressMonitorPart,
+.MPartStack.active .MPart Browser,
+.MPartStack.active .MPart AllTemplatesSection {
+    background-color: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR';
+    color: '#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR';
+
+    background-color-titlebar: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR_TITLE';
+    background-color-gradient-titlebar: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR_TITLE';
+    border-color-titlebar: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR_TITLE';
+    swt-titlebar-color: '#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR_TITLE';
+    tb-toggle-hover-color: '#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR_TITLE';
+    tb-toggle-color: '#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR_TITLE';
+}
+
+.MPart Form Tree,
+.MPart Form Table,
+.MPartStack.active .MPart Form Tree,
+.MPartStack.active .MPart Form Table {
+    background-color: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR_TREES_AND_TABLES';
+    color: '#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR';
+}
+
+.MPart SearchBox,
+.MPart ContextSearchBox,
+.MPartStack.active .MPart SearchBox,
+.MPartStack.active .MPart ContextSearchBox {
+    background-color: '#com-_1c-g5-v8-dt-theming-ui-CONTROLS_BACKGROUND_COLOR';
+    color: '#com-_1c-g5-v8-dt-theming-ui-CONTROLS_FOREGROUND_COLOR';
+}
+
+.MPart FigureCanvas,
+.MPartStack.active .MPart FigureCanvas {
+    color: #000000;
+}
+
+.MPart DtLayoutComposite Text,
+.MPart Form DtLayoutComposite StyledText,
+.MPartStack.active .MPart DtLayoutComposite Text,
+.MPartStack.active .MPart Form DtLayoutComposite StyledText {
+    background-color: '#com-_1c-g5-v8-dt-theming-ui-CONTROLS_BACKGROUND_COLOR';
+}
+
+.Mpart MoxelControl,
+.MPartStack.active .MPart MoxelControl {
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+.MPart Section > ToolBar,
+.MPart SubSection > ToolBar,
+.MPart ObjectsSection > ToolBar,
+.MPart RightsExtensionObjectSection > ToolBar,
+.MPart RestrictionAccessSection > ToolBar,
+.MPart MainSection > ToolBar,
+.MPart AllTemplatesSection > ToolBar,
+.MPart ExpandableComposite > ToolBar,
+.MPart RestrictionTemplatesSection > ToolBar,
+.MPart CommandsSection > ToolBar,
+.MPart SubsystemsSection > ToolBar,
+.MPart SyntaxAssistDescriptionPanel > ToolBar,
+.MPartStack.active .MPart SyntaxAssistDescriptionPanel > ToolBar,
+.MPart SyntaxAssistDescriptionPanel > ToolBar > ToolItem,
+.MPartStack.active .MPart SyntaxAssistDescriptionPanel > ToolBar > ToolItem,
+.MPart SyntaxAssistBrowserSearchBar > ToolBar,
+.MPartStack.active .MPart SyntaxAssistBrowserSearchBar > ToolBar,
+.MPart SyntaxAssistBrowserSearchBar > ToolBar > ToolItem,
+.MPartStack.active .MPart SyntaxAssistBrowserSearchBar > ToolBar > ToolItem {
+    background-color: inherit;
+    color: '#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR_TITLE';
+}
+
+.MPart ToolBar,
+.MPartStack.active .MPart ToolBar,
+.MPart ToolBar > ToolItem,
+.MPartStack.active .MPart ToolBar > ToolItem {
+    background-color: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR_TITLE';
+    color: '#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR_TITLE';
+}
+
+/* Styles for Scheduled Jobs */
+.MPart DtLayoutComposite Text,
+.MPart DtLayoutComposite Spinner,
+.MPart DtLayoutComposite ValueComboChooser,
+.MPart DtLayoutComposite ValueComboChooser > *,
+.MPart DtLayoutComposite ValueComboChooser > * > *,
+.MPart ScheduleControl-TimeChooserComboEx Button,
+.MPart ScheduleControl-TimeChooserComboEx Text,
+.MPart ScheduleControl-DateChooserComboEx Button,
+.MPart ScheduleControl-DateChooserComboEx Text,
+.MPartStack.active .MPart ScheduleControl-TimeChooserComboEx Button,
+.MPartStack.active .MPart ScheduleControl-DateChooserComboEx Button {
+    background-color: '#com-_1c-g5-v8-dt-theming-ui-CONTROLS_BACKGROUND_COLOR';
+    color: '#com-_1c-g5-v8-dt-theming-ui-CONTROLS_FOREGROUND_COLOR';
+}
+.MPart Form ScheduleControl DtLayoutComposite StyledText,
+.MPartStack.active .MPart Form ScheduleControl DtLayoutComposite StyledText {
+    background-color: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR';
+    color: '#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR';
+}
+
+.MPart Hyperlink,
+.MPart ImageHyperlink {
+    color: '#org-eclipse-ui-workbench-LINK_COLOR';
+}
+
+/* Styles for Adopted form's status bar */
+.MPart #com-_1c-g5-v8-dt-internal-form-ui-extension-editor-StatusBarComposite,
+.MPart #com-_1c-g5-v8-dt-internal-form-ui-extension-editor-StatusBarComposite > Label {
+    background-color: #695500;
+}

@@ -1,0 +1,65 @@
+/* Change search highlight color */
+/* Should rewrite all preferences because of how css preferences works */
+IEclipsePreferences#org-eclipse-ui-workbench:com-_1c-g5-v8-dt-theming-ui {
+	preferences:
+		'ACTIVE_HYPERLINK_COLOR=117,190,255'
+		'CONFLICTING_COLOR=240,15,66'
+		'CONTENT_ASSIST_BACKGROUND_COLOR=46,52,56'
+        'CONTENT_ASSIST_FOREGROUND_COLOR=233,235,237'
+        'COUNTER_COLOR=0,208,255'
+        'DECORATIONS_COLOR=181,152,86'
+        'EDITION_COLOR=0,0,0'
+        'ERROR_COLOR=247,68,117'
+        'HYPERLINK_COLOR=0,151,251'
+        'INCOMING_COLOR=31,179,235'
+        'OUTGOING_COLOR=235,237,239'
+        'RESOLVED_COLOR=104,203,16'
+        'org.eclipse.ui.workbench.INFORMATION_BACKGROUND=236,235,236'
+        'org.eclipse.ui.workbench.INFORMATION_FOREGROUND=0,0,0'
+		'org.eclipse.ui.workbench.HOVER_BACKGROUND=236,235,236'
+		'org.eclipse.ui.workbench.HOVER_FOREGROUND=0,0,0'
+        'org.eclipse.ui.workbench.FORM_HEADING_ERROR_COLOR=255,0,0'
+        'org.eclipse.ui.workbench.FORM_HEADING_INFO_COLOR=0,0,0'
+        'org.eclipse.ui.workbench.FORM_HEADING_WARNING_COLOR=128,128,0'
+        'org.eclipse.search.ui.match.highlight=73,83,90'
+        'org.eclipse.ui.editors.rangeIndicatorColor=179,215,255'
+        'org.eclipse.jface.REVISION_NEWEST_COLOR=185,124,52'
+        'org.eclipse.jface.REVISION_OLDEST_COLOR=30,30,30'
+}
+
+IEclipsePreferences#org-eclipse-ui-editors:com-_1c-g5-v8-dt-theming-ui {
+    preferences:
+        'AbstractTextEditor.Color.Background=30,30,30'
+        'AbstractTextEditor.Color.Background.SystemDefault=false'
+        'AbstractTextEditor.Color.FindScope=66,68,69'
+        'AbstractTextEditor.Color.Foreground=228,228,228'
+        'AbstractTextEditor.Color.Foreground.SystemDefault=false'
+        'AbstractTextEditor.Color.SelectionBackground=80,80,80'
+        'AbstractTextEditor.Color.SelectionBackground.SystemDefault=false'
+        'AbstractTextEditor.Color.SelectionForeground=228,228,228'
+        'AbstractTextEditor.Color.SelectionForeground.SystemDefault=false'
+        'currentLineColor=40,40,40'
+        'hyperlinkColor=0,151,251'
+        'hyperlinkColor.SystemDefault=false'
+        'lineNumberColor=181,181,181'
+        'printMarginColor=208,208,208'
+}
+
+IEclipsePreferences#com-_1c-g5-lwt {
+    preferences:
+        'com._1c.g5.lwt.controlsStyle=CLASSIC'
+}
+
+IEclipsePreferences#com-_1c-g5-v8-dt-theming-ui {
+    preferences:
+        'com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_TRACK_COLOR=23,23,23'
+        'com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_ARROW_COLOR=103,103,103'
+        'com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_ARROW_HOVER_COLOR=103,103,103'
+        'com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_ARROW_ACTIVE_COLOR=23,23,23'
+        'com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_CORNER_COLOR=56,56,56'
+        'com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_THUMB_COLOR=77,77,77'
+        'com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_THUMB_HOVER_COLOR=122,122,122'
+        'com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_THUMB_ACTIVE_COLOR=166,166,166'
+        'com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_BUTTON_HOVER_COLOR=55,55,55'
+        'com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_BUTTON_ACTIVE_COLOR=166,166,166'
+}

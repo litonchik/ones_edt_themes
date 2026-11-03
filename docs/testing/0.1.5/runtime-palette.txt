@@ -1,0 +1,325 @@
+JVM 17.0.18
+PASS font preference page exists
+PASS font size selector exists
+PASS palette role editor exists
+PASS all 17 palette roles visible
+PASS HEX exists for editor.background
+PASS HEX exists for text
+PASS HEX exists for panel
+PASS HEX exists for border
+PASS HEX exists for selection.background
+PASS HEX exists for selection.text
+PASS HEX exists for line
+PASS HEX exists for comment
+PASS HEX exists for keyword
+PASS HEX exists for string
+PASS HEX exists for number
+PASS HEX exists for directive
+PASS HEX exists for accent
+PASS HEX exists for error
+PASS HEX exists for warning
+PASS HEX exists for disabled
+PASS HEX exists for hover
+PASS local code preview uses draft keyword RGB {18, 52, 86}
+PASS draft background updates local code preview
+PASS local code preview uses draft keyword RGB {171, 205, 239}
+PASS switching profiles keeps Darcula draft
+PASS switching profiles keeps Monokai draft
+PASS pending palette keeps native SettingKey[scope=theme, node=css, key=id]
+PASS pending palette keeps native SettingKey[scope=theme, node=legacy, key=id]
+PASS pending palette keeps native SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Builtin function.color]
+PASS pending palette keeps native SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.BSL_Keywords.color]
+PASS pending palette keeps native SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Comment.color]
+PASS pending palette keeps native SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Operators.color]
+PASS pending palette keeps native SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Others.color]
+PASS pending palette keeps native SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Preprocessor.color]
+PASS pending palette keeps native SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Brackets.color]
+PASS pending palette keeps native SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Strings.color]
+PASS pending palette keeps native SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Numbers.color]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.console, key=org.eclipse.ui.console.P_BACKGROUND_COLOR]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.console, key=org.eclipse.ui.console.P_STREAM_COLOR]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Background]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Foreground]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionBackground]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionForeground]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.editors, key=currentLineColor]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.editors, key=lineNumberColor]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.editors, key=hyperlinkColor]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Background.SystemDefault]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Foreground.SystemDefault]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionBackground.SystemDefault]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionForeground.SystemDefault]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.editors, key=hyperlinkColor.SystemDefault]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.CONTENT_ASSIST_BACKGROUND_COLOR]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.CONTENT_ASSIST_FOREGROUND_COLOR]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.HOVER_BACKGROUND]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.HOVER_FOREGROUND]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.FORM_HEADING_ERROR_COLOR]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.FORM_HEADING_WARNING_COLOR]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_BG_START]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_BG_END]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_UNSELECTED_TABS_COLOR_START]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_UNSELECTED_TABS_COLOR_END]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_SELECTED_TEXT_COLOR]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_UNSELECTED_TEXT_COLOR]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.INACTIVE_TAB_SELECTED_TEXT_COLOR]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.INACTIVE_TAB_UNSELECTED_TEXT_COLOR]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR_ACCENT]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_ACCENT]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BORDER_COLOR]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_TITLE]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR_TITLE]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.INACTIVE_PART_BACKGROUND_COLOR]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_BACKGROUND_COLOR]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_FOREGROUND_COLOR]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_BORDER_COLOR]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_BACKGROUND_COLOR]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_FOREGROUND_COLOR]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_BORDER_COLOR]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_BACKGROUND_COLOR]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_FOREGROUND_COLOR]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_TREES_AND_TABLES]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.INFORMATION_BACKGROUND_COLOR]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.INFORMATION_FOREGROUND_COLOR]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.e4.ui.css.swt.theme, key=themeid]
+PASS pending palette keeps native SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_ARROW_ACTIVE_COLOR]
+PASS pending palette keeps native SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_ARROW_COLOR]
+PASS pending palette keeps native SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_ARROW_HOVER_COLOR]
+PASS pending palette keeps native SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_BUTTON_ACTIVE_COLOR]
+PASS pending palette keeps native SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_BUTTON_HOVER_COLOR]
+PASS pending palette keeps native SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_CORNER_COLOR]
+PASS pending palette keeps native SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_THUMB_ACTIVE_COLOR]
+PASS pending palette keeps native SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_THUMB_COLOR]
+PASS pending palette keeps native SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_THUMB_HOVER_COLOR]
+PASS pending palette keeps native SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_TRACK_COLOR]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.FindScope]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.editors, key=printMarginColor]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=ACTIVE_HYPERLINK_COLOR]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=CONFLICTING_COLOR]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=CONTENT_ASSIST_BACKGROUND_COLOR]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=CONTENT_ASSIST_FOREGROUND_COLOR]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=COUNTER_COLOR]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=DECORATIONS_COLOR]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=EDITION_COLOR]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=ERROR_COLOR]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=HYPERLINK_COLOR]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=INCOMING_COLOR]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.jface.REVISION_NEWEST_COLOR]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.jface.REVISION_OLDEST_COLOR]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.search.ui.match.highlight]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.editors.rangeIndicatorColor]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.FORM_HEADING_ERROR_COLOR]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.FORM_HEADING_INFO_COLOR]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.FORM_HEADING_WARNING_COLOR]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.HOVER_BACKGROUND]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.HOVER_FOREGROUND]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.INFORMATION_BACKGROUND]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.INFORMATION_FOREGROUND]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=OUTGOING_COLOR]
+PASS pending palette keeps native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=RESOLVED_COLOR]
+PASS pending personal colors not saved
+BUTTON  expected=При&менить
+BUTTON Применять палитру BSL expected=При&менить
+BUTTON Восстановить исходное оформление… expected=При&менить
+BUTTON  expected=При&менить
+BUTTON Вернуть цвет стиля expected=При&менить
+BUTTON Сбросить палитру expected=При&менить
+BUTTON  expected=При&менить
+BUTTON Вернуть исходный шрифт expected=При&менить
+BUTTON При&менить expected=При&менить
+PASS invalid HEX blocks Apply and OK
+BUTTON  expected=При&менить
+BUTTON Применять палитру BSL expected=При&менить
+BUTTON Восстановить исходное оформление… expected=При&менить
+BUTTON  expected=При&менить
+BUTTON Вернуть цвет стиля expected=При&менить
+BUTTON Сбросить палитру expected=При&менить
+BUTTON  expected=При&менить
+BUTTON Вернуть исходный шрифт expected=При&менить
+BUTTON При&менить expected=При&менить
+PASS invalid HEX in other draft still blocks Apply
+BUTTON  expected=При&менить
+BUTTON Применять палитру BSL expected=При&менить
+BUTTON Восстановить исходное оформление… expected=При&менить
+BUTTON  expected=При&менить
+BUTTON Вернуть цвет стиля expected=При&менить
+BUTTON Сбросить палитру expected=При&менить
+BUTTON  expected=При&менить
+BUTTON Вернуть исходный шрифт expected=При&менить
+BUTTON При&менить expected=При&менить
+PASS corrected HEX allows Apply
+PASS Cancel discards Darcula draft
+PASS Cancel discards Monokai draft
+PASS font preference page exists
+PASS font size selector exists
+BUTTON  expected=При&менить
+BUTTON Применять палитру BSL expected=При&менить
+BUTTON Восстановить исходное оформление… expected=При&менить
+BUTTON  expected=При&менить
+BUTTON Вернуть цвет стиля expected=При&менить
+BUTTON Сбросить палитру expected=При&менить
+BUTTON  expected=При&менить
+BUTTON Вернуть исходный шрифт expected=При&менить
+BUTTON При&менить expected=При&менить
+PASS Apply activates selected profile
+PASS Apply saves other draft
+PASS Apply saves selected draft
+PASS Apply uses personal keyword in EDT
+PASS Apply uses personal panel in native UI registry
+PASS Cancel after Apply keeps applied colors
+PASS profile switch protects manual comment
+PASS font preference page exists
+PASS font size selector exists
+BUTTON  expected=При&менить
+BUTTON Применять палитру BSL expected=При&менить
+BUTTON Восстановить исходное оформление… expected=При&менить
+BUTTON  expected=При&менить
+BUTTON Вернуть цвет стиля expected=При&менить
+BUTTON Сбросить палитру expected=При&менить
+BUTTON  expected=При&менить
+BUTTON Вернуть исходный шрифт expected=При&менить
+BUTTON При&менить expected=При&менить
+PASS explicit role edit reclaims its surrendered target
+PASS explicit keyword leaves manual comment protected
+BUTTON  expected=При&менить
+BUTTON Применять палитру BSL expected=При&менить
+BUTTON Восстановить исходное оформление… expected=При&менить
+BUTTON  expected=При&менить
+BUTTON Вернуть цвет стиля expected=При&менить
+BUTTON Сбросить палитру expected=При&менить
+BUTTON  expected=При&менить
+BUTTON Вернуть исходный шрифт expected=При&менить
+BUTTON При&менить expected=При&менить
+PASS role reset removes override
+PASS role reset applies built-in Monokai keyword
+PASS role reset keeps another personal role
+PASS role reset protects unrelated manual color
+BUTTON  expected=При&менить
+BUTTON Применять палитру BSL expected=При&менить
+BUTTON Восстановить исходное оформление… expected=При&менить
+BUTTON  expected=При&менить
+BUTTON Вернуть цвет стиля expected=При&менить
+BUTTON Сбросить палитру expected=При&менить
+BUTTON  expected=При&менить
+BUTTON Вернуть исходный шрифт expected=При&менить
+BUTTON При&менить expected=При&менить
+PASS palette reset explicitly reclaims all its roles
+PASS palette reset removes other overrides in selected style
+PASS palette reset leaves the other style intact
+BUTTON  expected=При&менить
+BUTTON Применять палитру BSL expected=При&менить
+BUTTON Восстановить исходное оформление… expected=При&менить
+BUTTON  expected=При&менить
+BUTTON Вернуть цвет стиля expected=При&менить
+BUTTON Сбросить палитру expected=При&менить
+BUTTON  expected=При&менить
+BUTTON Вернуть исходный шрифт expected=При&менить
+BUTTON При&менить expected=При&менить
+PASS BSL off restores original keyword despite edited role
+PASS BSL off saves personal keyword
+PASS palette OK control exists
+PASS OK applies saved personal BSL color
+PASS palette edits and resets preserve independent font
+PASS restore original EDT colors with personal profiles saved
+PASS personal restore exact original SettingKey[scope=theme, node=css, key=id]
+PASS personal restore exact original SettingKey[scope=theme, node=legacy, key=id]
+PASS personal restore exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Builtin function.color]
+PASS personal restore exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.BSL_Keywords.color]
+PASS personal restore exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Comment.color]
+PASS personal restore exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Operators.color]
+PASS personal restore exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Others.color]
+PASS personal restore exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Preprocessor.color]
+PASS personal restore exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Brackets.color]
+PASS personal restore exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Strings.color]
+PASS personal restore exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Numbers.color]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.console, key=org.eclipse.ui.console.P_BACKGROUND_COLOR]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.console, key=org.eclipse.ui.console.P_STREAM_COLOR]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Background]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Foreground]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionBackground]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionForeground]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.editors, key=currentLineColor]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.editors, key=lineNumberColor]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.editors, key=hyperlinkColor]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Background.SystemDefault]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Foreground.SystemDefault]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionBackground.SystemDefault]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionForeground.SystemDefault]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.editors, key=hyperlinkColor.SystemDefault]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.CONTENT_ASSIST_BACKGROUND_COLOR]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.CONTENT_ASSIST_FOREGROUND_COLOR]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.HOVER_BACKGROUND]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.HOVER_FOREGROUND]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.FORM_HEADING_ERROR_COLOR]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.FORM_HEADING_WARNING_COLOR]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_BG_START]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_BG_END]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_UNSELECTED_TABS_COLOR_START]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_UNSELECTED_TABS_COLOR_END]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_SELECTED_TEXT_COLOR]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_UNSELECTED_TEXT_COLOR]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.INACTIVE_TAB_SELECTED_TEXT_COLOR]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.INACTIVE_TAB_UNSELECTED_TEXT_COLOR]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR_ACCENT]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_ACCENT]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BORDER_COLOR]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_TITLE]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR_TITLE]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.INACTIVE_PART_BACKGROUND_COLOR]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_BACKGROUND_COLOR]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_FOREGROUND_COLOR]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_BORDER_COLOR]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_BACKGROUND_COLOR]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_FOREGROUND_COLOR]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_BORDER_COLOR]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_BACKGROUND_COLOR]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_FOREGROUND_COLOR]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_TREES_AND_TABLES]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.INFORMATION_BACKGROUND_COLOR]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.INFORMATION_FOREGROUND_COLOR]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.e4.ui.css.swt.theme, key=themeid]
+PASS personal restore exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_ARROW_ACTIVE_COLOR]
+PASS personal restore exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_ARROW_COLOR]
+PASS personal restore exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_ARROW_HOVER_COLOR]
+PASS personal restore exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_BUTTON_ACTIVE_COLOR]
+PASS personal restore exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_BUTTON_HOVER_COLOR]
+PASS personal restore exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_CORNER_COLOR]
+PASS personal restore exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_THUMB_ACTIVE_COLOR]
+PASS personal restore exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_THUMB_COLOR]
+PASS personal restore exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_THUMB_HOVER_COLOR]
+PASS personal restore exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_TRACK_COLOR]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.FindScope]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.editors, key=printMarginColor]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=ACTIVE_HYPERLINK_COLOR]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=CONFLICTING_COLOR]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=CONTENT_ASSIST_BACKGROUND_COLOR]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=CONTENT_ASSIST_FOREGROUND_COLOR]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=COUNTER_COLOR]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=DECORATIONS_COLOR]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=EDITION_COLOR]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=ERROR_COLOR]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=HYPERLINK_COLOR]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=INCOMING_COLOR]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.jface.REVISION_NEWEST_COLOR]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.jface.REVISION_OLDEST_COLOR]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.search.ui.match.highlight]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.editors.rangeIndicatorColor]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.FORM_HEADING_ERROR_COLOR]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.FORM_HEADING_INFO_COLOR]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.FORM_HEADING_WARNING_COLOR]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.HOVER_BACKGROUND]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.HOVER_FOREGROUND]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.INFORMATION_BACKGROUND]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.INFORMATION_FOREGROUND]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=OUTGOING_COLOR]
+PASS personal restore exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=RESOLVED_COLOR]
+PASS restore keeps Darcula personal color
+PASS restore keeps Monokai personal color
+PASS font preference page exists
+PASS font size selector exists
+PASS safe capture visible control intersection: palette-roles
+PASS safe capture visible control intersection: palette-interface-preview

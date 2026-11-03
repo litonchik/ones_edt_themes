@@ -1,0 +1,16 @@
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:651)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:588)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1459)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1432)
+��������� ru.litonchik.edt.themes.feature.feature.group 0.1.7.202610141444.
+
+!ENTRY org.eclipse.equinox.p2.director 0 0 2026-10-14 17:46:46.711
+!MESSAGE ����� ������ �� ��������� ��������
+!SUBENTRY 1 org.eclipse.equinox.p2.director 0 0 2026-10-14 17:46:46.711
+!MESSAGE Add ������ ��� ���� EDT � Darcula, Monokai, One Dark Pro � Dracula 0.1.7.202610141444 (ru.litonchik.edt.themes.feature.feature.group 0.1.7.202610141444) ��������
+�������� ��������� �� 10670 ����.
+p2 Install: OK; базовые bundles сохранены; C:\Users\litonchik\Documents\Codex\ones_edt_theme_plugin\.work\edt-test

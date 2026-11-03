@@ -1,0 +1,16 @@
+Scoped runtime diagnostics; assertion reports are stored separately.
+.work/runtime-noctis.log: TabbedPropertyTitle null-color messages = 184
+.work/runtime-noctisrestart.log: TabbedPropertyTitle null-color messages = 36
+First stack excerpt:
+!ENTRY org.eclipse.e4.ui.css.swt.theme 4 0 2026-10-18 21:45:20.091
+!MESSAGE Cannot read field "rgb" because "color" is null
+!STACK 0
+java.lang.NullPointerException: Cannot read field "rgb" because "color" is null
+	at org.eclipse.ui.internal.views.properties.tabbed.view.TabbedPropertyTitle.setColor(TabbedPropertyTitle.java:165)
+	at org.eclipse.ui.internal.views.properties.tabbed.css.TabbedPropertyTitleCssPropertyHandler.applyCSSProperty(TabbedPropertyTitleCssPropertyHandler.java:50)
+	at org.eclipse.e4.ui.css.swt.properties.AbstractCSSPropertySWTHandler.applyCSSProperty(AbstractCSSPropertySWTHandler.java:35)
+	at org.eclipse.e4.ui.css.core.impl.engine.AbstractCSSEngine.applyCSSProperty(AbstractCSSEngine.java:745)
+	at org.eclipse.e4.ui.css.core.impl.engine.AbstractCSSEngine.applyStyleDeclaration(AbstractCSSEngine.java:551)
+	at org.eclipse.e4.ui.css.core.impl.engine.AbstractCSSEngine.applyStyles(AbstractCSSEngine.java:425)
+	at org.eclipse.e4.ui.css.core.impl.engine.AbstractCSSEngine.applyStyles(AbstractCSSEngine.java:373)
+	at org.eclipse.e4.ui.css.core.impl.engine.AbstractCSSEngine.lambda$0(AbstractCSSEngine.java:257)

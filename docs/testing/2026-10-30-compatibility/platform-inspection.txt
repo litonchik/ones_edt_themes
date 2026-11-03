@@ -1,0 +1,33 @@
+2026.1.2 com._1c.g5.v8.dt.bsl.ui_23.0.1.v202607090722.jar
+2026.1.2 com._1c.g5.v8.dt.theming.ui_2.1.0.v202607090722.jar
+2026.1.2 com._1c.g5.v8.dt.ql.ui_7.0.100.v202607090722.jar
+2026.1.2 com._1c.g5.v8.dt.ql.dcs.ui_7.0.100.v202607090722.jar
+2026.1.2 org.eclipse.ui.editors_3.17.100.v20231106-1600.jar
+2026.1.3 com._1c.g5.v8.dt.bsl.ui_23.0.1.v202609041212.jar
+2026.1.3 com._1c.g5.v8.dt.theming.ui_2.1.0.v202609041212.jar
+2026.1.3 com._1c.g5.v8.dt.ql.ui_7.0.100.v202609041212.jar
+2026.1.3 com._1c.g5.v8.dt.ql.dcs.ui_7.0.100.v202609041212.jar
+2026.1.3 org.eclipse.ui.editors_3.17.100.v20231106-1600.jar
+2026.2.2 com._1c.g5.v8.dt.bsl.ui_24.0.0.v202610211527.jar
+2026.2.2 com._1c.g5.v8.dt.theming.ui_2.1.1.v202610211527.jar
+2026.2.2 com._1c.g5.v8.dt.ql.ui_7.0.101.v202610211527.jar
+2026.2.2 com._1c.g5.v8.dt.ql.dcs.ui_7.0.101.v202610211527.jar
+2026.2.2 org.eclipse.ui.editors_3.20.200.v20251103-1510.jar
+2026.1.2 com._1c.g5.v8.dt.bsl.ui--css_dark_edt-dark_basestyle.css identical=True
+2026.1.2 com._1c.g5.v8.dt.bsl.ui--css_dark_edt-dark_preferencestyle.css identical=True
+2026.1.2 com._1c.g5.v8.dt.ql.dcs.ui--css_dark_edt-dark_preferencestyle.css identical=True
+2026.1.2 com._1c.g5.v8.dt.ql.ui--css_dark_edt-dark_preferencestyle.css identical=True
+2026.1.2 com._1c.g5.v8.dt.theming.ui--css_dark_edt-dark_basestyle.css identical=True
+2026.1.2 com._1c.g5.v8.dt.theming.ui--css_dark_edt-dark_globalstyle.css identical=True
+2026.1.2 com._1c.g5.v8.dt.theming.ui--css_dark_edt-dark_partstyle.css identical=True
+2026.1.2 com._1c.g5.v8.dt.theming.ui--css_dark_edt-dark_preferencestyle.css identical=True
+2026.1.2 com._1c.g5.v8.dt.theming.ui--css_dark_edt-dark_tabstyle.css identical=True
+2026.2.2 com._1c.g5.v8.dt.bsl.ui--css_dark_edt-dark_basestyle.css identical=True
+2026.2.2 com._1c.g5.v8.dt.bsl.ui--css_dark_edt-dark_preferencestyle.css identical=True
+2026.2.2 com._1c.g5.v8.dt.ql.dcs.ui--css_dark_edt-dark_preferencestyle.css identical=True
+2026.2.2 com._1c.g5.v8.dt.ql.ui--css_dark_edt-dark_preferencestyle.css identical=True
+2026.2.2 com._1c.g5.v8.dt.theming.ui--css_dark_edt-dark_basestyle.css identical=True
+2026.2.2 com._1c.g5.v8.dt.theming.ui--css_dark_edt-dark_globalstyle.css identical=True
+2026.2.2 com._1c.g5.v8.dt.theming.ui--css_dark_edt-dark_partstyle.css identical=True
+2026.2.2 com._1c.g5.v8.dt.theming.ui--css_dark_edt-dark_preferencestyle.css identical=True
+2026.2.2 com._1c.g5.v8.dt.theming.ui--css_dark_edt-dark_tabstyle.css identical=True

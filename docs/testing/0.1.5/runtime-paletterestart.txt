@@ -1,0 +1,24 @@
+JVM 17.0.18
+PASS personal profile survives JVM restart
+PASS Monokai override survives JVM restart
+PASS Darcula override survives JVM restart independently
+PASS persisted personal keyword used by EDT after restart
+PASS BSL editor opened on test fixture
+PASS personal palette opens real BSL editor
+PASS real BSL keyword glyph uses personal color after restart
+PASS restore colors after personal restart
+PASS restore retains personal profiles
+PASS cleanup test personal colors via native-mode Apply
+PASS palette journal empty after cleanup
+PASS font preference page exists
+PASS font size selector exists
+BUTTON  expected=При&менить
+BUTTON Применять палитру BSL expected=При&менить
+BUTTON Восстановить исходное оформление… expected=При&менить
+BUTTON  expected=При&менить
+BUTTON Вернуть цвет стиля expected=При&менить
+BUTTON Сбросить палитру expected=При&менить
+BUTTON  expected=При&менить
+BUTTON Вернуть исходный шрифт expected=При&менить
+BUTTON При&менить expected=При&менить
+PASS oversized HEX rejected without silently truncating input

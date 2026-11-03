@@ -1,0 +1,15 @@
+JVM 17.0.18
+PASS BSL editor opened on test fixture
+PASS font test opens real BSL editor
+PASS font survives JVM restart: Consolas 15
+PASS font preference page exists
+PASS font size selector exists
+PASS restore font enabled after restart
+BUTTON Применять палитру BSL expected=При&менить
+BUTTON Восстановить исходное оформление… expected=При&менить
+BUTTON  expected=При&менить
+BUTTON Вернуть исходный шрифт expected=При&менить
+BUTTON При&менить expected=При&менить
+PASS original explicit font value or absence restored after restart
+PASS original BSL font restored after restart: Courier New 10
+PASS font journal cleared after restoration

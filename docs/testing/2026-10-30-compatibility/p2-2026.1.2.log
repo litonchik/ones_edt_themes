@@ -1,0 +1,16 @@
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1750)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1672)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.equinox.app 0 0 2026-10-30 00:15:19.351
+!MESSAGE Product com._1c.g5.v8.dt.product.application.rcp could not be found.
+Installing ru.litonchik.edt.themes.feature.feature.group 0.1.15.202610181940.
+
+!ENTRY org.eclipse.equinox.p2.director 0 0 2026-10-30 00:15:23.378
+!MESSAGE Overall install request is satisfiable
+!SUBENTRY 1 org.eclipse.equinox.p2.director 0 0 2026-10-30 00:15:23.378
+!MESSAGE Add request for ���� EDT � �������� ������� 0.1.15.202610181940 (ru.litonchik.edt.themes.feature.feature.group 0.1.15.202610181940) is satisfiable
+Operation completed in 8685 ms.
+p2 Install: OK; базовые bundles сохранены; C:\Users\litonchik\Documents\Codex\ones_edt_theme_plugin\.work\edt-2026.1.2

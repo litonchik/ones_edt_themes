@@ -1,0 +1,574 @@
+/* Based on file "e4-dark_globalstyle.css" from "org.eclipse.ui.themes" plugin */
+
+/*******************************************************************************
+ * The following bugs are referred to in this style sheet
+ * 2.) Bug 419377 - Setting a property to 'inherit' is not supported
+ * 3.) Bug 430051 - Regression for CTabRendering when drawing bottom tabs
+ *******************************************************************************/
+
+
+/* ############################## Global Styles ############################## */
+
+Shell {
+    background-color:'#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR';
+    color:'#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR';
+}
+
+Label {
+    background-color: inherit; 
+    color: '#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR'; 
+}
+
+ScrolledComposite, ExpandableComposite, Canvas, TabFolder, CLabel,
+CoolBar, Sash, Group, RefactoringLocationControl, ChangeParametersControl, Link, FilteredTree,
+ProxyEntriesComposite, NonProxyHostsComposite, DelayedFilterCheckboxTree,
+Splitter, ScrolledPageContent, ViewForm, LaunchConfigurationFilteredTree,
+ContainerSelectionGroup, BrowseCatalogItem, EncodingSettings,
+ProgressMonitorPart, DocCommentOwnerComposite, NewServerComposite,
+NewManualServerComposite, ServerTypeComposite, FigureCanvas,
+DependenciesComposite, ListEditorComposite, WrappedPageBook,
+CompareStructureViewerSwitchingPane, CompareContentViewerSwitchingPane,
+QualifiedNameComponent, RefactoringStatusViewer,
+MessageLine,
+Button /* SWT-BUG: checkbox inner label font color is not accessible */,
+Group > StyledText,
+ToolBar {
+    background-color:'#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR'; 
+    color:'#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR'; 
+}
+
+Composite,
+Composite > *,
+Composite > * > * {
+    background-color: '#com-_1c-g5-v8-dt-theming-ui-INACTIVE_PART_BACKGROUND_COLOR'; 
+    color:'#org-eclipse-ui-workbench-INACTIVE_TAB_SELECTED_TEXT_COLOR'; 
+}
+
+/* #################### Bottom Status Bar ######################## */
+
+StatusLine,
+ImageBasedFrame,
+#org-eclipse-ui-StatusLine,
+#org-eclipse-ui-StatusLine CLabel,
+#org-eclipse-ui-ProgressBar,
+#org-eclipse-ui-ProgressBar Canvas {
+    background-color:'#com-_1c-g5-v8-dt-theming-ui-INACTIVE_PART_BACKGROUND_COLOR'; 
+    color:'#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR'; 
+}
+
+/* ############################## Toolbar ############################## */
+/* Ensure that the labels in the tabfolder gets updated
+   See Bug 552780
+*/
+TabFolder > *,
+CTabFolder > *,
+TabFolder > Composite > *, /* Composite > CommitSearchPage$... */
+CTabFolder > Composite > *, /* Composite > CommitSearchPage$... */
+TabFolder > Composite > * > * { /* [style~='SWT.NO_BACKGROUND'] <- generate E4 non-sense bugs in apparently not related other rules Composite > ContentMergeViewer$... > TextMergeViewer$... */ 
+    color:'#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR';
+}
+
+/* Toolbar should inherit the colors of its container to avoid drawing artifacts*/
+ToolBar {
+    background-color:inherit;   
+}
+
+Combo,
+List,
+Text,
+Spinner,
+CCombo {
+    background-color:'#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR'; 
+    color:'#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR';
+}
+
+Composite > StyledText,
+Shell [style~='SWT.DROP_DOWN'] > StyledText, /* for eg. folded code popup (but it's ignored) */
+SashForm > StyledText {
+    /*  Fix StyledText inside a SashForm */
+    background-color:'#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR'; 
+    color:'#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR'; 
+}
+
+Text[style~='SWT.SEARCH'],
+Text[style~='SWT.SEARCH'] + Label /* SWT-BUG: adjacent sibling selector is ignored (CSS2.1) */ {
+    /* search boxes */
+    background-color: '#com-_1c-g5-v8-dt-theming-ui-CONTROLS_BACKGROUND_COLOR';
+    color: '#com-_1c-g5-v8-dt-theming-ui-CONTROLS_FOREGROUND_COLOR';
+}
+
+Text[style~='SWT.READ_ONLY'] {
+    background-color:'#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR'; 
+    color:'#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR'; 
+}
+
+Shell Tree, Shell Table, Shell List {
+    background-color: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR';
+}
+
+DatePicker,
+DatePicker > Text,
+ScheduleDatePicker,
+ScheduleDatePicker > Text {
+    background-color:'#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR'; 
+    color:'#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR'; 
+}
+
+
+ScrolledFormText,
+FormText {
+    background-color:'#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR'; 
+    color:'#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR';
+}
+
+Table,
+Tree,
+FilteredTree,
+RegistryFilteredTree {
+    background-color:'#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR'; 
+    color:'#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR'; 
+    swt-lines-visible: false;
+    swt-unfocused-selection-background-color: '#com-_1c-g5-v8-dt-theming-ui-TREES_UNFOCUSED_SELECTION_COLOR';
+}
+
+Hyperlink,
+ImageHyperlink {
+    color: '#org-eclipse-ui-workbench-LINK_COLOR';
+}
+
+ViewerPane,
+DrillDownComposite {
+    background-color: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR';
+    color: '#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR';
+}
+
+ProgressInfoItem,
+ProgressInfoItem > *,
+CompareViewerPane,
+CompareViewerPane > * {
+    background-color: inherit;
+    color: '#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR'; 
+}
+
+ProgressIndicator {
+    background-color: inherit;
+    color: '#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR';
+}
+
+DiscoveryItem,
+DiscoveryItem Label,
+DiscoveryItem Composite {
+    background-color: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR';
+    color: '#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR';
+}
+
+DiscoveryItem StyledText {
+    background-color: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR';
+    color: '#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR';
+}
+
+DiscoveryItem Link {
+    background-color: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR';
+    color: '#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR';
+}
+
+CatalogSwitcher,
+CatalogSwitcher > ScrolledComposite > Composite > Composite /* ignored because hard-coded */,
+CategoryItem {
+    background-color: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR';
+    color: '#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR';
+}
+
+GradientCanvas,
+GradientCanvas > Label {
+    background-color: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR';
+    color: '#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR';
+}
+
+GradientCanvas {
+    /* SWT-BUG workaround: GradientCanvas background-color is ignored */
+    background-color: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR';
+}
+
+CategoryItem > GradientCanvas,
+CategoryItem > GradientCanvas > Label {
+    /* SWT-BUG workaround: a style for background is not applied on GradientCanvas (CSS engine repaint issue) */
+    background-color:'#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR';
+    color: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR';
+}
+
+CategoryItem > GradientCanvas {
+    /* SWT-BUG workaround: a style for background is not applied on GradientCanvas (CSS engine repaint issue) */
+    background: '#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR';
+    background-image: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR';
+}
+
+WebSite {
+    background-color: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR';
+    color: '#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR';
+}
+
+Form,
+FormHeading {
+    background-color: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR_PAGE_TITLE';
+    color: '#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR_PAGE_TITLE';
+}
+
+Form {
+    /* Bug 465148: Additional styling for the Form */
+    text-background-color: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR_PAGE_TITLE';
+
+    tb-toggle-hover-color: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR_ACCENT';
+    tb-toggle-color: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR_ACCENT';
+    h-hover-full-color: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR_ACCENT';
+    h-hover-light-color: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR_ACCENT';
+    h-bottom-keyline-2-color: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR';
+    h-bottom-keyline-1-color: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR';
+
+    /* We also have to force the background mode (the
+     * Label/ToolBar in the heading should inherit it).
+     */
+    swt-background-mode: 'force';
+}
+
+Section,
+ExpandableComposite {
+    background-color: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR';
+    color: '#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR';
+
+    background-color-titlebar: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR_TITLE';
+    background-color-gradient-titlebar: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR_TITLE';
+    border-color-titlebar: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR_TITLE';
+    swt-titlebar-color: '#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR_TITLE';
+    tb-toggle-hover-color: '#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR_TITLE';
+    tb-toggle-color: '#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR_TITLE';
+}
+
+Twistie {
+    background-color: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR_TITLE';
+    color: '#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR';
+}
+
+HeapStatus {
+    color: #FFFFFF;
+}
+
+PageSiteComposite, PageSiteComposite > CImageLabel {
+    color: '#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR';
+}
+
+PageSiteComposite > PropertyTable {
+    background-color: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR';
+    color: '#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR';
+}
+
+PageSiteComposite > PropertyTable:disabled {
+/* SWT-BUG: event is triggered but styles for PropertyTable are hard-coded */
+    background-color: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR';
+    color: '#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR';
+}
+
+/* See Bug 430848: We need to override the theme of the Eclipse splash screen, because
+ * otherwise the splash screen would be partly switched to the dark theme during startup,
+ * which does not look very nice.
+ */
+Label#org-eclipse-ui-splash-progressText {
+    background-color: inherit; /* transparent */
+    color: '#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR'; /* see property startupForegroundColor in the product */
+}
+
+Label#org-eclipse-ui-buildid-text {
+    background-color: inherit; /* transparent */
+}
+
+Composite > Label {
+    background-color: unset;
+}
+
+Link {
+    swt-link-foreground-color: '#org-eclipse-ui-workbench-LINK_COLOR'
+}
+
+TabbedPropertyTitle > CLabel{
+    color: '#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR_PAGE_TITLE';
+}
+
+TabbedPropertyTitle {
+    swt-backgroundGradientStart-color:  '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR_PAGE_TITLE';
+    swt-backgroundGradientEnd-color:    '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR_PAGE_TITLE';
+    swt-backgroundBottomKeyline1-color: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR_PAGE_TITLE';
+    swt-backgroundBottomKeyline2-color: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR_PAGE_TITLE';
+}
+
+TabbedPropertyList {
+    swt-tabNormalShadow-color   : '#org-eclipse-ui-workbench-INACTIVE_TAB_OUTLINE_COLOR';             /* color of shadow lines around the tabs */
+    swt-tabDarkShadow-color     : '#org-eclipse-ui-workbench-ACTIVE_NOFOCUS_TAB_SELECTED_TEXT_COLOR'; /* line color of the tiny scroll triangle (at top / at bottom) */
+    swt-tabAreaBackground-color : '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR';    /*same as canvas*/
+    swt-tabBackground-color     : '#org-eclipse-ui-workbench-ACTIVE_NOFOCUS_TAB_BG_START';
+    color                       : '#org-eclipse-ui-workbench-ACTIVE_NOFOCUS_TAB_SELECTED_TEXT_COLOR'; /* text color in the tab / tab area */
+}
+
+/* #################### Dialogs ######################## */
+
+Shell[style~='SWT.PRIMARY_MODAL'] Composite,
+Shell[style~='SWT.PRIMARY_MODAL'] Composite > *,
+Shell[style~='SWT.PRIMARY_MODAL'] ToolItem,
+Shell[style~='SWT.PRIMARY_MODAL'] ScrolledForm,
+Shell[style~='SWT.PRIMARY_MODAL'] ImageHyperlink,
+Shell[style~='SWT.PRIMARY_MODAL'] Link,
+Shell[style~='SWT.PRIMARY_MODAL'] StyledText,
+Shell[style~='SWT.PRIMARY_MODAL'] Label,
+Shell[style~='SWT.PRIMARY_MODAL'] Text,
+Shell[style~='SWT.PRIMARY_MODAL'] Group,
+Shell[style~='SWT.PRIMARY_MODAL'] SyntaxAssistDescriptionPanel,
+Shell[style~='SWT.PRIMARY_MODAL'] SashForm,
+Shell[style~='SWT.APPLICATION_MODAL'] Composite,
+Shell[style~='SWT.APPLICATION_MODAL'] Composite > *,
+Shell[style~='SWT.APPLICATION_MODAL'] ToolItem,
+Shell[style~='SWT.APPLICATION_MODAL'] ScrolledForm,
+Shell[style~='SWT.APPLICATION_MODAL'] ImageHyperlink,
+Shell[style~='SWT.APPLICATION_MODAL'] Link,
+Shell[style~='SWT.APPLICATION_MODAL'] StyledText,
+Shell[style~='SWT.APPLICATION_MODAL'] Label,
+Shell[style~='SWT.APPLICATION_MODAL'] Text,
+Shell[style~='SWT.APPLICATION_MODAL'] Group,
+Shell[style~='SWT.APPLICATION_MODAL'] SyntaxAssistDescriptionPanel,
+Shell[style~='SWT.APPLICATION_MODAL'] SashForm {
+    background-color:'#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR';
+    color:'#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR';
+}
+
+Shell[style~='SWT.PRIMARY_MODAL'] Tree,
+Shell[style~='SWT.PRIMARY_MODAL'] Table,
+Shell[style~='SWT.PRIMARY_MODAL'] Combo,
+Shell[style~='SWT.PRIMARY_MODAL'] StyledText[style~='SWT.DROP_DOWN'],
+Shell[style~='SWT.PRIMARY_MODAL'] Text[style~='SWT.DROP_DOWN'],
+Shell[style~='SWT.PRIMARY_MODAL'] FilteredTree > Composite,
+Shell[style~='SWT.PRIMARY_MODAL'] ContextSearchBox,
+Shell[style~='SWT.APPLICATION_MODAL'] Tree,
+Shell[style~='SWT.APPLICATION_MODAL'] Table,
+Shell[style~='SWT.APPLICATION_MODAL'] Combo,
+Shell[style~='SWT.APPLICATION_MODAL'] StyledText[style~='SWT.DROP_DOWN'],
+Shell[style~='SWT.APPLICATION_MODAL'] Text[style~='SWT.DROP_DOWN'],
+Shell[style~='SWT.APPLICATION_MODAL'] FilteredTree > Composite,
+Shell[style~='SWT.APPLICATION_MODAL'] ContextSearchBox {
+    background-color: '#com-_1c-g5-v8-dt-theming-ui-CONTROLS_BACKGROUND_COLOR';
+    color:'#com-_1c-g5-v8-dt-theming-ui-CONTROLS_FOREGROUND_COLOR';
+}
+
+Shell[style~='SWT.PRIMARY_MODAL'] ToolBar,
+Shell[style~='SWT.PRIMARY_MODAL'] ToolItem,
+Shell[style~='SWT.PRIMARY_MODAL'] SyntaxAssistBrowserSearchBar,
+Shell[style~='SWT.PRIMARY_MODAL'] Sash,
+Shell[style~='SWT.APPLICATION_MODAL'] ToolBar,
+Shell[style~='SWT.APPLICATION_MODAL'] ToolItem,
+Shell[style~='SWT.APPLICATION_MODAL'] SyntaxAssistBrowserSearchBar,
+Shell[style~='SWT.APPLICATION_MODAL'] Sash {
+    background-color: inherit;
+    color: '#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR_TITLE';
+}
+
+
+/* ################################ Styles for 1C components ########################## */
+
+SubsystemsSection,
+CommandsSection,
+ObjectsSection,
+RightsExtensionObjectSection,
+RestrictionAccessSection,
+HpwaEditorTemplateSection,
+HpwaEditorFormSection,
+RestrictionTemplatesSection,
+RoleDescriptionSection,
+AppearanceTemplateEditorExampleSection,
+AppearanceTemplateEditorAppearanceSection,
+AppearanceTemplateEditorAreasSection,
+SubSection,
+MainSection,
+ScheduleControl,
+AllTemplatesSection {
+       background-color: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR_ACCENT';
+       color: '#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR_ACCENT';
+       background-color-titlebar: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR_TITLE';
+       background-color-gradient-titlebar: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR_TITLE';
+       border-color-titlebar: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR_TITLE';
+}
+
+Section > ToolBar,
+SubSection > ToolBar,
+CommandsSection > ToolBar,
+SubsystemsSection > ToolBar,
+ObjectsSection > ToolBar,
+RightsExtensionObjectSection > ToolBar,
+RestrictionAccessSection > ToolBar,
+MainSection > ToolBar,
+AllTemplatesSection > ToolBar,
+ExpandableComposite > ToolBar,
+RestrictionTemplatesSection > ToolBar {
+    background-color: inherit;
+    color: '#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR_TITLE';
+}
+
+DtLayoutComposite {
+    background-color: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR';
+    color: '#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR';
+}
+
+ValueComboChooser,
+Form > DtLayoutComposite > DtLayoutComposite > * {
+    background-color: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR_ACCENT';
+    color: '#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR_ACCENT';
+}
+
+Shell > Composite > Composite StyledText,
+DtLayoutComposite > StyledText,
+Form Section DtLayoutComposite > StyledText {
+    background-color: '#com-_1c-g5-v8-dt-theming-ui-CONTROLS_BACKGROUND_COLOR';
+    color: '#com-_1c-g5-v8-dt-theming-ui-CONTROLS_FOREGROUND_COLOR';
+}
+
+DtLayoutComposite ScrolledPageBook,
+DtLayoutComposite Sash {
+    background-color: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR';
+    color: '#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR';
+}
+
+DtLayoutComposite > Text,
+DtLayoutComposite > Combo {
+    background-color: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR';
+    color: '#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR';
+}
+
+DtLayoutComposite > Table,
+DtLayoutComposite > Tree {
+    background-color: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR';
+    color: '#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR';
+}
+
+Shell > Composite > Composite DtLabel {
+    background-color: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR';
+    color: '#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR';
+}
+DtLabel {
+    background-color: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR';
+    color: '#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR';
+}
+
+FigureCanvas {
+    color: #000000;
+}
+
+/* Styles for Color selection dialog */
+ScrolledForm > ScrolledForm > Form,
+ScrolledForm > ScrolledForm > Form > Composite,
+ScrolledForm > ScrolledForm > Form > Composite > CTabFolder,
+CustomTileBoardWidget,
+PredefinedTileBoardWidget,
+ColorCompareWidget,
+ColorWheelWidget,
+Slider {
+    background-color: '#com-_1c-g5-v8-dt-theming-ui-CONTROLS_BACKGROUND_COLOR';
+    color: '#com-_1c-g5-v8-dt-theming-ui-CONTROLS_FOREGROUND_COLOR';
+}
+
+/* Styles for Font selection dialog */
+Form > Composite > Composite > Composite > StyledText,
+Form > Composite > Composite > Composite > Composite > Spinner {
+    background-color: '#com-_1c-g5-v8-dt-theming-ui-CONTROLS_BACKGROUND_COLOR';
+    color: '#com-_1c-g5-v8-dt-theming-ui-CONTROLS_FOREGROUND_COLOR';
+}
+
+/* Styles for format string dialog */
+CTabFolder > Composite,
+CTabFolder > Composite > *,
+CTabFolder > Composite > Text[style~='SWT.DROP_DOWN'],
+CTabFolder > Composite > Group > * {
+    background-color: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR';
+    color: '#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR';
+}
+
+/* Style for bsl documentation hover */
+Shell > Composite > Composite > ToolBar {
+    background-color: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR';
+    color: '#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR';
+}
+
+/* Style for picture preview */
+PicturePreview {
+    background-color: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR';
+    color: '#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR';
+}
+PicturePreview > Label {
+    background-color: #FFFFFF;
+    color: #000000; 
+}
+
+/* Styles for Table Ex */
+TableEx,
+TableEx Composite {
+    background-color: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR';
+    color: '#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR';
+}
+Grid,
+#com-_1c-g5-v8-dt-ui-aef-swt-views-grid-ComplexColorGrid {
+    background-color: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR_TREES_AND_TABLES';
+    color: '#com-_1c-g5-v8-dt-theming-ui-CONTROLS_FOREGROUND_COLOR';
+}
+
+#com-_1c-g5-v8-dt-ui-aef-swt-views-grid-ComplexColorGrid DecoratedText {
+    background-color: '#com-_1c-g5-v8-dt-theming-ui-CONTROLS_BACKGROUND_COLOR';
+    color: '#com-_1c-g5-v8-dt-theming-ui-CONTROLS_FOREGROUND_COLOR';
+}
+
+/* Fix for dynamic list settings window */
+#com-_1c-g5-v8-dt-form-ui-dynamiclist-QueryTab,
+#com-_1c-g5-v8-dt-form-ui-dynamiclist-QueryTab * {
+    background-color: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR';
+    color: '#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR';
+}
+GroupingFields {
+    background-color: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR_ACCENT';
+}
+
+/* Fix to make Wysiwyg sub menu same color as Wysiwyg control */
+#com-_1c-g5-v8-dt-form-presentation-WysiwygSubMenuControl,
+#com-_1c-g5-v8-dt-form-presentation-WysiwygSubMenuControl * {
+    background-color: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR_ACCENT';
+}
+
+/* Styles for Search dialog and empty Shared Area */
+CTabFolder > Composite,
+CTabFolder > Composite > *,
+SearchComposite {
+    background-color: '#com-_1c-g5-v8-dt-theming-ui-INACTIVE_PART_BACKGROUND_COLOR';
+    color: '#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR';
+}
+
+/* Styles for Scheduled Jobs */
+Shell#com-_1c-g5-v8-dt-common-ui-controls-ValueComboChooser Table {
+    background-color: '#com-_1c-g5-v8-dt-theming-ui-CONTROLS_BACKGROUND_COLOR';
+}
+ScheduleControl DtLayoutComposite StyledText {
+    background-color: '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR';
+}
+
+/* Styles for Project's Build-in language Templates */
+Shell[style~='SWT.APPLICATION_MODAL'] Composite > Chips {
+    color: #000000; 
+}
+
+/* Styles for DataSetsQuery */
+DataSetsQuery CompositeRuler-CompositeRulerCanvas > * {
+    background-color: '#com-_1c-g5-v8-dt-theming-ui-CONTROLS_BACKGROUND_COLOR';
+    color: '#com-_1c-g5-v8-dt-theming-ui-CONTROLS_FOREGROUND_COLOR';
+}
+
+/* Styles for EmbeddedEditor */
+Shell[style~='SWT.APPLICATION_MODAL'] Canvas,
+Shell[style~='SWT.APPLICATION_MODAL'] Canvas > *,
+Shell[style~='SWT.APPLICATION_MODAL'] Canvas > * > *,
+Shell[style~='SWT.PRIMARY_MODAL'] Canvas,
+Shell[style~='SWT.PRIMARY_MODAL'] Canvas > *,
+Shell[style~='SWT.PRIMARY_MODAL'] Canvas > * > * {
+    background-color: '#com-_1c-g5-v8-dt-theming-ui-CONTROLS_BACKGROUND_COLOR';
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>ru.litonchik.edt</groupId><artifactId>edt-themes-parent</artifactId><version>0.1.16-SNAPSHOT</version><packaging>pom</packaging>
+  <properties><tycho.version>4.0.13</tycho.version><project.build.sourceEncoding>UTF-8</project.build.sourceEncoding></properties>
+  <modules><module>bundles/ru.litonchik.edt.themes</module><module>features/ru.litonchik.edt.themes.feature</module><module>repositories/ru.litonchik.edt.themes.repository</module></modules>
+  <build><plugins>
+    <plugin><groupId>org.eclipse.tycho</groupId><artifactId>tycho-maven-plugin</artifactId><version>${tycho.version}</version><extensions>true</extensions></plugin>
+    <plugin><groupId>org.eclipse.tycho</groupId><artifactId>target-platform-configuration</artifactId><version>${tycho.version}</version><configuration>
+      <target><file>${edt.target}</file></target><executionEnvironment>JavaSE-17</executionEnvironment>
+      <environments><environment><os>win32</os><ws>win32</ws><arch>x86_64</arch></environment></environments>
+    </configuration></plugin>
+    <plugin><groupId>org.eclipse.tycho</groupId><artifactId>tycho-compiler-plugin</artifactId><version>${tycho.version}</version><configuration><release>17</release><encoding>UTF-8</encoding></configuration></plugin>
+  </plugins></build>
+</project>

@@ -1,0 +1,309 @@
+ThemesExtension { 
+    color-definition:
+        '#org-eclipse-ui-workbench-INACTIVE_UNSELECTED_TABS_COLOR_START',
+        '#org-eclipse-ui-workbench-INACTIVE_UNSELECTED_TABS_COLOR_END',
+        '#org-eclipse-ui-workbench-INACTIVE_TAB_BG_START',
+        '#org-eclipse-ui-workbench-INACTIVE_TAB_BG_END',
+        '#org-eclipse-ui-workbench-INACTIVE_TAB_OUTER_KEYLINE_COLOR',
+        '#org-eclipse-ui-workbench-INACTIVE_TAB_INNER_KEYLINE_COLOR',
+        '#org-eclipse-ui-workbench-INACTIVE_TAB_OUTLINE_COLOR',
+        '#org-eclipse-ui-workbench-INACTIVE_TAB_TEXT_COLOR',
+        '#org-eclipse-ui-workbench-INACTIVE_TAB_UNSELECTED_TEXT_COLOR',
+        '#org-eclipse-ui-workbench-INACTIVE_TAB_SELECTED_TEXT_COLOR',
+        '#org-eclipse-ui-workbench-ACTIVE_UNSELECTED_TABS_COLOR_START',
+        '#org-eclipse-ui-workbench-ACTIVE_UNSELECTED_TABS_COLOR_END',
+        '#org-eclipse-ui-workbench-ACTIVE_TAB_BG_START',
+        '#org-eclipse-ui-workbench-ACTIVE_TAB_BG_END',
+        '#org-eclipse-ui-workbench-ACTIVE_TAB_OUTER_KEYLINE_COLOR',
+        '#org-eclipse-ui-workbench-ACTIVE_TAB_INNER_KEYLINE_COLOR',
+        '#org-eclipse-ui-workbench-ACTIVE_TAB_OUTLINE_COLOR',
+        '#org-eclipse-ui-workbench-ACTIVE_TAB_TEXT_COLOR',
+        '#org-eclipse-ui-workbench-ACTIVE_TAB_UNSELECTED_TEXT_COLOR',
+        '#org-eclipse-ui-workbench-ACTIVE_TAB_SELECTED_TEXT_COLOR',
+        '#org-eclipse-ui-workbench-ACTIVE_NOFOCUS_TAB_BG_START',
+        '#org-eclipse-ui-workbench-ACTIVE_NOFOCUS_TAB_BG_END',
+        '#org-eclipse-ui-workbench-ACTIVE_NOFOCUS_TAB_TEXT_COLOR',
+        '#org-eclipse-ui-workbench-ACTIVE_NOFOCUS_TAB_SELECTED_TEXT_COLOR',
+        '#org-eclipse-ui-workbench-LINK_COLOR',
+        '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR',
+        '#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR',
+        '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR_ACCENT',
+        '#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR_ACCENT',
+        '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR_TITLE',
+        '#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR_TITLE',
+        '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR_PAGE_TITLE',
+        '#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR_PAGE_TITLE',
+        '#com-_1c-g5-v8-dt-theming-ui-SELECTED_TAB_HIGHLIGHT',
+        '#com-_1c-g5-v8-dt-theming-ui-INACTIVE_PART_BACKGROUND_COLOR',
+        '#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR_TREES_AND_TABLES',
+        '#com-_1c-g5-v8-dt-theming-ui-TREES_UNFOCUSED_SELECTION_COLOR',
+        '#com-_1c-g5-v8-dt-theming-ui-BORDER_COLOR',
+        '#com-_1c-g5-v8-dt-theming-ui-CONTROLS_BACKGROUND_COLOR',
+        '#com-_1c-g5-v8-dt-theming-ui-CONTROLS_FOREGROUND_COLOR',
+        '#com-_1c-g5-v8-dt-theming-ui-CONTROLS_DISABLED_BORDER_COLOR',
+        '#com-_1c-g5-v8-dt-theming-ui-CONTROLS_DISABLED_BACKGROUND_COLOR',
+        '#com-_1c-g5-v8-dt-theming-ui-CONTROLS_DISABLED_FOREGROUND_COLOR',
+        '#com-_1c-g5-v8-dt-theming-ui-CONTROLS_HOVER_BORDER_COLOR',
+        '#com-_1c-g5-v8-dt-theming-ui-CONTROLS_HOVER_BACKGROUND_COLOR',
+        '#com-_1c-g5-v8-dt-theming-ui-CONTROLS_HOVER_FOREGROUND_COLOR',
+        '#com-_1c-g5-v8-dt-theming-ui-INFORMATION_BACKGROUND_COLOR',
+        '#com-_1c-g5-v8-dt-theming-ui-INFORMATION_FOREGROUND_COLOR';
+}
+
+ColorDefinition#org-eclipse-ui-workbench-INACTIVE_UNSELECTED_TABS_COLOR_START {
+    color: #3C4349;
+}
+
+ColorDefinition#org-eclipse-ui-workbench-INACTIVE_UNSELECTED_TABS_COLOR_END {
+    color: #3C4349;
+}
+
+ColorDefinition#org-eclipse-ui-workbench-INACTIVE_TAB_BG_START {
+    color: #1E1E1E;
+}
+
+ColorDefinition#org-eclipse-ui-workbench-INACTIVE_TAB_BG_END {
+    color: #1E1E1E;
+}
+
+ColorDefinition#org-eclipse-ui-workbench-INACTIVE_TAB_OUTER_KEYLINE_COLOR {
+    color: #1E1E1E;
+}
+
+ColorDefinition#org-eclipse-ui-workbench-INACTIVE_TAB_INNER_KEYLINE_COLOR {
+    color: #1E1E1E;
+}
+
+ColorDefinition#org-eclipse-ui-workbench-INACTIVE_TAB_OUTLINE_COLOR {
+    color: #353C41;
+}
+
+ColorDefinition#org-eclipse-ui-workbench-INACTIVE_TAB_TEXT_COLOR {
+    color: #A9A9A9;
+}
+
+ColorDefinition#org-eclipse-ui-workbench-INACTIVE_TAB_UNSELECTED_TEXT_COLOR {
+    color: #B3BBC1;
+}
+
+ColorDefinition#org-eclipse-ui-workbench-INACTIVE_TAB_SELECTED_TEXT_COLOR {
+    color: #CCCCCC;
+}
+
+ColorDefinition#org-eclipse-ui-workbench-ACTIVE_UNSELECTED_TABS_COLOR_START {
+    color: #1E1E1E;
+}
+
+ColorDefinition#org-eclipse-ui-workbench-ACTIVE_UNSELECTED_TABS_COLOR_END {
+    color: #1E1E1E;
+}
+
+ColorDefinition#org-eclipse-ui-workbench-ACTIVE_TAB_BG_START {
+    color: #333333;
+}
+
+ColorDefinition#org-eclipse-ui-workbench-ACTIVE_TAB_BG_END {
+    color: #333333;
+}
+
+ColorDefinition#org-eclipse-ui-workbench-ACTIVE_TAB_OUTER_KEYLINE_COLOR {
+    color: #3E464C;
+}
+
+ColorDefinition#org-eclipse-ui-workbench-ACTIVE_TAB_INNER_KEYLINE_COLOR {
+    color: #40494F;
+}
+
+ColorDefinition#org-eclipse-ui-workbench-ACTIVE_TAB_OUTLINE_COLOR {
+    color: #3E464C;
+}
+
+ColorDefinition#org-eclipse-ui-workbench-ACTIVE_TAB_TEXT_COLOR {
+    color: #E4E4E4;
+}
+
+ColorDefinition#org-eclipse-ui-workbench-ACTIVE_TAB_UNSELECTED_TEXT_COLOR {
+    color: #A9A9A9;
+}
+
+ColorDefinition#org-eclipse-ui-workbench-ACTIVE_TAB_SELECTED_TEXT_COLOR {
+    color: #E4E4E4;
+}
+
+ColorDefinition#org-eclipse-ui-workbench-ACTIVE_NOFOCUS_TAB_BG_START {
+    color: #1E1E1E;
+}
+
+ColorDefinition#org-eclipse-ui-workbench-ACTIVE_NOFOCUS_TAB_BG_END {
+    color: #1E1E1E;
+}
+
+ColorDefinition#org-eclipse-ui-workbench-ACTIVE_NOFOCUS_TAB_TEXT_COLOR {
+    color: #A9A9A9;
+}
+
+ColorDefinition#org-eclipse-ui-workbench-ACTIVE_NOFOCUS_TAB_SELECTED_TEXT_COLOR {
+    color: #A9A9A9;
+}
+
+ColorDefinition#org-eclipse-ui-workbench-LINK_COLOR {
+    color: #0097FB;
+}
+
+ColorDefinition#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR {
+  color: #333333;
+  category: '#com-_1c-g5-v8-dt-theming-ui-themeCategory';
+  label: url('platform:/plugin/com._1c.g5.v8.dt.theming.ui?message=Color.backgroundColor');
+  description: url('platform:/plugin/com._1c.g5.v8.dt.theming.ui?message=Color.backgroundColorDesc');
+}
+
+ColorDefinition#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR {
+  color: #B5B5B5;
+  category: '#com-_1c-g5-v8-dt-theming-ui-themeCategory';
+  label: url('platform:/plugin/com._1c.g5.v8.dt.theming.ui?message=Color.foregroundColor');
+  description: url('platform:/plugin/com._1c.g5.v8.dt.theming.ui?message=Color.foregroundColorDesc');
+}
+
+ColorDefinition#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR_ACCENT {
+  color: #2C2C2C;
+  category: '#com-_1c-g5-v8-dt-theming-ui-themeCategory';
+  label: url('platform:/plugin/com._1c.g5.v8.dt.theming.ui?message=Color.accentBackgroundColor');
+  description: url('platform:/plugin/com._1c.g5.v8.dt.theming.ui?message=Color.accentBackgroundColorDesc');
+}
+
+ColorDefinition#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR_ACCENT {
+  color: #A9A9A9;
+  category: '#com-_1c-g5-v8-dt-theming-ui-themeCategory';
+  label: url('platform:/plugin/com._1c.g5.v8.dt.theming.ui?message=Color.accentForegroundColor');
+  description: url('platform:/plugin/com._1c.g5.v8.dt.theming.ui?message=Color.accentForegroundColorDesc');
+}
+
+ColorDefinition#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR_TITLE {
+  color: #4B4B4B;
+  category: '#com-_1c-g5-v8-dt-theming-ui-themeCategory';
+  label: url('platform:/plugin/com._1c.g5.v8.dt.theming.ui?message=Color.titleBackgroundColor');
+  description: url('platform:/plugin/com._1c.g5.v8.dt.theming.ui?message=Color.titleBackgroundColorDesc');
+}
+
+ColorDefinition#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR_TITLE {
+  color: #E4E4E4;
+  category: '#com-_1c-g5-v8-dt-theming-ui-themeCategory';
+  label: url('platform:/plugin/com._1c.g5.v8.dt.theming.ui?message=Color.titleForegroundColor');
+  description: url('platform:/plugin/com._1c.g5.v8.dt.theming.ui?message=Color.titleForegroundColorDesc');
+}
+
+ColorDefinition#com-_1c-g5-v8-dt-theming-ui-SELECTED_TAB_HIGHLIGHT {
+  color: #333333;
+  category: '#com-_1c-g5-v8-dt-theming-ui-themeCategory';
+  label: url('platform:/plugin/com._1c.g5.v8.dt.theming.ui?message=Color.selectedTabHighlightingColor');
+  description: url('platform:/plugin/com._1c.g5.v8.dt.theming.ui?message=Color.selectedTabHighlightingColorDesc');
+}
+
+ColorDefinition#com-_1c-g5-v8-dt-theming-ui-INACTIVE_PART_BACKGROUND_COLOR {
+  color: #1E1E1E;
+  category: '#com-_1c-g5-v8-dt-theming-ui-themeCategory';
+  label: url('platform:/plugin/com._1c.g5.v8.dt.theming.ui?message=Color.inactivePartBackgroundColor');
+  description: url('platform:/plugin/com._1c.g5.v8.dt.theming.ui?message=Color.inactivePartBackgroundColorDesc');
+}
+
+ColorDefinition#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR_PAGE_TITLE {
+  color: #333333;
+  category: '#com-_1c-g5-v8-dt-theming-ui-themeCategory';
+  label: url('platform:/plugin/com._1c.g5.v8.dt.theming.ui?message=Color.pageTitleBackgroundColor');
+  description: url('platform:/plugin/com._1c.g5.v8.dt.theming.ui?message=Color.pageTitleBackgroundColorDesc');
+}
+
+ColorDefinition#com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR_PAGE_TITLE {
+  color: #E4E4E4;
+  category: '#com-_1c-g5-v8-dt-theming-ui-themeCategory';
+  label: url('platform:/plugin/com._1c.g5.v8.dt.theming.ui?message=Color.pageTitleForegroundColor');
+  description: url('platform:/plugin/com._1c.g5.v8.dt.theming.ui?message=Color.pageTitleForegroundColorDesc');
+}
+
+ColorDefinition#com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR_TREES_AND_TABLES {
+  color: #2C2C2C;
+  category: '#com-_1c-g5-v8-dt-theming-ui-themeCategory';
+  label: url('platform:/plugin/com._1c.g5.v8.dt.theming.ui?message=Color.treeTableBackgroundColor');
+  description: url('platform:/plugin/com._1c.g5.v8.dt.theming.ui?message=Color.treeTableBackgroundColorDesc');
+}
+
+ColorDefinition#com-_1c-g5-v8-dt-theming-ui-TREES_UNFOCUSED_SELECTION_COLOR {
+  color: #464646;
+  category: '#com-_1c-g5-v8-dt-theming-ui-themeCategory';
+  label: url('platform:/plugin/com._1c.g5.v8.dt.theming.ui?message=Color.treeUnfocusedSelectionColor');
+  description: url('platform:/plugin/com._1c.g5.v8.dt.theming.ui?message=Color.treeUnfocusedSelectionColorDesc');
+}
+
+ColorDefinition#com-_1c-g5-v8-dt-theming-ui-BORDER_COLOR {
+  color: #747474;
+}
+
+ColorDefinition#com-_1c-g5-v8-dt-theming-ui-CONTROLS_BACKGROUND_COLOR {
+  color: #1E1E1D;
+  category: '#com-_1c-g5-v8-dt-theming-ui-themeCategoryControls';
+  label: url('platform:/plugin/com._1c.g5.v8.dt.theming.ui?message=Color.controlsBackgroundColor');
+  description: url('platform:/plugin/com._1c.g5.v8.dt.theming.ui?message=Color.controlsBackgroundColorDesc');
+}
+
+ColorDefinition#com-_1c-g5-v8-dt-theming-ui-CONTROLS_FOREGROUND_COLOR {
+  color: #E4E4E4;
+  category: '#com-_1c-g5-v8-dt-theming-ui-themeCategoryControls';
+  label: url('platform:/plugin/com._1c.g5.v8.dt.theming.ui?message=Color.controlsForegroundColor');
+  description: url('platform:/plugin/com._1c.g5.v8.dt.theming.ui?message=Color.controlsForegroundColorDesc');
+}
+
+ColorDefinition#com-_1c-g5-v8-dt-theming-ui-CONTROLS_DISABLED_BORDER_COLOR {
+  color: #747474;
+  category: '#com-_1c-g5-v8-dt-theming-ui-themeCategoryControls';
+  label: url('platform:/plugin/com._1c.g5.v8.dt.theming.ui?message=Color.controlsDisabledBorderColor');
+  description: url('platform:/plugin/com._1c.g5.v8.dt.theming.ui?message=Color.controlsDisabledBorderColorDesc');
+}
+
+ColorDefinition#com-_1c-g5-v8-dt-theming-ui-CONTROLS_DISABLED_BACKGROUND_COLOR {
+  color: #363636;
+  category: '#com-_1c-g5-v8-dt-theming-ui-themeCategoryControls';
+  label: url('platform:/plugin/com._1c.g5.v8.dt.theming.ui?message=Color.controlsDisabledBackgroundColor');
+  description: url('platform:/plugin/com._1c.g5.v8.dt.theming.ui?message=Color.controlsDisabledBackgroundColorDesc');
+}
+
+ColorDefinition#com-_1c-g5-v8-dt-theming-ui-CONTROLS_DISABLED_FOREGROUND_COLOR {
+  color: #747474;
+  category: '#com-_1c-g5-v8-dt-theming-ui-themeCategoryControls';
+  label: url('platform:/plugin/com._1c.g5.v8.dt.theming.ui?message=Color.controlsDisabledForegroundColor');
+  description: url('platform:/plugin/com._1c.g5.v8.dt.theming.ui?message=Color.controlsDisabledForegroundColorDesc');
+}
+
+ColorDefinition#com-_1c-g5-v8-dt-theming-ui-CONTROLS_HOVER_BORDER_COLOR {
+  color: #A9A9A9;
+  category: '#com-_1c-g5-v8-dt-theming-ui-themeCategoryControls';
+  label: url('platform:/plugin/com._1c.g5.v8.dt.theming.ui?message=Color.controlsHoverBorderColor');
+  description: url('platform:/plugin/com._1c.g5.v8.dt.theming.ui?message=Color.controlsHoverBorderColorDesc');
+}
+
+ColorDefinition#com-_1c-g5-v8-dt-theming-ui-CONTROLS_HOVER_BACKGROUND_COLOR {
+  color: #2C2C2C;
+  category: '#com-_1c-g5-v8-dt-theming-ui-themeCategoryControls';
+  label: url('platform:/plugin/com._1c.g5.v8.dt.theming.ui?message=Color.controlsHoverBackgroundColor');
+  description: url('platform:/plugin/com._1c.g5.v8.dt.theming.ui?message=Color.controlsHoverBackgroundColorDesc');
+}
+
+ColorDefinition#com-_1c-g5-v8-dt-theming-ui-CONTROLS_HOVER_FOREGROUND_COLOR {
+  color: #A9A9A9;
+  category: '#com-_1c-g5-v8-dt-theming-ui-themeCategoryControls';
+  label: url('platform:/plugin/com._1c.g5.v8.dt.theming.ui?message=Color.controlsHoverForegroundColor');
+  description: url('platform:/plugin/com._1c.g5.v8.dt.theming.ui?message=Color.controlsHoverForegroundColorDesc');
+}
+
+ColorDefinition#com-_1c-g5-v8-dt-theming-ui-INFORMATION_BACKGROUND_COLOR {
+  color: #34393D;
+  category: '#com-_1c-g5-v8-dt-theming-ui-themeCategory';
+  label: url('platform:/plugin/com._1c.g5.v8.dt.theming.ui?message=Color.informationBackgroundColor');
+  description: url('platform:/plugin/com._1c.g5.v8.dt.theming.ui?message=Color.informationBackgroundColorDesc');
+}
+
+ColorDefinition#com-_1c-g5-v8-dt-theming-ui-INFORMATION_FOREGROUND_COLOR {
+  color: #CCCCCC;
+  category: '#com-_1c-g5-v8-dt-theming-ui-themeCategory';
+  label: url('platform:/plugin/com._1c.g5.v8.dt.theming.ui?message=Color.informationForegroundColor');
+  description: url('platform:/plugin/com._1c.g5.v8.dt.theming.ui?message=Color.informationForegroundColorDesc');
+}

@@ -1,0 +1,59 @@
+JVM 17.0.18
+PASS BSL editor opened on test fixture
+PASS font test opens real BSL editor
+PASS font preference page exists
+PASS font size selector exists
+PASS font group exists
+PASS font selection is only a preview before Apply: Courier New 10
+PASS font preview does not write preferences
+PASS font Cancel accepted
+PASS Cancel before Apply leaves font unchanged: Courier New 10
+PASS font preference page exists
+PASS font size selector exists
+BUTTON Применять палитру BSL expected=При&менить
+BUTTON Восстановить исходное оформление… expected=При&менить
+BUTTON  expected=При&менить
+BUTTON Вернуть исходный шрифт expected=При&менить
+BUTTON При&менить expected=При&менить
+PASS font Apply button exists
+PASS Apply updates already open BSL editor: Consolas 13
+PASS font stored in native EDT preference
+PASS Cancel after Apply keeps committed font: Consolas 13
+PASS font survives Darcula Monokai switch: Consolas 13
+PASS color restore for independent font test
+PASS color restoration leaves font unchanged: Consolas 13
+PASS BSL editor opened on test fixture
+PASS new BSL editor opens in font test
+PASS new BSL editor inherits chosen font: Consolas 13
+PASS font preference page exists
+PASS font size selector exists
+BUTTON Применять палитру BSL expected=При&менить
+BUTTON Восстановить исходное оформление… expected=При&менить
+BUTTON  expected=При&менить
+BUTTON Вернуть исходный шрифт expected=При&менить
+BUTTON При&менить expected=При&менить
+PASS explicit font choice replaces later native font edit: Consolas 15
+PASS font preference page exists
+PASS font size selector exists
+PASS restore original font available
+PASS font reset is pending until Apply: Consolas 15
+PASS Cancel discards pending font reset: Consolas 15
+PASS font preference page exists
+PASS font size selector exists
+BUTTON Применять палитру BSL expected=При&менить
+BUTTON Восстановить исходное оформление… expected=При&менить
+BUTTON  expected=При&менить
+BUTTON Вернуть исходный шрифт expected=При&менить
+BUTTON При&менить expected=При&менить
+PASS reset restores exact native value or absence
+PASS reset restores original effective BSL font: Courier New 10
+PASS restore preserves a preexisting explicit native font value
+PASS restore preserves preexisting explicit effective font: Consolas 16
+PASS font preference page exists
+PASS font size selector exists
+PASS real OK button exists
+PASS OK commits chosen font: Consolas 15
+UI font-chosen shell=RGB {240, 240, 240} style=margin-top: 0.0px;
+margin-bottom: 0.0px;
+margin-left: 0.0px;
+margin-right: 0.0px;

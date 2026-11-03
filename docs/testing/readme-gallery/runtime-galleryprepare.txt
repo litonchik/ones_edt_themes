@@ -1,0 +1,14 @@
+JVM 17.0.18
+PASS gallery starts without personal colors: darcula
+PASS gallery starts without personal colors: monokai
+PASS gallery starts without personal colors: one-dark-pro
+PASS gallery starts without personal colors: dracula
+PASS gallery starts without personal colors: github-dark-default
+PASS gallery starts without personal colors: winter-is-coming-dark-blue
+PASS gallery starts without personal colors: night-owl
+PASS gallery starts without personal colors: ayu-dark
+PASS gallery starts without personal colors: shades-of-purple
+PASS gallery starts without personal colors: noctis-minimus
+PASS gallery starts without personal colors: visual-studio-dark-cpp
+PASS gallery preparation starts from restored test settings
+PASS gallery prepares native Dark before restart

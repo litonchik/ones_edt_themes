@@ -1,0 +1,103 @@
+JVM 17.0.18
+PASS restore previous test state
+PASS BSL editor opened on test fixture
+PASS open real BSL for divider comparison
+PASS public workbench application model available
+CONTAINERS 7
+CONTAINER null widget=Composite {} [layout=org.eclipse.e4.ui.workbench.renderers.swt.SashLayout@4bc88ccb]
+RECTANGLES [Rectangle {0, 0, 884, 527}]
+CONTAINER null widget=Composite {} [layout=org.eclipse.e4.ui.workbench.renderers.swt.SashLayout@5c486c5a]
+CONTAINER null widget=Rectangle {201, 0, 660, 527}
+CONTAINER null widget=Rectangle {201, 0, 440, 527}
+CONTAINER null widget=Rectangle {645, 0, 216, 527}
+CONTAINER null widget=Composite {} [layout=org.eclipse.e4.ui.workbench.renderers.swt.SashLayout@2bf1d748]
+RECTANGLES [Rectangle {0, 0, 246, 527}, Rectangle {250, 0, 634, 366}, Rectangle {250, 370, 634, 157}]
+DIVIDER before vertical pixel=RGB {1, 22, 39} background=RGB {1, 22, 39}
+PASS before rendered divider pixel RGB {1, 22, 39} expected RGB {1, 22, 39}
+DIVIDER before vertical pixel=RGB {1, 22, 39} background=RGB {1, 22, 39}
+PASS before rendered divider pixel RGB {1, 22, 39} expected RGB {1, 22, 39}
+DIVIDER before horizontal pixel=RGB {1, 22, 39} background=RGB {1, 22, 39}
+PASS before rendered divider pixel RGB {1, 22, 39} expected RGB {1, 22, 39}
+CONTAINER null widget=Rectangle {250, 0, 634, 527}
+PASS safe capture visible control intersection: winter-separators-before
+PASS visible workbench dividers: 3
+PASS both horizontal and vertical workbench dividers checked
+PASS panel fix preserves SettingKey[scope=theme, node=css, key=id]
+PASS panel fix preserves SettingKey[scope=theme, node=legacy, key=id]
+PASS panel fix preserves SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Builtin function.color]
+PASS panel fix preserves SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.BSL_Keywords.color]
+PASS panel fix preserves SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Comment.color]
+PASS panel fix preserves SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Operators.color]
+PASS panel fix preserves SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Others.color]
+PASS panel fix preserves SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Preprocessor.color]
+PASS panel fix preserves SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Brackets.color]
+PASS panel fix preserves SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Strings.color]
+PASS panel fix preserves SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Numbers.color]
+PASS panel fix preserves SettingKey[scope=instance, node=org.eclipse.ui.console, key=org.eclipse.ui.console.P_BACKGROUND_COLOR]
+PASS panel fix preserves SettingKey[scope=instance, node=org.eclipse.ui.console, key=org.eclipse.ui.console.P_STREAM_COLOR]
+PASS panel fix preserves SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Background]
+PASS panel fix preserves SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Foreground]
+PASS panel fix preserves SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionBackground]
+PASS panel fix preserves SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionForeground]
+PASS panel fix preserves SettingKey[scope=instance, node=org.eclipse.ui.editors, key=currentLineColor]
+PASS panel fix preserves SettingKey[scope=instance, node=org.eclipse.ui.editors, key=lineNumberColor]
+PASS panel fix preserves SettingKey[scope=instance, node=org.eclipse.ui.editors, key=hyperlinkColor]
+PASS panel fix preserves SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Background.SystemDefault]
+PASS panel fix preserves SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Foreground.SystemDefault]
+PASS panel fix preserves SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionBackground.SystemDefault]
+PASS panel fix preserves SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionForeground.SystemDefault]
+PASS panel fix preserves SettingKey[scope=instance, node=org.eclipse.ui.editors, key=hyperlinkColor.SystemDefault]
+PASS panel fix preserves SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.CONTENT_ASSIST_FOREGROUND_COLOR]
+PASS panel fix preserves SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.HOVER_FOREGROUND]
+PASS panel fix preserves SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.FORM_HEADING_ERROR_COLOR]
+PASS panel fix preserves SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.FORM_HEADING_WARNING_COLOR]
+PASS panel fix preserves SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_UNSELECTED_TABS_COLOR_START]
+PASS panel fix preserves SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_UNSELECTED_TABS_COLOR_END]
+PASS panel fix preserves SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_SELECTED_TEXT_COLOR]
+PASS panel fix preserves SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_UNSELECTED_TEXT_COLOR]
+PASS panel fix preserves SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.INACTIVE_TAB_SELECTED_TEXT_COLOR]
+PASS panel fix preserves SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.INACTIVE_TAB_UNSELECTED_TEXT_COLOR]
+PASS panel fix preserves SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR]
+PASS panel fix preserves SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR]
+PASS panel fix preserves SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR_ACCENT]
+PASS panel fix preserves SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BORDER_COLOR]
+PASS panel fix preserves SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR_TITLE]
+PASS panel fix preserves SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_BACKGROUND_COLOR]
+PASS panel fix preserves SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_FOREGROUND_COLOR]
+PASS panel fix preserves SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_BORDER_COLOR]
+PASS panel fix preserves SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_FOREGROUND_COLOR]
+PASS panel fix preserves SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_BORDER_COLOR]
+PASS panel fix preserves SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_BACKGROUND_COLOR]
+PASS panel fix preserves SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_FOREGROUND_COLOR]
+PASS panel fix preserves SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_TREES_AND_TABLES]
+PASS panel fix preserves SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.INFORMATION_FOREGROUND_COLOR]
+PASS panel fix preserves SettingKey[scope=instance, node=org.eclipse.e4.ui.css.swt.theme, key=themeid]
+PASS BSL editor opened on test fixture
+PASS selected profile profile real BSL editor opens
+PASS selected profile profile real BSL background
+PASS selected profile profile real BSL keyword glyph RGB {0, 191, 249}
+PASS selected profile real BSL number glyph
+PASS selected profile real BSL string glyph
+PASS safe capture visible control intersection: winter-is-coming-dark-blue-bsl
+PASS public workbench application model available
+CONTAINERS 7
+CONTAINER null widget=Composite {} [layout=org.eclipse.e4.ui.workbench.renderers.swt.SashLayout@4bc88ccb]
+RECTANGLES [Rectangle {0, 0, 884, 527}]
+CONTAINER null widget=Composite {} [layout=org.eclipse.e4.ui.workbench.renderers.swt.SashLayout@5c486c5a]
+CONTAINER null widget=Rectangle {201, 0, 660, 527}
+CONTAINER null widget=Rectangle {201, 0, 440, 527}
+CONTAINER null widget=Rectangle {645, 0, 216, 527}
+CONTAINER null widget=Composite {} [layout=org.eclipse.e4.ui.workbench.renderers.swt.SashLayout@2bf1d748]
+RECTANGLES [Rectangle {0, 0, 246, 527}, Rectangle {250, 0, 634, 366}, Rectangle {250, 370, 634, 157}]
+DIVIDER after vertical pixel=RGB {14, 41, 63} background=RGB {14, 41, 63}
+PASS after rendered divider pixel RGB {14, 41, 63} expected RGB {14, 41, 63}
+DIVIDER after vertical pixel=RGB {14, 41, 63} background=RGB {14, 41, 63}
+PASS after rendered divider pixel RGB {14, 41, 63} expected RGB {14, 41, 63}
+DIVIDER after horizontal pixel=RGB {14, 41, 63} background=RGB {14, 41, 63}
+PASS after rendered divider pixel RGB {14, 41, 63} expected RGB {14, 41, 63}
+CONTAINER null widget=Rectangle {250, 0, 634, 527}
+PASS safe capture visible control intersection: winter-separators-after
+PASS visible workbench dividers: 3
+PASS both horizontal and vertical workbench dividers checked
+PASS panel fix keeps code font
+PASS default distinct panel retained with personal keyword

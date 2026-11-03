@@ -1,0 +1,23 @@
+JVM 17.0.18
+PASS BSL editor opened on test fixture
+PASS surfaces BSL fixture
+PASS sample.txt native text viewer
+OBS sample.txt bg=RGB {30, 30, 30} fg=RGB {218, 218, 218} token=ВЫБРАТЬ color=RGB {218, 218, 218}
+PASS safe capture visible control intersection: surface-sample.txt
+PASS sample.ql native text viewer
+OBS sample.ql bg=RGB {30, 30, 30} fg=RGB {218, 218, 218} token=ВЫБРАТЬ color=RGB {160, 202, 244}
+PASS safe capture visible control intersection: surface-sample.ql
+PASS sample.qldcs native text viewer
+OBS sample.qldcs bg=RGB {30, 30, 30} fg=RGB {218, 218, 218} token=ВЫБРАТЬ color=RGB {160, 202, 244}
+PASS safe capture visible control intersection: surface-sample.qldcs
+PASS query constructor QL and DCS real embedded text controls
+OBS constructor-0 bg=RGB {30, 30, 30} fg=RGB {218, 218, 218} token=ВЫБРАТЬ color=RGB {160, 202, 244}
+OBS constructor-1 bg=RGB {30, 30, 30} fg=RGB {218, 218, 218} token=ВЫБРАТЬ color=RGB {160, 202, 244}
+PASS safe capture visible control intersection: surface-query-constructor
+PASS registered EDT BSL merge viewer factory
+OBS EDT merge-0 bg=RGB {30, 30, 30} fg=RGB {218, 218, 218} token=Процедура color=RGB {86, 156, 214}
+OBS EDT merge-1 bg=RGB {30, 30, 30} fg=RGB {218, 218, 218} token=Процедура color=RGB {86, 156, 214}
+OBS EDT merge-2 bg=RGB {30, 30, 30} fg=RGB {218, 218, 218} token=Процедура color=RGB {86, 156, 214}
+PASS EDT comparison and merge shows at least three real BSL panes
+PASS safe capture visible control intersection: surface-edt-merge
+PASS surfaces restore

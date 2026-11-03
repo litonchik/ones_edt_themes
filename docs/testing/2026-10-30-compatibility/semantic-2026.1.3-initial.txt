@@ -1,0 +1,78 @@
+PASS BSL editor opened on test fixture
+PASS semantic real BSL editor
+DOC Процедура ПроверитьПалитру()
+    Сообщить(СтрДлина("текст"));
+    МойВызов();
+КонецПроцедуры
+
+Процедура МойВызов()
+КонецПроцедуры
+
+WIDGET Процедура ПроверитьПалитру()
+    Сообщить(СтрДлина("текст"));
+    МойВызов();
+КонецПроцедуры
+
+Процедура МойВызов()
+КонецПроцедуры
+
+OBS native call RGB {255, 140, 110}
+PASS darcula apply preserves document, dirty state and modification stamp
+OBS darcula before=RGB {88, 157, 246} after=RGB {88, 157, 246} expected=RGB {88, 157, 246}
+PASS darcula call stable before/after edit
+PASS darcula semantic call matches palette
+PASS darcula local and nested calls match palette
+PASS monokai apply preserves document, dirty state and modification stamp
+OBS monokai before=RGB {102, 217, 239} after=RGB {102, 217, 239} expected=RGB {102, 217, 239}
+PASS monokai call stable before/after edit
+PASS monokai semantic call matches palette
+PASS monokai local and nested calls match palette
+PASS one-dark-pro apply preserves document, dirty state and modification stamp
+OBS one-dark-pro before=RGB {97, 175, 239} after=RGB {97, 175, 239} expected=RGB {97, 175, 239}
+PASS one-dark-pro call stable before/after edit
+PASS one-dark-pro semantic call matches palette
+PASS one-dark-pro local and nested calls match palette
+PASS dracula apply preserves document, dirty state and modification stamp
+OBS dracula before=RGB {139, 233, 253} after=RGB {139, 233, 253} expected=RGB {139, 233, 253}
+PASS dracula call stable before/after edit
+PASS dracula semantic call matches palette
+PASS dracula local and nested calls match palette
+PASS github-dark-default apply preserves document, dirty state and modification stamp
+OBS github-dark-default before=RGB {47, 129, 247} after=RGB {47, 129, 247} expected=RGB {47, 129, 247}
+PASS github-dark-default call stable before/after edit
+PASS github-dark-default semantic call matches palette
+PASS github-dark-default local and nested calls match palette
+PASS winter-is-coming-dark-blue apply preserves document, dirty state and modification stamp
+OBS winter-is-coming-dark-blue before=RGB {33, 159, 213} after=RGB {33, 159, 213} expected=RGB {33, 159, 213}
+PASS winter-is-coming-dark-blue call stable before/after edit
+PASS winter-is-coming-dark-blue semantic call matches palette
+PASS winter-is-coming-dark-blue local and nested calls match palette
+PASS night-owl apply preserves document, dirty state and modification stamp
+OBS night-owl before=RGB {130, 170, 255} after=RGB {130, 170, 255} expected=RGB {130, 170, 255}
+PASS night-owl call stable before/after edit
+PASS night-owl semantic call matches palette
+PASS night-owl local and nested calls match palette
+PASS ayu-dark apply preserves document, dirty state and modification stamp
+OBS ayu-dark before=RGB {230, 180, 80} after=RGB {230, 180, 80} expected=RGB {230, 180, 80}
+PASS ayu-dark call stable before/after edit
+PASS ayu-dark semantic call matches palette
+PASS ayu-dark local and nested calls match palette
+PASS shades-of-purple apply preserves document, dirty state and modification stamp
+OBS shades-of-purple before=RGB {179, 98, 255} after=RGB {179, 98, 255} expected=RGB {179, 98, 255}
+PASS shades-of-purple call stable before/after edit
+PASS shades-of-purple semantic call matches palette
+PASS shades-of-purple local and nested calls match palette
+PASS noctis-minimus apply preserves document, dirty state and modification stamp
+OBS noctis-minimus before=RGB {89, 152, 192} after=RGB {89, 152, 192} expected=RGB {89, 152, 192}
+PASS noctis-minimus call stable before/after edit
+PASS noctis-minimus semantic call matches palette
+PASS noctis-minimus local and nested calls match palette
+PASS visual-studio-dark-cpp apply preserves document, dirty state and modification stamp
+OBS visual-studio-dark-cpp before=RGB {0, 122, 204} after=RGB {0, 122, 204} expected=RGB {0, 122, 204}
+PASS visual-studio-dark-cpp call stable before/after edit
+PASS visual-studio-dark-cpp semantic call matches palette
+PASS visual-studio-dark-cpp local and nested calls match palette
+PASS semantic restore
+OBS restored before=RGB {255, 140, 110} after=RGB {255, 140, 110}
+PASS native call restored without edit
+PASS native call restored after edit

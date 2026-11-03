@@ -1,0 +1,71 @@
+WARNING: Using incubator modules: jdk.incubator.vector, jdk.incubator.foreign
+Configuration location:
+    file:/C:/Users/litonchik/Documents/Codex/ones_edt_theme_plugin/.work/edt-test/configuration/
+Configuration file:
+    file:/C:/Users/litonchik/Documents/Codex/ones_edt_theme_plugin/.work/edt-test/configuration/config.ini loaded
+Install location:
+    file:/C:/Users/litonchik/Documents/Codex/ones_edt_theme_plugin/.work/edt-test/
+Framework located:
+    file:/C:/Users/litonchik/Documents/Codex/ones_edt_theme_plugin/.work/edt-test/plugins/org.eclipse.osgi_3.18.600.v20231110-1900.jar
+Loading extension: reference:file:com.e1c.openjfx.swt.compat_17.0.3.jar
+	eclipse.properties not found
+Loading extension: reference:file:org.eclipse.equinox.weaving.hook_1.4.0.v20231130-2312.jar
+	eclipse.properties not found
+Loading extension: reference:file:org.eclipse.fx.osgi_3.9.0.202210162353.jar
+	eclipse.properties not found
+Loading extension: reference:file:org.eclipse.osgi.compatibility.state_1.2.900.v20231106-0859.jar
+	eclipse.properties not found
+Loading extension: reference:file:org.eclipse.osgi.nl_ru_4.23.0.v20230221055001.jar
+	eclipse.properties not found
+Framework classpath:
+    file:/C:/Users/litonchik/Documents/Codex/ones_edt_theme_plugin/.work/edt-test/plugins/org.eclipse.osgi_3.18.600.v20231110-1900.jar
+    file:/C:/Users/litonchik/Documents/Codex/ones_edt_theme_plugin/.work/edt-test/plugins/
+    file:/C:/Users/litonchik/Documents/Codex/ones_edt_theme_plugin/.work/edt-test/plugins/com.e1c.openjfx.swt.compat_17.0.3.jar
+    file:/C:/Users/litonchik/Documents/Codex/ones_edt_theme_plugin/.work/edt-test/plugins/org.eclipse.equinox.weaving.hook_1.4.0.v20231130-2312.jar
+    file:/C:/Users/litonchik/Documents/Codex/ones_edt_theme_plugin/.work/edt-test/plugins/org.eclipse.fx.osgi_3.9.0.202210162353.jar
+    file:/C:/Users/litonchik/Documents/Codex/ones_edt_theme_plugin/.work/edt-test/plugins/org.eclipse.osgi.compatibility.state_1.2.900.v20231106-0859.jar
+    file:/C:/Users/litonchik/Documents/Codex/ones_edt_theme_plugin/.work/edt-test/plugins/org.eclipse.osgi.nl_ru_4.23.0.v20230221055001.jar
+Debug options:
+    file:/C:/Users/litonchik/Documents/Codex/ones_edt_theme_plugin/.options not found
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+!SESSION 2026-10-18 21:46:54.459 -----------------------------------------------
+eclipse.buildId=2026.1.3.25
+java.version=17.0.18
+java.vendor=Axiom JSC
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ru_RU
+Framework arguments:  -application org.eclipse.equinox.p2.reconciler.application
+Command-line arguments:  -data C:\Users\litonchik\Documents\Codex\ones_edt_theme_plugin\.work\workspace-probe -clean -application org.eclipse.equinox.p2.reconciler.application -consolelog
+
+!ENTRY org.eclipse.core.resources 2 10035 2026-10-18 21:47:08.804
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+Warning: NLS unused message: InputStreamMonitor_label in: org.eclipse.debug.internal.core.DebugCoreMessages
+Warning: NLS unused message: OutputStreamMonitor_label in: org.eclipse.debug.internal.core.DebugCoreMessages
+
+!ENTRY com._1c.g5.v8.dt.core 1 0 2026-10-18 21:47:13.183
+!MESSAGE java.vm.name=OpenJDK 64-Bit Server VM
+
+!ENTRY com._1c.g5.v8.dt.core 1 0 2026-10-18 21:47:13.191
+!MESSAGE java.vm.info=mixed mode, sharing
+Exception in thread "cli-register-thread" java.lang.NullPointerException: Cannot invoke "com._1c.g5.internal.wiring.WiringPlugin.getLog()" because the return value of "com._1c.g5.internal.wiring.WiringPlugin.getDefault()" is null
+	at com._1c.g5.internal.wiring.WiringPlugin.logError(WiringPlugin.java:114)
+	at com._1c.g5.internal.wiring.WiringPlugin$InitializationContext.lambda$2(WiringPlugin.java:375)
+	at java.base/java.util.concurrent.ConcurrentLinkedQueue.forEachFrom(ConcurrentLinkedQueue.java:1037)
+	at java.base/java.util.concurrent.ConcurrentLinkedQueue.forEach(ConcurrentLinkedQueue.java:1054)
+	at com._1c.g5.internal.wiring.WiringPlugin$InitializationContext.join(WiringPlugin.java:364)
+	at com._1c.g5.wiring.ServiceInitialization.join(ServiceInitialization.java:48)
+	at com.e1c.g5.v8.dt.internal.cli.api.CommandRegistry$CommandRegisterThread.run(CommandRegistry.java:733)
+
+!ENTRY org.eclipse.core.jobs 4 2 2026-10-18 21:47:21.692
+!MESSAGE ��������� ���������� ������: "Default lifecycle context activator".
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "com._1c.g5.internal.wiring.WiringPlugin.getLog()" because the return value of "com._1c.g5.internal.wiring.WiringPlugin.getDefault()" is null
+	at com._1c.g5.internal.wiring.WiringPlugin.logError(WiringPlugin.java:114)
+	at com._1c.g5.internal.wiring.WiringPlugin$InitializationContext.lambda$2(WiringPlugin.java:375)
+	at java.base/java.util.concurrent.ConcurrentLinkedQueue.forEachFrom(ConcurrentLinkedQueue.java:1037)
+	at java.base/java.util.concurrent.ConcurrentLinkedQueue.forEach(ConcurrentLinkedQueue.java:1054)
+	at com._1c.g5.internal.wiring.WiringPlugin$InitializationContext.join(WiringPlugin.java:364)
+	at com._1c.g5.wiring.ServiceInitialization.join(ServiceInitialization.java:48)
+	at com._1c.g5.v8.dt.internal.core.lifecycle.ServiceProviderActivationListener$DefaultContextInitializationJob.run(ServiceProviderActivationListener.java:57)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)

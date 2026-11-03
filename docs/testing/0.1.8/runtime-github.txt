@@ -1,0 +1,255 @@
+JVM 17.0.18
+PASS font preference page exists
+PASS font size selector exists
+PASS selected profile profile available by its own name
+PASS github-dark-default preview background
+PASS github-dark-default preview comment at 0
+PASS github-dark-default preview directive at 25
+PASS github-dark-default preview keyword at 41
+PASS github-dark-default preview number at 78
+PASS github-dark-default preview keyword at 90
+PASS github-dark-default preview string at 98
+PASS github-dark-default preview keyword at 122
+PASS github-dark-default preview directive at 135
+PASS github-dark-default preview keyword at 150
+PASS github-dark-default preview keyword at 173
+PASS github-dark-default preview string at 180
+PASS github-dark-default preview keyword at 190
+PASS selected profile draft survives profile switch
+PASS Cancel discards selected profile and old profile drafts
+PASS selected profile Cancel preserves native SettingKey[scope=theme, node=css, key=id]
+PASS selected profile Cancel preserves native SettingKey[scope=theme, node=legacy, key=id]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Builtin function.color]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.BSL_Keywords.color]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Comment.color]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Operators.color]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Others.color]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Preprocessor.color]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Brackets.color]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Strings.color]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Numbers.color]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.console, key=org.eclipse.ui.console.P_BACKGROUND_COLOR]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.console, key=org.eclipse.ui.console.P_STREAM_COLOR]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Background]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Foreground]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionBackground]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionForeground]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.editors, key=currentLineColor]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.editors, key=lineNumberColor]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.editors, key=hyperlinkColor]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Background.SystemDefault]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Foreground.SystemDefault]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionBackground.SystemDefault]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionForeground.SystemDefault]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.editors, key=hyperlinkColor.SystemDefault]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.CONTENT_ASSIST_BACKGROUND_COLOR]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.CONTENT_ASSIST_FOREGROUND_COLOR]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.HOVER_BACKGROUND]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.HOVER_FOREGROUND]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.FORM_HEADING_ERROR_COLOR]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.FORM_HEADING_WARNING_COLOR]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_BG_START]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_BG_END]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_UNSELECTED_TABS_COLOR_START]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_UNSELECTED_TABS_COLOR_END]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_SELECTED_TEXT_COLOR]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_UNSELECTED_TEXT_COLOR]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.INACTIVE_TAB_SELECTED_TEXT_COLOR]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.INACTIVE_TAB_UNSELECTED_TEXT_COLOR]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR_ACCENT]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_ACCENT]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BORDER_COLOR]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_TITLE]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR_TITLE]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.INACTIVE_PART_BACKGROUND_COLOR]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_BACKGROUND_COLOR]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_FOREGROUND_COLOR]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_BORDER_COLOR]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_BACKGROUND_COLOR]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_FOREGROUND_COLOR]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_BORDER_COLOR]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_BACKGROUND_COLOR]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_FOREGROUND_COLOR]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_TREES_AND_TABLES]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.INFORMATION_BACKGROUND_COLOR]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.INFORMATION_FOREGROUND_COLOR]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.e4.ui.css.swt.theme, key=themeid]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_ARROW_ACTIVE_COLOR]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_ARROW_COLOR]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_ARROW_HOVER_COLOR]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_BUTTON_ACTIVE_COLOR]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_BUTTON_HOVER_COLOR]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_CORNER_COLOR]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_THUMB_ACTIVE_COLOR]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_THUMB_COLOR]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_THUMB_HOVER_COLOR]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_TRACK_COLOR]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.FindScope]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.editors, key=printMarginColor]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=ACTIVE_HYPERLINK_COLOR]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=CONFLICTING_COLOR]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=CONTENT_ASSIST_BACKGROUND_COLOR]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=CONTENT_ASSIST_FOREGROUND_COLOR]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=COUNTER_COLOR]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=DECORATIONS_COLOR]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=EDITION_COLOR]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=ERROR_COLOR]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=HYPERLINK_COLOR]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=INCOMING_COLOR]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.jface.REVISION_NEWEST_COLOR]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.jface.REVISION_OLDEST_COLOR]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.search.ui.match.highlight]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.editors.rangeIndicatorColor]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.FORM_HEADING_ERROR_COLOR]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.FORM_HEADING_INFO_COLOR]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.FORM_HEADING_WARNING_COLOR]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.HOVER_BACKGROUND]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.HOVER_FOREGROUND]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.INFORMATION_BACKGROUND]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.INFORMATION_FOREGROUND]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=OUTGOING_COLOR]
+PASS selected profile Cancel preserves native SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=RESOLVED_COLOR]
+PASS font preference page exists
+PASS font size selector exists
+BUTTON  expected=При&менить
+BUTTON Применять палитру BSL expected=При&менить
+BUTTON Восстановить исходное оформление… expected=При&менить
+BUTTON  expected=При&менить
+BUTTON Вернуть цвет стиля expected=При&менить
+BUTTON Сбросить палитру expected=При&менить
+BUTTON  expected=При&менить
+BUTTON Вернуть исходный шрифт expected=При&менить
+BUTTON При&менить expected=При&менить
+PASS Apply uses selected profile ID instead of Darcula
+PASS selected profile profile keeps exact native Dark ID
+PASS selected profile profile native target SettingKey[scope=theme, node=css, key=id]
+PASS selected profile profile native target SettingKey[scope=theme, node=legacy, key=id]
+PASS selected profile profile native target SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Builtin function.color]
+PASS selected profile profile native target SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.BSL_Keywords.color]
+PASS selected profile profile native target SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Comment.color]
+PASS selected profile profile native target SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Operators.color]
+PASS selected profile profile native target SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Others.color]
+PASS selected profile profile native target SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Preprocessor.color]
+PASS selected profile profile native target SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Brackets.color]
+PASS selected profile profile native target SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Strings.color]
+PASS selected profile profile native target SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Numbers.color]
+PASS selected profile profile native target SettingKey[scope=instance, node=org.eclipse.ui.console, key=org.eclipse.ui.console.P_BACKGROUND_COLOR]
+PASS selected profile profile native target SettingKey[scope=instance, node=org.eclipse.ui.console, key=org.eclipse.ui.console.P_STREAM_COLOR]
+PASS selected profile profile native target SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Background]
+PASS selected profile profile native target SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Foreground]
+PASS selected profile profile native target SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionBackground]
+PASS selected profile profile native target SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionForeground]
+PASS selected profile profile native target SettingKey[scope=instance, node=org.eclipse.ui.editors, key=currentLineColor]
+PASS selected profile profile native target SettingKey[scope=instance, node=org.eclipse.ui.editors, key=lineNumberColor]
+PASS selected profile profile native target SettingKey[scope=instance, node=org.eclipse.ui.editors, key=hyperlinkColor]
+PASS selected profile profile native target SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Background.SystemDefault]
+PASS selected profile profile native target SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Foreground.SystemDefault]
+PASS selected profile profile native target SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionBackground.SystemDefault]
+PASS selected profile profile native target SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionForeground.SystemDefault]
+PASS selected profile profile native target SettingKey[scope=instance, node=org.eclipse.ui.editors, key=hyperlinkColor.SystemDefault]
+PASS selected profile profile native target SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.CONTENT_ASSIST_BACKGROUND_COLOR]
+PASS selected profile profile native target SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.CONTENT_ASSIST_FOREGROUND_COLOR]
+PASS selected profile profile native target SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.HOVER_BACKGROUND]
+PASS selected profile profile native target SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.HOVER_FOREGROUND]
+PASS selected profile profile native target SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.FORM_HEADING_ERROR_COLOR]
+PASS selected profile profile native target SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.FORM_HEADING_WARNING_COLOR]
+PASS selected profile profile native target SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_BG_START]
+PASS selected profile profile native target SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_BG_END]
+PASS selected profile profile native target SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_UNSELECTED_TABS_COLOR_START]
+PASS selected profile profile native target SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_UNSELECTED_TABS_COLOR_END]
+PASS selected profile profile native target SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_SELECTED_TEXT_COLOR]
+PASS selected profile profile native target SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_UNSELECTED_TEXT_COLOR]
+PASS selected profile profile native target SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.INACTIVE_TAB_SELECTED_TEXT_COLOR]
+PASS selected profile profile native target SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.INACTIVE_TAB_UNSELECTED_TEXT_COLOR]
+PASS selected profile profile native target SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR]
+PASS selected profile profile native target SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR]
+PASS selected profile profile native target SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR_ACCENT]
+PASS selected profile profile native target SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_ACCENT]
+PASS selected profile profile native target SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BORDER_COLOR]
+PASS selected profile profile native target SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_TITLE]
+PASS selected profile profile native target SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR_TITLE]
+PASS selected profile profile native target SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.INACTIVE_PART_BACKGROUND_COLOR]
+PASS selected profile profile native target SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_BACKGROUND_COLOR]
+PASS selected profile profile native target SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_FOREGROUND_COLOR]
+PASS selected profile profile native target SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_BORDER_COLOR]
+PASS selected profile profile native target SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_BACKGROUND_COLOR]
+PASS selected profile profile native target SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_FOREGROUND_COLOR]
+PASS selected profile profile native target SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_BORDER_COLOR]
+PASS selected profile profile native target SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_BACKGROUND_COLOR]
+PASS selected profile profile native target SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_FOREGROUND_COLOR]
+PASS selected profile profile native target SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_TREES_AND_TABLES]
+PASS selected profile profile native target SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.INFORMATION_BACKGROUND_COLOR]
+PASS selected profile profile native target SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.INFORMATION_FOREGROUND_COLOR]
+PASS selected profile profile native target SettingKey[scope=instance, node=org.eclipse.e4.ui.css.swt.theme, key=themeid]
+PASS BSL editor opened on test fixture
+PASS selected profile profile real BSL editor opens
+PASS selected profile profile real BSL background
+PASS selected profile profile real BSL keyword glyph RGB {255, 123, 114}
+PASS selected profile real BSL number glyph
+PASS selected profile real BSL string glyph
+PASS safe capture visible control intersection: github-dark-default-bsl
+PASS safe capture visible control intersection: github-dark-default-roles
+PASS safe capture visible control intersection: github-dark-default-interface-preview
+PASS native plus all registered palettes in popup
+PASS popup includes selected profile label
+PASS selected popup row is visible
+SELECTED ROW background=RGB {20, 39, 68} contrast=12.663669349630732
+PASS rendered selected popup row has readable glyph contrast
+PASS Cancel after Apply retains committed selected profile palette
+PASS font preference page exists
+PASS font size selector exists
+BUTTON  expected=При&менить
+BUTTON Применять палитру BSL expected=При&менить
+BUTTON Восстановить исходное оформление… expected=При&менить
+BUTTON  expected=При&менить
+BUTTON Вернуть цвет стиля expected=При&менить
+BUTTON Сбросить палитру expected=При&менить
+BUTTON  expected=При&менить
+BUTTON Вернуть исходный шрифт expected=При&менить
+BUTTON При&менить expected=При&менить
+PASS selected profile Apply saves independent Darcula draft
+PASS selected profile Apply saves independent Monokai draft
+PASS selected profile Apply saves its own personal key
+PASS selected profile personal keys excluded from originals
+PASS selected profile profile switch protects external manual comment
+PASS font preference page exists
+PASS font size selector exists
+BUTTON  expected=При&менить
+BUTTON Применять палитру BSL expected=При&менить
+BUTTON Восстановить исходное оформление… expected=При&менить
+BUTTON  expected=При&менить
+BUTTON Вернуть цвет стиля expected=При&менить
+BUTTON Сбросить палитру expected=При&менить
+BUTTON  expected=При&менить
+BUTTON Вернуть исходный шрифт expected=При&менить
+BUTTON При&менить expected=При&менить
+PASS selected profile role reset removes only its override
+PASS selected profile role reset preserves unrelated external role
+BUTTON  expected=При&менить
+BUTTON Применять палитру BSL expected=При&менить
+BUTTON Восстановить исходное оформление… expected=При&менить
+BUTTON  expected=При&менить
+BUTTON Вернуть цвет стиля expected=При&менить
+BUTTON Сбросить палитру expected=При&менить
+BUTTON  expected=При&менить
+BUTTON Вернуть исходный шрифт expected=При&менить
+BUTTON При&менить expected=При&менить
+PASS selected profile whole reset explicitly reclaims manual comment
+PASS selected profile reset preserves both old personal profiles
+PASS selected profile reset preserves One Dark Pro personal string
+PASS GitHub reset preserves Dracula personal comment
+BUTTON  expected=При&менить
+BUTTON Применять палитру BSL expected=При&менить
+BUTTON Восстановить исходное оформление… expected=При&менить
+BUTTON  expected=При&менить
+BUTTON Вернуть цвет стиля expected=При&менить
+BUTTON Сбросить палитру expected=При&менить
+BUTTON  expected=При&менить
+BUTTON Вернуть исходный шрифт expected=При&менить
+BUTTON При&менить expected=При&менить
+PASS selected profile BSL off restores baseline keyword
+PASS selected profile BSL off still saves personal keyword
+PASS selected profile OK commits personal BSL keyword
+PASS selected profile palette preserves independent code font

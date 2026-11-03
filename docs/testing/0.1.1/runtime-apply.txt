@@ -1,0 +1,1033 @@
+JVM 17.0.18
+PASS native theme engine
+PASS BSL editor opened on test fixture
+PASS first apply with BSL disabled preserves explicit color
+PASS restore after first unchecked BSL apply
+PASS restore preserves preexisting BSL custom color
+PASS Dark ID cycle 0
+PASS darcula named UI color
+PASS darcula SWT shell background: RGB {43, 43, 43}
+BSL computed CSS color: #com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR;
+background-color: #com-_1c-g5-v8-dt-theming-ui-CONTROLS_BACKGROUND_COLOR;
+BSL background darcula actual=RGB {43, 43, 43} global=43,43,43 bslInstance=null bslDefault=null globalSystem=false bslDefaultSystem=null
+PASS darcula BSL editor background
+TOKEN // Комментарий rawNumbers=104,151,187 range=StyleRange {23, 1, fontStyle=normal, foreground=Color {128, 128, 128, 255}}
+PASS BSL style available: // Комментарий
+PASS darcula BSL glyph // Комментарий: RGB {128, 128, 128}
+TOKEN Функция rawNumbers=104,151,187 range=StyleRange {90, 1, fontStyle=bold, foreground=Color {204, 120, 50, 255}}
+PASS BSL style available: Функция
+PASS darcula BSL glyph Функция: RGB {204, 120, 50}
+TOKEN Function rawNumbers=104,151,187 range=StyleRange {396, 1, fontStyle=bold, foreground=Color {204, 120, 50, 255}}
+PASS BSL style available: Function
+PASS darcula BSL glyph Function: RGB {204, 120, 50}
+TOKEN 123.45 rawNumbers=104,151,187 range=StyleRange {137, 1, fontStyle=normal, foreground=Color {104, 151, 187, 255}}
+PASS BSL style available: 123.45
+PASS darcula BSL glyph 123.45: RGB {104, 151, 187}
+TOKEN Строка с кириллицей rawNumbers=104,151,187 range=StyleRange {158, 1, fontStyle=normal, foreground=Color {106, 135, 89, 255}}
+PASS BSL style available: Строка с кириллицей
+PASS darcula BSL glyph Строка с кириллицей: RGB {106, 135, 89}
+TOKEN #Область rawNumbers=104,151,187 range=StyleRange {0, 1, fontStyle=bold, foreground=Color {187, 181, 41, 255}}
+PASS BSL style available: #Область
+PASS darcula BSL glyph #Область: RGB {187, 181, 41}
+PASS darcula setting SettingKey[scope=theme, node=css, key=id]
+PASS darcula setting SettingKey[scope=theme, node=legacy, key=id]
+PASS darcula setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Builtin function.color]
+PASS darcula setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.BSL_Keywords.color]
+PASS darcula setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Comment.color]
+PASS darcula setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Operators.color]
+PASS darcula setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Others.color]
+PASS darcula setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Preprocessor.color]
+PASS darcula setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Brackets.color]
+PASS darcula setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Strings.color]
+PASS darcula setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Numbers.color]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.console, key=org.eclipse.ui.console.P_BACKGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.console, key=org.eclipse.ui.console.P_STREAM_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Background]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Foreground]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionBackground]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionForeground]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=currentLineColor]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=lineNumberColor]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=hyperlinkColor]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Background.SystemDefault]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Foreground.SystemDefault]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionBackground.SystemDefault]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionForeground.SystemDefault]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=hyperlinkColor.SystemDefault]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.CONTENT_ASSIST_BACKGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.CONTENT_ASSIST_FOREGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.HOVER_BACKGROUND]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.HOVER_FOREGROUND]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.FORM_HEADING_ERROR_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.FORM_HEADING_WARNING_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_BG_START]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_BG_END]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_UNSELECTED_TABS_COLOR_START]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_UNSELECTED_TABS_COLOR_END]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_SELECTED_TEXT_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_UNSELECTED_TEXT_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.INACTIVE_TAB_SELECTED_TEXT_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.INACTIVE_TAB_UNSELECTED_TEXT_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR_ACCENT]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_ACCENT]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BORDER_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_TITLE]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR_TITLE]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.INACTIVE_PART_BACKGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_BACKGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_FOREGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_BORDER_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_BACKGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_FOREGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_BORDER_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_BACKGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_FOREGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_TREES_AND_TABLES]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.INFORMATION_BACKGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.INFORMATION_FOREGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.e4.ui.css.swt.theme, key=themeid]
+UI darcula shell=RGB {43, 43, 43} style=background-color: #com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR;
+color: #com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR;
+margin-top: 0.0px;
+margin-bottom: 0.0px;
+margin-left: 0.0px;
+margin-right: 0.0px;
+PASS Dark ID cycle 1
+PASS monokai named UI color
+PASS monokai SWT shell background: RGB {39, 40, 34}
+BSL computed CSS color: #com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR;
+background-color: #com-_1c-g5-v8-dt-theming-ui-CONTROLS_BACKGROUND_COLOR;
+BSL background monokai actual=RGB {39, 40, 34} global=39,40,34 bslInstance=null bslDefault=null globalSystem=false bslDefaultSystem=null
+PASS monokai BSL editor background
+TOKEN // Комментарий rawNumbers=174,129,255 range=StyleRange {23, 1, fontStyle=normal, foreground=Color {117, 113, 94, 255}}
+PASS BSL style available: // Комментарий
+PASS monokai BSL glyph // Комментарий: RGB {117, 113, 94}
+TOKEN Функция rawNumbers=174,129,255 range=StyleRange {90, 1, fontStyle=bold, foreground=Color {249, 38, 114, 255}}
+PASS BSL style available: Функция
+PASS monokai BSL glyph Функция: RGB {249, 38, 114}
+TOKEN Function rawNumbers=174,129,255 range=StyleRange {396, 1, fontStyle=bold, foreground=Color {249, 38, 114, 255}}
+PASS BSL style available: Function
+PASS monokai BSL glyph Function: RGB {249, 38, 114}
+TOKEN 123.45 rawNumbers=174,129,255 range=StyleRange {137, 1, fontStyle=normal, foreground=Color {174, 129, 255, 255}}
+PASS BSL style available: 123.45
+PASS monokai BSL glyph 123.45: RGB {174, 129, 255}
+TOKEN Строка с кириллицей rawNumbers=174,129,255 range=StyleRange {158, 1, fontStyle=normal, foreground=Color {230, 219, 116, 255}}
+PASS BSL style available: Строка с кириллицей
+PASS monokai BSL glyph Строка с кириллицей: RGB {230, 219, 116}
+TOKEN #Область rawNumbers=174,129,255 range=StyleRange {0, 1, fontStyle=bold, foreground=Color {166, 226, 46, 255}}
+PASS BSL style available: #Область
+PASS monokai BSL glyph #Область: RGB {166, 226, 46}
+PASS monokai setting SettingKey[scope=theme, node=css, key=id]
+PASS monokai setting SettingKey[scope=theme, node=legacy, key=id]
+PASS monokai setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Builtin function.color]
+PASS monokai setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.BSL_Keywords.color]
+PASS monokai setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Comment.color]
+PASS monokai setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Operators.color]
+PASS monokai setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Others.color]
+PASS monokai setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Preprocessor.color]
+PASS monokai setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Brackets.color]
+PASS monokai setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Strings.color]
+PASS monokai setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Numbers.color]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.console, key=org.eclipse.ui.console.P_BACKGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.console, key=org.eclipse.ui.console.P_STREAM_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Background]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Foreground]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionBackground]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionForeground]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=currentLineColor]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=lineNumberColor]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=hyperlinkColor]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Background.SystemDefault]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Foreground.SystemDefault]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionBackground.SystemDefault]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionForeground.SystemDefault]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=hyperlinkColor.SystemDefault]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.CONTENT_ASSIST_BACKGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.CONTENT_ASSIST_FOREGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.HOVER_BACKGROUND]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.HOVER_FOREGROUND]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.FORM_HEADING_ERROR_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.FORM_HEADING_WARNING_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_BG_START]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_BG_END]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_UNSELECTED_TABS_COLOR_START]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_UNSELECTED_TABS_COLOR_END]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_SELECTED_TEXT_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_UNSELECTED_TEXT_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.INACTIVE_TAB_SELECTED_TEXT_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.INACTIVE_TAB_UNSELECTED_TEXT_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR_ACCENT]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_ACCENT]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BORDER_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_TITLE]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR_TITLE]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.INACTIVE_PART_BACKGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_BACKGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_FOREGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_BORDER_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_BACKGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_FOREGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_BORDER_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_BACKGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_FOREGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_TREES_AND_TABLES]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.INFORMATION_BACKGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.INFORMATION_FOREGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.e4.ui.css.swt.theme, key=themeid]
+UI monokai shell=RGB {39, 40, 34} style=background-color: #com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR;
+color: #com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR;
+margin-top: 0.0px;
+margin-bottom: 0.0px;
+margin-left: 0.0px;
+margin-right: 0.0px;
+PASS Dark ID cycle 2
+PASS darcula named UI color
+PASS darcula SWT shell background: RGB {43, 43, 43}
+BSL computed CSS color: #com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR;
+background-color: #com-_1c-g5-v8-dt-theming-ui-CONTROLS_BACKGROUND_COLOR;
+BSL background darcula actual=RGB {43, 43, 43} global=43,43,43 bslInstance=null bslDefault=null globalSystem=false bslDefaultSystem=null
+PASS darcula BSL editor background
+TOKEN // Комментарий rawNumbers=104,151,187 range=StyleRange {23, 1, fontStyle=normal, foreground=Color {128, 128, 128, 255}}
+PASS BSL style available: // Комментарий
+PASS darcula BSL glyph // Комментарий: RGB {128, 128, 128}
+TOKEN Функция rawNumbers=104,151,187 range=StyleRange {90, 1, fontStyle=bold, foreground=Color {204, 120, 50, 255}}
+PASS BSL style available: Функция
+PASS darcula BSL glyph Функция: RGB {204, 120, 50}
+TOKEN Function rawNumbers=104,151,187 range=StyleRange {396, 1, fontStyle=bold, foreground=Color {204, 120, 50, 255}}
+PASS BSL style available: Function
+PASS darcula BSL glyph Function: RGB {204, 120, 50}
+TOKEN 123.45 rawNumbers=104,151,187 range=StyleRange {137, 1, fontStyle=normal, foreground=Color {104, 151, 187, 255}}
+PASS BSL style available: 123.45
+PASS darcula BSL glyph 123.45: RGB {104, 151, 187}
+TOKEN Строка с кириллицей rawNumbers=104,151,187 range=StyleRange {158, 1, fontStyle=normal, foreground=Color {106, 135, 89, 255}}
+PASS BSL style available: Строка с кириллицей
+PASS darcula BSL glyph Строка с кириллицей: RGB {106, 135, 89}
+TOKEN #Область rawNumbers=104,151,187 range=StyleRange {0, 1, fontStyle=bold, foreground=Color {187, 181, 41, 255}}
+PASS BSL style available: #Область
+PASS darcula BSL glyph #Область: RGB {187, 181, 41}
+PASS darcula setting SettingKey[scope=theme, node=css, key=id]
+PASS darcula setting SettingKey[scope=theme, node=legacy, key=id]
+PASS darcula setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Builtin function.color]
+PASS darcula setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.BSL_Keywords.color]
+PASS darcula setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Comment.color]
+PASS darcula setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Operators.color]
+PASS darcula setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Others.color]
+PASS darcula setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Preprocessor.color]
+PASS darcula setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Brackets.color]
+PASS darcula setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Strings.color]
+PASS darcula setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Numbers.color]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.console, key=org.eclipse.ui.console.P_BACKGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.console, key=org.eclipse.ui.console.P_STREAM_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Background]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Foreground]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionBackground]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionForeground]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=currentLineColor]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=lineNumberColor]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=hyperlinkColor]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Background.SystemDefault]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Foreground.SystemDefault]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionBackground.SystemDefault]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionForeground.SystemDefault]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=hyperlinkColor.SystemDefault]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.CONTENT_ASSIST_BACKGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.CONTENT_ASSIST_FOREGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.HOVER_BACKGROUND]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.HOVER_FOREGROUND]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.FORM_HEADING_ERROR_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.FORM_HEADING_WARNING_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_BG_START]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_BG_END]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_UNSELECTED_TABS_COLOR_START]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_UNSELECTED_TABS_COLOR_END]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_SELECTED_TEXT_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_UNSELECTED_TEXT_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.INACTIVE_TAB_SELECTED_TEXT_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.INACTIVE_TAB_UNSELECTED_TEXT_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR_ACCENT]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_ACCENT]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BORDER_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_TITLE]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR_TITLE]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.INACTIVE_PART_BACKGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_BACKGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_FOREGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_BORDER_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_BACKGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_FOREGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_BORDER_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_BACKGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_FOREGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_TREES_AND_TABLES]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.INFORMATION_BACKGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.INFORMATION_FOREGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.e4.ui.css.swt.theme, key=themeid]
+UI darcula shell=RGB {43, 43, 43} style=background-color: #com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR;
+color: #com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR;
+margin-top: 0.0px;
+margin-bottom: 0.0px;
+margin-left: 0.0px;
+margin-right: 0.0px;
+PASS Dark ID cycle 3
+PASS monokai named UI color
+PASS monokai SWT shell background: RGB {39, 40, 34}
+BSL computed CSS color: #com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR;
+background-color: #com-_1c-g5-v8-dt-theming-ui-CONTROLS_BACKGROUND_COLOR;
+BSL background monokai actual=RGB {39, 40, 34} global=39,40,34 bslInstance=null bslDefault=null globalSystem=false bslDefaultSystem=null
+PASS monokai BSL editor background
+TOKEN // Комментарий rawNumbers=174,129,255 range=StyleRange {23, 1, fontStyle=normal, foreground=Color {117, 113, 94, 255}}
+PASS BSL style available: // Комментарий
+PASS monokai BSL glyph // Комментарий: RGB {117, 113, 94}
+TOKEN Функция rawNumbers=174,129,255 range=StyleRange {90, 1, fontStyle=bold, foreground=Color {249, 38, 114, 255}}
+PASS BSL style available: Функция
+PASS monokai BSL glyph Функция: RGB {249, 38, 114}
+TOKEN Function rawNumbers=174,129,255 range=StyleRange {396, 1, fontStyle=bold, foreground=Color {249, 38, 114, 255}}
+PASS BSL style available: Function
+PASS monokai BSL glyph Function: RGB {249, 38, 114}
+TOKEN 123.45 rawNumbers=174,129,255 range=StyleRange {137, 1, fontStyle=normal, foreground=Color {174, 129, 255, 255}}
+PASS BSL style available: 123.45
+PASS monokai BSL glyph 123.45: RGB {174, 129, 255}
+TOKEN Строка с кириллицей rawNumbers=174,129,255 range=StyleRange {158, 1, fontStyle=normal, foreground=Color {230, 219, 116, 255}}
+PASS BSL style available: Строка с кириллицей
+PASS monokai BSL glyph Строка с кириллицей: RGB {230, 219, 116}
+TOKEN #Область rawNumbers=174,129,255 range=StyleRange {0, 1, fontStyle=bold, foreground=Color {166, 226, 46, 255}}
+PASS BSL style available: #Область
+PASS monokai BSL glyph #Область: RGB {166, 226, 46}
+PASS monokai setting SettingKey[scope=theme, node=css, key=id]
+PASS monokai setting SettingKey[scope=theme, node=legacy, key=id]
+PASS monokai setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Builtin function.color]
+PASS monokai setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.BSL_Keywords.color]
+PASS monokai setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Comment.color]
+PASS monokai setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Operators.color]
+PASS monokai setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Others.color]
+PASS monokai setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Preprocessor.color]
+PASS monokai setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Brackets.color]
+PASS monokai setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Strings.color]
+PASS monokai setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Numbers.color]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.console, key=org.eclipse.ui.console.P_BACKGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.console, key=org.eclipse.ui.console.P_STREAM_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Background]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Foreground]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionBackground]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionForeground]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=currentLineColor]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=lineNumberColor]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=hyperlinkColor]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Background.SystemDefault]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Foreground.SystemDefault]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionBackground.SystemDefault]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionForeground.SystemDefault]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=hyperlinkColor.SystemDefault]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.CONTENT_ASSIST_BACKGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.CONTENT_ASSIST_FOREGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.HOVER_BACKGROUND]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.HOVER_FOREGROUND]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.FORM_HEADING_ERROR_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.FORM_HEADING_WARNING_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_BG_START]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_BG_END]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_UNSELECTED_TABS_COLOR_START]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_UNSELECTED_TABS_COLOR_END]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_SELECTED_TEXT_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_UNSELECTED_TEXT_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.INACTIVE_TAB_SELECTED_TEXT_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.INACTIVE_TAB_UNSELECTED_TEXT_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR_ACCENT]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_ACCENT]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BORDER_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_TITLE]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR_TITLE]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.INACTIVE_PART_BACKGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_BACKGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_FOREGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_BORDER_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_BACKGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_FOREGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_BORDER_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_BACKGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_FOREGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_TREES_AND_TABLES]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.INFORMATION_BACKGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.INFORMATION_FOREGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.e4.ui.css.swt.theme, key=themeid]
+UI monokai shell=RGB {39, 40, 34} style=background-color: #com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR;
+color: #com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR;
+margin-top: 0.0px;
+margin-bottom: 0.0px;
+margin-left: 0.0px;
+margin-right: 0.0px;
+PASS Dark ID cycle 4
+PASS darcula named UI color
+PASS darcula SWT shell background: RGB {43, 43, 43}
+BSL computed CSS color: #com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR;
+background-color: #com-_1c-g5-v8-dt-theming-ui-CONTROLS_BACKGROUND_COLOR;
+BSL background darcula actual=RGB {43, 43, 43} global=43,43,43 bslInstance=null bslDefault=null globalSystem=false bslDefaultSystem=null
+PASS darcula BSL editor background
+TOKEN // Комментарий rawNumbers=104,151,187 range=StyleRange {23, 1, fontStyle=normal, foreground=Color {128, 128, 128, 255}}
+PASS BSL style available: // Комментарий
+PASS darcula BSL glyph // Комментарий: RGB {128, 128, 128}
+TOKEN Функция rawNumbers=104,151,187 range=StyleRange {90, 1, fontStyle=bold, foreground=Color {204, 120, 50, 255}}
+PASS BSL style available: Функция
+PASS darcula BSL glyph Функция: RGB {204, 120, 50}
+TOKEN Function rawNumbers=104,151,187 range=StyleRange {396, 1, fontStyle=bold, foreground=Color {204, 120, 50, 255}}
+PASS BSL style available: Function
+PASS darcula BSL glyph Function: RGB {204, 120, 50}
+TOKEN 123.45 rawNumbers=104,151,187 range=StyleRange {137, 1, fontStyle=normal, foreground=Color {104, 151, 187, 255}}
+PASS BSL style available: 123.45
+PASS darcula BSL glyph 123.45: RGB {104, 151, 187}
+TOKEN Строка с кириллицей rawNumbers=104,151,187 range=StyleRange {158, 1, fontStyle=normal, foreground=Color {106, 135, 89, 255}}
+PASS BSL style available: Строка с кириллицей
+PASS darcula BSL glyph Строка с кириллицей: RGB {106, 135, 89}
+TOKEN #Область rawNumbers=104,151,187 range=StyleRange {0, 1, fontStyle=bold, foreground=Color {187, 181, 41, 255}}
+PASS BSL style available: #Область
+PASS darcula BSL glyph #Область: RGB {187, 181, 41}
+PASS darcula setting SettingKey[scope=theme, node=css, key=id]
+PASS darcula setting SettingKey[scope=theme, node=legacy, key=id]
+PASS darcula setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Builtin function.color]
+PASS darcula setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.BSL_Keywords.color]
+PASS darcula setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Comment.color]
+PASS darcula setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Operators.color]
+PASS darcula setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Others.color]
+PASS darcula setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Preprocessor.color]
+PASS darcula setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Brackets.color]
+PASS darcula setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Strings.color]
+PASS darcula setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Numbers.color]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.console, key=org.eclipse.ui.console.P_BACKGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.console, key=org.eclipse.ui.console.P_STREAM_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Background]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Foreground]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionBackground]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionForeground]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=currentLineColor]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=lineNumberColor]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=hyperlinkColor]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Background.SystemDefault]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Foreground.SystemDefault]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionBackground.SystemDefault]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionForeground.SystemDefault]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=hyperlinkColor.SystemDefault]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.CONTENT_ASSIST_BACKGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.CONTENT_ASSIST_FOREGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.HOVER_BACKGROUND]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.HOVER_FOREGROUND]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.FORM_HEADING_ERROR_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.FORM_HEADING_WARNING_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_BG_START]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_BG_END]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_UNSELECTED_TABS_COLOR_START]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_UNSELECTED_TABS_COLOR_END]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_SELECTED_TEXT_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_UNSELECTED_TEXT_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.INACTIVE_TAB_SELECTED_TEXT_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.INACTIVE_TAB_UNSELECTED_TEXT_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR_ACCENT]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_ACCENT]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BORDER_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_TITLE]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR_TITLE]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.INACTIVE_PART_BACKGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_BACKGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_FOREGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_BORDER_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_BACKGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_FOREGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_BORDER_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_BACKGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_FOREGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_TREES_AND_TABLES]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.INFORMATION_BACKGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.INFORMATION_FOREGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.e4.ui.css.swt.theme, key=themeid]
+UI darcula shell=RGB {43, 43, 43} style=background-color: #com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR;
+color: #com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR;
+margin-top: 0.0px;
+margin-bottom: 0.0px;
+margin-left: 0.0px;
+margin-right: 0.0px;
+PASS Dark ID cycle 5
+PASS monokai named UI color
+PASS monokai SWT shell background: RGB {39, 40, 34}
+BSL computed CSS color: #com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR;
+background-color: #com-_1c-g5-v8-dt-theming-ui-CONTROLS_BACKGROUND_COLOR;
+BSL background monokai actual=RGB {39, 40, 34} global=39,40,34 bslInstance=null bslDefault=null globalSystem=false bslDefaultSystem=null
+PASS monokai BSL editor background
+TOKEN // Комментарий rawNumbers=174,129,255 range=StyleRange {23, 1, fontStyle=normal, foreground=Color {117, 113, 94, 255}}
+PASS BSL style available: // Комментарий
+PASS monokai BSL glyph // Комментарий: RGB {117, 113, 94}
+TOKEN Функция rawNumbers=174,129,255 range=StyleRange {90, 1, fontStyle=bold, foreground=Color {249, 38, 114, 255}}
+PASS BSL style available: Функция
+PASS monokai BSL glyph Функция: RGB {249, 38, 114}
+TOKEN Function rawNumbers=174,129,255 range=StyleRange {396, 1, fontStyle=bold, foreground=Color {249, 38, 114, 255}}
+PASS BSL style available: Function
+PASS monokai BSL glyph Function: RGB {249, 38, 114}
+TOKEN 123.45 rawNumbers=174,129,255 range=StyleRange {137, 1, fontStyle=normal, foreground=Color {174, 129, 255, 255}}
+PASS BSL style available: 123.45
+PASS monokai BSL glyph 123.45: RGB {174, 129, 255}
+TOKEN Строка с кириллицей rawNumbers=174,129,255 range=StyleRange {158, 1, fontStyle=normal, foreground=Color {230, 219, 116, 255}}
+PASS BSL style available: Строка с кириллицей
+PASS monokai BSL glyph Строка с кириллицей: RGB {230, 219, 116}
+TOKEN #Область rawNumbers=174,129,255 range=StyleRange {0, 1, fontStyle=bold, foreground=Color {166, 226, 46, 255}}
+PASS BSL style available: #Область
+PASS monokai BSL glyph #Область: RGB {166, 226, 46}
+PASS monokai setting SettingKey[scope=theme, node=css, key=id]
+PASS monokai setting SettingKey[scope=theme, node=legacy, key=id]
+PASS monokai setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Builtin function.color]
+PASS monokai setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.BSL_Keywords.color]
+PASS monokai setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Comment.color]
+PASS monokai setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Operators.color]
+PASS monokai setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Others.color]
+PASS monokai setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Preprocessor.color]
+PASS monokai setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Brackets.color]
+PASS monokai setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Strings.color]
+PASS monokai setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Numbers.color]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.console, key=org.eclipse.ui.console.P_BACKGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.console, key=org.eclipse.ui.console.P_STREAM_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Background]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Foreground]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionBackground]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionForeground]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=currentLineColor]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=lineNumberColor]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=hyperlinkColor]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Background.SystemDefault]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Foreground.SystemDefault]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionBackground.SystemDefault]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionForeground.SystemDefault]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=hyperlinkColor.SystemDefault]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.CONTENT_ASSIST_BACKGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.CONTENT_ASSIST_FOREGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.HOVER_BACKGROUND]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.HOVER_FOREGROUND]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.FORM_HEADING_ERROR_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.FORM_HEADING_WARNING_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_BG_START]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_BG_END]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_UNSELECTED_TABS_COLOR_START]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_UNSELECTED_TABS_COLOR_END]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_SELECTED_TEXT_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_UNSELECTED_TEXT_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.INACTIVE_TAB_SELECTED_TEXT_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.INACTIVE_TAB_UNSELECTED_TEXT_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR_ACCENT]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_ACCENT]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BORDER_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_TITLE]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR_TITLE]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.INACTIVE_PART_BACKGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_BACKGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_FOREGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_BORDER_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_BACKGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_FOREGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_BORDER_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_BACKGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_FOREGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_TREES_AND_TABLES]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.INFORMATION_BACKGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.INFORMATION_FOREGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.e4.ui.css.swt.theme, key=themeid]
+UI monokai shell=RGB {39, 40, 34} style=background-color: #com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR;
+color: #com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR;
+margin-top: 0.0px;
+margin-bottom: 0.0px;
+margin-left: 0.0px;
+margin-right: 0.0px;
+PASS Dark ID cycle 6
+PASS darcula named UI color
+PASS darcula SWT shell background: RGB {43, 43, 43}
+BSL computed CSS color: #com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR;
+background-color: #com-_1c-g5-v8-dt-theming-ui-CONTROLS_BACKGROUND_COLOR;
+BSL background darcula actual=RGB {43, 43, 43} global=43,43,43 bslInstance=null bslDefault=null globalSystem=false bslDefaultSystem=null
+PASS darcula BSL editor background
+TOKEN // Комментарий rawNumbers=104,151,187 range=StyleRange {23, 1, fontStyle=normal, foreground=Color {128, 128, 128, 255}}
+PASS BSL style available: // Комментарий
+PASS darcula BSL glyph // Комментарий: RGB {128, 128, 128}
+TOKEN Функция rawNumbers=104,151,187 range=StyleRange {90, 1, fontStyle=bold, foreground=Color {204, 120, 50, 255}}
+PASS BSL style available: Функция
+PASS darcula BSL glyph Функция: RGB {204, 120, 50}
+TOKEN Function rawNumbers=104,151,187 range=StyleRange {396, 1, fontStyle=bold, foreground=Color {204, 120, 50, 255}}
+PASS BSL style available: Function
+PASS darcula BSL glyph Function: RGB {204, 120, 50}
+TOKEN 123.45 rawNumbers=104,151,187 range=StyleRange {137, 1, fontStyle=normal, foreground=Color {104, 151, 187, 255}}
+PASS BSL style available: 123.45
+PASS darcula BSL glyph 123.45: RGB {104, 151, 187}
+TOKEN Строка с кириллицей rawNumbers=104,151,187 range=StyleRange {158, 1, fontStyle=normal, foreground=Color {106, 135, 89, 255}}
+PASS BSL style available: Строка с кириллицей
+PASS darcula BSL glyph Строка с кириллицей: RGB {106, 135, 89}
+TOKEN #Область rawNumbers=104,151,187 range=StyleRange {0, 1, fontStyle=bold, foreground=Color {187, 181, 41, 255}}
+PASS BSL style available: #Область
+PASS darcula BSL glyph #Область: RGB {187, 181, 41}
+PASS darcula setting SettingKey[scope=theme, node=css, key=id]
+PASS darcula setting SettingKey[scope=theme, node=legacy, key=id]
+PASS darcula setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Builtin function.color]
+PASS darcula setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.BSL_Keywords.color]
+PASS darcula setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Comment.color]
+PASS darcula setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Operators.color]
+PASS darcula setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Others.color]
+PASS darcula setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Preprocessor.color]
+PASS darcula setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Brackets.color]
+PASS darcula setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Strings.color]
+PASS darcula setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Numbers.color]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.console, key=org.eclipse.ui.console.P_BACKGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.console, key=org.eclipse.ui.console.P_STREAM_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Background]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Foreground]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionBackground]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionForeground]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=currentLineColor]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=lineNumberColor]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=hyperlinkColor]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Background.SystemDefault]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Foreground.SystemDefault]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionBackground.SystemDefault]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionForeground.SystemDefault]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=hyperlinkColor.SystemDefault]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.CONTENT_ASSIST_BACKGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.CONTENT_ASSIST_FOREGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.HOVER_BACKGROUND]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.HOVER_FOREGROUND]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.FORM_HEADING_ERROR_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.FORM_HEADING_WARNING_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_BG_START]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_BG_END]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_UNSELECTED_TABS_COLOR_START]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_UNSELECTED_TABS_COLOR_END]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_SELECTED_TEXT_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_UNSELECTED_TEXT_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.INACTIVE_TAB_SELECTED_TEXT_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.INACTIVE_TAB_UNSELECTED_TEXT_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR_ACCENT]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_ACCENT]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BORDER_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_TITLE]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR_TITLE]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.INACTIVE_PART_BACKGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_BACKGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_FOREGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_BORDER_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_BACKGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_FOREGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_BORDER_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_BACKGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_FOREGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_TREES_AND_TABLES]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.INFORMATION_BACKGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.INFORMATION_FOREGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.e4.ui.css.swt.theme, key=themeid]
+UI darcula shell=RGB {43, 43, 43} style=background-color: #com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR;
+color: #com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR;
+margin-top: 0.0px;
+margin-bottom: 0.0px;
+margin-left: 0.0px;
+margin-right: 0.0px;
+PASS Dark ID cycle 7
+PASS monokai named UI color
+PASS monokai SWT shell background: RGB {39, 40, 34}
+BSL computed CSS color: #com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR;
+background-color: #com-_1c-g5-v8-dt-theming-ui-CONTROLS_BACKGROUND_COLOR;
+BSL background monokai actual=RGB {39, 40, 34} global=39,40,34 bslInstance=null bslDefault=null globalSystem=false bslDefaultSystem=null
+PASS monokai BSL editor background
+TOKEN // Комментарий rawNumbers=174,129,255 range=StyleRange {23, 1, fontStyle=normal, foreground=Color {117, 113, 94, 255}}
+PASS BSL style available: // Комментарий
+PASS monokai BSL glyph // Комментарий: RGB {117, 113, 94}
+TOKEN Функция rawNumbers=174,129,255 range=StyleRange {90, 1, fontStyle=bold, foreground=Color {249, 38, 114, 255}}
+PASS BSL style available: Функция
+PASS monokai BSL glyph Функция: RGB {249, 38, 114}
+TOKEN Function rawNumbers=174,129,255 range=StyleRange {396, 1, fontStyle=bold, foreground=Color {249, 38, 114, 255}}
+PASS BSL style available: Function
+PASS monokai BSL glyph Function: RGB {249, 38, 114}
+TOKEN 123.45 rawNumbers=174,129,255 range=StyleRange {137, 1, fontStyle=normal, foreground=Color {174, 129, 255, 255}}
+PASS BSL style available: 123.45
+PASS monokai BSL glyph 123.45: RGB {174, 129, 255}
+TOKEN Строка с кириллицей rawNumbers=174,129,255 range=StyleRange {158, 1, fontStyle=normal, foreground=Color {230, 219, 116, 255}}
+PASS BSL style available: Строка с кириллицей
+PASS monokai BSL glyph Строка с кириллицей: RGB {230, 219, 116}
+TOKEN #Область rawNumbers=174,129,255 range=StyleRange {0, 1, fontStyle=bold, foreground=Color {166, 226, 46, 255}}
+PASS BSL style available: #Область
+PASS monokai BSL glyph #Область: RGB {166, 226, 46}
+PASS monokai setting SettingKey[scope=theme, node=css, key=id]
+PASS monokai setting SettingKey[scope=theme, node=legacy, key=id]
+PASS monokai setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Builtin function.color]
+PASS monokai setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.BSL_Keywords.color]
+PASS monokai setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Comment.color]
+PASS monokai setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Operators.color]
+PASS monokai setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Others.color]
+PASS monokai setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Preprocessor.color]
+PASS monokai setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Brackets.color]
+PASS monokai setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Strings.color]
+PASS monokai setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Numbers.color]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.console, key=org.eclipse.ui.console.P_BACKGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.console, key=org.eclipse.ui.console.P_STREAM_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Background]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Foreground]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionBackground]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionForeground]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=currentLineColor]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=lineNumberColor]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=hyperlinkColor]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Background.SystemDefault]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Foreground.SystemDefault]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionBackground.SystemDefault]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionForeground.SystemDefault]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=hyperlinkColor.SystemDefault]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.CONTENT_ASSIST_BACKGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.CONTENT_ASSIST_FOREGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.HOVER_BACKGROUND]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.HOVER_FOREGROUND]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.FORM_HEADING_ERROR_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.FORM_HEADING_WARNING_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_BG_START]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_BG_END]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_UNSELECTED_TABS_COLOR_START]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_UNSELECTED_TABS_COLOR_END]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_SELECTED_TEXT_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_UNSELECTED_TEXT_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.INACTIVE_TAB_SELECTED_TEXT_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.INACTIVE_TAB_UNSELECTED_TEXT_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR_ACCENT]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_ACCENT]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BORDER_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_TITLE]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR_TITLE]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.INACTIVE_PART_BACKGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_BACKGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_FOREGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_BORDER_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_BACKGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_FOREGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_BORDER_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_BACKGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_FOREGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_TREES_AND_TABLES]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.INFORMATION_BACKGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.INFORMATION_FOREGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.e4.ui.css.swt.theme, key=themeid]
+UI monokai shell=RGB {39, 40, 34} style=background-color: #com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR;
+color: #com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR;
+margin-top: 0.0px;
+margin-bottom: 0.0px;
+margin-left: 0.0px;
+margin-right: 0.0px;
+PASS Dark ID cycle 8
+PASS darcula named UI color
+PASS darcula SWT shell background: RGB {43, 43, 43}
+BSL computed CSS color: #com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR;
+background-color: #com-_1c-g5-v8-dt-theming-ui-CONTROLS_BACKGROUND_COLOR;
+BSL background darcula actual=RGB {43, 43, 43} global=43,43,43 bslInstance=null bslDefault=null globalSystem=false bslDefaultSystem=null
+PASS darcula BSL editor background
+TOKEN // Комментарий rawNumbers=104,151,187 range=StyleRange {23, 1, fontStyle=normal, foreground=Color {128, 128, 128, 255}}
+PASS BSL style available: // Комментарий
+PASS darcula BSL glyph // Комментарий: RGB {128, 128, 128}
+TOKEN Функция rawNumbers=104,151,187 range=StyleRange {90, 1, fontStyle=bold, foreground=Color {204, 120, 50, 255}}
+PASS BSL style available: Функция
+PASS darcula BSL glyph Функция: RGB {204, 120, 50}
+TOKEN Function rawNumbers=104,151,187 range=StyleRange {396, 1, fontStyle=bold, foreground=Color {204, 120, 50, 255}}
+PASS BSL style available: Function
+PASS darcula BSL glyph Function: RGB {204, 120, 50}
+TOKEN 123.45 rawNumbers=104,151,187 range=StyleRange {137, 1, fontStyle=normal, foreground=Color {104, 151, 187, 255}}
+PASS BSL style available: 123.45
+PASS darcula BSL glyph 123.45: RGB {104, 151, 187}
+TOKEN Строка с кириллицей rawNumbers=104,151,187 range=StyleRange {158, 1, fontStyle=normal, foreground=Color {106, 135, 89, 255}}
+PASS BSL style available: Строка с кириллицей
+PASS darcula BSL glyph Строка с кириллицей: RGB {106, 135, 89}
+TOKEN #Область rawNumbers=104,151,187 range=StyleRange {0, 1, fontStyle=bold, foreground=Color {187, 181, 41, 255}}
+PASS BSL style available: #Область
+PASS darcula BSL glyph #Область: RGB {187, 181, 41}
+PASS darcula setting SettingKey[scope=theme, node=css, key=id]
+PASS darcula setting SettingKey[scope=theme, node=legacy, key=id]
+PASS darcula setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Builtin function.color]
+PASS darcula setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.BSL_Keywords.color]
+PASS darcula setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Comment.color]
+PASS darcula setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Operators.color]
+PASS darcula setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Others.color]
+PASS darcula setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Preprocessor.color]
+PASS darcula setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Brackets.color]
+PASS darcula setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Strings.color]
+PASS darcula setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Numbers.color]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.console, key=org.eclipse.ui.console.P_BACKGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.console, key=org.eclipse.ui.console.P_STREAM_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Background]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Foreground]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionBackground]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionForeground]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=currentLineColor]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=lineNumberColor]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=hyperlinkColor]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Background.SystemDefault]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Foreground.SystemDefault]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionBackground.SystemDefault]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionForeground.SystemDefault]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=hyperlinkColor.SystemDefault]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.CONTENT_ASSIST_BACKGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.CONTENT_ASSIST_FOREGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.HOVER_BACKGROUND]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.HOVER_FOREGROUND]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.FORM_HEADING_ERROR_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.FORM_HEADING_WARNING_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_BG_START]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_BG_END]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_UNSELECTED_TABS_COLOR_START]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_UNSELECTED_TABS_COLOR_END]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_SELECTED_TEXT_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_UNSELECTED_TEXT_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.INACTIVE_TAB_SELECTED_TEXT_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.INACTIVE_TAB_UNSELECTED_TEXT_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR_ACCENT]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_ACCENT]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BORDER_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_TITLE]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR_TITLE]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.INACTIVE_PART_BACKGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_BACKGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_FOREGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_BORDER_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_BACKGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_FOREGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_BORDER_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_BACKGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_FOREGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_TREES_AND_TABLES]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.INFORMATION_BACKGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.INFORMATION_FOREGROUND_COLOR]
+PASS darcula setting SettingKey[scope=instance, node=org.eclipse.e4.ui.css.swt.theme, key=themeid]
+UI darcula shell=RGB {43, 43, 43} style=background-color: #com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR;
+color: #com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR;
+margin-top: 0.0px;
+margin-bottom: 0.0px;
+margin-left: 0.0px;
+margin-right: 0.0px;
+PASS Dark ID cycle 9
+PASS monokai named UI color
+PASS monokai SWT shell background: RGB {39, 40, 34}
+BSL computed CSS color: #com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR;
+background-color: #com-_1c-g5-v8-dt-theming-ui-CONTROLS_BACKGROUND_COLOR;
+BSL background monokai actual=RGB {39, 40, 34} global=39,40,34 bslInstance=null bslDefault=null globalSystem=false bslDefaultSystem=null
+PASS monokai BSL editor background
+TOKEN // Комментарий rawNumbers=174,129,255 range=StyleRange {23, 1, fontStyle=normal, foreground=Color {117, 113, 94, 255}}
+PASS BSL style available: // Комментарий
+PASS monokai BSL glyph // Комментарий: RGB {117, 113, 94}
+TOKEN Функция rawNumbers=174,129,255 range=StyleRange {90, 1, fontStyle=bold, foreground=Color {249, 38, 114, 255}}
+PASS BSL style available: Функция
+PASS monokai BSL glyph Функция: RGB {249, 38, 114}
+TOKEN Function rawNumbers=174,129,255 range=StyleRange {396, 1, fontStyle=bold, foreground=Color {249, 38, 114, 255}}
+PASS BSL style available: Function
+PASS monokai BSL glyph Function: RGB {249, 38, 114}
+TOKEN 123.45 rawNumbers=174,129,255 range=StyleRange {137, 1, fontStyle=normal, foreground=Color {174, 129, 255, 255}}
+PASS BSL style available: 123.45
+PASS monokai BSL glyph 123.45: RGB {174, 129, 255}
+TOKEN Строка с кириллицей rawNumbers=174,129,255 range=StyleRange {158, 1, fontStyle=normal, foreground=Color {230, 219, 116, 255}}
+PASS BSL style available: Строка с кириллицей
+PASS monokai BSL glyph Строка с кириллицей: RGB {230, 219, 116}
+TOKEN #Область rawNumbers=174,129,255 range=StyleRange {0, 1, fontStyle=bold, foreground=Color {166, 226, 46, 255}}
+PASS BSL style available: #Область
+PASS monokai BSL glyph #Область: RGB {166, 226, 46}
+PASS monokai setting SettingKey[scope=theme, node=css, key=id]
+PASS monokai setting SettingKey[scope=theme, node=legacy, key=id]
+PASS monokai setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Builtin function.color]
+PASS monokai setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.BSL_Keywords.color]
+PASS monokai setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Comment.color]
+PASS monokai setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Operators.color]
+PASS monokai setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Others.color]
+PASS monokai setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Preprocessor.color]
+PASS monokai setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Brackets.color]
+PASS monokai setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Strings.color]
+PASS monokai setting SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Numbers.color]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.console, key=org.eclipse.ui.console.P_BACKGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.console, key=org.eclipse.ui.console.P_STREAM_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Background]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Foreground]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionBackground]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionForeground]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=currentLineColor]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=lineNumberColor]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=hyperlinkColor]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Background.SystemDefault]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Foreground.SystemDefault]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionBackground.SystemDefault]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionForeground.SystemDefault]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.editors, key=hyperlinkColor.SystemDefault]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.CONTENT_ASSIST_BACKGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.CONTENT_ASSIST_FOREGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.HOVER_BACKGROUND]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.HOVER_FOREGROUND]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.FORM_HEADING_ERROR_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.FORM_HEADING_WARNING_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_BG_START]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_BG_END]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_UNSELECTED_TABS_COLOR_START]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_UNSELECTED_TABS_COLOR_END]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_SELECTED_TEXT_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_UNSELECTED_TEXT_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.INACTIVE_TAB_SELECTED_TEXT_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.INACTIVE_TAB_UNSELECTED_TEXT_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR_ACCENT]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_ACCENT]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BORDER_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_TITLE]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR_TITLE]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.INACTIVE_PART_BACKGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_BACKGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_FOREGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_BORDER_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_BACKGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_FOREGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_BORDER_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_BACKGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_FOREGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_TREES_AND_TABLES]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.INFORMATION_BACKGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.INFORMATION_FOREGROUND_COLOR]
+PASS monokai setting SettingKey[scope=instance, node=org.eclipse.e4.ui.css.swt.theme, key=themeid]
+UI monokai shell=RGB {39, 40, 34} style=background-color: #com-_1c-g5-v8-dt-theming-ui-BACKGROUND_COLOR;
+color: #com-_1c-g5-v8-dt-theming-ui-FOREGROUND_COLOR;
+margin-top: 0.0px;
+margin-bottom: 0.0px;
+margin-left: 0.0px;
+margin-right: 0.0px;
+PASS new workbench window inherits Monokai
+PASS close test BSL editor
+PASS BSL editor opened on test fixture
+PASS new BSL editor inherits Monokai background
+PASS BSL checkbox restores SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Builtin function.color]
+PASS BSL checkbox restores SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.BSL_Keywords.color]
+PASS BSL checkbox restores SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Comment.color]
+PASS BSL checkbox restores SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Operators.color]
+PASS BSL checkbox restores SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Others.color]
+PASS BSL checkbox restores SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Preprocessor.color]
+PASS BSL checkbox restores SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Brackets.color]
+PASS BSL checkbox restores SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Strings.color]
+PASS BSL checkbox restores SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Numbers.color]
+PASS force restoration
+PASS original value SettingKey[scope=theme, node=css, key=id]
+PASS original value SettingKey[scope=theme, node=legacy, key=id]
+PASS original value SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Builtin function.color]
+PASS original value SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.BSL_Keywords.color]
+PASS original value SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Comment.color]
+PASS original value SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Operators.color]
+PASS original value SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Others.color]
+PASS original value SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Preprocessor.color]
+PASS original value SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Brackets.color]
+PASS original value SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Strings.color]
+PASS original value SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Numbers.color]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.console, key=org.eclipse.ui.console.P_BACKGROUND_COLOR]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.console, key=org.eclipse.ui.console.P_STREAM_COLOR]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Background]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Foreground]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionBackground]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionForeground]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.editors, key=currentLineColor]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.editors, key=lineNumberColor]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.editors, key=hyperlinkColor]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Background.SystemDefault]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Foreground.SystemDefault]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionBackground.SystemDefault]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionForeground.SystemDefault]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.editors, key=hyperlinkColor.SystemDefault]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.CONTENT_ASSIST_BACKGROUND_COLOR]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.CONTENT_ASSIST_FOREGROUND_COLOR]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.HOVER_BACKGROUND]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.HOVER_FOREGROUND]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.FORM_HEADING_ERROR_COLOR]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.FORM_HEADING_WARNING_COLOR]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_BG_START]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_BG_END]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_UNSELECTED_TABS_COLOR_START]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_UNSELECTED_TABS_COLOR_END]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_SELECTED_TEXT_COLOR]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_UNSELECTED_TEXT_COLOR]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.INACTIVE_TAB_SELECTED_TEXT_COLOR]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.INACTIVE_TAB_UNSELECTED_TEXT_COLOR]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR_ACCENT]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_ACCENT]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BORDER_COLOR]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_TITLE]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR_TITLE]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.INACTIVE_PART_BACKGROUND_COLOR]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_BACKGROUND_COLOR]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_FOREGROUND_COLOR]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_BORDER_COLOR]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_BACKGROUND_COLOR]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_FOREGROUND_COLOR]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_BORDER_COLOR]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_BACKGROUND_COLOR]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_FOREGROUND_COLOR]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_TREES_AND_TABLES]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.INFORMATION_BACKGROUND_COLOR]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.INFORMATION_FOREGROUND_COLOR]
+PASS original value SettingKey[scope=instance, node=org.eclipse.e4.ui.css.swt.theme, key=themeid]
+PASS original value SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_ARROW_ACTIVE_COLOR]
+PASS original value SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_ARROW_COLOR]
+PASS original value SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_ARROW_HOVER_COLOR]
+PASS original value SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_BUTTON_ACTIVE_COLOR]
+PASS original value SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_BUTTON_HOVER_COLOR]
+PASS original value SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_CORNER_COLOR]
+PASS original value SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_THUMB_ACTIVE_COLOR]
+PASS original value SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_THUMB_COLOR]
+PASS original value SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_THUMB_HOVER_COLOR]
+PASS original value SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_TRACK_COLOR]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.FindScope]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.editors, key=printMarginColor]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=ACTIVE_HYPERLINK_COLOR]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=CONFLICTING_COLOR]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=CONTENT_ASSIST_BACKGROUND_COLOR]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=CONTENT_ASSIST_FOREGROUND_COLOR]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=COUNTER_COLOR]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=DECORATIONS_COLOR]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=EDITION_COLOR]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=ERROR_COLOR]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=HYPERLINK_COLOR]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=INCOMING_COLOR]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.jface.REVISION_NEWEST_COLOR]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.jface.REVISION_OLDEST_COLOR]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.search.ui.match.highlight]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.editors.rangeIndicatorColor]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.FORM_HEADING_ERROR_COLOR]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.FORM_HEADING_INFO_COLOR]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.FORM_HEADING_WARNING_COLOR]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.HOVER_BACKGROUND]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.HOVER_FOREGROUND]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.INFORMATION_BACKGROUND]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.INFORMATION_FOREGROUND]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=OUTGOING_COLOR]
+PASS original value SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=RESOLVED_COLOR]
+PASS manual BSL color survives profile switch
+PASS manual BSL conflict reported
+PASS manual BSL color survives safe restore
+PASS explicit force restore of conflict
+PASS external Light theme preserved
+PASS profile released after external Light theme
+PASS manual BSL color survives external native theme rewrite
+PASS registered preference page exists
+PASS registered page is initialized
+PASS profile selector exists
+PASS Cancel accepted
+PASS Cancel before Apply does not activate profile
+BUTTON Применять палитру BSL expected=При&менить
+BUTTON Восстановить исходное оформление… expected=При&менить
+BUTTON Вернуть исходный шрифт expected=При&менить
+BUTTON При&менить expected=При&менить
+PASS Apply button exists
+PASS real Apply commits Monokai
+PASS Cancel after Apply preserves committed profile

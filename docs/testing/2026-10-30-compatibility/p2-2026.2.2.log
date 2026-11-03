@@ -1,0 +1,15 @@
+		To: org.eclipse.equinox.p2.iu; ru.litonchik.edt.themes [0.1.15.202610181940,0.1.15.202610181940]
+
+!ENTRY org.eclipse.equinox.p2.director 4 10053 2026-10-30 00:18:13.086
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2026-10-30 00:18:13.086
+!MESSAGE Software being installed: ���� EDT � �������� ������� 0.1.15.202610181940 (ru.litonchik.edt.themes.feature.feature.group 0.1.15.202610181940)
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2026-10-30 00:18:13.086
+!MESSAGE Missing requirement: EDT Themes 0.1.15.202610181940 (ru.litonchik.edt.themes 0.1.15.202610181940) requires 'osgi.bundle; com._1c.g5.v8.dt.bsl.ui [23.0.1,23.1.0)' but it could not be found
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 1 2026-10-30 00:18:13.086
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2026-10-30 00:18:13.086
+!MESSAGE From: ���� EDT � �������� ������� 0.1.15.202610181940 (ru.litonchik.edt.themes.feature.feature.group 0.1.15.202610181940)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2026-10-30 00:18:13.087
+!MESSAGE To: org.eclipse.equinox.p2.iu; ru.litonchik.edt.themes [0.1.15.202610181940,0.1.15.202610181940]
+There were errors. See log file: C:\Users\litonchik\Documents\Codex\ones_edt_theme_plugin\.work\p2-edb53f3d\configuration\1793308686663.log

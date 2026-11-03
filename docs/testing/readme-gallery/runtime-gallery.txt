@@ -1,0 +1,192 @@
+JVM 17.0.18
+PASS gallery starts without personal colors: darcula
+PASS gallery starts without personal colors: monokai
+PASS gallery starts without personal colors: one-dark-pro
+PASS gallery starts without personal colors: dracula
+PASS gallery starts without personal colors: github-dark-default
+PASS gallery starts without personal colors: winter-is-coming-dark-blue
+PASS gallery starts without personal colors: night-owl
+PASS gallery starts without personal colors: ayu-dark
+PASS gallery starts without personal colors: shades-of-purple
+PASS gallery starts without personal colors: noctis-minimus
+PASS gallery starts without personal colors: visual-studio-dark-cpp
+PASS gallery native Dark persists across JVM restart
+PASS BSL editor opened on test fixture
+PASS one-dark-pro gallery opens real BSL editor
+PASS one-dark-pro gallery default BSL background
+PASS one-dark-pro gallery default keyword glyph
+PASS one-dark-pro gallery default number glyph
+PASS one-dark-pro gallery default string glyph
+PASS one-dark-pro gallery client fully visible
+PASS one-dark-pro gallery consistent size Point {884, 581}
+PASS one-dark-pro gallery has no white bottom/right bands
+PASS BSL editor opened on test fixture
+PASS dracula gallery opens real BSL editor
+PASS dracula gallery default BSL background
+PASS dracula gallery default keyword glyph
+PASS dracula gallery default number glyph
+PASS dracula gallery default string glyph
+PASS dracula gallery client fully visible
+PASS dracula gallery consistent size Point {884, 581}
+PASS dracula gallery has no white bottom/right bands
+PASS BSL editor opened on test fixture
+PASS github-dark-default gallery opens real BSL editor
+PASS github-dark-default gallery default BSL background
+PASS github-dark-default gallery default keyword glyph
+PASS github-dark-default gallery default number glyph
+PASS github-dark-default gallery default string glyph
+PASS github-dark-default gallery client fully visible
+PASS github-dark-default gallery consistent size Point {884, 581}
+PASS github-dark-default gallery has no white bottom/right bands
+PASS BSL editor opened on test fixture
+PASS winter-is-coming-dark-blue gallery opens real BSL editor
+PASS winter-is-coming-dark-blue gallery default BSL background
+PASS winter-is-coming-dark-blue gallery default keyword glyph
+PASS winter-is-coming-dark-blue gallery default number glyph
+PASS winter-is-coming-dark-blue gallery default string glyph
+PASS winter-is-coming-dark-blue gallery client fully visible
+PASS winter-is-coming-dark-blue gallery consistent size Point {884, 581}
+PASS winter-is-coming-dark-blue gallery has no white bottom/right bands
+PASS BSL editor opened on test fixture
+PASS night-owl gallery opens real BSL editor
+PASS night-owl gallery default BSL background
+PASS night-owl gallery default keyword glyph
+PASS night-owl gallery default number glyph
+PASS night-owl gallery default string glyph
+PASS night-owl gallery client fully visible
+PASS night-owl gallery consistent size Point {884, 581}
+PASS night-owl gallery has no white bottom/right bands
+PASS BSL editor opened on test fixture
+PASS ayu-dark gallery opens real BSL editor
+PASS ayu-dark gallery default BSL background
+PASS ayu-dark gallery default keyword glyph
+PASS ayu-dark gallery default number glyph
+PASS ayu-dark gallery default string glyph
+PASS ayu-dark gallery client fully visible
+PASS ayu-dark gallery consistent size Point {884, 581}
+PASS ayu-dark gallery has no white bottom/right bands
+PASS BSL editor opened on test fixture
+PASS shades-of-purple gallery opens real BSL editor
+PASS shades-of-purple gallery default BSL background
+PASS shades-of-purple gallery default keyword glyph
+PASS shades-of-purple gallery default number glyph
+PASS shades-of-purple gallery default string glyph
+PASS shades-of-purple gallery client fully visible
+PASS shades-of-purple gallery consistent size Point {884, 581}
+PASS shades-of-purple gallery has no white bottom/right bands
+PASS BSL editor opened on test fixture
+PASS noctis-minimus gallery opens real BSL editor
+PASS noctis-minimus gallery default BSL background
+PASS noctis-minimus gallery default keyword glyph
+PASS noctis-minimus gallery default number glyph
+PASS noctis-minimus gallery default string glyph
+PASS noctis-minimus gallery client fully visible
+PASS noctis-minimus gallery consistent size Point {884, 581}
+PASS noctis-minimus gallery has no white bottom/right bands
+PASS BSL editor opened on test fixture
+PASS visual-studio-dark-cpp gallery opens real BSL editor
+PASS visual-studio-dark-cpp gallery default BSL background
+PASS visual-studio-dark-cpp gallery default keyword glyph
+PASS visual-studio-dark-cpp gallery default number glyph
+PASS visual-studio-dark-cpp gallery default string glyph
+PASS visual-studio-dark-cpp gallery client fully visible
+PASS visual-studio-dark-cpp gallery consistent size Point {884, 581}
+PASS visual-studio-dark-cpp gallery has no white bottom/right bands
+PASS gallery restores original test settings
+PASS gallery restored SettingKey[scope=theme, node=css, key=id]
+PASS gallery restored SettingKey[scope=theme, node=legacy, key=id]
+PASS gallery restored SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Builtin function.color]
+PASS gallery restored SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.BSL_Keywords.color]
+PASS gallery restored SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Comment.color]
+PASS gallery restored SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Operators.color]
+PASS gallery restored SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Others.color]
+PASS gallery restored SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Preprocessor.color]
+PASS gallery restored SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Brackets.color]
+PASS gallery restored SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Strings.color]
+PASS gallery restored SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Numbers.color]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.console, key=org.eclipse.ui.console.P_BACKGROUND_COLOR]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.console, key=org.eclipse.ui.console.P_STREAM_COLOR]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Background]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Foreground]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionBackground]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionForeground]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.editors, key=currentLineColor]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.editors, key=lineNumberColor]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.editors, key=hyperlinkColor]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Background.SystemDefault]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Foreground.SystemDefault]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionBackground.SystemDefault]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionForeground.SystemDefault]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.editors, key=hyperlinkColor.SystemDefault]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.CONTENT_ASSIST_BACKGROUND_COLOR]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.CONTENT_ASSIST_FOREGROUND_COLOR]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.HOVER_BACKGROUND]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.HOVER_FOREGROUND]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.FORM_HEADING_ERROR_COLOR]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.FORM_HEADING_WARNING_COLOR]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_BG_START]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_BG_END]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_UNSELECTED_TABS_COLOR_START]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_UNSELECTED_TABS_COLOR_END]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_SELECTED_TEXT_COLOR]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_UNSELECTED_TEXT_COLOR]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.INACTIVE_TAB_SELECTED_TEXT_COLOR]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.INACTIVE_TAB_UNSELECTED_TEXT_COLOR]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR_ACCENT]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_ACCENT]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BORDER_COLOR]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_TITLE]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR_TITLE]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.INACTIVE_PART_BACKGROUND_COLOR]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_BACKGROUND_COLOR]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_FOREGROUND_COLOR]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_BORDER_COLOR]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_BACKGROUND_COLOR]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_FOREGROUND_COLOR]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_BORDER_COLOR]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_BACKGROUND_COLOR]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_FOREGROUND_COLOR]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_TREES_AND_TABLES]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.INFORMATION_BACKGROUND_COLOR]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.INFORMATION_FOREGROUND_COLOR]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.e4.ui.css.swt.theme, key=themeid]
+PASS gallery restored SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_ARROW_ACTIVE_COLOR]
+PASS gallery restored SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_ARROW_COLOR]
+PASS gallery restored SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_ARROW_HOVER_COLOR]
+PASS gallery restored SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_BUTTON_ACTIVE_COLOR]
+PASS gallery restored SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_BUTTON_HOVER_COLOR]
+PASS gallery restored SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_CORNER_COLOR]
+PASS gallery restored SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_THUMB_ACTIVE_COLOR]
+PASS gallery restored SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_THUMB_COLOR]
+PASS gallery restored SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_THUMB_HOVER_COLOR]
+PASS gallery restored SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_TRACK_COLOR]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.FindScope]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.editors, key=printMarginColor]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=ACTIVE_HYPERLINK_COLOR]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=CONFLICTING_COLOR]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=CONTENT_ASSIST_BACKGROUND_COLOR]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=CONTENT_ASSIST_FOREGROUND_COLOR]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=COUNTER_COLOR]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=DECORATIONS_COLOR]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=EDITION_COLOR]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=ERROR_COLOR]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=HYPERLINK_COLOR]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=INCOMING_COLOR]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.jface.REVISION_NEWEST_COLOR]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.jface.REVISION_OLDEST_COLOR]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.search.ui.match.highlight]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.editors.rangeIndicatorColor]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.FORM_HEADING_ERROR_COLOR]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.FORM_HEADING_INFO_COLOR]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.FORM_HEADING_WARNING_COLOR]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.HOVER_BACKGROUND]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.HOVER_FOREGROUND]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.INFORMATION_BACKGROUND]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.INFORMATION_FOREGROUND]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=OUTGOING_COLOR]
+PASS gallery restored SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=RESOLVED_COLOR]
+PASS gallery restored SettingKey[scope=instance, node=ru.litonchik.edt.themes, key=activeProfile]
+PASS gallery restored SettingKey[scope=instance, node=ru.litonchik.edt.themes, key=includeBsl]
+PASS gallery clears active profile and journal

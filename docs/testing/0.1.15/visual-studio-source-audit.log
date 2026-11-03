@@ -1,0 +1,7 @@
+PASS: 17 Visual Studio roles exactly match analysis (including documented UI adaptations); all opaque RGB; full MIT and Themes 2.1.0 Dark mapping match; 40 previous palette/release files unchanged.
+text/editor.background contrast 11.9255:1
+text/panel contrast 9.4312:1
+text/selection.background contrast 7.8088:1
+comment/editor.background contrast 5.5242:1
+disabled/panel contrast 5.4159:1
+accent/editor.background contrast 3.6960:1

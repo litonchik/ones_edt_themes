@@ -1,0 +1,44 @@
+# Результаты Maven/Tycho и Eclipse PDE.
+target/
+bin/
+*.class
+/dist/
+
+# Локальные кэши, тестовые EDT и рабочие области.
+/.work/
+/.cache/
+/.work-*.log
+/.metadata/
+/.recommenders/
+hs_err_pid*.log
+replay_pid*.log
+.attach_pid*
+*.hprof
+
+# Локальные настройки редакторов и служебные файлы ОС.
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+Desktop.ini
+*~
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# Локальные секреты и настройки окружения.
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+/settings.local.xml
+
+# Отобранные логи и снимки в docs/testing сохраняются в проекте.
+# .github, .editorconfig, .gitattributes и лицензии также остаются в Git.

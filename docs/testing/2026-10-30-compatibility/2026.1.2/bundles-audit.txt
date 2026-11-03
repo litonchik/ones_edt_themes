@@ -1,0 +1,5 @@
+EDT 2026.1.2
+Installed source ID/version inventory unchanged: PASS
+Test copy baseline restored: 1257 base bundle ID/version pairs
+Own bundle/fragment not registered: PASS
+p2 Cleanup/Reconcile/Uninstall/Audit: exit 0

@@ -1,0 +1,4 @@
+Archive bundle: ru.litonchik.edt.themes_0.1.16.202610292155.jar SHA256: 0FAA1FC675B397A71926C72D5BCC946DD43F8406CBF88973909749EDEF19EEDD
+.work/edt-test exact shipping bundle: PASS
+.work/edt-2026.1.2 exact shipping bundle: PASS
+.work/edt-2026.2.2 exact shipping bundle: PASS

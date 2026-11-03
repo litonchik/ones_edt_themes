@@ -1,0 +1,70 @@
+JVM 17.0.18
+PASS font preference page exists
+PASS font size selector exists
+PASS usage explanation and target tooltip exist
+PASS safe capture visible control intersection: palette-roles-before-layout
+LAYOUT editor.background required=30 height=55
+PASS role explanation fits at current DPI: editor.background
+LAYOUT text required=30 height=55
+PASS role explanation fits at current DPI: text
+LAYOUT panel required=30 height=55
+PASS role explanation fits at current DPI: panel
+LAYOUT border required=15 height=55
+PASS role explanation fits at current DPI: border
+LAYOUT selection.background required=30 height=55
+PASS role explanation fits at current DPI: selection.background
+LAYOUT selection.text required=15 height=55
+PASS role explanation fits at current DPI: selection.text
+LAYOUT line required=15 height=55
+PASS role explanation fits at current DPI: line
+LAYOUT comment required=30 height=55
+PASS role explanation fits at current DPI: comment
+LAYOUT keyword required=30 height=55
+PASS role explanation fits at current DPI: keyword
+LAYOUT string required=30 height=55
+PASS role explanation fits at current DPI: string
+LAYOUT number required=30 height=55
+PASS role explanation fits at current DPI: number
+LAYOUT directive required=30 height=55
+PASS role explanation fits at current DPI: directive
+LAYOUT accent required=30 height=55
+PASS role explanation fits at current DPI: accent
+LAYOUT error required=15 height=55
+PASS role explanation fits at current DPI: error
+LAYOUT warning required=15 height=55
+PASS role explanation fits at current DPI: warning
+LAYOUT disabled required=30 height=55
+PASS role explanation fits at current DPI: disabled
+LAYOUT hover required=30 height=55
+PASS role explanation fits at current DPI: hover
+FAIL java.lang.AssertionError: unselected role row background fills whole cell
+ru.litonchik.edt.themes.testing.WorkbenchProbe.check(WorkbenchProbe.java:35)
+ru.litonchik.edt.themes.testing.WorkbenchProbe.runPaletteChecks(WorkbenchProbe.java:205)
+ru.litonchik.edt.themes.testing.WorkbenchProbe.runChecks(WorkbenchProbe.java:66)
+ru.litonchik.edt.themes.testing.WorkbenchProbe$1.lambda$postStartup$0(WorkbenchProbe.java:48)
+org.eclipse.swt.widgets.Display.runTimer(Display.java:4169)
+org.eclipse.swt.widgets.Display.messageProc(Display.java:3290)
+org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3657)
+org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
+org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:648)
+org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
+org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:555)
+org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+ru.litonchik.edt.themes.testing.WorkbenchProbe.start(WorkbenchProbe.java:41)
+org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.base/java.lang.reflect.Method.invoke(Method.java:569)
+org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:651)
+org.eclipse.equinox.launcher.Main.basicRun(Main.java:588)
+org.eclipse.equinox.launcher.Main.run(Main.java:1459)
+org.eclipse.equinox.launcher.Main.main(Main.java:1432)

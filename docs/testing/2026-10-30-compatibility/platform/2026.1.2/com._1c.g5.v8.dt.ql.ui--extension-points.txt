@@ -1,0 +1,1 @@
+com._1c.g5.v8.dt.ql.ui.qlUiModuleExtension | schema/qlUiModuleExtension.exsd

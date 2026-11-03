@@ -1,0 +1,1 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"><modelVersion>4.0.0</modelVersion><parent><groupId>ru.litonchik.edt</groupId><artifactId>edt-themes-parent</artifactId><version>0.1.16-SNAPSHOT</version><relativePath>../../pom.xml</relativePath></parent><artifactId>ru.litonchik.edt.themes.feature</artifactId><packaging>eclipse-feature</packaging></project>

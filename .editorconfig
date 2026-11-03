@@ -1,0 +1,15 @@
+root = true
+
+[*]
+charset = utf-8
+insert_final_newline = true
+
+[*.{md,yml,yaml}]
+indent_style = space
+indent_size = 2
+end_of_line = lf
+trim_trailing_whitespace = true
+
+[bundles/ru.litonchik.edt.themes/resources/licenses/*]
+insert_final_newline = unset
+trim_trailing_whitespace = false

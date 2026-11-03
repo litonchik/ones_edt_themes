@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+  <extension point="com._1c.g5.v8.dt.ql.ui.qlUiModuleExtension">
+    <qlUiModuleExtension module="ru.litonchik.edt.themes.edt.QueryHighlightingModule"/>
+  </extension>
+  <extension point="org.eclipse.ui.preferencePages">
+    <page id="ru.litonchik.edt.themes.preferences" category="org.eclipse.ui.preferencePages.Views" name="%pageName" class="ru.litonchik.edt.themes.ui.ThemePreferencePage"/>
+  </extension>
+  <extension point="org.eclipse.ui.startup"><startup class="ru.litonchik.edt.themes.runtime.ThemeStartup"/></extension>
+</plugin>

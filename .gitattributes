@@ -1,0 +1,8 @@
+* text=auto
+*.md text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.png binary
+*.zip binary
+# Preserve upstream notices byte-for-byte, including their line endings.
+bundles/ru.litonchik.edt.themes/resources/licenses/* -text

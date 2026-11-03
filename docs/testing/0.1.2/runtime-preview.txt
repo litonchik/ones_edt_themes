@@ -1,0 +1,114 @@
+JVM 17.0.18
+PASS font preference page exists
+PASS font size selector exists
+PASS font chooser uses separate popup list
+PASS code preview exists
+PASS monokai preview background
+PASS monokai preview comment at 0
+PASS monokai preview directive at 25
+PASS monokai preview keyword at 41
+PASS monokai preview number at 78
+PASS monokai preview keyword at 90
+PASS monokai preview string at 98
+PASS monokai preview keyword at 122
+PASS monokai preview directive at 135
+PASS monokai preview keyword at 150
+PASS monokai preview keyword at 173
+PASS monokai preview string at 180
+PASS monokai preview keyword at 190
+PASS darcula preview background
+PASS darcula preview comment at 0
+PASS darcula preview directive at 25
+PASS darcula preview keyword at 41
+PASS darcula preview number at 78
+PASS darcula preview keyword at 90
+PASS darcula preview string at 98
+PASS darcula preview keyword at 122
+PASS darcula preview directive at 135
+PASS darcula preview keyword at 150
+PASS darcula preview keyword at 173
+PASS darcula preview string at 180
+PASS darcula preview keyword at 190
+PASS pending preview palette does not apply native theme
+PASS unchecked BSL clears preview token styles
+PASS monokai preview background
+PASS monokai preview comment at 0
+PASS monokai preview directive at 25
+PASS monokai preview keyword at 41
+PASS monokai preview number at 78
+PASS monokai preview keyword at 90
+PASS monokai preview string at 98
+PASS monokai preview keyword at 122
+PASS monokai preview directive at 135
+PASS monokai preview keyword at 150
+PASS monokai preview keyword at 173
+PASS monokai preview string at 180
+PASS monokai preview keyword at 190
+PASS font popup stays open
+PASS visible font popup list found through public SWT APIs
+POPUP table bg=RGB {39, 40, 34} fg=RGB {248, 248, 242} row=Rectangle {4, 209, 157, 19} top=93
+PASS selected font row is visible
+SELECTED FONT ROW background=RGB {73, 72, 62} contrast=8.641291956744546
+PASS rendered selected font row has readable glyph contrast
+PASS choosing a font closes popup
+PASS popup selection updates font name
+PASS Escape closes font popup without changing chosen name
+PASS Enter confirms selected font name
+PASS preview and font list selection do not write native font preference
+PASS font preference page exists
+PASS font size selector exists
+PASS font chooser uses separate popup list
+PASS code preview exists
+PASS darcula preview background
+PASS darcula preview comment at 0
+PASS darcula preview directive at 25
+PASS darcula preview keyword at 41
+PASS darcula preview number at 78
+PASS darcula preview keyword at 90
+PASS darcula preview string at 98
+PASS darcula preview keyword at 122
+PASS darcula preview directive at 135
+PASS darcula preview keyword at 150
+PASS darcula preview keyword at 173
+PASS darcula preview string at 180
+PASS darcula preview keyword at 190
+PASS monokai preview background
+PASS monokai preview comment at 0
+PASS monokai preview directive at 25
+PASS monokai preview keyword at 41
+PASS monokai preview number at 78
+PASS monokai preview keyword at 90
+PASS monokai preview string at 98
+PASS monokai preview keyword at 122
+PASS monokai preview directive at 135
+PASS monokai preview keyword at 150
+PASS monokai preview keyword at 173
+PASS monokai preview string at 180
+PASS monokai preview keyword at 190
+PASS pending preview palette does not apply native theme
+PASS unchecked BSL clears preview token styles
+PASS darcula preview background
+PASS darcula preview comment at 0
+PASS darcula preview directive at 25
+PASS darcula preview keyword at 41
+PASS darcula preview number at 78
+PASS darcula preview keyword at 90
+PASS darcula preview string at 98
+PASS darcula preview keyword at 122
+PASS darcula preview directive at 135
+PASS darcula preview keyword at 150
+PASS darcula preview keyword at 173
+PASS darcula preview string at 180
+PASS darcula preview keyword at 190
+PASS font popup stays open
+PASS visible font popup list found through public SWT APIs
+POPUP table bg=RGB {43, 43, 43} fg=RGB {169, 183, 198} row=Rectangle {4, 209, 157, 19} top=93
+PASS selected font row is visible
+SELECTED FONT ROW background=RGB {33, 66, 131} contrast=9.66988308953148
+PASS rendered selected font row has readable glyph contrast
+PASS choosing a font closes popup
+PASS popup selection updates font name
+PASS Escape closes font popup without changing chosen name
+PASS Enter confirms selected font name
+PASS preview and font list selection do not write native font preference
+PASS preview probe restores test colors
