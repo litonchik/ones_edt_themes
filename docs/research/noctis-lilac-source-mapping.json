@@ -1,0 +1,123 @@
+{
+  "source_commit": "4a82370b2c064e36726c23e94f27ed3782bd6ecd",
+  "files": {
+    "LICENSE.md": "65dc11e7f91a5fb378631d57d227ec9ec1da05e1e4c5382672f9dff53c073c6f",
+    "lilac.json": "e93a8c483d4b61fd6e4476b83166c6c408ba47c10ad24149130eb28b11078e70",
+    "package.json": "68f597ba91fd166b12dd07abd53dbbe81f3d71220cef8f54db36d082d3a2704f"
+  },
+  "roles": {
+    "editor.background": {
+      "rgb": "#F2F1F8",
+      "source": "editor.background"
+    },
+    "text": {
+      "rgb": "#0C006B",
+      "source": "editor.foreground / TEXT"
+    },
+    "panel": {
+      "rgb": "#EDECF8",
+      "source": "sideBar.background"
+    },
+    "border": {
+      "rgb": "#D4D0F1",
+      "source": "editorGroup.border"
+    },
+    "selection.background": {
+      "rgb": "#BCB6E7",
+      "source": "list.activeSelectionBackground; same role policy as Lux/Hibernus"
+    },
+    "selection.text": {
+      "rgb": "#0C006B",
+      "source": "editor.foreground"
+    },
+    "line": {
+      "rgb": "#E1DEF3",
+      "source": "editor.lineHighlightBackground #D5D2EF99 composited over #F2F1F8"
+    },
+    "comment": {
+      "rgb": "#615E74",
+      "source": "COMMENT #9995B7 darkened"
+    },
+    "keyword": {
+      "rgb": "#A6395F",
+      "source": "KEYWORD #FF5792 darkened"
+    },
+    "string": {
+      "rgb": "#006F41",
+      "source": "STRING #00B368 darkened"
+    },
+    "number": {
+      "rgb": "#543FF2",
+      "source": "NUMBER #5842FF darkened"
+    },
+    "directive": {
+      "rgb": "#0064A3",
+      "source": "MISC #0094F0 darkened; BSL adaptation"
+    },
+    "accent": {
+      "rgb": "#006B79",
+      "source": "textLink.foreground #00C6E0 darkened"
+    },
+    "error": {
+      "rgb": "#C73200",
+      "source": "errorForeground #FF4000 darkened"
+    },
+    "warning": {
+      "rgb": "#935F21",
+      "source": "editorWarning.foreground #E69533 darkened"
+    },
+    "disabled": {
+      "rgb": "#615E74",
+      "source": "adapted COMMENT for shared disabled/line number role"
+    },
+    "hover": {
+      "rgb": "#DEDBF5",
+      "source": "editorHoverWidget.background"
+    }
+  },
+  "contrast": {
+    "text": {
+      "editor.background": 15.23936988207842,
+      "line": 12.98453931861079,
+      "hover": 12.669220133755609
+    },
+    "comment": {
+      "editor.background": 5.566786677295721,
+      "line": 4.743120027204616,
+      "hover": 4.627937139005818
+    },
+    "keyword": {
+      "editor.background": 5.549709109470723,
+      "line": 4.728569271326534,
+      "hover": 4.613739736633002
+    },
+    "string": {
+      "editor.background": 5.585801443798826,
+      "line": 4.759321352141556,
+      "hover": 4.643745027683886
+    },
+    "number": {
+      "editor.background": 5.552618236225266,
+      "line": 4.731047961129292,
+      "hover": 4.616158233430146
+    },
+    "directive": {
+      "editor.background": 5.583083701793248,
+      "line": 4.757005729632073,
+      "hover": 4.641485638220814
+    },
+    "accent": {
+      "editor.background": 5.53775396244925,
+      "line": 4.718383018367174,
+      "hover": 4.603800848705321
+    },
+    "disabled": {
+      "editor.background": 5.566786677295721,
+      "line": 4.743120027204616,
+      "hover": 4.627937139005818
+    }
+  },
+  "selection_vs_line": 1.4516721698709316,
+  "selection_text": 8.94453967507364,
+  "license_equals_existing_notice": true
+}

@@ -1,0 +1,7 @@
+PASS edt-test no theme/probe bundles or files; 1267 base entries
+PASS edt-2026.1.2 no theme/probe bundles or files; 1257 base entries
+PASS edt-2026.2.2 no theme/probe bundles or files; 1234 base entries
+PASS removed junction .cache; target preserved
+PASS removed junction .work/edt-test; target preserved
+PASS removed junction .work/edt-2026.1.2; target preserved
+PASS removed junction .work/edt-2026.2.2; target preserved

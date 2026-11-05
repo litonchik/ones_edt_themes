@@ -1,0 +1,56 @@
+[
+  {
+    "edt": "2026.1.2",
+    "egit_bundle": "org.eclipse.egit.ui_6.8.12.202605060235.jar",
+    "plugin_xml_sha256": "d70c0521e90b5f09b3dbcef9144a94e28adcdcecdaa164bf7fef1b89915b104d",
+    "dark_css_sha256": "77057731f2939ad7fc27917c27070b9e087a6b3e4c538c91e2c8dbcecb2c00e2",
+    "definitions": {
+      "org.eclipse.egit.ui.UncommittedChangeForegroundColor": "COLOR_LIST_FOREGROUND",
+      "org.eclipse.egit.ui.UncommittedChangeBackgroundColor": "COLOR_LIST_BACKGROUND",
+      "org.eclipse.egit.ui.IgnoredResourceForegroundColor": "COLOR_LIST_FOREGROUND",
+      "org.eclipse.egit.ui.IgnoredResourceBackgroundColor": "COLOR_LIST_BACKGROUND"
+    },
+    "dark_native_values": {
+      "org.eclipse.egit.ui.UncommittedChangeBackgroundColor": "47,47,47",
+      "org.eclipse.egit.ui.UncommittedChangeForegroundColor": "114,157,186",
+      "org.eclipse.egit.ui.IgnoredResourceBackgroundColor": "47,47,47",
+      "org.eclipse.egit.ui.IgnoredResourceForegroundColor": "120,120,120"
+    }
+  },
+  {
+    "edt": "2026.1.3",
+    "egit_bundle": "org.eclipse.egit.ui_6.8.12.202605060235.jar",
+    "plugin_xml_sha256": "d70c0521e90b5f09b3dbcef9144a94e28adcdcecdaa164bf7fef1b89915b104d",
+    "dark_css_sha256": "77057731f2939ad7fc27917c27070b9e087a6b3e4c538c91e2c8dbcecb2c00e2",
+    "definitions": {
+      "org.eclipse.egit.ui.UncommittedChangeForegroundColor": "COLOR_LIST_FOREGROUND",
+      "org.eclipse.egit.ui.UncommittedChangeBackgroundColor": "COLOR_LIST_BACKGROUND",
+      "org.eclipse.egit.ui.IgnoredResourceForegroundColor": "COLOR_LIST_FOREGROUND",
+      "org.eclipse.egit.ui.IgnoredResourceBackgroundColor": "COLOR_LIST_BACKGROUND"
+    },
+    "dark_native_values": {
+      "org.eclipse.egit.ui.UncommittedChangeBackgroundColor": "47,47,47",
+      "org.eclipse.egit.ui.UncommittedChangeForegroundColor": "114,157,186",
+      "org.eclipse.egit.ui.IgnoredResourceBackgroundColor": "47,47,47",
+      "org.eclipse.egit.ui.IgnoredResourceForegroundColor": "120,120,120"
+    }
+  },
+  {
+    "edt": "2026.2.2",
+    "egit_bundle": "org.eclipse.egit.ui_6.8.14.202605290936.jar",
+    "plugin_xml_sha256": "d70c0521e90b5f09b3dbcef9144a94e28adcdcecdaa164bf7fef1b89915b104d",
+    "dark_css_sha256": "77057731f2939ad7fc27917c27070b9e087a6b3e4c538c91e2c8dbcecb2c00e2",
+    "definitions": {
+      "org.eclipse.egit.ui.UncommittedChangeForegroundColor": "COLOR_LIST_FOREGROUND",
+      "org.eclipse.egit.ui.UncommittedChangeBackgroundColor": "COLOR_LIST_BACKGROUND",
+      "org.eclipse.egit.ui.IgnoredResourceForegroundColor": "COLOR_LIST_FOREGROUND",
+      "org.eclipse.egit.ui.IgnoredResourceBackgroundColor": "COLOR_LIST_BACKGROUND"
+    },
+    "dark_native_values": {
+      "org.eclipse.egit.ui.UncommittedChangeBackgroundColor": "47,47,47",
+      "org.eclipse.egit.ui.UncommittedChangeForegroundColor": "114,157,186",
+      "org.eclipse.egit.ui.IgnoredResourceBackgroundColor": "47,47,47",
+      "org.eclipse.egit.ui.IgnoredResourceForegroundColor": "120,120,120"
+    }
+  }
+]

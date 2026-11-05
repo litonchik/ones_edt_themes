@@ -1,0 +1,18 @@
+{
+  "bundle": "plugins/ru.litonchik.edt.themes_0.1.23.202611041427.jar",
+  "classes": 43,
+  "class_major": 61,
+  "changed_classes": [
+    "ru/litonchik/edt/themes/edt/EdtSettingsAdapter.class",
+    "ru/litonchik/edt/themes/runtime/ThemeCoordinator.class",
+    "ru/litonchik/edt/themes/runtime/ThemeStartup.class"
+  ],
+  "added_classes": [
+    "ru/litonchik/edt/themes/edt/EditorRulerColors$1.class",
+    "ru/litonchik/edt/themes/edt/EditorRulerColors$2.class",
+    "ru/litonchik/edt/themes/edt/EditorRulerColors.class"
+  ],
+  "unchanged_previous_classes": 37,
+  "source_resources_and_plugin_xml_match": true,
+  "zip_sha256": "ab6ec8ac3312558d7b76dd7d993ca5e46317c1a1d97ecba5c8e4b9a38d6d70f8"
+}

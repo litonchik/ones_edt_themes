@@ -1,0 +1,66 @@
+{
+  "bundle": "0.1.25.202611041604",
+  "zip_sha256": "88f88d0ab6b3511adb452192a197b89038798e9146ada9670c5e39aac92d8d39",
+  "unit_tests": 109,
+  "runtime_pass": 1695,
+  "runtime_fail": 0,
+  "matrix": [
+    {
+      "edt": "2026.1.2",
+      "jvm": "17.0.18",
+      "phases": {
+        "candidate": 113,
+        "candidaterestart": 230,
+        "candidatesurfaces": 222
+      },
+      "installed_jar_matches_shipping": true,
+      "components": {
+        "org.eclipse.platform": "4.30.0.v20231201-0110",
+        "org.eclipse.ui.workbench": "3.131.0.v20231201-0512",
+        "org.eclipse.jface.text": "3.24.200.v20231024-0828",
+        "org.eclipse.swt": "3.124.200.v20231113-1355",
+        "org.eclipse.xtext.ui": "2.33.0.v20231121-0955",
+        "com._1c.g5.v8.dt.theming.ui": "2.1.0.v202607090722",
+        "com._1c.g5.v8.dt.bsl.ui": "23.0.1.v202607090722"
+      }
+    },
+    {
+      "edt": "2026.1.3",
+      "jvm": "17.0.18",
+      "phases": {
+        "candidate": 113,
+        "candidaterestart": 230,
+        "candidatesurfaces": 222
+      },
+      "installed_jar_matches_shipping": true,
+      "components": {
+        "org.eclipse.platform": "4.30.0.v20231201-0110",
+        "org.eclipse.ui.workbench": "3.131.0.v20231201-0512",
+        "org.eclipse.jface.text": "3.24.200.v20231024-0828",
+        "org.eclipse.swt": "3.124.200.v20231113-1355",
+        "org.eclipse.xtext.ui": "2.33.0.v20231121-0955",
+        "com._1c.g5.v8.dt.theming.ui": "2.1.0.v202609041212",
+        "com._1c.g5.v8.dt.bsl.ui": "23.0.1.v202609041212"
+      }
+    },
+    {
+      "edt": "2026.2.2",
+      "jvm": "25.0.2",
+      "phases": {
+        "candidate": 113,
+        "candidaterestart": 230,
+        "candidatesurfaces": 222
+      },
+      "installed_jar_matches_shipping": true,
+      "components": {
+        "org.eclipse.platform": "4.38.0.v20251120-1800",
+        "org.eclipse.ui.workbench": "3.137.0.v20251114-0005",
+        "org.eclipse.jface.text": "3.29.0.v20251112-0859",
+        "org.eclipse.swt": "3.132.0.v20251120-0906",
+        "org.eclipse.xtext.ui": "2.41.0.v20251124-0739",
+        "com._1c.g5.v8.dt.theming.ui": "2.1.1.v202610211527",
+        "com._1c.g5.v8.dt.bsl.ui": "24.0.0.v202610211527"
+      }
+    }
+  ]
+}

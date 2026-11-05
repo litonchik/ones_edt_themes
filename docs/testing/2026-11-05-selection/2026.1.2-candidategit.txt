@@ -1,0 +1,482 @@
+JVM 17.0.18
+PASS fixture connected to EGit
+PASS fixture has tracked modified BSL
+PASS fixture has Git ignored resource
+PASS real EGit index diff computed before rendering
+PASS BSL editor opened on test fixture
+PASS darcula Git explicit UncommittedChangeBackgroundColor
+PASS darcula Git registry UncommittedChangeBackgroundColor actual=RGB {43, 43, 43}
+PASS darcula Git explicit UncommittedChangeForegroundColor
+PASS darcula Git registry UncommittedChangeForegroundColor actual=RGB {88, 157, 246}
+PASS darcula Git explicit IgnoredResourceBackgroundColor
+PASS darcula Git registry IgnoredResourceBackgroundColor actual=RGB {43, 43, 43}
+PASS darcula Git explicit IgnoredResourceForegroundColor
+PASS darcula Git registry IgnoredResourceForegroundColor actual=RGB {119, 119, 119}
+PASS darcula Git Tree background
+PASS darcula Git label background ThemeGitProbe actual=RGB {43, 43, 43}
+PASS darcula Git label background Modified.bsl actual=RGB {43, 43, 43}
+PASS darcula actual EGit modified foreground
+PASS darcula Git label background Clean.bsl actual=RGB {43, 43, 43}
+PASS darcula Git label background Ignored.log actual=RGB {43, 43, 43}
+PASS darcula actual EGit ignored foreground
+PASS darcula painted Git label pixel > ThemeGitProbe [ThemeGitProbe master]
+PASS darcula painted Git label pixel > Modified.bsl
+PASS darcula painted Git label pixel Clean.bsl
+PASS darcula painted Git label pixel Ignored.log
+PASS darcula Git theming preserves BSL source and font
+PASS monokai Git explicit UncommittedChangeBackgroundColor
+PASS monokai Git registry UncommittedChangeBackgroundColor actual=RGB {39, 40, 34}
+PASS monokai Git explicit UncommittedChangeForegroundColor
+PASS monokai Git registry UncommittedChangeForegroundColor actual=RGB {102, 217, 239}
+PASS monokai Git explicit IgnoredResourceBackgroundColor
+PASS monokai Git registry IgnoredResourceBackgroundColor actual=RGB {39, 40, 34}
+PASS monokai Git explicit IgnoredResourceForegroundColor
+PASS monokai Git registry IgnoredResourceForegroundColor actual=RGB {138, 135, 120}
+PASS monokai Git Tree background
+PASS monokai Git label background ThemeGitProbe actual=RGB {39, 40, 34}
+PASS monokai Git label background Modified.bsl actual=RGB {39, 40, 34}
+PASS monokai actual EGit modified foreground
+PASS monokai Git label background Clean.bsl actual=RGB {39, 40, 34}
+PASS monokai Git label background Ignored.log actual=RGB {39, 40, 34}
+PASS monokai actual EGit ignored foreground
+PASS monokai painted Git label pixel > ThemeGitProbe [ThemeGitProbe master]
+PASS monokai painted Git label pixel > Modified.bsl
+PASS monokai painted Git label pixel Clean.bsl
+PASS monokai painted Git label pixel Ignored.log
+PASS monokai Git theming preserves BSL source and font
+PASS one-dark-pro Git explicit UncommittedChangeBackgroundColor
+PASS one-dark-pro Git registry UncommittedChangeBackgroundColor actual=RGB {40, 44, 52}
+PASS one-dark-pro Git explicit UncommittedChangeForegroundColor
+PASS one-dark-pro Git registry UncommittedChangeForegroundColor actual=RGB {97, 175, 239}
+PASS one-dark-pro Git explicit IgnoredResourceBackgroundColor
+PASS one-dark-pro Git registry IgnoredResourceBackgroundColor actual=RGB {40, 44, 52}
+PASS one-dark-pro Git explicit IgnoredResourceForegroundColor
+PASS one-dark-pro Git registry IgnoredResourceForegroundColor actual=RGB {127, 132, 142}
+PASS one-dark-pro Git Tree background
+PASS one-dark-pro Git label background ThemeGitProbe actual=RGB {40, 44, 52}
+PASS one-dark-pro Git label background Modified.bsl actual=RGB {40, 44, 52}
+PASS one-dark-pro actual EGit modified foreground
+PASS one-dark-pro Git label background Clean.bsl actual=RGB {40, 44, 52}
+PASS one-dark-pro Git label background Ignored.log actual=RGB {40, 44, 52}
+PASS one-dark-pro actual EGit ignored foreground
+PASS one-dark-pro painted Git label pixel > ThemeGitProbe [ThemeGitProbe master]
+PASS one-dark-pro painted Git label pixel > Modified.bsl
+PASS one-dark-pro painted Git label pixel Clean.bsl
+PASS one-dark-pro painted Git label pixel Ignored.log
+PASS one-dark-pro Git theming preserves BSL source and font
+PASS dracula Git explicit UncommittedChangeBackgroundColor
+PASS dracula Git registry UncommittedChangeBackgroundColor actual=RGB {40, 42, 54}
+PASS dracula Git explicit UncommittedChangeForegroundColor
+PASS dracula Git registry UncommittedChangeForegroundColor actual=RGB {139, 233, 253}
+PASS dracula Git explicit IgnoredResourceBackgroundColor
+PASS dracula Git registry IgnoredResourceBackgroundColor actual=RGB {40, 42, 54}
+PASS dracula Git explicit IgnoredResourceForegroundColor
+PASS dracula Git registry IgnoredResourceForegroundColor actual=RGB {98, 114, 164}
+PASS dracula Git Tree background
+PASS dracula Git label background ThemeGitProbe actual=RGB {40, 42, 54}
+PASS dracula Git label background Modified.bsl actual=RGB {40, 42, 54}
+PASS dracula actual EGit modified foreground
+PASS dracula Git label background Clean.bsl actual=RGB {40, 42, 54}
+PASS dracula Git label background Ignored.log actual=RGB {40, 42, 54}
+PASS dracula actual EGit ignored foreground
+PASS dracula painted Git label pixel > ThemeGitProbe [ThemeGitProbe master]
+PASS dracula painted Git label pixel > Modified.bsl
+PASS dracula painted Git label pixel Clean.bsl
+PASS dracula painted Git label pixel Ignored.log
+PASS dracula Git theming preserves BSL source and font
+PASS github-dark-default Git explicit UncommittedChangeBackgroundColor
+PASS github-dark-default Git registry UncommittedChangeBackgroundColor actual=RGB {13, 17, 23}
+PASS github-dark-default Git explicit UncommittedChangeForegroundColor
+PASS github-dark-default Git registry UncommittedChangeForegroundColor actual=RGB {47, 129, 247}
+PASS github-dark-default Git explicit IgnoredResourceBackgroundColor
+PASS github-dark-default Git registry IgnoredResourceBackgroundColor actual=RGB {13, 17, 23}
+PASS github-dark-default Git explicit IgnoredResourceForegroundColor
+PASS github-dark-default Git registry IgnoredResourceForegroundColor actual=RGB {125, 133, 144}
+PASS github-dark-default Git Tree background
+PASS github-dark-default Git label background ThemeGitProbe actual=RGB {13, 17, 23}
+PASS github-dark-default Git label background Modified.bsl actual=RGB {13, 17, 23}
+PASS github-dark-default actual EGit modified foreground
+PASS github-dark-default Git label background Clean.bsl actual=RGB {13, 17, 23}
+PASS github-dark-default Git label background Ignored.log actual=RGB {13, 17, 23}
+PASS github-dark-default actual EGit ignored foreground
+PASS github-dark-default painted Git label pixel > ThemeGitProbe [ThemeGitProbe master]
+PASS github-dark-default painted Git label pixel > Modified.bsl
+PASS github-dark-default painted Git label pixel Clean.bsl
+PASS github-dark-default painted Git label pixel Ignored.log
+PASS github-dark-default Git theming preserves BSL source and font
+PASS winter-is-coming-dark-blue Git explicit UncommittedChangeBackgroundColor
+PASS winter-is-coming-dark-blue Git registry UncommittedChangeBackgroundColor actual=RGB {1, 22, 39}
+PASS winter-is-coming-dark-blue Git explicit UncommittedChangeForegroundColor
+PASS winter-is-coming-dark-blue Git registry UncommittedChangeForegroundColor actual=RGB {33, 159, 213}
+PASS winter-is-coming-dark-blue Git explicit IgnoredResourceBackgroundColor
+PASS winter-is-coming-dark-blue Git registry IgnoredResourceBackgroundColor actual=RGB {1, 22, 39}
+PASS winter-is-coming-dark-blue Git explicit IgnoredResourceForegroundColor
+PASS winter-is-coming-dark-blue Git registry IgnoredResourceForegroundColor actual=RGB {33, 159, 213}
+PASS winter-is-coming-dark-blue Git Tree background
+PASS winter-is-coming-dark-blue Git label background ThemeGitProbe actual=RGB {1, 22, 39}
+PASS winter-is-coming-dark-blue Git label background Modified.bsl actual=RGB {1, 22, 39}
+PASS winter-is-coming-dark-blue actual EGit modified foreground
+PASS winter-is-coming-dark-blue Git label background Clean.bsl actual=RGB {1, 22, 39}
+PASS winter-is-coming-dark-blue Git label background Ignored.log actual=RGB {1, 22, 39}
+PASS winter-is-coming-dark-blue actual EGit ignored foreground
+PASS winter-is-coming-dark-blue painted Git label pixel > ThemeGitProbe [ThemeGitProbe master]
+PASS winter-is-coming-dark-blue painted Git label pixel > Modified.bsl
+PASS winter-is-coming-dark-blue painted Git label pixel Clean.bsl
+PASS winter-is-coming-dark-blue painted Git label pixel Ignored.log
+PASS winter-is-coming-dark-blue Git theming preserves BSL source and font
+PASS night-owl Git explicit UncommittedChangeBackgroundColor
+PASS night-owl Git registry UncommittedChangeBackgroundColor actual=RGB {1, 22, 39}
+PASS night-owl Git explicit UncommittedChangeForegroundColor
+PASS night-owl Git registry UncommittedChangeForegroundColor actual=RGB {130, 170, 255}
+PASS night-owl Git explicit IgnoredResourceBackgroundColor
+PASS night-owl Git registry IgnoredResourceBackgroundColor actual=RGB {1, 22, 39}
+PASS night-owl Git explicit IgnoredResourceForegroundColor
+PASS night-owl Git registry IgnoredResourceForegroundColor actual=RGB {95, 126, 151}
+PASS night-owl Git Tree background
+PASS night-owl Git label background ThemeGitProbe actual=RGB {1, 22, 39}
+PASS night-owl Git label background Modified.bsl actual=RGB {1, 22, 39}
+PASS night-owl actual EGit modified foreground
+PASS night-owl Git label background Clean.bsl actual=RGB {1, 22, 39}
+PASS night-owl Git label background Ignored.log actual=RGB {1, 22, 39}
+PASS night-owl actual EGit ignored foreground
+PASS night-owl painted Git label pixel > ThemeGitProbe [ThemeGitProbe master]
+PASS night-owl painted Git label pixel > Modified.bsl
+PASS night-owl painted Git label pixel Clean.bsl
+PASS night-owl painted Git label pixel Ignored.log
+PASS night-owl Git theming preserves BSL source and font
+PASS ayu-dark Git explicit UncommittedChangeBackgroundColor
+PASS ayu-dark Git registry UncommittedChangeBackgroundColor actual=RGB {16, 20, 28}
+PASS ayu-dark Git explicit UncommittedChangeForegroundColor
+PASS ayu-dark Git registry UncommittedChangeForegroundColor actual=RGB {230, 180, 80}
+PASS ayu-dark Git explicit IgnoredResourceBackgroundColor
+PASS ayu-dark Git registry IgnoredResourceBackgroundColor actual=RGB {16, 20, 28}
+PASS ayu-dark Git explicit IgnoredResourceForegroundColor
+PASS ayu-dark Git registry IgnoredResourceForegroundColor actual=RGB {90, 102, 115}
+PASS ayu-dark Git Tree background
+PASS ayu-dark Git label background ThemeGitProbe actual=RGB {16, 20, 28}
+PASS ayu-dark Git label background Modified.bsl actual=RGB {16, 20, 28}
+PASS ayu-dark actual EGit modified foreground
+PASS ayu-dark Git label background Clean.bsl actual=RGB {16, 20, 28}
+PASS ayu-dark Git label background Ignored.log actual=RGB {16, 20, 28}
+PASS ayu-dark actual EGit ignored foreground
+PASS ayu-dark painted Git label pixel > ThemeGitProbe [ThemeGitProbe master]
+PASS ayu-dark painted Git label pixel > Modified.bsl
+PASS ayu-dark painted Git label pixel Clean.bsl
+PASS ayu-dark painted Git label pixel Ignored.log
+PASS ayu-dark Git theming preserves BSL source and font
+PASS shades-of-purple Git explicit UncommittedChangeBackgroundColor
+PASS shades-of-purple Git registry UncommittedChangeBackgroundColor actual=RGB {45, 43, 85}
+PASS shades-of-purple Git explicit UncommittedChangeForegroundColor
+PASS shades-of-purple Git registry UncommittedChangeForegroundColor actual=RGB {179, 98, 255}
+PASS shades-of-purple Git explicit IgnoredResourceBackgroundColor
+PASS shades-of-purple Git registry IgnoredResourceBackgroundColor actual=RGB {45, 43, 85}
+PASS shades-of-purple Git explicit IgnoredResourceForegroundColor
+PASS shades-of-purple Git registry IgnoredResourceForegroundColor actual=RGB {165, 153, 233}
+PASS shades-of-purple Git Tree background
+PASS shades-of-purple Git label background ThemeGitProbe actual=RGB {45, 43, 85}
+PASS shades-of-purple Git label background Modified.bsl actual=RGB {45, 43, 85}
+PASS shades-of-purple actual EGit modified foreground
+PASS shades-of-purple Git label background Clean.bsl actual=RGB {45, 43, 85}
+PASS shades-of-purple Git label background Ignored.log actual=RGB {45, 43, 85}
+PASS shades-of-purple actual EGit ignored foreground
+PASS shades-of-purple painted Git label pixel > ThemeGitProbe [ThemeGitProbe master]
+PASS shades-of-purple painted Git label pixel > Modified.bsl
+PASS shades-of-purple painted Git label pixel Clean.bsl
+PASS shades-of-purple painted Git label pixel Ignored.log
+PASS shades-of-purple Git theming preserves BSL source and font
+PASS noctis-minimus Git explicit UncommittedChangeBackgroundColor
+PASS noctis-minimus Git registry UncommittedChangeBackgroundColor actual=RGB {27, 41, 50}
+PASS noctis-minimus Git explicit UncommittedChangeForegroundColor
+PASS noctis-minimus Git registry UncommittedChangeForegroundColor actual=RGB {89, 152, 192}
+PASS noctis-minimus Git explicit IgnoredResourceBackgroundColor
+PASS noctis-minimus Git registry IgnoredResourceBackgroundColor actual=RGB {27, 41, 50}
+PASS noctis-minimus Git explicit IgnoredResourceForegroundColor
+PASS noctis-minimus Git registry IgnoredResourceForegroundColor actual=RGB {100, 150, 180}
+PASS noctis-minimus Git Tree background
+PASS noctis-minimus Git label background ThemeGitProbe actual=RGB {27, 41, 50}
+PASS noctis-minimus Git label background Modified.bsl actual=RGB {27, 41, 50}
+PASS noctis-minimus actual EGit modified foreground
+PASS noctis-minimus Git label background Clean.bsl actual=RGB {27, 41, 50}
+PASS noctis-minimus Git label background Ignored.log actual=RGB {27, 41, 50}
+PASS noctis-minimus actual EGit ignored foreground
+PASS noctis-minimus painted Git label pixel > ThemeGitProbe [ThemeGitProbe master]
+PASS noctis-minimus painted Git label pixel > Modified.bsl
+PASS noctis-minimus painted Git label pixel Clean.bsl
+PASS noctis-minimus painted Git label pixel Ignored.log
+PASS noctis-minimus Git theming preserves BSL source and font
+PASS visual-studio-dark-cpp Git explicit UncommittedChangeBackgroundColor
+PASS visual-studio-dark-cpp Git registry UncommittedChangeBackgroundColor actual=RGB {30, 30, 30}
+PASS visual-studio-dark-cpp Git explicit UncommittedChangeForegroundColor
+PASS visual-studio-dark-cpp Git registry UncommittedChangeForegroundColor actual=RGB {0, 122, 204}
+PASS visual-studio-dark-cpp Git explicit IgnoredResourceBackgroundColor
+PASS visual-studio-dark-cpp Git registry IgnoredResourceBackgroundColor actual=RGB {30, 30, 30}
+PASS visual-studio-dark-cpp Git explicit IgnoredResourceForegroundColor
+PASS visual-studio-dark-cpp Git registry IgnoredResourceForegroundColor actual=RGB {166, 166, 166}
+PASS visual-studio-dark-cpp Git Tree background
+PASS visual-studio-dark-cpp Git label background ThemeGitProbe actual=RGB {30, 30, 30}
+PASS visual-studio-dark-cpp Git label background Modified.bsl actual=RGB {30, 30, 30}
+PASS visual-studio-dark-cpp actual EGit modified foreground
+PASS visual-studio-dark-cpp Git label background Clean.bsl actual=RGB {30, 30, 30}
+PASS visual-studio-dark-cpp Git label background Ignored.log actual=RGB {30, 30, 30}
+PASS visual-studio-dark-cpp actual EGit ignored foreground
+PASS visual-studio-dark-cpp painted Git label pixel > ThemeGitProbe [ThemeGitProbe master]
+PASS visual-studio-dark-cpp painted Git label pixel > Modified.bsl
+PASS visual-studio-dark-cpp painted Git label pixel Clean.bsl
+PASS visual-studio-dark-cpp painted Git label pixel Ignored.log
+PASS visual-studio-dark-cpp Git theming preserves BSL source and font
+PASS github-light-default Git explicit UncommittedChangeBackgroundColor
+PASS github-light-default Git registry UncommittedChangeBackgroundColor actual=RGB {255, 255, 255}
+PASS github-light-default Git explicit UncommittedChangeForegroundColor
+PASS github-light-default Git registry UncommittedChangeForegroundColor actual=RGB {9, 105, 218}
+PASS github-light-default Git explicit IgnoredResourceBackgroundColor
+PASS github-light-default Git registry IgnoredResourceBackgroundColor actual=RGB {255, 255, 255}
+PASS github-light-default Git explicit IgnoredResourceForegroundColor
+PASS github-light-default Git registry IgnoredResourceForegroundColor actual=RGB {101, 109, 118}
+PASS github-light-default Git Tree background
+PASS github-light-default Git label background ThemeGitProbe actual=RGB {255, 255, 255}
+PASS github-light-default Git label background Modified.bsl actual=RGB {255, 255, 255}
+PASS github-light-default actual EGit modified foreground
+PASS github-light-default Git label background Clean.bsl actual=RGB {255, 255, 255}
+PASS github-light-default Git label background Ignored.log actual=RGB {255, 255, 255}
+PASS github-light-default actual EGit ignored foreground
+PASS github-light-default painted Git label pixel > ThemeGitProbe [ThemeGitProbe master]
+PASS github-light-default painted Git label pixel > Modified.bsl
+PASS github-light-default painted Git label pixel Clean.bsl
+PASS github-light-default painted Git label pixel Ignored.log
+PASS github-light-default Git theming preserves BSL source and font
+PASS winter-is-coming-light Git explicit UncommittedChangeBackgroundColor
+PASS winter-is-coming-light Git registry UncommittedChangeBackgroundColor actual=RGB {255, 255, 255}
+PASS winter-is-coming-light Git explicit UncommittedChangeForegroundColor
+PASS winter-is-coming-light Git registry UncommittedChangeForegroundColor actual=RGB {35, 110, 191}
+PASS winter-is-coming-light Git explicit IgnoredResourceBackgroundColor
+PASS winter-is-coming-light Git registry IgnoredResourceBackgroundColor actual=RGB {255, 255, 255}
+PASS winter-is-coming-light Git explicit IgnoredResourceForegroundColor
+PASS winter-is-coming-light Git registry IgnoredResourceForegroundColor actual=RGB {35, 110, 191}
+PASS winter-is-coming-light Git Tree background
+PASS winter-is-coming-light Git label background ThemeGitProbe actual=RGB {255, 255, 255}
+PASS winter-is-coming-light Git label background Modified.bsl actual=RGB {255, 255, 255}
+PASS winter-is-coming-light actual EGit modified foreground
+PASS winter-is-coming-light Git label background Clean.bsl actual=RGB {255, 255, 255}
+PASS winter-is-coming-light Git label background Ignored.log actual=RGB {255, 255, 255}
+PASS winter-is-coming-light actual EGit ignored foreground
+PASS winter-is-coming-light painted Git label pixel > ThemeGitProbe [ThemeGitProbe master]
+PASS winter-is-coming-light painted Git label pixel > Modified.bsl
+PASS winter-is-coming-light painted Git label pixel Clean.bsl
+PASS winter-is-coming-light painted Git label pixel Ignored.log
+PASS winter-is-coming-light Git theming preserves BSL source and font
+PASS night-owl-light Git explicit UncommittedChangeBackgroundColor
+PASS night-owl-light Git registry UncommittedChangeBackgroundColor actual=RGB {251, 251, 251}
+PASS night-owl-light Git explicit UncommittedChangeForegroundColor
+PASS night-owl-light Git registry UncommittedChangeForegroundColor actual=RGB {61, 104, 196}
+PASS night-owl-light Git explicit IgnoredResourceBackgroundColor
+PASS night-owl-light Git registry IgnoredResourceBackgroundColor actual=RGB {251, 251, 251}
+PASS night-owl-light Git explicit IgnoredResourceForegroundColor
+PASS night-owl-light Git registry IgnoredResourceForegroundColor actual=RGB {101, 109, 126}
+PASS night-owl-light Git Tree background
+PASS night-owl-light Git label background ThemeGitProbe actual=RGB {251, 251, 251}
+PASS night-owl-light Git label background Modified.bsl actual=RGB {251, 251, 251}
+PASS night-owl-light actual EGit modified foreground
+PASS night-owl-light Git label background Clean.bsl actual=RGB {251, 251, 251}
+PASS night-owl-light Git label background Ignored.log actual=RGB {251, 251, 251}
+PASS night-owl-light actual EGit ignored foreground
+PASS night-owl-light painted Git label pixel > ThemeGitProbe [ThemeGitProbe master]
+PASS night-owl-light painted Git label pixel > Modified.bsl
+PASS night-owl-light painted Git label pixel Clean.bsl
+PASS night-owl-light painted Git label pixel Ignored.log
+PASS night-owl-light Git theming preserves BSL source and font
+PASS ayu-light Git explicit UncommittedChangeBackgroundColor
+PASS ayu-light Git registry UncommittedChangeBackgroundColor actual=RGB {252, 252, 252}
+PASS ayu-light Git explicit UncommittedChangeForegroundColor
+PASS ayu-light Git registry UncommittedChangeForegroundColor actual=RGB {153, 96, 15}
+PASS ayu-light Git explicit IgnoredResourceBackgroundColor
+PASS ayu-light Git registry IgnoredResourceBackgroundColor actual=RGB {252, 252, 252}
+PASS ayu-light Git explicit IgnoredResourceForegroundColor
+PASS ayu-light Git registry IgnoredResourceForegroundColor actual=RGB {108, 108, 110}
+PASS ayu-light Git Tree background
+PASS ayu-light Git label background ThemeGitProbe actual=RGB {252, 252, 252}
+PASS ayu-light Git label background Modified.bsl actual=RGB {252, 252, 252}
+PASS ayu-light actual EGit modified foreground
+PASS ayu-light Git label background Clean.bsl actual=RGB {252, 252, 252}
+PASS ayu-light Git label background Ignored.log actual=RGB {252, 252, 252}
+PASS ayu-light actual EGit ignored foreground
+PASS ayu-light painted Git label pixel > ThemeGitProbe [ThemeGitProbe master]
+PASS ayu-light painted Git label pixel > Modified.bsl
+PASS ayu-light painted Git label pixel Clean.bsl
+PASS ayu-light painted Git label pixel Ignored.log
+PASS ayu-light Git theming preserves BSL source and font
+PASS noctis-lux Git explicit UncommittedChangeBackgroundColor
+PASS noctis-lux Git registry UncommittedChangeBackgroundColor actual=RGB {254, 248, 236}
+PASS noctis-lux Git explicit UncommittedChangeForegroundColor
+PASS noctis-lux Git registry UncommittedChangeForegroundColor actual=RGB {0, 115, 131}
+PASS noctis-lux Git explicit IgnoredResourceBackgroundColor
+PASS noctis-lux Git registry IgnoredResourceBackgroundColor actual=RGB {254, 248, 236}
+PASS noctis-lux Git explicit IgnoredResourceForegroundColor
+PASS noctis-lux Git registry IgnoredResourceForegroundColor actual=RGB {91, 107, 107}
+PASS noctis-lux Git Tree background
+PASS noctis-lux Git label background ThemeGitProbe actual=RGB {254, 248, 236}
+PASS noctis-lux Git label background Modified.bsl actual=RGB {254, 248, 236}
+PASS noctis-lux actual EGit modified foreground
+PASS noctis-lux Git label background Clean.bsl actual=RGB {254, 248, 236}
+PASS noctis-lux Git label background Ignored.log actual=RGB {254, 248, 236}
+PASS noctis-lux actual EGit ignored foreground
+PASS noctis-lux painted Git label pixel > ThemeGitProbe [ThemeGitProbe master]
+PASS noctis-lux painted Git label pixel > Modified.bsl
+PASS noctis-lux painted Git label pixel Clean.bsl
+PASS noctis-lux painted Git label pixel Ignored.log
+PASS noctis-lux Git theming preserves BSL source and font
+PASS visual-studio-light-cpp Git explicit UncommittedChangeBackgroundColor
+PASS visual-studio-light-cpp Git registry UncommittedChangeBackgroundColor actual=RGB {255, 255, 255}
+PASS visual-studio-light-cpp Git explicit UncommittedChangeForegroundColor
+PASS visual-studio-light-cpp Git registry UncommittedChangeForegroundColor actual=RGB {0, 108, 180}
+PASS visual-studio-light-cpp Git explicit IgnoredResourceBackgroundColor
+PASS visual-studio-light-cpp Git registry IgnoredResourceBackgroundColor actual=RGB {255, 255, 255}
+PASS visual-studio-light-cpp Git explicit IgnoredResourceForegroundColor
+PASS visual-studio-light-cpp Git registry IgnoredResourceForegroundColor actual=RGB {34, 113, 137}
+PASS visual-studio-light-cpp Git Tree background
+PASS visual-studio-light-cpp Git label background ThemeGitProbe actual=RGB {255, 255, 255}
+PASS visual-studio-light-cpp Git label background Modified.bsl actual=RGB {255, 255, 255}
+PASS visual-studio-light-cpp actual EGit modified foreground
+PASS visual-studio-light-cpp Git label background Clean.bsl actual=RGB {255, 255, 255}
+PASS visual-studio-light-cpp Git label background Ignored.log actual=RGB {255, 255, 255}
+PASS visual-studio-light-cpp actual EGit ignored foreground
+PASS visual-studio-light-cpp painted Git label pixel > ThemeGitProbe [ThemeGitProbe master]
+PASS visual-studio-light-cpp painted Git label pixel > Modified.bsl
+PASS visual-studio-light-cpp painted Git label pixel Clean.bsl
+PASS visual-studio-light-cpp painted Git label pixel Ignored.log
+PASS visual-studio-light-cpp Git theming preserves BSL source and font
+PASS noctis-hibernus Git explicit UncommittedChangeBackgroundColor
+PASS noctis-hibernus Git registry UncommittedChangeBackgroundColor actual=RGB {244, 246, 246}
+PASS noctis-hibernus Git explicit UncommittedChangeForegroundColor
+PASS noctis-hibernus Git registry UncommittedChangeForegroundColor actual=RGB {0, 114, 130}
+PASS noctis-hibernus Git explicit IgnoredResourceBackgroundColor
+PASS noctis-hibernus Git registry IgnoredResourceBackgroundColor actual=RGB {244, 246, 246}
+PASS noctis-hibernus Git explicit IgnoredResourceForegroundColor
+PASS noctis-hibernus Git registry IgnoredResourceForegroundColor actual=RGB {90, 107, 107}
+PASS noctis-hibernus Git Tree background
+PASS noctis-hibernus Git label background ThemeGitProbe actual=RGB {244, 246, 246}
+PASS noctis-hibernus Git label background Modified.bsl actual=RGB {244, 246, 246}
+PASS noctis-hibernus actual EGit modified foreground
+PASS noctis-hibernus Git label background Clean.bsl actual=RGB {244, 246, 246}
+PASS noctis-hibernus Git label background Ignored.log actual=RGB {244, 246, 246}
+PASS noctis-hibernus actual EGit ignored foreground
+PASS noctis-hibernus painted Git label pixel > ThemeGitProbe [ThemeGitProbe master]
+PASS noctis-hibernus painted Git label pixel > Modified.bsl
+PASS noctis-hibernus painted Git label pixel Clean.bsl
+PASS noctis-hibernus painted Git label pixel Ignored.log
+PASS noctis-hibernus Git theming preserves BSL source and font
+PASS noctis-lilac Git explicit UncommittedChangeBackgroundColor
+PASS noctis-lilac Git registry UncommittedChangeBackgroundColor actual=RGB {242, 241, 248}
+PASS noctis-lilac Git explicit UncommittedChangeForegroundColor
+PASS noctis-lilac Git registry UncommittedChangeForegroundColor actual=RGB {0, 107, 121}
+PASS noctis-lilac Git explicit IgnoredResourceBackgroundColor
+PASS noctis-lilac Git registry IgnoredResourceBackgroundColor actual=RGB {242, 241, 248}
+PASS noctis-lilac Git explicit IgnoredResourceForegroundColor
+PASS noctis-lilac Git registry IgnoredResourceForegroundColor actual=RGB {97, 94, 116}
+PASS noctis-lilac Git Tree background
+PASS noctis-lilac Git label background ThemeGitProbe actual=RGB {242, 241, 248}
+PASS noctis-lilac Git label background Modified.bsl actual=RGB {242, 241, 248}
+PASS noctis-lilac actual EGit modified foreground
+PASS noctis-lilac Git label background Clean.bsl actual=RGB {242, 241, 248}
+PASS noctis-lilac Git label background Ignored.log actual=RGB {242, 241, 248}
+PASS noctis-lilac actual EGit ignored foreground
+PASS noctis-lilac painted Git label pixel > ThemeGitProbe [ThemeGitProbe master]
+PASS noctis-lilac painted Git label pixel > Modified.bsl
+PASS noctis-lilac painted Git label pixel Clean.bsl
+PASS noctis-lilac painted Git label pixel Ignored.log
+PASS noctis-lilac Git theming preserves BSL source and font
+PASS github-light-default Git explicit UncommittedChangeBackgroundColor
+PASS github-light-default Git registry UncommittedChangeBackgroundColor actual=RGB {241, 245, 233}
+PASS github-light-default Git explicit UncommittedChangeForegroundColor
+PASS github-light-default Git registry UncommittedChangeForegroundColor actual=RGB {9, 105, 218}
+PASS github-light-default Git explicit IgnoredResourceBackgroundColor
+PASS github-light-default Git registry IgnoredResourceBackgroundColor actual=RGB {241, 245, 233}
+PASS github-light-default Git explicit IgnoredResourceForegroundColor
+PASS github-light-default Git registry IgnoredResourceForegroundColor actual=RGB {101, 109, 118}
+PASS github-light-default Git Tree background
+PASS github-light-default Git label background ThemeGitProbe actual=RGB {241, 245, 233}
+PASS github-light-default Git label background Modified.bsl actual=RGB {241, 245, 233}
+PASS github-light-default actual EGit modified foreground
+PASS github-light-default Git label background Clean.bsl actual=RGB {241, 245, 233}
+PASS github-light-default Git label background Ignored.log actual=RGB {241, 245, 233}
+PASS github-light-default actual EGit ignored foreground
+PASS github-light-default painted Git label pixel > ThemeGitProbe [ThemeGitProbe master]
+PASS github-light-default painted Git label pixel > Modified.bsl
+PASS github-light-default painted Git label pixel Clean.bsl
+PASS github-light-default painted Git label pixel Ignored.log
+PASS github-light-default Git explicit UncommittedChangeBackgroundColor
+PASS github-light-default Git registry UncommittedChangeBackgroundColor actual=RGB {255, 255, 255}
+PASS github-light-default Git explicit UncommittedChangeForegroundColor
+PASS github-light-default Git registry UncommittedChangeForegroundColor actual=RGB {9, 105, 218}
+PASS github-light-default Git explicit IgnoredResourceBackgroundColor
+PASS github-light-default Git registry IgnoredResourceBackgroundColor actual=RGB {255, 255, 255}
+PASS github-light-default Git explicit IgnoredResourceForegroundColor
+PASS github-light-default Git registry IgnoredResourceForegroundColor actual=RGB {101, 109, 118}
+PASS github-light-default Git Tree background
+PASS github-light-default Git label background ThemeGitProbe actual=RGB {255, 255, 255}
+PASS github-light-default Git label background Modified.bsl actual=RGB {255, 255, 255}
+PASS github-light-default actual EGit modified foreground
+PASS github-light-default Git label background Clean.bsl actual=RGB {255, 255, 255}
+PASS github-light-default Git label background Ignored.log actual=RGB {255, 255, 255}
+PASS github-light-default actual EGit ignored foreground
+PASS github-light-default painted Git label pixel > ThemeGitProbe [ThemeGitProbe master]
+PASS github-light-default painted Git label pixel > Modified.bsl
+PASS github-light-default painted Git label pixel Clean.bsl
+PASS github-light-default painted Git label pixel Ignored.log
+PASS Git later manual label color preserved
+PASS monokai Git explicit UncommittedChangeBackgroundColor
+PASS monokai Git registry UncommittedChangeBackgroundColor actual=RGB {39, 40, 34}
+PASS monokai Git explicit UncommittedChangeForegroundColor
+PASS monokai Git registry UncommittedChangeForegroundColor actual=RGB {111, 208, 224}
+PASS monokai Git explicit IgnoredResourceBackgroundColor
+PASS monokai Git registry IgnoredResourceBackgroundColor actual=RGB {39, 40, 34}
+PASS monokai Git explicit IgnoredResourceForegroundColor
+PASS monokai Git registry IgnoredResourceForegroundColor actual=RGB {138, 135, 120}
+PASS monokai Git Tree background
+PASS monokai Git label background ThemeGitProbe actual=RGB {39, 40, 34}
+PASS monokai Git label background Modified.bsl actual=RGB {39, 40, 34}
+PASS monokai actual EGit modified foreground
+PASS monokai Git label background Clean.bsl actual=RGB {39, 40, 34}
+PASS monokai Git label background Ignored.log actual=RGB {39, 40, 34}
+PASS monokai actual EGit ignored foreground
+PASS monokai painted Git label pixel > ThemeGitProbe [ThemeGitProbe master]
+PASS monokai painted Git label pixel > Modified.bsl
+PASS monokai painted Git label pixel Clean.bsl
+PASS monokai painted Git label pixel Ignored.log
+PASS monokai Git explicit UncommittedChangeBackgroundColor
+PASS monokai Git registry UncommittedChangeBackgroundColor actual=RGB {39, 40, 34}
+PASS monokai Git explicit UncommittedChangeForegroundColor
+PASS monokai Git registry UncommittedChangeForegroundColor actual=RGB {102, 217, 239}
+PASS monokai Git explicit IgnoredResourceBackgroundColor
+PASS monokai Git registry IgnoredResourceBackgroundColor actual=RGB {39, 40, 34}
+PASS monokai Git explicit IgnoredResourceForegroundColor
+PASS monokai Git registry IgnoredResourceForegroundColor actual=RGB {138, 135, 120}
+PASS monokai Git Tree background
+PASS monokai Git label background ThemeGitProbe actual=RGB {39, 40, 34}
+PASS monokai Git label background Modified.bsl actual=RGB {39, 40, 34}
+PASS monokai actual EGit modified foreground
+PASS monokai Git label background Clean.bsl actual=RGB {39, 40, 34}
+PASS monokai Git label background Ignored.log actual=RGB {39, 40, 34}
+PASS monokai actual EGit ignored foreground
+PASS monokai painted Git label pixel > ThemeGitProbe [ThemeGitProbe master]
+PASS monokai painted Git label pixel > Modified.bsl
+PASS monokai painted Git label pixel Clean.bsl
+PASS monokai painted Git label pixel Ignored.log
+PASS Git personal roles clean and independent darcula
+PASS Git personal roles clean and independent monokai
+PASS Git personal roles clean and independent one-dark-pro
+PASS Git personal roles clean and independent dracula
+PASS Git personal roles clean and independent github-dark-default
+PASS Git personal roles clean and independent winter-is-coming-dark-blue
+PASS Git personal roles clean and independent night-owl
+PASS Git personal roles clean and independent ayu-dark
+PASS Git personal roles clean and independent shades-of-purple
+PASS Git personal roles clean and independent noctis-minimus
+PASS Git personal roles clean and independent visual-studio-dark-cpp
+PASS Git personal roles clean and independent github-light-default
+PASS Git personal roles clean and independent winter-is-coming-light
+PASS Git personal roles clean and independent night-owl-light
+PASS Git personal roles clean and independent ayu-light
+PASS Git personal roles clean and independent noctis-lux
+PASS Git personal roles clean and independent visual-studio-light-cpp
+PASS Git personal roles clean and independent noctis-hibernus
+PASS Git personal roles clean and independent noctis-lilac

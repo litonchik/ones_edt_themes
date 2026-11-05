@@ -12,13 +12,13 @@ MIT в корневом [LICENSE](LICENSE) относится к собстве�
 |---|---|
 | One Dark Pro | Binaryify/OneDark-Pro |
 | Dracula | dracula/visual-studio-code |
-| GitHub Dark Default | primer/github-vscode-theme и @primer/primitives |
-| Winter is Coming (Dark Blue) | johnpapa/vscode-winteriscoming |
-| Night Owl | sdras/night-owl-vscode-theme |
-| Ayu Dark (Bordered) | ayu-theme/vscode-ayu |
+| GitHub Dark Default / GitHub Light Default | primer/github-vscode-theme и @primer/primitives |
+| Winter is Coming (Dark Blue) и Winter is Coming (Light) | johnpapa/vscode-winteriscoming |
+| Night Owl / Night Owl Light | sdras/night-owl-vscode-theme |
+| Ayu Dark (Bordered) / Ayu Light (Bordered) | ayu-theme/vscode-ayu |
 | Shades of Purple | ahmadawais/shades-of-purple-vscode |
-| Noctis Minimus | liviuschera/noctis |
-| Visual Studio Dark (C/C++) | microsoft/vscode-cpptools, Themes/LICENSE.txt |
+| Noctis Minimus / Noctis Lux / Noctis Hibernus / Noctis Lilac | liviuschera/noctis |
+| Visual Studio Dark / Light (C/C++) | microsoft/vscode-cpptools, Themes/LICENSE.txt |
 
 Для этих источников включены их MIT notices. Начальные Darcula и Monokai —
 профили MVP; их исходное исследование и карта цветов сохранены в

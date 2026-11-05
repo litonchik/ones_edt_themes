@@ -1,0 +1,100 @@
+{
+  "roles": {
+    "editor.background": "#FCFCFC",
+    "text": "#5C6166",
+    "panel": "#F8F9FA",
+    "border": "#E7EAED",
+    "selection.background": "#D7E4F6",
+    "selection.text": "#5C6166",
+    "line": "#F0F1F3",
+    "comment": "#6C6C6E",
+    "keyword": "#A65821",
+    "string": "#597600",
+    "number": "#7F5F9E",
+    "accent": "#99600F",
+    "error": "#C54545",
+    "warning": "#99600F",
+    "directive": "#A65821",
+    "disabled": "#6C6C6E",
+    "hover": "#FAFAFA"
+  },
+  "adaptations": {
+    "text": {
+      "source": "#5C6166",
+      "adapted": "#5C6166",
+      "contrasts": {
+        "#FCFCFC": 6.098,
+        "#F0F1F3": 5.535,
+        "#FAFAFA": 5.994
+      },
+      "source_on_line": 5.535
+    },
+    "comment": {
+      "source": "#ADAEB1",
+      "adapted": "#6C6C6E",
+      "contrasts": {
+        "#FCFCFC": 5.107,
+        "#F0F1F3": 4.636,
+        "#FAFAFA": 5.02
+      },
+      "source_on_line": 1.963
+    },
+    "keyword": {
+      "source": "#FA8532",
+      "adapted": "#A65821",
+      "contrasts": {
+        "#FCFCFC": 5.068,
+        "#F0F1F3": 4.6,
+        "#FAFAFA": 4.981
+      },
+      "source_on_line": 2.195
+    },
+    "string": {
+      "source": "#86B300",
+      "adapted": "#597600",
+      "contrasts": {
+        "#FCFCFC": 5.097,
+        "#F0F1F3": 4.627,
+        "#FAFAFA": 5.01
+      },
+      "source_on_line": 2.196
+    },
+    "number": {
+      "source": "#A37ACC",
+      "adapted": "#7F5F9E",
+      "contrasts": {
+        "#FCFCFC": 5.075,
+        "#F0F1F3": 4.607,
+        "#FAFAFA": 4.989
+      },
+      "source_on_line": 2.991
+    },
+    "accent": {
+      "source": "#F29718",
+      "adapted": "#99600F",
+      "contrasts": {
+        "#FCFCFC": 5.073,
+        "#F0F1F3": 4.606,
+        "#FAFAFA": 4.987
+      },
+      "source_on_line": 2.016
+    },
+    "error": {
+      "source": "#E65050",
+      "adapted": "#C54545",
+      "contrasts": {
+        "#F8F9FA": 4.621
+      },
+      "source_on_line": 3.302
+    },
+    "warning": {
+      "source": "#F29718",
+      "adapted": "#99600F",
+      "contrasts": {
+        "#F8F9FA": 4.938
+      },
+      "source_on_line": 2.016
+    }
+  },
+  "selection_contrast": 4.861
+}

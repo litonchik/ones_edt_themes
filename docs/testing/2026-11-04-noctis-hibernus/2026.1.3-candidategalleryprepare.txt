@@ -1,0 +1,2 @@
+JVM 17.0.18
+PASS light gallery uses standard palette

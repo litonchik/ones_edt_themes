@@ -6,6 +6,7 @@
 - [История версий](../CHANGELOG.md).
 - [Совместимость и ограничения 0.1.16](testing/edt-2026-compatibility-validation.md).
 - [Первый публичный релиз 0.1.16](releases/0.1.16.md).
+- [GitHub Light Default и переключение светлых/тёмных тем 0.1.17](testing/github-light-validation.md).
 
 ## Для разработчика
 
@@ -38,3 +39,26 @@
 `handoff` — исторические передачи контекста. `superpowers/plans` сохраняет
 ранее согласованные планы; Superpowers отключён для проекта 14.10.2026.
 Для актуального состояния используйте README, CHANGELOG и последний отчёт проверки.
+
+- [Winter is Coming (Light): источники](research/2026-11-04-winter-light.md) и [проверки 0.1.18](testing/winter-light-validation.md).
+
+- [Night Owl Light: источники](research/2026-11-04-night-owl-light.md) и [проверки 0.1.19](testing/night-owl-light-validation.md).
+
+- [Ayu Light (Bordered): источники](research/2026-11-04-ayu-light.md) и [проверки 0.1.20](testing/ayu-light-validation.md).
+
+- [Noctis Lux: источники](research/2026-11-04-noctis-lux.md) и [проверки 0.1.21](testing/noctis-lux-validation.md).
+
+- [Светлые панели: механизм](reference/light-ui.md) и [проверки 0.1.22](testing/light-ui-validation.md).
+
+- [Фон нумерации: механизм](reference/editor-ruler.md) и [проверки 0.1.23](testing/editor-ruler-validation.md).
+
+- [Visual Studio Light (C/C++): источники](research/2026-11-04-visual-studio-light.md) и [проверки 0.1.24](testing/visual-studio-light-validation.md).
+
+- [Noctis Hibernus: источники](research/2026-11-04-noctis-hibernus.md) и [проверки 0.1.25](testing/noctis-hibernus-validation.md).
+
+- [Noctis Lilac: источники](research/2026-11-04-noctis-lilac.md) и [проверки 0.1.26](testing/noctis-lilac-validation.md).
+
+- [Git-подписи навигатора](reference/git-labels.md) и [проверка 0.1.27](testing/git-labels-validation.md).
+
+- [Выделение и Eclipse Forms](reference/selection-and-forms.md).
+- [Проверки исправления 0.1.28](testing/selection-validation.md).

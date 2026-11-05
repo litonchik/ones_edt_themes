@@ -1,0 +1,252 @@
+JVM 25.0.2
+PASS font preference page exists
+PASS font size selector exists
+PASS theme preference page renders profile, font and palette controls
+PASS BSL editor opened on test fixture
+PASS surfaces BSL fixture
+PASS sample.txt native text viewer
+OBS sample.txt bg=RGB {30, 30, 30} fg=RGB {218, 218, 218} token=ВЫБРАТЬ color=RGB {218, 218, 218}
+PASS safe capture visible control intersection: surface-sample.txt
+PASS sample.ql native text viewer
+QUERY SOURCE // Комментарий
+ВЫБРАТЬ ПЕРВЫЕ 123
+    Тест.Поле КАК Текст
+ИЗ Справочник.Тест КАК Тест
+ГДЕ Тест.Поле ПОДОБНО "строка"
+    И Тест.Поле = &Параметр
+QUERY CALCULATORS legacy=com._1c.g5.v8.dt.ql.ui.syntaxcoloring.QlSemanticHighlightingCalculator modern=org.eclipse.xtext.ide.editor.syntaxcoloring.DefaultSemanticHighlightingCalculator language=com._1c.g5.v8.dt.ql.Ql
+QUERY NUMBER NODE 123 grammar=NUMBER
+OBS query initial number bg=RGB {30, 30, 30} fg=RGB {218, 218, 218} token=123 color=RGB {218, 218, 218}
+OBS query initial string bg=RGB {30, 30, 30} fg=RGB {218, 218, 218} token=строка color=RGB {206, 145, 120}
+OBS sample.ql bg=RGB {30, 30, 30} fg=RGB {218, 218, 218} token=ВЫБРАТЬ color=RGB {86, 156, 214}
+PASS safe capture visible control intersection: surface-sample.ql
+PASS sample.qldcs native text viewer
+OBS sample.qldcs bg=RGB {30, 30, 30} fg=RGB {218, 218, 218} token=ВЫБРАТЬ color=RGB {86, 156, 214}
+PASS safe capture visible control intersection: surface-sample.qldcs
+PASS query constructor QL and DCS real embedded text controls
+OBS constructor-0 bg=RGB {30, 30, 30} fg=RGB {218, 218, 218} token=ВЫБРАТЬ color=RGB {86, 156, 214}
+OBS constructor-1 bg=RGB {30, 30, 30} fg=RGB {218, 218, 218} token=ВЫБРАТЬ color=RGB {86, 156, 214}
+OBS candidate state visual-studio-light-cpp native=org.eclipse.e4.ui.css.theme.e4_default
+OBS candidate settled query 0 bg=RGB {255, 255, 255} fg=RGB {0, 0, 0} token=ВЫБРАТЬ color=RGB {0, 0, 255}
+OBS candidate settled query 1 bg=RGB {255, 255, 255} fg=RGB {0, 0, 0} token=ВЫБРАТЬ color=RGB {0, 0, 255}
+OBS candidate settled query 2 bg=RGB {255, 255, 255} fg=RGB {0, 0, 0} token=ВЫБРАТЬ color=RGB {0, 0, 255}
+OBS candidate settled query 3 bg=RGB {255, 255, 255} fg=RGB {0, 0, 0} token=ВЫБРАТЬ color=RGB {0, 0, 255}
+PASS visual-studio-light-cpp query surface 0 background
+PASS visual-studio-light-cpp query surface 0 foreground
+PASS visual-studio-light-cpp query surface 0 selection background expected=RGB {173, 214, 255} actual=RGB {173, 214, 255}
+PASS visual-studio-light-cpp query surface 0 selection foreground expected=RGB {0, 0, 0} actual=RGB {0, 0, 0}
+PASS visual-studio-light-cpp query surface 0 keyword
+PASS visual-studio-light-cpp query surface 0 native NUMBER text role expected=RGB {0, 0, 0} actual=RGB {0, 0, 0}
+PASS visual-studio-light-cpp query surface 0 string expected=RGB {163, 21, 21} actual=RGB {163, 21, 21}
+PASS visual-studio-light-cpp query surface 0 comment expected=RGB {0, 122, 0} actual=RGB {0, 122, 0}
+PASS visual-studio-light-cpp query surface 0 parameter expected=RGB {138, 27, 255} actual=RGB {138, 27, 255}
+PASS visual-studio-light-cpp query surface 0 identifier expected=RGB {0, 0, 0} actual=RGB {0, 0, 0}
+PASS visual-studio-light-cpp query surface 0 source unchanged
+PASS visual-studio-light-cpp query surface 1 background
+PASS visual-studio-light-cpp query surface 1 foreground
+PASS visual-studio-light-cpp query surface 1 selection background expected=RGB {173, 214, 255} actual=RGB {173, 214, 255}
+PASS visual-studio-light-cpp query surface 1 selection foreground expected=RGB {0, 0, 0} actual=RGB {0, 0, 0}
+PASS visual-studio-light-cpp query surface 1 keyword
+PASS visual-studio-light-cpp query surface 1 native NUMBER text role expected=RGB {0, 0, 0} actual=RGB {0, 0, 0}
+PASS visual-studio-light-cpp query surface 1 string expected=RGB {163, 21, 21} actual=RGB {163, 21, 21}
+PASS visual-studio-light-cpp query surface 1 comment expected=RGB {0, 122, 0} actual=RGB {0, 122, 0}
+PASS visual-studio-light-cpp query surface 1 parameter expected=RGB {138, 27, 255} actual=RGB {138, 27, 255}
+PASS visual-studio-light-cpp query surface 1 identifier expected=RGB {0, 0, 0} actual=RGB {0, 0, 0}
+PASS visual-studio-light-cpp query surface 1 source unchanged
+PASS visual-studio-light-cpp query surface 2 background
+PASS visual-studio-light-cpp query surface 2 foreground
+PASS visual-studio-light-cpp query surface 2 selection background expected=RGB {173, 214, 255} actual=RGB {173, 214, 255}
+PASS visual-studio-light-cpp query surface 2 selection foreground expected=RGB {0, 0, 0} actual=RGB {0, 0, 0}
+PASS visual-studio-light-cpp query surface 2 keyword
+PASS visual-studio-light-cpp query surface 2 native NUMBER text role expected=RGB {0, 0, 0} actual=RGB {0, 0, 0}
+PASS visual-studio-light-cpp query surface 2 string expected=RGB {163, 21, 21} actual=RGB {163, 21, 21}
+PASS visual-studio-light-cpp query surface 2 comment expected=RGB {0, 122, 0} actual=RGB {0, 122, 0}
+PASS visual-studio-light-cpp query surface 2 parameter expected=RGB {138, 27, 255} actual=RGB {138, 27, 255}
+PASS visual-studio-light-cpp query surface 2 identifier expected=RGB {0, 0, 0} actual=RGB {0, 0, 0}
+PASS visual-studio-light-cpp query surface 2 source unchanged
+PASS visual-studio-light-cpp query surface 3 background
+PASS visual-studio-light-cpp query surface 3 foreground
+PASS visual-studio-light-cpp query surface 3 selection background expected=RGB {173, 214, 255} actual=RGB {173, 214, 255}
+PASS visual-studio-light-cpp query surface 3 selection foreground expected=RGB {0, 0, 0} actual=RGB {0, 0, 0}
+PASS visual-studio-light-cpp query surface 3 keyword
+PASS visual-studio-light-cpp query surface 3 native NUMBER text role expected=RGB {0, 0, 0} actual=RGB {0, 0, 0}
+PASS visual-studio-light-cpp query surface 3 string expected=RGB {163, 21, 21} actual=RGB {163, 21, 21}
+PASS visual-studio-light-cpp query surface 3 comment expected=RGB {0, 122, 0} actual=RGB {0, 122, 0}
+PASS visual-studio-light-cpp query surface 3 parameter expected=RGB {138, 27, 255} actual=RGB {138, 27, 255}
+PASS visual-studio-light-cpp query surface 3 identifier expected=RGB {0, 0, 0} actual=RGB {0, 0, 0}
+PASS visual-studio-light-cpp query surface 3 source unchanged
+PASS registered EDT BSL merge viewer factory
+PASS merge uses real editor site for native Xtext panes
+OBS EDT merge-0 bg=RGB {30, 30, 30} fg=RGB {218, 218, 218} token=Процедура color=RGB {86, 156, 214}
+PASS EDT merge pane 0 palette background
+PASS EDT merge pane 0 palette keyword
+OBS EDT merge-1 bg=RGB {30, 30, 30} fg=RGB {218, 218, 218} token=Процедура color=RGB {86, 156, 214}
+PASS EDT merge pane 1 palette background
+PASS EDT merge pane 1 palette keyword
+OBS EDT merge-2 bg=RGB {30, 30, 30} fg=RGB {218, 218, 218} token=Процедура color=RGB {86, 156, 214}
+PASS EDT merge pane 2 palette background
+PASS EDT merge pane 2 palette keyword
+PASS EDT comparison and merge shows at least three real BSL panes
+OBS existing merge after mode switch bg=RGB {255, 255, 255} fg=RGB {0, 0, 0} token=Процедура color=RGB {86, 156, 214}
+PASS existing merge source unchanged by mode switch
+OBS existing merge after mode switch bg=RGB {255, 255, 255} fg=RGB {0, 0, 0} token=Процедура color=RGB {86, 156, 214}
+PASS existing merge source unchanged by mode switch
+OBS existing merge after mode switch bg=RGB {255, 255, 255} fg=RGB {0, 0, 0} token=Процедура color=RGB {86, 156, 214}
+PASS existing merge source unchanged by mode switch
+PASS merge uses real editor site for native Xtext panes
+PASS Light merge pane 0 background
+OBS Light merge-0 bg=RGB {255, 255, 255} fg=RGB {0, 0, 0} token=Процедура color=RGB {0, 0, 255}
+PASS Light merge pane 0 keyword
+PASS reopened Light merge pane 0 shows expected fixture
+PASS Light merge pane 1 background
+OBS Light merge-1 bg=RGB {255, 255, 255} fg=RGB {0, 0, 0} token=Процедура color=RGB {0, 0, 255}
+PASS Light merge pane 1 keyword
+PASS reopened Light merge pane 1 shows expected fixture
+PASS Light merge pane 2 background
+OBS Light merge-2 bg=RGB {255, 255, 255} fg=RGB {0, 0, 0} token=Процедура color=RGB {0, 0, 255}
+PASS Light merge pane 2 keyword
+PASS reopened Light merge pane 2 shows expected fixture
+PASS Light merge shows three BSL panes
+PASS surfaces restore
+PASS surfaces restores exact original SettingKey[scope=theme, node=css, key=id]
+PASS surfaces restores exact original SettingKey[scope=theme, node=legacy, key=id]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Builtin function.color]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.BSL_Keywords.color]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Comment.color]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Operators.color]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Others.color]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Preprocessor.color]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Brackets.color]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Strings.color]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Numbers.color]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.console, key=org.eclipse.ui.console.P_BACKGROUND_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.console, key=org.eclipse.ui.console.P_STREAM_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Background]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Foreground]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionBackground]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionForeground]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.editors, key=currentLineColor]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.editors, key=lineNumberColor]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.editors, key=hyperlinkColor]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Background.SystemDefault]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Foreground.SystemDefault]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionBackground.SystemDefault]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionForeground.SystemDefault]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.editors, key=hyperlinkColor.SystemDefault]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.CONTENT_ASSIST_BACKGROUND_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.CONTENT_ASSIST_FOREGROUND_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.HOVER_BACKGROUND]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.HOVER_FOREGROUND]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.FORM_HEADING_ERROR_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.FORM_HEADING_WARNING_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.ql.ui, key=com._1c.g5.v8.dt.ql.Ql.syntaxColorer.tokenStyles.Ql_SplitterQuery.color]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.ql.ui, key=com._1c.g5.v8.dt.ql.Ql.syntaxColorer.tokenStyles.Ql_Keywords.color]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.ql.ui, key=com._1c.g5.v8.dt.ql.Ql.syntaxColorer.tokenStyles.Ql_Strings.color]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.ql.ui, key=com._1c.g5.v8.dt.ql.Ql.syntaxColorer.tokenStyles.Ql_Comment.color]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.ql.ui, key=com._1c.g5.v8.dt.ql.Ql.syntaxColorer.tokenStyles.Ql_Operators.color]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.ql.ui, key=com._1c.g5.v8.dt.ql.Ql.syntaxColorer.tokenStyles.Ql_Parameters.color]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.ql.ui, key=com._1c.g5.v8.dt.ql.Ql.syntaxColorer.tokenStyles.Ql_Function.color]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.ql.ui, key=com._1c.g5.v8.dt.ql.Ql.syntaxColorer.tokenStyles.Ql_Numbers.color]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.ql.ui, key=com._1c.g5.v8.dt.ql.Ql.syntaxColorer.tokenStyles.Ql_Others.color]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.ql.ui, key=com._1c.g5.v8.dt.ql.Ql.syntaxColorer.tokenStyles.Ql_Brackets.color]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.ql.dcs.ui, key=com._1c.g5.v8.dt.ql.dcs.QlDcs.syntaxColorer.tokenStyles.Brace.color]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.ql.dcs.ui, key=com._1c.g5.v8.dt.ql.dcs.QlDcs.syntaxColorer.tokenStyles.Ql_SplitterQuery.color]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.ql.dcs.ui, key=com._1c.g5.v8.dt.ql.dcs.QlDcs.syntaxColorer.tokenStyles.Ql_Keywords.color]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.ql.dcs.ui, key=com._1c.g5.v8.dt.ql.dcs.QlDcs.syntaxColorer.tokenStyles.Ql_Strings.color]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.ql.dcs.ui, key=com._1c.g5.v8.dt.ql.dcs.QlDcs.syntaxColorer.tokenStyles.Ql_Comment.color]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.ql.dcs.ui, key=com._1c.g5.v8.dt.ql.dcs.QlDcs.syntaxColorer.tokenStyles.Ql_Operators.color]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.ql.dcs.ui, key=com._1c.g5.v8.dt.ql.dcs.QlDcs.syntaxColorer.tokenStyles.Ql_Parameters.color]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.ql.dcs.ui, key=com._1c.g5.v8.dt.ql.dcs.QlDcs.syntaxColorer.tokenStyles.Ql_Function.color]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.ql.dcs.ui, key=com._1c.g5.v8.dt.ql.dcs.QlDcs.syntaxColorer.tokenStyles.Ql_Numbers.color]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.ql.dcs.ui, key=com._1c.g5.v8.dt.ql.dcs.QlDcs.syntaxColorer.tokenStyles.Ql_Others.color]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.ql.dcs.ui, key=com._1c.g5.v8.dt.ql.dcs.QlDcs.syntaxColorer.tokenStyles.Ql_Brackets.color]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_BG_START]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_BG_END]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_UNSELECTED_TABS_COLOR_START]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_UNSELECTED_TABS_COLOR_END]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_SELECTED_TEXT_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_UNSELECTED_TEXT_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.INACTIVE_TAB_SELECTED_TEXT_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.INACTIVE_TAB_UNSELECTED_TEXT_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR_ACCENT]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_ACCENT]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BORDER_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_TITLE]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR_TITLE]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.INACTIVE_PART_BACKGROUND_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_BACKGROUND_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_FOREGROUND_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_BORDER_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_BACKGROUND_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_FOREGROUND_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_BORDER_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_BACKGROUND_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_FOREGROUND_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_TREES_AND_TABLES]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.INFORMATION_BACKGROUND_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.INFORMATION_FOREGROUND_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.e4.ui.css.swt.theme, key=themeid]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=CONTENT_ASSIST_BACKGROUND_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=CONTENT_ASSIST_FOREGROUND_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.HOVER_BACKGROUND]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.HOVER_FOREGROUND]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.FORM_HEADING_ERROR_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.FORM_HEADING_WARNING_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_default.org.eclipse.ui.workbench.ACTIVE_TAB_BG_START]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_default.org.eclipse.ui.workbench.ACTIVE_TAB_BG_END]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_default.org.eclipse.ui.workbench.ACTIVE_UNSELECTED_TABS_COLOR_START]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_default.org.eclipse.ui.workbench.ACTIVE_UNSELECTED_TABS_COLOR_END]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.ACTIVE_TAB_SELECTED_TEXT_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.ACTIVE_TAB_UNSELECTED_TEXT_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.INACTIVE_TAB_SELECTED_TEXT_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.INACTIVE_TAB_UNSELECTED_TEXT_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR_ACCENT]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_default.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_ACCENT]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_default.com._1c.g5.v8.dt.theming.ui.BORDER_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_TITLE]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR_TITLE]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=com._1c.g5.v8.dt.theming.ui.INACTIVE_PART_BACKGROUND_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=com._1c.g5.v8.dt.theming.ui.CONTROLS_BACKGROUND_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=com._1c.g5.v8.dt.theming.ui.CONTROLS_FOREGROUND_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_BORDER_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_BACKGROUND_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_FOREGROUND_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_BORDER_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_BACKGROUND_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_FOREGROUND_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_TREES_AND_TABLES]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_default.com._1c.g5.v8.dt.theming.ui.INFORMATION_BACKGROUND_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_default.com._1c.g5.v8.dt.theming.ui.INFORMATION_FOREGROUND_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_ARROW_ACTIVE_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_ARROW_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_ARROW_HOVER_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_BUTTON_ACTIVE_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_BUTTON_HOVER_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_CORNER_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_THUMB_ACTIVE_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_THUMB_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_THUMB_HOVER_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_TRACK_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.FindScope]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.editors, key=printMarginColor]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=ACTIVE_HYPERLINK_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=CONFLICTING_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=COUNTER_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=DECORATIONS_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=EDITION_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=ERROR_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=HYPERLINK_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=INCOMING_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.jface.REVISION_NEWEST_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.jface.REVISION_OLDEST_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.search.ui.match.highlight]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.editors.rangeIndicatorColor]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.FORM_HEADING_INFO_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.INFORMATION_BACKGROUND]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.INFORMATION_FOREGROUND]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=OUTGOING_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=RESOLVED_COLOR]

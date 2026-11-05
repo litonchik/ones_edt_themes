@@ -7,7 +7,18 @@ import java.util.*;
 public final class NativeSettingsCatalog {
     private NativeSettingsCatalog() {}
     public static Map<SettingKey,OriginalValue> load() {
-        try (InputStream stream = NativeSettingsCatalog.class.getResourceAsStream("/resources/edt-2026.1-native-preferences.properties")) {
+        return read("/resources/edt-2026.1-native-preferences.properties");
+    }
+    public static Map<SettingKey,OriginalValue> load(ThemeMode mode) {
+        if (mode == ThemeMode.DARK) return load();
+        var values = new LinkedHashMap<SettingKey,OriginalValue>();
+        // Transient Dark CSS refresh also seeds these keys. Light must remove absent overrides.
+        load().keySet().forEach(key -> values.put(key,OriginalValue.absent()));
+        values.putAll(read("/resources/edt-2026.1-light-native-preferences.properties"));
+        return Collections.unmodifiableMap(values);
+    }
+    private static Map<SettingKey,OriginalValue> read(String resource) {
+        try (InputStream stream = NativeSettingsCatalog.class.getResourceAsStream(resource)) {
             if (stream == null) throw new IllegalArgumentException("Нет карты штатных цветовых preferences");
             Properties p = new Properties(); p.load(stream);
             var plan = new LinkedHashMap<SettingKey,OriginalValue>();

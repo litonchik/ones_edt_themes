@@ -1,0 +1,11 @@
+{
+  "bundle": "plugins/ru.litonchik.edt.themes_0.1.25.202611041604.jar",
+  "class_major": 61,
+  "classes": 43,
+  "changed_classes": [
+    "ru/litonchik/edt/themes/model/PaletteCatalog.class"
+  ],
+  "unchanged_previous_classes": 42,
+  "source_resources_and_plugin_xml_match": true,
+  "zip_sha256": "88f88d0ab6b3511adb452192a197b89038798e9146ada9670c5e39aac92d8d39"
+}

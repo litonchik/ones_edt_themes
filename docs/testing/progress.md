@@ -1,5 +1,30 @@
 # Журнал исполнения — docs/superpowers/plans/2026-10-13-edt-themes-mvp.md
 
+05.11.2026 пользователь разрешил push и выпуск 0.1.28 с публикацией p2-сайта
+через GitHub Pages. Это отменяет прежнее ожидание отмашки на публикацию.
+Для релиза используется проверенный ZIP 0.1.28.202611051018 без пересборки;
+публикация сайта выполняется существующим workflow из релизных вложений.
+Сводка публикации и HTTPS-проверок — `docs/testing/release-0.1.28-validation.md`.
+
+05.11.2026 пользователь подтвердил исправление 0.1.28 («теперь работает»).
+При переходе со светлой на тёмную основу потребовался перезапуск EDT;
+ОС/сборка отдельно не сообщены. В README и user-guide требование перезапуска
+после применения темы при переходе Light ↔ Dark вынесено в явное предупреждение.
+Это изменение документации: ZIP 0.1.28 сохранён, сборка/runtime повторно
+не запускались. Commit/push/release не выполнялись.
+
+05.11.2026 подготовлен локальный кандидат 0.1.28: исправлены активное,
+неактивное и множественное выделение Tree/Table и поля Eclipse Forms
+(реальные автор/коммиттер EGit Staging) для всех 19 тем. Публичные SWT API,
+защита IEditorPart, освобождение обработчиков/изображений и точный restore.
+116 unit tests, 8140 runtime PASS на трёх Windows EDT; проверены реальные
+пиксели, disabled, restart, позднее дерево и регрессия редакторов/Git.
+Из прежних classes изменён только LightUiStyles; 42 сохранены, добавлен
+FieldBackground. 19 палитр и ZIP 0.1.17–0.1.27 сохранены побайтово.
+Cleanup/Reconcile/Uninstall/Audit — PASS; базовые inventories и цели junction
+сохранены. Commit/push/release не выполнялись. Отчёт —
+`docs/testing/selection-validation.md`.
+
 13–14 октября 2026. Самостоятельное исполнение, без Git и субагентов по указанию пользователя.
 
 Pre-flight: Task 2 → 3: SettingKey/OriginalValue/SettingAccess совпадают; Task 3 → 4: apply/restore и снимок совместимы; Task 4 → 5: ID и BSL flag совпадают; Task 5 → 6: ZIP и проверка установки совпадают.
@@ -638,3 +663,175 @@ inventory совпал с исходным. Итоговый bundle побайт
 runtime. Архив dist/edt-themes-0.1.16.zip, история сборок сохранена.
 Рабочие EDT/workspace не менялись; subagents, установка дополнительного ПО,
 commit/push не выполнялись. Отчёт: edt-2026-compatibility-validation.md.
+## 04.11.2026 — 0.1.17: GitHub Light Default и группы палитр
+
+Добавлена только GitHub Light Default. На странице тем — radio-фильтр
+«Тёмные / Светлые», общие шрифт и черновики с прежними Apply/OK/Cancel.
+Одиннадцать прежних профилей, 17 ролей и personal keys сохранены.
+Light использует подтверждённые 8 CSS-scoped / 25 unscoped named colors
+и 10 native scrollbar preferences. Factory/readonly цвета восстанавливаются
+при старте. Native lexer/mapper и public presentation APIs обновляют также
+QL-комментарии, параметры и имена без правки документа. Concrete helper
+привязан для EmbeddedEditorFactory, интерфейс — для полных Xtext editors.
+
+85 unit tests; Tycho/ZIP verify и 6 publication tests — PASS.
+На Windows x64 EDT 2026.1.2+2 / 2026.1.3+25 (Java 17) и 2026.2.2+21
+(Java 25): 2749 runtime PASS, 0 FAIL. Проверены radio/черновики/HEX/Cancel,
+33 цвета после restart, шрифт, прежние personal keys, QL/DCS/embedded,
+BSL semantic calls и точный restore. Снято полное окно Light для README.
+
+Cleanup/Reconcile/p2 Uninstall/Audit завершены; 1257 / 1267 / 1234 базовых
+ID/версий сохранены. Bundle во всех трёх runtime побайтово совпал с ZIP:
+0.1.17.202611032309, 38 классов Java 17. Тестовый launcher открывает чистое
+окно, обходя скрытый limbo-контейнер сохранённой перспективы EDT 2026.1.2.
+
+После смены основы native SWT может требовать restart. Уже открытое BSL
+сравнение кеширует токены: новые цвета проверены после переоткрытия окна.
+Новая Mac-матрица, полный metadata wizard и прочие ручные сценарии не объявлены
+проверенными. Рабочие EDT/workspace не менялись. Commit/push/release не выполнялись.
+Отчёт: [GitHub Light validation](github-light-validation.md).
+
+## 04.11.2026 — 0.1.18: Winter is Coming (Light)
+
+04.11.2026 по следующему поручению пользователя подготовлен локальный кандидат
+0.1.18: добавлена только Winter is Coming (Light), вторая светлая палитра.
+Общий код сохранён: 37 из 38 Java-классов совпадают с 0.1.17; изменён реестр.
+89 unit tests и 1461 runtime PASS, 0 FAIL на тех же трёх Windows EDT.
+Проверены реальные BSL/QL/DCS/embedded/merge цвета, personal keys, restart,
+Cancel и restore; прежние 12 палитр и ZIP 0.1.17 побайтово сохранены.
+Cleanup/Reconcile/Uninstall/Audit завершены, базовые ID/версии сохранены.
+Архив содержит обе светлые темы для совместной локальной проверки пользователя.
+Commit/push/release не выполнялись. Отчёт — [Winter Light validation](winter-light-validation.md).
+
+## 04.11.2026 — 0.1.19: Night Owl Light
+
+04.11.2026 продолжена очередь светлых тем: локальный кандидат 0.1.19
+добавляет только Night Owl Light, третью светлую палитру. Прежние 13 палитр,
+personal keys, ZIP 0.1.17 / 0.1.18 сохранены побайтово. Исправлен сброс цветов
+Xtext viewers после Light CSS: читаются effective preferences без новых targets.
+Изменены реестр и XtextPresentationRefresh; прочие 34 из 38 классов
+совпадают с 0.1.18. 93 unit tests и 3285 runtime PASS,
+0 FAIL на Windows EDT 2026.1.2+2 / 2026.1.3+25 (Java 17), 2026.2.2+21 (Java 25).
+Проверены все 14 палитр в QL/DCS/embedded, BSL/merge, preview/Cancel/Apply,
+перезапуск, личные варианты, точный restore. Cleanup/Reconcile/Uninstall/Audit
+завершены, 1257 / 1267 / 1234 базовых ID/версий сохранены. Архив содержит
+все три светлые темы для совместной проверки пользователя. Commit/push/release
+не выполнялись. Отчёт — [Night Owl Light validation](night-owl-light-validation.md).
+
+## 04.11.2026 — 0.1.20: Ayu Light (Bordered)
+
+04.11.2026 по следующему поручению пользователя подготовлен локальный кандидат
+0.1.20: добавлена только Ayu Light (Bordered), четвёртая светлая палитра.
+Прежние 14 палитр, ZIP 0.1.17 / 0.1.18 / 0.1.19 сохранены побайтово;
+37 из 38 Java-классов совпадают с 0.1.19, изменён только реестр.
+97 unit tests и 1539 runtime PASS, 0 FAIL на Windows EDT 2026.1.2+2 /
+2026.1.3+25 (Java 17), 2026.2.2+21 (Java 25). Проверены BSL/QL/DCS/embedded/
+merge цвета, preview/Cancel/Apply, personal keys прежних тем, restart,
+ручной фон и точный restore. Cleanup/Reconcile/Uninstall/Audit завершены,
+1257 / 1267 / 1234 базовых ID/версий сохранены. Архив содержит четыре светлые
+темы для локальной проверки пользователя. Push явно запрещён до его отмашки;
+commit/push/release не выполнялись. Отчёт — [Ayu Light validation](ayu-light-validation.md).
+
+## 04.11.2026 — 0.1.21: Noctis Lux
+
+04.11.2026 по следующему поручению пользователя подготовлен локальный кандидат
+0.1.21: добавлена только Noctis Lux, пятая светлая палитра.
+Прежние 15 палитр, ZIP 0.1.17 / 0.1.18 / 0.1.19 / 0.1.20 сохранены побайтово;
+37 из 38 Java-классов совпадают с 0.1.20, изменён только реестр.
+101 unit tests и 1551 runtime PASS, 0 FAIL на Windows EDT 2026.1.2+2 /
+2026.1.3+25 (Java 17), 2026.2.2+21 (Java 25). Проверены BSL/QL/DCS/embedded/
+merge цвета, preview/Cancel/Apply, personal keys прежних тем, restart,
+ручной фон и точный restore. Cleanup/Reconcile/Uninstall/Audit завершены,
+1257 / 1267 / 1234 базовых ID/версий сохранены. Архив содержит пять светлых
+тем для локальной проверки пользователя. Push явно запрещён до его отмашки;
+commit/push/release не выполнялись. Отчёт — [Noctis Lux validation](noctis-lux-validation.md).
+
+
+## 04.11.2026 — 0.1.22, светлые панели
+
+По замечанию пользователя подтверждён пробел: прежние registry/editor проверки
+не проверяли реальные RGB обычных светлых панелей. Добавлены локальные inline
+стили SWT с HEX, реестр восстанавливается перед UI refresh; содержимое редакторов
+исключено. Исправлены поздние контролы, динамические CSS-классы и инициализация
+таблицы параметров на 2026.2.2. Основная матрица: 101 unit tests и 4581 runtime PASS
+(265 UI + 364 restart + 898 all surfaces на каждой из трёх EDT), 0 FAIL.
+Ещё 84 gallery PASS; все пять 884×581 PNG проверены по пикселям и обновлены
+без обработки. Все копии очищены и p2 Audit пройден; 1267/1257/1234 базовых entries,
+временные junction удалены, их цели сохранены. Поставляемый bundle
+`0.1.22.202611041303`, собственный ZIP major 61; p2-сайт подготовлен локально.
+Commit/push/release не выполнялись. Подробности и ограничения —
+[отчёт 0.1.22](light-ui-validation.md).
+
+
+## 04.11.2026 — 0.1.23, фон левой линейки
+
+Исправлен фон номеров и соседних колонок: обновление общего EditorsUI store
+перестраивает штатный цвет рисования, дополнительно выравниваются контролы.
+Событие language store оказалось недостаточным; закрытые классы не вызываются.
+При restore учтён начальный фон projection-колонки из текстового viewer,
+её модель распознаётся публичной ProjectionAnnotationModel. Три EDT проверены
+последовательно по реальным пикселям: 101 unit tests, 4512 runtime PASS,
+ещё 129 gallery PASS. Все 16 палитр, личный фон, новый редактор, startup,
+исходные цвета/пиксели и preferences восстановлены; текст/шрифт/контролы сохранены.
+Галерея пяти светлых тем обновлена без обработки PNG. ZIP major 61, 43 classes,
+37 прежних классов неизменны; палитры и ZIP 0.1.17–0.1.22 неизменны.
+Cleanup/Reconcile/Uninstall/Audit — PASS, базовые inventories сохранены,
+четыре junction удалены с сохранением целей. Commit/push/release не выполнялись.
+[Отчёт](editor-ruler-validation.md).
+
+
+## 04.11.2026 — 0.1.24, Visual Studio Light (C/C++)
+
+04.11.2026 подготовлен локальный кандидат 0.1.24: добавлена только
+Visual Studio Light (C/C++), шестая светлая тема, ID visual-studio-light-cpp.
+Прежние 16 палитр и ZIP 0.1.17–0.1.23 сохранены побайтово; изменён только
+PaletteCatalog, остальные 42 classes совпали с 0.1.23. Проверены 105 unit tests,
+1683 runtime PASS на EDT 2026.1.2+2 / 2026.1.3+25 (Java 17), 2026.2.2+21
+(Java 25), ещё 30 gallery PASS с RGB панелей и пикселями линейки.
+Cleanup/Reconcile/Uninstall/Audit — PASS, базовые inventories сохранены,
+четыре junction удалены с сохранением целей. Commit/push/release не выполнялись.
+[Отчёт](visual-studio-light-validation.md).
+
+## 04.11.2026 — 0.1.25, Noctis Hibernus
+
+04.11.2026 подготовлен локальный кандидат 0.1.25: добавлена только
+Noctis Hibernus, седьмая светлая палитра, ID noctis-hibernus.
+Прежние 17 палитр и ZIP 0.1.17–0.1.24 сохранены побайтово; изменён только
+PaletteCatalog, остальные 42 classes совпали с 0.1.24. Проверены 109 unit tests,
+1695 runtime PASS на EDT 2026.1.2+2 / 2026.1.3+25 (Java 17), 2026.2.2+21
+(Java 25), ещё 30 gallery PASS с RGB панелей и пикселями линейки.
+Проверены preview/Cancel/Apply, личные ключи всех 17 прежних схем, startup,
+ручной фон и точный restore, текстовые QL/DCS/embedded/compare поверхности.
+Cleanup/Reconcile/Uninstall/Audit — PASS, базовые inventories сохранены,
+четыре junction удалены с сохранением целей. Commit/push/release не выполнялись.
+[Отчёт](noctis-hibernus-validation.md).
+
+## 04.11.2026 — 0.1.26, Noctis Lilac
+
+04.11.2026 подготовлен локальный кандидат 0.1.26: добавлена только
+Noctis Lilac, восьмая светлая палитра, ID noctis-lilac. Текущая очередь
+светлых тем завершена: всего 19 палитр, 8 светлых и 11 тёмных.
+Прежние 18 палитр и ZIP 0.1.17–0.1.25 сохранены побайтово; изменён только
+PaletteCatalog, остальные 42 classes совпали с 0.1.25. Проверены 113 unit tests,
+1707 runtime PASS на EDT 2026.1.2+2 / 2026.1.3+25 (Java 17), 2026.2.2+21
+(Java 25), ещё 30 gallery PASS с RGB панелей и пикселями линейки.
+Проверены preview/Cancel/Apply, личные ключи всех 18 прежних схем, startup,
+ручной фон и точный restore, текстовые QL/DCS/embedded/compare поверхности.
+Cleanup/Reconcile/Uninstall/Audit — PASS, базовые inventories сохранены,
+четыре junction удалены с сохранением целей. Commit/push/release не выполнялись.
+[Отчёт](noctis-lilac-validation.md).
+
+## 05.11.2026 — 0.1.27, Git-подписи навигатора
+
+05.11.2026 подготовлен локальный кандидат 0.1.27 по скриншоту пользователя:
+исправлены отдельные подложки Git-подписей во всех 19 палитрах. В общую карту
+добавлены четыре EGit ColorDefinition с plain workbench keys для обоих режимов;
+BG=editor.background, modified FG=accent, ignored FG=disabled. Новых ролей нет.
+Изменён только SettingCatalog.class; 42 прежних класса, 19 палитр и ZIP
+0.1.17–0.1.26 сохранены побайтово. 116 unit tests и 4701 runtime PASS
+на трёх EDT, реальные EGit-декорации и пиксели для всех 19 профилей,
+тёмный startup, личный фон, ручной цвет и точный restore подтверждены.
+Регрессия BSL/QL/DCS/embedded/compare всех 19 палитр пройдена.
+Cleanup/Reconcile/Uninstall/Audit — PASS, базовые inventories сохранены,
+временные junction удалены с сохранением целей. Commit/push/release не выполнялись.
+[Отчёт](git-labels-validation.md).

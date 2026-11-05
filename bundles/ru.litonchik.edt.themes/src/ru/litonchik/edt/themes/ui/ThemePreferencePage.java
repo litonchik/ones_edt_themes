@@ -18,11 +18,15 @@ import ru.litonchik.edt.themes.model.CodePreview;
 import ru.litonchik.edt.themes.model.Palette;
 import ru.litonchik.edt.themes.model.PaletteDrafts;
 import ru.litonchik.edt.themes.model.PaletteCatalog;
+import ru.litonchik.edt.themes.model.ThemeMode;
 import org.eclipse.swt.custom.ScrolledComposite;
 
 public final class ThemePreferencePage extends PreferencePage implements IWorkbenchPreferencePage {
     private ReadableCombo profiles;
-    private final java.util.List<String> profileIds = PaletteCatalog.ids();
+    private java.util.List<String> profileIds = java.util.List.of();
+    private ThemeMode mode = ThemeMode.DARK;
+    private Button darkMode, lightMode;
+    private final java.util.Map<ThemeMode,String> lastSelected = new java.util.EnumMap<>(ThemeMode.class);
     private Button bsl;
     private ThemeCoordinator coordinator;
     private Button restore;
@@ -44,21 +48,30 @@ public final class ThemePreferencePage extends PreferencePage implements IWorkbe
         scroll.setExpandHorizontal(true); scroll.setExpandVertical(true);
         Composite body = new Composite(scroll,SWT.NONE); body.setLayout(new GridLayout(1,false)); scroll.setContent(body);
         Label explanation = new Label(body,SWT.WRAP);
-        explanation.setText("Палитры используют штатную Dark EDT. Для полного обновления редакторов может потребоваться перезапуск.");
+        explanation.setText("Выберите светлую или тёмную палитру. Для полного обновления редакторов может потребоваться перезапуск.");
         GridData data = new GridData(SWT.FILL,SWT.TOP,true,false); data.widthHint = 460; explanation.setLayoutData(data);
+        Composite modes = new Composite(body,SWT.NONE); modes.setLayout(new GridLayout(3,false));
+        new Label(modes,SWT.NONE).setText("Палитры:");
+        darkMode = new Button(modes,SWT.RADIO); darkMode.setText("Тёмные"); darkMode.setData("theme.mode",ThemeMode.DARK);
+        lightMode = new Button(modes,SWT.RADIO); lightMode.setText("Светлые"); lightMode.setData("theme.mode",ThemeMode.LIGHT);
         profiles = new ReadableCombo(body);
-        profiles.setItems(java.util.stream.Stream.concat(java.util.stream.Stream.of("Штатное оформление"),PaletteCatalog.profiles().stream().map(PaletteCatalog.Profile::label)).toArray(String[]::new));
-        profiles.select(0);
-        GridData profileData = new GridData(SWT.LEFT,SWT.CENTER,false,false); profileData.widthHint = 180; profiles.setLayoutData(profileData);
+        showMode(ThemeMode.DARK,null);
+        darkMode.addListener(SWT.Selection,event -> { if (darkMode.getSelection()) selectMode(ThemeMode.DARK); });
+        lightMode.addListener(SWT.Selection,event -> { if (lightMode.getSelection()) selectMode(ThemeMode.LIGHT); });
+        GridData profileData = new GridData(SWT.LEFT,SWT.CENTER,false,false); profileData.widthHint = 280; profiles.setLayoutData(profileData);
         bsl = new Button(body,SWT.CHECK); bsl.setText("Применять палитру BSL"); bsl.setSelection(true);
         restore = new Button(body,SWT.PUSH); restore.setText("Восстановить исходное оформление…");
         try {
             coordinator = ThemeStartup.coordinator();
-            profiles.select(profileIds.indexOf(coordinator.activeProfile()) + 1); bsl.setSelection(coordinator.includeBsl());
+            String active = coordinator.activeProfile();
+            var engine = PlatformUI.getWorkbench().getService(org.eclipse.e4.ui.css.swt.theme.IThemeEngine.class);
+            ThemeMode initialMode = active == null ? ThemeMode.fromCssId(engine.getActiveTheme().getId()) : PaletteCatalog.mode(active);
+            showMode(initialMode,active); lastSelected.put(initialMode,active);
+            bsl.setSelection(coordinator.includeBsl());
             restore.setEnabled(coordinator.hasSnapshot());
             fonts = new CodeFontSettings();
             drafts = coordinator.paletteDrafts();
-        } catch (Exception e) { setErrorMessage(e.getMessage()); setValid(false); profiles.setEnabled(false); bsl.setEnabled(false); restore.setEnabled(false); }
+        } catch (Exception e) { setErrorMessage(e.getMessage()); setValid(false); profiles.setEnabled(false); darkMode.setEnabled(false); lightMode.setEnabled(false); bsl.setEnabled(false); restore.setEnabled(false); }
         restore.addListener(SWT.Selection,event -> {
             if (!MessageDialog.openConfirm(getShell(),"Восстановить цвета","Вернуть исходную тему и цвета? Ручные изменения после включения профиля будут сохранены.")) return;
             try {
@@ -77,11 +90,24 @@ public final class ThemePreferencePage extends PreferencePage implements IWorkbe
         bsl.addListener(SWT.Selection,event -> refreshPalette());
         refreshPalette();
         scroll.setMinSize(body.computeSize(510,SWT.DEFAULT));
+        ru.litonchik.edt.themes.edt.LightUiStyles.registerPreferences(body);
         return scroll;
     }
     private String selectedProfile() {
         int index = profiles.getSelectionIndex();
         return index <= 0 ? null : profileIds.get(index - 1);
+    }
+    private void showMode(ThemeMode next,String selected) {
+        mode = next; darkMode.setSelection(mode == ThemeMode.DARK); lightMode.setSelection(mode == ThemeMode.LIGHT);
+        var visible = PaletteCatalog.profiles(mode); profileIds = visible.stream().map(PaletteCatalog.Profile::id).toList();
+        profiles.setItems(java.util.stream.Stream.concat(java.util.stream.Stream.of("Штатное оформление"),visible.stream().map(PaletteCatalog.Profile::label)).toArray(String[]::new));
+        profiles.select(profileIds.indexOf(selected)+1);
+    }
+    private void selectMode(ThemeMode next) {
+        if (mode == next) return;
+        lastSelected.put(mode,selectedProfile());
+        String selected = lastSelected.containsKey(next) ? lastSelected.get(next) : PaletteCatalog.profiles(next).get(0).id();
+        showMode(next,selected); refreshPalette();
     }
     private void refreshPalette() { if (paletteEditor != null) paletteEditor.setProfile(selectedProfile(),bsl.getSelection()); updatePreviewStyling(); }
     private void createFontControls(Composite parent) {

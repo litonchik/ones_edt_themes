@@ -1,0 +1,36 @@
+[
+  {
+    "file": "before.png",
+    "size": [
+      884,
+      581
+    ],
+    "sha256": "fdfbd1b86485fbb7649f5c73d63c6b31f15230b4d3d3758c54f6c02a898c2266",
+    "region": [
+      650,
+      75,
+      883,
+      180
+    ],
+    "old_47_background_pixels": 4530,
+    "white_pixels": 11168,
+    "unmodified_native_capture": true
+  },
+  {
+    "file": "after.png",
+    "size": [
+      884,
+      581
+    ],
+    "sha256": "4cdfad62bba146cc1d7a5e0ebf64308ff304e3ca2ba99849d29cc6986d57b643",
+    "region": [
+      650,
+      75,
+      883,
+      180
+    ],
+    "old_47_background_pixels": 0,
+    "white_pixels": 21995,
+    "unmodified_native_capture": true
+  }
+]

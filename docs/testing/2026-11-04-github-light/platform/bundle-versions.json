@@ -1,0 +1,38 @@
+{
+  "2026.1.2": {
+    "com._1c.g5.v8.dt.bsl.ui": "23.0.1.v202607090722",
+    "com._1c.g5.v8.dt.compare.ui": "23.0.2.v202607090722",
+    "com._1c.g5.v8.dt.ql.dcs.ui": "7.0.100.v202607090722",
+    "com._1c.g5.v8.dt.ql.ui": "7.0.100.v202607090722",
+    "com._1c.g5.v8.dt.theming.ui": "2.1.0.v202607090722",
+    "com._1c.g5.v8.dt.xtext.compare.ui": "2.0.1700.v202607090722",
+    "org.eclipse.platform": "4.30.0.v20231201-0110",
+    "org.eclipse.xtext": "2.33.0.v20231121-0955",
+    "org.eclipse.xtext.ide": "2.33.0.v20231121-0955",
+    "org.eclipse.xtext.ui": "2.33.0.v20231121-0955"
+  },
+  "2026.1.3": {
+    "com._1c.g5.v8.dt.bsl.ui": "23.0.1.v202609041212",
+    "com._1c.g5.v8.dt.compare.ui": "23.0.2.v202609041212",
+    "com._1c.g5.v8.dt.ql.dcs.ui": "7.0.100.v202609041212",
+    "com._1c.g5.v8.dt.ql.ui": "7.0.100.v202609041212",
+    "com._1c.g5.v8.dt.theming.ui": "2.1.0.v202609041212",
+    "com._1c.g5.v8.dt.xtext.compare.ui": "2.0.1700.v202609041212",
+    "org.eclipse.platform": "4.30.0.v20231201-0110",
+    "org.eclipse.xtext": "2.33.0.v20231121-0955",
+    "org.eclipse.xtext.ide": "2.33.0.v20231121-0955",
+    "org.eclipse.xtext.ui": "2.33.0.v20231121-0955"
+  },
+  "2026.2.2": {
+    "com._1c.g5.v8.dt.bsl.ui": "24.0.0.v202610211527",
+    "com._1c.g5.v8.dt.compare.ui": "24.0.0.v202610211527",
+    "com._1c.g5.v8.dt.ql.dcs.ui": "7.0.101.v202610211527",
+    "com._1c.g5.v8.dt.ql.ui": "7.0.101.v202610211527",
+    "com._1c.g5.v8.dt.theming.ui": "2.1.1.v202610211527",
+    "com._1c.g5.v8.dt.xtext.compare.ui": "2.0.1701.v202610211527",
+    "org.eclipse.platform": "4.38.0.v20251120-1800",
+    "org.eclipse.xtext": "2.41.0.v20251124-0739",
+    "org.eclipse.xtext.ide": "2.41.0.v20251124-0739",
+    "org.eclipse.xtext.ui": "2.41.0.v20251124-0739"
+  }
+}

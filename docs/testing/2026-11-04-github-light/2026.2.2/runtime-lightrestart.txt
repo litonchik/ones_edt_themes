@@ -1,0 +1,198 @@
+JVM 25.0.2
+PASS light active profile survives JVM restart
+PASS native Light survives JVM restart
+PASS light effective registry CONTENT_ASSIST_BACKGROUND_COLOR expected=RGB {246, 248, 250} actual=RGB {246, 248, 250}
+PASS light effective registry CONTENT_ASSIST_FOREGROUND_COLOR expected=RGB {31, 35, 40} actual=RGB {31, 35, 40}
+PASS light effective registry org.eclipse.ui.workbench.HOVER_BACKGROUND expected=RGB {246, 248, 250} actual=RGB {246, 248, 250}
+PASS light effective registry org.eclipse.ui.workbench.HOVER_FOREGROUND expected=RGB {31, 35, 40} actual=RGB {31, 35, 40}
+PASS light effective registry org.eclipse.ui.workbench.FORM_HEADING_ERROR_COLOR expected=RGB {207, 34, 46} actual=RGB {207, 34, 46}
+PASS light effective registry org.eclipse.ui.workbench.FORM_HEADING_WARNING_COLOR expected=RGB {154, 103, 0} actual=RGB {154, 103, 0}
+PASS light effective registry org.eclipse.ui.workbench.ACTIVE_TAB_BG_START expected=RGB {246, 248, 250} actual=RGB {246, 248, 250}
+PASS light effective registry org.eclipse.ui.workbench.ACTIVE_TAB_BG_END expected=RGB {246, 248, 250} actual=RGB {246, 248, 250}
+PASS light effective registry org.eclipse.ui.workbench.ACTIVE_UNSELECTED_TABS_COLOR_START expected=RGB {255, 255, 255} actual=RGB {255, 255, 255}
+PASS light effective registry org.eclipse.ui.workbench.ACTIVE_UNSELECTED_TABS_COLOR_END expected=RGB {255, 255, 255} actual=RGB {255, 255, 255}
+PASS light effective registry org.eclipse.ui.workbench.ACTIVE_TAB_SELECTED_TEXT_COLOR expected=RGB {31, 35, 40} actual=RGB {31, 35, 40}
+PASS light effective registry org.eclipse.ui.workbench.ACTIVE_TAB_UNSELECTED_TEXT_COLOR expected=RGB {101, 109, 118} actual=RGB {101, 109, 118}
+PASS light effective registry org.eclipse.ui.workbench.INACTIVE_TAB_SELECTED_TEXT_COLOR expected=RGB {31, 35, 40} actual=RGB {31, 35, 40}
+PASS light effective registry org.eclipse.ui.workbench.INACTIVE_TAB_UNSELECTED_TEXT_COLOR expected=RGB {101, 109, 118} actual=RGB {101, 109, 118}
+PASS light effective registry com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR expected=RGB {255, 255, 255} actual=RGB {255, 255, 255}
+PASS light effective registry com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR expected=RGB {31, 35, 40} actual=RGB {31, 35, 40}
+PASS light effective registry com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR_ACCENT expected=RGB {9, 105, 218} actual=RGB {9, 105, 218}
+PASS light effective registry com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_ACCENT expected=RGB {246, 248, 250} actual=RGB {246, 248, 250}
+PASS light effective registry com._1c.g5.v8.dt.theming.ui.BORDER_COLOR expected=RGB {208, 215, 222} actual=RGB {208, 215, 222}
+PASS light effective registry com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_TITLE expected=RGB {246, 248, 250} actual=RGB {246, 248, 250}
+PASS light effective registry com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR_TITLE expected=RGB {31, 35, 40} actual=RGB {31, 35, 40}
+PASS light effective registry com._1c.g5.v8.dt.theming.ui.INACTIVE_PART_BACKGROUND_COLOR expected=RGB {246, 248, 250} actual=RGB {246, 248, 250}
+PASS light effective registry com._1c.g5.v8.dt.theming.ui.CONTROLS_BACKGROUND_COLOR expected=RGB {255, 255, 255} actual=RGB {255, 255, 255}
+PASS light effective registry com._1c.g5.v8.dt.theming.ui.CONTROLS_FOREGROUND_COLOR expected=RGB {31, 35, 40} actual=RGB {31, 35, 40}
+PASS light effective registry com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_BORDER_COLOR expected=RGB {208, 215, 222} actual=RGB {208, 215, 222}
+PASS light effective registry com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_BACKGROUND_COLOR expected=RGB {246, 248, 250} actual=RGB {246, 248, 250}
+PASS light effective registry com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_FOREGROUND_COLOR expected=RGB {101, 109, 118} actual=RGB {101, 109, 118}
+PASS light effective registry com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_BORDER_COLOR expected=RGB {9, 105, 218} actual=RGB {9, 105, 218}
+PASS light effective registry com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_BACKGROUND_COLOR expected=RGB {240, 243, 246} actual=RGB {240, 243, 246}
+PASS light effective registry com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_FOREGROUND_COLOR expected=RGB {31, 35, 40} actual=RGB {31, 35, 40}
+PASS light effective registry com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_TREES_AND_TABLES expected=RGB {255, 255, 255} actual=RGB {255, 255, 255}
+PASS light effective registry com._1c.g5.v8.dt.theming.ui.INFORMATION_BACKGROUND_COLOR expected=RGB {246, 248, 250} actual=RGB {246, 248, 250}
+PASS light effective registry com._1c.g5.v8.dt.theming.ui.INFORMATION_FOREGROUND_COLOR expected=RGB {31, 35, 40} actual=RGB {31, 35, 40}
+PASS font preference page exists
+PASS font size selector exists
+PASS restart opens light group
+PASS restart selects GitHub Light
+PASS BSL editor opened on test fixture
+PASS light BSL background survives restart
+PASS shared font survives light restart
+PASS light restore after restart
+PASS light exact restore SettingKey[scope=instance, node=com._1c.g5.v8.dt.ql.dcs.ui, key=com._1c.g5.v8.dt.ql.dcs.QlDcs.syntaxColorer.tokenStyles.Ql_Strings.color]
+PASS light exact restore SettingKey[scope=instance, node=com._1c.g5.v8.dt.ql.ui, key=com._1c.g5.v8.dt.ql.Ql.syntaxColorer.tokenStyles.Ql_Parameters.color]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_default.org.eclipse.ui.workbench.ACTIVE_TAB_BG_END]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=CONTENT_ASSIST_FOREGROUND_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BORDER_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.FORM_HEADING_WARNING_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.editors, key=lineNumberColor]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Strings.color]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Background.SystemDefault]
+PASS light exact restore SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Numbers.color]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.INACTIVE_TAB_SELECTED_TEXT_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.INACTIVE_TAB_SELECTED_TEXT_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.FindScope]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_default.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_ACCENT]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=EDITION_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=RESOLVED_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=com._1c.g5.v8.dt.ql.dcs.ui, key=com._1c.g5.v8.dt.ql.dcs.QlDcs.syntaxColorer.tokenStyles.Ql_Numbers.color]
+PASS light exact restore SettingKey[scope=instance, node=com._1c.g5.v8.dt.ql.dcs.ui, key=com._1c.g5.v8.dt.ql.dcs.QlDcs.syntaxColorer.tokenStyles.Ql_Parameters.color]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.editors.rangeIndicatorColor]
+PASS light exact restore SettingKey[scope=instance, node=com._1c.g5.v8.dt.ql.ui, key=com._1c.g5.v8.dt.ql.Ql.syntaxColorer.tokenStyles.Ql_Function.color]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_BORDER_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=ERROR_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.FORM_HEADING_ERROR_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_BORDER_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_TITLE]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_TITLE]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.FORM_HEADING_ERROR_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=OUTGOING_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=com._1c.g5.v8.dt.ql.dcs.ui, key=com._1c.g5.v8.dt.ql.dcs.QlDcs.syntaxColorer.tokenStyles.Ql_Brackets.color]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.ACTIVE_TAB_SELECTED_TEXT_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.INFORMATION_BACKGROUND]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_BACKGROUND_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_UNSELECTED_TABS_COLOR_END]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_BORDER_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.editors, key=printMarginColor]
+PASS light exact restore SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_THUMB_ACTIVE_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.INACTIVE_TAB_UNSELECTED_TEXT_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=com._1c.g5.v8.dt.ql.dcs.ui, key=com._1c.g5.v8.dt.ql.dcs.QlDcs.syntaxColorer.tokenStyles.Brace.color]
+PASS light exact restore SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_BUTTON_ACTIVE_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=com._1c.g5.v8.dt.ql.ui, key=com._1c.g5.v8.dt.ql.Ql.syntaxColorer.tokenStyles.Ql_Others.color]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_BACKGROUND_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_ARROW_ACTIVE_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.FORM_HEADING_INFO_COLOR]
+PASS light exact restore SettingKey[scope=theme, node=css, key=id]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_ACCENT]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Background]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_FOREGROUND_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_default.com._1c.g5.v8.dt.theming.ui.BORDER_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.editors, key=hyperlinkColor.SystemDefault]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_UNSELECTED_TABS_COLOR_START]
+PASS light exact restore SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Others.color]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.e4.ui.css.swt.theme, key=themeid]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=ACTIVE_HYPERLINK_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_default.com._1c.g5.v8.dt.theming.ui.INFORMATION_FOREGROUND_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.HOVER_BACKGROUND]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_default.org.eclipse.ui.workbench.ACTIVE_TAB_BG_START]
+PASS light exact restore SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Brackets.color]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=INCOMING_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.BSL_Keywords.color]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.HOVER_BACKGROUND]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=DECORATIONS_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR_ACCENT]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_default.org.eclipse.ui.workbench.ACTIVE_UNSELECTED_TABS_COLOR_END]
+PASS light exact restore SettingKey[scope=theme, node=legacy, key=id]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.CONTENT_ASSIST_FOREGROUND_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_BACKGROUND_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Comment.color]
+PASS light exact restore SettingKey[scope=instance, node=com._1c.g5.v8.dt.ql.dcs.ui, key=com._1c.g5.v8.dt.ql.dcs.QlDcs.syntaxColorer.tokenStyles.Ql_Keywords.color]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.HOVER_FOREGROUND]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=CONFLICTING_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.INACTIVE_TAB_UNSELECTED_TEXT_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=com._1c.g5.v8.dt.ql.dcs.ui, key=com._1c.g5.v8.dt.ql.dcs.QlDcs.syntaxColorer.tokenStyles.Ql_Comment.color]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_SELECTED_TEXT_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Foreground]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.editors, key=hyperlinkColor]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.search.ui.match.highlight]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_UNSELECTED_TEXT_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionForeground.SystemDefault]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=COUNTER_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.INFORMATION_FOREGROUND_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.ACTIVE_TAB_UNSELECTED_TEXT_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_BUTTON_HOVER_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_TREES_AND_TABLES]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.CONTENT_ASSIST_BACKGROUND_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_TRACK_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=com._1c.g5.v8.dt.theming.ui.CONTROLS_BACKGROUND_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.INFORMATION_BACKGROUND_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.INACTIVE_PART_BACKGROUND_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=com._1c.g5.v8.dt.ql.dcs.ui, key=com._1c.g5.v8.dt.ql.dcs.QlDcs.syntaxColorer.tokenStyles.Ql_Function.color]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.HOVER_FOREGROUND]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_FOREGROUND_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_BACKGROUND_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.jface.REVISION_OLDEST_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_THUMB_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Foreground.SystemDefault]
+PASS light exact restore SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_ARROW_HOVER_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_default.org.eclipse.ui.workbench.ACTIVE_UNSELECTED_TABS_COLOR_START]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=com._1c.g5.v8.dt.theming.ui.INACTIVE_PART_BACKGROUND_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=com._1c.g5.v8.dt.theming.ui.CONTROLS_FOREGROUND_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR_TITLE]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionBackground]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_BORDER_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=com._1c.g5.v8.dt.ql.ui, key=com._1c.g5.v8.dt.ql.Ql.syntaxColorer.tokenStyles.Ql_Brackets.color]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR_TITLE]
+PASS light exact restore SettingKey[scope=instance, node=com._1c.g5.v8.dt.ql.ui, key=com._1c.g5.v8.dt.ql.Ql.syntaxColorer.tokenStyles.Ql_Numbers.color]
+PASS light exact restore SettingKey[scope=instance, node=com._1c.g5.v8.dt.ql.ui, key=com._1c.g5.v8.dt.ql.Ql.syntaxColorer.tokenStyles.Ql_Comment.color]
+PASS light exact restore SettingKey[scope=instance, node=com._1c.g5.v8.dt.ql.ui, key=com._1c.g5.v8.dt.ql.Ql.syntaxColorer.tokenStyles.Ql_Keywords.color]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionBackground.SystemDefault]
+PASS light exact restore SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_CORNER_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_BG_END]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_default.com._1c.g5.v8.dt.theming.ui.INFORMATION_BACKGROUND_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Preprocessor.color]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_BACKGROUND_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.FORM_HEADING_WARNING_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.editors, key=currentLineColor]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.console, key=org.eclipse.ui.console.P_STREAM_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.jface.REVISION_NEWEST_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_FOREGROUND_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.INFORMATION_FOREGROUND]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.console, key=org.eclipse.ui.console.P_BACKGROUND_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_FOREGROUND_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_FOREGROUND_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=com._1c.g5.v8.dt.ql.ui, key=com._1c.g5.v8.dt.ql.Ql.syntaxColorer.tokenStyles.Ql_Operators.color]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=CONTENT_ASSIST_BACKGROUND_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_TREES_AND_TABLES]
+PASS light exact restore SettingKey[scope=instance, node=com._1c.g5.v8.dt.ql.dcs.ui, key=com._1c.g5.v8.dt.ql.dcs.QlDcs.syntaxColorer.tokenStyles.Ql_Operators.color]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=HYPERLINK_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Operators.color]
+PASS light exact restore SettingKey[scope=instance, node=com._1c.g5.v8.dt.ql.dcs.ui, key=com._1c.g5.v8.dt.ql.dcs.QlDcs.syntaxColorer.tokenStyles.Ql_SplitterQuery.color]
+PASS light exact restore SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_THUMB_HOVER_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR_ACCENT]
+PASS light exact restore SettingKey[scope=instance, node=com._1c.g5.v8.dt.ql.dcs.ui, key=com._1c.g5.v8.dt.ql.dcs.QlDcs.syntaxColorer.tokenStyles.Ql_Others.color]
+PASS light exact restore SettingKey[scope=instance, node=com._1c.g5.v8.dt.ql.ui, key=com._1c.g5.v8.dt.ql.Ql.syntaxColorer.tokenStyles.Ql_Strings.color]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_BG_START]
+PASS light exact restore SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_ARROW_COLOR]
+PASS light exact restore SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Builtin function.color]
+PASS light exact restore SettingKey[scope=instance, node=com._1c.g5.v8.dt.ql.ui, key=com._1c.g5.v8.dt.ql.Ql.syntaxColorer.tokenStyles.Ql_SplitterQuery.color]
+PASS light exact restore SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionForeground]
+PASS light restores original shared font separately
+PASS light restore preserves old personal darcula
+PASS light restore preserves old personal monokai
+PASS light restore preserves old personal one-dark-pro
+PASS light restore preserves old personal dracula
+PASS light restore preserves old personal github-dark-default
+PASS light restore preserves old personal winter-is-coming-dark-blue
+PASS light restore preserves old personal night-owl
+PASS light restore preserves old personal ayu-dark
+PASS light restore preserves old personal shades-of-purple
+PASS light restore preserves old personal noctis-minimus
+PASS light restore preserves old personal visual-studio-dark-cpp

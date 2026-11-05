@@ -1,0 +1,221 @@
+{
+  "gallery_pass": 129,
+  "profiles": [
+    {
+      "profile": "github-light-default",
+      "size": [
+        884,
+        581
+      ],
+      "samples": {
+        "navigator": [
+          246,
+          248,
+          250
+        ],
+        "properties": [
+          246,
+          248,
+          250
+        ],
+        "editor": [
+          255,
+          255,
+          255
+        ],
+        "annotation_gutter": [
+          255,
+          255,
+          255
+        ],
+        "number_gutter": [
+          255,
+          255,
+          255
+        ]
+      },
+      "role_pixel_counts": {
+        "text": 876,
+        "keyword": 1361,
+        "string": 290,
+        "comment": 598,
+        "number": 25
+      },
+      "sha256": "dfe7f06eeaad40a07ae05b22f297df02120b08d6cf8dc70d6cab8fd5c4ad5da4",
+      "native_capture_unmodified": true
+    },
+    {
+      "profile": "winter-is-coming-light",
+      "size": [
+        884,
+        581
+      ],
+      "samples": {
+        "navigator": [
+          243,
+          243,
+          243
+        ],
+        "properties": [
+          243,
+          243,
+          243
+        ],
+        "editor": [
+          255,
+          255,
+          255
+        ],
+        "annotation_gutter": [
+          255,
+          255,
+          255
+        ],
+        "number_gutter": [
+          255,
+          255,
+          255
+        ]
+      },
+      "role_pixel_counts": {
+        "text": 1630,
+        "keyword": 1361,
+        "string": 290,
+        "comment": 397,
+        "number": 25
+      },
+      "sha256": "947a219e62e47c9d2c0a7e3462b630f5b5b0d0e700fb63c47088534b4374da9d",
+      "native_capture_unmodified": true
+    },
+    {
+      "profile": "night-owl-light",
+      "size": [
+        884,
+        581
+      ],
+      "samples": {
+        "navigator": [
+          240,
+          240,
+          240
+        ],
+        "properties": [
+          240,
+          240,
+          240
+        ],
+        "editor": [
+          251,
+          251,
+          251
+        ],
+        "annotation_gutter": [
+          251,
+          251,
+          251
+        ],
+        "number_gutter": [
+          251,
+          251,
+          251
+        ]
+      },
+      "role_pixel_counts": {
+        "text": 876,
+        "keyword": 1361,
+        "string": 290,
+        "comment": 598,
+        "number": 25
+      },
+      "sha256": "b11b6bc57b5efca3a5990f72c9d9b7b0ba9d4da81e7e74169c4c9ed419357d64",
+      "native_capture_unmodified": true
+    },
+    {
+      "profile": "ayu-light",
+      "size": [
+        884,
+        581
+      ],
+      "samples": {
+        "navigator": [
+          248,
+          249,
+          250
+        ],
+        "properties": [
+          248,
+          249,
+          250
+        ],
+        "editor": [
+          252,
+          252,
+          252
+        ],
+        "annotation_gutter": [
+          252,
+          252,
+          252
+        ],
+        "number_gutter": [
+          252,
+          252,
+          252
+        ]
+      },
+      "role_pixel_counts": {
+        "text": 876,
+        "keyword": 1361,
+        "string": 290,
+        "comment": 598,
+        "number": 25
+      },
+      "sha256": "713bec8307da2b4553f148c4a2ad24ea1c2663f21b413c2c277350b93e4e0f7a",
+      "native_capture_unmodified": true
+    },
+    {
+      "profile": "noctis-lux",
+      "size": [
+        884,
+        581
+      ],
+      "samples": {
+        "navigator": [
+          249,
+          241,
+          225
+        ],
+        "properties": [
+          249,
+          241,
+          225
+        ],
+        "editor": [
+          254,
+          248,
+          236
+        ],
+        "annotation_gutter": [
+          254,
+          248,
+          236
+        ],
+        "number_gutter": [
+          254,
+          248,
+          236
+        ]
+      },
+      "role_pixel_counts": {
+        "text": 876,
+        "keyword": 1130,
+        "string": 290,
+        "comment": 598,
+        "number": 25
+      },
+      "sha256": "2c6a8be61c483b414fdd3eeb715cb2a50c53d6805c3ef7716a393e2f1b847b99",
+      "native_capture_unmodified": true
+    }
+  ],
+  "source": "Native SWT Shell client-area capture after native Light JVM restart; no image editing"
+}

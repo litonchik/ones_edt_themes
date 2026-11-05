@@ -1,0 +1,65 @@
+JVM 17.0.18
+PASS surfaces initial cleanup
+PASS font preference page exists
+PASS font size selector exists
+PASS theme preference page renders profile, font and palette controls
+PASS BSL editor opened on test fixture
+PASS surfaces BSL fixture
+PASS sample.txt native text viewer
+OBS sample.txt bg=RGB {30, 30, 30} fg=RGB {218, 218, 218} token=ВЫБРАТЬ color=RGB {218, 218, 218}
+PASS safe capture visible control intersection: surface-sample.txt
+PASS sample.ql native text viewer
+QUERY SOURCE // Комментарий
+ВЫБРАТЬ ПЕРВЫЕ 123
+    Тест.Поле КАК Текст
+ИЗ Справочник.Тест КАК Тест
+ГДЕ Тест.Поле ПОДОБНО "строка"
+    И Тест.Поле = &Параметр
+QUERY CALCULATORS legacy=com._1c.g5.v8.dt.ql.ui.syntaxcoloring.QlSemanticHighlightingCalculator modern=org.eclipse.xtext.ide.editor.syntaxcoloring.DefaultSemanticHighlightingCalculator language=com._1c.g5.v8.dt.ql.Ql
+QUERY NUMBER NODE 123 grammar=NUMBER
+OBS query initial number bg=RGB {30, 30, 30} fg=RGB {218, 218, 218} token=123 color=RGB {218, 218, 218}
+OBS query initial string bg=RGB {30, 30, 30} fg=RGB {218, 218, 218} token=строка color=RGB {206, 145, 120}
+OBS sample.ql bg=RGB {30, 30, 30} fg=RGB {218, 218, 218} token=ВЫБРАТЬ color=RGB {86, 156, 214}
+PASS safe capture visible control intersection: surface-sample.ql
+PASS sample.qldcs native text viewer
+OBS sample.qldcs bg=RGB {30, 30, 30} fg=RGB {218, 218, 218} token=ВЫБРАТЬ color=RGB {86, 156, 214}
+PASS safe capture visible control intersection: surface-sample.qldcs
+PASS query constructor QL and DCS real embedded text controls
+OBS constructor-0 bg=RGB {30, 30, 30} fg=RGB {218, 218, 218} token=ВЫБРАТЬ color=RGB {86, 156, 214}
+OBS constructor-1 bg=RGB {30, 30, 30} fg=RGB {218, 218, 218} token=ВЫБРАТЬ color=RGB {86, 156, 214}
+OBS candidate state night-owl-light native=org.eclipse.e4.ui.css.theme.e4_default
+OBS candidate settled query 0 bg=RGB {255, 255, 255} fg=RGB {0, 0, 0} token=ВЫБРАТЬ color=RGB {151, 74, 191}
+OBS candidate settled query 1 bg=RGB {255, 255, 255} fg=RGB {0, 0, 0} token=ВЫБРАТЬ color=RGB {151, 74, 191}
+OBS candidate settled query 2 bg=RGB {255, 255, 255} fg=RGB {0, 0, 0} token=ВЫБРАТЬ color=RGB {151, 74, 191}
+OBS candidate settled query 3 bg=RGB {255, 255, 255} fg=RGB {0, 0, 0} token=ВЫБРАТЬ color=RGB {151, 74, 191}
+FAIL java.lang.AssertionError: night-owl-light query surface 0 background
+ru.litonchik.edt.themes.testing.WorkbenchProbe.check(WorkbenchProbe.java:40)
+ru.litonchik.edt.themes.testing.WorkbenchProbe.runSurfaceChecks(WorkbenchProbe.java:624)
+ru.litonchik.edt.themes.testing.WorkbenchProbe.runChecks(WorkbenchProbe.java:88)
+ru.litonchik.edt.themes.testing.WorkbenchProbe$1.lambda$postStartup$0(WorkbenchProbe.java:58)
+org.eclipse.swt.widgets.Display.runTimer(Display.java:4169)
+org.eclipse.swt.widgets.Display.messageProc(Display.java:3290)
+org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3657)
+org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
+org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:648)
+org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
+org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:555)
+org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+ru.litonchik.edt.themes.testing.WorkbenchProbe.start(WorkbenchProbe.java:51)
+org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+java.base/java.lang.reflect.Method.invoke(Method.java:569)
+org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:651)
+org.eclipse.equinox.launcher.Main.basicRun(Main.java:588)
+org.eclipse.equinox.launcher.Main.run(Main.java:1459)
+org.eclipse.equinox.launcher.Main.main(Main.java:1432)

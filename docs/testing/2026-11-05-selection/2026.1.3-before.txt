@@ -1,0 +1,15 @@
+JVM 17.0.18
+PASS fixture connected to EGit
+PASS fixture has tracked modified BSL
+PASS fixture has Git ignored resource
+PASS selection initial restore
+PASS real EGit staging view exposes show-in
+PASS real staging repository selected
+PASS real staging author and committer fields found, count=2
+OBS selection focused Tree RGB {204, 232, 255}
+OBS selection inactive Tree RGB {70, 70, 70}
+OBS selection focused Table RGB {255, 255, 255}
+OBS selection inactive Table RGB {255, 255, 255}
+OBS staging field 0 BG=RGB {255, 255, 255} FG=RGB {0, 0, 0} own-mark=false
+OBS staging field 1 BG=RGB {255, 255, 255} FG=RGB {0, 0, 0} own-mark=false
+PASS selection reproduction restores original appearance

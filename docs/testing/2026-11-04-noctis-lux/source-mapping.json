@@ -1,0 +1,102 @@
+{
+  "roles": {
+    "editor.background": "#FEF8EC",
+    "text": "#005661",
+    "panel": "#F9F1E1",
+    "border": "#F0E7D1",
+    "selection.background": "#B6E1E7",
+    "selection.text": "#005661",
+    "line": "#DAEEEE",
+    "comment": "#5B6B6B",
+    "keyword": "#B33D67",
+    "string": "#007846",
+    "number": "#5842FF",
+    "directive": "#006CB0",
+    "accent": "#007383",
+    "error": "#CC3300",
+    "warning": "#966121",
+    "disabled": "#5B6B6B",
+    "hover": "#F2EDDE"
+  },
+  "adaptations": {
+    "text": {
+      "source": "#005661",
+      "adapted": "#005661",
+      "contrasts": {
+        "#FEF8EC": 7.929,
+        "#DAEEEE": 6.968,
+        "#F2EDDE": 7.167
+      }
+    },
+    "comment": {
+      "source": "#8CA6A6",
+      "adapted": "#5B6B6B",
+      "contrasts": {
+        "#FEF8EC": 5.28,
+        "#DAEEEE": 4.639,
+        "#F2EDDE": 4.772
+      }
+    },
+    "keyword": {
+      "source": "#FF5792",
+      "adapted": "#B33D67",
+      "contrasts": {
+        "#FEF8EC": 5.252,
+        "#DAEEEE": 4.615,
+        "#F2EDDE": 4.747
+      }
+    },
+    "string": {
+      "source": "#00B368",
+      "adapted": "#007846",
+      "contrasts": {
+        "#FEF8EC": 5.259,
+        "#DAEEEE": 4.621,
+        "#F2EDDE": 4.753
+      }
+    },
+    "number": {
+      "source": "#5842FF",
+      "adapted": "#5842FF",
+      "contrasts": {
+        "#FEF8EC": 5.457,
+        "#DAEEEE": 4.795,
+        "#F2EDDE": 4.932
+      }
+    },
+    "directive": {
+      "source": "#0094F0",
+      "adapted": "#006CB0",
+      "contrasts": {
+        "#FEF8EC": 5.263,
+        "#DAEEEE": 4.625,
+        "#F2EDDE": 4.757
+      }
+    },
+    "accent": {
+      "source": "#00C6E0",
+      "adapted": "#007383",
+      "contrasts": {
+        "#FEF8EC": 5.252,
+        "#DAEEEE": 4.615,
+        "#F2EDDE": 4.747
+      }
+    },
+    "error": {
+      "source": "#FF4000",
+      "adapted": "#CC3300",
+      "contrasts": {
+        "#F9F1E1": 4.627
+      }
+    },
+    "warning": {
+      "source": "#E69533",
+      "adapted": "#966121",
+      "contrasts": {
+        "#F9F1E1": 4.641
+      }
+    }
+  },
+  "selection_contrast": 5.956,
+  "selection_origin": "list.activeSelectionBackground; editor alpha flattening #D8EEEC was too close to line #DAEEEE (1.005:1); opaque list selection gives 1.170:1."
+}

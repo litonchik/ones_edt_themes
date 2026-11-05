@@ -1,0 +1,50 @@
+JVM 25.0.2
+PASS fixture connected to EGit
+PASS fixture has tracked modified BSL
+PASS fixture has Git ignored resource
+PASS Git dark profile persisted after JVM restart
+PASS real EGit index diff computed before rendering
+PASS monokai Git explicit UncommittedChangeBackgroundColor
+PASS monokai Git registry UncommittedChangeBackgroundColor actual=RGB {39, 40, 34}
+PASS monokai Git explicit UncommittedChangeForegroundColor
+PASS monokai Git registry UncommittedChangeForegroundColor actual=RGB {102, 217, 239}
+PASS monokai Git explicit IgnoredResourceBackgroundColor
+PASS monokai Git registry IgnoredResourceBackgroundColor actual=RGB {39, 40, 34}
+PASS monokai Git explicit IgnoredResourceForegroundColor
+PASS monokai Git registry IgnoredResourceForegroundColor actual=RGB {138, 135, 120}
+PASS monokai Git Tree background
+PASS monokai Git label background ThemeGitProbe actual=RGB {39, 40, 34}
+PASS monokai Git label background Modified.bsl actual=RGB {39, 40, 34}
+PASS monokai actual EGit modified foreground
+PASS monokai Git label background Clean.bsl actual=RGB {39, 40, 34}
+PASS monokai Git label background Ignored.log actual=RGB {39, 40, 34}
+PASS monokai actual EGit ignored foreground
+PASS monokai painted Git label pixel > ThemeGitProbe [ThemeGitProbe master]
+PASS monokai painted Git label pixel > Modified.bsl
+PASS monokai painted Git label pixel Clean.bsl
+PASS monokai painted Git label pixel Ignored.log
+PASS github-light-default Git explicit UncommittedChangeBackgroundColor
+PASS github-light-default Git registry UncommittedChangeBackgroundColor actual=RGB {255, 255, 255}
+PASS github-light-default Git explicit UncommittedChangeForegroundColor
+PASS github-light-default Git registry UncommittedChangeForegroundColor actual=RGB {9, 105, 218}
+PASS github-light-default Git explicit IgnoredResourceBackgroundColor
+PASS github-light-default Git registry IgnoredResourceBackgroundColor actual=RGB {255, 255, 255}
+PASS github-light-default Git explicit IgnoredResourceForegroundColor
+PASS github-light-default Git registry IgnoredResourceForegroundColor actual=RGB {101, 109, 118}
+PASS github-light-default Git Tree background
+PASS github-light-default Git label background ThemeGitProbe actual=RGB {255, 255, 255}
+PASS github-light-default Git label background Modified.bsl actual=RGB {255, 255, 255}
+PASS github-light-default actual EGit modified foreground
+PASS github-light-default Git label background Clean.bsl actual=RGB {255, 255, 255}
+PASS github-light-default Git label background Ignored.log actual=RGB {255, 255, 255}
+PASS github-light-default actual EGit ignored foreground
+PASS github-light-default painted Git label pixel > ThemeGitProbe [ThemeGitProbe master]
+PASS github-light-default painted Git label pixel > Modified.bsl
+PASS github-light-default painted Git label pixel Clean.bsl
+PASS github-light-default painted Git label pixel Ignored.log
+PASS Git restore succeeds
+PASS Git exact explicit restore UncommittedChangeBackgroundColor
+PASS Git exact explicit restore UncommittedChangeForegroundColor
+PASS Git exact explicit restore IgnoredResourceBackgroundColor
+PASS Git exact explicit restore IgnoredResourceForegroundColor
+PASS Git restore releases journal and profile

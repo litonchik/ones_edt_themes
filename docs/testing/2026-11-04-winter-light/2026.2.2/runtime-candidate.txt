@@ -1,0 +1,99 @@
+JVM 25.0.2
+PASS font preference page exists
+PASS font size selector exists
+PASS light/dark radio buttons exist
+PASS candidate appears beside existing light profiles
+PASS candidate label visible in light group
+PASS candidate preview background before apply
+PASS candidate selection stays local before Apply
+PASS candidate Cancel discards pending color
+PASS font preference page exists
+PASS font size selector exists
+PASS light/dark radio buttons exist
+BUTTON Тёмные expected=При&менить
+BUTTON Светлые expected=При&менить
+BUTTON  expected=При&менить
+BUTTON Применять палитру BSL expected=При&менить
+BUTTON Восстановить исходное оформление… expected=При&менить
+BUTTON  expected=При&менить
+BUTTON Вернуть цвет стиля expected=При&менить
+BUTTON Сбросить палитру expected=При&менить
+BUTTON  expected=При&менить
+BUTTON Вернуть исходный шрифт expected=При&менить
+BUTTON При&менить expected=При&менить
+PASS candidate Apply selects profile
+PASS candidate applies native Light
+PASS winter-is-coming-light registry CONTENT_ASSIST_BACKGROUND_COLOR
+PASS winter-is-coming-light registry CONTENT_ASSIST_FOREGROUND_COLOR
+PASS winter-is-coming-light registry org.eclipse.ui.workbench.HOVER_BACKGROUND
+PASS winter-is-coming-light registry org.eclipse.ui.workbench.HOVER_FOREGROUND
+PASS winter-is-coming-light registry org.eclipse.ui.workbench.FORM_HEADING_ERROR_COLOR
+PASS winter-is-coming-light registry org.eclipse.ui.workbench.FORM_HEADING_WARNING_COLOR
+PASS winter-is-coming-light registry org.eclipse.ui.workbench.ACTIVE_TAB_BG_START
+PASS winter-is-coming-light registry org.eclipse.ui.workbench.ACTIVE_TAB_BG_END
+PASS winter-is-coming-light registry org.eclipse.ui.workbench.ACTIVE_UNSELECTED_TABS_COLOR_START
+PASS winter-is-coming-light registry org.eclipse.ui.workbench.ACTIVE_UNSELECTED_TABS_COLOR_END
+PASS winter-is-coming-light registry org.eclipse.ui.workbench.ACTIVE_TAB_SELECTED_TEXT_COLOR
+PASS winter-is-coming-light registry org.eclipse.ui.workbench.ACTIVE_TAB_UNSELECTED_TEXT_COLOR
+PASS winter-is-coming-light registry org.eclipse.ui.workbench.INACTIVE_TAB_SELECTED_TEXT_COLOR
+PASS winter-is-coming-light registry org.eclipse.ui.workbench.INACTIVE_TAB_UNSELECTED_TEXT_COLOR
+PASS winter-is-coming-light registry com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR
+PASS winter-is-coming-light registry com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR
+PASS winter-is-coming-light registry com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR_ACCENT
+PASS winter-is-coming-light registry com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_ACCENT
+PASS winter-is-coming-light registry com._1c.g5.v8.dt.theming.ui.BORDER_COLOR
+PASS winter-is-coming-light registry com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_TITLE
+PASS winter-is-coming-light registry com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR_TITLE
+PASS winter-is-coming-light registry com._1c.g5.v8.dt.theming.ui.INACTIVE_PART_BACKGROUND_COLOR
+PASS winter-is-coming-light registry com._1c.g5.v8.dt.theming.ui.CONTROLS_BACKGROUND_COLOR
+PASS winter-is-coming-light registry com._1c.g5.v8.dt.theming.ui.CONTROLS_FOREGROUND_COLOR
+PASS winter-is-coming-light registry com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_BORDER_COLOR
+PASS winter-is-coming-light registry com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_BACKGROUND_COLOR
+PASS winter-is-coming-light registry com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_FOREGROUND_COLOR
+PASS winter-is-coming-light registry com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_BORDER_COLOR
+PASS winter-is-coming-light registry com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_BACKGROUND_COLOR
+PASS winter-is-coming-light registry com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_FOREGROUND_COLOR
+PASS winter-is-coming-light registry com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_TREES_AND_TABLES
+PASS winter-is-coming-light registry com._1c.g5.v8.dt.theming.ui.INFORMATION_BACKGROUND_COLOR
+PASS winter-is-coming-light registry com._1c.g5.v8.dt.theming.ui.INFORMATION_FOREGROUND_COLOR
+PASS BSL editor opened on test fixture
+PASS candidate BSL editor
+PASS candidate BSL keyword glyph
+PASS candidate BSL number glyph
+PASS candidate BSL string glyph
+PASS candidate BSL comment glyph
+PASS candidate readable selection foreground
+PASS candidate transition native mode winter-is-coming-dark-blue
+PASS candidate transition keeps source/stamp winter-is-coming-dark-blue
+PASS candidate transition native mode github-light-default
+PASS candidate transition keeps source/stamp github-light-default
+PASS candidate transition native mode winter-is-coming-light
+PASS candidate transition keeps source/stamp winter-is-coming-light
+PASS font preference page exists
+PASS font size selector exists
+BUTTON Тёмные expected=При&менить
+BUTTON Светлые expected=При&менить
+BUTTON  expected=При&менить
+BUTTON Применять палитру BSL expected=При&менить
+BUTTON Восстановить исходное оформление… expected=При&менить
+BUTTON  expected=При&менить
+BUTTON Вернуть цвет стиля expected=При&менить
+BUTTON Сбросить палитру expected=При&менить
+BUTTON  expected=При&менить
+BUTTON Вернуть исходный шрифт expected=При&менить
+BUTTON При&менить expected=При&менить
+PASS candidate saves personal keyword
+PASS candidate personal keyword paints without editing
+PASS candidate preserves personal darcula
+PASS candidate preserves personal monokai
+PASS candidate preserves personal one-dark-pro
+PASS candidate preserves personal dracula
+PASS candidate preserves personal github-dark-default
+PASS candidate preserves personal winter-is-coming-dark-blue
+PASS candidate preserves personal night-owl
+PASS candidate preserves personal ayu-dark
+PASS candidate preserves personal shades-of-purple
+PASS candidate preserves personal noctis-minimus
+PASS candidate preserves personal visual-studio-dark-cpp
+PASS candidate preserves personal github-light-default
+PASS candidate apply leaves shared font unchanged

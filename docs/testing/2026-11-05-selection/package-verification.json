@@ -1,0 +1,11 @@
+{
+  "bundle": "plugins/ru.litonchik.edt.themes_0.1.28.202611051018.jar",
+  "class_major": 61,
+  "classes": 44,
+  "changed_classes": [
+    "ru/litonchik/edt/themes/edt/LightUiStyles.class"
+  ],
+  "unchanged_previous_classes": 42,
+  "source_resources_and_plugin_xml_match": true,
+  "zip_sha256": "fd30cdb923de6d8cf652c4f45c736ed9412e8e6013943a94667447c5810648b8"
+}

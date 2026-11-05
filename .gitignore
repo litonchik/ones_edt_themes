@@ -44,3 +44,11 @@ Desktop.ini
 
 # Отобранные логи и снимки в docs/testing сохраняются в проекте.
 # .github, .editorconfig, .gitattributes и лицензии также остаются в Git.
+
+# Подробные трассировки EDT и полные build-логи сохраняются локально.
+# В Git остаются отобранные отчёты .txt/.json, снимки и журналы p2.
+/docs/testing/**/runtime-*.log
+/docs/testing/**/build-*.log
+
+# Новые диагностические .log не публикуются; исходные логи остаются локально.
+/docs/testing/**/*.log

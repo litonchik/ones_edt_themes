@@ -3,6 +3,11 @@ package ru.litonchik.edt.themes.edt;
 import java.util.ArrayList;
 import java.util.List;
 import org.eclipse.jface.text.*;
+import org.eclipse.jface.preference.IPreferenceStore;
+import org.eclipse.jface.preference.PreferenceConverter;
+import org.eclipse.ui.texteditor.AbstractTextEditor;
+import org.eclipse.xtext.ui.editor.preferences.IPreferenceStoreAccess;
+import org.eclipse.xtext.ui.editor.utils.EditorUtils;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.StyleRange;
 import org.eclipse.xtext.ide.editor.syntaxcoloring.ISemanticHighlightingCalculator;
@@ -28,13 +33,30 @@ final class XtextPresentationRefresh {
         var provider = document.readOnly(resource -> resource == null ? null
                 : IResourceServiceProvider.Registry.INSTANCE.getResourceServiceProvider(resource.getURI()));
         if (provider == null) { viewer.invalidateTextPresentation(); return; }
+        // Native Light CSS resets StyledText to system white/black after preference events.
+        // Read the same language preference chain as the native editor, then restore only
+        // explicit colors. System-default flags leave the native CSS result intact.
+        var preferences = provider.get(IPreferenceStoreAccess.class);
+        if (preferences != null) restoreViewerColors(viewer,preferences.getPreferenceStore());
         // The native BSL calculator remembers the last model stamp. A fresh service instance
         // can calculate the unchanged model; the shared attribute provider reads current colors.
         var calculator = query ? null : provider.get(ISemanticHighlightingCalculator.class);
         var legacy = query ? provider.get(org.eclipse.xtext.ui.editor.syntaxcoloring.ISemanticHighlightingCalculator.class) : null;
         var attributes = provider.get(ITextAttributeProvider.class);
         if ((calculator == null && legacy == null) || attributes == null) { viewer.invalidateTextPresentation(); return; }
-        List<Span> spans = document.readOnly(resource -> {
+        List<Span> spans = new ArrayList<>();
+        if (query) {
+            // Keep the native lexer categories, but repaint unchanged lexical tokens too.
+            // The native presenter can retain old comments, parameters and ordinary text.
+            var tokenSource = provider.get(org.eclipse.xtext.ui.editor.model.DocumentTokenSourceAccess.class);
+            var mapper = provider.get(org.eclipse.xtext.ui.editor.syntaxcoloring.AbstractAntlrTokenToAttributeIdMapper.class);
+            var tokens = tokenSource.getTokens(document,true);
+            if (tokens != null) for (var token : tokens) {
+                String id = mapper.getId(token.getLexerTokenType());
+                if (id != null) spans.add(new Span(token.getOffset(),token.getLength(),new String[]{id}));
+            }
+        }
+        spans.addAll(document.readOnly(resource -> {
             var result = new ArrayList<Span>();
             if (resource != null) {
                 if (legacy != null) legacy.provideHighlightingFor(resource,
@@ -43,7 +65,7 @@ final class XtextPresentationRefresh {
                         (offset,length,ids) -> result.add(new Span(offset,length,ids.clone())),CancelIndicator.NullImpl);
             }
             return result;
-        });
+        }));
         ITextPresentationListener presentation = update -> {
             var extent = update.getExtent();
             if (extent == null) return;
@@ -84,4 +106,16 @@ final class XtextPresentationRefresh {
         // removed before the next edit, when native semantic reconciliation resumes normally.
         viewer.invalidateTextPresentation();
     }
+    private static void restoreViewerColors(ITextViewer viewer,IPreferenceStore preferences) {
+        var widget = viewer.getTextWidget();
+        if (!preferences.getBoolean(AbstractTextEditor.PREFERENCE_COLOR_BACKGROUND_SYSTEM_DEFAULT))
+            widget.setBackground(EditorUtils.colorFromRGB(PreferenceConverter.getColor(preferences,AbstractTextEditor.PREFERENCE_COLOR_BACKGROUND)));
+        if (!preferences.getBoolean(AbstractTextEditor.PREFERENCE_COLOR_FOREGROUND_SYSTEM_DEFAULT))
+            widget.setForeground(EditorUtils.colorFromRGB(PreferenceConverter.getColor(preferences,AbstractTextEditor.PREFERENCE_COLOR_FOREGROUND)));
+        if (!preferences.getBoolean(AbstractTextEditor.PREFERENCE_COLOR_SELECTION_BACKGROUND_SYSTEM_DEFAULT))
+            widget.setSelectionBackground(EditorUtils.colorFromRGB(PreferenceConverter.getColor(preferences,AbstractTextEditor.PREFERENCE_COLOR_SELECTION_BACKGROUND)));
+        if (!preferences.getBoolean(AbstractTextEditor.PREFERENCE_COLOR_SELECTION_FOREGROUND_SYSTEM_DEFAULT))
+            widget.setSelectionForeground(EditorUtils.colorFromRGB(PreferenceConverter.getColor(preferences,AbstractTextEditor.PREFERENCE_COLOR_SELECTION_FOREGROUND)));
+    }
+
 }

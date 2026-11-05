@@ -1,0 +1,45 @@
+{
+  "gallery_pass": 30,
+  "gallery_fail": 0,
+  "profile": "noctis-lilac",
+  "size": [
+    884,
+    581
+  ],
+  "samples": {
+    "navigator": [
+      237,
+      236,
+      248
+    ],
+    "properties": [
+      237,
+      236,
+      248
+    ],
+    "editor": [
+      242,
+      241,
+      248
+    ],
+    "annotation_gutter": [
+      242,
+      241,
+      248
+    ],
+    "number_gutter": [
+      242,
+      241,
+      248
+    ]
+  },
+  "role_pixel_counts": {
+    "text": 876,
+    "keyword": 1130,
+    "comment": 598,
+    "string": 290,
+    "number": 26
+  },
+  "png_sha256": "2ff052277d5c913179201bbe949deba1316e826044ffbdf7365afef253b22bac",
+  "unmodified_native_capture": true
+}

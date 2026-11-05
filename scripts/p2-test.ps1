@@ -49,7 +49,7 @@ if ($Action -eq 'Install') {
         if (-not $siteUri.IsAbsoluteUri -or $siteUri.Scheme -ne 'https') { throw 'Нужен абсолютный HTTPS URL p2-репозитория' }
         $repository = $siteUri.AbsoluteUri
     } else {
-        if (-not $Zip) { $Zip = Join-Path $projectRoot 'dist/edt-themes-0.1.16.zip' }
+        if (-not $Zip) { $Zip = Join-Path $projectRoot 'dist/edt-themes-0.1.28.zip' }
         $zipPath = (Resolve-Path -LiteralPath $Zip).Path
         $repository = 'jar:'+([uri]$zipPath).AbsoluteUri+'!/'
     }

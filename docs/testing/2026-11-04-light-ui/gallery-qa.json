@@ -1,0 +1,171 @@
+{
+  "gallery_pass": 84,
+  "profiles": [
+    {
+      "profile": "github-light-default",
+      "size": [
+        884,
+        581
+      ],
+      "samples": {
+        "navigator": [
+          246,
+          248,
+          250
+        ],
+        "properties": [
+          246,
+          248,
+          250
+        ],
+        "editor": [
+          255,
+          255,
+          255
+        ]
+      },
+      "role_pixel_counts": {
+        "text": 876,
+        "keyword": 1361,
+        "string": 290,
+        "comment": 598,
+        "number": 25
+      },
+      "sha256": "e27ca004256c2076f34b6d3c4d500fb4dc7d092aa0a91e529627d584911aeffb",
+      "native_capture_unmodified": true
+    },
+    {
+      "profile": "winter-is-coming-light",
+      "size": [
+        884,
+        581
+      ],
+      "samples": {
+        "navigator": [
+          243,
+          243,
+          243
+        ],
+        "properties": [
+          243,
+          243,
+          243
+        ],
+        "editor": [
+          255,
+          255,
+          255
+        ]
+      },
+      "role_pixel_counts": {
+        "text": 1630,
+        "keyword": 1361,
+        "string": 290,
+        "comment": 397,
+        "number": 25
+      },
+      "sha256": "5b3af395b03c0e651c7f9410b6dccfde4a5d73f9c756376ca15d7e199e0dcc92",
+      "native_capture_unmodified": true
+    },
+    {
+      "profile": "night-owl-light",
+      "size": [
+        884,
+        581
+      ],
+      "samples": {
+        "navigator": [
+          240,
+          240,
+          240
+        ],
+        "properties": [
+          240,
+          240,
+          240
+        ],
+        "editor": [
+          251,
+          251,
+          251
+        ]
+      },
+      "role_pixel_counts": {
+        "text": 876,
+        "keyword": 1361,
+        "string": 290,
+        "comment": 598,
+        "number": 25
+      },
+      "sha256": "52cf21656e883963f7152dc94fc15c98e3f10339025d69dbdc141ed16de28ed5",
+      "native_capture_unmodified": true
+    },
+    {
+      "profile": "ayu-light",
+      "size": [
+        884,
+        581
+      ],
+      "samples": {
+        "navigator": [
+          248,
+          249,
+          250
+        ],
+        "properties": [
+          248,
+          249,
+          250
+        ],
+        "editor": [
+          252,
+          252,
+          252
+        ]
+      },
+      "role_pixel_counts": {
+        "text": 876,
+        "keyword": 1361,
+        "string": 290,
+        "comment": 598,
+        "number": 25
+      },
+      "sha256": "32b88f7e254ad6cc8323036aab37d8cecb40baf199c01501b683f89920e184ed",
+      "native_capture_unmodified": true
+    },
+    {
+      "profile": "noctis-lux",
+      "size": [
+        884,
+        581
+      ],
+      "samples": {
+        "navigator": [
+          249,
+          241,
+          225
+        ],
+        "properties": [
+          249,
+          241,
+          225
+        ],
+        "editor": [
+          254,
+          248,
+          236
+        ]
+      },
+      "role_pixel_counts": {
+        "text": 876,
+        "keyword": 1130,
+        "string": 290,
+        "comment": 598,
+        "number": 25
+      },
+      "sha256": "268932d3cb47f7c1316ef00968bfce735520dc0d02b95bfbf78ea9dfdda209bd",
+      "native_capture_unmodified": true
+    }
+  ],
+  "source": "Native SWT Shell client-area capture after native Light JVM restart; no image editing"
+}

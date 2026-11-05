@@ -1,0 +1,208 @@
+JVM 17.0.18
+PASS candidate active profile survives restart
+PASS candidate native Light survives restart
+PASS candidate personal keyword survives restart
+PASS ayu-light registry CONTENT_ASSIST_BACKGROUND_COLOR
+PASS ayu-light registry CONTENT_ASSIST_FOREGROUND_COLOR
+PASS ayu-light registry org.eclipse.ui.workbench.HOVER_BACKGROUND
+PASS ayu-light registry org.eclipse.ui.workbench.HOVER_FOREGROUND
+PASS ayu-light registry org.eclipse.ui.workbench.FORM_HEADING_ERROR_COLOR
+PASS ayu-light registry org.eclipse.ui.workbench.FORM_HEADING_WARNING_COLOR
+PASS ayu-light registry org.eclipse.ui.workbench.ACTIVE_TAB_BG_START
+PASS ayu-light registry org.eclipse.ui.workbench.ACTIVE_TAB_BG_END
+PASS ayu-light registry org.eclipse.ui.workbench.ACTIVE_UNSELECTED_TABS_COLOR_START
+PASS ayu-light registry org.eclipse.ui.workbench.ACTIVE_UNSELECTED_TABS_COLOR_END
+PASS ayu-light registry org.eclipse.ui.workbench.ACTIVE_TAB_SELECTED_TEXT_COLOR
+PASS ayu-light registry org.eclipse.ui.workbench.ACTIVE_TAB_UNSELECTED_TEXT_COLOR
+PASS ayu-light registry org.eclipse.ui.workbench.INACTIVE_TAB_SELECTED_TEXT_COLOR
+PASS ayu-light registry org.eclipse.ui.workbench.INACTIVE_TAB_UNSELECTED_TEXT_COLOR
+PASS ayu-light registry com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR
+PASS ayu-light registry com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR
+PASS ayu-light registry com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR_ACCENT
+PASS ayu-light registry com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_ACCENT
+PASS ayu-light registry com._1c.g5.v8.dt.theming.ui.BORDER_COLOR
+PASS ayu-light registry com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_TITLE
+PASS ayu-light registry com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR_TITLE
+PASS ayu-light registry com._1c.g5.v8.dt.theming.ui.INACTIVE_PART_BACKGROUND_COLOR
+PASS ayu-light registry com._1c.g5.v8.dt.theming.ui.CONTROLS_BACKGROUND_COLOR
+PASS ayu-light registry com._1c.g5.v8.dt.theming.ui.CONTROLS_FOREGROUND_COLOR
+PASS ayu-light registry com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_BORDER_COLOR
+PASS ayu-light registry com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_BACKGROUND_COLOR
+PASS ayu-light registry com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_FOREGROUND_COLOR
+PASS ayu-light registry com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_BORDER_COLOR
+PASS ayu-light registry com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_BACKGROUND_COLOR
+PASS ayu-light registry com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_FOREGROUND_COLOR
+PASS ayu-light registry com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_TREES_AND_TABLES
+PASS ayu-light registry com._1c.g5.v8.dt.theming.ui.INFORMATION_BACKGROUND_COLOR
+PASS ayu-light registry com._1c.g5.v8.dt.theming.ui.INFORMATION_FOREGROUND_COLOR
+PASS BSL editor opened on test fixture
+PASS candidate restart BSL editor
+PASS candidate restart BSL background
+PASS candidate restart BSL foreground
+PASS candidate personal keyword paints after restart
+PASS candidate role reset restores style glyph
+PASS candidate reset removes personal key
+PASS font preference page exists
+PASS font size selector exists
+PASS candidate restart selects light group
+PASS candidate restart selects its own profile
+PASS candidate preserves later explicit background preference
+PASS candidate preserves later explicit background glyph surface after CSS
+PASS candidate restores original appearance
+PASS candidate exact restore setting|instance|com._1c.g5.v8.dt.ql.dcs.ui|com._1c.g5.v8.dt.ql.dcs.QlDcs.syntaxColorer.tokenStyles.Ql_Strings.color
+PASS candidate exact restore setting|instance|com._1c.g5.v8.dt.ql.ui|com._1c.g5.v8.dt.ql.Ql.syntaxColorer.tokenStyles.Ql_Parameters.color
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|org.eclipse.e4.ui.css.theme.e4_default.org.eclipse.ui.workbench.ACTIVE_TAB_BG_END
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|CONTENT_ASSIST_FOREGROUND_COLOR
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BORDER_COLOR
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|org.eclipse.ui.workbench.FORM_HEADING_WARNING_COLOR
+PASS candidate exact restore setting|instance|org.eclipse.ui.editors|lineNumberColor
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR
+PASS candidate exact restore setting|instance|com._1c.g5.v8.dt.bsl.ui|com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Strings.color
+PASS candidate exact restore setting|instance|org.eclipse.ui.editors|AbstractTextEditor.Color.Background.SystemDefault
+PASS candidate exact restore setting|instance|com._1c.g5.v8.dt.bsl.ui|com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Numbers.color
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|org.eclipse.ui.workbench.INACTIVE_TAB_SELECTED_TEXT_COLOR
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.INACTIVE_TAB_SELECTED_TEXT_COLOR
+PASS candidate exact restore setting|instance|org.eclipse.ui.editors|AbstractTextEditor.Color.FindScope
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|org.eclipse.e4.ui.css.theme.e4_default.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_ACCENT
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|EDITION_COLOR
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|RESOLVED_COLOR
+PASS candidate exact restore setting|instance|com._1c.g5.v8.dt.ql.dcs.ui|com._1c.g5.v8.dt.ql.dcs.QlDcs.syntaxColorer.tokenStyles.Ql_Numbers.color
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|org.eclipse.ui.editors.rangeIndicatorColor
+PASS candidate exact restore setting|instance|com._1c.g5.v8.dt.ql.dcs.ui|com._1c.g5.v8.dt.ql.dcs.QlDcs.syntaxColorer.tokenStyles.Ql_Parameters.color
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_BORDER_COLOR
+PASS candidate exact restore setting|instance|com._1c.g5.v8.dt.ql.ui|com._1c.g5.v8.dt.ql.Ql.syntaxColorer.tokenStyles.Ql_Function.color
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|ERROR_COLOR
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.FORM_HEADING_ERROR_COLOR
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_BORDER_COLOR
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_TITLE
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_TITLE
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|org.eclipse.ui.workbench.FORM_HEADING_ERROR_COLOR
+PASS candidate exact restore setting|instance|com._1c.g5.v8.dt.ql.dcs.ui|com._1c.g5.v8.dt.ql.dcs.QlDcs.syntaxColorer.tokenStyles.Ql_Brackets.color
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|OUTGOING_COLOR
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|org.eclipse.ui.workbench.ACTIVE_TAB_SELECTED_TEXT_COLOR
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|org.eclipse.ui.workbench.INFORMATION_BACKGROUND
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_UNSELECTED_TABS_COLOR_END
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_BACKGROUND_COLOR
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_BORDER_COLOR
+PASS candidate exact restore setting|instance|org.eclipse.ui.editors|printMarginColor
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|org.eclipse.ui.workbench.INACTIVE_TAB_UNSELECTED_TEXT_COLOR
+PASS candidate exact restore setting|instance|com._1c.g5.v8.dt.theming.ui|com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_THUMB_ACTIVE_COLOR
+PASS candidate exact restore setting|instance|com._1c.g5.v8.dt.ql.dcs.ui|com._1c.g5.v8.dt.ql.dcs.QlDcs.syntaxColorer.tokenStyles.Brace.color
+PASS candidate exact restore setting|instance|com._1c.g5.v8.dt.ql.ui|com._1c.g5.v8.dt.ql.Ql.syntaxColorer.tokenStyles.Ql_Others.color
+PASS candidate exact restore setting|instance|com._1c.g5.v8.dt.theming.ui|com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_BUTTON_ACTIVE_COLOR
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_BACKGROUND_COLOR
+PASS candidate exact restore setting|instance|com._1c.g5.v8.dt.theming.ui|com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_ARROW_ACTIVE_COLOR
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|org.eclipse.ui.workbench.FORM_HEADING_INFO_COLOR
+PASS candidate exact restore setting|theme|css|id
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_ACCENT
+PASS candidate exact restore setting|instance|org.eclipse.ui.editors|AbstractTextEditor.Color.Background
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|org.eclipse.e4.ui.css.theme.e4_default.com._1c.g5.v8.dt.theming.ui.BORDER_COLOR
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_FOREGROUND_COLOR
+PASS candidate exact restore setting|instance|org.eclipse.ui.editors|hyperlinkColor.SystemDefault
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_UNSELECTED_TABS_COLOR_START
+PASS candidate exact restore setting|instance|com._1c.g5.v8.dt.bsl.ui|com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Others.color
+PASS candidate exact restore setting|instance|org.eclipse.e4.ui.css.swt.theme|themeid
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|ACTIVE_HYPERLINK_COLOR
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|org.eclipse.e4.ui.css.theme.e4_default.com._1c.g5.v8.dt.theming.ui.INFORMATION_FOREGROUND_COLOR
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.HOVER_BACKGROUND
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|org.eclipse.e4.ui.css.theme.e4_default.org.eclipse.ui.workbench.ACTIVE_TAB_BG_START
+PASS candidate exact restore setting|instance|com._1c.g5.v8.dt.bsl.ui|com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Brackets.color
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|INCOMING_COLOR
+PASS candidate exact restore setting|instance|com._1c.g5.v8.dt.bsl.ui|com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.BSL_Keywords.color
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|org.eclipse.ui.workbench.HOVER_BACKGROUND
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|DECORATIONS_COLOR
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR_ACCENT
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|org.eclipse.e4.ui.css.theme.e4_default.org.eclipse.ui.workbench.ACTIVE_UNSELECTED_TABS_COLOR_END
+PASS candidate exact restore setting|theme|legacy|id
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|org.eclipse.e4.ui.css.theme.e4_dark.CONTENT_ASSIST_FOREGROUND_COLOR
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_BACKGROUND_COLOR
+PASS candidate exact restore setting|instance|com._1c.g5.v8.dt.bsl.ui|com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Comment.color
+PASS candidate exact restore setting|instance|com._1c.g5.v8.dt.ql.dcs.ui|com._1c.g5.v8.dt.ql.dcs.QlDcs.syntaxColorer.tokenStyles.Ql_Keywords.color
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.HOVER_FOREGROUND
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|CONFLICTING_COLOR
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.INACTIVE_TAB_UNSELECTED_TEXT_COLOR
+PASS candidate exact restore setting|instance|com._1c.g5.v8.dt.ql.dcs.ui|com._1c.g5.v8.dt.ql.dcs.QlDcs.syntaxColorer.tokenStyles.Ql_Comment.color
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_SELECTED_TEXT_COLOR
+PASS candidate exact restore setting|instance|org.eclipse.ui.editors|AbstractTextEditor.Color.Foreground
+PASS candidate exact restore setting|instance|org.eclipse.ui.editors|hyperlinkColor
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|org.eclipse.search.ui.match.highlight
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_UNSELECTED_TEXT_COLOR
+PASS candidate exact restore setting|instance|org.eclipse.ui.editors|AbstractTextEditor.Color.SelectionForeground.SystemDefault
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|COUNTER_COLOR
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.INFORMATION_FOREGROUND_COLOR
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|org.eclipse.ui.workbench.ACTIVE_TAB_UNSELECTED_TEXT_COLOR
+PASS candidate exact restore setting|instance|com._1c.g5.v8.dt.theming.ui|com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_BUTTON_HOVER_COLOR
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_TREES_AND_TABLES
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|org.eclipse.e4.ui.css.theme.e4_dark.CONTENT_ASSIST_BACKGROUND_COLOR
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|com._1c.g5.v8.dt.theming.ui.CONTROLS_BACKGROUND_COLOR
+PASS candidate exact restore setting|instance|com._1c.g5.v8.dt.theming.ui|com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_TRACK_COLOR
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.INFORMATION_BACKGROUND_COLOR
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.INACTIVE_PART_BACKGROUND_COLOR
+PASS candidate exact restore setting|instance|com._1c.g5.v8.dt.ql.dcs.ui|com._1c.g5.v8.dt.ql.dcs.QlDcs.syntaxColorer.tokenStyles.Ql_Function.color
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|org.eclipse.ui.workbench.HOVER_FOREGROUND
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_FOREGROUND_COLOR
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_BACKGROUND_COLOR
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|org.eclipse.jface.REVISION_OLDEST_COLOR
+PASS candidate exact restore setting|instance|org.eclipse.ui.editors|AbstractTextEditor.Color.Foreground.SystemDefault
+PASS candidate exact restore setting|instance|com._1c.g5.v8.dt.theming.ui|com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_THUMB_COLOR
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|org.eclipse.e4.ui.css.theme.e4_default.org.eclipse.ui.workbench.ACTIVE_UNSELECTED_TABS_COLOR_START
+PASS candidate exact restore setting|instance|com._1c.g5.v8.dt.theming.ui|com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_ARROW_HOVER_COLOR
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|com._1c.g5.v8.dt.theming.ui.INACTIVE_PART_BACKGROUND_COLOR
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|com._1c.g5.v8.dt.theming.ui.CONTROLS_FOREGROUND_COLOR
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR_TITLE
+PASS candidate exact restore setting|instance|org.eclipse.ui.editors|AbstractTextEditor.Color.SelectionBackground
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_BORDER_COLOR
+PASS candidate exact restore setting|instance|com._1c.g5.v8.dt.ql.ui|com._1c.g5.v8.dt.ql.Ql.syntaxColorer.tokenStyles.Ql_Brackets.color
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR_TITLE
+PASS candidate exact restore setting|instance|com._1c.g5.v8.dt.ql.ui|com._1c.g5.v8.dt.ql.Ql.syntaxColorer.tokenStyles.Ql_Numbers.color
+PASS candidate exact restore setting|instance|com._1c.g5.v8.dt.ql.ui|com._1c.g5.v8.dt.ql.Ql.syntaxColorer.tokenStyles.Ql_Keywords.color
+PASS candidate exact restore setting|instance|com._1c.g5.v8.dt.ql.ui|com._1c.g5.v8.dt.ql.Ql.syntaxColorer.tokenStyles.Ql_Comment.color
+PASS candidate exact restore setting|instance|org.eclipse.ui.editors|AbstractTextEditor.Color.SelectionBackground.SystemDefault
+PASS candidate exact restore setting|instance|com._1c.g5.v8.dt.theming.ui|com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_CORNER_COLOR
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_BG_END
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|org.eclipse.e4.ui.css.theme.e4_default.com._1c.g5.v8.dt.theming.ui.INFORMATION_BACKGROUND_COLOR
+PASS candidate exact restore setting|instance|com._1c.g5.v8.dt.bsl.ui|com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Preprocessor.color
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_BACKGROUND_COLOR
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.FORM_HEADING_WARNING_COLOR
+PASS candidate exact restore setting|instance|org.eclipse.ui.editors|currentLineColor
+PASS candidate exact restore setting|instance|org.eclipse.ui.console|org.eclipse.ui.console.P_STREAM_COLOR
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|org.eclipse.jface.REVISION_NEWEST_COLOR
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_FOREGROUND_COLOR
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|org.eclipse.ui.workbench.INFORMATION_FOREGROUND
+PASS candidate exact restore setting|instance|org.eclipse.ui.console|org.eclipse.ui.console.P_BACKGROUND_COLOR
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_FOREGROUND_COLOR
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_FOREGROUND_COLOR
+PASS candidate exact restore setting|instance|com._1c.g5.v8.dt.ql.ui|com._1c.g5.v8.dt.ql.Ql.syntaxColorer.tokenStyles.Ql_Operators.color
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|CONTENT_ASSIST_BACKGROUND_COLOR
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_TREES_AND_TABLES
+PASS candidate exact restore setting|instance|com._1c.g5.v8.dt.ql.dcs.ui|com._1c.g5.v8.dt.ql.dcs.QlDcs.syntaxColorer.tokenStyles.Ql_Operators.color
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|HYPERLINK_COLOR
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR
+PASS candidate exact restore setting|instance|com._1c.g5.v8.dt.bsl.ui|com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Operators.color
+PASS candidate exact restore setting|instance|com._1c.g5.v8.dt.ql.dcs.ui|com._1c.g5.v8.dt.ql.dcs.QlDcs.syntaxColorer.tokenStyles.Ql_SplitterQuery.color
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR_ACCENT
+PASS candidate exact restore setting|instance|com._1c.g5.v8.dt.theming.ui|com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_THUMB_HOVER_COLOR
+PASS candidate exact restore setting|instance|com._1c.g5.v8.dt.ql.dcs.ui|com._1c.g5.v8.dt.ql.dcs.QlDcs.syntaxColorer.tokenStyles.Ql_Others.color
+PASS candidate exact restore setting|instance|com._1c.g5.v8.dt.ql.ui|com._1c.g5.v8.dt.ql.Ql.syntaxColorer.tokenStyles.Ql_Strings.color
+PASS candidate exact restore setting|instance|org.eclipse.ui.workbench|org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_BG_START
+PASS candidate exact restore setting|instance|com._1c.g5.v8.dt.theming.ui|com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_ARROW_COLOR
+PASS candidate exact restore setting|instance|com._1c.g5.v8.dt.bsl.ui|com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Builtin function.color
+PASS candidate exact restore setting|instance|com._1c.g5.v8.dt.ql.ui|com._1c.g5.v8.dt.ql.Ql.syntaxColorer.tokenStyles.Ql_SplitterQuery.color
+PASS candidate exact restore setting|instance|org.eclipse.ui.editors|AbstractTextEditor.Color.SelectionForeground
+PASS candidate restore preserves personal darcula
+PASS candidate restore preserves personal monokai
+PASS candidate restore preserves personal one-dark-pro
+PASS candidate restore preserves personal dracula
+PASS candidate restore preserves personal github-dark-default
+PASS candidate restore preserves personal winter-is-coming-dark-blue
+PASS candidate restore preserves personal night-owl
+PASS candidate restore preserves personal ayu-dark
+PASS candidate restore preserves personal shades-of-purple
+PASS candidate restore preserves personal noctis-minimus
+PASS candidate restore preserves personal visual-studio-dark-cpp
+PASS candidate restore preserves personal github-light-default
+PASS candidate restore preserves personal winter-is-coming-light
+PASS candidate restore preserves personal night-owl-light
+PASS candidate restores appearance without changing font

@@ -1,0 +1,45 @@
+{
+  "gallery_pass": 30,
+  "gallery_fail": 0,
+  "profile": "noctis-hibernus",
+  "size": [
+    884,
+    581
+  ],
+  "samples": {
+    "navigator": [
+      231,
+      242,
+      243
+    ],
+    "properties": [
+      231,
+      242,
+      243
+    ],
+    "editor": [
+      244,
+      246,
+      246
+    ],
+    "annotation_gutter": [
+      244,
+      246,
+      246
+    ],
+    "number_gutter": [
+      244,
+      246,
+      246
+    ]
+  },
+  "role_pixel_counts": {
+    "text": 876,
+    "keyword": 1130,
+    "comment": 598,
+    "string": 290,
+    "number": 25
+  },
+  "png_sha256": "b8142b206e20e0936560a90c3474293efec2fbd646d4e99d192725b6717f0ee4",
+  "unmodified_native_capture": true
+}

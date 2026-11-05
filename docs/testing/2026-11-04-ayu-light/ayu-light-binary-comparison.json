@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "classes": 38,
+  "unchanged_classes": 37,
+  "changed_classes": [
+    "ru/litonchik/edt/themes/model/PaletteCatalog.class"
+  ],
+  "reason": "Only palette registry data changed; the 0.1.19 viewer-color fix and all other shared implementation classes are byte-identical."
+}

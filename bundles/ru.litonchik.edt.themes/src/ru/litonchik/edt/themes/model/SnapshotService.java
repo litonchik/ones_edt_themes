@@ -22,12 +22,16 @@ public final class SnapshotService {
     }
 
     public Map<SettingKey,OriginalValue> withNativeDefaults(Map<SettingKey,OriginalValue> desired, Map<SettingKey,OriginalValue> nativeDefaults) throws Exception {
+        return withNativeDefaults(desired,nativeDefaults,Map.of());
+    }
+    public Map<SettingKey,OriginalValue> withNativeDefaults(Map<SettingKey,OriginalValue> desired, Map<SettingKey,OriginalValue> nativeDefaults, Map<SettingKey,OriginalValue> otherModeDefaults) throws Exception {
         var plan = new LinkedHashMap<>(desired);
         for (var entry : nativeDefaults.entrySet()) {
             if (plan.containsKey(entry.getKey())) continue;
             OriginalValue original = snapshot.original().get(entry.getKey());
             if (original == null) original = access.read(entry.getKey());
-            plan.put(entry.getKey(),original.present() ? original : entry.getValue());
+            boolean nativeSeed = original.equals(entry.getValue()) || original.equals(otherModeDefaults.get(entry.getKey()));
+            plan.put(entry.getKey(),original.present() && !nativeSeed ? original : entry.getValue());
         }
         return plan;
     }

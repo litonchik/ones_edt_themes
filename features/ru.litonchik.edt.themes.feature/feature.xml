@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<feature id="ru.litonchik.edt.themes.feature" label="Темы EDT — цветовые палитры" version="0.1.16.qualifier" provider-name="litonchik">
-  <description>Профили палитр для 1С:EDT 2026.1.2, 2026.1.3 и 2026.2.2 поверх штатной Dark.</description>
+<feature id="ru.litonchik.edt.themes.feature" label="Темы EDT — цветовые палитры" version="0.1.28.qualifier" provider-name="litonchik">
+  <description>Профили палитр для 1С:EDT 2026.1.2, 2026.1.3 и 2026.2.2 на штатных светлой и тёмной темах.</description>
   <license>MIT License
 
 Copyright (c) 2026 litonchik

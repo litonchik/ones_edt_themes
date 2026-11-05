@@ -26,11 +26,30 @@ public final class SettingCatalog {
         } catch (IOException e) { throw new IllegalArgumentException("Не удалось прочитать карту",e); }
     }
     public static String colorPreferenceKey(String colorId, String legacyTheme) {
+        return colorPreferenceKey(colorId,legacyTheme,ThemeMode.DARK);
+    }
+    public static String colorPreferenceKey(String colorId, String legacyTheme, ThemeMode mode) {
         String legacy = "org.eclipse.ui.defaultTheme".equals(legacyTheme) ? "" : legacyTheme + ".";
-        return ProfileState.DARK + "." + legacy + colorId;
+        if (UNSCOPED_COLORS.contains(colorId)) return legacy + colorId;
+        return (mode == ThemeMode.DARK || LIGHT_SCOPED.contains(colorId) ? mode.cssId() + "." : "") + legacy + colorId;
+    }
+    // EGit's CSS writes preferences directly; these ColorDefinitions are not CSS-overridden.
+    private static final Set<String> UNSCOPED_COLORS = Set.of(
+        "org.eclipse.egit.ui.UncommittedChangeBackgroundColor", "org.eclipse.egit.ui.UncommittedChangeForegroundColor",
+        "org.eclipse.egit.ui.IgnoredResourceBackgroundColor", "org.eclipse.egit.ui.IgnoredResourceForegroundColor");
+    private static final Set<String> LIGHT_SCOPED = loadLightScopes();
+    private static Set<String> loadLightScopes() {
+        try (InputStream stream = SettingCatalog.class.getResourceAsStream("/resources/edt-2026.1-light-css-colors.properties")) {
+            if (stream == null) throw new IllegalArgumentException("Нет карты светлых CSS цветов");
+            Properties properties = new Properties(); properties.load(stream);
+            return Set.copyOf(properties.values().stream().map(Object::toString).toList());
+        } catch (IOException e) { throw new IllegalArgumentException("Не удалось прочитать карту светлых CSS цветов",e); }
     }
     /** Flags enabling a particular editor color belong to that role as well. */
     public Set<SettingKey> roleTargets(Set<String> roles, boolean bsl, String legacyTheme) {
+        return roleTargets(roles,bsl,legacyTheme,ThemeMode.DARK);
+    }
+    public Set<SettingKey> roleTargets(Set<String> roles, boolean bsl, String legacyTheme, ThemeMode mode) {
         var keys = new LinkedHashSet<SettingKey>();
         for (Entry e : entries) {
             if (!bsl && e.node().equals("com._1c.g5.v8.dt.bsl.ui")) continue;
@@ -39,7 +58,7 @@ public final class SettingCatalog {
                 String rgbKey = e.key().replace(".SystemDefault","");
                 role = entries.stream().filter(c -> c.node().equals(e.node()) && c.key().equals(rgbKey)).map(Entry::role).findFirst().orElse("");
             }
-            if (roles.contains(role)) keys.add(new SettingKey("instance",e.node(),e.kind().equals("color") ? colorPreferenceKey(e.key(),legacyTheme) : e.key()));
+            if (roles.contains(role)) keys.add(new SettingKey("instance",e.node(),e.kind().equals("color") ? colorPreferenceKey(e.key(),legacyTheme,mode) : e.key()));
         }
         return Set.copyOf(keys);
     }
@@ -47,7 +66,7 @@ public final class SettingCatalog {
         Map<SettingKey,OriginalValue> plan = new LinkedHashMap<>();
         for (Entry e : entries) {
             if (!bsl && e.node().equals("com._1c.g5.v8.dt.bsl.ui")) continue;
-            String key = e.kind().equals("color") ? colorPreferenceKey(e.key(),legacyTheme) : e.key();
+            String key = e.kind().equals("color") ? colorPreferenceKey(e.key(),legacyTheme,PaletteCatalog.mode(palette.id())) : e.key();
             plan.put(new SettingKey("instance",e.node(),key),OriginalValue.of(e.kind().equals("flag") ? e.role() : palette.rgb(e.role())));
         }
         return plan;

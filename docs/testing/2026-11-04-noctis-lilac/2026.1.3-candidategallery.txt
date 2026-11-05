@@ -1,0 +1,31 @@
+JVM 17.0.18
+PASS light gallery starts after native Light restart
+PASS light gallery uses restored standard font
+PASS BSL editor opened on test fixture
+PASS light gallery opens BSL sample
+PASS light gallery editor background
+PASS light gallery keyword glyph
+PASS light gallery number glyph
+PASS light gallery string glyph
+PASS light gallery comment glyph
+PASS noctis-lilac Navigator container exists
+PASS noctis-lilac Navigator container actual background expected=RGB {237, 236, 248} got=RGB {237, 236, 248}
+PASS noctis-lilac Navigator container actual foreground expected=RGB {12, 0, 107} got=RGB {12, 0, 107}
+PASS noctis-lilac Navigator Tree exists
+PASS noctis-lilac Navigator Tree actual background expected=RGB {242, 241, 248} got=RGB {242, 241, 248}
+PASS noctis-lilac Navigator Tree actual foreground expected=RGB {12, 0, 107} got=RGB {12, 0, 107}
+PASS noctis-lilac Properties container exists
+PASS noctis-lilac Properties container actual background expected=RGB {237, 236, 248} got=RGB {237, 236, 248}
+PASS noctis-lilac Properties container actual foreground expected=RGB {12, 0, 107} got=RGB {12, 0, 107}
+PASS noctis-lilac selected tab actual foreground=RGB {12, 0, 107}
+PASS noctis-lilac selected tab actual background=RGB {242, 241, 248}
+PASS noctis-lilac gallery native ruler columns available
+PASS noctis-lilac gallery ruler control 0 background expected=RGB {242, 241, 248} got=RGB {242, 241, 248}
+PASS noctis-lilac gallery ruler control 0 actual background pixel=RGB {242, 241, 248}
+PASS noctis-lilac gallery ruler control 1 background expected=RGB {242, 241, 248} got=RGB {242, 241, 248}
+PASS noctis-lilac gallery ruler control 1 actual background pixel=RGB {242, 241, 248}
+PASS noctis-lilac gallery ruler control 2 background expected=RGB {242, 241, 248} got=RGB {242, 241, 248}
+PASS noctis-lilac gallery ruler control 2 actual background pixel=RGB {242, 241, 248}
+PASS noctis-lilac gallery ruler control 3 background expected=RGB {242, 241, 248} got=RGB {242, 241, 248}
+PASS noctis-lilac gallery ruler control 3 actual background pixel=RGB {242, 241, 248}
+PASS light gallery restores original settings

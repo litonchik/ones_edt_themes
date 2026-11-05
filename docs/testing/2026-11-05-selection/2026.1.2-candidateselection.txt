@@ -1,0 +1,967 @@
+JVM 17.0.18
+PASS fixture connected to EGit
+PASS fixture has tracked modified BSL
+PASS fixture has Git ignored resource
+PASS real staging show-in interface
+PASS real staging repository selected
+PASS real author/committer controls located, count=2
+PASS darcula editor business content has no selection hook or UI marks, listeners=1 initial=0 marks=false classes=[com._1c.g5.v8.dt.theming.ui.css.properties.CSSPropertySelectionHandler$TreeSelectionListener]
+PASS plain Tree has multiple rows
+PASS plain Tree active focus acquired
+PASS darcula plain Tree focused painted selection BG expected=RGB {33, 66, 131} got=RGB {33, 66, 131}
+PASS plain Tree focus moved away
+PASS darcula plain Tree inactive painted selection BG expected=RGB {33, 66, 131} got=RGB {33, 66, 131}
+PASS plain Tree multiselection intact
+PASS darcula plain Tree multi1 painted selection BG expected=RGB {33, 66, 131} got=RGB {33, 66, 131}
+PASS darcula plain Tree multi2 painted selection BG expected=RGB {33, 66, 131} got=RGB {33, 66, 131}
+PASS plain Tree deselected
+PASS plain Tree deselected row has normal background
+PASS JFace styled Tree has multiple rows
+PASS JFace styled Tree active focus acquired
+PASS darcula JFace styled Tree focused painted selection BG expected=RGB {33, 66, 131} got=RGB {33, 66, 131}
+PASS JFace styled Tree focus moved away
+PASS darcula JFace styled Tree inactive painted selection BG expected=RGB {33, 66, 131} got=RGB {33, 66, 131}
+PASS JFace styled Tree multiselection intact
+PASS darcula JFace styled Tree multi1 painted selection BG expected=RGB {33, 66, 131} got=RGB {33, 66, 131}
+PASS darcula JFace styled Tree multi2 painted selection BG expected=RGB {33, 66, 131} got=RGB {33, 66, 131}
+PASS JFace styled Tree deselected
+PASS JFace styled Tree deselected row has normal background
+PASS Table focus acquired
+PASS darcula Table focused painted selection BG expected=RGB {33, 66, 131} got=RGB {33, 66, 131}
+PASS darcula Table inactive painted selection BG expected=RGB {33, 66, 131} got=RGB {33, 66, 131}
+PASS Table deselected background
+PASS checkbox state preserved
+PASS darcula real staging field 0 BG property enabled=true
+PASS darcula real staging field 0 FG property enabled=true
+PASS darcula real staging field 0 painted BG enabled=true actual=RGB {43, 43, 43}
+PASS staging identity preserved
+PASS darcula real staging field 0 BG property enabled=false
+PASS darcula real staging field 0 FG property enabled=false
+PASS darcula real staging field 0 painted BG enabled=false actual=RGB {43, 43, 43}
+PASS staging identity preserved
+PASS darcula real staging field 0 BG property enabled=true
+PASS darcula real staging field 0 FG property enabled=true
+PASS darcula real staging field 0 painted BG enabled=true actual=RGB {43, 43, 43}
+PASS staging identity preserved
+PASS darcula real staging field 1 BG property enabled=true
+PASS darcula real staging field 1 FG property enabled=true
+PASS darcula real staging field 1 painted BG enabled=true actual=RGB {43, 43, 43}
+PASS staging identity preserved
+PASS darcula real staging field 1 BG property enabled=false
+PASS darcula real staging field 1 FG property enabled=false
+PASS darcula real staging field 1 painted BG enabled=false actual=RGB {43, 43, 43}
+PASS staging identity preserved
+PASS darcula real staging field 1 BG property enabled=true
+PASS darcula real staging field 1 FG property enabled=true
+PASS darcula real staging field 1 painted BG enabled=true actual=RGB {43, 43, 43}
+PASS staging identity preserved
+PASS monokai editor business content has no selection hook or UI marks, listeners=1 initial=0 marks=false classes=[com._1c.g5.v8.dt.theming.ui.css.properties.CSSPropertySelectionHandler$TreeSelectionListener]
+PASS plain Tree has multiple rows
+PASS plain Tree active focus acquired
+PASS monokai plain Tree focused painted selection BG expected=RGB {73, 72, 62} got=RGB {73, 72, 62}
+PASS plain Tree focus moved away
+PASS monokai plain Tree inactive painted selection BG expected=RGB {73, 72, 62} got=RGB {73, 72, 62}
+PASS plain Tree multiselection intact
+PASS monokai plain Tree multi1 painted selection BG expected=RGB {73, 72, 62} got=RGB {73, 72, 62}
+PASS monokai plain Tree multi2 painted selection BG expected=RGB {73, 72, 62} got=RGB {73, 72, 62}
+PASS plain Tree deselected
+PASS plain Tree deselected row has normal background
+PASS JFace styled Tree has multiple rows
+PASS JFace styled Tree active focus acquired
+PASS monokai JFace styled Tree focused painted selection BG expected=RGB {73, 72, 62} got=RGB {73, 72, 62}
+PASS JFace styled Tree focus moved away
+PASS monokai JFace styled Tree inactive painted selection BG expected=RGB {73, 72, 62} got=RGB {73, 72, 62}
+PASS JFace styled Tree multiselection intact
+PASS monokai JFace styled Tree multi1 painted selection BG expected=RGB {73, 72, 62} got=RGB {73, 72, 62}
+PASS monokai JFace styled Tree multi2 painted selection BG expected=RGB {73, 72, 62} got=RGB {73, 72, 62}
+PASS JFace styled Tree deselected
+PASS JFace styled Tree deselected row has normal background
+PASS Table focus acquired
+PASS monokai Table focused painted selection BG expected=RGB {73, 72, 62} got=RGB {73, 72, 62}
+PASS monokai Table inactive painted selection BG expected=RGB {73, 72, 62} got=RGB {73, 72, 62}
+PASS Table deselected background
+PASS checkbox state preserved
+PASS monokai real staging field 0 BG property enabled=true
+PASS monokai real staging field 0 FG property enabled=true
+PASS monokai real staging field 0 painted BG enabled=true actual=RGB {39, 40, 34}
+PASS staging identity preserved
+PASS monokai real staging field 0 BG property enabled=false
+PASS monokai real staging field 0 FG property enabled=false
+PASS monokai real staging field 0 painted BG enabled=false actual=RGB {39, 40, 34}
+PASS staging identity preserved
+PASS monokai real staging field 0 BG property enabled=true
+PASS monokai real staging field 0 FG property enabled=true
+PASS monokai real staging field 0 painted BG enabled=true actual=RGB {39, 40, 34}
+PASS staging identity preserved
+PASS monokai real staging field 1 BG property enabled=true
+PASS monokai real staging field 1 FG property enabled=true
+PASS monokai real staging field 1 painted BG enabled=true actual=RGB {39, 40, 34}
+PASS staging identity preserved
+PASS monokai real staging field 1 BG property enabled=false
+PASS monokai real staging field 1 FG property enabled=false
+PASS monokai real staging field 1 painted BG enabled=false actual=RGB {39, 40, 34}
+PASS staging identity preserved
+PASS monokai real staging field 1 BG property enabled=true
+PASS monokai real staging field 1 FG property enabled=true
+PASS monokai real staging field 1 painted BG enabled=true actual=RGB {39, 40, 34}
+PASS staging identity preserved
+PASS one-dark-pro editor business content has no selection hook or UI marks, listeners=1 initial=0 marks=false classes=[com._1c.g5.v8.dt.theming.ui.css.properties.CSSPropertySelectionHandler$TreeSelectionListener]
+PASS plain Tree has multiple rows
+PASS plain Tree active focus acquired
+PASS one-dark-pro plain Tree focused painted selection BG expected=RGB {64, 72, 89} got=RGB {64, 72, 89}
+PASS plain Tree focus moved away
+PASS one-dark-pro plain Tree inactive painted selection BG expected=RGB {64, 72, 89} got=RGB {64, 72, 89}
+PASS plain Tree multiselection intact
+PASS one-dark-pro plain Tree multi1 painted selection BG expected=RGB {64, 72, 89} got=RGB {64, 72, 89}
+PASS one-dark-pro plain Tree multi2 painted selection BG expected=RGB {64, 72, 89} got=RGB {64, 72, 89}
+PASS plain Tree deselected
+PASS plain Tree deselected row has normal background
+PASS JFace styled Tree has multiple rows
+PASS JFace styled Tree active focus acquired
+PASS one-dark-pro JFace styled Tree focused painted selection BG expected=RGB {64, 72, 89} got=RGB {64, 72, 89}
+PASS JFace styled Tree focus moved away
+PASS one-dark-pro JFace styled Tree inactive painted selection BG expected=RGB {64, 72, 89} got=RGB {64, 72, 89}
+PASS JFace styled Tree multiselection intact
+PASS one-dark-pro JFace styled Tree multi1 painted selection BG expected=RGB {64, 72, 89} got=RGB {64, 72, 89}
+PASS one-dark-pro JFace styled Tree multi2 painted selection BG expected=RGB {64, 72, 89} got=RGB {64, 72, 89}
+PASS JFace styled Tree deselected
+PASS JFace styled Tree deselected row has normal background
+PASS Table focus acquired
+PASS one-dark-pro Table focused painted selection BG expected=RGB {64, 72, 89} got=RGB {64, 72, 89}
+PASS one-dark-pro Table inactive painted selection BG expected=RGB {64, 72, 89} got=RGB {64, 72, 89}
+PASS Table deselected background
+PASS checkbox state preserved
+PASS one-dark-pro real staging field 0 BG property enabled=true
+PASS one-dark-pro real staging field 0 FG property enabled=true
+PASS one-dark-pro real staging field 0 painted BG enabled=true actual=RGB {40, 44, 52}
+PASS staging identity preserved
+PASS one-dark-pro real staging field 0 BG property enabled=false
+PASS one-dark-pro real staging field 0 FG property enabled=false
+PASS one-dark-pro real staging field 0 painted BG enabled=false actual=RGB {40, 44, 52}
+PASS staging identity preserved
+PASS one-dark-pro real staging field 0 BG property enabled=true
+PASS one-dark-pro real staging field 0 FG property enabled=true
+PASS one-dark-pro real staging field 0 painted BG enabled=true actual=RGB {40, 44, 52}
+PASS staging identity preserved
+PASS one-dark-pro real staging field 1 BG property enabled=true
+PASS one-dark-pro real staging field 1 FG property enabled=true
+PASS one-dark-pro real staging field 1 painted BG enabled=true actual=RGB {40, 44, 52}
+PASS staging identity preserved
+PASS one-dark-pro real staging field 1 BG property enabled=false
+PASS one-dark-pro real staging field 1 FG property enabled=false
+PASS one-dark-pro real staging field 1 painted BG enabled=false actual=RGB {40, 44, 52}
+PASS staging identity preserved
+PASS one-dark-pro real staging field 1 BG property enabled=true
+PASS one-dark-pro real staging field 1 FG property enabled=true
+PASS one-dark-pro real staging field 1 painted BG enabled=true actual=RGB {40, 44, 52}
+PASS staging identity preserved
+PASS dracula editor business content has no selection hook or UI marks, listeners=1 initial=0 marks=false classes=[com._1c.g5.v8.dt.theming.ui.css.properties.CSSPropertySelectionHandler$TreeSelectionListener]
+PASS plain Tree has multiple rows
+PASS plain Tree active focus acquired
+PASS dracula plain Tree focused painted selection BG expected=RGB {68, 71, 90} got=RGB {68, 71, 90}
+PASS plain Tree focus moved away
+PASS dracula plain Tree inactive painted selection BG expected=RGB {68, 71, 90} got=RGB {68, 71, 90}
+PASS plain Tree multiselection intact
+PASS dracula plain Tree multi1 painted selection BG expected=RGB {68, 71, 90} got=RGB {68, 71, 90}
+PASS dracula plain Tree multi2 painted selection BG expected=RGB {68, 71, 90} got=RGB {68, 71, 90}
+PASS plain Tree deselected
+PASS plain Tree deselected row has normal background
+PASS JFace styled Tree has multiple rows
+PASS JFace styled Tree active focus acquired
+PASS dracula JFace styled Tree focused painted selection BG expected=RGB {68, 71, 90} got=RGB {68, 71, 90}
+PASS JFace styled Tree focus moved away
+PASS dracula JFace styled Tree inactive painted selection BG expected=RGB {68, 71, 90} got=RGB {68, 71, 90}
+PASS JFace styled Tree multiselection intact
+PASS dracula JFace styled Tree multi1 painted selection BG expected=RGB {68, 71, 90} got=RGB {68, 71, 90}
+PASS dracula JFace styled Tree multi2 painted selection BG expected=RGB {68, 71, 90} got=RGB {68, 71, 90}
+PASS JFace styled Tree deselected
+PASS JFace styled Tree deselected row has normal background
+PASS Table focus acquired
+PASS dracula Table focused painted selection BG expected=RGB {68, 71, 90} got=RGB {68, 71, 90}
+PASS dracula Table inactive painted selection BG expected=RGB {68, 71, 90} got=RGB {68, 71, 90}
+PASS Table deselected background
+PASS checkbox state preserved
+PASS dracula real staging field 0 BG property enabled=true
+PASS dracula real staging field 0 FG property enabled=true
+PASS dracula real staging field 0 painted BG enabled=true actual=RGB {40, 42, 54}
+PASS staging identity preserved
+PASS dracula real staging field 0 BG property enabled=false
+PASS dracula real staging field 0 FG property enabled=false
+PASS dracula real staging field 0 painted BG enabled=false actual=RGB {40, 42, 54}
+PASS staging identity preserved
+PASS dracula real staging field 0 BG property enabled=true
+PASS dracula real staging field 0 FG property enabled=true
+PASS dracula real staging field 0 painted BG enabled=true actual=RGB {40, 42, 54}
+PASS staging identity preserved
+PASS dracula real staging field 1 BG property enabled=true
+PASS dracula real staging field 1 FG property enabled=true
+PASS dracula real staging field 1 painted BG enabled=true actual=RGB {40, 42, 54}
+PASS staging identity preserved
+PASS dracula real staging field 1 BG property enabled=false
+PASS dracula real staging field 1 FG property enabled=false
+PASS dracula real staging field 1 painted BG enabled=false actual=RGB {40, 42, 54}
+PASS staging identity preserved
+PASS dracula real staging field 1 BG property enabled=true
+PASS dracula real staging field 1 FG property enabled=true
+PASS dracula real staging field 1 painted BG enabled=true actual=RGB {40, 42, 54}
+PASS staging identity preserved
+PASS github-dark-default editor business content has no selection hook or UI marks, listeners=1 initial=0 marks=false classes=[com._1c.g5.v8.dt.theming.ui.css.properties.CSSPropertySelectionHandler$TreeSelectionListener]
+PASS plain Tree has multiple rows
+PASS plain Tree active focus acquired
+PASS github-dark-default plain Tree focused painted selection BG expected=RGB {20, 39, 68} got=RGB {20, 39, 68}
+PASS plain Tree focus moved away
+PASS github-dark-default plain Tree inactive painted selection BG expected=RGB {20, 39, 68} got=RGB {20, 39, 68}
+PASS plain Tree multiselection intact
+PASS github-dark-default plain Tree multi1 painted selection BG expected=RGB {20, 39, 68} got=RGB {20, 39, 68}
+PASS github-dark-default plain Tree multi2 painted selection BG expected=RGB {20, 39, 68} got=RGB {20, 39, 68}
+PASS plain Tree deselected
+PASS plain Tree deselected row has normal background
+PASS JFace styled Tree has multiple rows
+PASS JFace styled Tree active focus acquired
+PASS github-dark-default JFace styled Tree focused painted selection BG expected=RGB {20, 39, 68} got=RGB {20, 39, 68}
+PASS JFace styled Tree focus moved away
+PASS github-dark-default JFace styled Tree inactive painted selection BG expected=RGB {20, 39, 68} got=RGB {20, 39, 68}
+PASS JFace styled Tree multiselection intact
+PASS github-dark-default JFace styled Tree multi1 painted selection BG expected=RGB {20, 39, 68} got=RGB {20, 39, 68}
+PASS github-dark-default JFace styled Tree multi2 painted selection BG expected=RGB {20, 39, 68} got=RGB {20, 39, 68}
+PASS JFace styled Tree deselected
+PASS JFace styled Tree deselected row has normal background
+PASS Table focus acquired
+PASS github-dark-default Table focused painted selection BG expected=RGB {20, 39, 68} got=RGB {20, 39, 68}
+PASS github-dark-default Table inactive painted selection BG expected=RGB {20, 39, 68} got=RGB {20, 39, 68}
+PASS Table deselected background
+PASS checkbox state preserved
+PASS github-dark-default real staging field 0 BG property enabled=true
+PASS github-dark-default real staging field 0 FG property enabled=true
+PASS github-dark-default real staging field 0 painted BG enabled=true actual=RGB {13, 17, 23}
+PASS staging identity preserved
+PASS github-dark-default real staging field 0 BG property enabled=false
+PASS github-dark-default real staging field 0 FG property enabled=false
+PASS github-dark-default real staging field 0 painted BG enabled=false actual=RGB {13, 17, 23}
+PASS staging identity preserved
+PASS github-dark-default real staging field 0 BG property enabled=true
+PASS github-dark-default real staging field 0 FG property enabled=true
+PASS github-dark-default real staging field 0 painted BG enabled=true actual=RGB {13, 17, 23}
+PASS staging identity preserved
+PASS github-dark-default real staging field 1 BG property enabled=true
+PASS github-dark-default real staging field 1 FG property enabled=true
+PASS github-dark-default real staging field 1 painted BG enabled=true actual=RGB {13, 17, 23}
+PASS staging identity preserved
+PASS github-dark-default real staging field 1 BG property enabled=false
+PASS github-dark-default real staging field 1 FG property enabled=false
+PASS github-dark-default real staging field 1 painted BG enabled=false actual=RGB {13, 17, 23}
+PASS staging identity preserved
+PASS github-dark-default real staging field 1 BG property enabled=true
+PASS github-dark-default real staging field 1 FG property enabled=true
+PASS github-dark-default real staging field 1 painted BG enabled=true actual=RGB {13, 17, 23}
+PASS staging identity preserved
+PASS winter-is-coming-dark-blue editor business content has no selection hook or UI marks, listeners=1 initial=0 marks=false classes=[com._1c.g5.v8.dt.theming.ui.css.properties.CSSPropertySelectionHandler$TreeSelectionListener]
+PASS plain Tree has multiple rows
+PASS plain Tree active focus acquired
+PASS winter-is-coming-dark-blue plain Tree focused painted selection BG expected=RGB {16, 51, 98} got=RGB {16, 51, 98}
+PASS plain Tree focus moved away
+PASS winter-is-coming-dark-blue plain Tree inactive painted selection BG expected=RGB {16, 51, 98} got=RGB {16, 51, 98}
+PASS plain Tree multiselection intact
+PASS winter-is-coming-dark-blue plain Tree multi1 painted selection BG expected=RGB {16, 51, 98} got=RGB {16, 51, 98}
+PASS winter-is-coming-dark-blue plain Tree multi2 painted selection BG expected=RGB {16, 51, 98} got=RGB {16, 51, 98}
+PASS plain Tree deselected
+PASS plain Tree deselected row has normal background
+PASS JFace styled Tree has multiple rows
+PASS JFace styled Tree active focus acquired
+PASS winter-is-coming-dark-blue JFace styled Tree focused painted selection BG expected=RGB {16, 51, 98} got=RGB {16, 51, 98}
+PASS JFace styled Tree focus moved away
+PASS winter-is-coming-dark-blue JFace styled Tree inactive painted selection BG expected=RGB {16, 51, 98} got=RGB {16, 51, 98}
+PASS JFace styled Tree multiselection intact
+PASS winter-is-coming-dark-blue JFace styled Tree multi1 painted selection BG expected=RGB {16, 51, 98} got=RGB {16, 51, 98}
+PASS winter-is-coming-dark-blue JFace styled Tree multi2 painted selection BG expected=RGB {16, 51, 98} got=RGB {16, 51, 98}
+PASS JFace styled Tree deselected
+PASS JFace styled Tree deselected row has normal background
+PASS Table focus acquired
+PASS winter-is-coming-dark-blue Table focused painted selection BG expected=RGB {16, 51, 98} got=RGB {16, 51, 98}
+PASS winter-is-coming-dark-blue Table inactive painted selection BG expected=RGB {16, 51, 98} got=RGB {16, 51, 98}
+PASS Table deselected background
+PASS checkbox state preserved
+PASS winter-is-coming-dark-blue real staging field 0 BG property enabled=true
+PASS winter-is-coming-dark-blue real staging field 0 FG property enabled=true
+PASS winter-is-coming-dark-blue real staging field 0 painted BG enabled=true actual=RGB {1, 22, 39}
+PASS staging identity preserved
+PASS winter-is-coming-dark-blue real staging field 0 BG property enabled=false
+PASS winter-is-coming-dark-blue real staging field 0 FG property enabled=false
+PASS winter-is-coming-dark-blue real staging field 0 painted BG enabled=false actual=RGB {1, 22, 39}
+PASS staging identity preserved
+PASS winter-is-coming-dark-blue real staging field 0 BG property enabled=true
+PASS winter-is-coming-dark-blue real staging field 0 FG property enabled=true
+PASS winter-is-coming-dark-blue real staging field 0 painted BG enabled=true actual=RGB {1, 22, 39}
+PASS staging identity preserved
+PASS winter-is-coming-dark-blue real staging field 1 BG property enabled=true
+PASS winter-is-coming-dark-blue real staging field 1 FG property enabled=true
+PASS winter-is-coming-dark-blue real staging field 1 painted BG enabled=true actual=RGB {1, 22, 39}
+PASS staging identity preserved
+PASS winter-is-coming-dark-blue real staging field 1 BG property enabled=false
+PASS winter-is-coming-dark-blue real staging field 1 FG property enabled=false
+PASS winter-is-coming-dark-blue real staging field 1 painted BG enabled=false actual=RGB {1, 22, 39}
+PASS staging identity preserved
+PASS winter-is-coming-dark-blue real staging field 1 BG property enabled=true
+PASS winter-is-coming-dark-blue real staging field 1 FG property enabled=true
+PASS winter-is-coming-dark-blue real staging field 1 painted BG enabled=true actual=RGB {1, 22, 39}
+PASS staging identity preserved
+PASS night-owl editor business content has no selection hook or UI marks, listeners=1 initial=0 marks=false classes=[com._1c.g5.v8.dt.theming.ui.css.properties.CSSPropertySelectionHandler$TreeSelectionListener]
+PASS plain Tree has multiple rows
+PASS plain Tree active focus acquired
+PASS night-owl plain Tree focused painted selection BG expected=RGB {29, 59, 83} got=RGB {29, 59, 83}
+PASS plain Tree focus moved away
+PASS night-owl plain Tree inactive painted selection BG expected=RGB {29, 59, 83} got=RGB {29, 59, 83}
+PASS plain Tree multiselection intact
+PASS night-owl plain Tree multi1 painted selection BG expected=RGB {29, 59, 83} got=RGB {29, 59, 83}
+PASS night-owl plain Tree multi2 painted selection BG expected=RGB {29, 59, 83} got=RGB {29, 59, 83}
+PASS plain Tree deselected
+PASS plain Tree deselected row has normal background
+PASS JFace styled Tree has multiple rows
+PASS JFace styled Tree active focus acquired
+PASS night-owl JFace styled Tree focused painted selection BG expected=RGB {29, 59, 83} got=RGB {29, 59, 83}
+PASS JFace styled Tree focus moved away
+PASS night-owl JFace styled Tree inactive painted selection BG expected=RGB {29, 59, 83} got=RGB {29, 59, 83}
+PASS JFace styled Tree multiselection intact
+PASS night-owl JFace styled Tree multi1 painted selection BG expected=RGB {29, 59, 83} got=RGB {29, 59, 83}
+PASS night-owl JFace styled Tree multi2 painted selection BG expected=RGB {29, 59, 83} got=RGB {29, 59, 83}
+PASS JFace styled Tree deselected
+PASS JFace styled Tree deselected row has normal background
+PASS Table focus acquired
+PASS night-owl Table focused painted selection BG expected=RGB {29, 59, 83} got=RGB {29, 59, 83}
+PASS night-owl Table inactive painted selection BG expected=RGB {29, 59, 83} got=RGB {29, 59, 83}
+PASS Table deselected background
+PASS checkbox state preserved
+PASS night-owl real staging field 0 BG property enabled=true
+PASS night-owl real staging field 0 FG property enabled=true
+PASS night-owl real staging field 0 painted BG enabled=true actual=RGB {1, 22, 39}
+PASS staging identity preserved
+PASS night-owl real staging field 0 BG property enabled=false
+PASS night-owl real staging field 0 FG property enabled=false
+PASS night-owl real staging field 0 painted BG enabled=false actual=RGB {1, 22, 39}
+PASS staging identity preserved
+PASS night-owl real staging field 0 BG property enabled=true
+PASS night-owl real staging field 0 FG property enabled=true
+PASS night-owl real staging field 0 painted BG enabled=true actual=RGB {1, 22, 39}
+PASS staging identity preserved
+PASS night-owl real staging field 1 BG property enabled=true
+PASS night-owl real staging field 1 FG property enabled=true
+PASS night-owl real staging field 1 painted BG enabled=true actual=RGB {1, 22, 39}
+PASS staging identity preserved
+PASS night-owl real staging field 1 BG property enabled=false
+PASS night-owl real staging field 1 FG property enabled=false
+PASS night-owl real staging field 1 painted BG enabled=false actual=RGB {1, 22, 39}
+PASS staging identity preserved
+PASS night-owl real staging field 1 BG property enabled=true
+PASS night-owl real staging field 1 FG property enabled=true
+PASS night-owl real staging field 1 painted BG enabled=true actual=RGB {1, 22, 39}
+PASS staging identity preserved
+PASS ayu-dark editor business content has no selection hook or UI marks, listeners=1 initial=0 marks=false classes=[com._1c.g5.v8.dt.theming.ui.css.properties.CSSPropertySelectionHandler$TreeSelectionListener]
+PASS plain Tree has multiple rows
+PASS plain Tree active focus acquired
+PASS ayu-dark plain Tree focused painted selection BG expected=RGB {25, 49, 85} got=RGB {25, 49, 85}
+PASS plain Tree focus moved away
+PASS ayu-dark plain Tree inactive painted selection BG expected=RGB {25, 49, 85} got=RGB {25, 49, 85}
+PASS plain Tree multiselection intact
+PASS ayu-dark plain Tree multi1 painted selection BG expected=RGB {25, 49, 85} got=RGB {25, 49, 85}
+PASS ayu-dark plain Tree multi2 painted selection BG expected=RGB {25, 49, 85} got=RGB {25, 49, 85}
+PASS plain Tree deselected
+PASS plain Tree deselected row has normal background
+PASS JFace styled Tree has multiple rows
+PASS JFace styled Tree active focus acquired
+PASS ayu-dark JFace styled Tree focused painted selection BG expected=RGB {25, 49, 85} got=RGB {25, 49, 85}
+PASS JFace styled Tree focus moved away
+PASS ayu-dark JFace styled Tree inactive painted selection BG expected=RGB {25, 49, 85} got=RGB {25, 49, 85}
+PASS JFace styled Tree multiselection intact
+PASS ayu-dark JFace styled Tree multi1 painted selection BG expected=RGB {25, 49, 85} got=RGB {25, 49, 85}
+PASS ayu-dark JFace styled Tree multi2 painted selection BG expected=RGB {25, 49, 85} got=RGB {25, 49, 85}
+PASS JFace styled Tree deselected
+PASS JFace styled Tree deselected row has normal background
+PASS Table focus acquired
+PASS ayu-dark Table focused painted selection BG expected=RGB {25, 49, 85} got=RGB {25, 49, 85}
+PASS ayu-dark Table inactive painted selection BG expected=RGB {25, 49, 85} got=RGB {25, 49, 85}
+PASS Table deselected background
+PASS checkbox state preserved
+PASS ayu-dark real staging field 0 BG property enabled=true
+PASS ayu-dark real staging field 0 FG property enabled=true
+PASS ayu-dark real staging field 0 painted BG enabled=true actual=RGB {16, 20, 28}
+PASS staging identity preserved
+PASS ayu-dark real staging field 0 BG property enabled=false
+PASS ayu-dark real staging field 0 FG property enabled=false
+PASS ayu-dark real staging field 0 painted BG enabled=false actual=RGB {16, 20, 28}
+PASS staging identity preserved
+PASS ayu-dark real staging field 0 BG property enabled=true
+PASS ayu-dark real staging field 0 FG property enabled=true
+PASS ayu-dark real staging field 0 painted BG enabled=true actual=RGB {16, 20, 28}
+PASS staging identity preserved
+PASS ayu-dark real staging field 1 BG property enabled=true
+PASS ayu-dark real staging field 1 FG property enabled=true
+PASS ayu-dark real staging field 1 painted BG enabled=true actual=RGB {16, 20, 28}
+PASS staging identity preserved
+PASS ayu-dark real staging field 1 BG property enabled=false
+PASS ayu-dark real staging field 1 FG property enabled=false
+PASS ayu-dark real staging field 1 painted BG enabled=false actual=RGB {16, 20, 28}
+PASS staging identity preserved
+PASS ayu-dark real staging field 1 BG property enabled=true
+PASS ayu-dark real staging field 1 FG property enabled=true
+PASS ayu-dark real staging field 1 painted BG enabled=true actual=RGB {16, 20, 28}
+PASS staging identity preserved
+PASS shades-of-purple editor business content has no selection hook or UI marks, listeners=1 initial=0 marks=false classes=[com._1c.g5.v8.dt.theming.ui.css.properties.CSSPropertySelectionHandler$TreeSelectionListener]
+PASS plain Tree has multiple rows
+PASS plain Tree active focus acquired
+PASS shades-of-purple plain Tree focused painted selection BG expected=RGB {116, 72, 176} got=RGB {116, 72, 176}
+PASS plain Tree focus moved away
+PASS shades-of-purple plain Tree inactive painted selection BG expected=RGB {116, 72, 176} got=RGB {116, 72, 176}
+PASS plain Tree multiselection intact
+PASS shades-of-purple plain Tree multi1 painted selection BG expected=RGB {116, 72, 176} got=RGB {116, 72, 176}
+PASS shades-of-purple plain Tree multi2 painted selection BG expected=RGB {116, 72, 176} got=RGB {116, 72, 176}
+PASS plain Tree deselected
+PASS plain Tree deselected row has normal background
+PASS JFace styled Tree has multiple rows
+PASS JFace styled Tree active focus acquired
+PASS shades-of-purple JFace styled Tree focused painted selection BG expected=RGB {116, 72, 176} got=RGB {116, 72, 176}
+PASS JFace styled Tree focus moved away
+PASS shades-of-purple JFace styled Tree inactive painted selection BG expected=RGB {116, 72, 176} got=RGB {116, 72, 176}
+PASS JFace styled Tree multiselection intact
+PASS shades-of-purple JFace styled Tree multi1 painted selection BG expected=RGB {116, 72, 176} got=RGB {116, 72, 176}
+PASS shades-of-purple JFace styled Tree multi2 painted selection BG expected=RGB {116, 72, 176} got=RGB {116, 72, 176}
+PASS JFace styled Tree deselected
+PASS JFace styled Tree deselected row has normal background
+PASS Table focus acquired
+PASS shades-of-purple Table focused painted selection BG expected=RGB {116, 72, 176} got=RGB {116, 72, 176}
+PASS shades-of-purple Table inactive painted selection BG expected=RGB {116, 72, 176} got=RGB {116, 72, 176}
+PASS Table deselected background
+PASS checkbox state preserved
+PASS shades-of-purple real staging field 0 BG property enabled=true
+PASS shades-of-purple real staging field 0 FG property enabled=true
+PASS shades-of-purple real staging field 0 painted BG enabled=true actual=RGB {45, 43, 85}
+PASS staging identity preserved
+PASS shades-of-purple real staging field 0 BG property enabled=false
+PASS shades-of-purple real staging field 0 FG property enabled=false
+PASS shades-of-purple real staging field 0 painted BG enabled=false actual=RGB {45, 43, 85}
+PASS staging identity preserved
+PASS shades-of-purple real staging field 0 BG property enabled=true
+PASS shades-of-purple real staging field 0 FG property enabled=true
+PASS shades-of-purple real staging field 0 painted BG enabled=true actual=RGB {45, 43, 85}
+PASS staging identity preserved
+PASS shades-of-purple real staging field 1 BG property enabled=true
+PASS shades-of-purple real staging field 1 FG property enabled=true
+PASS shades-of-purple real staging field 1 painted BG enabled=true actual=RGB {45, 43, 85}
+PASS staging identity preserved
+PASS shades-of-purple real staging field 1 BG property enabled=false
+PASS shades-of-purple real staging field 1 FG property enabled=false
+PASS shades-of-purple real staging field 1 painted BG enabled=false actual=RGB {45, 43, 85}
+PASS staging identity preserved
+PASS shades-of-purple real staging field 1 BG property enabled=true
+PASS shades-of-purple real staging field 1 FG property enabled=true
+PASS shades-of-purple real staging field 1 painted BG enabled=true actual=RGB {45, 43, 85}
+PASS staging identity preserved
+PASS noctis-minimus editor business content has no selection hook or UI marks, listeners=1 initial=0 marks=false classes=[com._1c.g5.v8.dt.theming.ui.css.properties.CSSPropertySelectionHandler$TreeSelectionListener]
+PASS plain Tree has multiple rows
+PASS plain Tree active focus acquired
+PASS noctis-minimus plain Tree focused painted selection BG expected=RGB {42, 64, 77} got=RGB {42, 64, 77}
+PASS plain Tree focus moved away
+PASS noctis-minimus plain Tree inactive painted selection BG expected=RGB {42, 64, 77} got=RGB {42, 64, 77}
+PASS plain Tree multiselection intact
+PASS noctis-minimus plain Tree multi1 painted selection BG expected=RGB {42, 64, 77} got=RGB {42, 64, 77}
+PASS noctis-minimus plain Tree multi2 painted selection BG expected=RGB {42, 64, 77} got=RGB {42, 64, 77}
+PASS plain Tree deselected
+PASS plain Tree deselected row has normal background
+PASS JFace styled Tree has multiple rows
+PASS JFace styled Tree active focus acquired
+PASS noctis-minimus JFace styled Tree focused painted selection BG expected=RGB {42, 64, 77} got=RGB {42, 64, 77}
+PASS JFace styled Tree focus moved away
+PASS noctis-minimus JFace styled Tree inactive painted selection BG expected=RGB {42, 64, 77} got=RGB {42, 64, 77}
+PASS JFace styled Tree multiselection intact
+PASS noctis-minimus JFace styled Tree multi1 painted selection BG expected=RGB {42, 64, 77} got=RGB {42, 64, 77}
+PASS noctis-minimus JFace styled Tree multi2 painted selection BG expected=RGB {42, 64, 77} got=RGB {42, 64, 77}
+PASS JFace styled Tree deselected
+PASS JFace styled Tree deselected row has normal background
+PASS Table focus acquired
+PASS noctis-minimus Table focused painted selection BG expected=RGB {42, 64, 77} got=RGB {42, 64, 77}
+PASS noctis-minimus Table inactive painted selection BG expected=RGB {42, 64, 77} got=RGB {42, 64, 77}
+PASS Table deselected background
+PASS checkbox state preserved
+PASS noctis-minimus real staging field 0 BG property enabled=true
+PASS noctis-minimus real staging field 0 FG property enabled=true
+PASS noctis-minimus real staging field 0 painted BG enabled=true actual=RGB {27, 41, 50}
+PASS staging identity preserved
+PASS noctis-minimus real staging field 0 BG property enabled=false
+PASS noctis-minimus real staging field 0 FG property enabled=false
+PASS noctis-minimus real staging field 0 painted BG enabled=false actual=RGB {27, 41, 50}
+PASS staging identity preserved
+PASS noctis-minimus real staging field 0 BG property enabled=true
+PASS noctis-minimus real staging field 0 FG property enabled=true
+PASS noctis-minimus real staging field 0 painted BG enabled=true actual=RGB {27, 41, 50}
+PASS staging identity preserved
+PASS noctis-minimus real staging field 1 BG property enabled=true
+PASS noctis-minimus real staging field 1 FG property enabled=true
+PASS noctis-minimus real staging field 1 painted BG enabled=true actual=RGB {27, 41, 50}
+PASS staging identity preserved
+PASS noctis-minimus real staging field 1 BG property enabled=false
+PASS noctis-minimus real staging field 1 FG property enabled=false
+PASS noctis-minimus real staging field 1 painted BG enabled=false actual=RGB {27, 41, 50}
+PASS staging identity preserved
+PASS noctis-minimus real staging field 1 BG property enabled=true
+PASS noctis-minimus real staging field 1 FG property enabled=true
+PASS noctis-minimus real staging field 1 painted BG enabled=true actual=RGB {27, 41, 50}
+PASS staging identity preserved
+PASS visual-studio-dark-cpp editor business content has no selection hook or UI marks, listeners=1 initial=0 marks=false classes=[com._1c.g5.v8.dt.theming.ui.css.properties.CSSPropertySelectionHandler$TreeSelectionListener]
+PASS plain Tree has multiple rows
+PASS plain Tree active focus acquired
+PASS visual-studio-dark-cpp plain Tree focused painted selection BG expected=RGB {58, 61, 65} got=RGB {58, 61, 65}
+PASS plain Tree focus moved away
+PASS visual-studio-dark-cpp plain Tree inactive painted selection BG expected=RGB {58, 61, 65} got=RGB {58, 61, 65}
+PASS plain Tree multiselection intact
+PASS visual-studio-dark-cpp plain Tree multi1 painted selection BG expected=RGB {58, 61, 65} got=RGB {58, 61, 65}
+PASS visual-studio-dark-cpp plain Tree multi2 painted selection BG expected=RGB {58, 61, 65} got=RGB {58, 61, 65}
+PASS plain Tree deselected
+PASS plain Tree deselected row has normal background
+PASS JFace styled Tree has multiple rows
+PASS JFace styled Tree active focus acquired
+PASS visual-studio-dark-cpp JFace styled Tree focused painted selection BG expected=RGB {58, 61, 65} got=RGB {58, 61, 65}
+PASS JFace styled Tree focus moved away
+PASS visual-studio-dark-cpp JFace styled Tree inactive painted selection BG expected=RGB {58, 61, 65} got=RGB {58, 61, 65}
+PASS JFace styled Tree multiselection intact
+PASS visual-studio-dark-cpp JFace styled Tree multi1 painted selection BG expected=RGB {58, 61, 65} got=RGB {58, 61, 65}
+PASS visual-studio-dark-cpp JFace styled Tree multi2 painted selection BG expected=RGB {58, 61, 65} got=RGB {58, 61, 65}
+PASS JFace styled Tree deselected
+PASS JFace styled Tree deselected row has normal background
+PASS Table focus acquired
+PASS visual-studio-dark-cpp Table focused painted selection BG expected=RGB {58, 61, 65} got=RGB {58, 61, 65}
+PASS visual-studio-dark-cpp Table inactive painted selection BG expected=RGB {58, 61, 65} got=RGB {58, 61, 65}
+PASS Table deselected background
+PASS checkbox state preserved
+PASS visual-studio-dark-cpp real staging field 0 BG property enabled=true
+PASS visual-studio-dark-cpp real staging field 0 FG property enabled=true
+PASS visual-studio-dark-cpp real staging field 0 painted BG enabled=true actual=RGB {30, 30, 30}
+PASS staging identity preserved
+PASS visual-studio-dark-cpp real staging field 0 BG property enabled=false
+PASS visual-studio-dark-cpp real staging field 0 FG property enabled=false
+PASS visual-studio-dark-cpp real staging field 0 painted BG enabled=false actual=RGB {30, 30, 30}
+PASS staging identity preserved
+PASS visual-studio-dark-cpp real staging field 0 BG property enabled=true
+PASS visual-studio-dark-cpp real staging field 0 FG property enabled=true
+PASS visual-studio-dark-cpp real staging field 0 painted BG enabled=true actual=RGB {30, 30, 30}
+PASS staging identity preserved
+PASS visual-studio-dark-cpp real staging field 1 BG property enabled=true
+PASS visual-studio-dark-cpp real staging field 1 FG property enabled=true
+PASS visual-studio-dark-cpp real staging field 1 painted BG enabled=true actual=RGB {30, 30, 30}
+PASS staging identity preserved
+PASS visual-studio-dark-cpp real staging field 1 BG property enabled=false
+PASS visual-studio-dark-cpp real staging field 1 FG property enabled=false
+PASS visual-studio-dark-cpp real staging field 1 painted BG enabled=false actual=RGB {30, 30, 30}
+PASS staging identity preserved
+PASS visual-studio-dark-cpp real staging field 1 BG property enabled=true
+PASS visual-studio-dark-cpp real staging field 1 FG property enabled=true
+PASS visual-studio-dark-cpp real staging field 1 painted BG enabled=true actual=RGB {30, 30, 30}
+PASS staging identity preserved
+PASS github-light-default editor business content has no selection hook or UI marks, listeners=1 initial=0 marks=false classes=[com._1c.g5.v8.dt.theming.ui.css.properties.CSSPropertySelectionHandler$TreeSelectionListener]
+PASS plain Tree has multiple rows
+PASS plain Tree active focus acquired
+PASS github-light-default plain Tree focused painted selection BG expected=RGB {206, 225, 248} got=RGB {206, 225, 248}
+PASS plain Tree focus moved away
+PASS github-light-default plain Tree inactive painted selection BG expected=RGB {206, 225, 248} got=RGB {206, 225, 248}
+PASS plain Tree multiselection intact
+PASS github-light-default plain Tree multi1 painted selection BG expected=RGB {206, 225, 248} got=RGB {206, 225, 248}
+PASS github-light-default plain Tree multi2 painted selection BG expected=RGB {206, 225, 248} got=RGB {206, 225, 248}
+PASS plain Tree deselected
+PASS plain Tree deselected row has normal background
+PASS JFace styled Tree has multiple rows
+PASS JFace styled Tree active focus acquired
+PASS github-light-default JFace styled Tree focused painted selection BG expected=RGB {206, 225, 248} got=RGB {206, 225, 248}
+PASS JFace styled Tree focus moved away
+PASS github-light-default JFace styled Tree inactive painted selection BG expected=RGB {206, 225, 248} got=RGB {206, 225, 248}
+PASS JFace styled Tree multiselection intact
+PASS github-light-default JFace styled Tree multi1 painted selection BG expected=RGB {206, 225, 248} got=RGB {206, 225, 248}
+PASS github-light-default JFace styled Tree multi2 painted selection BG expected=RGB {206, 225, 248} got=RGB {206, 225, 248}
+PASS JFace styled Tree deselected
+PASS JFace styled Tree deselected row has normal background
+PASS Table focus acquired
+PASS github-light-default Table focused painted selection BG expected=RGB {206, 225, 248} got=RGB {206, 225, 248}
+PASS github-light-default Table inactive painted selection BG expected=RGB {206, 225, 248} got=RGB {206, 225, 248}
+PASS Table deselected background
+PASS checkbox state preserved
+PASS github-light-default real staging field 0 BG property enabled=true
+PASS github-light-default real staging field 0 FG property enabled=true
+PASS github-light-default real staging field 0 painted BG enabled=true actual=RGB {255, 255, 255}
+PASS staging identity preserved
+PASS github-light-default real staging field 0 BG property enabled=false
+PASS github-light-default real staging field 0 FG property enabled=false
+PASS github-light-default real staging field 0 painted BG enabled=false actual=RGB {255, 255, 255}
+PASS staging identity preserved
+PASS github-light-default real staging field 0 BG property enabled=true
+PASS github-light-default real staging field 0 FG property enabled=true
+PASS github-light-default real staging field 0 painted BG enabled=true actual=RGB {255, 255, 255}
+PASS staging identity preserved
+PASS github-light-default real staging field 1 BG property enabled=true
+PASS github-light-default real staging field 1 FG property enabled=true
+PASS github-light-default real staging field 1 painted BG enabled=true actual=RGB {255, 255, 255}
+PASS staging identity preserved
+PASS github-light-default real staging field 1 BG property enabled=false
+PASS github-light-default real staging field 1 FG property enabled=false
+PASS github-light-default real staging field 1 painted BG enabled=false actual=RGB {255, 255, 255}
+PASS staging identity preserved
+PASS github-light-default real staging field 1 BG property enabled=true
+PASS github-light-default real staging field 1 FG property enabled=true
+PASS github-light-default real staging field 1 painted BG enabled=true actual=RGB {255, 255, 255}
+PASS staging identity preserved
+PASS winter-is-coming-light editor business content has no selection hook or UI marks, listeners=1 initial=0 marks=false classes=[com._1c.g5.v8.dt.theming.ui.css.properties.CSSPropertySelectionHandler$TreeSelectionListener]
+PASS plain Tree has multiple rows
+PASS plain Tree active focus acquired
+PASS winter-is-coming-light plain Tree focused painted selection BG expected=RGB {206, 225, 240} got=RGB {206, 225, 240}
+PASS plain Tree focus moved away
+PASS winter-is-coming-light plain Tree inactive painted selection BG expected=RGB {206, 225, 240} got=RGB {206, 225, 240}
+PASS plain Tree multiselection intact
+PASS winter-is-coming-light plain Tree multi1 painted selection BG expected=RGB {206, 225, 240} got=RGB {206, 225, 240}
+PASS winter-is-coming-light plain Tree multi2 painted selection BG expected=RGB {206, 225, 240} got=RGB {206, 225, 240}
+PASS plain Tree deselected
+PASS plain Tree deselected row has normal background
+PASS JFace styled Tree has multiple rows
+PASS JFace styled Tree active focus acquired
+PASS winter-is-coming-light JFace styled Tree focused painted selection BG expected=RGB {206, 225, 240} got=RGB {206, 225, 240}
+PASS JFace styled Tree focus moved away
+PASS winter-is-coming-light JFace styled Tree inactive painted selection BG expected=RGB {206, 225, 240} got=RGB {206, 225, 240}
+PASS JFace styled Tree multiselection intact
+PASS winter-is-coming-light JFace styled Tree multi1 painted selection BG expected=RGB {206, 225, 240} got=RGB {206, 225, 240}
+PASS winter-is-coming-light JFace styled Tree multi2 painted selection BG expected=RGB {206, 225, 240} got=RGB {206, 225, 240}
+PASS JFace styled Tree deselected
+PASS JFace styled Tree deselected row has normal background
+PASS Table focus acquired
+PASS winter-is-coming-light Table focused painted selection BG expected=RGB {206, 225, 240} got=RGB {206, 225, 240}
+PASS winter-is-coming-light Table inactive painted selection BG expected=RGB {206, 225, 240} got=RGB {206, 225, 240}
+PASS Table deselected background
+PASS checkbox state preserved
+PASS winter-is-coming-light real staging field 0 BG property enabled=true
+PASS winter-is-coming-light real staging field 0 FG property enabled=true
+PASS winter-is-coming-light real staging field 0 painted BG enabled=true actual=RGB {255, 255, 255}
+PASS staging identity preserved
+PASS winter-is-coming-light real staging field 0 BG property enabled=false
+PASS winter-is-coming-light real staging field 0 FG property enabled=false
+PASS winter-is-coming-light real staging field 0 painted BG enabled=false actual=RGB {255, 255, 255}
+PASS staging identity preserved
+PASS winter-is-coming-light real staging field 0 BG property enabled=true
+PASS winter-is-coming-light real staging field 0 FG property enabled=true
+PASS winter-is-coming-light real staging field 0 painted BG enabled=true actual=RGB {255, 255, 255}
+PASS staging identity preserved
+PASS winter-is-coming-light real staging field 1 BG property enabled=true
+PASS winter-is-coming-light real staging field 1 FG property enabled=true
+PASS winter-is-coming-light real staging field 1 painted BG enabled=true actual=RGB {255, 255, 255}
+PASS staging identity preserved
+PASS winter-is-coming-light real staging field 1 BG property enabled=false
+PASS winter-is-coming-light real staging field 1 FG property enabled=false
+PASS winter-is-coming-light real staging field 1 painted BG enabled=false actual=RGB {255, 255, 255}
+PASS staging identity preserved
+PASS winter-is-coming-light real staging field 1 BG property enabled=true
+PASS winter-is-coming-light real staging field 1 FG property enabled=true
+PASS winter-is-coming-light real staging field 1 painted BG enabled=true actual=RGB {255, 255, 255}
+PASS staging identity preserved
+PASS night-owl-light editor business content has no selection hook or UI marks, listeners=1 initial=0 marks=false classes=[com._1c.g5.v8.dt.theming.ui.css.properties.CSSPropertySelectionHandler$TreeSelectionListener]
+PASS plain Tree has multiple rows
+PASS plain Tree active focus acquired
+PASS night-owl-light plain Tree focused painted selection BG expected=RGB {224, 224, 224} got=RGB {224, 224, 224}
+PASS plain Tree focus moved away
+PASS night-owl-light plain Tree inactive painted selection BG expected=RGB {224, 224, 224} got=RGB {224, 224, 224}
+PASS plain Tree multiselection intact
+PASS night-owl-light plain Tree multi1 painted selection BG expected=RGB {224, 224, 224} got=RGB {224, 224, 224}
+PASS night-owl-light plain Tree multi2 painted selection BG expected=RGB {224, 224, 224} got=RGB {224, 224, 224}
+PASS plain Tree deselected
+PASS plain Tree deselected row has normal background
+PASS JFace styled Tree has multiple rows
+PASS JFace styled Tree active focus acquired
+PASS night-owl-light JFace styled Tree focused painted selection BG expected=RGB {224, 224, 224} got=RGB {224, 224, 224}
+PASS JFace styled Tree focus moved away
+PASS night-owl-light JFace styled Tree inactive painted selection BG expected=RGB {224, 224, 224} got=RGB {224, 224, 224}
+PASS JFace styled Tree multiselection intact
+PASS night-owl-light JFace styled Tree multi1 painted selection BG expected=RGB {224, 224, 224} got=RGB {224, 224, 224}
+PASS night-owl-light JFace styled Tree multi2 painted selection BG expected=RGB {224, 224, 224} got=RGB {224, 224, 224}
+PASS JFace styled Tree deselected
+PASS JFace styled Tree deselected row has normal background
+PASS Table focus acquired
+PASS night-owl-light Table focused painted selection BG expected=RGB {224, 224, 224} got=RGB {224, 224, 224}
+PASS night-owl-light Table inactive painted selection BG expected=RGB {224, 224, 224} got=RGB {224, 224, 224}
+PASS Table deselected background
+PASS checkbox state preserved
+PASS night-owl-light real staging field 0 BG property enabled=true
+PASS night-owl-light real staging field 0 FG property enabled=true
+PASS night-owl-light real staging field 0 painted BG enabled=true actual=RGB {251, 251, 251}
+PASS staging identity preserved
+PASS night-owl-light real staging field 0 BG property enabled=false
+PASS night-owl-light real staging field 0 FG property enabled=false
+PASS night-owl-light real staging field 0 painted BG enabled=false actual=RGB {251, 251, 251}
+PASS staging identity preserved
+PASS night-owl-light real staging field 0 BG property enabled=true
+PASS night-owl-light real staging field 0 FG property enabled=true
+PASS night-owl-light real staging field 0 painted BG enabled=true actual=RGB {251, 251, 251}
+PASS staging identity preserved
+PASS night-owl-light real staging field 1 BG property enabled=true
+PASS night-owl-light real staging field 1 FG property enabled=true
+PASS night-owl-light real staging field 1 painted BG enabled=true actual=RGB {251, 251, 251}
+PASS staging identity preserved
+PASS night-owl-light real staging field 1 BG property enabled=false
+PASS night-owl-light real staging field 1 FG property enabled=false
+PASS night-owl-light real staging field 1 painted BG enabled=false actual=RGB {251, 251, 251}
+PASS staging identity preserved
+PASS night-owl-light real staging field 1 BG property enabled=true
+PASS night-owl-light real staging field 1 FG property enabled=true
+PASS night-owl-light real staging field 1 painted BG enabled=true actual=RGB {251, 251, 251}
+PASS staging identity preserved
+PASS ayu-light editor business content has no selection hook or UI marks, listeners=1 initial=0 marks=false classes=[com._1c.g5.v8.dt.theming.ui.css.properties.CSSPropertySelectionHandler$TreeSelectionListener]
+PASS plain Tree has multiple rows
+PASS plain Tree active focus acquired
+PASS ayu-light plain Tree focused painted selection BG expected=RGB {215, 228, 246} got=RGB {215, 228, 246}
+PASS plain Tree focus moved away
+PASS ayu-light plain Tree inactive painted selection BG expected=RGB {215, 228, 246} got=RGB {215, 228, 246}
+PASS plain Tree multiselection intact
+PASS ayu-light plain Tree multi1 painted selection BG expected=RGB {215, 228, 246} got=RGB {215, 228, 246}
+PASS ayu-light plain Tree multi2 painted selection BG expected=RGB {215, 228, 246} got=RGB {215, 228, 246}
+PASS plain Tree deselected
+PASS plain Tree deselected row has normal background
+PASS JFace styled Tree has multiple rows
+PASS JFace styled Tree active focus acquired
+PASS ayu-light JFace styled Tree focused painted selection BG expected=RGB {215, 228, 246} got=RGB {215, 228, 246}
+PASS JFace styled Tree focus moved away
+PASS ayu-light JFace styled Tree inactive painted selection BG expected=RGB {215, 228, 246} got=RGB {215, 228, 246}
+PASS JFace styled Tree multiselection intact
+PASS ayu-light JFace styled Tree multi1 painted selection BG expected=RGB {215, 228, 246} got=RGB {215, 228, 246}
+PASS ayu-light JFace styled Tree multi2 painted selection BG expected=RGB {215, 228, 246} got=RGB {215, 228, 246}
+PASS JFace styled Tree deselected
+PASS JFace styled Tree deselected row has normal background
+PASS Table focus acquired
+PASS ayu-light Table focused painted selection BG expected=RGB {215, 228, 246} got=RGB {215, 228, 246}
+PASS ayu-light Table inactive painted selection BG expected=RGB {215, 228, 246} got=RGB {215, 228, 246}
+PASS Table deselected background
+PASS checkbox state preserved
+PASS ayu-light real staging field 0 BG property enabled=true
+PASS ayu-light real staging field 0 FG property enabled=true
+PASS ayu-light real staging field 0 painted BG enabled=true actual=RGB {252, 252, 252}
+PASS staging identity preserved
+PASS ayu-light real staging field 0 BG property enabled=false
+PASS ayu-light real staging field 0 FG property enabled=false
+PASS ayu-light real staging field 0 painted BG enabled=false actual=RGB {252, 252, 252}
+PASS staging identity preserved
+PASS ayu-light real staging field 0 BG property enabled=true
+PASS ayu-light real staging field 0 FG property enabled=true
+PASS ayu-light real staging field 0 painted BG enabled=true actual=RGB {252, 252, 252}
+PASS staging identity preserved
+PASS ayu-light real staging field 1 BG property enabled=true
+PASS ayu-light real staging field 1 FG property enabled=true
+PASS ayu-light real staging field 1 painted BG enabled=true actual=RGB {252, 252, 252}
+PASS staging identity preserved
+PASS ayu-light real staging field 1 BG property enabled=false
+PASS ayu-light real staging field 1 FG property enabled=false
+PASS ayu-light real staging field 1 painted BG enabled=false actual=RGB {252, 252, 252}
+PASS staging identity preserved
+PASS ayu-light real staging field 1 BG property enabled=true
+PASS ayu-light real staging field 1 FG property enabled=true
+PASS ayu-light real staging field 1 painted BG enabled=true actual=RGB {252, 252, 252}
+PASS staging identity preserved
+PASS noctis-lux editor business content has no selection hook or UI marks, listeners=1 initial=0 marks=false classes=[com._1c.g5.v8.dt.theming.ui.css.properties.CSSPropertySelectionHandler$TreeSelectionListener]
+PASS plain Tree has multiple rows
+PASS plain Tree active focus acquired
+PASS noctis-lux plain Tree focused painted selection BG expected=RGB {182, 225, 231} got=RGB {182, 225, 231}
+PASS plain Tree focus moved away
+PASS noctis-lux plain Tree inactive painted selection BG expected=RGB {182, 225, 231} got=RGB {182, 225, 231}
+PASS plain Tree multiselection intact
+PASS noctis-lux plain Tree multi1 painted selection BG expected=RGB {182, 225, 231} got=RGB {182, 225, 231}
+PASS noctis-lux plain Tree multi2 painted selection BG expected=RGB {182, 225, 231} got=RGB {182, 225, 231}
+PASS plain Tree deselected
+PASS plain Tree deselected row has normal background
+PASS JFace styled Tree has multiple rows
+PASS JFace styled Tree active focus acquired
+PASS noctis-lux JFace styled Tree focused painted selection BG expected=RGB {182, 225, 231} got=RGB {182, 225, 231}
+PASS JFace styled Tree focus moved away
+PASS noctis-lux JFace styled Tree inactive painted selection BG expected=RGB {182, 225, 231} got=RGB {182, 225, 231}
+PASS JFace styled Tree multiselection intact
+PASS noctis-lux JFace styled Tree multi1 painted selection BG expected=RGB {182, 225, 231} got=RGB {182, 225, 231}
+PASS noctis-lux JFace styled Tree multi2 painted selection BG expected=RGB {182, 225, 231} got=RGB {182, 225, 231}
+PASS JFace styled Tree deselected
+PASS JFace styled Tree deselected row has normal background
+PASS Table focus acquired
+PASS noctis-lux Table focused painted selection BG expected=RGB {182, 225, 231} got=RGB {182, 225, 231}
+PASS noctis-lux Table inactive painted selection BG expected=RGB {182, 225, 231} got=RGB {182, 225, 231}
+PASS Table deselected background
+PASS checkbox state preserved
+PASS noctis-lux real staging field 0 BG property enabled=true
+PASS noctis-lux real staging field 0 FG property enabled=true
+PASS noctis-lux real staging field 0 painted BG enabled=true actual=RGB {254, 248, 236}
+PASS staging identity preserved
+PASS noctis-lux real staging field 0 BG property enabled=false
+PASS noctis-lux real staging field 0 FG property enabled=false
+PASS noctis-lux real staging field 0 painted BG enabled=false actual=RGB {254, 248, 236}
+PASS staging identity preserved
+PASS noctis-lux real staging field 0 BG property enabled=true
+PASS noctis-lux real staging field 0 FG property enabled=true
+PASS noctis-lux real staging field 0 painted BG enabled=true actual=RGB {254, 248, 236}
+PASS staging identity preserved
+PASS noctis-lux real staging field 1 BG property enabled=true
+PASS noctis-lux real staging field 1 FG property enabled=true
+PASS noctis-lux real staging field 1 painted BG enabled=true actual=RGB {254, 248, 236}
+PASS staging identity preserved
+PASS noctis-lux real staging field 1 BG property enabled=false
+PASS noctis-lux real staging field 1 FG property enabled=false
+PASS noctis-lux real staging field 1 painted BG enabled=false actual=RGB {254, 248, 236}
+PASS staging identity preserved
+PASS noctis-lux real staging field 1 BG property enabled=true
+PASS noctis-lux real staging field 1 FG property enabled=true
+PASS noctis-lux real staging field 1 painted BG enabled=true actual=RGB {254, 248, 236}
+PASS staging identity preserved
+PASS visual-studio-light-cpp editor business content has no selection hook or UI marks, listeners=1 initial=0 marks=false classes=[com._1c.g5.v8.dt.theming.ui.css.properties.CSSPropertySelectionHandler$TreeSelectionListener]
+PASS plain Tree has multiple rows
+PASS plain Tree active focus acquired
+PASS visual-studio-light-cpp plain Tree focused painted selection BG expected=RGB {173, 214, 255} got=RGB {173, 214, 255}
+PASS plain Tree focus moved away
+PASS visual-studio-light-cpp plain Tree inactive painted selection BG expected=RGB {173, 214, 255} got=RGB {173, 214, 255}
+PASS plain Tree multiselection intact
+PASS visual-studio-light-cpp plain Tree multi1 painted selection BG expected=RGB {173, 214, 255} got=RGB {173, 214, 255}
+PASS visual-studio-light-cpp plain Tree multi2 painted selection BG expected=RGB {173, 214, 255} got=RGB {173, 214, 255}
+PASS plain Tree deselected
+PASS plain Tree deselected row has normal background
+PASS JFace styled Tree has multiple rows
+PASS JFace styled Tree active focus acquired
+PASS visual-studio-light-cpp JFace styled Tree focused painted selection BG expected=RGB {173, 214, 255} got=RGB {173, 214, 255}
+PASS JFace styled Tree focus moved away
+PASS visual-studio-light-cpp JFace styled Tree inactive painted selection BG expected=RGB {173, 214, 255} got=RGB {173, 214, 255}
+PASS JFace styled Tree multiselection intact
+PASS visual-studio-light-cpp JFace styled Tree multi1 painted selection BG expected=RGB {173, 214, 255} got=RGB {173, 214, 255}
+PASS visual-studio-light-cpp JFace styled Tree multi2 painted selection BG expected=RGB {173, 214, 255} got=RGB {173, 214, 255}
+PASS JFace styled Tree deselected
+PASS JFace styled Tree deselected row has normal background
+PASS Table focus acquired
+PASS visual-studio-light-cpp Table focused painted selection BG expected=RGB {173, 214, 255} got=RGB {173, 214, 255}
+PASS visual-studio-light-cpp Table inactive painted selection BG expected=RGB {173, 214, 255} got=RGB {173, 214, 255}
+PASS Table deselected background
+PASS checkbox state preserved
+PASS visual-studio-light-cpp real staging field 0 BG property enabled=true
+PASS visual-studio-light-cpp real staging field 0 FG property enabled=true
+PASS visual-studio-light-cpp real staging field 0 painted BG enabled=true actual=RGB {255, 255, 255}
+PASS staging identity preserved
+PASS visual-studio-light-cpp real staging field 0 BG property enabled=false
+PASS visual-studio-light-cpp real staging field 0 FG property enabled=false
+PASS visual-studio-light-cpp real staging field 0 painted BG enabled=false actual=RGB {255, 255, 255}
+PASS staging identity preserved
+PASS visual-studio-light-cpp real staging field 0 BG property enabled=true
+PASS visual-studio-light-cpp real staging field 0 FG property enabled=true
+PASS visual-studio-light-cpp real staging field 0 painted BG enabled=true actual=RGB {255, 255, 255}
+PASS staging identity preserved
+PASS visual-studio-light-cpp real staging field 1 BG property enabled=true
+PASS visual-studio-light-cpp real staging field 1 FG property enabled=true
+PASS visual-studio-light-cpp real staging field 1 painted BG enabled=true actual=RGB {255, 255, 255}
+PASS staging identity preserved
+PASS visual-studio-light-cpp real staging field 1 BG property enabled=false
+PASS visual-studio-light-cpp real staging field 1 FG property enabled=false
+PASS visual-studio-light-cpp real staging field 1 painted BG enabled=false actual=RGB {255, 255, 255}
+PASS staging identity preserved
+PASS visual-studio-light-cpp real staging field 1 BG property enabled=true
+PASS visual-studio-light-cpp real staging field 1 FG property enabled=true
+PASS visual-studio-light-cpp real staging field 1 painted BG enabled=true actual=RGB {255, 255, 255}
+PASS staging identity preserved
+PASS noctis-hibernus editor business content has no selection hook or UI marks, listeners=1 initial=0 marks=false classes=[com._1c.g5.v8.dt.theming.ui.css.properties.CSSPropertySelectionHandler$TreeSelectionListener]
+PASS plain Tree has multiple rows
+PASS plain Tree active focus acquired
+PASS noctis-hibernus plain Tree focused painted selection BG expected=RGB {182, 225, 231} got=RGB {182, 225, 231}
+PASS plain Tree focus moved away
+PASS noctis-hibernus plain Tree inactive painted selection BG expected=RGB {182, 225, 231} got=RGB {182, 225, 231}
+PASS plain Tree multiselection intact
+PASS noctis-hibernus plain Tree multi1 painted selection BG expected=RGB {182, 225, 231} got=RGB {182, 225, 231}
+PASS noctis-hibernus plain Tree multi2 painted selection BG expected=RGB {182, 225, 231} got=RGB {182, 225, 231}
+PASS plain Tree deselected
+PASS plain Tree deselected row has normal background
+PASS JFace styled Tree has multiple rows
+PASS JFace styled Tree active focus acquired
+PASS noctis-hibernus JFace styled Tree focused painted selection BG expected=RGB {182, 225, 231} got=RGB {182, 225, 231}
+PASS JFace styled Tree focus moved away
+PASS noctis-hibernus JFace styled Tree inactive painted selection BG expected=RGB {182, 225, 231} got=RGB {182, 225, 231}
+PASS JFace styled Tree multiselection intact
+PASS noctis-hibernus JFace styled Tree multi1 painted selection BG expected=RGB {182, 225, 231} got=RGB {182, 225, 231}
+PASS noctis-hibernus JFace styled Tree multi2 painted selection BG expected=RGB {182, 225, 231} got=RGB {182, 225, 231}
+PASS JFace styled Tree deselected
+PASS JFace styled Tree deselected row has normal background
+PASS Table focus acquired
+PASS noctis-hibernus Table focused painted selection BG expected=RGB {182, 225, 231} got=RGB {182, 225, 231}
+PASS noctis-hibernus Table inactive painted selection BG expected=RGB {182, 225, 231} got=RGB {182, 225, 231}
+PASS Table deselected background
+PASS checkbox state preserved
+PASS noctis-hibernus real staging field 0 BG property enabled=true
+PASS noctis-hibernus real staging field 0 FG property enabled=true
+PASS noctis-hibernus real staging field 0 painted BG enabled=true actual=RGB {244, 246, 246}
+PASS staging identity preserved
+PASS noctis-hibernus real staging field 0 BG property enabled=false
+PASS noctis-hibernus real staging field 0 FG property enabled=false
+PASS noctis-hibernus real staging field 0 painted BG enabled=false actual=RGB {244, 246, 246}
+PASS staging identity preserved
+PASS noctis-hibernus real staging field 0 BG property enabled=true
+PASS noctis-hibernus real staging field 0 FG property enabled=true
+PASS noctis-hibernus real staging field 0 painted BG enabled=true actual=RGB {244, 246, 246}
+PASS staging identity preserved
+PASS noctis-hibernus real staging field 1 BG property enabled=true
+PASS noctis-hibernus real staging field 1 FG property enabled=true
+PASS noctis-hibernus real staging field 1 painted BG enabled=true actual=RGB {244, 246, 246}
+PASS staging identity preserved
+PASS noctis-hibernus real staging field 1 BG property enabled=false
+PASS noctis-hibernus real staging field 1 FG property enabled=false
+PASS noctis-hibernus real staging field 1 painted BG enabled=false actual=RGB {244, 246, 246}
+PASS staging identity preserved
+PASS noctis-hibernus real staging field 1 BG property enabled=true
+PASS noctis-hibernus real staging field 1 FG property enabled=true
+PASS noctis-hibernus real staging field 1 painted BG enabled=true actual=RGB {244, 246, 246}
+PASS staging identity preserved
+PASS noctis-lilac editor business content has no selection hook or UI marks, listeners=1 initial=0 marks=false classes=[com._1c.g5.v8.dt.theming.ui.css.properties.CSSPropertySelectionHandler$TreeSelectionListener]
+PASS plain Tree has multiple rows
+PASS plain Tree active focus acquired
+PASS noctis-lilac plain Tree focused painted selection BG expected=RGB {188, 182, 231} got=RGB {188, 182, 231}
+PASS plain Tree focus moved away
+PASS noctis-lilac plain Tree inactive painted selection BG expected=RGB {188, 182, 231} got=RGB {188, 182, 231}
+PASS plain Tree multiselection intact
+PASS noctis-lilac plain Tree multi1 painted selection BG expected=RGB {188, 182, 231} got=RGB {188, 182, 231}
+PASS noctis-lilac plain Tree multi2 painted selection BG expected=RGB {188, 182, 231} got=RGB {188, 182, 231}
+PASS plain Tree deselected
+PASS plain Tree deselected row has normal background
+PASS JFace styled Tree has multiple rows
+PASS JFace styled Tree active focus acquired
+PASS noctis-lilac JFace styled Tree focused painted selection BG expected=RGB {188, 182, 231} got=RGB {188, 182, 231}
+PASS JFace styled Tree focus moved away
+PASS noctis-lilac JFace styled Tree inactive painted selection BG expected=RGB {188, 182, 231} got=RGB {188, 182, 231}
+PASS JFace styled Tree multiselection intact
+PASS noctis-lilac JFace styled Tree multi1 painted selection BG expected=RGB {188, 182, 231} got=RGB {188, 182, 231}
+PASS noctis-lilac JFace styled Tree multi2 painted selection BG expected=RGB {188, 182, 231} got=RGB {188, 182, 231}
+PASS JFace styled Tree deselected
+PASS JFace styled Tree deselected row has normal background
+PASS Table focus acquired
+PASS noctis-lilac Table focused painted selection BG expected=RGB {188, 182, 231} got=RGB {188, 182, 231}
+PASS noctis-lilac Table inactive painted selection BG expected=RGB {188, 182, 231} got=RGB {188, 182, 231}
+PASS Table deselected background
+PASS checkbox state preserved
+PASS noctis-lilac real staging field 0 BG property enabled=true
+PASS noctis-lilac real staging field 0 FG property enabled=true
+PASS noctis-lilac real staging field 0 painted BG enabled=true actual=RGB {242, 241, 248}
+PASS staging identity preserved
+PASS noctis-lilac real staging field 0 BG property enabled=false
+PASS noctis-lilac real staging field 0 FG property enabled=false
+PASS noctis-lilac real staging field 0 painted BG enabled=false actual=RGB {242, 241, 248}
+PASS staging identity preserved
+PASS noctis-lilac real staging field 0 BG property enabled=true
+PASS noctis-lilac real staging field 0 FG property enabled=true
+PASS noctis-lilac real staging field 0 painted BG enabled=true actual=RGB {242, 241, 248}
+PASS staging identity preserved
+PASS noctis-lilac real staging field 1 BG property enabled=true
+PASS noctis-lilac real staging field 1 FG property enabled=true
+PASS noctis-lilac real staging field 1 painted BG enabled=true actual=RGB {242, 241, 248}
+PASS staging identity preserved
+PASS noctis-lilac real staging field 1 BG property enabled=false
+PASS noctis-lilac real staging field 1 FG property enabled=false
+PASS noctis-lilac real staging field 1 painted BG enabled=false actual=RGB {242, 241, 248}
+PASS staging identity preserved
+PASS noctis-lilac real staging field 1 BG property enabled=true
+PASS noctis-lilac real staging field 1 FG property enabled=true
+PASS noctis-lilac real staging field 1 painted BG enabled=true actual=RGB {242, 241, 248}
+PASS staging identity preserved
+PASS late Tree has multiple rows
+PASS late Tree active focus acquired
+PASS github-light-default late Tree focused painted selection BG expected=RGB {206, 225, 248} got=RGB {206, 225, 248}
+PASS late Tree focus moved away
+PASS github-light-default late Tree inactive painted selection BG expected=RGB {206, 225, 248} got=RGB {206, 225, 248}
+PASS late Tree multiselection intact
+PASS github-light-default late Tree multi1 painted selection BG expected=RGB {206, 225, 248} got=RGB {206, 225, 248}
+PASS github-light-default late Tree multi2 painted selection BG expected=RGB {206, 225, 248} got=RGB {206, 225, 248}
+PASS late Tree deselected
+PASS late Tree deselected row has normal background

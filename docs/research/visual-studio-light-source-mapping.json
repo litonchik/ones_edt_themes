@@ -1,0 +1,125 @@
+{
+  "source_commit": "3c14e3155a42976f765828b5ca2bbd9154a9aa54",
+  "ui_fallback_commit": "f725241620f540a7f750649713e710561fbabac8",
+  "files": {
+    "LICENSE.txt": "fe2be20a112a1c3a4601c89e443d694e8c35e1f8524398ac98228e0904fe9ec3",
+    "package.json": "3cffa6033445f1e93ae1792cfea80acc46c6f413b0e3267cb6d91f60d6dd0185",
+    "src_vs_platform_theme_common_colors_baseColors.ts": "e72545cdb7e38bb985bed726eab23f11500b48c5469d558f0386a475025cdc53",
+    "src_vs_platform_theme_common_colors_editorColors.ts": "7ab13775bd2af71322c8f95161b0c207318b898c611da6e2f832ed5c4e83bf37",
+    "src_vs_workbench_common_theme.ts": "7c1b61af075ac34a9966c87e284e7cd04eadcf566ddaf176ff36ce0980948c11",
+    "themes_cpptools_light_vs_new.json": "7d332b83da3a2005dfa9055fbe8c09678c292494efe23971d706164032b65d08"
+  },
+  "roles": {
+    "editor.background": {
+      "rgb": "#FFFFFF",
+      "source": "C/C++ editor.background"
+    },
+    "text": {
+      "rgb": "#000000",
+      "source": "C/C++ editor.foreground"
+    },
+    "panel": {
+      "rgb": "#F3F3F3",
+      "source": "VS Code Light sideBar.background; also C/C++ suggest widget"
+    },
+    "border": {
+      "rgb": "#E7E7E7",
+      "source": "VS Code Light editorGroup.border"
+    },
+    "selection.background": {
+      "rgb": "#ADD6FF",
+      "source": "VS Code Light editor.selectionBackground"
+    },
+    "selection.text": {
+      "rgb": "#000000",
+      "source": "editor.foreground; native selection foreground"
+    },
+    "line": {
+      "rgb": "#F3F3F3",
+      "source": "adapted filled current line from light UI surface; upstream uses border"
+    },
+    "comment": {
+      "rgb": "#007A00",
+      "source": "comment #008000 darkened"
+    },
+    "keyword": {
+      "rgb": "#0000FF",
+      "source": "generic keyword/storage; separate C++ control flow not modeled"
+    },
+    "string": {
+      "rgb": "#A31515",
+      "source": "string / semantic stringLiteral"
+    },
+    "number": {
+      "rgb": "#08784E",
+      "source": "constant.numeric / semantic numberLiteral #098658 darkened"
+    },
+    "directive": {
+      "rgb": "#8A1BFF",
+      "source": "entity.name.function.preprocessor (macro name)"
+    },
+    "accent": {
+      "rgb": "#006CB4",
+      "source": "activityBarBadge.background #007ACC darkened"
+    },
+    "error": {
+      "rgb": "#C42F2F",
+      "source": "invalid #CD3131 darkened"
+    },
+    "warning": {
+      "rgb": "#896102",
+      "source": "VS Code editorWarning.foreground #BF8803 darkened"
+    },
+    "disabled": {
+      "rgb": "#227189",
+      "source": "editorLineNumber.foreground #2B91AF darkened"
+    },
+    "hover": {
+      "rgb": "#E8E8E8",
+      "source": "list.hoverBackground"
+    }
+  },
+  "contrast": {
+    "text": {
+      "editor.background": 21.0,
+      "line": 18.925387067485328,
+      "hover": 17.13904515338503
+    },
+    "keyword": {
+      "editor.background": 8.592471358428805,
+      "line": 7.743611729740314,
+      "hover": 7.012702599584711
+    },
+    "comment": {
+      "editor.background": 5.549956491292769,
+      "line": 5.001670228829449,
+      "hover": 4.529569281123292
+    },
+    "number": {
+      "editor.background": 5.516263427549974,
+      "line": 4.9713057396474545,
+      "hover": 4.5020708553688324
+    },
+    "string": {
+      "editor.background": 7.849291236713627,
+      "line": 7.0738511838202855,
+      "hover": 6.406159853719252
+    },
+    "directive": {
+      "editor.background": 5.704308390337415,
+      "line": 5.140773535211417,
+      "hover": 4.655542812896478
+    },
+    "accent": {
+      "editor.background": 5.520385223758946,
+      "line": 4.97502033910784,
+      "hover": 4.50543483876591
+    },
+    "disabled": {
+      "editor.background": 5.539003441408876,
+      "line": 4.991799242704585,
+      "hover": 4.520630004145801
+    }
+  },
+  "license_equals_existing_notice": true
+}

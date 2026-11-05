@@ -22,7 +22,7 @@ are composited on the editor and panel backgrounds. Directive uses the
 constant color; warning uses the upstream warning validation border color.
 No upstream icons, fonts, stylesheets or executable code are included.
 
-GitHub Dark Default palette adaptation for 1C:EDT
+GitHub Dark Default and GitHub Light Default palette adaptations for 1C:EDT
 Source: primer/github-vscode-theme, version 6.3.5
 Commit: cd78e5e4e7bcf132a6f428ae0f32264bb1b729cf
 https://github.com/primer/github-vscode-theme/blob/cd78e5e4e7bcf132a6f428ae0f32264bb1b729cf/src/theme.js
@@ -32,17 +32,21 @@ License: MIT; full notice in licenses/github-theme-LICENSE.txt
 
 Color dependency: @primer/primitives 7.10.0, pinned by the source yarn.lock
 https://unpkg.com/@primer/primitives@7.10.0/dist/json/colors/dark.json
+https://unpkg.com/@primer/primitives@7.10.0/dist/json/colors/light.json
 Copyright (c) 2018 GitHub Inc.
 License: MIT; full notice in licenses/primer-primitives-LICENSE.txt
 
 The 17 roles include source dark overrides, composited selection/line/hover,
-and shared EDT/BSL accent and directive mappings. No upstream executable code,
+and shared EDT/BSL accent and directive mappings. Light uses canvas.subtle for
+panels and fg.muted for comments (contrast on the active line) and disabled text.
+No upstream executable code,
 icons, fonts or stylesheets are included.
 
-Winter is Coming (Dark Blue) palette adaptation for 1C:EDT
+Winter is Coming (Dark Blue) and Winter is Coming (Light) palette adaptations for 1C:EDT
 Source: johnpapa/vscode-winteriscoming, version 1.5.0
 Commit: 260547834cb6ac37dd5b8bb5842cc1c8d3164946
 https://github.com/johnpapa/vscode-winteriscoming/blob/260547834cb6ac37dd5b8bb5842cc1c8d3164946/themes/WinterIsComing-dark-blue-color-theme.json
+Light source: https://github.com/johnpapa/vscode-winteriscoming/blob/260547834cb6ac37dd5b8bb5842cc1c8d3164946/themes/WinterIsComing-light-color-theme.json
 Copyright (c) 2015-2017 JohnPapa.net, LLC
 License: MIT; full notice in licenses/winter-is-coming-LICENSE.txt
 
@@ -54,10 +58,11 @@ Directive uses keyword, accent uses the UI link, disabled uses line numbers,
 and hover uses editor hover highlight. Native BSL font styles are retained.
 No upstream executable code, icons, fonts or stylesheets are included.
 
-Night Owl palette adaptation for 1C:EDT
-Source: sdras/night-owl-vscode-theme, version 2.1.1 (dark)
+Night Owl and Night Owl Light palette adaptations for 1C:EDT
+Source: sdras/night-owl-vscode-theme, version 2.1.1 (dark and light)
 Commit: cc291eba7976b20d7c66bde6883c27b902196b07
 https://github.com/sdras/night-owl-vscode-theme/blob/cc291eba7976b20d7c66bde6883c27b902196b07/themes/Night%20Owl-color-theme.json
+Light source: https://github.com/sdras/night-owl-vscode-theme/blob/cc291eba7976b20d7c66bde6883c27b902196b07/themes/Night%20Owl-Light-color-theme.json
 Copyright (c) 2018 Sarah Drasner
 License: MIT; full notice in licenses/night-owl-LICENSE.txt
 
@@ -81,6 +86,21 @@ is composited on this adapted panel; selection on the editor background.
 Directive uses Storage; the shared accent retains the gold UI link.
 Disabled uses the opaque comment color, not disabledForeground alpha.
 Original muted comments and native BSL font styles are retained.
+No upstream executable code, icons, fonts or stylesheets are included.
+
+Ayu Light (Bordered) palette adaptation for 1C:EDT
+Source: ayu-theme/vscode-ayu, version 1.5.0; variant ID Ayu Light Bordered
+Commit: 7f438df22446f02e79cdfc2f3771b0b273f34654
+https://github.com/ayu-theme/vscode-ayu/blob/7f438df22446f02e79cdfc2f3771b0b273f34654/ayu-light.json
+Copyright (c) 2016 Ike Kurghinyan
+License: MIT; full notice in licenses/ayu-LICENSE.txt
+
+The editor, text, panel and hover use upstream opaque colors. Selection and
+line alpha are composited over the editor; editorGroup.border over the panel.
+Comment, keyword/storage, string, number, UI-link accent and error colors are
+darkened for light-surface text contrast; warning shares the adapted UI accent.
+Directive uses Storage, disabled uses the adapted comment. Native BSL font
+styles are retained. The existing Dark 1.4.1 palette is not updated.
 No upstream executable code, icons, fonts or stylesheets are included.
 
 Shades of Purple palette adaptation for 1C:EDT
@@ -111,6 +131,21 @@ MISC; shared accent retains the UI link. Disabled uses descriptionForeground.
 Original muted comments and native BSL font styles are retained.
 No upstream executable code, icons, fonts or stylesheets are included.
 
+Noctis Lux palette adaptation for 1C:EDT
+Source: liviuschera/noctis, version 10.43.3 (Lux)
+Commit: 4a82370b2c064e36726c23e94f27ed3782bd6ecd
+https://github.com/liviuschera/noctis/blob/4a82370b2c064e36726c23e94f27ed3782bd6ecd/themes/lux.json
+Copyright (c) 2018 Liviu Schera
+License: MIT; full notice in licenses/noctis-LICENSE.txt
+
+The cream editor, teal foreground, panel, border, hover and NUMBER are retained.
+Selection uses the opaque list.activeSelectionBackground to differ from the
+current line; line alpha is composited over the editor. Comment, KEYWORD,
+STRING, MISC directive, link accent, error and warning are darkened for contrast;
+disabled uses the adapted comment. Native BSL font styles are retained.
+Lux is a separate family variant, not a light Minimus. Hibernus/Lilac are not
+included. No upstream executable code, icons, fonts or stylesheets are included.
+
 Visual Studio Dark (C/C++) palette adaptation for 1C:EDT
 Source: microsoft/vscode-cpptools, C/C++ Themes version 2.1.0
 Variant: Dark (Visual Studio - C/C++), not 2017 Dark
@@ -125,3 +160,62 @@ selection. Directive uses the macro-name color. Missing UI states are
 adapted from available source colors; warning uses the warm string color,
 not an upstream VS Code warning color. Native BSL font styles are retained.
 No upstream executable code, icons, fonts or stylesheets are included.
+
+Winter Light retains upstream blue text, green comments, pink strings, dark blue
+numbers and light surfaces. Keyword/directive, error and warning are darkened
+for contrast. Selection text uses upstream UI foreground; disabled uses the
+editor foreground. Hover uses the opaque line highlight for readable blue text.
+Only palette data are adapted; upstream italic token styles are not applied.
+
+Night Owl Light retains the upstream editor, panel, border, selection and line
+surfaces, foreground and numeric color. Comment, keyword/directive, quoted string,
+library accent, error and warning roles are darkened for text contrast on the
+light line surface. Disabled uses the adapted comment; hover uses the opaque
+upstream editorHoverWidget background. No Italics is not a separate palette.
+
+Visual Studio Light (C/C++) palette adaptation for 1C:EDT
+Source: microsoft/vscode-cpptools, C/C++ Themes 2.1.0
+Variant: Light (Visual Studio - C/C++), not 2017 Light
+Commit: 3c14e3155a42976f765828b5ca2bbd9154a9aa54
+https://github.com/microsoft/vscode-cpptools/blob/3c14e3155a42976f765828b5ca2bbd9154a9aa54/Themes/themes/cpptools_light_vs_new.json
+Copyright (c) Microsoft Corporation. All rights reserved.
+License: MIT; full notice in licenses/visual-studio-dark-cpp-LICENSE.txt
+Upstream MIT notice is byte-identical to the one already included for Dark.
+
+UI fallbacks: Microsoft VS Code light defaults, commit
+f725241620f540a7f750649713e710561fbabac8, platform/theme/common/colors
+and workbench/common/theme.ts. No upstream executable code is included.
+Keyword uses generic blue; the separate C++ control-flow override is not modeled
+by BSL's single keyword role. Directive uses the macro-name violet. Selection
+uses the light default; panel uses sidebar default and line uses a light fill.
+Comment, number, accent, error, warning and blue disabled/line numbers are
+slightly darkened to keep at least 4.5:1 on editor, current line and hover.
+Native BSL font styles remain in force. No icons/fonts/stylesheets are included.
+
+Noctis Hibernus palette adaptation for 1C:EDT
+Source: liviuschera/noctis, Noctis 10.43.3
+Commit: 4a82370b2c064e36726c23e94f27ed3782bd6ecd
+https://github.com/liviuschera/noctis/blob/4a82370b2c064e36726c23e94f27ed3782bd6ecd/themes/hibernus.json
+Copyright (c) 2018 Liviu Schera
+License: MIT; full notice in licenses/noctis-LICENSE.txt
+The upstream notice is byte-identical to the one already included for Minimus/Lux.
+The 17 EDT roles use editor/sidebar/hover UI colors. Current-line alpha is
+composited over editor background; selection uses the opaque list selection
+for distinction from the current line. Text colors are darkened when needed
+for at least 4.6:1 on editor/line/hover; error/warning use the panel background.
+Directive uses MISC as in the other Noctis adaptations; native BSL font styles
+remain in force. No upstream executable code, icons, fonts or CSS is included.
+
+Noctis Lilac palette adaptation for 1C:EDT
+Source: liviuschera/noctis, Noctis 10.43.3
+Commit: 4a82370b2c064e36726c23e94f27ed3782bd6ecd
+https://github.com/liviuschera/noctis/blob/4a82370b2c064e36726c23e94f27ed3782bd6ecd/themes/lilac.json
+Copyright (c) 2018 Liviu Schera
+License: MIT; full notice in licenses/noctis-LICENSE.txt
+Upstream MIT notice matches the one already included for Minimus/Lux/Hibernus.
+Editor/sidebar/hover colors are preserved. Current-line alpha is composited
+over editor background; selection uses the opaque list selection as in Lux
+and Hibernus. Text roles (including number) are darkened where necessary for
+at least 4.6:1 on editor/line/hover; error/warning use panel background.
+Directive uses MISC and disabled uses adapted COMMENT. Native BSL font styles
+remain in force. No upstream executable code, icons, fonts or CSS is included.

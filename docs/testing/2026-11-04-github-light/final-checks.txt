@@ -1,0 +1,5 @@
+PASS 85 unit tests; 0 failures/errors
+PASS no own presentation exception frames in final runtime logs
+PASS git diff --check
+PASS ZIP SHA-256 
+C664C6461CA5D98F494F02B3ABA990A887709A44FEB85E06B08E613CEFB1D641

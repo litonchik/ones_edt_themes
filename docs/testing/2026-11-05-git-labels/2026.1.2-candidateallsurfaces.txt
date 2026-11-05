@@ -1,0 +1,1138 @@
+JVM 17.0.18
+PASS font preference page exists
+PASS font size selector exists
+PASS theme preference page renders profile, font and palette controls
+PASS standard surface baseline clears test personal variant darcula
+PASS standard surface baseline clears test personal variant monokai
+PASS standard surface baseline clears test personal variant one-dark-pro
+PASS standard surface baseline clears test personal variant dracula
+PASS standard surface baseline clears test personal variant github-dark-default
+PASS standard surface baseline clears test personal variant winter-is-coming-dark-blue
+PASS standard surface baseline clears test personal variant night-owl
+PASS standard surface baseline clears test personal variant ayu-dark
+PASS standard surface baseline clears test personal variant shades-of-purple
+PASS standard surface baseline clears test personal variant noctis-minimus
+PASS standard surface baseline clears test personal variant visual-studio-dark-cpp
+PASS standard surface baseline clears test personal variant github-light-default
+PASS standard surface baseline clears test personal variant winter-is-coming-light
+PASS standard surface baseline clears test personal variant night-owl-light
+PASS standard surface baseline clears test personal variant ayu-light
+PASS standard surface baseline clears test personal variant noctis-lux
+PASS standard surface baseline clears test personal variant visual-studio-light-cpp
+PASS standard surface baseline clears test personal variant noctis-hibernus
+PASS standard surface baseline clears test personal variant noctis-lilac
+PASS BSL editor opened on test fixture
+PASS surfaces BSL fixture
+PASS sample.txt native text viewer
+OBS sample.txt bg=RGB {30, 30, 30} fg=RGB {218, 218, 218} token=ВЫБРАТЬ color=RGB {218, 218, 218}
+PASS safe capture visible control intersection: surface-sample.txt
+PASS sample.ql native text viewer
+QUERY SOURCE // Комментарий
+ВЫБРАТЬ ПЕРВЫЕ 123
+    Тест.Поле КАК Текст
+ИЗ Справочник.Тест КАК Тест
+ГДЕ Тест.Поле ПОДОБНО "строка"
+    И Тест.Поле = &Параметр
+QUERY CALCULATORS legacy=com._1c.g5.v8.dt.ql.ui.syntaxcoloring.QlSemanticHighlightingCalculator modern=org.eclipse.xtext.ide.editor.syntaxcoloring.DefaultSemanticHighlightingCalculator language=com._1c.g5.v8.dt.ql.Ql
+QUERY NUMBER NODE 123 grammar=NUMBER
+OBS query initial number bg=RGB {30, 30, 30} fg=RGB {218, 218, 218} token=123 color=RGB {218, 218, 218}
+OBS query initial string bg=RGB {30, 30, 30} fg=RGB {218, 218, 218} token=строка color=RGB {206, 145, 120}
+OBS sample.ql bg=RGB {30, 30, 30} fg=RGB {218, 218, 218} token=ВЫБРАТЬ color=RGB {86, 156, 214}
+PASS safe capture visible control intersection: surface-sample.ql
+PASS sample.qldcs native text viewer
+OBS sample.qldcs bg=RGB {30, 30, 30} fg=RGB {218, 218, 218} token=ВЫБРАТЬ color=RGB {86, 156, 214}
+PASS safe capture visible control intersection: surface-sample.qldcs
+PASS query constructor QL and DCS real embedded text controls
+OBS constructor-0 bg=RGB {30, 30, 30} fg=RGB {218, 218, 218} token=ВЫБРАТЬ color=RGB {86, 156, 214}
+OBS constructor-1 bg=RGB {30, 30, 30} fg=RGB {218, 218, 218} token=ВЫБРАТЬ color=RGB {86, 156, 214}
+OBS candidate settled query 0 bg=RGB {43, 43, 43} fg=RGB {169, 183, 198} token=ВЫБРАТЬ color=RGB {204, 120, 50}
+OBS candidate settled query 1 bg=RGB {43, 43, 43} fg=RGB {169, 183, 198} token=ВЫБРАТЬ color=RGB {204, 120, 50}
+OBS candidate settled query 2 bg=RGB {43, 43, 43} fg=RGB {169, 183, 198} token=ВЫБРАТЬ color=RGB {204, 120, 50}
+OBS candidate settled query 3 bg=RGB {43, 43, 43} fg=RGB {169, 183, 198} token=ВЫБРАТЬ color=RGB {204, 120, 50}
+PASS darcula query surface 0 background
+PASS darcula query surface 0 foreground
+PASS darcula query surface 0 selection background expected=RGB {33, 66, 131} actual=RGB {33, 66, 131}
+PASS darcula query surface 0 selection foreground expected=RGB {255, 255, 255} actual=RGB {255, 255, 255}
+PASS darcula query surface 0 keyword
+PASS darcula query surface 0 native NUMBER text role expected=RGB {169, 183, 198} actual=RGB {169, 183, 198}
+PASS darcula query surface 0 string expected=RGB {106, 135, 89} actual=RGB {106, 135, 89}
+PASS darcula query surface 0 comment expected=RGB {128, 128, 128} actual=RGB {128, 128, 128}
+PASS darcula query surface 0 parameter expected=RGB {187, 181, 41} actual=RGB {187, 181, 41}
+PASS darcula query surface 0 identifier expected=RGB {169, 183, 198} actual=RGB {169, 183, 198}
+PASS darcula query surface 0 source unchanged
+PASS darcula query surface 1 background
+PASS darcula query surface 1 foreground
+PASS darcula query surface 1 selection background expected=RGB {33, 66, 131} actual=RGB {33, 66, 131}
+PASS darcula query surface 1 selection foreground expected=RGB {255, 255, 255} actual=RGB {255, 255, 255}
+PASS darcula query surface 1 keyword
+PASS darcula query surface 1 native NUMBER text role expected=RGB {169, 183, 198} actual=RGB {169, 183, 198}
+PASS darcula query surface 1 string expected=RGB {106, 135, 89} actual=RGB {106, 135, 89}
+PASS darcula query surface 1 comment expected=RGB {128, 128, 128} actual=RGB {128, 128, 128}
+PASS darcula query surface 1 parameter expected=RGB {187, 181, 41} actual=RGB {187, 181, 41}
+PASS darcula query surface 1 identifier expected=RGB {169, 183, 198} actual=RGB {169, 183, 198}
+PASS darcula query surface 1 source unchanged
+PASS darcula query surface 2 background
+PASS darcula query surface 2 foreground
+PASS darcula query surface 2 selection background expected=RGB {33, 66, 131} actual=RGB {33, 66, 131}
+PASS darcula query surface 2 selection foreground expected=RGB {255, 255, 255} actual=RGB {255, 255, 255}
+PASS darcula query surface 2 keyword
+PASS darcula query surface 2 native NUMBER text role expected=RGB {169, 183, 198} actual=RGB {169, 183, 198}
+PASS darcula query surface 2 string expected=RGB {106, 135, 89} actual=RGB {106, 135, 89}
+PASS darcula query surface 2 comment expected=RGB {128, 128, 128} actual=RGB {128, 128, 128}
+PASS darcula query surface 2 parameter expected=RGB {187, 181, 41} actual=RGB {187, 181, 41}
+PASS darcula query surface 2 identifier expected=RGB {169, 183, 198} actual=RGB {169, 183, 198}
+PASS darcula query surface 2 source unchanged
+PASS darcula query surface 3 background
+PASS darcula query surface 3 foreground
+PASS darcula query surface 3 selection background expected=RGB {33, 66, 131} actual=RGB {33, 66, 131}
+PASS darcula query surface 3 selection foreground expected=RGB {255, 255, 255} actual=RGB {255, 255, 255}
+PASS darcula query surface 3 keyword
+PASS darcula query surface 3 native NUMBER text role expected=RGB {169, 183, 198} actual=RGB {169, 183, 198}
+PASS darcula query surface 3 string expected=RGB {106, 135, 89} actual=RGB {106, 135, 89}
+PASS darcula query surface 3 comment expected=RGB {128, 128, 128} actual=RGB {128, 128, 128}
+PASS darcula query surface 3 parameter expected=RGB {187, 181, 41} actual=RGB {187, 181, 41}
+PASS darcula query surface 3 identifier expected=RGB {169, 183, 198} actual=RGB {169, 183, 198}
+PASS darcula query surface 3 source unchanged
+OBS candidate settled query 0 bg=RGB {39, 40, 34} fg=RGB {248, 248, 242} token=ВЫБРАТЬ color=RGB {249, 38, 114}
+OBS candidate settled query 1 bg=RGB {39, 40, 34} fg=RGB {248, 248, 242} token=ВЫБРАТЬ color=RGB {249, 38, 114}
+OBS candidate settled query 2 bg=RGB {39, 40, 34} fg=RGB {248, 248, 242} token=ВЫБРАТЬ color=RGB {249, 38, 114}
+OBS candidate settled query 3 bg=RGB {39, 40, 34} fg=RGB {248, 248, 242} token=ВЫБРАТЬ color=RGB {249, 38, 114}
+PASS monokai query surface 0 background
+PASS monokai query surface 0 foreground
+PASS monokai query surface 0 selection background expected=RGB {73, 72, 62} actual=RGB {73, 72, 62}
+PASS monokai query surface 0 selection foreground expected=RGB {248, 248, 242} actual=RGB {248, 248, 242}
+PASS monokai query surface 0 keyword
+PASS monokai query surface 0 native NUMBER text role expected=RGB {248, 248, 242} actual=RGB {248, 248, 242}
+PASS monokai query surface 0 string expected=RGB {230, 219, 116} actual=RGB {230, 219, 116}
+PASS monokai query surface 0 comment expected=RGB {117, 113, 94} actual=RGB {117, 113, 94}
+PASS monokai query surface 0 parameter expected=RGB {166, 226, 46} actual=RGB {166, 226, 46}
+PASS monokai query surface 0 identifier expected=RGB {248, 248, 242} actual=RGB {248, 248, 242}
+PASS monokai query surface 0 source unchanged
+PASS monokai query surface 1 background
+PASS monokai query surface 1 foreground
+PASS monokai query surface 1 selection background expected=RGB {73, 72, 62} actual=RGB {73, 72, 62}
+PASS monokai query surface 1 selection foreground expected=RGB {248, 248, 242} actual=RGB {248, 248, 242}
+PASS monokai query surface 1 keyword
+PASS monokai query surface 1 native NUMBER text role expected=RGB {248, 248, 242} actual=RGB {248, 248, 242}
+PASS monokai query surface 1 string expected=RGB {230, 219, 116} actual=RGB {230, 219, 116}
+PASS monokai query surface 1 comment expected=RGB {117, 113, 94} actual=RGB {117, 113, 94}
+PASS monokai query surface 1 parameter expected=RGB {166, 226, 46} actual=RGB {166, 226, 46}
+PASS monokai query surface 1 identifier expected=RGB {248, 248, 242} actual=RGB {248, 248, 242}
+PASS monokai query surface 1 source unchanged
+PASS monokai query surface 2 background
+PASS monokai query surface 2 foreground
+PASS monokai query surface 2 selection background expected=RGB {73, 72, 62} actual=RGB {73, 72, 62}
+PASS monokai query surface 2 selection foreground expected=RGB {248, 248, 242} actual=RGB {248, 248, 242}
+PASS monokai query surface 2 keyword
+PASS monokai query surface 2 native NUMBER text role expected=RGB {248, 248, 242} actual=RGB {248, 248, 242}
+PASS monokai query surface 2 string expected=RGB {230, 219, 116} actual=RGB {230, 219, 116}
+PASS monokai query surface 2 comment expected=RGB {117, 113, 94} actual=RGB {117, 113, 94}
+PASS monokai query surface 2 parameter expected=RGB {166, 226, 46} actual=RGB {166, 226, 46}
+PASS monokai query surface 2 identifier expected=RGB {248, 248, 242} actual=RGB {248, 248, 242}
+PASS monokai query surface 2 source unchanged
+PASS monokai query surface 3 background
+PASS monokai query surface 3 foreground
+PASS monokai query surface 3 selection background expected=RGB {73, 72, 62} actual=RGB {73, 72, 62}
+PASS monokai query surface 3 selection foreground expected=RGB {248, 248, 242} actual=RGB {248, 248, 242}
+PASS monokai query surface 3 keyword
+PASS monokai query surface 3 native NUMBER text role expected=RGB {248, 248, 242} actual=RGB {248, 248, 242}
+PASS monokai query surface 3 string expected=RGB {230, 219, 116} actual=RGB {230, 219, 116}
+PASS monokai query surface 3 comment expected=RGB {117, 113, 94} actual=RGB {117, 113, 94}
+PASS monokai query surface 3 parameter expected=RGB {166, 226, 46} actual=RGB {166, 226, 46}
+PASS monokai query surface 3 identifier expected=RGB {248, 248, 242} actual=RGB {248, 248, 242}
+PASS monokai query surface 3 source unchanged
+OBS candidate settled query 0 bg=RGB {40, 44, 52} fg=RGB {171, 178, 191} token=ВЫБРАТЬ color=RGB {198, 120, 221}
+OBS candidate settled query 1 bg=RGB {40, 44, 52} fg=RGB {171, 178, 191} token=ВЫБРАТЬ color=RGB {198, 120, 221}
+OBS candidate settled query 2 bg=RGB {40, 44, 52} fg=RGB {171, 178, 191} token=ВЫБРАТЬ color=RGB {198, 120, 221}
+OBS candidate settled query 3 bg=RGB {40, 44, 52} fg=RGB {171, 178, 191} token=ВЫБРАТЬ color=RGB {198, 120, 221}
+PASS one-dark-pro query surface 0 background
+PASS one-dark-pro query surface 0 foreground
+PASS one-dark-pro query surface 0 selection background expected=RGB {64, 72, 89} actual=RGB {64, 72, 89}
+PASS one-dark-pro query surface 0 selection foreground expected=RGB {215, 218, 224} actual=RGB {215, 218, 224}
+PASS one-dark-pro query surface 0 keyword
+PASS one-dark-pro query surface 0 native NUMBER text role expected=RGB {171, 178, 191} actual=RGB {171, 178, 191}
+PASS one-dark-pro query surface 0 string expected=RGB {152, 195, 121} actual=RGB {152, 195, 121}
+PASS one-dark-pro query surface 0 comment expected=RGB {127, 132, 142} actual=RGB {127, 132, 142}
+PASS one-dark-pro query surface 0 parameter expected=RGB {229, 192, 123} actual=RGB {229, 192, 123}
+PASS one-dark-pro query surface 0 identifier expected=RGB {171, 178, 191} actual=RGB {171, 178, 191}
+PASS one-dark-pro query surface 0 source unchanged
+PASS one-dark-pro query surface 1 background
+PASS one-dark-pro query surface 1 foreground
+PASS one-dark-pro query surface 1 selection background expected=RGB {64, 72, 89} actual=RGB {64, 72, 89}
+PASS one-dark-pro query surface 1 selection foreground expected=RGB {215, 218, 224} actual=RGB {215, 218, 224}
+PASS one-dark-pro query surface 1 keyword
+PASS one-dark-pro query surface 1 native NUMBER text role expected=RGB {171, 178, 191} actual=RGB {171, 178, 191}
+PASS one-dark-pro query surface 1 string expected=RGB {152, 195, 121} actual=RGB {152, 195, 121}
+PASS one-dark-pro query surface 1 comment expected=RGB {127, 132, 142} actual=RGB {127, 132, 142}
+PASS one-dark-pro query surface 1 parameter expected=RGB {229, 192, 123} actual=RGB {229, 192, 123}
+PASS one-dark-pro query surface 1 identifier expected=RGB {171, 178, 191} actual=RGB {171, 178, 191}
+PASS one-dark-pro query surface 1 source unchanged
+PASS one-dark-pro query surface 2 background
+PASS one-dark-pro query surface 2 foreground
+PASS one-dark-pro query surface 2 selection background expected=RGB {64, 72, 89} actual=RGB {64, 72, 89}
+PASS one-dark-pro query surface 2 selection foreground expected=RGB {215, 218, 224} actual=RGB {215, 218, 224}
+PASS one-dark-pro query surface 2 keyword
+PASS one-dark-pro query surface 2 native NUMBER text role expected=RGB {171, 178, 191} actual=RGB {171, 178, 191}
+PASS one-dark-pro query surface 2 string expected=RGB {152, 195, 121} actual=RGB {152, 195, 121}
+PASS one-dark-pro query surface 2 comment expected=RGB {127, 132, 142} actual=RGB {127, 132, 142}
+PASS one-dark-pro query surface 2 parameter expected=RGB {229, 192, 123} actual=RGB {229, 192, 123}
+PASS one-dark-pro query surface 2 identifier expected=RGB {171, 178, 191} actual=RGB {171, 178, 191}
+PASS one-dark-pro query surface 2 source unchanged
+PASS one-dark-pro query surface 3 background
+PASS one-dark-pro query surface 3 foreground
+PASS one-dark-pro query surface 3 selection background expected=RGB {64, 72, 89} actual=RGB {64, 72, 89}
+PASS one-dark-pro query surface 3 selection foreground expected=RGB {215, 218, 224} actual=RGB {215, 218, 224}
+PASS one-dark-pro query surface 3 keyword
+PASS one-dark-pro query surface 3 native NUMBER text role expected=RGB {171, 178, 191} actual=RGB {171, 178, 191}
+PASS one-dark-pro query surface 3 string expected=RGB {152, 195, 121} actual=RGB {152, 195, 121}
+PASS one-dark-pro query surface 3 comment expected=RGB {127, 132, 142} actual=RGB {127, 132, 142}
+PASS one-dark-pro query surface 3 parameter expected=RGB {229, 192, 123} actual=RGB {229, 192, 123}
+PASS one-dark-pro query surface 3 identifier expected=RGB {171, 178, 191} actual=RGB {171, 178, 191}
+PASS one-dark-pro query surface 3 source unchanged
+OBS candidate settled query 0 bg=RGB {40, 42, 54} fg=RGB {248, 248, 242} token=ВЫБРАТЬ color=RGB {255, 121, 198}
+OBS candidate settled query 1 bg=RGB {40, 42, 54} fg=RGB {248, 248, 242} token=ВЫБРАТЬ color=RGB {255, 121, 198}
+OBS candidate settled query 2 bg=RGB {40, 42, 54} fg=RGB {248, 248, 242} token=ВЫБРАТЬ color=RGB {255, 121, 198}
+OBS candidate settled query 3 bg=RGB {40, 42, 54} fg=RGB {248, 248, 242} token=ВЫБРАТЬ color=RGB {255, 121, 198}
+PASS dracula query surface 0 background
+PASS dracula query surface 0 foreground
+PASS dracula query surface 0 selection background expected=RGB {68, 71, 90} actual=RGB {68, 71, 90}
+PASS dracula query surface 0 selection foreground expected=RGB {248, 248, 242} actual=RGB {248, 248, 242}
+PASS dracula query surface 0 keyword
+PASS dracula query surface 0 native NUMBER text role expected=RGB {248, 248, 242} actual=RGB {248, 248, 242}
+PASS dracula query surface 0 string expected=RGB {241, 250, 140} actual=RGB {241, 250, 140}
+PASS dracula query surface 0 comment expected=RGB {98, 114, 164} actual=RGB {98, 114, 164}
+PASS dracula query surface 0 parameter expected=RGB {189, 147, 249} actual=RGB {189, 147, 249}
+PASS dracula query surface 0 identifier expected=RGB {248, 248, 242} actual=RGB {248, 248, 242}
+PASS dracula query surface 0 source unchanged
+PASS dracula query surface 1 background
+PASS dracula query surface 1 foreground
+PASS dracula query surface 1 selection background expected=RGB {68, 71, 90} actual=RGB {68, 71, 90}
+PASS dracula query surface 1 selection foreground expected=RGB {248, 248, 242} actual=RGB {248, 248, 242}
+PASS dracula query surface 1 keyword
+PASS dracula query surface 1 native NUMBER text role expected=RGB {248, 248, 242} actual=RGB {248, 248, 242}
+PASS dracula query surface 1 string expected=RGB {241, 250, 140} actual=RGB {241, 250, 140}
+PASS dracula query surface 1 comment expected=RGB {98, 114, 164} actual=RGB {98, 114, 164}
+PASS dracula query surface 1 parameter expected=RGB {189, 147, 249} actual=RGB {189, 147, 249}
+PASS dracula query surface 1 identifier expected=RGB {248, 248, 242} actual=RGB {248, 248, 242}
+PASS dracula query surface 1 source unchanged
+PASS dracula query surface 2 background
+PASS dracula query surface 2 foreground
+PASS dracula query surface 2 selection background expected=RGB {68, 71, 90} actual=RGB {68, 71, 90}
+PASS dracula query surface 2 selection foreground expected=RGB {248, 248, 242} actual=RGB {248, 248, 242}
+PASS dracula query surface 2 keyword
+PASS dracula query surface 2 native NUMBER text role expected=RGB {248, 248, 242} actual=RGB {248, 248, 242}
+PASS dracula query surface 2 string expected=RGB {241, 250, 140} actual=RGB {241, 250, 140}
+PASS dracula query surface 2 comment expected=RGB {98, 114, 164} actual=RGB {98, 114, 164}
+PASS dracula query surface 2 parameter expected=RGB {189, 147, 249} actual=RGB {189, 147, 249}
+PASS dracula query surface 2 identifier expected=RGB {248, 248, 242} actual=RGB {248, 248, 242}
+PASS dracula query surface 2 source unchanged
+PASS dracula query surface 3 background
+PASS dracula query surface 3 foreground
+PASS dracula query surface 3 selection background expected=RGB {68, 71, 90} actual=RGB {68, 71, 90}
+PASS dracula query surface 3 selection foreground expected=RGB {248, 248, 242} actual=RGB {248, 248, 242}
+PASS dracula query surface 3 keyword
+PASS dracula query surface 3 native NUMBER text role expected=RGB {248, 248, 242} actual=RGB {248, 248, 242}
+PASS dracula query surface 3 string expected=RGB {241, 250, 140} actual=RGB {241, 250, 140}
+PASS dracula query surface 3 comment expected=RGB {98, 114, 164} actual=RGB {98, 114, 164}
+PASS dracula query surface 3 parameter expected=RGB {189, 147, 249} actual=RGB {189, 147, 249}
+PASS dracula query surface 3 identifier expected=RGB {248, 248, 242} actual=RGB {248, 248, 242}
+PASS dracula query surface 3 source unchanged
+OBS candidate settled query 0 bg=RGB {13, 17, 23} fg=RGB {230, 237, 243} token=ВЫБРАТЬ color=RGB {255, 123, 114}
+OBS candidate settled query 1 bg=RGB {13, 17, 23} fg=RGB {230, 237, 243} token=ВЫБРАТЬ color=RGB {255, 123, 114}
+OBS candidate settled query 2 bg=RGB {13, 17, 23} fg=RGB {230, 237, 243} token=ВЫБРАТЬ color=RGB {255, 123, 114}
+OBS candidate settled query 3 bg=RGB {13, 17, 23} fg=RGB {230, 237, 243} token=ВЫБРАТЬ color=RGB {255, 123, 114}
+PASS github-dark-default query surface 0 background
+PASS github-dark-default query surface 0 foreground
+PASS github-dark-default query surface 0 selection background expected=RGB {20, 39, 68} actual=RGB {20, 39, 68}
+PASS github-dark-default query surface 0 selection foreground expected=RGB {230, 237, 243} actual=RGB {230, 237, 243}
+PASS github-dark-default query surface 0 keyword
+PASS github-dark-default query surface 0 native NUMBER text role expected=RGB {230, 237, 243} actual=RGB {230, 237, 243}
+PASS github-dark-default query surface 0 string expected=RGB {165, 214, 255} actual=RGB {165, 214, 255}
+PASS github-dark-default query surface 0 comment expected=RGB {139, 148, 158} actual=RGB {139, 148, 158}
+PASS github-dark-default query surface 0 parameter expected=RGB {255, 123, 114} actual=RGB {255, 123, 114}
+PASS github-dark-default query surface 0 identifier expected=RGB {230, 237, 243} actual=RGB {230, 237, 243}
+PASS github-dark-default query surface 0 source unchanged
+PASS github-dark-default query surface 1 background
+PASS github-dark-default query surface 1 foreground
+PASS github-dark-default query surface 1 selection background expected=RGB {20, 39, 68} actual=RGB {20, 39, 68}
+PASS github-dark-default query surface 1 selection foreground expected=RGB {230, 237, 243} actual=RGB {230, 237, 243}
+PASS github-dark-default query surface 1 keyword
+PASS github-dark-default query surface 1 native NUMBER text role expected=RGB {230, 237, 243} actual=RGB {230, 237, 243}
+PASS github-dark-default query surface 1 string expected=RGB {165, 214, 255} actual=RGB {165, 214, 255}
+PASS github-dark-default query surface 1 comment expected=RGB {139, 148, 158} actual=RGB {139, 148, 158}
+PASS github-dark-default query surface 1 parameter expected=RGB {255, 123, 114} actual=RGB {255, 123, 114}
+PASS github-dark-default query surface 1 identifier expected=RGB {230, 237, 243} actual=RGB {230, 237, 243}
+PASS github-dark-default query surface 1 source unchanged
+PASS github-dark-default query surface 2 background
+PASS github-dark-default query surface 2 foreground
+PASS github-dark-default query surface 2 selection background expected=RGB {20, 39, 68} actual=RGB {20, 39, 68}
+PASS github-dark-default query surface 2 selection foreground expected=RGB {230, 237, 243} actual=RGB {230, 237, 243}
+PASS github-dark-default query surface 2 keyword
+PASS github-dark-default query surface 2 native NUMBER text role expected=RGB {230, 237, 243} actual=RGB {230, 237, 243}
+PASS github-dark-default query surface 2 string expected=RGB {165, 214, 255} actual=RGB {165, 214, 255}
+PASS github-dark-default query surface 2 comment expected=RGB {139, 148, 158} actual=RGB {139, 148, 158}
+PASS github-dark-default query surface 2 parameter expected=RGB {255, 123, 114} actual=RGB {255, 123, 114}
+PASS github-dark-default query surface 2 identifier expected=RGB {230, 237, 243} actual=RGB {230, 237, 243}
+PASS github-dark-default query surface 2 source unchanged
+PASS github-dark-default query surface 3 background
+PASS github-dark-default query surface 3 foreground
+PASS github-dark-default query surface 3 selection background expected=RGB {20, 39, 68} actual=RGB {20, 39, 68}
+PASS github-dark-default query surface 3 selection foreground expected=RGB {230, 237, 243} actual=RGB {230, 237, 243}
+PASS github-dark-default query surface 3 keyword
+PASS github-dark-default query surface 3 native NUMBER text role expected=RGB {230, 237, 243} actual=RGB {230, 237, 243}
+PASS github-dark-default query surface 3 string expected=RGB {165, 214, 255} actual=RGB {165, 214, 255}
+PASS github-dark-default query surface 3 comment expected=RGB {139, 148, 158} actual=RGB {139, 148, 158}
+PASS github-dark-default query surface 3 parameter expected=RGB {255, 123, 114} actual=RGB {255, 123, 114}
+PASS github-dark-default query surface 3 identifier expected=RGB {230, 237, 243} actual=RGB {230, 237, 243}
+PASS github-dark-default query surface 3 source unchanged
+OBS candidate settled query 0 bg=RGB {1, 22, 39} fg=RGB {167, 219, 247} token=ВЫБРАТЬ color=RGB {0, 191, 249}
+OBS candidate settled query 1 bg=RGB {1, 22, 39} fg=RGB {167, 219, 247} token=ВЫБРАТЬ color=RGB {0, 191, 249}
+OBS candidate settled query 2 bg=RGB {1, 22, 39} fg=RGB {167, 219, 247} token=ВЫБРАТЬ color=RGB {0, 191, 249}
+OBS candidate settled query 3 bg=RGB {1, 22, 39} fg=RGB {167, 219, 247} token=ВЫБРАТЬ color=RGB {0, 191, 249}
+PASS winter-is-coming-dark-blue query surface 0 background
+PASS winter-is-coming-dark-blue query surface 0 foreground
+PASS winter-is-coming-dark-blue query surface 0 selection background expected=RGB {16, 51, 98} actual=RGB {16, 51, 98}
+PASS winter-is-coming-dark-blue query surface 0 selection foreground expected=RGB {167, 219, 247} actual=RGB {167, 219, 247}
+PASS winter-is-coming-dark-blue query surface 0 keyword
+PASS winter-is-coming-dark-blue query surface 0 native NUMBER text role expected=RGB {167, 219, 247} actual=RGB {167, 219, 247}
+PASS winter-is-coming-dark-blue query surface 0 string expected=RGB {188, 240, 192} actual=RGB {188, 240, 192}
+PASS winter-is-coming-dark-blue query surface 0 comment expected=RGB {153, 153, 153} actual=RGB {153, 153, 153}
+PASS winter-is-coming-dark-blue query surface 0 parameter expected=RGB {0, 191, 249} actual=RGB {0, 191, 249}
+PASS winter-is-coming-dark-blue query surface 0 identifier expected=RGB {167, 219, 247} actual=RGB {167, 219, 247}
+PASS winter-is-coming-dark-blue query surface 0 source unchanged
+PASS winter-is-coming-dark-blue query surface 1 background
+PASS winter-is-coming-dark-blue query surface 1 foreground
+PASS winter-is-coming-dark-blue query surface 1 selection background expected=RGB {16, 51, 98} actual=RGB {16, 51, 98}
+PASS winter-is-coming-dark-blue query surface 1 selection foreground expected=RGB {167, 219, 247} actual=RGB {167, 219, 247}
+PASS winter-is-coming-dark-blue query surface 1 keyword
+PASS winter-is-coming-dark-blue query surface 1 native NUMBER text role expected=RGB {167, 219, 247} actual=RGB {167, 219, 247}
+PASS winter-is-coming-dark-blue query surface 1 string expected=RGB {188, 240, 192} actual=RGB {188, 240, 192}
+PASS winter-is-coming-dark-blue query surface 1 comment expected=RGB {153, 153, 153} actual=RGB {153, 153, 153}
+PASS winter-is-coming-dark-blue query surface 1 parameter expected=RGB {0, 191, 249} actual=RGB {0, 191, 249}
+PASS winter-is-coming-dark-blue query surface 1 identifier expected=RGB {167, 219, 247} actual=RGB {167, 219, 247}
+PASS winter-is-coming-dark-blue query surface 1 source unchanged
+PASS winter-is-coming-dark-blue query surface 2 background
+PASS winter-is-coming-dark-blue query surface 2 foreground
+PASS winter-is-coming-dark-blue query surface 2 selection background expected=RGB {16, 51, 98} actual=RGB {16, 51, 98}
+PASS winter-is-coming-dark-blue query surface 2 selection foreground expected=RGB {167, 219, 247} actual=RGB {167, 219, 247}
+PASS winter-is-coming-dark-blue query surface 2 keyword
+PASS winter-is-coming-dark-blue query surface 2 native NUMBER text role expected=RGB {167, 219, 247} actual=RGB {167, 219, 247}
+PASS winter-is-coming-dark-blue query surface 2 string expected=RGB {188, 240, 192} actual=RGB {188, 240, 192}
+PASS winter-is-coming-dark-blue query surface 2 comment expected=RGB {153, 153, 153} actual=RGB {153, 153, 153}
+PASS winter-is-coming-dark-blue query surface 2 parameter expected=RGB {0, 191, 249} actual=RGB {0, 191, 249}
+PASS winter-is-coming-dark-blue query surface 2 identifier expected=RGB {167, 219, 247} actual=RGB {167, 219, 247}
+PASS winter-is-coming-dark-blue query surface 2 source unchanged
+PASS winter-is-coming-dark-blue query surface 3 background
+PASS winter-is-coming-dark-blue query surface 3 foreground
+PASS winter-is-coming-dark-blue query surface 3 selection background expected=RGB {16, 51, 98} actual=RGB {16, 51, 98}
+PASS winter-is-coming-dark-blue query surface 3 selection foreground expected=RGB {167, 219, 247} actual=RGB {167, 219, 247}
+PASS winter-is-coming-dark-blue query surface 3 keyword
+PASS winter-is-coming-dark-blue query surface 3 native NUMBER text role expected=RGB {167, 219, 247} actual=RGB {167, 219, 247}
+PASS winter-is-coming-dark-blue query surface 3 string expected=RGB {188, 240, 192} actual=RGB {188, 240, 192}
+PASS winter-is-coming-dark-blue query surface 3 comment expected=RGB {153, 153, 153} actual=RGB {153, 153, 153}
+PASS winter-is-coming-dark-blue query surface 3 parameter expected=RGB {0, 191, 249} actual=RGB {0, 191, 249}
+PASS winter-is-coming-dark-blue query surface 3 identifier expected=RGB {167, 219, 247} actual=RGB {167, 219, 247}
+PASS winter-is-coming-dark-blue query surface 3 source unchanged
+OBS candidate settled query 0 bg=RGB {1, 22, 39} fg=RGB {214, 222, 235} token=ВЫБРАТЬ color=RGB {199, 146, 234}
+OBS candidate settled query 1 bg=RGB {1, 22, 39} fg=RGB {214, 222, 235} token=ВЫБРАТЬ color=RGB {199, 146, 234}
+OBS candidate settled query 2 bg=RGB {1, 22, 39} fg=RGB {214, 222, 235} token=ВЫБРАТЬ color=RGB {199, 146, 234}
+OBS candidate settled query 3 bg=RGB {1, 22, 39} fg=RGB {214, 222, 235} token=ВЫБРАТЬ color=RGB {199, 146, 234}
+PASS night-owl query surface 0 background
+PASS night-owl query surface 0 foreground
+PASS night-owl query surface 0 selection background expected=RGB {29, 59, 83} actual=RGB {29, 59, 83}
+PASS night-owl query surface 0 selection foreground expected=RGB {255, 255, 255} actual=RGB {255, 255, 255}
+PASS night-owl query surface 0 keyword
+PASS night-owl query surface 0 native NUMBER text role expected=RGB {214, 222, 235} actual=RGB {214, 222, 235}
+PASS night-owl query surface 0 string expected=RGB {236, 196, 141} actual=RGB {236, 196, 141}
+PASS night-owl query surface 0 comment expected=RGB {99, 119, 119} actual=RGB {99, 119, 119}
+PASS night-owl query surface 0 parameter expected=RGB {255, 203, 139} actual=RGB {255, 203, 139}
+PASS night-owl query surface 0 identifier expected=RGB {214, 222, 235} actual=RGB {214, 222, 235}
+PASS night-owl query surface 0 source unchanged
+PASS night-owl query surface 1 background
+PASS night-owl query surface 1 foreground
+PASS night-owl query surface 1 selection background expected=RGB {29, 59, 83} actual=RGB {29, 59, 83}
+PASS night-owl query surface 1 selection foreground expected=RGB {255, 255, 255} actual=RGB {255, 255, 255}
+PASS night-owl query surface 1 keyword
+PASS night-owl query surface 1 native NUMBER text role expected=RGB {214, 222, 235} actual=RGB {214, 222, 235}
+PASS night-owl query surface 1 string expected=RGB {236, 196, 141} actual=RGB {236, 196, 141}
+PASS night-owl query surface 1 comment expected=RGB {99, 119, 119} actual=RGB {99, 119, 119}
+PASS night-owl query surface 1 parameter expected=RGB {255, 203, 139} actual=RGB {255, 203, 139}
+PASS night-owl query surface 1 identifier expected=RGB {214, 222, 235} actual=RGB {214, 222, 235}
+PASS night-owl query surface 1 source unchanged
+PASS night-owl query surface 2 background
+PASS night-owl query surface 2 foreground
+PASS night-owl query surface 2 selection background expected=RGB {29, 59, 83} actual=RGB {29, 59, 83}
+PASS night-owl query surface 2 selection foreground expected=RGB {255, 255, 255} actual=RGB {255, 255, 255}
+PASS night-owl query surface 2 keyword
+PASS night-owl query surface 2 native NUMBER text role expected=RGB {214, 222, 235} actual=RGB {214, 222, 235}
+PASS night-owl query surface 2 string expected=RGB {236, 196, 141} actual=RGB {236, 196, 141}
+PASS night-owl query surface 2 comment expected=RGB {99, 119, 119} actual=RGB {99, 119, 119}
+PASS night-owl query surface 2 parameter expected=RGB {255, 203, 139} actual=RGB {255, 203, 139}
+PASS night-owl query surface 2 identifier expected=RGB {214, 222, 235} actual=RGB {214, 222, 235}
+PASS night-owl query surface 2 source unchanged
+PASS night-owl query surface 3 background
+PASS night-owl query surface 3 foreground
+PASS night-owl query surface 3 selection background expected=RGB {29, 59, 83} actual=RGB {29, 59, 83}
+PASS night-owl query surface 3 selection foreground expected=RGB {255, 255, 255} actual=RGB {255, 255, 255}
+PASS night-owl query surface 3 keyword
+PASS night-owl query surface 3 native NUMBER text role expected=RGB {214, 222, 235} actual=RGB {214, 222, 235}
+PASS night-owl query surface 3 string expected=RGB {236, 196, 141} actual=RGB {236, 196, 141}
+PASS night-owl query surface 3 comment expected=RGB {99, 119, 119} actual=RGB {99, 119, 119}
+PASS night-owl query surface 3 parameter expected=RGB {255, 203, 139} actual=RGB {255, 203, 139}
+PASS night-owl query surface 3 identifier expected=RGB {214, 222, 235} actual=RGB {214, 222, 235}
+PASS night-owl query surface 3 source unchanged
+OBS candidate settled query 0 bg=RGB {16, 20, 28} fg=RGB {191, 189, 182} token=ВЫБРАТЬ color=RGB {255, 143, 64}
+OBS candidate settled query 1 bg=RGB {16, 20, 28} fg=RGB {191, 189, 182} token=ВЫБРАТЬ color=RGB {255, 143, 64}
+OBS candidate settled query 2 bg=RGB {16, 20, 28} fg=RGB {191, 189, 182} token=ВЫБРАТЬ color=RGB {255, 143, 64}
+OBS candidate settled query 3 bg=RGB {16, 20, 28} fg=RGB {191, 189, 182} token=ВЫБРАТЬ color=RGB {255, 143, 64}
+PASS ayu-dark query surface 0 background
+PASS ayu-dark query surface 0 foreground
+PASS ayu-dark query surface 0 selection background expected=RGB {25, 49, 85} actual=RGB {25, 49, 85}
+PASS ayu-dark query surface 0 selection foreground expected=RGB {191, 189, 182} actual=RGB {191, 189, 182}
+PASS ayu-dark query surface 0 keyword
+PASS ayu-dark query surface 0 native NUMBER text role expected=RGB {191, 189, 182} actual=RGB {191, 189, 182}
+PASS ayu-dark query surface 0 string expected=RGB {170, 217, 76} actual=RGB {170, 217, 76}
+PASS ayu-dark query surface 0 comment expected=RGB {90, 102, 115} actual=RGB {90, 102, 115}
+PASS ayu-dark query surface 0 parameter expected=RGB {255, 143, 64} actual=RGB {255, 143, 64}
+PASS ayu-dark query surface 0 identifier expected=RGB {191, 189, 182} actual=RGB {191, 189, 182}
+PASS ayu-dark query surface 0 source unchanged
+PASS ayu-dark query surface 1 background
+PASS ayu-dark query surface 1 foreground
+PASS ayu-dark query surface 1 selection background expected=RGB {25, 49, 85} actual=RGB {25, 49, 85}
+PASS ayu-dark query surface 1 selection foreground expected=RGB {191, 189, 182} actual=RGB {191, 189, 182}
+PASS ayu-dark query surface 1 keyword
+PASS ayu-dark query surface 1 native NUMBER text role expected=RGB {191, 189, 182} actual=RGB {191, 189, 182}
+PASS ayu-dark query surface 1 string expected=RGB {170, 217, 76} actual=RGB {170, 217, 76}
+PASS ayu-dark query surface 1 comment expected=RGB {90, 102, 115} actual=RGB {90, 102, 115}
+PASS ayu-dark query surface 1 parameter expected=RGB {255, 143, 64} actual=RGB {255, 143, 64}
+PASS ayu-dark query surface 1 identifier expected=RGB {191, 189, 182} actual=RGB {191, 189, 182}
+PASS ayu-dark query surface 1 source unchanged
+PASS ayu-dark query surface 2 background
+PASS ayu-dark query surface 2 foreground
+PASS ayu-dark query surface 2 selection background expected=RGB {25, 49, 85} actual=RGB {25, 49, 85}
+PASS ayu-dark query surface 2 selection foreground expected=RGB {191, 189, 182} actual=RGB {191, 189, 182}
+PASS ayu-dark query surface 2 keyword
+PASS ayu-dark query surface 2 native NUMBER text role expected=RGB {191, 189, 182} actual=RGB {191, 189, 182}
+PASS ayu-dark query surface 2 string expected=RGB {170, 217, 76} actual=RGB {170, 217, 76}
+PASS ayu-dark query surface 2 comment expected=RGB {90, 102, 115} actual=RGB {90, 102, 115}
+PASS ayu-dark query surface 2 parameter expected=RGB {255, 143, 64} actual=RGB {255, 143, 64}
+PASS ayu-dark query surface 2 identifier expected=RGB {191, 189, 182} actual=RGB {191, 189, 182}
+PASS ayu-dark query surface 2 source unchanged
+PASS ayu-dark query surface 3 background
+PASS ayu-dark query surface 3 foreground
+PASS ayu-dark query surface 3 selection background expected=RGB {25, 49, 85} actual=RGB {25, 49, 85}
+PASS ayu-dark query surface 3 selection foreground expected=RGB {191, 189, 182} actual=RGB {191, 189, 182}
+PASS ayu-dark query surface 3 keyword
+PASS ayu-dark query surface 3 native NUMBER text role expected=RGB {191, 189, 182} actual=RGB {191, 189, 182}
+PASS ayu-dark query surface 3 string expected=RGB {170, 217, 76} actual=RGB {170, 217, 76}
+PASS ayu-dark query surface 3 comment expected=RGB {90, 102, 115} actual=RGB {90, 102, 115}
+PASS ayu-dark query surface 3 parameter expected=RGB {255, 143, 64} actual=RGB {255, 143, 64}
+PASS ayu-dark query surface 3 identifier expected=RGB {191, 189, 182} actual=RGB {191, 189, 182}
+PASS ayu-dark query surface 3 source unchanged
+OBS candidate settled query 0 bg=RGB {45, 43, 85} fg=RGB {255, 255, 255} token=ВЫБРАТЬ color=RGB {255, 157, 0}
+OBS candidate settled query 1 bg=RGB {45, 43, 85} fg=RGB {255, 255, 255} token=ВЫБРАТЬ color=RGB {255, 157, 0}
+OBS candidate settled query 2 bg=RGB {45, 43, 85} fg=RGB {255, 255, 255} token=ВЫБРАТЬ color=RGB {255, 157, 0}
+OBS candidate settled query 3 bg=RGB {45, 43, 85} fg=RGB {255, 255, 255} token=ВЫБРАТЬ color=RGB {255, 157, 0}
+PASS shades-of-purple query surface 0 background
+PASS shades-of-purple query surface 0 foreground
+PASS shades-of-purple query surface 0 selection background expected=RGB {116, 72, 176} actual=RGB {116, 72, 176}
+PASS shades-of-purple query surface 0 selection foreground expected=RGB {255, 255, 255} actual=RGB {255, 255, 255}
+PASS shades-of-purple query surface 0 keyword
+PASS shades-of-purple query surface 0 native NUMBER text role expected=RGB {255, 255, 255} actual=RGB {255, 255, 255}
+PASS shades-of-purple query surface 0 string expected=RGB {165, 255, 144} actual=RGB {165, 255, 144}
+PASS shades-of-purple query surface 0 comment expected=RGB {179, 98, 255} actual=RGB {179, 98, 255}
+PASS shades-of-purple query surface 0 parameter expected=RGB {250, 208, 0} actual=RGB {250, 208, 0}
+PASS shades-of-purple query surface 0 identifier expected=RGB {255, 255, 255} actual=RGB {255, 255, 255}
+PASS shades-of-purple query surface 0 source unchanged
+PASS shades-of-purple query surface 1 background
+PASS shades-of-purple query surface 1 foreground
+PASS shades-of-purple query surface 1 selection background expected=RGB {116, 72, 176} actual=RGB {116, 72, 176}
+PASS shades-of-purple query surface 1 selection foreground expected=RGB {255, 255, 255} actual=RGB {255, 255, 255}
+PASS shades-of-purple query surface 1 keyword
+PASS shades-of-purple query surface 1 native NUMBER text role expected=RGB {255, 255, 255} actual=RGB {255, 255, 255}
+PASS shades-of-purple query surface 1 string expected=RGB {165, 255, 144} actual=RGB {165, 255, 144}
+PASS shades-of-purple query surface 1 comment expected=RGB {179, 98, 255} actual=RGB {179, 98, 255}
+PASS shades-of-purple query surface 1 parameter expected=RGB {250, 208, 0} actual=RGB {250, 208, 0}
+PASS shades-of-purple query surface 1 identifier expected=RGB {255, 255, 255} actual=RGB {255, 255, 255}
+PASS shades-of-purple query surface 1 source unchanged
+PASS shades-of-purple query surface 2 background
+PASS shades-of-purple query surface 2 foreground
+PASS shades-of-purple query surface 2 selection background expected=RGB {116, 72, 176} actual=RGB {116, 72, 176}
+PASS shades-of-purple query surface 2 selection foreground expected=RGB {255, 255, 255} actual=RGB {255, 255, 255}
+PASS shades-of-purple query surface 2 keyword
+PASS shades-of-purple query surface 2 native NUMBER text role expected=RGB {255, 255, 255} actual=RGB {255, 255, 255}
+PASS shades-of-purple query surface 2 string expected=RGB {165, 255, 144} actual=RGB {165, 255, 144}
+PASS shades-of-purple query surface 2 comment expected=RGB {179, 98, 255} actual=RGB {179, 98, 255}
+PASS shades-of-purple query surface 2 parameter expected=RGB {250, 208, 0} actual=RGB {250, 208, 0}
+PASS shades-of-purple query surface 2 identifier expected=RGB {255, 255, 255} actual=RGB {255, 255, 255}
+PASS shades-of-purple query surface 2 source unchanged
+PASS shades-of-purple query surface 3 background
+PASS shades-of-purple query surface 3 foreground
+PASS shades-of-purple query surface 3 selection background expected=RGB {116, 72, 176} actual=RGB {116, 72, 176}
+PASS shades-of-purple query surface 3 selection foreground expected=RGB {255, 255, 255} actual=RGB {255, 255, 255}
+PASS shades-of-purple query surface 3 keyword
+PASS shades-of-purple query surface 3 native NUMBER text role expected=RGB {255, 255, 255} actual=RGB {255, 255, 255}
+PASS shades-of-purple query surface 3 string expected=RGB {165, 255, 144} actual=RGB {165, 255, 144}
+PASS shades-of-purple query surface 3 comment expected=RGB {179, 98, 255} actual=RGB {179, 98, 255}
+PASS shades-of-purple query surface 3 parameter expected=RGB {250, 208, 0} actual=RGB {250, 208, 0}
+PASS shades-of-purple query surface 3 identifier expected=RGB {255, 255, 255} actual=RGB {255, 255, 255}
+PASS shades-of-purple query surface 3 source unchanged
+OBS candidate settled query 0 bg=RGB {27, 41, 50} fg=RGB {197, 205, 211} token=ВЫБРАТЬ color=RGB {200, 141, 162}
+OBS candidate settled query 1 bg=RGB {27, 41, 50} fg=RGB {197, 205, 211} token=ВЫБРАТЬ color=RGB {200, 141, 162}
+OBS candidate settled query 2 bg=RGB {27, 41, 50} fg=RGB {197, 205, 211} token=ВЫБРАТЬ color=RGB {200, 141, 162}
+OBS candidate settled query 3 bg=RGB {27, 41, 50} fg=RGB {197, 205, 211} token=ВЫБРАТЬ color=RGB {200, 141, 162}
+PASS noctis-minimus query surface 0 background
+PASS noctis-minimus query surface 0 foreground
+PASS noctis-minimus query surface 0 selection background expected=RGB {42, 64, 77} actual=RGB {42, 64, 77}
+PASS noctis-minimus query surface 0 selection foreground expected=RGB {235, 247, 255} actual=RGB {235, 247, 255}
+PASS noctis-minimus query surface 0 keyword
+PASS noctis-minimus query surface 0 native NUMBER text role expected=RGB {197, 205, 211} actual=RGB {197, 205, 211}
+PASS noctis-minimus query surface 0 string expected=RGB {114, 192, 159} actual=RGB {114, 192, 159}
+PASS noctis-minimus query surface 0 comment expected=RGB {94, 120, 135} actual=RGB {94, 120, 135}
+PASS noctis-minimus query surface 0 parameter expected=RGB {89, 152, 192} actual=RGB {89, 152, 192}
+PASS noctis-minimus query surface 0 identifier expected=RGB {197, 205, 211} actual=RGB {197, 205, 211}
+PASS noctis-minimus query surface 0 source unchanged
+PASS noctis-minimus query surface 1 background
+PASS noctis-minimus query surface 1 foreground
+PASS noctis-minimus query surface 1 selection background expected=RGB {42, 64, 77} actual=RGB {42, 64, 77}
+PASS noctis-minimus query surface 1 selection foreground expected=RGB {235, 247, 255} actual=RGB {235, 247, 255}
+PASS noctis-minimus query surface 1 keyword
+PASS noctis-minimus query surface 1 native NUMBER text role expected=RGB {197, 205, 211} actual=RGB {197, 205, 211}
+PASS noctis-minimus query surface 1 string expected=RGB {114, 192, 159} actual=RGB {114, 192, 159}
+PASS noctis-minimus query surface 1 comment expected=RGB {94, 120, 135} actual=RGB {94, 120, 135}
+PASS noctis-minimus query surface 1 parameter expected=RGB {89, 152, 192} actual=RGB {89, 152, 192}
+PASS noctis-minimus query surface 1 identifier expected=RGB {197, 205, 211} actual=RGB {197, 205, 211}
+PASS noctis-minimus query surface 1 source unchanged
+PASS noctis-minimus query surface 2 background
+PASS noctis-minimus query surface 2 foreground
+PASS noctis-minimus query surface 2 selection background expected=RGB {42, 64, 77} actual=RGB {42, 64, 77}
+PASS noctis-minimus query surface 2 selection foreground expected=RGB {235, 247, 255} actual=RGB {235, 247, 255}
+PASS noctis-minimus query surface 2 keyword
+PASS noctis-minimus query surface 2 native NUMBER text role expected=RGB {197, 205, 211} actual=RGB {197, 205, 211}
+PASS noctis-minimus query surface 2 string expected=RGB {114, 192, 159} actual=RGB {114, 192, 159}
+PASS noctis-minimus query surface 2 comment expected=RGB {94, 120, 135} actual=RGB {94, 120, 135}
+PASS noctis-minimus query surface 2 parameter expected=RGB {89, 152, 192} actual=RGB {89, 152, 192}
+PASS noctis-minimus query surface 2 identifier expected=RGB {197, 205, 211} actual=RGB {197, 205, 211}
+PASS noctis-minimus query surface 2 source unchanged
+PASS noctis-minimus query surface 3 background
+PASS noctis-minimus query surface 3 foreground
+PASS noctis-minimus query surface 3 selection background expected=RGB {42, 64, 77} actual=RGB {42, 64, 77}
+PASS noctis-minimus query surface 3 selection foreground expected=RGB {235, 247, 255} actual=RGB {235, 247, 255}
+PASS noctis-minimus query surface 3 keyword
+PASS noctis-minimus query surface 3 native NUMBER text role expected=RGB {197, 205, 211} actual=RGB {197, 205, 211}
+PASS noctis-minimus query surface 3 string expected=RGB {114, 192, 159} actual=RGB {114, 192, 159}
+PASS noctis-minimus query surface 3 comment expected=RGB {94, 120, 135} actual=RGB {94, 120, 135}
+PASS noctis-minimus query surface 3 parameter expected=RGB {89, 152, 192} actual=RGB {89, 152, 192}
+PASS noctis-minimus query surface 3 identifier expected=RGB {197, 205, 211} actual=RGB {197, 205, 211}
+PASS noctis-minimus query surface 3 source unchanged
+OBS candidate settled query 0 bg=RGB {30, 30, 30} fg=RGB {218, 218, 218} token=ВЫБРАТЬ color=RGB {86, 156, 214}
+OBS candidate settled query 1 bg=RGB {30, 30, 30} fg=RGB {218, 218, 218} token=ВЫБРАТЬ color=RGB {86, 156, 214}
+OBS candidate settled query 2 bg=RGB {30, 30, 30} fg=RGB {218, 218, 218} token=ВЫБРАТЬ color=RGB {86, 156, 214}
+OBS candidate settled query 3 bg=RGB {30, 30, 30} fg=RGB {218, 218, 218} token=ВЫБРАТЬ color=RGB {86, 156, 214}
+PASS visual-studio-dark-cpp query surface 0 background
+PASS visual-studio-dark-cpp query surface 0 foreground
+PASS visual-studio-dark-cpp query surface 0 selection background expected=RGB {58, 61, 65} actual=RGB {58, 61, 65}
+PASS visual-studio-dark-cpp query surface 0 selection foreground expected=RGB {218, 218, 218} actual=RGB {218, 218, 218}
+PASS visual-studio-dark-cpp query surface 0 keyword
+PASS visual-studio-dark-cpp query surface 0 native NUMBER text role expected=RGB {218, 218, 218} actual=RGB {218, 218, 218}
+PASS visual-studio-dark-cpp query surface 0 string expected=RGB {206, 145, 120} actual=RGB {206, 145, 120}
+PASS visual-studio-dark-cpp query surface 0 comment expected=RGB {87, 166, 74} actual=RGB {87, 166, 74}
+PASS visual-studio-dark-cpp query surface 0 parameter expected=RGB {190, 183, 255} actual=RGB {190, 183, 255}
+PASS visual-studio-dark-cpp query surface 0 identifier expected=RGB {218, 218, 218} actual=RGB {218, 218, 218}
+PASS visual-studio-dark-cpp query surface 0 source unchanged
+PASS visual-studio-dark-cpp query surface 1 background
+PASS visual-studio-dark-cpp query surface 1 foreground
+PASS visual-studio-dark-cpp query surface 1 selection background expected=RGB {58, 61, 65} actual=RGB {58, 61, 65}
+PASS visual-studio-dark-cpp query surface 1 selection foreground expected=RGB {218, 218, 218} actual=RGB {218, 218, 218}
+PASS visual-studio-dark-cpp query surface 1 keyword
+PASS visual-studio-dark-cpp query surface 1 native NUMBER text role expected=RGB {218, 218, 218} actual=RGB {218, 218, 218}
+PASS visual-studio-dark-cpp query surface 1 string expected=RGB {206, 145, 120} actual=RGB {206, 145, 120}
+PASS visual-studio-dark-cpp query surface 1 comment expected=RGB {87, 166, 74} actual=RGB {87, 166, 74}
+PASS visual-studio-dark-cpp query surface 1 parameter expected=RGB {190, 183, 255} actual=RGB {190, 183, 255}
+PASS visual-studio-dark-cpp query surface 1 identifier expected=RGB {218, 218, 218} actual=RGB {218, 218, 218}
+PASS visual-studio-dark-cpp query surface 1 source unchanged
+PASS visual-studio-dark-cpp query surface 2 background
+PASS visual-studio-dark-cpp query surface 2 foreground
+PASS visual-studio-dark-cpp query surface 2 selection background expected=RGB {58, 61, 65} actual=RGB {58, 61, 65}
+PASS visual-studio-dark-cpp query surface 2 selection foreground expected=RGB {218, 218, 218} actual=RGB {218, 218, 218}
+PASS visual-studio-dark-cpp query surface 2 keyword
+PASS visual-studio-dark-cpp query surface 2 native NUMBER text role expected=RGB {218, 218, 218} actual=RGB {218, 218, 218}
+PASS visual-studio-dark-cpp query surface 2 string expected=RGB {206, 145, 120} actual=RGB {206, 145, 120}
+PASS visual-studio-dark-cpp query surface 2 comment expected=RGB {87, 166, 74} actual=RGB {87, 166, 74}
+PASS visual-studio-dark-cpp query surface 2 parameter expected=RGB {190, 183, 255} actual=RGB {190, 183, 255}
+PASS visual-studio-dark-cpp query surface 2 identifier expected=RGB {218, 218, 218} actual=RGB {218, 218, 218}
+PASS visual-studio-dark-cpp query surface 2 source unchanged
+PASS visual-studio-dark-cpp query surface 3 background
+PASS visual-studio-dark-cpp query surface 3 foreground
+PASS visual-studio-dark-cpp query surface 3 selection background expected=RGB {58, 61, 65} actual=RGB {58, 61, 65}
+PASS visual-studio-dark-cpp query surface 3 selection foreground expected=RGB {218, 218, 218} actual=RGB {218, 218, 218}
+PASS visual-studio-dark-cpp query surface 3 keyword
+PASS visual-studio-dark-cpp query surface 3 native NUMBER text role expected=RGB {218, 218, 218} actual=RGB {218, 218, 218}
+PASS visual-studio-dark-cpp query surface 3 string expected=RGB {206, 145, 120} actual=RGB {206, 145, 120}
+PASS visual-studio-dark-cpp query surface 3 comment expected=RGB {87, 166, 74} actual=RGB {87, 166, 74}
+PASS visual-studio-dark-cpp query surface 3 parameter expected=RGB {190, 183, 255} actual=RGB {190, 183, 255}
+PASS visual-studio-dark-cpp query surface 3 identifier expected=RGB {218, 218, 218} actual=RGB {218, 218, 218}
+PASS visual-studio-dark-cpp query surface 3 source unchanged
+OBS candidate settled query 0 bg=RGB {255, 255, 255} fg=RGB {31, 35, 40} token=ВЫБРАТЬ color=RGB {207, 34, 46}
+OBS candidate settled query 1 bg=RGB {255, 255, 255} fg=RGB {31, 35, 40} token=ВЫБРАТЬ color=RGB {207, 34, 46}
+OBS candidate settled query 2 bg=RGB {255, 255, 255} fg=RGB {31, 35, 40} token=ВЫБРАТЬ color=RGB {207, 34, 46}
+OBS candidate settled query 3 bg=RGB {255, 255, 255} fg=RGB {31, 35, 40} token=ВЫБРАТЬ color=RGB {207, 34, 46}
+PASS github-light-default query surface 0 background
+PASS github-light-default query surface 0 foreground
+PASS github-light-default query surface 0 selection background expected=RGB {206, 225, 248} actual=RGB {206, 225, 248}
+PASS github-light-default query surface 0 selection foreground expected=RGB {31, 35, 40} actual=RGB {31, 35, 40}
+PASS github-light-default query surface 0 keyword
+PASS github-light-default query surface 0 native NUMBER text role expected=RGB {31, 35, 40} actual=RGB {31, 35, 40}
+PASS github-light-default query surface 0 string expected=RGB {10, 48, 105} actual=RGB {10, 48, 105}
+PASS github-light-default query surface 0 comment expected=RGB {101, 109, 118} actual=RGB {101, 109, 118}
+PASS github-light-default query surface 0 parameter expected=RGB {207, 34, 46} actual=RGB {207, 34, 46}
+PASS github-light-default query surface 0 identifier expected=RGB {31, 35, 40} actual=RGB {31, 35, 40}
+PASS github-light-default query surface 0 source unchanged
+PASS github-light-default query surface 1 background
+PASS github-light-default query surface 1 foreground
+PASS github-light-default query surface 1 selection background expected=RGB {206, 225, 248} actual=RGB {206, 225, 248}
+PASS github-light-default query surface 1 selection foreground expected=RGB {31, 35, 40} actual=RGB {31, 35, 40}
+PASS github-light-default query surface 1 keyword
+PASS github-light-default query surface 1 native NUMBER text role expected=RGB {31, 35, 40} actual=RGB {31, 35, 40}
+PASS github-light-default query surface 1 string expected=RGB {10, 48, 105} actual=RGB {10, 48, 105}
+PASS github-light-default query surface 1 comment expected=RGB {101, 109, 118} actual=RGB {101, 109, 118}
+PASS github-light-default query surface 1 parameter expected=RGB {207, 34, 46} actual=RGB {207, 34, 46}
+PASS github-light-default query surface 1 identifier expected=RGB {31, 35, 40} actual=RGB {31, 35, 40}
+PASS github-light-default query surface 1 source unchanged
+PASS github-light-default query surface 2 background
+PASS github-light-default query surface 2 foreground
+PASS github-light-default query surface 2 selection background expected=RGB {206, 225, 248} actual=RGB {206, 225, 248}
+PASS github-light-default query surface 2 selection foreground expected=RGB {31, 35, 40} actual=RGB {31, 35, 40}
+PASS github-light-default query surface 2 keyword
+PASS github-light-default query surface 2 native NUMBER text role expected=RGB {31, 35, 40} actual=RGB {31, 35, 40}
+PASS github-light-default query surface 2 string expected=RGB {10, 48, 105} actual=RGB {10, 48, 105}
+PASS github-light-default query surface 2 comment expected=RGB {101, 109, 118} actual=RGB {101, 109, 118}
+PASS github-light-default query surface 2 parameter expected=RGB {207, 34, 46} actual=RGB {207, 34, 46}
+PASS github-light-default query surface 2 identifier expected=RGB {31, 35, 40} actual=RGB {31, 35, 40}
+PASS github-light-default query surface 2 source unchanged
+PASS github-light-default query surface 3 background
+PASS github-light-default query surface 3 foreground
+PASS github-light-default query surface 3 selection background expected=RGB {206, 225, 248} actual=RGB {206, 225, 248}
+PASS github-light-default query surface 3 selection foreground expected=RGB {31, 35, 40} actual=RGB {31, 35, 40}
+PASS github-light-default query surface 3 keyword
+PASS github-light-default query surface 3 native NUMBER text role expected=RGB {31, 35, 40} actual=RGB {31, 35, 40}
+PASS github-light-default query surface 3 string expected=RGB {10, 48, 105} actual=RGB {10, 48, 105}
+PASS github-light-default query surface 3 comment expected=RGB {101, 109, 118} actual=RGB {101, 109, 118}
+PASS github-light-default query surface 3 parameter expected=RGB {207, 34, 46} actual=RGB {207, 34, 46}
+PASS github-light-default query surface 3 identifier expected=RGB {31, 35, 40} actual=RGB {31, 35, 40}
+PASS github-light-default query surface 3 source unchanged
+OBS candidate settled query 0 bg=RGB {255, 255, 255} fg=RGB {35, 110, 191} token=ВЫБРАТЬ color=RGB {8, 115, 143}
+OBS candidate settled query 1 bg=RGB {255, 255, 255} fg=RGB {35, 110, 191} token=ВЫБРАТЬ color=RGB {8, 115, 143}
+OBS candidate settled query 2 bg=RGB {255, 255, 255} fg=RGB {35, 110, 191} token=ВЫБРАТЬ color=RGB {8, 115, 143}
+OBS candidate settled query 3 bg=RGB {255, 255, 255} fg=RGB {35, 110, 191} token=ВЫБРАТЬ color=RGB {8, 115, 143}
+PASS winter-is-coming-light query surface 0 background
+PASS winter-is-coming-light query surface 0 foreground
+PASS winter-is-coming-light query surface 0 selection background expected=RGB {206, 225, 240} actual=RGB {206, 225, 240}
+PASS winter-is-coming-light query surface 0 selection foreground expected=RGB {24, 87, 164} actual=RGB {24, 87, 164}
+PASS winter-is-coming-light query surface 0 keyword
+PASS winter-is-coming-light query surface 0 native NUMBER text role expected=RGB {35, 110, 191} actual=RGB {35, 110, 191}
+PASS winter-is-coming-light query surface 0 string expected=RGB {164, 65, 133} actual=RGB {164, 65, 133}
+PASS winter-is-coming-light query surface 0 comment expected=RGB {53, 123, 66} actual=RGB {53, 123, 66}
+PASS winter-is-coming-light query surface 0 parameter expected=RGB {8, 115, 143} actual=RGB {8, 115, 143}
+PASS winter-is-coming-light query surface 0 identifier expected=RGB {35, 110, 191} actual=RGB {35, 110, 191}
+PASS winter-is-coming-light query surface 0 source unchanged
+PASS winter-is-coming-light query surface 1 background
+PASS winter-is-coming-light query surface 1 foreground
+PASS winter-is-coming-light query surface 1 selection background expected=RGB {206, 225, 240} actual=RGB {206, 225, 240}
+PASS winter-is-coming-light query surface 1 selection foreground expected=RGB {24, 87, 164} actual=RGB {24, 87, 164}
+PASS winter-is-coming-light query surface 1 keyword
+PASS winter-is-coming-light query surface 1 native NUMBER text role expected=RGB {35, 110, 191} actual=RGB {35, 110, 191}
+PASS winter-is-coming-light query surface 1 string expected=RGB {164, 65, 133} actual=RGB {164, 65, 133}
+PASS winter-is-coming-light query surface 1 comment expected=RGB {53, 123, 66} actual=RGB {53, 123, 66}
+PASS winter-is-coming-light query surface 1 parameter expected=RGB {8, 115, 143} actual=RGB {8, 115, 143}
+PASS winter-is-coming-light query surface 1 identifier expected=RGB {35, 110, 191} actual=RGB {35, 110, 191}
+PASS winter-is-coming-light query surface 1 source unchanged
+PASS winter-is-coming-light query surface 2 background
+PASS winter-is-coming-light query surface 2 foreground
+PASS winter-is-coming-light query surface 2 selection background expected=RGB {206, 225, 240} actual=RGB {206, 225, 240}
+PASS winter-is-coming-light query surface 2 selection foreground expected=RGB {24, 87, 164} actual=RGB {24, 87, 164}
+PASS winter-is-coming-light query surface 2 keyword
+PASS winter-is-coming-light query surface 2 native NUMBER text role expected=RGB {35, 110, 191} actual=RGB {35, 110, 191}
+PASS winter-is-coming-light query surface 2 string expected=RGB {164, 65, 133} actual=RGB {164, 65, 133}
+PASS winter-is-coming-light query surface 2 comment expected=RGB {53, 123, 66} actual=RGB {53, 123, 66}
+PASS winter-is-coming-light query surface 2 parameter expected=RGB {8, 115, 143} actual=RGB {8, 115, 143}
+PASS winter-is-coming-light query surface 2 identifier expected=RGB {35, 110, 191} actual=RGB {35, 110, 191}
+PASS winter-is-coming-light query surface 2 source unchanged
+PASS winter-is-coming-light query surface 3 background
+PASS winter-is-coming-light query surface 3 foreground
+PASS winter-is-coming-light query surface 3 selection background expected=RGB {206, 225, 240} actual=RGB {206, 225, 240}
+PASS winter-is-coming-light query surface 3 selection foreground expected=RGB {24, 87, 164} actual=RGB {24, 87, 164}
+PASS winter-is-coming-light query surface 3 keyword
+PASS winter-is-coming-light query surface 3 native NUMBER text role expected=RGB {35, 110, 191} actual=RGB {35, 110, 191}
+PASS winter-is-coming-light query surface 3 string expected=RGB {164, 65, 133} actual=RGB {164, 65, 133}
+PASS winter-is-coming-light query surface 3 comment expected=RGB {53, 123, 66} actual=RGB {53, 123, 66}
+PASS winter-is-coming-light query surface 3 parameter expected=RGB {8, 115, 143} actual=RGB {8, 115, 143}
+PASS winter-is-coming-light query surface 3 identifier expected=RGB {35, 110, 191} actual=RGB {35, 110, 191}
+PASS winter-is-coming-light query surface 3 source unchanged
+OBS candidate settled query 0 bg=RGB {251, 251, 251} fg=RGB {64, 63, 83} token=ВЫБРАТЬ color=RGB {151, 74, 191}
+OBS candidate settled query 1 bg=RGB {251, 251, 251} fg=RGB {64, 63, 83} token=ВЫБРАТЬ color=RGB {151, 74, 191}
+OBS candidate settled query 2 bg=RGB {251, 251, 251} fg=RGB {64, 63, 83} token=ВЫБРАТЬ color=RGB {151, 74, 191}
+OBS candidate settled query 3 bg=RGB {251, 251, 251} fg=RGB {64, 63, 83} token=ВЫБРАТЬ color=RGB {151, 74, 191}
+PASS night-owl-light query surface 0 background
+PASS night-owl-light query surface 0 foreground
+PASS night-owl-light query surface 0 selection background expected=RGB {224, 224, 224} actual=RGB {224, 224, 224}
+PASS night-owl-light query surface 0 selection foreground expected=RGB {64, 63, 83} actual=RGB {64, 63, 83}
+PASS night-owl-light query surface 0 keyword
+PASS night-owl-light query surface 0 native NUMBER text role expected=RGB {64, 63, 83} actual=RGB {64, 63, 83}
+PASS night-owl-light query surface 0 string expected=RGB {169, 81, 79} actual=RGB {169, 81, 79}
+PASS night-owl-light query surface 0 comment expected=RGB {101, 109, 126} actual=RGB {101, 109, 126}
+PASS night-owl-light query surface 0 parameter expected=RGB {151, 74, 191} actual=RGB {151, 74, 191}
+PASS night-owl-light query surface 0 identifier expected=RGB {64, 63, 83} actual=RGB {64, 63, 83}
+PASS night-owl-light query surface 0 source unchanged
+PASS night-owl-light query surface 1 background
+PASS night-owl-light query surface 1 foreground
+PASS night-owl-light query surface 1 selection background expected=RGB {224, 224, 224} actual=RGB {224, 224, 224}
+PASS night-owl-light query surface 1 selection foreground expected=RGB {64, 63, 83} actual=RGB {64, 63, 83}
+PASS night-owl-light query surface 1 keyword
+PASS night-owl-light query surface 1 native NUMBER text role expected=RGB {64, 63, 83} actual=RGB {64, 63, 83}
+PASS night-owl-light query surface 1 string expected=RGB {169, 81, 79} actual=RGB {169, 81, 79}
+PASS night-owl-light query surface 1 comment expected=RGB {101, 109, 126} actual=RGB {101, 109, 126}
+PASS night-owl-light query surface 1 parameter expected=RGB {151, 74, 191} actual=RGB {151, 74, 191}
+PASS night-owl-light query surface 1 identifier expected=RGB {64, 63, 83} actual=RGB {64, 63, 83}
+PASS night-owl-light query surface 1 source unchanged
+PASS night-owl-light query surface 2 background
+PASS night-owl-light query surface 2 foreground
+PASS night-owl-light query surface 2 selection background expected=RGB {224, 224, 224} actual=RGB {224, 224, 224}
+PASS night-owl-light query surface 2 selection foreground expected=RGB {64, 63, 83} actual=RGB {64, 63, 83}
+PASS night-owl-light query surface 2 keyword
+PASS night-owl-light query surface 2 native NUMBER text role expected=RGB {64, 63, 83} actual=RGB {64, 63, 83}
+PASS night-owl-light query surface 2 string expected=RGB {169, 81, 79} actual=RGB {169, 81, 79}
+PASS night-owl-light query surface 2 comment expected=RGB {101, 109, 126} actual=RGB {101, 109, 126}
+PASS night-owl-light query surface 2 parameter expected=RGB {151, 74, 191} actual=RGB {151, 74, 191}
+PASS night-owl-light query surface 2 identifier expected=RGB {64, 63, 83} actual=RGB {64, 63, 83}
+PASS night-owl-light query surface 2 source unchanged
+PASS night-owl-light query surface 3 background
+PASS night-owl-light query surface 3 foreground
+PASS night-owl-light query surface 3 selection background expected=RGB {224, 224, 224} actual=RGB {224, 224, 224}
+PASS night-owl-light query surface 3 selection foreground expected=RGB {64, 63, 83} actual=RGB {64, 63, 83}
+PASS night-owl-light query surface 3 keyword
+PASS night-owl-light query surface 3 native NUMBER text role expected=RGB {64, 63, 83} actual=RGB {64, 63, 83}
+PASS night-owl-light query surface 3 string expected=RGB {169, 81, 79} actual=RGB {169, 81, 79}
+PASS night-owl-light query surface 3 comment expected=RGB {101, 109, 126} actual=RGB {101, 109, 126}
+PASS night-owl-light query surface 3 parameter expected=RGB {151, 74, 191} actual=RGB {151, 74, 191}
+PASS night-owl-light query surface 3 identifier expected=RGB {64, 63, 83} actual=RGB {64, 63, 83}
+PASS night-owl-light query surface 3 source unchanged
+OBS candidate settled query 0 bg=RGB {252, 252, 252} fg=RGB {92, 97, 102} token=ВЫБРАТЬ color=RGB {166, 88, 33}
+OBS candidate settled query 1 bg=RGB {252, 252, 252} fg=RGB {92, 97, 102} token=ВЫБРАТЬ color=RGB {166, 88, 33}
+OBS candidate settled query 2 bg=RGB {252, 252, 252} fg=RGB {92, 97, 102} token=ВЫБРАТЬ color=RGB {166, 88, 33}
+OBS candidate settled query 3 bg=RGB {252, 252, 252} fg=RGB {92, 97, 102} token=ВЫБРАТЬ color=RGB {166, 88, 33}
+PASS ayu-light query surface 0 background
+PASS ayu-light query surface 0 foreground
+PASS ayu-light query surface 0 selection background expected=RGB {215, 228, 246} actual=RGB {215, 228, 246}
+PASS ayu-light query surface 0 selection foreground expected=RGB {92, 97, 102} actual=RGB {92, 97, 102}
+PASS ayu-light query surface 0 keyword
+PASS ayu-light query surface 0 native NUMBER text role expected=RGB {92, 97, 102} actual=RGB {92, 97, 102}
+PASS ayu-light query surface 0 string expected=RGB {89, 118, 0} actual=RGB {89, 118, 0}
+PASS ayu-light query surface 0 comment expected=RGB {108, 108, 110} actual=RGB {108, 108, 110}
+PASS ayu-light query surface 0 parameter expected=RGB {166, 88, 33} actual=RGB {166, 88, 33}
+PASS ayu-light query surface 0 identifier expected=RGB {92, 97, 102} actual=RGB {92, 97, 102}
+PASS ayu-light query surface 0 source unchanged
+PASS ayu-light query surface 1 background
+PASS ayu-light query surface 1 foreground
+PASS ayu-light query surface 1 selection background expected=RGB {215, 228, 246} actual=RGB {215, 228, 246}
+PASS ayu-light query surface 1 selection foreground expected=RGB {92, 97, 102} actual=RGB {92, 97, 102}
+PASS ayu-light query surface 1 keyword
+PASS ayu-light query surface 1 native NUMBER text role expected=RGB {92, 97, 102} actual=RGB {92, 97, 102}
+PASS ayu-light query surface 1 string expected=RGB {89, 118, 0} actual=RGB {89, 118, 0}
+PASS ayu-light query surface 1 comment expected=RGB {108, 108, 110} actual=RGB {108, 108, 110}
+PASS ayu-light query surface 1 parameter expected=RGB {166, 88, 33} actual=RGB {166, 88, 33}
+PASS ayu-light query surface 1 identifier expected=RGB {92, 97, 102} actual=RGB {92, 97, 102}
+PASS ayu-light query surface 1 source unchanged
+PASS ayu-light query surface 2 background
+PASS ayu-light query surface 2 foreground
+PASS ayu-light query surface 2 selection background expected=RGB {215, 228, 246} actual=RGB {215, 228, 246}
+PASS ayu-light query surface 2 selection foreground expected=RGB {92, 97, 102} actual=RGB {92, 97, 102}
+PASS ayu-light query surface 2 keyword
+PASS ayu-light query surface 2 native NUMBER text role expected=RGB {92, 97, 102} actual=RGB {92, 97, 102}
+PASS ayu-light query surface 2 string expected=RGB {89, 118, 0} actual=RGB {89, 118, 0}
+PASS ayu-light query surface 2 comment expected=RGB {108, 108, 110} actual=RGB {108, 108, 110}
+PASS ayu-light query surface 2 parameter expected=RGB {166, 88, 33} actual=RGB {166, 88, 33}
+PASS ayu-light query surface 2 identifier expected=RGB {92, 97, 102} actual=RGB {92, 97, 102}
+PASS ayu-light query surface 2 source unchanged
+PASS ayu-light query surface 3 background
+PASS ayu-light query surface 3 foreground
+PASS ayu-light query surface 3 selection background expected=RGB {215, 228, 246} actual=RGB {215, 228, 246}
+PASS ayu-light query surface 3 selection foreground expected=RGB {92, 97, 102} actual=RGB {92, 97, 102}
+PASS ayu-light query surface 3 keyword
+PASS ayu-light query surface 3 native NUMBER text role expected=RGB {92, 97, 102} actual=RGB {92, 97, 102}
+PASS ayu-light query surface 3 string expected=RGB {89, 118, 0} actual=RGB {89, 118, 0}
+PASS ayu-light query surface 3 comment expected=RGB {108, 108, 110} actual=RGB {108, 108, 110}
+PASS ayu-light query surface 3 parameter expected=RGB {166, 88, 33} actual=RGB {166, 88, 33}
+PASS ayu-light query surface 3 identifier expected=RGB {92, 97, 102} actual=RGB {92, 97, 102}
+PASS ayu-light query surface 3 source unchanged
+OBS candidate settled query 0 bg=RGB {254, 248, 236} fg=RGB {0, 86, 97} token=ВЫБРАТЬ color=RGB {179, 61, 103}
+OBS candidate settled query 1 bg=RGB {254, 248, 236} fg=RGB {0, 86, 97} token=ВЫБРАТЬ color=RGB {179, 61, 103}
+OBS candidate settled query 2 bg=RGB {254, 248, 236} fg=RGB {0, 86, 97} token=ВЫБРАТЬ color=RGB {179, 61, 103}
+OBS candidate settled query 3 bg=RGB {254, 248, 236} fg=RGB {0, 86, 97} token=ВЫБРАТЬ color=RGB {179, 61, 103}
+PASS noctis-lux query surface 0 background
+PASS noctis-lux query surface 0 foreground
+PASS noctis-lux query surface 0 selection background expected=RGB {182, 225, 231} actual=RGB {182, 225, 231}
+PASS noctis-lux query surface 0 selection foreground expected=RGB {0, 86, 97} actual=RGB {0, 86, 97}
+PASS noctis-lux query surface 0 keyword
+PASS noctis-lux query surface 0 native NUMBER text role expected=RGB {0, 86, 97} actual=RGB {0, 86, 97}
+PASS noctis-lux query surface 0 string expected=RGB {0, 120, 70} actual=RGB {0, 120, 70}
+PASS noctis-lux query surface 0 comment expected=RGB {91, 107, 107} actual=RGB {91, 107, 107}
+PASS noctis-lux query surface 0 parameter expected=RGB {0, 108, 176} actual=RGB {0, 108, 176}
+PASS noctis-lux query surface 0 identifier expected=RGB {0, 86, 97} actual=RGB {0, 86, 97}
+PASS noctis-lux query surface 0 source unchanged
+PASS noctis-lux query surface 1 background
+PASS noctis-lux query surface 1 foreground
+PASS noctis-lux query surface 1 selection background expected=RGB {182, 225, 231} actual=RGB {182, 225, 231}
+PASS noctis-lux query surface 1 selection foreground expected=RGB {0, 86, 97} actual=RGB {0, 86, 97}
+PASS noctis-lux query surface 1 keyword
+PASS noctis-lux query surface 1 native NUMBER text role expected=RGB {0, 86, 97} actual=RGB {0, 86, 97}
+PASS noctis-lux query surface 1 string expected=RGB {0, 120, 70} actual=RGB {0, 120, 70}
+PASS noctis-lux query surface 1 comment expected=RGB {91, 107, 107} actual=RGB {91, 107, 107}
+PASS noctis-lux query surface 1 parameter expected=RGB {0, 108, 176} actual=RGB {0, 108, 176}
+PASS noctis-lux query surface 1 identifier expected=RGB {0, 86, 97} actual=RGB {0, 86, 97}
+PASS noctis-lux query surface 1 source unchanged
+PASS noctis-lux query surface 2 background
+PASS noctis-lux query surface 2 foreground
+PASS noctis-lux query surface 2 selection background expected=RGB {182, 225, 231} actual=RGB {182, 225, 231}
+PASS noctis-lux query surface 2 selection foreground expected=RGB {0, 86, 97} actual=RGB {0, 86, 97}
+PASS noctis-lux query surface 2 keyword
+PASS noctis-lux query surface 2 native NUMBER text role expected=RGB {0, 86, 97} actual=RGB {0, 86, 97}
+PASS noctis-lux query surface 2 string expected=RGB {0, 120, 70} actual=RGB {0, 120, 70}
+PASS noctis-lux query surface 2 comment expected=RGB {91, 107, 107} actual=RGB {91, 107, 107}
+PASS noctis-lux query surface 2 parameter expected=RGB {0, 108, 176} actual=RGB {0, 108, 176}
+PASS noctis-lux query surface 2 identifier expected=RGB {0, 86, 97} actual=RGB {0, 86, 97}
+PASS noctis-lux query surface 2 source unchanged
+PASS noctis-lux query surface 3 background
+PASS noctis-lux query surface 3 foreground
+PASS noctis-lux query surface 3 selection background expected=RGB {182, 225, 231} actual=RGB {182, 225, 231}
+PASS noctis-lux query surface 3 selection foreground expected=RGB {0, 86, 97} actual=RGB {0, 86, 97}
+PASS noctis-lux query surface 3 keyword
+PASS noctis-lux query surface 3 native NUMBER text role expected=RGB {0, 86, 97} actual=RGB {0, 86, 97}
+PASS noctis-lux query surface 3 string expected=RGB {0, 120, 70} actual=RGB {0, 120, 70}
+PASS noctis-lux query surface 3 comment expected=RGB {91, 107, 107} actual=RGB {91, 107, 107}
+PASS noctis-lux query surface 3 parameter expected=RGB {0, 108, 176} actual=RGB {0, 108, 176}
+PASS noctis-lux query surface 3 identifier expected=RGB {0, 86, 97} actual=RGB {0, 86, 97}
+PASS noctis-lux query surface 3 source unchanged
+OBS candidate settled query 0 bg=RGB {255, 255, 255} fg=RGB {0, 0, 0} token=ВЫБРАТЬ color=RGB {0, 0, 255}
+OBS candidate settled query 1 bg=RGB {255, 255, 255} fg=RGB {0, 0, 0} token=ВЫБРАТЬ color=RGB {0, 0, 255}
+OBS candidate settled query 2 bg=RGB {255, 255, 255} fg=RGB {0, 0, 0} token=ВЫБРАТЬ color=RGB {0, 0, 255}
+OBS candidate settled query 3 bg=RGB {255, 255, 255} fg=RGB {0, 0, 0} token=ВЫБРАТЬ color=RGB {0, 0, 255}
+PASS visual-studio-light-cpp query surface 0 background
+PASS visual-studio-light-cpp query surface 0 foreground
+PASS visual-studio-light-cpp query surface 0 selection background expected=RGB {173, 214, 255} actual=RGB {173, 214, 255}
+PASS visual-studio-light-cpp query surface 0 selection foreground expected=RGB {0, 0, 0} actual=RGB {0, 0, 0}
+PASS visual-studio-light-cpp query surface 0 keyword
+PASS visual-studio-light-cpp query surface 0 native NUMBER text role expected=RGB {0, 0, 0} actual=RGB {0, 0, 0}
+PASS visual-studio-light-cpp query surface 0 string expected=RGB {163, 21, 21} actual=RGB {163, 21, 21}
+PASS visual-studio-light-cpp query surface 0 comment expected=RGB {0, 122, 0} actual=RGB {0, 122, 0}
+PASS visual-studio-light-cpp query surface 0 parameter expected=RGB {138, 27, 255} actual=RGB {138, 27, 255}
+PASS visual-studio-light-cpp query surface 0 identifier expected=RGB {0, 0, 0} actual=RGB {0, 0, 0}
+PASS visual-studio-light-cpp query surface 0 source unchanged
+PASS visual-studio-light-cpp query surface 1 background
+PASS visual-studio-light-cpp query surface 1 foreground
+PASS visual-studio-light-cpp query surface 1 selection background expected=RGB {173, 214, 255} actual=RGB {173, 214, 255}
+PASS visual-studio-light-cpp query surface 1 selection foreground expected=RGB {0, 0, 0} actual=RGB {0, 0, 0}
+PASS visual-studio-light-cpp query surface 1 keyword
+PASS visual-studio-light-cpp query surface 1 native NUMBER text role expected=RGB {0, 0, 0} actual=RGB {0, 0, 0}
+PASS visual-studio-light-cpp query surface 1 string expected=RGB {163, 21, 21} actual=RGB {163, 21, 21}
+PASS visual-studio-light-cpp query surface 1 comment expected=RGB {0, 122, 0} actual=RGB {0, 122, 0}
+PASS visual-studio-light-cpp query surface 1 parameter expected=RGB {138, 27, 255} actual=RGB {138, 27, 255}
+PASS visual-studio-light-cpp query surface 1 identifier expected=RGB {0, 0, 0} actual=RGB {0, 0, 0}
+PASS visual-studio-light-cpp query surface 1 source unchanged
+PASS visual-studio-light-cpp query surface 2 background
+PASS visual-studio-light-cpp query surface 2 foreground
+PASS visual-studio-light-cpp query surface 2 selection background expected=RGB {173, 214, 255} actual=RGB {173, 214, 255}
+PASS visual-studio-light-cpp query surface 2 selection foreground expected=RGB {0, 0, 0} actual=RGB {0, 0, 0}
+PASS visual-studio-light-cpp query surface 2 keyword
+PASS visual-studio-light-cpp query surface 2 native NUMBER text role expected=RGB {0, 0, 0} actual=RGB {0, 0, 0}
+PASS visual-studio-light-cpp query surface 2 string expected=RGB {163, 21, 21} actual=RGB {163, 21, 21}
+PASS visual-studio-light-cpp query surface 2 comment expected=RGB {0, 122, 0} actual=RGB {0, 122, 0}
+PASS visual-studio-light-cpp query surface 2 parameter expected=RGB {138, 27, 255} actual=RGB {138, 27, 255}
+PASS visual-studio-light-cpp query surface 2 identifier expected=RGB {0, 0, 0} actual=RGB {0, 0, 0}
+PASS visual-studio-light-cpp query surface 2 source unchanged
+PASS visual-studio-light-cpp query surface 3 background
+PASS visual-studio-light-cpp query surface 3 foreground
+PASS visual-studio-light-cpp query surface 3 selection background expected=RGB {173, 214, 255} actual=RGB {173, 214, 255}
+PASS visual-studio-light-cpp query surface 3 selection foreground expected=RGB {0, 0, 0} actual=RGB {0, 0, 0}
+PASS visual-studio-light-cpp query surface 3 keyword
+PASS visual-studio-light-cpp query surface 3 native NUMBER text role expected=RGB {0, 0, 0} actual=RGB {0, 0, 0}
+PASS visual-studio-light-cpp query surface 3 string expected=RGB {163, 21, 21} actual=RGB {163, 21, 21}
+PASS visual-studio-light-cpp query surface 3 comment expected=RGB {0, 122, 0} actual=RGB {0, 122, 0}
+PASS visual-studio-light-cpp query surface 3 parameter expected=RGB {138, 27, 255} actual=RGB {138, 27, 255}
+PASS visual-studio-light-cpp query surface 3 identifier expected=RGB {0, 0, 0} actual=RGB {0, 0, 0}
+PASS visual-studio-light-cpp query surface 3 source unchanged
+OBS candidate settled query 0 bg=RGB {244, 246, 246} fg=RGB {0, 86, 97} token=ВЫБРАТЬ color=RGB {178, 61, 102}
+OBS candidate settled query 1 bg=RGB {244, 246, 246} fg=RGB {0, 86, 97} token=ВЫБРАТЬ color=RGB {178, 61, 102}
+OBS candidate settled query 2 bg=RGB {244, 246, 246} fg=RGB {0, 86, 97} token=ВЫБРАТЬ color=RGB {178, 61, 102}
+OBS candidate settled query 3 bg=RGB {244, 246, 246} fg=RGB {0, 86, 97} token=ВЫБРАТЬ color=RGB {178, 61, 102}
+PASS noctis-hibernus query surface 0 background
+PASS noctis-hibernus query surface 0 foreground
+PASS noctis-hibernus query surface 0 selection background expected=RGB {182, 225, 231} actual=RGB {182, 225, 231}
+PASS noctis-hibernus query surface 0 selection foreground expected=RGB {0, 86, 97} actual=RGB {0, 86, 97}
+PASS noctis-hibernus query surface 0 keyword
+PASS noctis-hibernus query surface 0 native NUMBER text role expected=RGB {0, 86, 97} actual=RGB {0, 86, 97}
+PASS noctis-hibernus query surface 0 string expected=RGB {0, 119, 69} actual=RGB {0, 119, 69}
+PASS noctis-hibernus query surface 0 comment expected=RGB {90, 107, 107} actual=RGB {90, 107, 107}
+PASS noctis-hibernus query surface 0 parameter expected=RGB {0, 108, 174} actual=RGB {0, 108, 174}
+PASS noctis-hibernus query surface 0 identifier expected=RGB {0, 86, 97} actual=RGB {0, 86, 97}
+PASS noctis-hibernus query surface 0 source unchanged
+PASS noctis-hibernus query surface 1 background
+PASS noctis-hibernus query surface 1 foreground
+PASS noctis-hibernus query surface 1 selection background expected=RGB {182, 225, 231} actual=RGB {182, 225, 231}
+PASS noctis-hibernus query surface 1 selection foreground expected=RGB {0, 86, 97} actual=RGB {0, 86, 97}
+PASS noctis-hibernus query surface 1 keyword
+PASS noctis-hibernus query surface 1 native NUMBER text role expected=RGB {0, 86, 97} actual=RGB {0, 86, 97}
+PASS noctis-hibernus query surface 1 string expected=RGB {0, 119, 69} actual=RGB {0, 119, 69}
+PASS noctis-hibernus query surface 1 comment expected=RGB {90, 107, 107} actual=RGB {90, 107, 107}
+PASS noctis-hibernus query surface 1 parameter expected=RGB {0, 108, 174} actual=RGB {0, 108, 174}
+PASS noctis-hibernus query surface 1 identifier expected=RGB {0, 86, 97} actual=RGB {0, 86, 97}
+PASS noctis-hibernus query surface 1 source unchanged
+PASS noctis-hibernus query surface 2 background
+PASS noctis-hibernus query surface 2 foreground
+PASS noctis-hibernus query surface 2 selection background expected=RGB {182, 225, 231} actual=RGB {182, 225, 231}
+PASS noctis-hibernus query surface 2 selection foreground expected=RGB {0, 86, 97} actual=RGB {0, 86, 97}
+PASS noctis-hibernus query surface 2 keyword
+PASS noctis-hibernus query surface 2 native NUMBER text role expected=RGB {0, 86, 97} actual=RGB {0, 86, 97}
+PASS noctis-hibernus query surface 2 string expected=RGB {0, 119, 69} actual=RGB {0, 119, 69}
+PASS noctis-hibernus query surface 2 comment expected=RGB {90, 107, 107} actual=RGB {90, 107, 107}
+PASS noctis-hibernus query surface 2 parameter expected=RGB {0, 108, 174} actual=RGB {0, 108, 174}
+PASS noctis-hibernus query surface 2 identifier expected=RGB {0, 86, 97} actual=RGB {0, 86, 97}
+PASS noctis-hibernus query surface 2 source unchanged
+PASS noctis-hibernus query surface 3 background
+PASS noctis-hibernus query surface 3 foreground
+PASS noctis-hibernus query surface 3 selection background expected=RGB {182, 225, 231} actual=RGB {182, 225, 231}
+PASS noctis-hibernus query surface 3 selection foreground expected=RGB {0, 86, 97} actual=RGB {0, 86, 97}
+PASS noctis-hibernus query surface 3 keyword
+PASS noctis-hibernus query surface 3 native NUMBER text role expected=RGB {0, 86, 97} actual=RGB {0, 86, 97}
+PASS noctis-hibernus query surface 3 string expected=RGB {0, 119, 69} actual=RGB {0, 119, 69}
+PASS noctis-hibernus query surface 3 comment expected=RGB {90, 107, 107} actual=RGB {90, 107, 107}
+PASS noctis-hibernus query surface 3 parameter expected=RGB {0, 108, 174} actual=RGB {0, 108, 174}
+PASS noctis-hibernus query surface 3 identifier expected=RGB {0, 86, 97} actual=RGB {0, 86, 97}
+PASS noctis-hibernus query surface 3 source unchanged
+OBS candidate settled query 0 bg=RGB {242, 241, 248} fg=RGB {12, 0, 107} token=ВЫБРАТЬ color=RGB {166, 57, 95}
+OBS candidate settled query 1 bg=RGB {242, 241, 248} fg=RGB {12, 0, 107} token=ВЫБРАТЬ color=RGB {166, 57, 95}
+OBS candidate settled query 2 bg=RGB {242, 241, 248} fg=RGB {12, 0, 107} token=ВЫБРАТЬ color=RGB {166, 57, 95}
+OBS candidate settled query 3 bg=RGB {242, 241, 248} fg=RGB {12, 0, 107} token=ВЫБРАТЬ color=RGB {166, 57, 95}
+PASS noctis-lilac query surface 0 background
+PASS noctis-lilac query surface 0 foreground
+PASS noctis-lilac query surface 0 selection background expected=RGB {188, 182, 231} actual=RGB {188, 182, 231}
+PASS noctis-lilac query surface 0 selection foreground expected=RGB {12, 0, 107} actual=RGB {12, 0, 107}
+PASS noctis-lilac query surface 0 keyword
+PASS noctis-lilac query surface 0 native NUMBER text role expected=RGB {12, 0, 107} actual=RGB {12, 0, 107}
+PASS noctis-lilac query surface 0 string expected=RGB {0, 111, 65} actual=RGB {0, 111, 65}
+PASS noctis-lilac query surface 0 comment expected=RGB {97, 94, 116} actual=RGB {97, 94, 116}
+PASS noctis-lilac query surface 0 parameter expected=RGB {0, 100, 163} actual=RGB {0, 100, 163}
+PASS noctis-lilac query surface 0 identifier expected=RGB {12, 0, 107} actual=RGB {12, 0, 107}
+PASS noctis-lilac query surface 0 source unchanged
+PASS noctis-lilac query surface 1 background
+PASS noctis-lilac query surface 1 foreground
+PASS noctis-lilac query surface 1 selection background expected=RGB {188, 182, 231} actual=RGB {188, 182, 231}
+PASS noctis-lilac query surface 1 selection foreground expected=RGB {12, 0, 107} actual=RGB {12, 0, 107}
+PASS noctis-lilac query surface 1 keyword
+PASS noctis-lilac query surface 1 native NUMBER text role expected=RGB {12, 0, 107} actual=RGB {12, 0, 107}
+PASS noctis-lilac query surface 1 string expected=RGB {0, 111, 65} actual=RGB {0, 111, 65}
+PASS noctis-lilac query surface 1 comment expected=RGB {97, 94, 116} actual=RGB {97, 94, 116}
+PASS noctis-lilac query surface 1 parameter expected=RGB {0, 100, 163} actual=RGB {0, 100, 163}
+PASS noctis-lilac query surface 1 identifier expected=RGB {12, 0, 107} actual=RGB {12, 0, 107}
+PASS noctis-lilac query surface 1 source unchanged
+PASS noctis-lilac query surface 2 background
+PASS noctis-lilac query surface 2 foreground
+PASS noctis-lilac query surface 2 selection background expected=RGB {188, 182, 231} actual=RGB {188, 182, 231}
+PASS noctis-lilac query surface 2 selection foreground expected=RGB {12, 0, 107} actual=RGB {12, 0, 107}
+PASS noctis-lilac query surface 2 keyword
+PASS noctis-lilac query surface 2 native NUMBER text role expected=RGB {12, 0, 107} actual=RGB {12, 0, 107}
+PASS noctis-lilac query surface 2 string expected=RGB {0, 111, 65} actual=RGB {0, 111, 65}
+PASS noctis-lilac query surface 2 comment expected=RGB {97, 94, 116} actual=RGB {97, 94, 116}
+PASS noctis-lilac query surface 2 parameter expected=RGB {0, 100, 163} actual=RGB {0, 100, 163}
+PASS noctis-lilac query surface 2 identifier expected=RGB {12, 0, 107} actual=RGB {12, 0, 107}
+PASS noctis-lilac query surface 2 source unchanged
+PASS noctis-lilac query surface 3 background
+PASS noctis-lilac query surface 3 foreground
+PASS noctis-lilac query surface 3 selection background expected=RGB {188, 182, 231} actual=RGB {188, 182, 231}
+PASS noctis-lilac query surface 3 selection foreground expected=RGB {12, 0, 107} actual=RGB {12, 0, 107}
+PASS noctis-lilac query surface 3 keyword
+PASS noctis-lilac query surface 3 native NUMBER text role expected=RGB {12, 0, 107} actual=RGB {12, 0, 107}
+PASS noctis-lilac query surface 3 string expected=RGB {0, 111, 65} actual=RGB {0, 111, 65}
+PASS noctis-lilac query surface 3 comment expected=RGB {97, 94, 116} actual=RGB {97, 94, 116}
+PASS noctis-lilac query surface 3 parameter expected=RGB {0, 100, 163} actual=RGB {0, 100, 163}
+PASS noctis-lilac query surface 3 identifier expected=RGB {12, 0, 107} actual=RGB {12, 0, 107}
+PASS noctis-lilac query surface 3 source unchanged
+PASS registered EDT BSL merge viewer factory
+PASS merge uses real editor site for native Xtext panes
+OBS EDT merge-0 bg=RGB {30, 30, 30} fg=RGB {218, 218, 218} token=Процедура color=RGB {86, 156, 214}
+PASS EDT merge pane 0 palette background
+PASS EDT merge pane 0 palette keyword
+OBS EDT merge-1 bg=RGB {30, 30, 30} fg=RGB {218, 218, 218} token=Процедура color=RGB {86, 156, 214}
+PASS EDT merge pane 1 palette background
+PASS EDT merge pane 1 palette keyword
+OBS EDT merge-2 bg=RGB {30, 30, 30} fg=RGB {218, 218, 218} token=Процедура color=RGB {86, 156, 214}
+PASS EDT merge pane 2 palette background
+PASS EDT merge pane 2 palette keyword
+PASS EDT comparison and merge shows at least three real BSL panes
+OBS existing merge after mode switch bg=RGB {255, 255, 255} fg=RGB {31, 35, 40} token=Процедура color=RGB {86, 156, 214}
+PASS existing merge source unchanged by mode switch
+OBS existing merge after mode switch bg=RGB {255, 255, 255} fg=RGB {31, 35, 40} token=Процедура color=RGB {86, 156, 214}
+PASS existing merge source unchanged by mode switch
+OBS existing merge after mode switch bg=RGB {255, 255, 255} fg=RGB {31, 35, 40} token=Процедура color=RGB {86, 156, 214}
+PASS existing merge source unchanged by mode switch
+PASS merge uses real editor site for native Xtext panes
+PASS Light merge pane 0 background
+OBS Light merge-0 bg=RGB {255, 255, 255} fg=RGB {31, 35, 40} token=Процедура color=RGB {207, 34, 46}
+PASS Light merge pane 0 keyword
+PASS reopened Light merge pane 0 shows expected fixture
+PASS Light merge pane 1 background
+OBS Light merge-1 bg=RGB {255, 255, 255} fg=RGB {31, 35, 40} token=Процедура color=RGB {207, 34, 46}
+PASS Light merge pane 1 keyword
+PASS reopened Light merge pane 1 shows expected fixture
+PASS Light merge pane 2 background
+OBS Light merge-2 bg=RGB {255, 255, 255} fg=RGB {31, 35, 40} token=Процедура color=RGB {207, 34, 46}
+PASS Light merge pane 2 keyword
+PASS reopened Light merge pane 2 shows expected fixture
+PASS Light merge shows three BSL panes
+PASS surfaces restore
+PASS surfaces restores exact original SettingKey[scope=theme, node=css, key=id]
+PASS surfaces restores exact original SettingKey[scope=theme, node=legacy, key=id]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Builtin function.color]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.BSL_Keywords.color]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Comment.color]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Operators.color]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Others.color]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Preprocessor.color]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Brackets.color]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Strings.color]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.bsl.ui, key=com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Numbers.color]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.console, key=org.eclipse.ui.console.P_BACKGROUND_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.console, key=org.eclipse.ui.console.P_STREAM_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Background]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Foreground]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionBackground]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionForeground]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.editors, key=currentLineColor]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.editors, key=lineNumberColor]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.editors, key=hyperlinkColor]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Background.SystemDefault]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.Foreground.SystemDefault]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionBackground.SystemDefault]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.SelectionForeground.SystemDefault]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.editors, key=hyperlinkColor.SystemDefault]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.egit.ui.UncommittedChangeBackgroundColor]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.egit.ui.UncommittedChangeForegroundColor]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.egit.ui.IgnoredResourceBackgroundColor]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.egit.ui.IgnoredResourceForegroundColor]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.CONTENT_ASSIST_BACKGROUND_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.CONTENT_ASSIST_FOREGROUND_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.HOVER_BACKGROUND]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.HOVER_FOREGROUND]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.FORM_HEADING_ERROR_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.FORM_HEADING_WARNING_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.ql.ui, key=com._1c.g5.v8.dt.ql.Ql.syntaxColorer.tokenStyles.Ql_SplitterQuery.color]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.ql.ui, key=com._1c.g5.v8.dt.ql.Ql.syntaxColorer.tokenStyles.Ql_Keywords.color]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.ql.ui, key=com._1c.g5.v8.dt.ql.Ql.syntaxColorer.tokenStyles.Ql_Strings.color]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.ql.ui, key=com._1c.g5.v8.dt.ql.Ql.syntaxColorer.tokenStyles.Ql_Comment.color]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.ql.ui, key=com._1c.g5.v8.dt.ql.Ql.syntaxColorer.tokenStyles.Ql_Operators.color]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.ql.ui, key=com._1c.g5.v8.dt.ql.Ql.syntaxColorer.tokenStyles.Ql_Parameters.color]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.ql.ui, key=com._1c.g5.v8.dt.ql.Ql.syntaxColorer.tokenStyles.Ql_Function.color]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.ql.ui, key=com._1c.g5.v8.dt.ql.Ql.syntaxColorer.tokenStyles.Ql_Numbers.color]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.ql.ui, key=com._1c.g5.v8.dt.ql.Ql.syntaxColorer.tokenStyles.Ql_Others.color]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.ql.ui, key=com._1c.g5.v8.dt.ql.Ql.syntaxColorer.tokenStyles.Ql_Brackets.color]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.ql.dcs.ui, key=com._1c.g5.v8.dt.ql.dcs.QlDcs.syntaxColorer.tokenStyles.Brace.color]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.ql.dcs.ui, key=com._1c.g5.v8.dt.ql.dcs.QlDcs.syntaxColorer.tokenStyles.Ql_SplitterQuery.color]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.ql.dcs.ui, key=com._1c.g5.v8.dt.ql.dcs.QlDcs.syntaxColorer.tokenStyles.Ql_Keywords.color]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.ql.dcs.ui, key=com._1c.g5.v8.dt.ql.dcs.QlDcs.syntaxColorer.tokenStyles.Ql_Strings.color]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.ql.dcs.ui, key=com._1c.g5.v8.dt.ql.dcs.QlDcs.syntaxColorer.tokenStyles.Ql_Comment.color]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.ql.dcs.ui, key=com._1c.g5.v8.dt.ql.dcs.QlDcs.syntaxColorer.tokenStyles.Ql_Operators.color]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.ql.dcs.ui, key=com._1c.g5.v8.dt.ql.dcs.QlDcs.syntaxColorer.tokenStyles.Ql_Parameters.color]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.ql.dcs.ui, key=com._1c.g5.v8.dt.ql.dcs.QlDcs.syntaxColorer.tokenStyles.Ql_Function.color]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.ql.dcs.ui, key=com._1c.g5.v8.dt.ql.dcs.QlDcs.syntaxColorer.tokenStyles.Ql_Numbers.color]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.ql.dcs.ui, key=com._1c.g5.v8.dt.ql.dcs.QlDcs.syntaxColorer.tokenStyles.Ql_Others.color]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.ql.dcs.ui, key=com._1c.g5.v8.dt.ql.dcs.QlDcs.syntaxColorer.tokenStyles.Ql_Brackets.color]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_BG_START]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_BG_END]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_UNSELECTED_TABS_COLOR_START]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_UNSELECTED_TABS_COLOR_END]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_SELECTED_TEXT_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.ACTIVE_TAB_UNSELECTED_TEXT_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.INACTIVE_TAB_SELECTED_TEXT_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.org.eclipse.ui.workbench.INACTIVE_TAB_UNSELECTED_TEXT_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR_ACCENT]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_ACCENT]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BORDER_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_TITLE]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR_TITLE]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.INACTIVE_PART_BACKGROUND_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_BACKGROUND_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_FOREGROUND_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_BORDER_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_BACKGROUND_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_FOREGROUND_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_BORDER_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_BACKGROUND_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_FOREGROUND_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_TREES_AND_TABLES]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.INFORMATION_BACKGROUND_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_dark.com._1c.g5.v8.dt.theming.ui.INFORMATION_FOREGROUND_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.e4.ui.css.swt.theme, key=themeid]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=CONTENT_ASSIST_BACKGROUND_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=CONTENT_ASSIST_FOREGROUND_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.HOVER_BACKGROUND]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.HOVER_FOREGROUND]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.FORM_HEADING_ERROR_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.FORM_HEADING_WARNING_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_default.org.eclipse.ui.workbench.ACTIVE_TAB_BG_START]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_default.org.eclipse.ui.workbench.ACTIVE_TAB_BG_END]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_default.org.eclipse.ui.workbench.ACTIVE_UNSELECTED_TABS_COLOR_START]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_default.org.eclipse.ui.workbench.ACTIVE_UNSELECTED_TABS_COLOR_END]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.ACTIVE_TAB_SELECTED_TEXT_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.ACTIVE_TAB_UNSELECTED_TEXT_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.INACTIVE_TAB_SELECTED_TEXT_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.INACTIVE_TAB_UNSELECTED_TEXT_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR_ACCENT]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_default.com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_ACCENT]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_default.com._1c.g5.v8.dt.theming.ui.BORDER_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_TITLE]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR_TITLE]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=com._1c.g5.v8.dt.theming.ui.INACTIVE_PART_BACKGROUND_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=com._1c.g5.v8.dt.theming.ui.CONTROLS_BACKGROUND_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=com._1c.g5.v8.dt.theming.ui.CONTROLS_FOREGROUND_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_BORDER_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_BACKGROUND_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_FOREGROUND_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_BORDER_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_BACKGROUND_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_FOREGROUND_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_TREES_AND_TABLES]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_default.com._1c.g5.v8.dt.theming.ui.INFORMATION_BACKGROUND_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.e4.ui.css.theme.e4_default.com._1c.g5.v8.dt.theming.ui.INFORMATION_FOREGROUND_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_ARROW_ACTIVE_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_ARROW_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_ARROW_HOVER_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_BUTTON_ACTIVE_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_BUTTON_HOVER_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_CORNER_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_THUMB_ACTIVE_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_THUMB_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_THUMB_HOVER_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=com._1c.g5.v8.dt.theming.ui, key=com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_TRACK_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.editors, key=AbstractTextEditor.Color.FindScope]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.editors, key=printMarginColor]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=ACTIVE_HYPERLINK_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=CONFLICTING_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=COUNTER_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=DECORATIONS_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=EDITION_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=ERROR_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=HYPERLINK_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=INCOMING_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.jface.REVISION_NEWEST_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.jface.REVISION_OLDEST_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.search.ui.match.highlight]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.editors.rangeIndicatorColor]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.FORM_HEADING_INFO_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.INFORMATION_BACKGROUND]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=org.eclipse.ui.workbench.INFORMATION_FOREGROUND]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=OUTGOING_COLOR]
+PASS surfaces restores exact original SettingKey[scope=instance, node=org.eclipse.ui.workbench, key=RESOLVED_COLOR]

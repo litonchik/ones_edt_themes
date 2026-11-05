@@ -9,7 +9,7 @@ public final class ProfileState {
     public boolean beginApply() { if (applying) return false; applying = true; return true; }
     public void endApply() { applying = false; }
     public boolean onThemeChanged(String cssThemeId) {
-        if (applying || activeProfile == null || DARK.equals(cssThemeId)) return false;
+        if (applying || activeProfile == null || PaletteCatalog.mode(activeProfile).cssId().equals(cssThemeId)) return false;
         activeProfile = null; return true;
     }
     public void activate(String profile, boolean bsl) { activeProfile = profile; includeBsl = bsl; }

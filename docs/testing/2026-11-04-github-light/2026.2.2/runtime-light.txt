@@ -1,0 +1,120 @@
+JVM 25.0.2
+PASS font preference page exists
+PASS font size selector exists
+PASS active dark profile opens dark group
+PASS dark filter shows native plus eleven dark themes
+PASS light/dark radio buttons exist
+PASS light filter shows native plus GitHub Light
+PASS light first selection is pending GitHub Light
+PASS light preview renders before apply
+PASS radio switch does not apply native theme
+PASS light/dark radio buttons exist
+PASS light/dark radio buttons exist
+PASS switching groups preserves hidden color draft
+PASS Cancel discards pending light colors
+PASS Cancel preserves applied dark profile
+PASS font preference page exists
+PASS font size selector exists
+PASS light/dark radio buttons exist
+PASS light/dark radio buttons exist
+BUTTON Тёмные expected=При&менить
+BUTTON Светлые expected=При&менить
+BUTTON  expected=При&менить
+BUTTON Применять палитру BSL expected=При&менить
+BUTTON Восстановить исходное оформление… expected=При&менить
+BUTTON  expected=При&менить
+BUTTON Вернуть цвет стиля expected=При&менить
+BUTTON Сбросить палитру expected=При&менить
+BUTTON  expected=При&менить
+BUTTON Вернуть исходный шрифт expected=При&менить
+BUTTON При&менить expected=При&менить
+PASS invalid hidden light HEX blocks Apply in dark group
+PASS light/dark radio buttons exist
+BUTTON Тёмные expected=При&менить
+BUTTON Светлые expected=При&менить
+BUTTON  expected=При&менить
+BUTTON Применять палитру BSL expected=При&менить
+BUTTON Восстановить исходное оформление… expected=При&менить
+BUTTON  expected=При&менить
+BUTTON Вернуть цвет стиля expected=При&менить
+BUTTON Сбросить палитру expected=При&менить
+BUTTON  expected=При&менить
+BUTTON Вернуть исходный шрифт expected=При&менить
+BUTTON При&менить expected=При&менить
+PASS Apply activates GitHub Light
+PASS Apply selects native Light
+PASS light effective registry CONTENT_ASSIST_BACKGROUND_COLOR expected=RGB {246, 248, 250} actual=RGB {246, 248, 250}
+PASS light effective registry CONTENT_ASSIST_FOREGROUND_COLOR expected=RGB {31, 35, 40} actual=RGB {31, 35, 40}
+PASS light effective registry org.eclipse.ui.workbench.HOVER_BACKGROUND expected=RGB {246, 248, 250} actual=RGB {246, 248, 250}
+PASS light effective registry org.eclipse.ui.workbench.HOVER_FOREGROUND expected=RGB {31, 35, 40} actual=RGB {31, 35, 40}
+PASS light effective registry org.eclipse.ui.workbench.FORM_HEADING_ERROR_COLOR expected=RGB {207, 34, 46} actual=RGB {207, 34, 46}
+PASS light effective registry org.eclipse.ui.workbench.FORM_HEADING_WARNING_COLOR expected=RGB {154, 103, 0} actual=RGB {154, 103, 0}
+PASS light effective registry org.eclipse.ui.workbench.ACTIVE_TAB_BG_START expected=RGB {246, 248, 250} actual=RGB {246, 248, 250}
+PASS light effective registry org.eclipse.ui.workbench.ACTIVE_TAB_BG_END expected=RGB {246, 248, 250} actual=RGB {246, 248, 250}
+PASS light effective registry org.eclipse.ui.workbench.ACTIVE_UNSELECTED_TABS_COLOR_START expected=RGB {255, 255, 255} actual=RGB {255, 255, 255}
+PASS light effective registry org.eclipse.ui.workbench.ACTIVE_UNSELECTED_TABS_COLOR_END expected=RGB {255, 255, 255} actual=RGB {255, 255, 255}
+PASS light effective registry org.eclipse.ui.workbench.ACTIVE_TAB_SELECTED_TEXT_COLOR expected=RGB {31, 35, 40} actual=RGB {31, 35, 40}
+PASS light effective registry org.eclipse.ui.workbench.ACTIVE_TAB_UNSELECTED_TEXT_COLOR expected=RGB {101, 109, 118} actual=RGB {101, 109, 118}
+PASS light effective registry org.eclipse.ui.workbench.INACTIVE_TAB_SELECTED_TEXT_COLOR expected=RGB {31, 35, 40} actual=RGB {31, 35, 40}
+PASS light effective registry org.eclipse.ui.workbench.INACTIVE_TAB_UNSELECTED_TEXT_COLOR expected=RGB {101, 109, 118} actual=RGB {101, 109, 118}
+PASS light effective registry com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR expected=RGB {255, 255, 255} actual=RGB {255, 255, 255}
+PASS light effective registry com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR expected=RGB {31, 35, 40} actual=RGB {31, 35, 40}
+PASS light effective registry com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR_ACCENT expected=RGB {9, 105, 218} actual=RGB {9, 105, 218}
+PASS light effective registry com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_ACCENT expected=RGB {246, 248, 250} actual=RGB {246, 248, 250}
+PASS light effective registry com._1c.g5.v8.dt.theming.ui.BORDER_COLOR expected=RGB {208, 215, 222} actual=RGB {208, 215, 222}
+PASS light effective registry com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_TITLE expected=RGB {246, 248, 250} actual=RGB {246, 248, 250}
+PASS light effective registry com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR_TITLE expected=RGB {31, 35, 40} actual=RGB {31, 35, 40}
+PASS light effective registry com._1c.g5.v8.dt.theming.ui.INACTIVE_PART_BACKGROUND_COLOR expected=RGB {246, 248, 250} actual=RGB {246, 248, 250}
+PASS light effective registry com._1c.g5.v8.dt.theming.ui.CONTROLS_BACKGROUND_COLOR expected=RGB {255, 255, 255} actual=RGB {255, 255, 255}
+PASS light effective registry com._1c.g5.v8.dt.theming.ui.CONTROLS_FOREGROUND_COLOR expected=RGB {31, 35, 40} actual=RGB {31, 35, 40}
+PASS light effective registry com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_BORDER_COLOR expected=RGB {208, 215, 222} actual=RGB {208, 215, 222}
+PASS light effective registry com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_BACKGROUND_COLOR expected=RGB {246, 248, 250} actual=RGB {246, 248, 250}
+PASS light effective registry com._1c.g5.v8.dt.theming.ui.CONTROLS_DISABLED_FOREGROUND_COLOR expected=RGB {101, 109, 118} actual=RGB {101, 109, 118}
+PASS light effective registry com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_BORDER_COLOR expected=RGB {9, 105, 218} actual=RGB {9, 105, 218}
+PASS light effective registry com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_BACKGROUND_COLOR expected=RGB {240, 243, 246} actual=RGB {240, 243, 246}
+PASS light effective registry com._1c.g5.v8.dt.theming.ui.CONTROLS_HOVER_FOREGROUND_COLOR expected=RGB {31, 35, 40} actual=RGB {31, 35, 40}
+PASS light effective registry com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_TREES_AND_TABLES expected=RGB {255, 255, 255} actual=RGB {255, 255, 255}
+PASS light effective registry com._1c.g5.v8.dt.theming.ui.INFORMATION_BACKGROUND_COLOR expected=RGB {246, 248, 250} actual=RGB {246, 248, 250}
+PASS light effective registry com._1c.g5.v8.dt.theming.ui.INFORMATION_FOREGROUND_COLOR expected=RGB {31, 35, 40} actual=RGB {31, 35, 40}
+PASS native Dark scrollbar seed switches to Light
+PASS BSL editor opened on test fixture
+PASS github-dark-default exact native base during mode transition
+PASS github-dark-default semantic call refresh without editing
+PASS github-dark-default switching modes preserves document stamp
+PASS github-dark-default preserves common font
+PASS github-light-default exact native base during mode transition
+PASS github-light-default semantic call refresh without editing
+PASS github-light-default switching modes preserves document stamp
+PASS github-light-default preserves common font
+PASS darcula exact native base during mode transition
+PASS darcula semantic call refresh without editing
+PASS darcula switching modes preserves document stamp
+PASS darcula preserves common font
+PASS github-light-default exact native base during mode transition
+PASS github-light-default semantic call refresh without editing
+PASS github-light-default switching modes preserves document stamp
+PASS github-light-default preserves common font
+PASS light selection uses readable foreground
+PASS safe capture visible control intersection: github-light-selection
+PASS light BSL off restores original com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Builtin function.color
+PASS light BSL off restores original com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.BSL_Keywords.color
+PASS light BSL off restores original com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Comment.color
+PASS light BSL off restores original com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Operators.color
+PASS light BSL off restores original com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Others.color
+PASS light BSL off restores original com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Preprocessor.color
+PASS light BSL off restores original com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Brackets.color
+PASS light BSL off restores original com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Strings.color
+PASS light BSL off restores original com._1c.g5.v8.dt.bsl.Bsl.syntaxColorer.tokenStyles.Numbers.color
+PASS external native Dark releases light profile without switching back
+PASS clear native-switch conflicts before restart scenario
+PASS old personal palette preserved darcula
+PASS old personal palette preserved monokai
+PASS old personal palette preserved one-dark-pro
+PASS old personal palette preserved dracula
+PASS old personal palette preserved github-dark-default
+PASS old personal palette preserved winter-is-coming-dark-blue
+PASS old personal palette preserved night-owl
+PASS old personal palette preserved ayu-dark
+PASS old personal palette preserved shades-of-purple
+PASS old personal palette preserved noctis-minimus
+PASS old personal palette preserved visual-studio-dark-cpp

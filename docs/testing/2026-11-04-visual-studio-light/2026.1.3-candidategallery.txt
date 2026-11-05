@@ -1,0 +1,31 @@
+JVM 17.0.18
+PASS light gallery starts after native Light restart
+PASS light gallery uses restored standard font
+PASS BSL editor opened on test fixture
+PASS light gallery opens BSL sample
+PASS light gallery editor background
+PASS light gallery keyword glyph
+PASS light gallery number glyph
+PASS light gallery string glyph
+PASS light gallery comment glyph
+PASS visual-studio-light-cpp Navigator container exists
+PASS visual-studio-light-cpp Navigator container actual background expected=RGB {243, 243, 243} got=RGB {243, 243, 243}
+PASS visual-studio-light-cpp Navigator container actual foreground expected=RGB {0, 0, 0} got=RGB {0, 0, 0}
+PASS visual-studio-light-cpp Navigator Tree exists
+PASS visual-studio-light-cpp Navigator Tree actual background expected=RGB {255, 255, 255} got=RGB {255, 255, 255}
+PASS visual-studio-light-cpp Navigator Tree actual foreground expected=RGB {0, 0, 0} got=RGB {0, 0, 0}
+PASS visual-studio-light-cpp Properties container exists
+PASS visual-studio-light-cpp Properties container actual background expected=RGB {243, 243, 243} got=RGB {243, 243, 243}
+PASS visual-studio-light-cpp Properties container actual foreground expected=RGB {0, 0, 0} got=RGB {0, 0, 0}
+PASS visual-studio-light-cpp selected tab actual foreground=RGB {0, 0, 0}
+PASS visual-studio-light-cpp selected tab actual background=RGB {255, 255, 255}
+PASS visual-studio-light-cpp gallery native ruler columns available
+PASS visual-studio-light-cpp gallery ruler control 0 background expected=RGB {255, 255, 255} got=RGB {255, 255, 255}
+PASS visual-studio-light-cpp gallery ruler control 0 actual background pixel=RGB {255, 255, 255}
+PASS visual-studio-light-cpp gallery ruler control 1 background expected=RGB {255, 255, 255} got=RGB {255, 255, 255}
+PASS visual-studio-light-cpp gallery ruler control 1 actual background pixel=RGB {255, 255, 255}
+PASS visual-studio-light-cpp gallery ruler control 2 background expected=RGB {255, 255, 255} got=RGB {255, 255, 255}
+PASS visual-studio-light-cpp gallery ruler control 2 actual background pixel=RGB {255, 255, 255}
+PASS visual-studio-light-cpp gallery ruler control 3 background expected=RGB {255, 255, 255} got=RGB {255, 255, 255}
+PASS visual-studio-light-cpp gallery ruler control 3 actual background pixel=RGB {255, 255, 255}
+PASS light gallery restores original settings

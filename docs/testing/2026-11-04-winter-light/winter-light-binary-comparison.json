@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "classes": 38,
+  "unchanged_classes": 37,
+  "changed_classes": [
+    "ru/litonchik/edt/themes/model/PaletteCatalog.class"
+  ],
+  "reason": "Only palette registry data changed; shared implementation bytecode is unchanged."
+}

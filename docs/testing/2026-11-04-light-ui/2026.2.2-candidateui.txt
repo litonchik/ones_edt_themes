@@ -1,0 +1,266 @@
+JVM 25.0.2
+PASS installed CSS does not mark native Light without active profile
+PASS BSL editor opened on test fixture
+PASS github-light-default Navigator container exists
+PASS github-light-default Navigator container actual background expected=RGB {246, 248, 250} got=RGB {246, 248, 250}
+PASS github-light-default Navigator container actual foreground expected=RGB {31, 35, 40} got=RGB {31, 35, 40}
+PASS github-light-default Navigator Tree exists
+PASS github-light-default Navigator Tree actual background expected=RGB {255, 255, 255} got=RGB {255, 255, 255}
+PASS github-light-default Navigator Tree actual foreground expected=RGB {31, 35, 40} got=RGB {31, 35, 40}
+PASS github-light-default Properties container exists
+PASS github-light-default Properties container actual background expected=RGB {246, 248, 250} got=RGB {246, 248, 250}
+PASS github-light-default Properties container actual foreground expected=RGB {31, 35, 40} got=RGB {31, 35, 40}
+PASS github-light-default selected tab actual foreground=RGB {31, 35, 40}
+PASS github-light-default selected tab actual background=RGB {255, 255, 255}
+PASS github-light-default view label exists
+PASS github-light-default view label actual background expected=RGB {246, 248, 250} got=RGB {246, 248, 250}
+PASS github-light-default view label actual foreground expected=RGB {31, 35, 40} got=RGB {31, 35, 40}
+PASS github-light-default view tree exists
+PASS github-light-default view tree actual background expected=RGB {255, 255, 255} got=RGB {255, 255, 255}
+PASS github-light-default view tree actual foreground expected=RGB {31, 35, 40} got=RGB {31, 35, 40}
+PASS github-light-default view table exists
+PASS github-light-default view table actual background expected=RGB {255, 255, 255} got=RGB {255, 255, 255}
+PASS github-light-default view table actual foreground expected=RGB {31, 35, 40} got=RGB {31, 35, 40}
+PASS github-light-default view text exists
+PASS github-light-default view text actual background expected=RGB {255, 255, 255} got=RGB {255, 255, 255}
+PASS github-light-default view text actual foreground expected=RGB {31, 35, 40} got=RGB {31, 35, 40}
+PASS github-light-default view combo exists
+PASS github-light-default view combo actual background expected=RGB {255, 255, 255} got=RGB {255, 255, 255}
+PASS github-light-default view combo actual foreground expected=RGB {31, 35, 40} got=RGB {31, 35, 40}
+PASS github-light-default view button exists
+PASS github-light-default view button actual background expected=RGB {246, 248, 250} got=RGB {246, 248, 250}
+PASS github-light-default view button actual foreground expected=RGB {31, 35, 40} got=RGB {31, 35, 40}
+PASS github-light-default view link exists
+PASS github-light-default view link actual background expected=RGB {246, 248, 250} got=RGB {246, 248, 250}
+PASS github-light-default view link actual foreground expected=RGB {9, 105, 218} got=RGB {9, 105, 218}
+PASS github-light-default view hyperlink exists
+PASS github-light-default view hyperlink actual background expected=RGB {246, 248, 250} got=RGB {246, 248, 250}
+PASS github-light-default view hyperlink actual foreground expected=RGB {9, 105, 218} got=RGB {9, 105, 218}
+PASS github-light-default view disabled exists
+PASS github-light-default view disabled actual background expected=RGB {246, 248, 250} got=RGB {246, 248, 250}
+PASS github-light-default view disabled actual foreground expected=RGB {101, 109, 118} got=RGB {101, 109, 118}
+PASS github-light-default entire arbitrary editor subtree excluded
+PASS github-light-default entire BSL editor subtree excluded
+PASS github-light-default UI layer preserves editor business colors
+PASS github-light-default BSL background and tokens preserved
+PASS github-light-default source and modification stamp unchanged
+PASS github-light-default newly created view Tree exists
+PASS github-light-default newly created view Tree actual background expected=RGB {255, 255, 255} got=RGB {255, 255, 255}
+PASS github-light-default newly created view Tree actual foreground expected=RGB {31, 35, 40} got=RGB {31, 35, 40}
+PASS winter-is-coming-light Navigator container exists
+PASS winter-is-coming-light Navigator container actual background expected=RGB {243, 243, 243} got=RGB {243, 243, 243}
+PASS winter-is-coming-light Navigator container actual foreground expected=RGB {35, 110, 191} got=RGB {35, 110, 191}
+PASS winter-is-coming-light Navigator Tree exists
+PASS winter-is-coming-light Navigator Tree actual background expected=RGB {255, 255, 255} got=RGB {255, 255, 255}
+PASS winter-is-coming-light Navigator Tree actual foreground expected=RGB {35, 110, 191} got=RGB {35, 110, 191}
+PASS winter-is-coming-light Properties container exists
+PASS winter-is-coming-light Properties container actual background expected=RGB {243, 243, 243} got=RGB {243, 243, 243}
+PASS winter-is-coming-light Properties container actual foreground expected=RGB {35, 110, 191} got=RGB {35, 110, 191}
+PASS winter-is-coming-light selected tab actual foreground=RGB {35, 110, 191}
+PASS winter-is-coming-light selected tab actual background=RGB {255, 255, 255}
+PASS winter-is-coming-light view label exists
+PASS winter-is-coming-light view label actual background expected=RGB {243, 243, 243} got=RGB {243, 243, 243}
+PASS winter-is-coming-light view label actual foreground expected=RGB {35, 110, 191} got=RGB {35, 110, 191}
+PASS winter-is-coming-light view tree exists
+PASS winter-is-coming-light view tree actual background expected=RGB {255, 255, 255} got=RGB {255, 255, 255}
+PASS winter-is-coming-light view tree actual foreground expected=RGB {35, 110, 191} got=RGB {35, 110, 191}
+PASS winter-is-coming-light view table exists
+PASS winter-is-coming-light view table actual background expected=RGB {255, 255, 255} got=RGB {255, 255, 255}
+PASS winter-is-coming-light view table actual foreground expected=RGB {35, 110, 191} got=RGB {35, 110, 191}
+PASS winter-is-coming-light view text exists
+PASS winter-is-coming-light view text actual background expected=RGB {255, 255, 255} got=RGB {255, 255, 255}
+PASS winter-is-coming-light view text actual foreground expected=RGB {35, 110, 191} got=RGB {35, 110, 191}
+PASS winter-is-coming-light view combo exists
+PASS winter-is-coming-light view combo actual background expected=RGB {255, 255, 255} got=RGB {255, 255, 255}
+PASS winter-is-coming-light view combo actual foreground expected=RGB {35, 110, 191} got=RGB {35, 110, 191}
+PASS winter-is-coming-light view button exists
+PASS winter-is-coming-light view button actual background expected=RGB {243, 243, 243} got=RGB {243, 243, 243}
+PASS winter-is-coming-light view button actual foreground expected=RGB {35, 110, 191} got=RGB {35, 110, 191}
+PASS winter-is-coming-light view link exists
+PASS winter-is-coming-light view link actual background expected=RGB {243, 243, 243} got=RGB {243, 243, 243}
+PASS winter-is-coming-light view link actual foreground expected=RGB {35, 110, 191} got=RGB {35, 110, 191}
+PASS winter-is-coming-light view hyperlink exists
+PASS winter-is-coming-light view hyperlink actual background expected=RGB {243, 243, 243} got=RGB {243, 243, 243}
+PASS winter-is-coming-light view hyperlink actual foreground expected=RGB {35, 110, 191} got=RGB {35, 110, 191}
+PASS winter-is-coming-light view disabled exists
+PASS winter-is-coming-light view disabled actual background expected=RGB {243, 243, 243} got=RGB {243, 243, 243}
+PASS winter-is-coming-light view disabled actual foreground expected=RGB {35, 110, 191} got=RGB {35, 110, 191}
+PASS winter-is-coming-light entire arbitrary editor subtree excluded
+PASS winter-is-coming-light entire BSL editor subtree excluded
+PASS winter-is-coming-light UI layer preserves editor business colors
+PASS winter-is-coming-light BSL background and tokens preserved
+PASS winter-is-coming-light source and modification stamp unchanged
+PASS winter-is-coming-light newly created view Tree exists
+PASS winter-is-coming-light newly created view Tree actual background expected=RGB {255, 255, 255} got=RGB {255, 255, 255}
+PASS winter-is-coming-light newly created view Tree actual foreground expected=RGB {35, 110, 191} got=RGB {35, 110, 191}
+PASS night-owl-light Navigator container exists
+PASS night-owl-light Navigator container actual background expected=RGB {240, 240, 240} got=RGB {240, 240, 240}
+PASS night-owl-light Navigator container actual foreground expected=RGB {64, 63, 83} got=RGB {64, 63, 83}
+PASS night-owl-light Navigator Tree exists
+PASS night-owl-light Navigator Tree actual background expected=RGB {251, 251, 251} got=RGB {251, 251, 251}
+PASS night-owl-light Navigator Tree actual foreground expected=RGB {64, 63, 83} got=RGB {64, 63, 83}
+PASS night-owl-light Properties container exists
+PASS night-owl-light Properties container actual background expected=RGB {240, 240, 240} got=RGB {240, 240, 240}
+PASS night-owl-light Properties container actual foreground expected=RGB {64, 63, 83} got=RGB {64, 63, 83}
+PASS night-owl-light selected tab actual foreground=RGB {64, 63, 83}
+PASS night-owl-light selected tab actual background=RGB {251, 251, 251}
+PASS night-owl-light view label exists
+PASS night-owl-light view label actual background expected=RGB {240, 240, 240} got=RGB {240, 240, 240}
+PASS night-owl-light view label actual foreground expected=RGB {64, 63, 83} got=RGB {64, 63, 83}
+PASS night-owl-light view tree exists
+PASS night-owl-light view tree actual background expected=RGB {251, 251, 251} got=RGB {251, 251, 251}
+PASS night-owl-light view tree actual foreground expected=RGB {64, 63, 83} got=RGB {64, 63, 83}
+PASS night-owl-light view table exists
+PASS night-owl-light view table actual background expected=RGB {251, 251, 251} got=RGB {251, 251, 251}
+PASS night-owl-light view table actual foreground expected=RGB {64, 63, 83} got=RGB {64, 63, 83}
+PASS night-owl-light view text exists
+PASS night-owl-light view text actual background expected=RGB {251, 251, 251} got=RGB {251, 251, 251}
+PASS night-owl-light view text actual foreground expected=RGB {64, 63, 83} got=RGB {64, 63, 83}
+PASS night-owl-light view combo exists
+PASS night-owl-light view combo actual background expected=RGB {251, 251, 251} got=RGB {251, 251, 251}
+PASS night-owl-light view combo actual foreground expected=RGB {64, 63, 83} got=RGB {64, 63, 83}
+PASS night-owl-light view button exists
+PASS night-owl-light view button actual background expected=RGB {240, 240, 240} got=RGB {240, 240, 240}
+PASS night-owl-light view button actual foreground expected=RGB {64, 63, 83} got=RGB {64, 63, 83}
+PASS night-owl-light view link exists
+PASS night-owl-light view link actual background expected=RGB {240, 240, 240} got=RGB {240, 240, 240}
+PASS night-owl-light view link actual foreground expected=RGB {61, 104, 196} got=RGB {61, 104, 196}
+PASS night-owl-light view hyperlink exists
+PASS night-owl-light view hyperlink actual background expected=RGB {240, 240, 240} got=RGB {240, 240, 240}
+PASS night-owl-light view hyperlink actual foreground expected=RGB {61, 104, 196} got=RGB {61, 104, 196}
+PASS night-owl-light view disabled exists
+PASS night-owl-light view disabled actual background expected=RGB {240, 240, 240} got=RGB {240, 240, 240}
+PASS night-owl-light view disabled actual foreground expected=RGB {101, 109, 126} got=RGB {101, 109, 126}
+PASS night-owl-light entire arbitrary editor subtree excluded
+PASS night-owl-light entire BSL editor subtree excluded
+PASS night-owl-light UI layer preserves editor business colors
+PASS night-owl-light BSL background and tokens preserved
+PASS night-owl-light source and modification stamp unchanged
+PASS night-owl-light newly created view Tree exists
+PASS night-owl-light newly created view Tree actual background expected=RGB {251, 251, 251} got=RGB {251, 251, 251}
+PASS night-owl-light newly created view Tree actual foreground expected=RGB {64, 63, 83} got=RGB {64, 63, 83}
+PASS ayu-light Navigator container exists
+PASS ayu-light Navigator container actual background expected=RGB {248, 249, 250} got=RGB {248, 249, 250}
+PASS ayu-light Navigator container actual foreground expected=RGB {92, 97, 102} got=RGB {92, 97, 102}
+PASS ayu-light Navigator Tree exists
+PASS ayu-light Navigator Tree actual background expected=RGB {252, 252, 252} got=RGB {252, 252, 252}
+PASS ayu-light Navigator Tree actual foreground expected=RGB {92, 97, 102} got=RGB {92, 97, 102}
+PASS ayu-light Properties container exists
+PASS ayu-light Properties container actual background expected=RGB {248, 249, 250} got=RGB {248, 249, 250}
+PASS ayu-light Properties container actual foreground expected=RGB {92, 97, 102} got=RGB {92, 97, 102}
+PASS ayu-light selected tab actual foreground=RGB {92, 97, 102}
+PASS ayu-light selected tab actual background=RGB {252, 252, 252}
+PASS ayu-light view label exists
+PASS ayu-light view label actual background expected=RGB {248, 249, 250} got=RGB {248, 249, 250}
+PASS ayu-light view label actual foreground expected=RGB {92, 97, 102} got=RGB {92, 97, 102}
+PASS ayu-light view tree exists
+PASS ayu-light view tree actual background expected=RGB {252, 252, 252} got=RGB {252, 252, 252}
+PASS ayu-light view tree actual foreground expected=RGB {92, 97, 102} got=RGB {92, 97, 102}
+PASS ayu-light view table exists
+PASS ayu-light view table actual background expected=RGB {252, 252, 252} got=RGB {252, 252, 252}
+PASS ayu-light view table actual foreground expected=RGB {92, 97, 102} got=RGB {92, 97, 102}
+PASS ayu-light view text exists
+PASS ayu-light view text actual background expected=RGB {252, 252, 252} got=RGB {252, 252, 252}
+PASS ayu-light view text actual foreground expected=RGB {92, 97, 102} got=RGB {92, 97, 102}
+PASS ayu-light view combo exists
+PASS ayu-light view combo actual background expected=RGB {252, 252, 252} got=RGB {252, 252, 252}
+PASS ayu-light view combo actual foreground expected=RGB {92, 97, 102} got=RGB {92, 97, 102}
+PASS ayu-light view button exists
+PASS ayu-light view button actual background expected=RGB {248, 249, 250} got=RGB {248, 249, 250}
+PASS ayu-light view button actual foreground expected=RGB {92, 97, 102} got=RGB {92, 97, 102}
+PASS ayu-light view link exists
+PASS ayu-light view link actual background expected=RGB {248, 249, 250} got=RGB {248, 249, 250}
+PASS ayu-light view link actual foreground expected=RGB {153, 96, 15} got=RGB {153, 96, 15}
+PASS ayu-light view hyperlink exists
+PASS ayu-light view hyperlink actual background expected=RGB {248, 249, 250} got=RGB {248, 249, 250}
+PASS ayu-light view hyperlink actual foreground expected=RGB {153, 96, 15} got=RGB {153, 96, 15}
+PASS ayu-light view disabled exists
+PASS ayu-light view disabled actual background expected=RGB {248, 249, 250} got=RGB {248, 249, 250}
+PASS ayu-light view disabled actual foreground expected=RGB {108, 108, 110} got=RGB {108, 108, 110}
+PASS ayu-light entire arbitrary editor subtree excluded
+PASS ayu-light entire BSL editor subtree excluded
+PASS ayu-light UI layer preserves editor business colors
+PASS ayu-light BSL background and tokens preserved
+PASS ayu-light source and modification stamp unchanged
+PASS ayu-light newly created view Tree exists
+PASS ayu-light newly created view Tree actual background expected=RGB {252, 252, 252} got=RGB {252, 252, 252}
+PASS ayu-light newly created view Tree actual foreground expected=RGB {92, 97, 102} got=RGB {92, 97, 102}
+PASS noctis-lux Navigator container exists
+PASS noctis-lux Navigator container actual background expected=RGB {249, 241, 225} got=RGB {249, 241, 225}
+PASS noctis-lux Navigator container actual foreground expected=RGB {0, 86, 97} got=RGB {0, 86, 97}
+PASS noctis-lux Navigator Tree exists
+PASS noctis-lux Navigator Tree actual background expected=RGB {254, 248, 236} got=RGB {254, 248, 236}
+PASS noctis-lux Navigator Tree actual foreground expected=RGB {0, 86, 97} got=RGB {0, 86, 97}
+PASS noctis-lux Properties container exists
+PASS noctis-lux Properties container actual background expected=RGB {249, 241, 225} got=RGB {249, 241, 225}
+PASS noctis-lux Properties container actual foreground expected=RGB {0, 86, 97} got=RGB {0, 86, 97}
+PASS noctis-lux selected tab actual foreground=RGB {0, 86, 97}
+PASS noctis-lux selected tab actual background=RGB {254, 248, 236}
+PASS noctis-lux view label exists
+PASS noctis-lux view label actual background expected=RGB {249, 241, 225} got=RGB {249, 241, 225}
+PASS noctis-lux view label actual foreground expected=RGB {0, 86, 97} got=RGB {0, 86, 97}
+PASS noctis-lux view tree exists
+PASS noctis-lux view tree actual background expected=RGB {254, 248, 236} got=RGB {254, 248, 236}
+PASS noctis-lux view tree actual foreground expected=RGB {0, 86, 97} got=RGB {0, 86, 97}
+PASS noctis-lux view table exists
+PASS noctis-lux view table actual background expected=RGB {254, 248, 236} got=RGB {254, 248, 236}
+PASS noctis-lux view table actual foreground expected=RGB {0, 86, 97} got=RGB {0, 86, 97}
+PASS noctis-lux view text exists
+PASS noctis-lux view text actual background expected=RGB {254, 248, 236} got=RGB {254, 248, 236}
+PASS noctis-lux view text actual foreground expected=RGB {0, 86, 97} got=RGB {0, 86, 97}
+PASS noctis-lux view combo exists
+PASS noctis-lux view combo actual background expected=RGB {254, 248, 236} got=RGB {254, 248, 236}
+PASS noctis-lux view combo actual foreground expected=RGB {0, 86, 97} got=RGB {0, 86, 97}
+PASS noctis-lux view button exists
+PASS noctis-lux view button actual background expected=RGB {249, 241, 225} got=RGB {249, 241, 225}
+PASS noctis-lux view button actual foreground expected=RGB {0, 86, 97} got=RGB {0, 86, 97}
+PASS noctis-lux view link exists
+PASS noctis-lux view link actual background expected=RGB {249, 241, 225} got=RGB {249, 241, 225}
+PASS noctis-lux view link actual foreground expected=RGB {0, 115, 131} got=RGB {0, 115, 131}
+PASS noctis-lux view hyperlink exists
+PASS noctis-lux view hyperlink actual background expected=RGB {249, 241, 225} got=RGB {249, 241, 225}
+PASS noctis-lux view hyperlink actual foreground expected=RGB {0, 115, 131} got=RGB {0, 115, 131}
+PASS noctis-lux view disabled exists
+PASS noctis-lux view disabled actual background expected=RGB {249, 241, 225} got=RGB {249, 241, 225}
+PASS noctis-lux view disabled actual foreground expected=RGB {91, 107, 107} got=RGB {91, 107, 107}
+PASS noctis-lux entire arbitrary editor subtree excluded
+PASS noctis-lux entire BSL editor subtree excluded
+PASS noctis-lux UI layer preserves editor business colors
+PASS noctis-lux BSL background and tokens preserved
+PASS noctis-lux source and modification stamp unchanged
+PASS noctis-lux newly created view Tree exists
+PASS noctis-lux newly created view Tree actual background expected=RGB {254, 248, 236} got=RGB {254, 248, 236}
+PASS noctis-lux newly created view Tree actual foreground expected=RGB {0, 86, 97} got=RGB {0, 86, 97}
+PASS personal panel color reaches actual Navigator
+PASS noctis-lux Navigator container exists
+PASS noctis-lux Navigator container actual background expected=RGB {249, 241, 225} got=RGB {249, 241, 225}
+PASS noctis-lux Navigator container actual foreground expected=RGB {0, 86, 97} got=RGB {0, 86, 97}
+PASS noctis-lux Navigator Tree exists
+PASS noctis-lux Navigator Tree actual background expected=RGB {254, 248, 236} got=RGB {254, 248, 236}
+PASS noctis-lux Navigator Tree actual foreground expected=RGB {0, 86, 97} got=RGB {0, 86, 97}
+PASS noctis-lux Properties container exists
+PASS noctis-lux Properties container actual background expected=RGB {249, 241, 225} got=RGB {249, 241, 225}
+PASS noctis-lux Properties container actual foreground expected=RGB {0, 86, 97} got=RGB {0, 86, 97}
+PASS noctis-lux selected tab actual foreground=RGB {0, 86, 97}
+PASS noctis-lux selected tab actual background=RGB {254, 248, 236}
+PASS UI refresh preserves dynamically added third-party class
+PASS Light markers removed on Dark handoff
+PASS Dark handoff preserves third-party inline style
+PASS Dark handoff preserves third-party CSS class
+PASS noctis-lux Navigator container exists
+PASS noctis-lux Navigator container actual background expected=RGB {249, 241, 225} got=RGB {249, 241, 225}
+PASS noctis-lux Navigator container actual foreground expected=RGB {0, 86, 97} got=RGB {0, 86, 97}
+PASS noctis-lux Navigator Tree exists
+PASS noctis-lux Navigator Tree actual background expected=RGB {254, 248, 236} got=RGB {254, 248, 236}
+PASS noctis-lux Navigator Tree actual foreground expected=RGB {0, 86, 97} got=RGB {0, 86, 97}
+PASS noctis-lux Properties container exists
+PASS noctis-lux Properties container actual background expected=RGB {249, 241, 225} got=RGB {249, 241, 225}
+PASS noctis-lux Properties container actual foreground expected=RGB {0, 86, 97} got=RGB {0, 86, 97}
+PASS noctis-lux selected tab actual foreground=RGB {0, 86, 97}
+PASS noctis-lux selected tab actual background=RGB {254, 248, 236}
+PASS font preference page exists
+PASS font size selector exists
+PASS own preferences palette table exists
+PASS own preferences palette table actual background expected=RGB {254, 248, 236} got=RGB {254, 248, 236}
+PASS own preferences palette table actual foreground expected=RGB {0, 86, 97} got=RGB {0, 86, 97}
+PASS UI palette left for restart

@@ -20,11 +20,12 @@ public final class EdtSettingsAdapter implements SettingAccess {
     public EdtSettingsAdapter(IThemeEngine engine, IThemeManager themes) { this.engine = engine; this.themes = themes; }
     public Map<SettingKey,OriginalValue> plan(Palette palette, boolean includeBsl) {
         var desired = new LinkedHashMap<SettingKey,OriginalValue>();
-        desired.put(CSS,OriginalValue.of(ProfileState.DARK));
+        String cssId = PaletteCatalog.mode(palette.id()).cssId();
+        desired.put(CSS,OriginalValue.of(cssId));
         desired.put(LEGACY,OriginalValue.of(themes.getCurrentTheme().getId()));
         desired.putAll(catalog.plan(palette,includeBsl,themes.getCurrentTheme().getId()));
         // Native setter persists this key; capture its presence separately from the effective CSS ID.
-        desired.put(new SettingKey("instance",CSS_NODE,"themeid"),OriginalValue.of(ProfileState.DARK));
+        desired.put(new SettingKey("instance",CSS_NODE,"themeid"),OriginalValue.of(cssId));
         return desired;
     }
     @Override public OriginalValue read(SettingKey key) {
@@ -38,6 +39,7 @@ public final class EdtSettingsAdapter implements SettingAccess {
     }
     @Override public void write(SettingKey key, OriginalValue value) {
         if (key.equals(CSS)) {
+            LightUiStyles.prepare(engine);
             if (!value.present() || engine.getThemes().stream().noneMatch(t -> t.getId().equals(value.value()))) throw new IllegalArgumentException("Неизвестная CSS-тема");
             engine.setTheme(value.value(),true);
             // Same-ID call settles Eclipse's previousThemeId/currentThemeId before preference writes.
@@ -56,7 +58,30 @@ public final class EdtSettingsAdapter implements SettingAccess {
     private void put(SettingKey key, OriginalValue value) {
         if (value.present()) node(key).put(key.key(),value.value()); else node(key).remove(key.key());
     }
+    /** Restore factory defaults owned by the profile and reseed actual Light registry RGBs.
+     * Native Dark-created definitions without a Light CSS default can retain Eclipse's
+     * EMPTY_COLOR_VALUE even when the exact explicit preference was reasserted unchanged.
+     * Read the current explicit value, including a later manual edit, without taking ownership.
+     */
+    public void restoreLightRegistry(Map<SettingKey,OriginalValue> applied) throws Exception {
+        Set<String> factoryColors = Set.of("org.eclipse.ui.workbench.HOVER_BACKGROUND","org.eclipse.ui.workbench.HOVER_FOREGROUND",
+                "org.eclipse.ui.workbench.FORM_HEADING_ERROR_COLOR","org.eclipse.ui.workbench.FORM_HEADING_WARNING_COLOR");
+        var registry = themes.getCurrentTheme().getColorRegistry();
+        for (var entry : catalog.entries()) if (entry.kind().equals("color")) {
+            String id = entry.key();
+            SettingKey key = new SettingKey("instance",entry.node(),SettingCatalog.colorPreferenceKey(id,themes.getCurrentTheme().getId(),ThemeMode.LIGHT));
+            OriginalValue saved = applied.get(key);
+            OriginalValue current = read(key);
+            if (saved != null && saved.present() && factoryColors.contains(id) && !current.present()) { put(key,saved); current = saved; }
+            if (current.present()) {
+                String[] rgb = current.value().split(",");
+                registry.put(id,new org.eclipse.swt.graphics.RGB(Integer.parseInt(rgb[0]),Integer.parseInt(rgb[1]),Integer.parseInt(rgb[2])));
+            }
+        }
+        InstanceScope.INSTANCE.getNode("org.eclipse.ui.workbench").flush();
+    }
     @Override public void flush() throws Exception {
+        LightUiStyles.prepare(engine);
         Set<String> nodes = new LinkedHashSet<>(); touched.keySet().forEach(k -> nodes.add(k.node()));
         for (String id : nodes) InstanceScope.INSTANCE.getNode(id).flush();
         if (engine.getActiveTheme() != null) {
@@ -76,6 +101,7 @@ public final class EdtSettingsAdapter implements SettingAccess {
         // A native theme refresh may seed absent editor keys. Restore the exact explicit state after styling.
         for (var entry : touched.entrySet()) put(entry.getKey(),entry.getValue());
         for (String id : nodes) InstanceScope.INSTANCE.getNode(id).flush();
+        EditorRulerColors.refresh();
         // Xtext's lexical presentation may retain old token attributes after native CSS rewrites.
         // Refresh through the public text viewer adapter, keeping documents and undo history intact.
         for (var window : PlatformUI.getWorkbench().getWorkbenchWindows()) for (var page : window.getPages()) {
@@ -89,6 +115,11 @@ public final class EdtSettingsAdapter implements SettingAccess {
                 }
             }
         }
+        String active = InstanceScope.INSTANCE.getNode("ru.litonchik.edt.themes").get("activeProfile",null);
+        if (engine.getActiveTheme() != null && ThemeMode.LIGHT.cssId().equals(engine.getActiveTheme().getId())
+                && PaletteCatalog.isKnown(active) && PaletteCatalog.mode(active) == ThemeMode.LIGHT)
+            restoreLightRegistry(touched);
+        LightUiStyles.refresh(engine);
         touched.clear();
     }
 }

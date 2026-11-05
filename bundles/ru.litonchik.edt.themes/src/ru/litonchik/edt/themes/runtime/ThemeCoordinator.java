@@ -55,9 +55,12 @@ public final class ThemeCoordinator implements AutoCloseable {
                 ThemeStartup.inform("Восстановлен незавершённый журнал. Выберите профиль повторно. Конфликтов: " + recovered.conflicts().size());
             } finally { ownApply = false; }
         } else if (state.activeProfile() != null) {
-            if (!ProfileState.DARK.equals(engine.getActiveTheme().getId())) onThemeChanged(engine.getActiveTheme().getId());
+            if (!PaletteCatalog.mode(state.activeProfile()).cssId().equals(engine.getActiveTheme().getId())) onThemeChanged(engine.getActiveTheme().getId());
+            else if (PaletteCatalog.mode(state.activeProfile()) == ThemeMode.LIGHT) adapter.restoreLightRegistry(snapshots.snapshot().lastApplied());
             // Persistent scoped values are consumed by native startup. Do not reapply: it would overwrite manual changes.
         }
+        LightUiStyles.refresh(engine);
+        EditorRulerColors.start();
     }
     public void apply(String profile, boolean includeBsl) throws Exception {
         apply(profile,includeBsl,paletteDrafts());
@@ -100,11 +103,12 @@ public final class ThemeCoordinator implements AutoCloseable {
                 // Dark CSS touches BSL even when palette BSL is disabled. Neutralize those native writes.
                 desired = snapshots.withOriginals(desired,bslKeys);
             }
-            desired = snapshots.withNativeDefaults(desired,NativeSettingsCatalog.load());
+            ThemeMode mode = PaletteCatalog.mode(profile);
+            desired = snapshots.withNativeDefaults(desired,NativeSettingsCatalog.load(mode),NativeSettingsCatalog.load(mode == ThemeMode.DARK ? ThemeMode.LIGHT : ThemeMode.DARK));
             desired.put(new SettingKey("instance",SnapshotPreferences.PLUGIN_ID,"activeProfile"),OriginalValue.of(profile));
             desired.put(new SettingKey("instance",SnapshotPreferences.PLUGIN_ID,"includeBsl"),OriginalValue.of(Boolean.toString(includeBsl)));
             snapshots.capture(desired.keySet());
-            var explicit = SettingCatalog.load().roleTargets(drafts.touched(profile),includeBsl,PlatformUI.getWorkbench().getThemeManager().getCurrentTheme().getId());
+            var explicit = SettingCatalog.load().roleTargets(drafts.touched(profile),includeBsl,PlatformUI.getWorkbench().getThemeManager().getCurrentTheme().getId(),PaletteCatalog.mode(profile));
             snapshots.apply(desired,explicit,personal);
             state.activate(profile,includeBsl);
             drafts.accept();

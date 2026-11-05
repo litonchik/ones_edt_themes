@@ -1,0 +1,130 @@
+JVM 17.0.18
+PASS UI gallery starts after persisted native Light restart
+PASS UI gallery uses original font
+PASS BSL editor opened on test fixture
+PASS github-light-default gallery standard colors
+PASS github-light-default Navigator container exists
+PASS github-light-default Navigator container actual background expected=RGB {246, 248, 250} got=RGB {246, 248, 250}
+PASS github-light-default Navigator container actual foreground expected=RGB {31, 35, 40} got=RGB {31, 35, 40}
+PASS github-light-default Navigator Tree exists
+PASS github-light-default Navigator Tree actual background expected=RGB {255, 255, 255} got=RGB {255, 255, 255}
+PASS github-light-default Navigator Tree actual foreground expected=RGB {31, 35, 40} got=RGB {31, 35, 40}
+PASS github-light-default Properties container exists
+PASS github-light-default Properties container actual background expected=RGB {246, 248, 250} got=RGB {246, 248, 250}
+PASS github-light-default Properties container actual foreground expected=RGB {31, 35, 40} got=RGB {31, 35, 40}
+PASS github-light-default selected tab actual foreground=RGB {31, 35, 40}
+PASS github-light-default selected tab actual background=RGB {255, 255, 255}
+PASS github-light-default gallery actual BSL keyword
+PASS github-light-default gallery actual BSL number
+PASS github-light-default gallery actual BSL string
+PASS github-light-default gallery actual BSL comment
+PASS github-light-default gallery native ruler columns available
+PASS github-light-default gallery ruler control 0 background expected=RGB {255, 255, 255} got=RGB {255, 255, 255}
+PASS github-light-default gallery ruler control 0 actual background pixel=RGB {255, 255, 255}
+PASS github-light-default gallery ruler control 1 background expected=RGB {255, 255, 255} got=RGB {255, 255, 255}
+PASS github-light-default gallery ruler control 1 actual background pixel=RGB {255, 255, 255}
+PASS github-light-default gallery ruler control 2 background expected=RGB {255, 255, 255} got=RGB {255, 255, 255}
+PASS github-light-default gallery ruler control 2 actual background pixel=RGB {255, 255, 255}
+PASS github-light-default gallery ruler control 3 background expected=RGB {255, 255, 255} got=RGB {255, 255, 255}
+PASS github-light-default gallery ruler control 3 actual background pixel=RGB {255, 255, 255}
+PASS winter-is-coming-light gallery standard colors
+PASS winter-is-coming-light Navigator container exists
+PASS winter-is-coming-light Navigator container actual background expected=RGB {243, 243, 243} got=RGB {243, 243, 243}
+PASS winter-is-coming-light Navigator container actual foreground expected=RGB {35, 110, 191} got=RGB {35, 110, 191}
+PASS winter-is-coming-light Navigator Tree exists
+PASS winter-is-coming-light Navigator Tree actual background expected=RGB {255, 255, 255} got=RGB {255, 255, 255}
+PASS winter-is-coming-light Navigator Tree actual foreground expected=RGB {35, 110, 191} got=RGB {35, 110, 191}
+PASS winter-is-coming-light Properties container exists
+PASS winter-is-coming-light Properties container actual background expected=RGB {243, 243, 243} got=RGB {243, 243, 243}
+PASS winter-is-coming-light Properties container actual foreground expected=RGB {35, 110, 191} got=RGB {35, 110, 191}
+PASS winter-is-coming-light selected tab actual foreground=RGB {35, 110, 191}
+PASS winter-is-coming-light selected tab actual background=RGB {255, 255, 255}
+PASS winter-is-coming-light gallery actual BSL keyword
+PASS winter-is-coming-light gallery actual BSL number
+PASS winter-is-coming-light gallery actual BSL string
+PASS winter-is-coming-light gallery actual BSL comment
+PASS winter-is-coming-light gallery native ruler columns available
+PASS winter-is-coming-light gallery ruler control 0 background expected=RGB {255, 255, 255} got=RGB {255, 255, 255}
+PASS winter-is-coming-light gallery ruler control 0 actual background pixel=RGB {255, 255, 255}
+PASS winter-is-coming-light gallery ruler control 1 background expected=RGB {255, 255, 255} got=RGB {255, 255, 255}
+PASS winter-is-coming-light gallery ruler control 1 actual background pixel=RGB {255, 255, 255}
+PASS winter-is-coming-light gallery ruler control 2 background expected=RGB {255, 255, 255} got=RGB {255, 255, 255}
+PASS winter-is-coming-light gallery ruler control 2 actual background pixel=RGB {255, 255, 255}
+PASS winter-is-coming-light gallery ruler control 3 background expected=RGB {255, 255, 255} got=RGB {255, 255, 255}
+PASS winter-is-coming-light gallery ruler control 3 actual background pixel=RGB {255, 255, 255}
+PASS night-owl-light gallery standard colors
+PASS night-owl-light Navigator container exists
+PASS night-owl-light Navigator container actual background expected=RGB {240, 240, 240} got=RGB {240, 240, 240}
+PASS night-owl-light Navigator container actual foreground expected=RGB {64, 63, 83} got=RGB {64, 63, 83}
+PASS night-owl-light Navigator Tree exists
+PASS night-owl-light Navigator Tree actual background expected=RGB {251, 251, 251} got=RGB {251, 251, 251}
+PASS night-owl-light Navigator Tree actual foreground expected=RGB {64, 63, 83} got=RGB {64, 63, 83}
+PASS night-owl-light Properties container exists
+PASS night-owl-light Properties container actual background expected=RGB {240, 240, 240} got=RGB {240, 240, 240}
+PASS night-owl-light Properties container actual foreground expected=RGB {64, 63, 83} got=RGB {64, 63, 83}
+PASS night-owl-light selected tab actual foreground=RGB {64, 63, 83}
+PASS night-owl-light selected tab actual background=RGB {251, 251, 251}
+PASS night-owl-light gallery actual BSL keyword
+PASS night-owl-light gallery actual BSL number
+PASS night-owl-light gallery actual BSL string
+PASS night-owl-light gallery actual BSL comment
+PASS night-owl-light gallery native ruler columns available
+PASS night-owl-light gallery ruler control 0 background expected=RGB {251, 251, 251} got=RGB {251, 251, 251}
+PASS night-owl-light gallery ruler control 0 actual background pixel=RGB {251, 251, 251}
+PASS night-owl-light gallery ruler control 1 background expected=RGB {251, 251, 251} got=RGB {251, 251, 251}
+PASS night-owl-light gallery ruler control 1 actual background pixel=RGB {251, 251, 251}
+PASS night-owl-light gallery ruler control 2 background expected=RGB {251, 251, 251} got=RGB {251, 251, 251}
+PASS night-owl-light gallery ruler control 2 actual background pixel=RGB {251, 251, 251}
+PASS night-owl-light gallery ruler control 3 background expected=RGB {251, 251, 251} got=RGB {251, 251, 251}
+PASS night-owl-light gallery ruler control 3 actual background pixel=RGB {251, 251, 251}
+PASS ayu-light gallery standard colors
+PASS ayu-light Navigator container exists
+PASS ayu-light Navigator container actual background expected=RGB {248, 249, 250} got=RGB {248, 249, 250}
+PASS ayu-light Navigator container actual foreground expected=RGB {92, 97, 102} got=RGB {92, 97, 102}
+PASS ayu-light Navigator Tree exists
+PASS ayu-light Navigator Tree actual background expected=RGB {252, 252, 252} got=RGB {252, 252, 252}
+PASS ayu-light Navigator Tree actual foreground expected=RGB {92, 97, 102} got=RGB {92, 97, 102}
+PASS ayu-light Properties container exists
+PASS ayu-light Properties container actual background expected=RGB {248, 249, 250} got=RGB {248, 249, 250}
+PASS ayu-light Properties container actual foreground expected=RGB {92, 97, 102} got=RGB {92, 97, 102}
+PASS ayu-light selected tab actual foreground=RGB {92, 97, 102}
+PASS ayu-light selected tab actual background=RGB {252, 252, 252}
+PASS ayu-light gallery actual BSL keyword
+PASS ayu-light gallery actual BSL number
+PASS ayu-light gallery actual BSL string
+PASS ayu-light gallery actual BSL comment
+PASS ayu-light gallery native ruler columns available
+PASS ayu-light gallery ruler control 0 background expected=RGB {252, 252, 252} got=RGB {252, 252, 252}
+PASS ayu-light gallery ruler control 0 actual background pixel=RGB {252, 252, 252}
+PASS ayu-light gallery ruler control 1 background expected=RGB {252, 252, 252} got=RGB {252, 252, 252}
+PASS ayu-light gallery ruler control 1 actual background pixel=RGB {252, 252, 252}
+PASS ayu-light gallery ruler control 2 background expected=RGB {252, 252, 252} got=RGB {252, 252, 252}
+PASS ayu-light gallery ruler control 2 actual background pixel=RGB {252, 252, 252}
+PASS ayu-light gallery ruler control 3 background expected=RGB {252, 252, 252} got=RGB {252, 252, 252}
+PASS ayu-light gallery ruler control 3 actual background pixel=RGB {252, 252, 252}
+PASS noctis-lux gallery standard colors
+PASS noctis-lux Navigator container exists
+PASS noctis-lux Navigator container actual background expected=RGB {249, 241, 225} got=RGB {249, 241, 225}
+PASS noctis-lux Navigator container actual foreground expected=RGB {0, 86, 97} got=RGB {0, 86, 97}
+PASS noctis-lux Navigator Tree exists
+PASS noctis-lux Navigator Tree actual background expected=RGB {254, 248, 236} got=RGB {254, 248, 236}
+PASS noctis-lux Navigator Tree actual foreground expected=RGB {0, 86, 97} got=RGB {0, 86, 97}
+PASS noctis-lux Properties container exists
+PASS noctis-lux Properties container actual background expected=RGB {249, 241, 225} got=RGB {249, 241, 225}
+PASS noctis-lux Properties container actual foreground expected=RGB {0, 86, 97} got=RGB {0, 86, 97}
+PASS noctis-lux selected tab actual foreground=RGB {0, 86, 97}
+PASS noctis-lux selected tab actual background=RGB {254, 248, 236}
+PASS noctis-lux gallery actual BSL keyword
+PASS noctis-lux gallery actual BSL number
+PASS noctis-lux gallery actual BSL string
+PASS noctis-lux gallery actual BSL comment
+PASS noctis-lux gallery native ruler columns available
+PASS noctis-lux gallery ruler control 0 background expected=RGB {254, 248, 236} got=RGB {254, 248, 236}
+PASS noctis-lux gallery ruler control 0 actual background pixel=RGB {254, 248, 236}
+PASS noctis-lux gallery ruler control 1 background expected=RGB {254, 248, 236} got=RGB {254, 248, 236}
+PASS noctis-lux gallery ruler control 1 actual background pixel=RGB {254, 248, 236}
+PASS noctis-lux gallery ruler control 2 background expected=RGB {254, 248, 236} got=RGB {254, 248, 236}
+PASS noctis-lux gallery ruler control 2 actual background pixel=RGB {254, 248, 236}
+PASS noctis-lux gallery ruler control 3 background expected=RGB {254, 248, 236} got=RGB {254, 248, 236}
+PASS noctis-lux gallery ruler control 3 actual background pixel=RGB {254, 248, 236}
+PASS UI gallery restores appearance

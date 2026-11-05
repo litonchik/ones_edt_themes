@@ -1,0 +1,31 @@
+JVM 17.0.18
+PASS light gallery starts after native Light restart
+PASS light gallery uses restored standard font
+PASS BSL editor opened on test fixture
+PASS light gallery opens BSL sample
+PASS light gallery editor background
+PASS light gallery keyword glyph
+PASS light gallery number glyph
+PASS light gallery string glyph
+PASS light gallery comment glyph
+PASS noctis-hibernus Navigator container exists
+PASS noctis-hibernus Navigator container actual background expected=RGB {231, 242, 243} got=RGB {231, 242, 243}
+PASS noctis-hibernus Navigator container actual foreground expected=RGB {0, 86, 97} got=RGB {0, 86, 97}
+PASS noctis-hibernus Navigator Tree exists
+PASS noctis-hibernus Navigator Tree actual background expected=RGB {244, 246, 246} got=RGB {244, 246, 246}
+PASS noctis-hibernus Navigator Tree actual foreground expected=RGB {0, 86, 97} got=RGB {0, 86, 97}
+PASS noctis-hibernus Properties container exists
+PASS noctis-hibernus Properties container actual background expected=RGB {231, 242, 243} got=RGB {231, 242, 243}
+PASS noctis-hibernus Properties container actual foreground expected=RGB {0, 86, 97} got=RGB {0, 86, 97}
+PASS noctis-hibernus selected tab actual foreground=RGB {0, 86, 97}
+PASS noctis-hibernus selected tab actual background=RGB {244, 246, 246}
+PASS noctis-hibernus gallery native ruler columns available
+PASS noctis-hibernus gallery ruler control 0 background expected=RGB {244, 246, 246} got=RGB {244, 246, 246}
+PASS noctis-hibernus gallery ruler control 0 actual background pixel=RGB {244, 246, 246}
+PASS noctis-hibernus gallery ruler control 1 background expected=RGB {244, 246, 246} got=RGB {244, 246, 246}
+PASS noctis-hibernus gallery ruler control 1 actual background pixel=RGB {244, 246, 246}
+PASS noctis-hibernus gallery ruler control 2 background expected=RGB {244, 246, 246} got=RGB {244, 246, 246}
+PASS noctis-hibernus gallery ruler control 2 actual background pixel=RGB {244, 246, 246}
+PASS noctis-hibernus gallery ruler control 3 background expected=RGB {244, 246, 246} got=RGB {244, 246, 246}
+PASS noctis-hibernus gallery ruler control 3 actual background pixel=RGB {244, 246, 246}
+PASS light gallery restores original settings

@@ -1,0 +1,392 @@
+[
+  {
+    "repository": "Binaryify/OneDark-Pro",
+    "commit": "75c80ab18d90655e05ad837bb8d89f5e68d5ce53",
+    "version": "3.20.6",
+    "license": "MIT",
+    "manifest": "https://github.com/Binaryify/OneDark-Pro/blob/75c80ab18d90655e05ad837bb8d89f5e68d5ce53/package.json",
+    "themes": [
+      {
+        "label": "One Dark Pro",
+        "id": null,
+        "uiTheme": "vs-dark",
+        "path": "./themes/OneDark-Pro.json"
+      },
+      {
+        "label": "One Dark Pro Flat",
+        "id": null,
+        "uiTheme": "vs-dark",
+        "path": "./themes/OneDark-Pro-flat.json"
+      },
+      {
+        "label": "One Dark Pro Darker",
+        "id": null,
+        "uiTheme": "vs-dark",
+        "path": "./themes/OneDark-Pro-darker.json"
+      },
+      {
+        "label": "One Dark Pro Mix",
+        "id": null,
+        "uiTheme": "vs-dark",
+        "path": "./themes/OneDark-Pro-mix.json"
+      },
+      {
+        "label": "One Dark Pro Night Flat",
+        "id": null,
+        "uiTheme": "vs-dark",
+        "path": "./themes/OneDark-Pro-night-flat.json"
+      }
+    ]
+  },
+  {
+    "repository": "dracula/visual-studio-code",
+    "commit": "b50e62e320906d5f57a8bf05fd6ddf23b890d6dd",
+    "version": "2.25.1",
+    "license": "MIT",
+    "manifest": "https://github.com/dracula/visual-studio-code/blob/b50e62e320906d5f57a8bf05fd6ddf23b890d6dd/package.json",
+    "themes": [
+      {
+        "label": "Dracula Theme",
+        "id": null,
+        "uiTheme": "vs-dark",
+        "path": "./theme/dracula.json"
+      },
+      {
+        "label": "Dracula Theme Soft",
+        "id": null,
+        "uiTheme": "vs-dark",
+        "path": "./theme/dracula-soft.json"
+      }
+    ]
+  },
+  {
+    "repository": "primer/github-vscode-theme",
+    "commit": "cd78e5e4e7bcf132a6f428ae0f32264bb1b729cf",
+    "version": "6.3.5",
+    "license": "MIT",
+    "manifest": "https://github.com/primer/github-vscode-theme/blob/cd78e5e4e7bcf132a6f428ae0f32264bb1b729cf/package.json",
+    "themes": [
+      {
+        "label": "GitHub Light Default",
+        "id": null,
+        "uiTheme": "vs",
+        "path": "./themes/light-default.json"
+      },
+      {
+        "label": "GitHub Light High Contrast",
+        "id": null,
+        "uiTheme": "hc-light",
+        "path": "./themes/light-high-contrast.json"
+      },
+      {
+        "label": "GitHub Light Colorblind (Beta)",
+        "id": null,
+        "uiTheme": "vs",
+        "path": "./themes/light-colorblind.json"
+      },
+      {
+        "label": "GitHub Dark Default",
+        "id": null,
+        "uiTheme": "vs-dark",
+        "path": "./themes/dark-default.json"
+      },
+      {
+        "label": "GitHub Dark High Contrast",
+        "id": null,
+        "uiTheme": "hc-black",
+        "path": "./themes/dark-high-contrast.json"
+      },
+      {
+        "label": "GitHub Dark Colorblind (Beta)",
+        "id": null,
+        "uiTheme": "vs-dark",
+        "path": "./themes/dark-colorblind.json"
+      },
+      {
+        "label": "GitHub Dark Dimmed",
+        "id": null,
+        "uiTheme": "vs-dark",
+        "path": "./themes/dark-dimmed.json"
+      },
+      {
+        "label": "GitHub Light",
+        "id": null,
+        "uiTheme": "vs",
+        "path": "./themes/light.json"
+      },
+      {
+        "label": "GitHub Dark",
+        "id": null,
+        "uiTheme": "vs-dark",
+        "path": "./themes/dark.json"
+      }
+    ]
+  },
+  {
+    "repository": "johnpapa/vscode-winteriscoming",
+    "commit": "260547834cb6ac37dd5b8bb5842cc1c8d3164946",
+    "version": "1.5.0",
+    "license": "SEE LICENSE IN LICENSE.md",
+    "manifest": "https://github.com/johnpapa/vscode-winteriscoming/blob/260547834cb6ac37dd5b8bb5842cc1c8d3164946/package.json",
+    "themes": [
+      {
+        "label": "Winter is Coming (Dark Blue)",
+        "id": null,
+        "uiTheme": "vs-dark",
+        "path": "./themes/WinterIsComing-dark-blue-color-theme.json"
+      },
+      {
+        "label": "Winter is Coming (Dark Blue - No Italics)",
+        "id": null,
+        "uiTheme": "vs-dark",
+        "path": "./themes/WinterIsComing-dark-blue-color-no-italics-theme.json"
+      },
+      {
+        "label": "Winter is Coming (Light)",
+        "id": null,
+        "uiTheme": "vs",
+        "path": "./themes/WinterIsComing-light-color-theme.json"
+      },
+      {
+        "label": "Winter is Coming (Light - No Italics)",
+        "id": null,
+        "uiTheme": "vs",
+        "path": "./themes/WinterIsComing-light-color-no-italics-theme.json"
+      },
+      {
+        "label": "Winter is Coming (Dark Black)",
+        "id": null,
+        "uiTheme": "vs-dark",
+        "path": "./themes/WinterIsComing-dark-color-theme.json"
+      },
+      {
+        "label": "Winter is Coming (Dark Black - No Italics)",
+        "id": null,
+        "uiTheme": "vs-dark",
+        "path": "./themes/WinterIsComing-dark-color-no-italics-theme.json"
+      }
+    ]
+  },
+  {
+    "repository": "sdras/night-owl-vscode-theme",
+    "commit": "cc291eba7976b20d7c66bde6883c27b902196b07",
+    "version": "2.1.1",
+    "license": "SEE LICENSE IN LICENSE.md",
+    "manifest": "https://github.com/sdras/night-owl-vscode-theme/blob/cc291eba7976b20d7c66bde6883c27b902196b07/package.json",
+    "themes": [
+      {
+        "label": "Night Owl",
+        "id": null,
+        "uiTheme": "vs-dark",
+        "path": "./themes/Night Owl-color-theme.json"
+      },
+      {
+        "label": "Night Owl (No Italics)",
+        "id": null,
+        "uiTheme": "vs-dark",
+        "path": "./themes/Night Owl-color-theme-noitalic.json"
+      },
+      {
+        "label": "Night Owl Light",
+        "id": null,
+        "uiTheme": "vs",
+        "path": "./themes/Night Owl-Light-color-theme.json"
+      },
+      {
+        "label": "Night Owl Light (No Italics)",
+        "id": null,
+        "uiTheme": "vs",
+        "path": "./themes/Night Owl-Light-color-theme-noitalic.json"
+      }
+    ]
+  },
+  {
+    "repository": "ayu-theme/vscode-ayu",
+    "commit": "7f438df22446f02e79cdfc2f3771b0b273f34654",
+    "version": "1.5.0",
+    "license": "MIT",
+    "manifest": "https://github.com/ayu-theme/vscode-ayu/blob/7f438df22446f02e79cdfc2f3771b0b273f34654/package.json",
+    "themes": [
+      {
+        "label": "Ayu Light",
+        "id": "Ayu Light Bordered",
+        "uiTheme": "vs",
+        "path": "./ayu-light.json"
+      },
+      {
+        "label": "Ayu Mirage",
+        "id": "Ayu Mirage Bordered",
+        "uiTheme": "vs-dark",
+        "path": "./ayu-mirage.json"
+      },
+      {
+        "label": "Ayu Dark",
+        "id": "Ayu Dark Bordered",
+        "uiTheme": "vs-dark",
+        "path": "./ayu-dark.json"
+      },
+      {
+        "label": "Ayu Light Unbordered",
+        "id": "Ayu Light",
+        "uiTheme": "vs",
+        "path": "./ayu-light-unbordered.json"
+      },
+      {
+        "label": "Ayu Mirage Unbordered",
+        "id": "Ayu Mirage",
+        "uiTheme": "vs-dark",
+        "path": "./ayu-mirage-unbordered.json"
+      },
+      {
+        "label": "Ayu Dark Unbordered",
+        "id": "Ayu Dark",
+        "uiTheme": "vs-dark",
+        "path": "./ayu-dark-unbordered.json"
+      }
+    ]
+  },
+  {
+    "repository": "ahmadawais/shades-of-purple-vscode",
+    "commit": "e8eb49f33e5db05ceba6677367b33ddb27ad821c",
+    "version": "7.3.6",
+    "license": "MIT",
+    "manifest": "https://github.com/ahmadawais/shades-of-purple-vscode/blob/e8eb49f33e5db05ceba6677367b33ddb27ad821c/package.json",
+    "themes": [
+      {
+        "label": "Shades of Purple",
+        "id": null,
+        "uiTheme": "vs-dark",
+        "path": "./themes/shades-of-purple-color-theme.json"
+      },
+      {
+        "label": "Shades of Purple (Super Dark)",
+        "id": null,
+        "uiTheme": "vs-dark",
+        "path": "./themes/shades-of-purple-color-theme-super-dark.json"
+      }
+    ]
+  },
+  {
+    "repository": "liviuschera/noctis",
+    "commit": "4a82370b2c064e36726c23e94f27ed3782bd6ecd",
+    "version": "10.43.3",
+    "license": null,
+    "manifest": "https://github.com/liviuschera/noctis/blob/4a82370b2c064e36726c23e94f27ed3782bd6ecd/package.json",
+    "themes": [
+      {
+        "label": "Noctis Lux",
+        "id": null,
+        "uiTheme": "vs",
+        "path": "./themes/lux.json"
+      },
+      {
+        "label": "Noctis Hibernus",
+        "id": null,
+        "uiTheme": "vs",
+        "path": "./themes/hibernus.json"
+      },
+      {
+        "label": "Noctis Lilac",
+        "id": null,
+        "uiTheme": "vs",
+        "path": "./themes/lilac.json"
+      },
+      {
+        "label": "Noctis",
+        "id": null,
+        "uiTheme": "vs-dark",
+        "path": "./themes/noctis.json"
+      },
+      {
+        "label": "Noctis Azureus",
+        "id": null,
+        "uiTheme": "vs-dark",
+        "path": "./themes/azureus.json"
+      },
+      {
+        "label": "Noctis Bordo",
+        "id": null,
+        "uiTheme": "vs-dark",
+        "path": "./themes/bordo.json"
+      },
+      {
+        "label": "Noctis Obscuro",
+        "id": null,
+        "uiTheme": "vs-dark",
+        "path": "./themes/obscuro.json"
+      },
+      {
+        "label": "Noctis Sereno",
+        "id": null,
+        "uiTheme": "vs-dark",
+        "path": "./themes/sereno.json"
+      },
+      {
+        "label": "Noctis Uva",
+        "id": null,
+        "uiTheme": "vs-dark",
+        "path": "./themes/uva.json"
+      },
+      {
+        "label": "Noctis Viola",
+        "id": null,
+        "uiTheme": "vs-dark",
+        "path": "./themes/viola.json"
+      },
+      {
+        "label": "Noctis Minimus",
+        "id": null,
+        "uiTheme": "vs-dark",
+        "path": "./themes/minimus.json"
+      }
+    ]
+  },
+  {
+    "repository": "microsoft/vscode-cpptools",
+    "commit": "3c14e3155a42976f765828b5ca2bbd9154a9aa54",
+    "version": "2.1.0",
+    "license": "SEE LICENSE IN LICENSE.txt",
+    "manifest": "https://github.com/microsoft/vscode-cpptools/blob/3c14e3155a42976f765828b5ca2bbd9154a9aa54/Themes/package.json",
+    "themes": [
+      {
+        "label": "Dark (Visual Studio - C/C++)",
+        "id": "Visual Studio Dark - C++",
+        "uiTheme": "vs-dark",
+        "path": "./themes/cpptools_dark_vs_new.json"
+      },
+      {
+        "label": "2017 Dark (Visual Studio - C/C++)",
+        "id": "Visual Studio 2017 Dark - C++",
+        "uiTheme": "vs-dark",
+        "path": "./themes/cpptools_dark_vs.json"
+      },
+      {
+        "label": "Light (Visual Studio - C/C++)",
+        "id": "Visual Studio Light - C++",
+        "uiTheme": "vs",
+        "path": "./themes/cpptools_light_vs_new.json"
+      },
+      {
+        "label": "2017 Light (Visual Studio - C/C++)",
+        "id": "Visual Studio 2017 Light - C++",
+        "uiTheme": "vs",
+        "path": "./themes/cpptools_light_vs.json"
+      }
+    ]
+  },
+  {
+    "repository": "microsoft/vscode",
+    "commit": "f725241620f540a7f750649713e710561fbabac8",
+    "version": "10.0.0",
+    "license": "MIT",
+    "manifest": "https://github.com/microsoft/vscode/blob/f725241620f540a7f750649713e710561fbabac8/extensions/theme-monokai/package.json",
+    "themes": [
+      {
+        "label": "%themeLabel%",
+        "id": "Monokai",
+        "uiTheme": "vs-dark",
+        "path": "./themes/monokai-color-theme.json"
+      }
+    ]
+  }
+]

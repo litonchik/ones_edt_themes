@@ -1,0 +1,40 @@
+{
+  "install": "1c-edt-2026.2.2+21-x86_64",
+  "bundles": {
+    "org.eclipse.ui.themes": "org.eclipse.ui.themes_1.2.2900.v20250806-1940",
+    "com._1c.g5.v8.dt.theming.ui": "com._1c.g5.v8.dt.theming.ui_2.1.1.v202610211527.jar",
+    "com._1c.g5.v8.dt.bsl.ui": "com._1c.g5.v8.dt.bsl.ui_24.0.0.v202610211527.jar"
+  },
+  "win_scoped": [
+    "com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_ACCENT",
+    "com._1c.g5.v8.dt.theming.ui.BORDER_COLOR",
+    "com._1c.g5.v8.dt.theming.ui.INFORMATION_BACKGROUND_COLOR",
+    "com._1c.g5.v8.dt.theming.ui.INFORMATION_FOREGROUND_COLOR",
+    "org.eclipse.ui.workbench.ACTIVE_TAB_BG_END",
+    "org.eclipse.ui.workbench.ACTIVE_TAB_BG_START",
+    "org.eclipse.ui.workbench.ACTIVE_UNSELECTED_TABS_COLOR_END",
+    "org.eclipse.ui.workbench.ACTIVE_UNSELECTED_TABS_COLOR_START"
+  ],
+  "mac_scoped": [
+    "com._1c.g5.v8.dt.theming.ui.BACKGROUND_COLOR_ACCENT",
+    "com._1c.g5.v8.dt.theming.ui.BORDER_COLOR",
+    "com._1c.g5.v8.dt.theming.ui.INFORMATION_BACKGROUND_COLOR",
+    "com._1c.g5.v8.dt.theming.ui.INFORMATION_FOREGROUND_COLOR",
+    "org.eclipse.ui.workbench.ACTIVE_TAB_BG_END",
+    "org.eclipse.ui.workbench.ACTIVE_TAB_BG_START",
+    "org.eclipse.ui.workbench.ACTIVE_UNSELECTED_TABS_COLOR_END",
+    "org.eclipse.ui.workbench.ACTIVE_UNSELECTED_TABS_COLOR_START"
+  ],
+  "light_preferences": {
+    "com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_TRACK_COLOR": "240,240,240",
+    "com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_ARROW_COLOR": "96,96,96",
+    "com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_ARROW_HOVER_COLOR": "0,0,0",
+    "com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_ARROW_ACTIVE_COLOR": "255,255,255",
+    "com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_CORNER_COLOR": "240,240,240",
+    "com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_THUMB_COLOR": "205,205,205",
+    "com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_THUMB_HOVER_COLOR": "166,166,166",
+    "com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_THUMB_ACTIVE_COLOR": "96,96,96",
+    "com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_BUTTON_HOVER_COLOR": "218,218,218",
+    "com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_BUTTON_ACTIVE_COLOR": "96,96,96"
+  }
+}

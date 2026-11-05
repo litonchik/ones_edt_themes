@@ -45,14 +45,14 @@ try {
     [IO.File]::WriteAllText($target,$template.Replace('@EDT_HOME@',$escapedHome),[Text.UTF8Encoding]::new($false))
     & $maven @common -f (Join-Path $projectRoot 'pom.xml') "-Dedt.target=$target" clean verify
     if ($LASTEXITCODE -ne 0) { throw "Tycho Verify: $LASTEXITCODE" }
-    $archive = Join-Path $projectRoot 'repositories/ru.litonchik.edt.themes.repository/target/ru.litonchik.edt.themes.repository-0.1.16-SNAPSHOT.zip'
+    $archive = Join-Path $projectRoot 'repositories/ru.litonchik.edt.themes.repository/target/ru.litonchik.edt.themes.repository-0.1.28-SNAPSHOT.zip'
     & (Join-Path $PSScriptRoot 'verify-repository.ps1') -Zip $archive
     $dist = Join-Path $projectRoot 'dist'
     New-Item -ItemType Directory -Force -Path $dist | Out-Null
-    $release = Join-Path $dist 'edt-themes-0.1.16.zip'
+    $release = Join-Path $dist 'edt-themes-0.1.28.zip'
     Copy-Item -LiteralPath $archive -Destination $release -Force
     $hash = (Get-FileHash -LiteralPath $release -Algorithm SHA256).Hash.ToLowerInvariant()
-    [IO.File]::WriteAllText($release+'.sha256',$hash+'  edt-themes-0.1.16.zip'+[Environment]::NewLine,[Text.UTF8Encoding]::new($false))
+    [IO.File]::WriteAllText($release+'.sha256',$hash+'  edt-themes-0.1.28.zip'+[Environment]::NewLine,[Text.UTF8Encoding]::new($false))
     Write-Output "ZIP: $release"
 } finally {
     foreach ($name in $saved.Keys) { [Environment]::SetEnvironmentVariable($name,$saved[$name],'Process') }

@@ -1,0 +1,223 @@
+JVM 25.0.2
+PASS BSL editor opened on test fixture
+PASS ruler BSL fixture
+PASS darcula native ruler columns available
+PASS darcula ruler control 0 background expected=RGB {43, 43, 43} got=RGB {43, 43, 43}
+PASS darcula ruler control 0 actual background pixel=RGB {43, 43, 43}
+PASS darcula ruler control 1 background expected=RGB {43, 43, 43} got=RGB {43, 43, 43}
+PASS darcula ruler control 1 actual background pixel=RGB {43, 43, 43}
+PASS darcula ruler control 2 background expected=RGB {43, 43, 43} got=RGB {43, 43, 43}
+PASS darcula ruler control 2 actual background pixel=RGB {43, 43, 43}
+PASS darcula ruler control 3 background expected=RGB {43, 43, 43} got=RGB {43, 43, 43}
+PASS darcula ruler control 3 actual background pixel=RGB {43, 43, 43}
+PASS darcula same native columns and controls
+PASS darcula source and stamp unchanged
+PASS darcula code font unchanged
+PASS monokai native ruler columns available
+PASS monokai ruler control 0 background expected=RGB {39, 40, 34} got=RGB {39, 40, 34}
+PASS monokai ruler control 0 actual background pixel=RGB {39, 40, 34}
+PASS monokai ruler control 1 background expected=RGB {39, 40, 34} got=RGB {39, 40, 34}
+PASS monokai ruler control 1 actual background pixel=RGB {39, 40, 34}
+PASS monokai ruler control 2 background expected=RGB {39, 40, 34} got=RGB {39, 40, 34}
+PASS monokai ruler control 2 actual background pixel=RGB {39, 40, 34}
+PASS monokai ruler control 3 background expected=RGB {39, 40, 34} got=RGB {39, 40, 34}
+PASS monokai ruler control 3 actual background pixel=RGB {39, 40, 34}
+PASS monokai same native columns and controls
+PASS monokai source and stamp unchanged
+PASS monokai code font unchanged
+PASS one-dark-pro native ruler columns available
+PASS one-dark-pro ruler control 0 background expected=RGB {40, 44, 52} got=RGB {40, 44, 52}
+PASS one-dark-pro ruler control 0 actual background pixel=RGB {40, 44, 52}
+PASS one-dark-pro ruler control 1 background expected=RGB {40, 44, 52} got=RGB {40, 44, 52}
+PASS one-dark-pro ruler control 1 actual background pixel=RGB {40, 44, 52}
+PASS one-dark-pro ruler control 2 background expected=RGB {40, 44, 52} got=RGB {40, 44, 52}
+PASS one-dark-pro ruler control 2 actual background pixel=RGB {40, 44, 52}
+PASS one-dark-pro ruler control 3 background expected=RGB {40, 44, 52} got=RGB {40, 44, 52}
+PASS one-dark-pro ruler control 3 actual background pixel=RGB {40, 44, 52}
+PASS one-dark-pro same native columns and controls
+PASS one-dark-pro source and stamp unchanged
+PASS one-dark-pro code font unchanged
+PASS dracula native ruler columns available
+PASS dracula ruler control 0 background expected=RGB {40, 42, 54} got=RGB {40, 42, 54}
+PASS dracula ruler control 0 actual background pixel=RGB {40, 42, 54}
+PASS dracula ruler control 1 background expected=RGB {40, 42, 54} got=RGB {40, 42, 54}
+PASS dracula ruler control 1 actual background pixel=RGB {40, 42, 54}
+PASS dracula ruler control 2 background expected=RGB {40, 42, 54} got=RGB {40, 42, 54}
+PASS dracula ruler control 2 actual background pixel=RGB {40, 42, 54}
+PASS dracula ruler control 3 background expected=RGB {40, 42, 54} got=RGB {40, 42, 54}
+PASS dracula ruler control 3 actual background pixel=RGB {40, 42, 54}
+PASS dracula same native columns and controls
+PASS dracula source and stamp unchanged
+PASS dracula code font unchanged
+PASS github-dark-default native ruler columns available
+PASS github-dark-default ruler control 0 background expected=RGB {13, 17, 23} got=RGB {13, 17, 23}
+PASS github-dark-default ruler control 0 actual background pixel=RGB {13, 17, 23}
+PASS github-dark-default ruler control 1 background expected=RGB {13, 17, 23} got=RGB {13, 17, 23}
+PASS github-dark-default ruler control 1 actual background pixel=RGB {13, 17, 23}
+PASS github-dark-default ruler control 2 background expected=RGB {13, 17, 23} got=RGB {13, 17, 23}
+PASS github-dark-default ruler control 2 actual background pixel=RGB {13, 17, 23}
+PASS github-dark-default ruler control 3 background expected=RGB {13, 17, 23} got=RGB {13, 17, 23}
+PASS github-dark-default ruler control 3 actual background pixel=RGB {13, 17, 23}
+PASS github-dark-default same native columns and controls
+PASS github-dark-default source and stamp unchanged
+PASS github-dark-default code font unchanged
+PASS winter-is-coming-dark-blue native ruler columns available
+PASS winter-is-coming-dark-blue ruler control 0 background expected=RGB {1, 22, 39} got=RGB {1, 22, 39}
+PASS winter-is-coming-dark-blue ruler control 0 actual background pixel=RGB {1, 22, 39}
+PASS winter-is-coming-dark-blue ruler control 1 background expected=RGB {1, 22, 39} got=RGB {1, 22, 39}
+PASS winter-is-coming-dark-blue ruler control 1 actual background pixel=RGB {1, 22, 39}
+PASS winter-is-coming-dark-blue ruler control 2 background expected=RGB {1, 22, 39} got=RGB {1, 22, 39}
+PASS winter-is-coming-dark-blue ruler control 2 actual background pixel=RGB {1, 22, 39}
+PASS winter-is-coming-dark-blue ruler control 3 background expected=RGB {1, 22, 39} got=RGB {1, 22, 39}
+PASS winter-is-coming-dark-blue ruler control 3 actual background pixel=RGB {1, 22, 39}
+PASS winter-is-coming-dark-blue same native columns and controls
+PASS winter-is-coming-dark-blue source and stamp unchanged
+PASS winter-is-coming-dark-blue code font unchanged
+PASS night-owl native ruler columns available
+PASS night-owl ruler control 0 background expected=RGB {1, 22, 39} got=RGB {1, 22, 39}
+PASS night-owl ruler control 0 actual background pixel=RGB {1, 22, 39}
+PASS night-owl ruler control 1 background expected=RGB {1, 22, 39} got=RGB {1, 22, 39}
+PASS night-owl ruler control 1 actual background pixel=RGB {1, 22, 39}
+PASS night-owl ruler control 2 background expected=RGB {1, 22, 39} got=RGB {1, 22, 39}
+PASS night-owl ruler control 2 actual background pixel=RGB {1, 22, 39}
+PASS night-owl ruler control 3 background expected=RGB {1, 22, 39} got=RGB {1, 22, 39}
+PASS night-owl ruler control 3 actual background pixel=RGB {1, 22, 39}
+PASS night-owl same native columns and controls
+PASS night-owl source and stamp unchanged
+PASS night-owl code font unchanged
+PASS ayu-dark native ruler columns available
+PASS ayu-dark ruler control 0 background expected=RGB {16, 20, 28} got=RGB {16, 20, 28}
+PASS ayu-dark ruler control 0 actual background pixel=RGB {16, 20, 28}
+PASS ayu-dark ruler control 1 background expected=RGB {16, 20, 28} got=RGB {16, 20, 28}
+PASS ayu-dark ruler control 1 actual background pixel=RGB {16, 20, 28}
+PASS ayu-dark ruler control 2 background expected=RGB {16, 20, 28} got=RGB {16, 20, 28}
+PASS ayu-dark ruler control 2 actual background pixel=RGB {16, 20, 28}
+PASS ayu-dark ruler control 3 background expected=RGB {16, 20, 28} got=RGB {16, 20, 28}
+PASS ayu-dark ruler control 3 actual background pixel=RGB {16, 20, 28}
+PASS ayu-dark same native columns and controls
+PASS ayu-dark source and stamp unchanged
+PASS ayu-dark code font unchanged
+PASS shades-of-purple native ruler columns available
+PASS shades-of-purple ruler control 0 background expected=RGB {45, 43, 85} got=RGB {45, 43, 85}
+PASS shades-of-purple ruler control 0 actual background pixel=RGB {45, 43, 85}
+PASS shades-of-purple ruler control 1 background expected=RGB {45, 43, 85} got=RGB {45, 43, 85}
+PASS shades-of-purple ruler control 1 actual background pixel=RGB {45, 43, 85}
+PASS shades-of-purple ruler control 2 background expected=RGB {45, 43, 85} got=RGB {45, 43, 85}
+PASS shades-of-purple ruler control 2 actual background pixel=RGB {45, 43, 85}
+PASS shades-of-purple ruler control 3 background expected=RGB {45, 43, 85} got=RGB {45, 43, 85}
+PASS shades-of-purple ruler control 3 actual background pixel=RGB {45, 43, 85}
+PASS shades-of-purple same native columns and controls
+PASS shades-of-purple source and stamp unchanged
+PASS shades-of-purple code font unchanged
+PASS noctis-minimus native ruler columns available
+PASS noctis-minimus ruler control 0 background expected=RGB {27, 41, 50} got=RGB {27, 41, 50}
+PASS noctis-minimus ruler control 0 actual background pixel=RGB {27, 41, 50}
+PASS noctis-minimus ruler control 1 background expected=RGB {27, 41, 50} got=RGB {27, 41, 50}
+PASS noctis-minimus ruler control 1 actual background pixel=RGB {27, 41, 50}
+PASS noctis-minimus ruler control 2 background expected=RGB {27, 41, 50} got=RGB {27, 41, 50}
+PASS noctis-minimus ruler control 2 actual background pixel=RGB {27, 41, 50}
+PASS noctis-minimus ruler control 3 background expected=RGB {27, 41, 50} got=RGB {27, 41, 50}
+PASS noctis-minimus ruler control 3 actual background pixel=RGB {27, 41, 50}
+PASS noctis-minimus same native columns and controls
+PASS noctis-minimus source and stamp unchanged
+PASS noctis-minimus code font unchanged
+PASS visual-studio-dark-cpp native ruler columns available
+PASS visual-studio-dark-cpp ruler control 0 background expected=RGB {30, 30, 30} got=RGB {30, 30, 30}
+PASS visual-studio-dark-cpp ruler control 0 actual background pixel=RGB {30, 30, 30}
+PASS visual-studio-dark-cpp ruler control 1 background expected=RGB {30, 30, 30} got=RGB {30, 30, 30}
+PASS visual-studio-dark-cpp ruler control 1 actual background pixel=RGB {30, 30, 30}
+PASS visual-studio-dark-cpp ruler control 2 background expected=RGB {30, 30, 30} got=RGB {30, 30, 30}
+PASS visual-studio-dark-cpp ruler control 2 actual background pixel=RGB {30, 30, 30}
+PASS visual-studio-dark-cpp ruler control 3 background expected=RGB {30, 30, 30} got=RGB {30, 30, 30}
+PASS visual-studio-dark-cpp ruler control 3 actual background pixel=RGB {30, 30, 30}
+PASS visual-studio-dark-cpp same native columns and controls
+PASS visual-studio-dark-cpp source and stamp unchanged
+PASS visual-studio-dark-cpp code font unchanged
+PASS github-light-default native ruler columns available
+PASS github-light-default ruler control 0 background expected=RGB {255, 255, 255} got=RGB {255, 255, 255}
+PASS github-light-default ruler control 0 actual background pixel=RGB {255, 255, 255}
+PASS github-light-default ruler control 1 background expected=RGB {255, 255, 255} got=RGB {255, 255, 255}
+PASS github-light-default ruler control 1 actual background pixel=RGB {255, 255, 255}
+PASS github-light-default ruler control 2 background expected=RGB {255, 255, 255} got=RGB {255, 255, 255}
+PASS github-light-default ruler control 2 actual background pixel=RGB {255, 255, 255}
+PASS github-light-default ruler control 3 background expected=RGB {255, 255, 255} got=RGB {255, 255, 255}
+PASS github-light-default ruler control 3 actual background pixel=RGB {255, 255, 255}
+PASS github-light-default same native columns and controls
+PASS github-light-default source and stamp unchanged
+PASS github-light-default code font unchanged
+PASS winter-is-coming-light native ruler columns available
+PASS winter-is-coming-light ruler control 0 background expected=RGB {255, 255, 255} got=RGB {255, 255, 255}
+PASS winter-is-coming-light ruler control 0 actual background pixel=RGB {255, 255, 255}
+PASS winter-is-coming-light ruler control 1 background expected=RGB {255, 255, 255} got=RGB {255, 255, 255}
+PASS winter-is-coming-light ruler control 1 actual background pixel=RGB {255, 255, 255}
+PASS winter-is-coming-light ruler control 2 background expected=RGB {255, 255, 255} got=RGB {255, 255, 255}
+PASS winter-is-coming-light ruler control 2 actual background pixel=RGB {255, 255, 255}
+PASS winter-is-coming-light ruler control 3 background expected=RGB {255, 255, 255} got=RGB {255, 255, 255}
+PASS winter-is-coming-light ruler control 3 actual background pixel=RGB {255, 255, 255}
+PASS winter-is-coming-light same native columns and controls
+PASS winter-is-coming-light source and stamp unchanged
+PASS winter-is-coming-light code font unchanged
+PASS night-owl-light native ruler columns available
+PASS night-owl-light ruler control 0 background expected=RGB {251, 251, 251} got=RGB {251, 251, 251}
+PASS night-owl-light ruler control 0 actual background pixel=RGB {251, 251, 251}
+PASS night-owl-light ruler control 1 background expected=RGB {251, 251, 251} got=RGB {251, 251, 251}
+PASS night-owl-light ruler control 1 actual background pixel=RGB {251, 251, 251}
+PASS night-owl-light ruler control 2 background expected=RGB {251, 251, 251} got=RGB {251, 251, 251}
+PASS night-owl-light ruler control 2 actual background pixel=RGB {251, 251, 251}
+PASS night-owl-light ruler control 3 background expected=RGB {251, 251, 251} got=RGB {251, 251, 251}
+PASS night-owl-light ruler control 3 actual background pixel=RGB {251, 251, 251}
+PASS night-owl-light same native columns and controls
+PASS night-owl-light source and stamp unchanged
+PASS night-owl-light code font unchanged
+PASS ayu-light native ruler columns available
+PASS ayu-light ruler control 0 background expected=RGB {252, 252, 252} got=RGB {252, 252, 252}
+PASS ayu-light ruler control 0 actual background pixel=RGB {252, 252, 252}
+PASS ayu-light ruler control 1 background expected=RGB {252, 252, 252} got=RGB {252, 252, 252}
+PASS ayu-light ruler control 1 actual background pixel=RGB {252, 252, 252}
+PASS ayu-light ruler control 2 background expected=RGB {252, 252, 252} got=RGB {252, 252, 252}
+PASS ayu-light ruler control 2 actual background pixel=RGB {252, 252, 252}
+PASS ayu-light ruler control 3 background expected=RGB {252, 252, 252} got=RGB {252, 252, 252}
+PASS ayu-light ruler control 3 actual background pixel=RGB {252, 252, 252}
+PASS ayu-light same native columns and controls
+PASS ayu-light source and stamp unchanged
+PASS ayu-light code font unchanged
+PASS noctis-lux native ruler columns available
+PASS noctis-lux ruler control 0 background expected=RGB {254, 248, 236} got=RGB {254, 248, 236}
+PASS noctis-lux ruler control 0 actual background pixel=RGB {254, 248, 236}
+PASS noctis-lux ruler control 1 background expected=RGB {254, 248, 236} got=RGB {254, 248, 236}
+PASS noctis-lux ruler control 1 actual background pixel=RGB {254, 248, 236}
+PASS noctis-lux ruler control 2 background expected=RGB {254, 248, 236} got=RGB {254, 248, 236}
+PASS noctis-lux ruler control 2 actual background pixel=RGB {254, 248, 236}
+PASS noctis-lux ruler control 3 background expected=RGB {254, 248, 236} got=RGB {254, 248, 236}
+PASS noctis-lux ruler control 3 actual background pixel=RGB {254, 248, 236}
+PASS noctis-lux same native columns and controls
+PASS noctis-lux source and stamp unchanged
+PASS noctis-lux code font unchanged
+PASS personal editor background native ruler columns available
+PASS personal editor background ruler control 0 background expected=RGB {240, 232, 216} got=RGB {240, 232, 216}
+PASS personal editor background ruler control 0 actual background pixel=RGB {240, 232, 216}
+PASS personal editor background ruler control 1 background expected=RGB {240, 232, 216} got=RGB {240, 232, 216}
+PASS personal editor background ruler control 1 actual background pixel=RGB {240, 232, 216}
+PASS personal editor background ruler control 2 background expected=RGB {240, 232, 216} got=RGB {240, 232, 216}
+PASS personal editor background ruler control 2 actual background pixel=RGB {240, 232, 216}
+PASS personal editor background ruler control 3 background expected=RGB {240, 232, 216} got=RGB {240, 232, 216}
+PASS personal editor background ruler control 3 actual background pixel=RGB {240, 232, 216}
+PASS reset background role native ruler columns available
+PASS reset background role ruler control 0 background expected=RGB {254, 248, 236} got=RGB {254, 248, 236}
+PASS reset background role ruler control 0 actual background pixel=RGB {254, 248, 236}
+PASS reset background role ruler control 1 background expected=RGB {254, 248, 236} got=RGB {254, 248, 236}
+PASS reset background role ruler control 1 actual background pixel=RGB {254, 248, 236}
+PASS reset background role ruler control 2 background expected=RGB {254, 248, 236} got=RGB {254, 248, 236}
+PASS reset background role ruler control 2 actual background pixel=RGB {254, 248, 236}
+PASS reset background role ruler control 3 background expected=RGB {254, 248, 236} got=RGB {254, 248, 236}
+PASS reset background role ruler control 3 actual background pixel=RGB {254, 248, 236}
+PASS BSL editor opened on test fixture
+PASS new BSL editor after palette apply native ruler columns available
+PASS new BSL editor after palette apply ruler control 0 background expected=RGB {254, 248, 236} got=RGB {254, 248, 236}
+PASS new BSL editor after palette apply ruler control 0 actual background pixel=RGB {254, 248, 236}
+PASS new BSL editor after palette apply ruler control 1 background expected=RGB {254, 248, 236} got=RGB {254, 248, 236}
+PASS new BSL editor after palette apply ruler control 1 actual background pixel=RGB {254, 248, 236}
+PASS new BSL editor after palette apply ruler control 2 background expected=RGB {254, 248, 236} got=RGB {254, 248, 236}
+PASS new BSL editor after palette apply ruler control 2 actual background pixel=RGB {254, 248, 236}
+PASS new BSL editor after palette apply ruler control 3 background expected=RGB {254, 248, 236} got=RGB {254, 248, 236}
+PASS new BSL editor after palette apply ruler control 3 actual background pixel=RGB {254, 248, 236}

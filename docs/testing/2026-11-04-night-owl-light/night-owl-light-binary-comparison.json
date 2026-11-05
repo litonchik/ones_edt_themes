@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "classes": 38,
+  "unchanged_classes": 34,
+  "changed_classes": [
+    "ru/litonchik/edt/themes/edt/XtextPresentationRefresh$1.class",
+    "ru/litonchik/edt/themes/edt/XtextPresentationRefresh$Span.class",
+    "ru/litonchik/edt/themes/edt/XtextPresentationRefresh.class",
+    "ru/litonchik/edt/themes/model/PaletteCatalog.class"
+  ],
+  "reason": "Palette registry and explicit viewer color restoration after native CSS reset; other shared classes unchanged."
+}

@@ -91,7 +91,7 @@ def prepare_site(archive, checksum, version, output):
 <html lang="ru"><meta charset="utf-8"><meta name="viewport" content="width=device-width">
 <title>Темы для 1С:EDT — сайт обновлений</title>
 <body style="font:18px/1.6 system-ui;max-width:850px;margin:48px auto;padding:0 24px">
-<h1>Темы для 1С:EDT</h1><p>Версия {html.escape(version)}. 11 тёмных палитр, настройка цветов и шрифта.</p>
+<h1>Темы для 1С:EDT</h1><p>Версия {html.escape(version)}. Светлые и тёмные палитры, настройка цветов и шрифта.</p>
 <p>В EDT откройте <strong>Справка → Установить новое ПО… → Добавить…</strong>
 и укажите адрес:</p><p><code>{site_url}</code></p>
 <p>Выберите «Темы EDT — цветовые палитры», завершите установку и перезапустите EDT.</p>

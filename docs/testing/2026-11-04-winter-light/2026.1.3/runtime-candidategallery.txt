@@ -1,0 +1,11 @@
+JVM 17.0.18
+PASS light gallery starts after native Light restart
+PASS light gallery uses restored standard font
+PASS BSL editor opened on test fixture
+PASS light gallery opens BSL sample
+PASS light gallery editor background
+PASS light gallery keyword glyph
+PASS light gallery number glyph
+PASS light gallery string glyph
+PASS light gallery comment glyph
+PASS light gallery restores original settings

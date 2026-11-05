@@ -161,9 +161,9 @@ public class PaletteDraftsTest {
     @Test public void roleTargetsExcludeOtherRolesAndUncheckedBsl() {
         var catalog = SettingCatalog.load();
         var keys = catalog.roleTargets(Set.of("accent"),false,"org.eclipse.ui.defaultTheme");
-        assertEquals(6,keys.size()); // UI, hyperlink flag and two QL function colors.
+        assertEquals(7,keys.size()); // UI, hyperlink flag, two QL function colors and EGit modified labels.
         assertTrue(keys.stream().noneMatch(k -> k.node().equals("com._1c.g5.v8.dt.bsl.ui")));
-        assertEquals(7,catalog.roleTargets(Set.of("accent"),true,"org.eclipse.ui.defaultTheme").size());
+        assertEquals(8,catalog.roleTargets(Set.of("accent"),true,"org.eclipse.ui.defaultTheme").size());
         assertEquals(5,catalog.roleTargets(Set.of("keyword"),true,"org.eclipse.ui.defaultTheme").size());
         var noBslKeywords=catalog.roleTargets(Set.of("keyword"),false,"org.eclipse.ui.defaultTheme");
         assertEquals(4,noBslKeywords.size());

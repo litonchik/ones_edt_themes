@@ -1,0 +1,37 @@
+{
+  "2026.1.2-selection-after.png": {
+    "width": 884,
+    "height": 581,
+    "sha256": "50c388259f56e9ad5bdd0b95e066b4cb3e3e2b49a5698982ebf4c29e29e0b4e6"
+  },
+  "2026.1.2-staging-after.png": {
+    "width": 884,
+    "height": 581,
+    "sha256": "67cce2e82910b575b906806f4833f52c50de3142e2f175a263700c4e47871389"
+  },
+  "2026.1.3-selection-after.png": {
+    "width": 884,
+    "height": 581,
+    "sha256": "50c388259f56e9ad5bdd0b95e066b4cb3e3e2b49a5698982ebf4c29e29e0b4e6"
+  },
+  "2026.1.3-staging-after.png": {
+    "width": 884,
+    "height": 581,
+    "sha256": "67cce2e82910b575b906806f4833f52c50de3142e2f175a263700c4e47871389"
+  },
+  "2026.2.2-selection-after.png": {
+    "width": 884,
+    "height": 581,
+    "sha256": "9a26bf8920ca8cad50acdfefee8d000a226043808c84f0c399ce17f8cd61ebab"
+  },
+  "2026.2.2-staging-after.png": {
+    "width": 884,
+    "height": 581,
+    "sha256": "8ef54d471ce4b6582051f126720f705aa42fae7cc828574ba9098d46a1fbb57c"
+  },
+  "before.png": {
+    "width": 884,
+    "height": 581,
+    "sha256": "489453ec1aba1b1ff9ed885a35ffa2d35e9445ed3daea1a51d449489e2719e30"
+  }
+}

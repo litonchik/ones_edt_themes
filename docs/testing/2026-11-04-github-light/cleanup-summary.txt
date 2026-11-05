@@ -1,0 +1,11 @@
+Verified junction <project>\.cache -> <original-project>\.cache
+PASS .work/edt-2026.2.2 has 1234 base bundles; no own host/probe active or present
+Verified junction <project>\.work\edt-2026.2.2 -> <original-project>\.work\edt-2026.2.2
+PASS .work/edt-test has 1267 base bundles; no own host/probe active or present
+Verified junction <project>\.work\edt-test -> <original-project>\.work\edt-test
+PASS .work/edt-2026.1.2 has 1257 base bundles; no own host/probe active or present
+Verified junction <project>\.work\edt-2026.1.2 -> <original-project>\.work\edt-2026.1.2
+Removed junction only: <project>\.cache
+Removed junction only: <project>\.work\edt-2026.2.2
+Removed junction only: <project>\.work\edt-test
+Removed junction only: <project>\.work\edt-2026.1.2

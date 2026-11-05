@@ -39,7 +39,7 @@ public class WorkbenchProbe implements IApplication {
     private void check(boolean condition, String message) {
         if (!condition) throw new AssertionError(message);
         report.append("PASS ").append(message).append('\n');
-        if ("surfaces".equals(System.getProperty("edt.probe.phase"))) try {
+        if ("surfaces".equals(System.getProperty("edt.probe.phase")) || System.getProperty("edt.probe.phase").startsWith("light") || System.getProperty("edt.probe.phase").startsWith("candidateselection")) try {
             Files.writeString(java.nio.file.Path.of(System.getProperty("edt.probe.report")),report.toString());
         } catch (java.io.IOException e) { throw new IllegalStateException(e); }
     }
@@ -73,8 +73,29 @@ public class WorkbenchProbe implements IApplication {
         report.append("JVM ").append(System.getProperty("java.version")).append('\n');
         var workbench = PlatformUI.getWorkbench();
         if (workbench.getIntroManager().getIntro() != null) workbench.getIntroManager().closeIntro(workbench.getIntroManager().getIntro());
+        if (System.getProperty("edt.probe.phase").startsWith("candidate") || Set.of("surfaces","lightsurfaces","light","lightrestart","semantic","nativeswitch").contains(System.getProperty("edt.probe.phase"))) {
+            var previousWindows=workbench.getWorkbenchWindows();
+            var freshWindow=workbench.openWorkbenchWindow("ru.litonchik.edt.themes.probe.gallery",null);
+            for(var previous:previousWindows) {
+                for(var previousPage:previous.getPages()) previousPage.closeAllEditors(false);
+                previous.close();
+            }
+            var freshShell=freshWindow.getShell(); freshShell.setMinimized(false); freshShell.setMaximized(false); freshShell.setSize(900,640);
+            var screen=freshShell.getMonitor().getClientArea(); freshShell.setLocation(screen.x,screen.y); freshShell.forceActive();
+            freshWindow.getActivePage().setEditorAreaVisible(true); freshShell.layout(true,true); pump(500);
+        }
+        if (System.getProperty("edt.probe.phase").startsWith("candidateselection")) { runSelectionChecks(); return; }
+        if (System.getProperty("edt.probe.phase").startsWith("candidategit")) { runGitChecks(); return; }
+        if (Set.of("candidaterulers","candidaterulersrestart").contains(System.getProperty("edt.probe.phase"))) { runRulerChecks(); return; }
+        if ("candidateuigallery".equals(System.getProperty("edt.probe.phase"))) { runUiGallery(); return; }
+        if (Set.of("candidateui","candidateuirestart").contains(System.getProperty("edt.probe.phase"))) { runUiChecks(); return; }
+        if (System.getProperty("edt.probe.phase").startsWith("candidategallery")) { runLightGallery(); return; }
+        if (Set.of("candidatesurfaces","candidateallsurfaces").contains(System.getProperty("edt.probe.phase"))) { runSurfaceChecks(); return; }
+        if (System.getProperty("edt.probe.phase").startsWith("candidate")) { runCandidateChecks(); return; }
         if (Set.of("semantic","nativeswitch").contains(System.getProperty("edt.probe.phase"))) { runSemanticChecks(); return; }
-        if ("surfaces".equals(System.getProperty("edt.probe.phase"))) { runSurfaceChecks(); return; }
+        if (Set.of("surfaces","lightsurfaces").contains(System.getProperty("edt.probe.phase"))) { runSurfaceChecks(); return; }
+        if (System.getProperty("edt.probe.phase").startsWith("lightgallery")) { runLightGallery(); return; }
+        if (System.getProperty("edt.probe.phase").startsWith("light")) { runLightChecks(); return; }
         if ("cleanup".equals(System.getProperty("edt.probe.phase"))) { runCleanup(); return; }
         if (System.getProperty("edt.probe.phase").startsWith("gallery")) { runGallery(); return; }
         if (System.getProperty("edt.probe.phase").startsWith("winterseparators")) { runWinterSeparatorChecks(); return; }
@@ -293,10 +314,801 @@ public class WorkbenchProbe implements IApplication {
         try { gc.copyArea(image,area.x,area.y); ImageLoader loader=new ImageLoader(); loader.data=new ImageData[]{image.getImageData()}; loader.save(System.getProperty("edt.probe.images")+"/"+name+".png",SWT.IMAGE_PNG); }
         finally { gc.dispose(); image.dispose(); }
     }
+    private int profileCount(PreferenceDialog dialog) {
+        var combo=findCombo(dialog.getShell()); combo.setListVisible(true);
+        int count=findFontTable(combo).getItemCount(); combo.closePopup(); return count;
+    }
+    private void selectMode(PreferenceDialog dialog,ThemeMode mode) {
+        var dark=findButton(dialog.getShell(),"Тёмные"); var light=findButton(dialog.getShell(),"Светлые");
+        check(dark!=null && light!=null,"light/dark radio buttons exist");
+        dark.setSelection(mode==ThemeMode.DARK); light.setSelection(mode==ThemeMode.LIGHT);
+        (mode==ThemeMode.DARK?dark:light).notifyListeners(SWT.Selection,new Event());
+    }
+    private void checkLightRegistry() {
+        var palette=PaletteCatalog.load("github-light-default");
+        var registry=PlatformUI.getWorkbench().getThemeManager().getCurrentTheme().getColorRegistry();
+        for(var entry:SettingCatalog.load().entries()) if(entry.kind().equals("color"))
+            check(rgb(palette,entry.role()).equals(registry.getRGB(entry.key())),"light effective registry "+entry.key()+" expected="+rgb(palette,entry.role())+" actual="+registry.getRGB(entry.key()));
+    }
+
+    private org.eclipse.core.resources.IProject gitFixture() throws Exception {
+        var project=ResourcesPlugin.getWorkspace().getRoot().getProject("ThemeGitProbe");
+        if(!project.exists()) {
+            project.create(null); project.open(null);
+            for(String name:List.of("Modified.bsl","Clean.bsl",".gitignore")) {
+                var file=project.getFile(name);
+                file.create(new java.io.ByteArrayInputStream((name.equals(".gitignore")?"*.log\n":"// Original\n").getBytes(java.nio.charset.StandardCharsets.UTF_8)),true,null);
+            }
+            try(var git=org.eclipse.jgit.api.Git.init().setDirectory(project.getLocation().toFile()).call()) {
+                git.add().addFilepattern(".").call();
+                git.commit().setMessage("Test fixture").setAuthor("EDT Theme Probe","probe@example.invalid").setCommitter("EDT Theme Probe","probe@example.invalid").call();
+                new org.eclipse.egit.core.op.ConnectProviderOperation(project,git.getRepository().getDirectory()).execute(null);
+            }
+            project.getFile("Modified.bsl").setContents(new java.io.ByteArrayInputStream("// Modified\n".getBytes(java.nio.charset.StandardCharsets.UTF_8)),true,false,null);
+            project.getFile("Ignored.log").create(new java.io.ByteArrayInputStream("ignored\n".getBytes(java.nio.charset.StandardCharsets.UTF_8)),true,null);
+            project.refreshLocal(org.eclipse.core.resources.IResource.DEPTH_INFINITE,null);
+        }
+        check(org.eclipse.team.core.RepositoryProvider.getProvider(project)!=null,"fixture connected to EGit");
+        try(var git=org.eclipse.jgit.api.Git.open(project.getLocation().toFile())) {
+            check(git.status().call().getModified().contains("Modified.bsl"),"fixture has tracked modified BSL");
+            check(git.status().call().getIgnoredNotInIndex().contains("Ignored.log"),"fixture has Git ignored resource");
+        }
+        return project;
+    }
+    private TreeItem gitItem(TreeItem[] items,String name) {
+        for(var item:items) {
+            if(item.getData() instanceof org.eclipse.core.resources.IResource resource && resource.getName().equals(name)) return item;
+            if(item.getText().contains(name)) return item;
+            var found=gitItem(item.getItems(),name); if(found!=null)return found;
+        }
+        return null;
+    }
+    private static class GitDecoration implements org.eclipse.jface.viewers.IDecoration {
+        org.eclipse.swt.graphics.Color background,foreground; String prefix="",suffix="";
+        @Override public void addPrefix(String value){prefix+=value;}
+        @Override public void addSuffix(String value){suffix+=value;}
+        @Override public void addOverlay(org.eclipse.jface.resource.ImageDescriptor image){}
+        @Override public void addOverlay(org.eclipse.jface.resource.ImageDescriptor image,int quadrant){}
+        @Override public void setBackgroundColor(org.eclipse.swt.graphics.Color value){background=value;}
+        @Override public void setForegroundColor(org.eclipse.swt.graphics.Color value){foreground=value;}
+        @Override public void setFont(org.eclipse.swt.graphics.Font value){}
+        @Override public org.eclipse.jface.viewers.IDecorationContext getDecorationContext(){return org.eclipse.jface.viewers.DecorationContext.DEFAULT_CONTEXT;}
+    }
+    private org.eclipse.jface.viewers.ILightweightLabelDecorator gitDecorator() throws Exception {
+        for(var element:org.eclipse.core.runtime.Platform.getExtensionRegistry().getConfigurationElementsFor("org.eclipse.ui.decorators"))
+            if("org.eclipse.egit.ui.internal.decorators.GitLightweightDecorator".equals(element.getAttribute("id")))
+                return (org.eclipse.jface.viewers.ILightweightLabelDecorator)element.createExecutableExtension("class");
+        throw new AssertionError("EGit decorator extension missing");
+    }
+    private static final List<String> GIT_COLORS=List.of("UncommittedChangeBackgroundColor","UncommittedChangeForegroundColor","IgnoredResourceBackgroundColor","IgnoredResourceForegroundColor");
+    private GitDecoration gitDecoration(org.eclipse.jface.viewers.ILightweightLabelDecorator decorator,org.eclipse.core.resources.IResource resource) {
+        var result=new GitDecoration();decorator.decorate(resource,result);return result;
+    }
+    private RGB gitLabelPixel(Tree tree,TreeItem item) {
+        var bounds=item.getBounds();var area=tree.getClientArea();
+        int x=Math.min(area.width-3,bounds.x+bounds.width-2),y=bounds.y+1;
+        if(x<0 || y<0 || y>=area.height)throw new AssertionError("Git label not visible for pixel check");
+        var image=new Image(tree.getDisplay(),1,1);var gc=new GC(tree);
+        try{gc.copyArea(image,x,y);var data=image.getImageData();return data.palette.getRGB(data.getPixel(0,0));}
+        finally{gc.dispose();image.dispose();}
+    }
+    private void checkGitColors(Palette palette,Tree tree,org.eclipse.core.resources.IProject project,org.eclipse.jface.viewers.ILightweightLabelDecorator decorator) throws Exception {
+        var registry=PlatformUI.getWorkbench().getThemeManager().getCurrentTheme().getColorRegistry();
+        var prefs=InstanceScope.INSTANCE.getNode("org.eclipse.ui.workbench");String id=palette.id();
+        pump(250);
+        for(String name:GIT_COLORS){String role=name.endsWith("BackgroundColor")?"editor.background":name.startsWith("Uncommitted")?"accent":"disabled";
+            check(palette.rgb(role).equals(prefs.get("org.eclipse.egit.ui."+name,null)),id+" Git explicit "+name);
+            check(rgb(palette,role).equals(registry.getRGB("org.eclipse.egit.ui."+name)),id+" Git registry "+name+" actual="+registry.getRGB("org.eclipse.egit.ui."+name));
+        }
+        check(rgb(palette,"editor.background").equals(tree.getBackground().getRGB()),id+" Git Tree background");
+        tree.removeAll();
+        for(String name:List.of("ThemeGitProbe","Modified.bsl","Clean.bsl","Ignored.log")){
+            var resource=name.equals("ThemeGitProbe")?project:project.getFile(name);var d=gitDecoration(decorator,resource);
+            var item=new TreeItem(tree,SWT.NONE);item.setText(d.prefix+name+d.suffix);item.setForeground(d.foreground);item.setBackground(d.background);
+            check(rgb(palette,"editor.background").equals(item.getBackground().getRGB()),id+" Git label background "+name+" actual="+item.getBackground().getRGB());
+            if(name.equals("Modified.bsl"))check(rgb(palette,"accent").equals(item.getForeground().getRGB()),id+" actual EGit modified foreground");
+            if(name.equals("Ignored.log"))check(rgb(palette,"disabled").equals(item.getForeground().getRGB()),id+" actual EGit ignored foreground");
+        }
+        tree.deselectAll();tree.getParent().layout(true,true);tree.redraw();tree.update();pump(120);
+        for(var item:tree.getItems())check(rgb(palette,"editor.background").equals(gitLabelPixel(tree,item)),id+" painted Git label pixel "+item.getText());
+    }
+    private void runGitChecks() throws Exception {
+        var wb=PlatformUI.getWorkbench();var page=wb.getActiveWorkbenchWindow().getActivePage();
+        org.eclipse.core.runtime.Platform.getBundle("org.eclipse.egit.ui").start(org.osgi.framework.Bundle.START_TRANSIENT);
+        for(var element:org.eclipse.core.runtime.Platform.getExtensionRegistry().getConfigurationElementsFor("org.eclipse.core.runtime.preferences"))
+            if("org.eclipse.egit.ui".equals(element.getContributor().getName()) && "initializer".equals(element.getName()))
+                ((org.eclipse.core.runtime.preferences.AbstractPreferenceInitializer)element.createExecutableExtension("class")).initializeDefaultPreferences();
+        var project=gitFixture();var decorator=gitDecorator();
+        var view=(UiPanelView)page.showView("ru.litonchik.edt.themes.probe.ui");var tree=(Tree)view.controls.get("tree");
+        for(var c:view.root.getChildren())if(c!=tree)c.dispose();view.root.setLayout(new org.eclipse.swt.layout.FillLayout());view.root.layout(true,true);
+        var coordinator=ThemeStartup.coordinator();var prefs=InstanceScope.INSTANCE.getNode("org.eclipse.ui.workbench");
+        var originals=new Properties();var saved=java.nio.file.Path.of(System.getProperty("edt.probe.images"),"git-originals.properties");
+        boolean restart=System.getProperty("edt.probe.phase").endsWith("restart");
+        boolean lightStartup="candidategitlightrestart".equals(System.getProperty("edt.probe.phase"));
+        if(restart){try(var reader=Files.newBufferedReader(saved)){originals.load(reader);}check((lightStartup?"github-light-default":"monokai").equals(coordinator.activeProfile()),"Git "+(lightStartup?"light":"dark")+" profile persisted after JVM restart");}
+        else {
+            if(coordinator.hasSnapshot())check(coordinator.restore(true).successful(),"Git initial restore");
+            // Controlled stale state from the installed EGit native Dark stylesheet.
+            prefs.put("org.eclipse.egit.ui.UncommittedChangeBackgroundColor","47,47,47");prefs.put("org.eclipse.egit.ui.UncommittedChangeForegroundColor","114,157,186");
+            prefs.remove("org.eclipse.egit.ui.IgnoredResourceBackgroundColor");prefs.remove("org.eclipse.egit.ui.IgnoredResourceForegroundColor");prefs.flush();
+            for(String name:GIT_COLORS)originals.setProperty(name,prefs.get("org.eclipse.egit.ui."+name,"<absent>"));
+            try(var writer=Files.newBufferedWriter(saved)){originals.store(writer,"EGit explicit originals");}
+            coordinator.apply("github-light-default",true);
+        }
+        long deadline=System.nanoTime()+java.util.concurrent.TimeUnit.SECONDS.toNanos(20);GitDecoration ready;
+        do{ready=gitDecoration(decorator,project.getFile("Modified.bsl"));if(ready.foreground!=null || !ready.prefix.isEmpty() || !ready.suffix.isEmpty())break;pump(200);}while(System.nanoTime()<deadline);
+        check(ready.foreground!=null || !ready.prefix.isEmpty() || !ready.suffix.isEmpty(),"real EGit index diff computed before rendering");
+        if(restart){
+            checkGitColors(PaletteCatalog.load(lightStartup?"github-light-default":"monokai"),tree,project,decorator);
+            coordinator.apply("github-light-default",true);checkGitColors(PaletteCatalog.load("github-light-default"),tree,project,decorator);
+            captureSurfaceShell(wb.getActiveWorkbenchWindow().getShell(),"git-after-restart");
+            check(coordinator.restore(true).successful(),"Git restore succeeds");pump(400);
+            for(String name:GIT_COLORS)check(originals.getProperty(name).equals(prefs.get("org.eclipse.egit.ui."+name,"<absent>")),"Git exact explicit restore "+name);
+            check(!coordinator.hasSnapshot() && coordinator.activeProfile()==null,"Git restore releases journal and profile");
+        }else{
+            var bsl=tryOpenBsl();String source=bsl.getText();String font=Arrays.toString(bsl.getFont().getFontData());page.activate(view);
+            for(String id:PaletteCatalog.ids()){
+                coordinator.apply(id,true);checkGitColors(PaletteCatalog.load(id),tree,project,decorator);
+                check(source.equals(bsl.getText()) && font.equals(Arrays.toString(bsl.getFont().getFontData())),id+" Git theming preserves BSL source and font");
+                if(id.equals("github-light-default"))captureSurfaceShell(wb.getActiveWorkbenchWindow().getShell(),"git-after");
+            }
+            var drafts=coordinator.paletteDrafts();drafts.edit("github-light-default","editor.background","#F1F5E9");
+            coordinator.apply("github-light-default",true,drafts);checkGitColors(drafts.resolve("github-light-default"),tree,project,decorator);
+            drafts.resetRole("github-light-default","editor.background");coordinator.apply("github-light-default",true,drafts);checkGitColors(PaletteCatalog.load("github-light-default"),tree,project,decorator);
+            prefs.put("org.eclipse.egit.ui.UncommittedChangeForegroundColor","17,34,51");prefs.flush();coordinator.apply("monokai",true);
+            check("17,34,51".equals(prefs.get("org.eclipse.egit.ui.UncommittedChangeForegroundColor",null)),"Git later manual label color preserved");
+            drafts=coordinator.paletteDrafts();drafts.edit("monokai","accent","#6FD0E0");coordinator.apply("monokai",true,drafts);checkGitColors(drafts.resolve("monokai"),tree,project,decorator);
+            drafts.resetRole("monokai","accent");coordinator.apply("monokai",true,drafts);checkGitColors(PaletteCatalog.load("monokai"),tree,project,decorator);
+            for(String id:PaletteCatalog.ids())check(coordinator.paletteDrafts().overrides(id).isEmpty(),"Git personal roles clean and independent "+id);
+        }
+        decorator.dispose();
+    }
+
+
+    private java.util.List<Text> stagingIdentities(Control root) {
+        var found=new ArrayList<Text>();
+        if(root instanceof Text text && (text.getText().contains("probe@example.invalid") || "textBorder".equals(text.getData("FormWidgetFactory.drawBorder"))))found.add(text);
+        if(root instanceof Composite parent)for(var child:parent.getChildren())found.addAll(stagingIdentities(child));
+        return found;
+    }
+    private RGB pointPixel(Control control,int x,int y) {
+        var image=new Image(control.getDisplay(),1,1);var gc=new GC(control);
+        try{gc.copyArea(image,x,y);var data=image.getImageData();return data.palette.getRGB(data.getPixel(0,0));}
+        finally{gc.dispose();image.dispose();}
+    }
+    private void dumpStagingTexts(Control root){
+        if(root instanceof Text text)report.append("OBS TEXT len=").append(text.getText().length()).append(" fake=").append(text.getText().contains("probe@example.invalid")).append(" border=").append(text.getData("FormWidgetFactory.drawBorder")).append(" parent=").append(text.getParent().getClass().getName()).append(" enabled=").append(text.getEnabled()).append(" style=").append(text.getStyle()).append(" selection=").append(text.getSelection()).append('\n');
+        if(root instanceof Composite parent)for(var child:parent.getChildren())dumpStagingTexts(child);
+    }
+    private RGB modalPixel(Control control,org.eclipse.swt.graphics.Rectangle requested) {
+        var area=control instanceof Scrollable scroll?scroll.getClientArea():new org.eclipse.swt.graphics.Rectangle(0,0,control.getSize().x,control.getSize().y);
+        var bounds=requested.intersection(area);
+        if(bounds.width<2 || bounds.height<2)throw new AssertionError("No visible pixels: "+control);
+        var image=new Image(control.getDisplay(),bounds.width,bounds.height);var gc=new GC(control);
+        try{gc.copyArea(image,bounds.x,bounds.y);var data=image.getImageData();var counts=new HashMap<RGB,Integer>();
+            for(int y=0;y<data.height;y++)for(int x=0;x<data.width;x++)counts.merge(data.palette.getRGB(data.getPixel(x,y)),1,Integer::sum);
+            return counts.entrySet().stream().max(Map.Entry.comparingByValue()).orElseThrow().getKey();
+        }finally{gc.dispose();image.dispose();}
+    }
+    private void rowSelectionPixels(Control control,org.eclipse.swt.widgets.Item item,Palette palette,String label) {
+        org.eclipse.swt.graphics.Rectangle bounds=item instanceof TreeItem ti?ti.getBounds():((TableItem)item).getBounds(0);
+        var actual=modalPixel(control,bounds);
+        check(rgb(palette,"selection.background").equals(actual),palette.id()+" "+label+" painted selection BG expected="+rgb(palette,"selection.background")+" got="+actual);
+    }
+    private void selectionCycle(Tree tree,Text focus,Palette palette,String label) throws Exception {
+        var items=tree.getItems();check(items.length>=3,label+" has multiple rows");
+        tree.setSelection(items[0]);tree.setFocus();tree.showSelection();tree.redraw();tree.update();pump(180);
+        check(tree.isFocusControl(),label+" active focus acquired");rowSelectionPixels(tree,items[0],palette,label+" focused");
+        focus.setFocus();tree.redraw();tree.update();pump(180);check(!tree.isFocusControl(),label+" focus moved away");rowSelectionPixels(tree,items[0],palette,label+" inactive");
+        tree.setSelection(new TreeItem[]{items[1],items[2]});tree.redraw();tree.update();pump(100);
+        check(tree.getSelectionCount()==2,label+" multiselection intact");rowSelectionPixels(tree,items[1],palette,label+" multi1");rowSelectionPixels(tree,items[2],palette,label+" multi2");
+        tree.deselectAll();tree.redraw();tree.update();pump(100);
+        check(tree.getSelectionCount()==0,label+" deselected");
+        check(rgb(palette,"editor.background").equals(modalPixel(tree,items[0].getBounds())),label+" deselected row has normal background");
+    }
+    private void checkStagingFields(IWorkbenchPage page,IViewPart staging,java.util.List<Text> fields,Palette palette) throws Exception {
+        page.activate(staging);page.setPartState(page.findViewReference("org.eclipse.egit.ui.StagingView"),IWorkbenchPage.STATE_MAXIMIZED);pump(350);
+        for(int i=0;i<fields.size();i++){
+            var field=fields.get(i);String text=field.getText();boolean enabled=field.getEnabled();
+            for(boolean state:new boolean[]{true,false,true}){
+                field.setEnabled(state);field.redraw();field.update();pump(150);
+                check(rgb(palette,"editor.background").equals(field.getBackground().getRGB()),palette.id()+" real staging field "+i+" BG property enabled="+state);
+                check(rgb(palette,state?"text":"disabled").equals(field.getForeground().getRGB()),palette.id()+" real staging field "+i+" FG property enabled="+state);
+                var actual=modalPixel(field,field.getClientArea());check(rgb(palette,"editor.background").equals(actual),palette.id()+" real staging field "+i+" painted BG enabled="+state+" actual="+actual);
+                check(text.equals(field.getText()),"staging identity preserved");
+            }
+            field.setEnabled(enabled);
+        }
+    }
+    private void runSelectionChecks() throws Exception {
+        var wb=PlatformUI.getWorkbench();var page=wb.getActiveWorkbenchWindow().getActivePage();var coordinator=ThemeStartup.coordinator();
+        org.eclipse.core.runtime.Platform.getBundle("org.eclipse.egit.ui").start(org.osgi.framework.Bundle.START_TRANSIENT);
+        for(var element:org.eclipse.core.runtime.Platform.getExtensionRegistry().getConfigurationElementsFor("org.eclipse.core.runtime.preferences"))
+            if("org.eclipse.egit.ui".equals(element.getContributor().getName()) && "initializer".equals(element.getName()))
+                ((org.eclipse.core.runtime.preferences.AbstractPreferenceInitializer)element.createExecutableExtension("class")).initializeDefaultPreferences();
+        var project=gitFixture();var git=org.eclipse.jgit.api.Git.open(project.getLocation().toFile());var config=git.getRepository().getConfig();
+        config.setString("user",null,"name","EDT Theme Probe");config.setString("user",null,"email","probe@example.invalid");config.save();
+        var mapped=org.eclipse.egit.core.project.RepositoryMapping.getMapping(project).getRepository();mapped.getConfig().load();
+        var warm=gitDecorator();long warmDeadline=System.nanoTime()+java.util.concurrent.TimeUnit.SECONDS.toNanos(20);
+        while(System.nanoTime()<warmDeadline){var result=gitDecoration(warm,project.getFile("Modified.bsl"));if(!result.prefix.isEmpty() || !result.suffix.isEmpty())break;pump(200);}warm.dispose();
+        var staging=page.showView("org.eclipse.egit.ui.StagingView");
+        check(staging instanceof org.eclipse.ui.part.IShowInTarget,"real staging show-in interface");
+        check(((org.eclipse.ui.part.IShowInTarget)staging).show(new org.eclipse.ui.part.ShowInContext(null,new org.eclipse.jface.viewers.StructuredSelection(new org.eclipse.egit.ui.internal.repository.tree.RepositoryNode(null,mapped)))),"real staging repository selected");
+        var fields=stagingIdentities(wb.getActiveWorkbenchWindow().getShell());long identitiesDeadline=System.nanoTime()+java.util.concurrent.TimeUnit.SECONDS.toNanos(20);
+        while(fields.size()!=2 && System.nanoTime()<identitiesDeadline){pump(200);fields=stagingIdentities(wb.getActiveWorkbenchWindow().getShell());}
+        if(fields.size()!=2){dumpStagingTexts(wb.getActiveWorkbenchWindow().getShell());captureSurfaceShell(wb.getActiveWorkbenchWindow().getShell(),"staging-diagnostic");}
+        check(fields.size()==2,"real author/committer controls located, count="+fields.size());
+        for(var field:fields)field.setText("EDT Theme Probe <probe@example.invalid>");
+        var fixture=(UiPanelView)page.showView("ru.litonchik.edt.themes.probe.ui");for(var child:fixture.root.getChildren())child.dispose();fixture.root.setLayout(new org.eclipse.swt.layout.GridLayout(2,true));
+        var tree=new Tree(fixture.root,SWT.BORDER|SWT.MULTI|SWT.FULL_SELECTION|SWT.CHECK);tree.setLayoutData(new org.eclipse.swt.layout.GridData(SWT.FILL,SWT.FILL,true,true));
+        for(String name:List.of("First resource","Second resource","Third resource")){var item=new TreeItem(tree,SWT.NONE);item.setText(name);item.setChecked(true);}
+        var styled=new org.eclipse.jface.viewers.TreeViewer(fixture.root,SWT.BORDER|SWT.MULTI|SWT.FULL_SELECTION);styled.getTree().setLayoutData(new org.eclipse.swt.layout.GridData(SWT.FILL,SWT.FILL,true,true));
+        styled.setContentProvider(new org.eclipse.jface.viewers.ITreeContentProvider(){
+            @Override public Object[] getElements(Object input){return new String[]{"Styled first","Styled second","Styled third"};}
+            @Override public Object[] getChildren(Object parent){return new Object[0];}
+            @Override public Object getParent(Object element){return null;}
+            @Override public boolean hasChildren(Object element){return false;}
+        });
+        styled.setLabelProvider(new org.eclipse.jface.viewers.StyledCellLabelProvider(){
+            @Override public void update(org.eclipse.jface.viewers.ViewerCell cell){var text=new org.eclipse.jface.viewers.StyledString(cell.getElement().toString());text.append(" [feature]",org.eclipse.jface.viewers.StyledString.DECORATIONS_STYLER);cell.setText(text.getString());cell.setStyleRanges(text.getStyleRanges());super.update(cell);}
+        });styled.setInput(project);
+        var table=new Table(fixture.root,SWT.BORDER|SWT.MULTI|SWT.FULL_SELECTION);table.setLayoutData(new org.eclipse.swt.layout.GridData(SWT.FILL,SWT.FILL,true,true));
+        new TableColumn(table,SWT.NONE).setWidth(200);for(String name:List.of("First table row","Second table row","Third table row")){var item=new TableItem(table,SWT.NONE);item.setText(name);}
+        var focus=new Text(fixture.root,SWT.BORDER);focus.setText("Focus target");focus.setLayoutData(new org.eclipse.swt.layout.GridData(SWT.FILL,SWT.TOP,true,false));
+        var saved=java.nio.file.Path.of(System.getProperty("edt.probe.images"),"selection-originals.properties");var originals=new Properties();boolean restart=System.getProperty("edt.probe.phase").endsWith("restart");
+        if(restart){try(var reader=Files.newBufferedReader(saved)){originals.load(reader);}check("github-light-default".equals(coordinator.activeProfile()),"selection palette survives restart");}
+        else{
+            if(coordinator.hasSnapshot())check(coordinator.restore(true).successful(),"selection initial restore");
+            originals.setProperty("tree.erase",Integer.toString(tree.getListeners(SWT.EraseItem).length));originals.setProperty("table.erase",Integer.toString(table.getListeners(SWT.EraseItem).length));
+            var adapter=new EdtSettingsAdapter(wb.getService(IThemeEngine.class),wb.getThemeManager());var baseline=new LinkedHashMap<SettingKey,OriginalValue>();
+            for(String id:List.of("github-light-default","monokai"))for(var key:adapter.plan(PaletteCatalog.load(id),true).keySet())baseline.putIfAbsent(key,adapter.read(key));
+            for(var entry:baseline.entrySet())originals.setProperty("pref|"+entry.getKey().scope()+"|"+entry.getKey().node()+"|"+entry.getKey().key(),entry.getValue().present()?entry.getValue().value():"<absent>");
+            try(var writer=Files.newBufferedWriter(saved)){originals.store(writer,"Selection originals");}
+        }
+        var protectedEditor=(ProtectedContentEditor)page.openEditor(new ProtectedInput(),"ru.litonchik.edt.themes.probe.protected");pump(200);
+        int protectedErase=protectedEditor.tree.getListeners(SWT.EraseItem).length;
+        var profiles=restart?List.of("github-light-default"):PaletteCatalog.ids();
+        for(String id:profiles){
+            if(!restart)coordinator.apply(id,true);var palette=PaletteCatalog.load(id);
+            page.activate(fixture);page.setPartState(page.findViewReference("ru.litonchik.edt.themes.probe.ui"),IWorkbenchPage.STATE_MAXIMIZED);pump(250);
+            check(Arrays.stream(protectedEditor.tree.getListeners(SWT.EraseItem)).noneMatch(l -> l.getClass().getName().contains("LightUiStyles")) && noUiMarks(partRoot(protectedEditor)),id+" editor business content has no selection hook or UI marks, listeners="+protectedEditor.tree.getListeners(SWT.EraseItem).length+" initial="+protectedErase+" marks="+!noUiMarks(partRoot(protectedEditor))+" classes="+Arrays.toString(Arrays.stream(protectedEditor.tree.getListeners(SWT.EraseItem)).map(l -> l.getClass().getName()).toArray()));
+            selectionCycle(tree,focus,palette,"plain Tree");selectionCycle(styled.getTree(),focus,palette,"JFace styled Tree");
+            var ti=table.getItem(0);table.setSelection(ti);table.setFocus();table.redraw();table.update();pump(150);check(table.isFocusControl(),"Table focus acquired");rowSelectionPixels(table,ti,palette,"Table focused");
+            focus.setFocus();table.redraw();table.update();pump(150);rowSelectionPixels(table,ti,palette,"Table inactive");table.deselectAll();table.redraw();table.update();pump(100);check(rgb(palette,"editor.background").equals(modalPixel(table,ti.getBounds(0))),"Table deselected background");
+            check(tree.getItem(0).getChecked(),"checkbox state preserved");
+            if(id.equals("github-light-default")){tree.setSelection(tree.getItem(1));focus.setFocus();pump(150);captureSurfaceShell(wb.getActiveWorkbenchWindow().getShell(),"selection-after");}
+            page.setPartState(page.findViewReference("ru.litonchik.edt.themes.probe.ui"),IWorkbenchPage.STATE_RESTORED);
+            checkStagingFields(page,staging,fields,palette);
+            if(id.equals("github-light-default"))captureSurfaceShell(wb.getActiveWorkbenchWindow().getShell(),"staging-after");
+            page.setPartState(page.findViewReference("org.eclipse.egit.ui.StagingView"),IWorkbenchPage.STATE_RESTORED);
+        }
+        page.closeEditor(protectedEditor,false);
+        if(!restart){
+            var palette=PaletteCatalog.load("github-light-default");coordinator.apply(palette.id(),true);page.activate(fixture);
+            page.setPartState(page.findViewReference("ru.litonchik.edt.themes.probe.ui"),IWorkbenchPage.STATE_MAXIMIZED);
+            var late=new Tree(fixture.root,SWT.BORDER|SWT.MULTI|SWT.FULL_SELECTION);late.setLayoutData(new org.eclipse.swt.layout.GridData(SWT.FILL,SWT.FILL,true,true));
+            for(String name:List.of("Late first","Late second","Late third"))new TreeItem(late,SWT.NONE).setText(name);
+            fixture.root.layout(true,true);pump(300);selectionCycle(late,focus,palette,"late Tree");late.dispose();
+            page.setPartState(page.findViewReference("ru.litonchik.edt.themes.probe.ui"),IWorkbenchPage.STATE_RESTORED);
+        }
+        if(restart){
+            check(coordinator.restore(true).successful(),"selection restore succeeded");pump(300);
+            check(Arrays.stream(tree.getListeners(SWT.EraseItem)).noneMatch(l -> l.getClass().getName().contains("LightUiStyles")),"custom Tree listener removed on restore");
+            check(Arrays.stream(table.getListeners(SWT.EraseItem)).noneMatch(l -> l.getClass().getName().contains("LightUiStyles")),"custom Table listener removed on restore");
+            var adapter=new EdtSettingsAdapter(wb.getService(IThemeEngine.class),wb.getThemeManager());
+            for(String key:originals.stringPropertyNames())if(key.startsWith("pref|")){var parts=key.split("\\|",4);var value=originals.getProperty(key);check((value.equals("<absent>")?OriginalValue.absent():OriginalValue.of(value)).equals(adapter.read(new SettingKey(parts[1],parts[2],parts[3]))),"selection exact preference restore "+key);}
+            for(var field:fields)check(field.getBackgroundImage()==null,"owned Forms field image removed on restore");
+            check(!coordinator.hasSnapshot() && coordinator.activeProfile()==null,"selection journal and profile released");
+        }else coordinator.apply("github-light-default",true);
+        git.close();
+    }
+
+    private void runLightGallery() throws Exception {
+        String profile=System.getProperty("edt.probe.phase").startsWith("candidate") ? candidateId() : "github-light-default";
+        var coordinator=ThemeStartup.coordinator(); var workbench=PlatformUI.getWorkbench();
+        if(System.getProperty("edt.probe.phase").endsWith("galleryprepare")) {
+            check(coordinator.paletteDrafts().overrides(profile).isEmpty(),"light gallery uses standard palette");
+            coordinator.apply(profile,true); return;
+        }
+        check(profile.equals(coordinator.activeProfile()),"light gallery starts after native Light restart");
+        check(!new CodeFontSettings().hasOriginal(),"light gallery uses restored standard font");
+        var shell=workbench.getActiveWorkbenchWindow().getShell();
+        var page=workbench.showPerspective("ru.litonchik.edt.themes.probe.gallery",workbench.getActiveWorkbenchWindow()); page.resetPerspective();
+        shell.setMaximized(false); shell.setSize(900,640);
+        var monitor=shell.getMonitor().getClientArea(); shell.setLocation(monitor.x,monitor.y);
+        var editor=tryOpenBsl(); check(editor!=null,"light gallery opens BSL sample"); editor.setTopIndex(0); editor.setSelection(0); pump(1800);
+        var palette=PaletteCatalog.load(profile);
+        check(rgb(palette,"editor.background").equals(editor.getBackground().getRGB()),"light gallery editor background");
+        for(String[] token:new String[][]{{"Функция","keyword"},{"123.45","number"},{"Строка с кириллицей","string"},{"Комментарий","comment"}})
+            check(rgb(palette,token[1]).equals(glyph(editor,token[0])),"light gallery "+token[1]+" glyph");
+        panelRgb(page,profile);
+        checkRuler(page.getActiveEditor(),rgb(palette,"editor.background"),profile+" gallery");
+        captureSurfaceShell(shell,"gallery-"+profile);
+        if ("noctis-lux".equals(profile)) {
+            String text=editor.getText(); int start=text.indexOf("Текст =");
+            editor.setSelection(start,start+"Текст".length()); editor.showSelection(); pump(300);
+            check(rgb(palette,"selection.background").equals(editor.getSelectionBackground().getRGB()),"Lux selected text uses distinct palette background");
+            captureSurfaceShell(shell,"noctis-lux-selection");
+            check(text.equals(editor.getText()),"Lux selection capture does not change source");
+            editor.setSelection(0);
+        }
+        check(coordinator.restore(true).successful(),"light gallery restores original settings");
+    }
+
+    /** Normal SWT view controls, deliberately outside all editor content. */
+    public static class UiPanelView extends org.eclipse.ui.part.ViewPart {
+        Composite root;
+        final Map<String,Control> controls=new LinkedHashMap<>();
+        @Override public void createPartControl(Composite parent) {
+            root=new Composite(parent,SWT.NONE); root.setLayout(new org.eclipse.swt.layout.GridLayout());
+            controls.put("label",new Label(root,SWT.NONE)); ((Label)controls.get("label")).setText("Панель проверки");
+            controls.put("tree",new Tree(root,SWT.BORDER)); controls.put("table",new Table(root,SWT.BORDER));
+            controls.put("text",new Text(root,SWT.BORDER)); controls.put("combo",new Combo(root,SWT.READ_ONLY));
+            controls.put("button",new Button(root,SWT.PUSH)); ((Button)controls.get("button")).setText("Кнопка");
+            controls.put("link",new Link(root,SWT.NONE)); ((Link)controls.get("link")).setText("<a>Ссылка</a>");
+            controls.put("hyperlink",new org.eclipse.ui.forms.widgets.Hyperlink(root,SWT.NONE)); ((org.eclipse.ui.forms.widgets.Hyperlink)controls.get("hyperlink")).setText("Ссылка формы");
+            controls.put("disabled",new Label(root,SWT.NONE)); controls.get("disabled").setEnabled(false);
+        }
+        @Override public void setFocus() { root.setFocus(); }
+    }
+    public static class ProtectedContentEditor extends org.eclipse.ui.part.EditorPart {
+        Composite root; Tree tree; Canvas canvas;
+        @Override public void init(IEditorSite site,IEditorInput input) { setSite(site); setInput(input); setPartName("Защищённое содержимое"); }
+        @Override public void createPartControl(Composite parent) {
+            root=new Composite(parent,SWT.NONE); root.setLayout(new org.eclipse.swt.layout.GridLayout());
+            tree=new Tree(root,SWT.BORDER); canvas=new Canvas(root,SWT.NONE); new Label(root,SWT.NONE).setText("Содержимое редактора");
+        }
+        @Override public void setFocus() { tree.setFocus(); }
+        @Override public boolean isDirty() { return false; }
+        @Override public void doSave(IProgressMonitor monitor) {}
+        @Override public void doSaveAs() {}
+        @Override public boolean isSaveAsAllowed() { return false; }
+    }
+    private static class ProtectedInput implements IEditorInput {
+        @Override public boolean exists() { return false; }
+        @Override public org.eclipse.jface.resource.ImageDescriptor getImageDescriptor() { return null; }
+        @Override public String getName() { return "protected"; }
+        @Override public IPersistableElement getPersistable() { return null; }
+        @Override public String getToolTipText() { return "protected"; }
+        @Override public <T> T getAdapter(Class<T> type) { return null; }
+    }
+    private Control partRoot(IWorkbenchPart part) {
+        var model=part.getSite().getService(org.eclipse.e4.ui.model.application.ui.basic.MPart.class);
+        if(model==null || !(model.getWidget() instanceof Control)) throw new AssertionError("No public MPart widget: "+part);
+        return (Control)model.getWidget();
+    }
+    private <T extends Control> T firstControl(Control root,Class<T> type) {
+        if(type.isInstance(root)) return type.cast(root);
+        if(root instanceof Composite composite) for(var child:composite.getChildren()) {
+            T found=firstControl(child,type); if(found!=null) return found;
+        }
+        return null;
+    }
+    private boolean uiMarked(Control control) {
+        String css=(String)control.getData("org.eclipse.e4.ui.css.CssClassName");
+        return css!=null && Arrays.asList(css.split("\\s+")).contains("edtThemesLightUi");
+    }
+    private boolean noUiMarks(Control control) {
+        if(uiMarked(control)) return false;
+        if(control instanceof Composite composite) for(var child:composite.getChildren()) if(!noUiMarks(child)) return false;
+        return true;
+    }
+    private void uiRgb(Control control,RGB bg,RGB fg,String label) {
+        check(control!=null && !control.isDisposed(),label+" exists");
+        check(bg.equals(control.getBackground().getRGB()),label+" actual background expected="+bg+" got="+control.getBackground().getRGB());
+        check(fg.equals(control.getForeground().getRGB()),label+" actual foreground expected="+fg+" got="+control.getForeground().getRGB());
+    }
+    private void panelRgb(IWorkbenchPage page,String id) throws Exception {
+        var p=PaletteCatalog.load(id);
+        var nav=partRoot(page.findView("org.eclipse.ui.navigator.ProjectExplorer"));
+        var props=partRoot(page.showView("org.eclipse.ui.views.PropertySheet")); pump(300);
+        uiRgb(nav,rgb(p,"panel"),rgb(p,"text"),id+" Navigator container");
+        uiRgb(firstControl(nav,Tree.class),rgb(p,"editor.background"),rgb(p,"text"),id+" Navigator Tree");
+        uiRgb(props,rgb(p,"panel"),rgb(p,"text"),id+" Properties container");
+        var tabs=(org.eclipse.swt.custom.CTabFolder)nav.getParent().getParent();
+        check(rgb(p,"text").equals(tabs.getSelectionForeground().getRGB()),id+" selected tab actual foreground="+tabs.getSelectionForeground().getRGB());
+        check(rgb(p,"editor.background").equals(tabs.getSelectionBackground().getRGB()),id+" selected tab actual background="+tabs.getSelectionBackground().getRGB());
+    }
+    private void runUiChecks() throws Exception {
+        var wb=PlatformUI.getWorkbench(); var page=wb.getActiveWorkbenchWindow().getActivePage();
+        var engine=wb.getService(IThemeEngine.class); var coordinator=ThemeStartup.coordinator();
+        var adapter=new EdtSettingsAdapter(engine,wb.getThemeManager());
+        var saved=java.nio.file.Path.of(System.getProperty("edt.probe.images"),"ui-originals.properties");
+        var expected=new Properties();
+        boolean restart="candidateuirestart".equals(System.getProperty("edt.probe.phase"));
+        if(restart) {
+            try(var reader=Files.newBufferedReader(saved)) { expected.load(reader); }
+            check("noctis-lux".equals(coordinator.activeProfile()),"UI Light active profile survives JVM restart");
+            pump(800); panelRgb(page,"noctis-lux");
+        } else {
+            if(coordinator.hasSnapshot()) check(coordinator.restore(true).successful(),"UI initial restore");
+            engine.setTheme(ThemeMode.LIGHT.cssId(),true); pump(600);
+            var standard=coordinator.paletteDrafts(); for(String id:PaletteCatalog.ids()) standard.resetPalette(id);
+            coordinator.apply(null,true,standard);
+            var nav=partRoot(page.findView("org.eclipse.ui.navigator.ProjectExplorer"));
+            Tree tree=firstControl(nav,Tree.class);
+            expected.setProperty("tree.bg",tree.getBackground().getRGB().toString());
+            expected.setProperty("tree.fg",tree.getForeground().getRGB().toString());
+            expected.setProperty("tree.style",Objects.toString(tree.getData("style"),"<null>"));
+            expected.setProperty("tree.css",Objects.toString((String)tree.getData("org.eclipse.e4.ui.css.CssClassName"),"<null>"));
+            expected.setProperty("font",InstanceScope.INSTANCE.getNode("org.eclipse.ui.workbench").get(JFaceResources.TEXT_FONT,"<absent>"));
+            for(var key:adapter.plan(PaletteCatalog.load("noctis-lux"),true).keySet()) {
+                var value=adapter.read(key); expected.setProperty("pref|"+key.scope()+"|"+key.node()+"|"+key.key(),value.present()?value.value():"<absent>");
+            }
+            check(noUiMarks(wb.getActiveWorkbenchWindow().getShell()),"installed CSS does not mark native Light without active profile");
+        }
+        var bsl=tryOpenBsl(); var bslEditor=(org.eclipse.xtext.ui.editor.XtextEditor)page.getActiveEditor();
+        String source=bslEditor.getDocument().get(); long stamp=((org.eclipse.jface.text.IDocumentExtension4)bslEditor.getDocument()).getModificationStamp();
+        var protectedEditor=(ProtectedContentEditor)page.openEditor(new ProtectedInput(),"ru.litonchik.edt.themes.probe.protected");
+        var fixture=(UiPanelView)page.showView("ru.litonchik.edt.themes.probe.ui");
+        pump(400);
+        Color ownBg=new Color(wb.getDisplay(),45,67,89), ownFg=new Color(wb.getDisplay(),210,220,230);
+        try {
+            for(var profile:PaletteCatalog.profiles(ThemeMode.LIGHT)) {
+                String id=profile.id(); var p=PaletteCatalog.load(id);
+                coordinator.apply(id,true); pump(600); panelRgb(page,id);
+                for(var e:fixture.controls.entrySet()) {
+                    boolean body=Set.of("tree","table","text","combo").contains(e.getKey());
+                    uiRgb(e.getValue(),rgb(p,body?"editor.background":"panel"),rgb(p,e.getKey().equals("disabled")?"disabled":Set.of("link","hyperlink").contains(e.getKey())?"accent":"text"),id+" view "+e.getKey());
+                }
+                check(noUiMarks(partRoot(protectedEditor)),id+" entire arbitrary editor subtree excluded");
+                check(noUiMarks(partRoot(bslEditor)),id+" entire BSL editor subtree excluded");
+                protectedEditor.tree.setBackground(ownBg); protectedEditor.tree.setForeground(ownFg); protectedEditor.canvas.setBackground(ownBg);
+                LightUiStyles.refresh(engine); pump(100);
+                check(ownBg.getRGB().equals(protectedEditor.tree.getBackground().getRGB()) && ownFg.getRGB().equals(protectedEditor.tree.getForeground().getRGB()) && ownBg.getRGB().equals(protectedEditor.canvas.getBackground().getRGB()),id+" UI layer preserves editor business colors");
+                check(rgb(p,"editor.background").equals(bsl.getBackground().getRGB()) && rgb(p,"keyword").equals(glyph(bsl,"Функция")),id+" BSL background and tokens preserved");
+                check(source.equals(bslEditor.getDocument().get()) && stamp==((org.eclipse.jface.text.IDocumentExtension4)bslEditor.getDocument()).getModificationStamp(),id+" source and modification stamp unchanged");
+                var late=new Tree(fixture.root,SWT.BORDER); late.moveAbove(null); fixture.root.layout(true,true); late.redraw(); pump(500);
+                uiRgb(late,rgb(p,"editor.background"),rgb(p,"text"),id+" newly created view Tree"); late.dispose();
+            }
+            var draft=coordinator.paletteDrafts(); draft.edit("noctis-lux","panel","#E8E1CE"); coordinator.apply("noctis-lux",true,draft); pump(400);
+            check(new RGB(232,225,206).equals(partRoot(page.findView("org.eclipse.ui.navigator.ProjectExplorer")).getBackground().getRGB()),"personal panel color reaches actual Navigator");
+            draft=coordinator.paletteDrafts(); draft.resetRole("noctis-lux","panel"); coordinator.apply("noctis-lux",true,draft); pump(300); panelRgb(page,"noctis-lux");
+            // Class restoration also preserves classes added by another component while active.
+            var tree=firstControl(partRoot(page.findView("org.eclipse.ui.navigator.ProjectExplorer")),Tree.class);
+            String marked=(String)tree.getData("org.eclipse.e4.ui.css.CssClassName");
+            tree.setData("style",tree.getData("style")+";font-style:normal;");
+            tree.setData("org.eclipse.e4.ui.css.CssClassName",marked+" thirdPartyDynamic");
+            tree.setForeground(ownFg); LightUiStyles.refresh(engine); pump(200);
+            check(Objects.toString(tree.getData("org.eclipse.e4.ui.css.CssClassName"),"").contains("thirdPartyDynamic"),"UI refresh preserves dynamically added third-party class");
+            coordinator.apply("darcula",true); pump(500);
+            check(noUiMarks(wb.getActiveWorkbenchWindow().getShell()),"Light markers removed on Dark handoff");
+            check(Objects.toString(tree.getData("style"),"").contains("font-style:normal") && !Objects.toString(tree.getData("style"),"").contains("edt-themes-light:start"),"Dark handoff preserves third-party inline style");
+            tree.setData("style",expected.getProperty("tree.style").equals("<null>")?null:expected.getProperty("tree.style"));
+            check(Objects.toString((String)tree.getData("org.eclipse.e4.ui.css.CssClassName"),"").contains("thirdPartyDynamic"),"Dark handoff preserves third-party CSS class");
+            tree.setData("org.eclipse.e4.ui.css.CssClassName",expected.getProperty("tree.css").equals("<null>")?null:expected.getProperty("tree.css"));
+            coordinator.apply("noctis-lux",true); pump(400);
+            var newWindow=wb.openWorkbenchWindow("ru.litonchik.edt.themes.probe.gallery",null); pump(700);
+            panelRgb(newWindow.getActivePage(),"noctis-lux");
+            newWindow.close(); page.activate(bslEditor); pump(300);
+            var dialog=fontDialog(); dialog.setBlockOnOpen(false); dialog.open(); pump(300);
+            uiRgb((Control)findData(dialog.getShell(),"palette.roles"),rgb(PaletteCatalog.load("noctis-lux"),"editor.background"),rgb(PaletteCatalog.load("noctis-lux"),"text"),"own preferences palette table");
+            dialog.close();
+        } finally { page.closeEditor(protectedEditor,false); page.hideView(fixture); ownBg.dispose(); ownFg.dispose(); }
+        if(!restart) {
+            try(var writer=Files.newBufferedWriter(saved)) { expected.store(writer,"Actual widget and preference baseline before Light UI palette"); }
+            check("noctis-lux".equals(coordinator.activeProfile()),"UI palette left for restart");
+            return;
+        }
+        check(coordinator.restore(true).successful(),"UI restore succeeds"); pump(500);
+        var tree=firstControl(partRoot(page.findView("org.eclipse.ui.navigator.ProjectExplorer")),Tree.class);
+        check(expected.getProperty("tree.bg").equals(tree.getBackground().getRGB().toString()),"UI restore actual native Tree background");
+        check(expected.getProperty("tree.fg").equals(tree.getForeground().getRGB().toString()),"UI restore actual native Tree foreground");
+        check(expected.getProperty("tree.css").equals(Objects.toString((String)tree.getData("org.eclipse.e4.ui.css.CssClassName"),"<null>")),"UI restore original CSS class including absence");
+        check(noUiMarks(wb.getActiveWorkbenchWindow().getShell()),"UI restore removes all workbench markers");
+        check(expected.getProperty("tree.style").equals(Objects.toString(tree.getData("style"),"<null>")),"UI restore exact original inline style including absence");
+        for(String key:expected.stringPropertyNames()) if(key.startsWith("pref|")) {
+            String[] parts=key.split("\\|",4); String value=expected.getProperty(key);
+            check((value.equals("<absent>")?OriginalValue.absent():OriginalValue.of(value)).equals(adapter.read(new SettingKey(parts[1],parts[2],parts[3]))),"UI exact restore "+key);
+        }
+        check(expected.getProperty("font").equals(InstanceScope.INSTANCE.getNode("org.eclipse.ui.workbench").get(JFaceResources.TEXT_FONT,"<absent>")),"UI leaves code font unchanged");
+        coordinator.apply("noctis-lux",true); pump(300); engine.setTheme(ThemeMode.DARK.cssId(),true); pump(600);
+        check(coordinator.activeProfile()==null && noUiMarks(wb.getActiveWorkbenchWindow().getShell()),"external native Dark releases profile and UI markers");
+        check(coordinator.restore(true).successful(),"UI external native switch cleanup");
+    }
+
+    private void runUiGallery() throws Exception {
+        var wb=PlatformUI.getWorkbench(); var coordinator=ThemeStartup.coordinator();
+        check("noctis-lux".equals(coordinator.activeProfile()),"UI gallery starts after persisted native Light restart");
+        check(!new CodeFontSettings().hasOriginal(),"UI gallery uses original font");
+        var window=wb.getActiveWorkbenchWindow(); var page=wb.showPerspective("ru.litonchik.edt.themes.probe.gallery",window); page.resetPerspective();
+        var shell=window.getShell(); shell.setSize(900,640); shell.layout(true,true);
+        var editor=tryOpenBsl(); editor.setTopIndex(0); editor.setSelection(0); pump(900);
+        for(var profile:PaletteCatalog.profiles(ThemeMode.LIGHT)) {
+            String id=profile.id(); var p=PaletteCatalog.load(id);
+            check(coordinator.paletteDrafts().overrides(id).isEmpty(),id+" gallery standard colors");
+            coordinator.apply(id,true); pump(900); panelRgb(page,id);
+            for(String[] token:new String[][]{{"Функция","keyword"},{"123.45","number"},{"Строка с кириллицей","string"},{"Комментарий","comment"}})
+                check(rgb(p,token[1]).equals(glyph(editor,token[0])),id+" gallery actual BSL "+token[1]);
+            checkRuler(page.getActiveEditor(),rgb(p,"editor.background"),id+" gallery");
+            captureSurfaceShell(shell,"gallery-"+id);
+        }
+        check(coordinator.restore(true).successful(),"UI gallery restores appearance");
+    }
+
+    private List<Control> rulerControls(IEditorPart editor) {
+        var info=editor.getAdapter(org.eclipse.jface.text.source.IVerticalRulerInfo.class);
+        if(!(info instanceof org.eclipse.jface.text.source.CompositeRuler ruler)) throw new AssertionError("No composite ruler for "+editor.getClass());
+        var controls=new ArrayList<Control>(); controls.add(ruler.getControl());
+        for(var it=ruler.getDecoratorIterator();it.hasNext();) controls.add(it.next().getControl());
+        return controls;
+    }
+    private RGB rulerPixel(Control control) {
+        var size=control.getSize(); if(size.x<1 || size.y<1 || !control.isVisible()) return null;
+        var image=new Image(control.getDisplay(),size.x,size.y); var gc=new GC(control);
+        try { gc.copyArea(image,0,0); var data=image.getImageData(); return data.palette.getRGB(data.getPixel(size.x/2,size.y-3)); }
+        finally { gc.dispose(); image.dispose(); }
+    }
+    private void checkRuler(IEditorPart editor,RGB expected,String label) {
+        var controls=rulerControls(editor); check(controls.size()>=3,label+" native ruler columns available");
+        for(int i=0;i<controls.size();i++) {
+            var control=controls.get(i);
+            check(expected.equals(control.getBackground().getRGB()),label+" ruler control "+i+" background expected="+expected+" got="+control.getBackground().getRGB());
+            var pixel=rulerPixel(control);
+            if(pixel!=null) check(expected.equals(pixel),label+" ruler control "+i+" actual background pixel="+pixel);
+        }
+    }
+    private void runRulerChecks() throws Exception {
+        var wb=PlatformUI.getWorkbench(); var page=wb.getActiveWorkbenchWindow().getActivePage();
+        var coordinator=ThemeStartup.coordinator(); var engine=wb.getService(IThemeEngine.class);
+        var adapter=new EdtSettingsAdapter(engine,wb.getThemeManager());
+        var saved=java.nio.file.Path.of(System.getProperty("edt.probe.images"),"ruler-originals.properties");
+        var expected=new Properties(); boolean restart="candidaterulersrestart".equals(System.getProperty("edt.probe.phase"));
+        if(restart) {
+            try(var reader=Files.newBufferedReader(saved)) { expected.load(reader); }
+            check("noctis-lux".equals(coordinator.activeProfile()),"ruler profile survives JVM restart");
+        } else {
+            if(coordinator.hasSnapshot()) check(coordinator.restore(true).successful(),"ruler initial restore");
+            engine.setTheme(ThemeMode.LIGHT.cssId(),true); pump(500);
+        }
+        var text=tryOpenBsl(); check(text!=null,"ruler BSL fixture");
+        var editor=page.getActiveEditor(); page.activate(editor); pump(500);
+        var font=Arrays.toString(text.getFont().getFontData());
+        var document=((org.eclipse.xtext.ui.editor.XtextEditor)editor).getDocument();
+        String source=document.get(); long stamp=((org.eclipse.jface.text.IDocumentExtension4)document).getModificationStamp();
+        if(restart) checkRuler(editor,rgb(PaletteCatalog.load("noctis-lux"),"editor.background"),"restart");
+        else {
+            var controls=rulerControls(editor);
+            for(int i=0;i<controls.size();i++) {
+                expected.setProperty("bg."+i,controls.get(i).getBackground().getRGB().toString());
+                var pixel=rulerPixel(controls.get(i)); if(pixel!=null) expected.setProperty("pixel."+i,pixel.toString());
+            }
+            var baseline=new LinkedHashMap<SettingKey,OriginalValue>();
+            for(var key:adapter.plan(PaletteCatalog.load("github-light-default"),true).keySet()) baseline.put(key,adapter.read(key));
+            for(var key:adapter.plan(PaletteCatalog.load("darcula"),true).keySet()) baseline.putIfAbsent(key,adapter.read(key));
+            for(var key:NativeSettingsCatalog.load().keySet()) baseline.putIfAbsent(key,adapter.read(key));
+            for(var e:baseline.entrySet()) expected.setProperty("pref|"+e.getKey().scope()+"|"+e.getKey().node()+"|"+e.getKey().key(),e.getValue().present()?e.getValue().value():"<absent>");
+        }
+        var originalControls=rulerControls(editor);
+        for(String id:PaletteCatalog.ids()) {
+            coordinator.apply(id,true); pump(500);
+            checkRuler(editor,rgb(PaletteCatalog.load(id),"editor.background"),id);
+            check(originalControls.equals(rulerControls(editor)),id+" same native columns and controls");
+            check(source.equals(document.get()) && stamp==((org.eclipse.jface.text.IDocumentExtension4)document).getModificationStamp(),id+" source and stamp unchanged");
+            check(font.equals(Arrays.toString(text.getFont().getFontData())),id+" code font unchanged");
+        }
+        var drafts=coordinator.paletteDrafts(); drafts.edit("noctis-lux","editor.background","#F0E8D8"); coordinator.apply("noctis-lux",true,drafts); pump(400);
+        checkRuler(editor,new RGB(240,232,216),"personal editor background");
+        drafts=coordinator.paletteDrafts(); drafts.resetRole("noctis-lux","editor.background"); coordinator.apply("noctis-lux",true,drafts); pump(400);
+        checkRuler(editor,rgb(PaletteCatalog.load("noctis-lux"),"editor.background"),"reset background role");
+        page.closeEditor(editor,false); text=tryOpenBsl(); editor=page.getActiveEditor(); pump(500);
+        checkRuler(editor,rgb(PaletteCatalog.load("noctis-lux"),"editor.background"),"new BSL editor after palette apply");
+        if(!restart) {
+            try(var writer=Files.newBufferedWriter(saved)) { expected.store(writer,"Ruler original controls, pixels and exact explicit preferences"); }
+            captureSurfaceShell(wb.getActiveWorkbenchWindow().getShell(),"ruler-noctis-lux"); return;
+        }
+        check(coordinator.restore(true).successful(),"ruler restore succeeds"); pump(500);
+        var controls=rulerControls(editor);
+        for(int i=0;i<controls.size();i++) {
+            check(expected.getProperty("bg."+i).equals(controls.get(i).getBackground().getRGB().toString()),"ruler restore exact control BG "+i+" actual="+controls.get(i).getBackground().getRGB());
+            if(expected.containsKey("pixel."+i)) check(expected.getProperty("pixel."+i).equals(Objects.toString(rulerPixel(controls.get(i)))),"ruler restore original pixel "+i);
+        }
+        for(String key:expected.stringPropertyNames()) if(key.startsWith("pref|")) {
+            String[] parts=key.split("\\|",4); String value=expected.getProperty(key);
+            check((value.equals("<absent>")?OriginalValue.absent():OriginalValue.of(value)).equals(adapter.read(new SettingKey(parts[1],parts[2],parts[3]))),"ruler exact restore "+key);
+        }
+        check(!coordinator.hasSnapshot() && coordinator.activeProfile()==null,"ruler restore releases profile and journal");
+    }
+
+    private String candidateId() { return System.getProperty("edt.probe.profile","winter-is-coming-light"); }
+    private void checkCandidateRegistry(String id) {
+        var p=PaletteCatalog.load(id);
+        var registry=PlatformUI.getWorkbench().getThemeManager().getCurrentTheme().getColorRegistry();
+        for(var entry:SettingCatalog.load().entries()) if(entry.kind().equals("color"))
+            check(rgb(p,entry.role()).equals(registry.getRGB(entry.key())),id+" registry "+entry.key());
+    }
+    private void runCandidateChecks() throws Exception {
+        String id=candidateId(); var palette=PaletteCatalog.load(id);
+        var workbench=PlatformUI.getWorkbench(); var engine=workbench.getService(IThemeEngine.class);
+        var coordinator=ThemeStartup.coordinator(); var prefs=InstanceScope.INSTANCE.getNode("ru.litonchik.edt.themes");
+        var adapter=new EdtSettingsAdapter(engine,workbench.getThemeManager());
+        var file=java.nio.file.Path.of(System.getProperty("edt.probe.images"),"candidate-originals.properties");
+        var expected=new Properties();
+        var fontNode=InstanceScope.INSTANCE.getNode("org.eclipse.ui.workbench");
+        if("candidaterestart".equals(System.getProperty("edt.probe.phase"))) {
+            try(var reader=Files.newBufferedReader(file)) { expected.load(reader); }
+            check(id.equals(coordinator.activeProfile()),"candidate active profile survives restart");
+            check(ThemeMode.LIGHT.cssId().equals(engine.getActiveTheme().getId()),"candidate native Light survives restart");
+            check("#123456".equals(prefs.get("palette."+id+".keyword",null)),"candidate personal keyword survives restart");
+            checkCandidateRegistry(id);
+            var editor=tryOpenBsl(); check(editor!=null,"candidate restart BSL editor"); pump(1000);
+            check(rgb(palette,"editor.background").equals(editor.getBackground().getRGB()),"candidate restart BSL background");
+            check(rgb(palette,"text").equals(editor.getForeground().getRGB()),"candidate restart BSL foreground");
+            panelRgb(workbench.getActiveWorkbenchWindow().getActivePage(),id);
+            checkRuler(workbench.getActiveWorkbenchWindow().getActivePage().getActiveEditor(),rgb(palette,"editor.background"),id+" candidate restart");
+            check(new RGB(18,52,86).equals(glyph(editor,"Функция")),"candidate personal keyword paints after restart");
+            var drafts=coordinator.paletteDrafts(); drafts.resetRole(id,"keyword"); coordinator.apply(id,true,drafts); pump(1000);
+            check(rgb(palette,"keyword").equals(glyph(editor,"Функция")),"candidate role reset restores style glyph");
+            check(prefs.get("palette."+id+".keyword",null)==null,"candidate reset removes personal key");
+            var dialog=fontDialog(); dialog.setBlockOnOpen(false); dialog.open(); pump(300);
+            check(findButton(dialog.getShell(),"Светлые").getSelection(),"candidate restart selects light group");
+            check(PaletteCatalog.profiles(ThemeMode.LIGHT).stream().map(PaletteCatalog.Profile::id).toList().indexOf(id)+1==findCombo(dialog.getShell()).getSelectionIndex(),"candidate restart selects its own profile");
+            captureSurfaceShell(dialog.getShell(),id+"-settings"); dialog.close();
+            var manualBackground=new SettingKey("instance","org.eclipse.ui.editors","AbstractTextEditor.Color.Background");
+            InstanceScope.INSTANCE.getNode(manualBackground.node()).put(manualBackground.key(),"250,249,240");
+            InstanceScope.INSTANCE.getNode(manualBackground.node()).flush(); pump(200);
+            coordinator.apply(id,true); pump(800);
+            check(OriginalValue.of("250,249,240").equals(adapter.read(manualBackground)),"candidate preserves later explicit background preference");
+            check(new RGB(250,249,240).equals(editor.getBackground().getRGB()),"candidate preserves later explicit background glyph surface after CSS");
+            check(coordinator.restore(true).successful(),"candidate restores original appearance");
+            for(String key:expected.stringPropertyNames()) if(key.startsWith("setting|")) {
+                String[] part=key.split("\\|",4); String value=expected.getProperty(key);
+                check((value.equals("<absent>")?OriginalValue.absent():OriginalValue.of(value)).equals(adapter.read(new SettingKey(part[1],part[2],part[3]))),"candidate exact restore "+key);
+            }
+            for(String previous:PaletteCatalog.ids()) if(!previous.equals(id))
+                check("#123456".equals(prefs.get("palette."+previous+".comment",null)),"candidate restore preserves personal "+previous);
+            check(expected.getProperty("font").equals(fontNode.get(JFaceResources.TEXT_FONT,"<absent>")),"candidate restores appearance without changing font");
+            return;
+        }
+        if(coordinator.hasSnapshot()) check(coordinator.restore(true).successful(),"candidate initial cleanup");
+        engine.setTheme(ThemeMode.DARK.cssId(),true); pump(800);
+        var baseline=new LinkedHashMap<SettingKey,OriginalValue>();
+        for(String profile:List.of("noctis-minimus",id)) for(var key:adapter.plan(PaletteCatalog.load(profile),true).keySet()) baseline.putIfAbsent(key,adapter.read(key));
+        for(var key:NativeSettingsCatalog.load().keySet()) baseline.putIfAbsent(key,adapter.read(key));
+        for(var entry:baseline.entrySet()) expected.setProperty("setting|"+entry.getKey().scope()+"|"+entry.getKey().node()+"|"+entry.getKey().key(),entry.getValue().present()?entry.getValue().value():"<absent>");
+        expected.setProperty("font",fontNode.get(JFaceResources.TEXT_FONT,"<absent>"));
+        for(String previous:PaletteCatalog.ids()) if(!previous.equals(id)) prefs.put("palette."+previous+".comment","#123456"); prefs.flush();
+        var dialog=fontDialog(); dialog.setBlockOnOpen(false); dialog.open(); selectMode(dialog,ThemeMode.LIGHT);
+        int index=PaletteCatalog.profiles(ThemeMode.LIGHT).stream().map(PaletteCatalog.Profile::id).toList().indexOf(id)+1;
+        selectProfile(dialog,index);
+        check(profileCount(dialog)==PaletteCatalog.profiles(ThemeMode.LIGHT).size()+1,"candidate appears beside existing light profiles");
+        check(PaletteCatalog.profiles().stream().filter(p -> p.id().equals(id)).findFirst().orElseThrow().label().equals(findCombo(dialog.getShell()).getText()),"candidate label visible in light group");
+        check(rgb(palette,"editor.background").equals(findCodePreview(dialog.getShell()).getBackground().getRGB()),"candidate preview background before apply");
+        check(ThemeMode.DARK.cssId().equals(engine.getActiveTheme().getId()),"candidate selection stays local before Apply");
+        editRole(dialog,"comment","#234567"); dialog.close();
+        check(prefs.get("palette."+id+".comment",null)==null,"candidate Cancel discards pending color");
+        dialog=fontDialog(); dialog.setBlockOnOpen(false); dialog.open(); selectMode(dialog,ThemeMode.LIGHT); selectProfile(dialog,index);
+        findApply(dialog.getShell()).notifyListeners(SWT.Selection,new Event()); pump(1100); dialog.close();
+        check(id.equals(coordinator.activeProfile()),"candidate Apply selects profile");
+        check(ThemeMode.LIGHT.cssId().equals(engine.getActiveTheme().getId()),"candidate applies native Light"); checkCandidateRegistry(id);
+        var editor=tryOpenBsl(); check(editor!=null,"candidate BSL editor"); pump(1000);
+        check(rgb(palette,"editor.background").equals(editor.getBackground().getRGB()),"candidate BSL background");
+        check(rgb(palette,"text").equals(editor.getForeground().getRGB()),"candidate BSL foreground");
+        panelRgb(workbench.getActiveWorkbenchWindow().getActivePage(),id);
+        checkRuler(workbench.getActiveWorkbenchWindow().getActivePage().getActiveEditor(),rgb(palette,"editor.background"),id+" candidate");
+        for(String[] token:new String[][]{{"Функция","keyword"},{"123.45","number"},{"Строка с кириллицей","string"},{"Комментарий","comment"}})
+            check(rgb(palette,token[1]).equals(glyph(editor,token[0])),"candidate BSL "+token[1]+" glyph");
+        check(rgb(palette,"selection.text").equals(editor.getSelectionForeground().getRGB()),"candidate readable selection foreground");
+        var active=(org.eclipse.xtext.ui.editor.XtextEditor)workbench.getActiveWorkbenchWindow().getActivePage().getActiveEditor();
+        String source=active.getDocument().get(); long stamp=((org.eclipse.jface.text.IDocumentExtension4)active.getDocument()).getModificationStamp();
+        for(String profile:List.of("noctis-minimus","github-light-default","winter-is-coming-light","night-owl-light","ayu-light","noctis-lux","visual-studio-light-cpp","noctis-hibernus",id)) {
+            coordinator.apply(profile,true); pump(600);
+            check(PaletteCatalog.mode(profile).cssId().equals(engine.getActiveTheme().getId()),"candidate transition native mode "+profile);
+            check(source.equals(active.getDocument().get()) && stamp==((org.eclipse.jface.text.IDocumentExtension4)active.getDocument()).getModificationStamp(),"candidate transition keeps source/stamp "+profile);
+        }
+        dialog=fontDialog(); dialog.setBlockOnOpen(false); dialog.open(); editRole(dialog,"keyword","#123456");
+        findApply(dialog.getShell()).notifyListeners(SWT.Selection,new Event()); pump(800); dialog.close();
+        check("#123456".equals(prefs.get("palette."+id+".keyword",null)),"candidate saves personal keyword");
+        check(new RGB(18,52,86).equals(glyph(editor,"Функция")),"candidate personal keyword paints without editing");
+        for(String previous:PaletteCatalog.ids()) if(!previous.equals(id))
+            check("#123456".equals(prefs.get("palette."+previous+".comment",null)),"candidate preserves personal "+previous);
+        check(expected.getProperty("font").equals(fontNode.get(JFaceResources.TEXT_FONT,"<absent>")),"candidate apply leaves shared font unchanged");
+        try(var writer=Files.newBufferedWriter(file)) { expected.store(writer,"Candidate original explicit preferences"); }
+    }
+
+    private void runLightChecks() throws Exception {
+        var workbench=PlatformUI.getWorkbench(); var engine=workbench.getService(IThemeEngine.class);
+        var coordinator=ThemeStartup.coordinator(); var prefs=InstanceScope.INSTANCE.getNode("ru.litonchik.edt.themes");
+        var adapter=new EdtSettingsAdapter(engine,workbench.getThemeManager());
+        var expectedFile=java.nio.file.Path.of(System.getProperty("edt.probe.images"),"light-originals.properties");
+        var expected=new Properties();
+        if("lightrestart".equals(System.getProperty("edt.probe.phase"))) {
+            try(var reader=Files.newBufferedReader(expectedFile)) { expected.load(reader); }
+            check("github-light-default".equals(coordinator.activeProfile()),"light active profile survives JVM restart");
+            check(ThemeMode.LIGHT.cssId().equals(engine.getActiveTheme().getId()),"native Light survives JVM restart");
+            checkLightRegistry();
+            var dialog=fontDialog(); dialog.setBlockOnOpen(false); dialog.open(); pump(300);
+            check(findButton(dialog.getShell(),"Светлые").getSelection(),"restart opens light group");
+            check(findCombo(dialog.getShell()).getSelectionIndex()==1,"restart selects GitHub Light");
+            captureSurfaceShell(dialog.getShell(),"github-light-settings"); dialog.close();
+            StyledText text=tryOpenBsl(); pump(1500);
+            check(new RGB(255,255,255).equals(text.getBackground().getRGB()),"light BSL background survives restart");
+            var fontNode=InstanceScope.INSTANCE.getNode("org.eclipse.ui.workbench");
+            check(expected.getProperty("font.applied").equals(fontNode.get(JFaceResources.TEXT_FONT,null)),"shared font survives light restart");
+            captureSurfaceShell(workbench.getActiveWorkbenchWindow().getShell(),"github-light-workbench");
+            check(coordinator.restore(true).successful(),"light restore after restart");
+            for(String key:expected.stringPropertyNames()) if(key.startsWith("setting|")) {
+                String[] fields=key.substring(8).split("\\|",3); var setting=new SettingKey(fields[0],fields[1],fields[2]);
+                String encoded=expected.getProperty(key); var original=encoded.equals("<absent>")?OriginalValue.absent():OriginalValue.of(encoded);
+                check(original.equals(adapter.read(setting)),"light exact restore "+setting);
+            }
+            new CodeFontSettings().restore();
+            check(Objects.equals(expected.getProperty("font.original").equals("<absent>")?null:expected.getProperty("font.original"),fontNode.get(JFaceResources.TEXT_FONT,null)),"light restores original shared font separately");
+            for(var profile:PaletteCatalog.profiles(ThemeMode.DARK)) check("#123456".equals(prefs.get("palette."+profile.id()+".comment",null)),"light restore preserves old personal "+profile.id());
+            return;
+        }
+        if(coordinator.hasSnapshot()) check(coordinator.restore(true).successful(),"light starts with clean journal");
+        engine.setTheme(ThemeMode.DARK.cssId(),true); pump(900);
+        var baseline=new LinkedHashMap<SettingKey,OriginalValue>();
+        for(String id:List.of("github-dark-default","github-light-default"))
+            for(var key:adapter.plan(PaletteCatalog.load(id),true).keySet()) baseline.putIfAbsent(key,adapter.read(key));
+        for(var key:NativeSettingsCatalog.load().keySet()) baseline.putIfAbsent(key,adapter.read(key));
+        for(var entry:baseline.entrySet()) expected.setProperty("setting|"+entry.getKey().scope()+"|"+entry.getKey().node()+"|"+entry.getKey().key(),entry.getValue().present()?entry.getValue().value():"<absent>");
+        var fontNode=InstanceScope.INSTANCE.getNode("org.eclipse.ui.workbench");
+        expected.setProperty("font.original",fontNode.get(JFaceResources.TEXT_FONT,"<absent>"));
+        for(var profile:PaletteCatalog.profiles(ThemeMode.DARK)) prefs.put("palette."+profile.id()+".comment","#123456"); prefs.flush();
+        coordinator.apply("github-dark-default",true); pump(900);
+        var dialog=fontDialog(); dialog.setBlockOnOpen(false); dialog.open(); pump(250);
+        check(findButton(dialog.getShell(),"Тёмные").getSelection(),"active dark profile opens dark group");
+        check(profileCount(dialog)==12,"dark filter shows native plus eleven dark themes");
+        selectMode(dialog,ThemeMode.LIGHT);
+        check(profileCount(dialog)==PaletteCatalog.profiles(ThemeMode.LIGHT).size()+1,"light filter shows native plus all light profiles");
+        check("GitHub Light Default".equals(findCombo(dialog.getShell()).getText()),"light first selection is pending GitHub Light");
+        check(new RGB(255,255,255).equals(findCodePreview(dialog.getShell()).getBackground().getRGB()),"light preview renders before apply");
+        check(ThemeMode.DARK.cssId().equals(engine.getActiveTheme().getId()),"radio switch does not apply native theme");
+        editRole(dialog,"comment","#234567");
+        selectMode(dialog,ThemeMode.DARK); selectMode(dialog,ThemeMode.LIGHT);
+        check("#234567".equals(((Text)findData(dialog.getShell(),"palette.hex")).getText()),"switching groups preserves hidden color draft");
+        dialog.close();
+        check(prefs.get("palette.github-light-default.comment",null)==null,"Cancel discards pending light colors");
+        check("github-dark-default".equals(coordinator.activeProfile()),"Cancel preserves applied dark profile");
+        dialog=fontDialog(); dialog.setBlockOnOpen(false); dialog.open(); selectMode(dialog,ThemeMode.LIGHT);
+        editRole(dialog,"comment","#broken"); selectMode(dialog,ThemeMode.DARK);
+        check(!findApply(dialog.getShell()).getEnabled(),"invalid hidden light HEX blocks Apply in dark group");
+        selectMode(dialog,ThemeMode.LIGHT); editRole(dialog,"comment","#656D76");
+        var originalFont=JFaceResources.getFontRegistry().getFontData(JFaceResources.TEXT_FONT)[0];
+        selectFont(findFontGroup(dialog.getShell()),originalFont.getName(),originalFont.getHeight()+1);
+        findApply(dialog.getShell()).notifyListeners(SWT.Selection,new Event()); pump(1200);
+        check("github-light-default".equals(coordinator.activeProfile()),"Apply activates GitHub Light");
+        check(ThemeMode.LIGHT.cssId().equals(engine.getActiveTheme().getId()),"Apply selects native Light");
+        checkLightRegistry();
+        check(OriginalValue.of("240,240,240").equals(adapter.read(new SettingKey("instance","com._1c.g5.v8.dt.theming.ui","com._1c.g5.v8.dt.theming.ui.BROWSERS_SCROLL_TRACK_COLOR"))),"native Dark scrollbar seed switches to Light");
+        expected.setProperty("font.applied",fontNode.get(JFaceResources.TEXT_FONT,"<absent>"));
+        captureSurfaceShell(dialog.getShell(),"github-light-settings-applied"); dialog.close();
+        StyledText text=tryOpenBsl(); pump(1800);
+        var editor=(org.eclipse.xtext.ui.editor.XtextEditor)workbench.getActiveWorkbenchWindow().getActivePage().getActiveEditor();
+        String source=editor.getDocument().get(); long stamp=((org.eclipse.jface.text.IDocumentExtension4)editor.getDocument()).getModificationStamp();
+        for(String id:List.of("github-dark-default","github-light-default","darcula","github-light-default")) {
+            coordinator.apply(id,true); pump(1300);
+            check(PaletteCatalog.mode(id).cssId().equals(engine.getActiveTheme().getId()),id+" exact native base during mode transition");
+            check(rgb(PaletteCatalog.load(id),"accent").equals(glyph(text,"Сообщить")),id+" semantic call refresh without editing");
+            check(source.equals(editor.getDocument().get()) && stamp==((org.eclipse.jface.text.IDocumentExtension4)editor.getDocument()).getModificationStamp(),id+" switching modes preserves document stamp");
+            check(expected.getProperty("font.applied").equals(fontNode.get(JFaceResources.TEXT_FONT,null)),id+" preserves common font");
+        }
+        check(new RGB(31,35,40).equals(text.getSelectionForeground().getRGB()),"light selection uses readable foreground");
+        text.setSelection(0,Math.min(30,text.getCharCount())); captureControl(text,"github-light-selection"); text.setSelection(0);
+        coordinator.apply("github-light-default",false);
+        for(var entry:baseline.entrySet()) if(entry.getKey().node().equals("com._1c.g5.v8.dt.bsl.ui"))
+            check(entry.getValue().equals(adapter.read(entry.getKey())),"light BSL off restores original "+entry.getKey().key());
+        coordinator.apply("github-light-default",true); pump(600);
+        engine.setTheme(ThemeMode.DARK.cssId(),true); pump(1600);
+        check(coordinator.activeProfile()==null && ThemeMode.DARK.cssId().equals(engine.getActiveTheme().getId()),"external native Dark releases light profile without switching back");
+        check(coordinator.restore(true).successful(),"clear native-switch conflicts before restart scenario");
+        coordinator.apply("github-light-default",true);
+        for(var profile:PaletteCatalog.profiles(ThemeMode.DARK)) check("#123456".equals(prefs.get("palette."+profile.id()+".comment",null)),"old personal palette preserved "+profile.id());
+        try(var writer=Files.newBufferedWriter(expectedFile)) { expected.store(writer,"Original explicit values before Light/Dark transitions"); }
+    }
+
     private void runSurfaceChecks() throws Exception {
+        String lightProfile=System.getProperty("edt.probe.phase").startsWith("candidate") ? candidateId() : "github-light-default";
         var workbench=PlatformUI.getWorkbench();
-        var page=workbench.getActiveWorkbenchWindow().getActivePage();
-        try(var coordinator=new ThemeCoordinator()) {
+        var page=workbench.showPerspective("ru.litonchik.edt.themes.probe.gallery",workbench.getActiveWorkbenchWindow());
+        page.resetPerspective(); page.setEditorAreaVisible(true);
+        var workbenchShell=workbench.getActiveWorkbenchWindow().getShell();
+        workbenchShell.setMinimized(false); workbenchShell.setMaximized(false); workbenchShell.setSize(900,640);
+        var monitorArea=workbenchShell.getMonitor().getClientArea(); workbenchShell.setLocation(monitorArea.x,monitorArea.y);
+        workbenchShell.forceActive(); workbenchShell.layout(true,true); pump(500);
+        try(var coordinator=ThemeStartup.coordinator()) {
             coordinator.start();
             if(coordinator.hasSnapshot()) check(coordinator.restore(true).successful(),"surfaces initial cleanup");
             var dialog=fontDialog(); dialog.setBlockOnOpen(false); dialog.open(); pump(250);
@@ -305,8 +1117,15 @@ public class WorkbenchProbe implements IApplication {
             var adapter=new EdtSettingsAdapter(workbench.getService(IThemeEngine.class),workbench.getThemeManager());
             var baseline=new LinkedHashMap<SettingKey,OriginalValue>();
             for(var key:adapter.plan(PaletteCatalog.load("darcula"),true).keySet()) baseline.put(key,adapter.read(key));
+            for(var key:adapter.plan(PaletteCatalog.load("github-light-default"),true).keySet()) baseline.putIfAbsent(key,adapter.read(key));
             for(var key:NativeSettingsCatalog.load().keySet()) baseline.putIfAbsent(key,adapter.read(key));
-            coordinator.apply("visual-studio-dark-cpp",true); pump(1800);
+            if ("candidateallsurfaces".equals(System.getProperty("edt.probe.phase"))) {
+                var standard=coordinator.paletteDrafts();
+                for(String id:PaletteCatalog.ids()) standard.resetPalette(id);
+                coordinator.apply("visual-studio-dark-cpp",true,standard);
+                for(String id:PaletteCatalog.ids()) check(coordinator.paletteDrafts().overrides(id).isEmpty(),"standard surface baseline clears test personal variant "+id);
+            } else coordinator.apply("visual-studio-dark-cpp",true);
+            pump(1800);
             var bsl=tryOpenBsl(); check(bsl!=null,"surfaces BSL fixture");
             var project=ResourcesPlugin.getWorkspace().getRoot().getProject("ThemeProbe");
             // Native EDT emits NUMBER, while its QL mapper recognizes RULE_INT.
@@ -318,7 +1137,9 @@ public class WorkbenchProbe implements IApplication {
                 byte[] source=query.getBytes(java.nio.charset.StandardCharsets.UTF_8);
                 if(file.exists()) file.setContents(new ByteArrayInputStream(source),true,false,null); else file.create(new ByteArrayInputStream(source),true,null);
                 file.setCharset("UTF-8",null);
-                var editor=IDE.openEditor(page,file,entry[1],true); pump(1400);
+                var editor=IDE.openEditor(page,file,entry[1],true);
+                page.setEditorAreaVisible(true); page.activate(editor); page.bringToTop(editor);
+                page.setPartState(page.getReference(editor),IWorkbenchPage.STATE_MAXIMIZED); pump(1400);
                 var target=editor.getAdapter(org.eclipse.jface.text.ITextOperationTarget.class);
                 check(target instanceof org.eclipse.jface.text.ITextViewer,entry[0]+" native text viewer");
                 var text=((org.eclipse.jface.text.ITextViewer)target).getTextWidget();
@@ -362,15 +1183,38 @@ public class WorkbenchProbe implements IApplication {
                 for(int i=0;i<texts.size();i++) observeText("constructor-"+i,texts.get(i),"ВЫБРАТЬ");
                 captureSurfaceShell(shell,"surface-query-constructor");
                 queryTexts.addAll(texts);
+                var queryOriginals = new java.util.IdentityHashMap<StyledText,String>();
+                for(var queryText:queryTexts) queryOriginals.put(queryText,queryText.getText());
                 for(String id:PaletteCatalog.ids()) {
+                    if ("candidatesurfaces".equals(System.getProperty("edt.probe.phase")) && !id.equals(candidateId())) continue;
+                    if ("lightsurfaces".equals(System.getProperty("edt.probe.phase")) && PaletteCatalog.mode(id) != ThemeMode.LIGHT) continue;
+                    if ("candidatesurfaces".equals(System.getProperty("edt.probe.phase"))) {
+                        for(var entry:new SnapshotPreferences().load().lastApplied().entrySet()) if(!entry.getValue().equals(adapter.read(entry.getKey())))
+                            report.append("OBS changed before candidate apply ").append(entry.getKey()).append(" expected=").append(entry.getValue()).append(" actual=").append(adapter.read(entry.getKey())).append('\n');
+                    }
                     coordinator.apply(id,true); pump(900);
+                    if ("candidatesurfaces".equals(System.getProperty("edt.probe.phase"))) {
+                        report.append("OBS candidate state ").append(coordinator.activeProfile()).append(" native=").append(workbench.getService(IThemeEngine.class).getActiveTheme().getId()).append('\n');
+                        for(var key:new SnapshotPreferences().load().surrendered()) report.append("OBS candidate surrendered ").append(key).append(" actual=").append(adapter.read(key)).append('\n');
+                    }
                     var palette=PaletteCatalog.load(id);
+                    long settled=System.nanoTime()+5_000_000_000L;
+                    while(System.nanoTime()<settled && queryTexts.stream().anyMatch(t -> !rgb(palette,"editor.background").equals(t.getBackground().getRGB()) || !rgb(palette,"text").equals(t.getForeground().getRGB()) || !rgb(palette,"selection.background").equals(t.getSelectionBackground().getRGB()) || !rgb(palette,"selection.text").equals(t.getSelectionForeground().getRGB()))) pump(100);
+                    for(int i=0;i<queryTexts.size();i++) observeText("candidate settled query "+i,queryTexts.get(i),"ВЫБРАТЬ");
+                    if(id.equals(lightProfile)) captureSurfaceShell(shell,"surface-light-query-constructor");
                     for(int i=0;i<queryTexts.size();i++) {
                         StyledText text=queryTexts.get(i);
                         check(rgb(palette,"editor.background").equals(text.getBackground().getRGB()),id+" query surface "+i+" background");
+                        check(rgb(palette,"text").equals(text.getForeground().getRGB()),id+" query surface "+i+" foreground");
+                        check(rgb(palette,"selection.background").equals(text.getSelectionBackground().getRGB()),id+" query surface "+i+" selection background expected="+rgb(palette,"selection.background")+" actual="+text.getSelectionBackground().getRGB());
+                        check(rgb(palette,"selection.text").equals(text.getSelectionForeground().getRGB()),id+" query surface "+i+" selection foreground expected="+rgb(palette,"selection.text")+" actual="+text.getSelectionForeground().getRGB());
                         check(rgb(palette,"keyword").equals(glyph(text,"ВЫБРАТЬ")),id+" query surface "+i+" keyword");
                         check(rgb(palette,"text").equals(glyph(text,"123")),id+" query surface "+i+" native NUMBER text role expected="+rgb(palette,"text")+" actual="+glyph(text,"123"));
                         check(rgb(palette,"string").equals(glyph(text,"строка")),id+" query surface "+i+" string expected="+rgb(palette,"string")+" actual="+glyph(text,"строка"));
+                        check(rgb(palette,"comment").equals(glyph(text,"Комментарий")),id+" query surface "+i+" comment expected="+rgb(palette,"comment")+" actual="+glyph(text,"Комментарий"));
+                        check(rgb(palette,"directive").equals(glyph(text,"Параметр")),id+" query surface "+i+" parameter expected="+rgb(palette,"directive")+" actual="+glyph(text,"Параметр"));
+                        check(rgb(palette,"text").equals(glyph(text,"Тест")),id+" query surface "+i+" identifier expected="+rgb(palette,"text")+" actual="+glyph(text,"Тест"));
+                        check(queryOriginals.get(text).equals(text.getText()),id+" query surface "+i+" source unchanged");
                     }
                 }
             } finally { shell.dispose(); }
@@ -385,14 +1229,17 @@ public class WorkbenchProbe implements IApplication {
             var input=new com._1c.g5.v8.dt.compare.ui.mergeviewer.ThreeSideTextMergeInput(
                 new MemoryElement("left.bsl",source),new MemoryElement("right.bsl",source.replace("123","456")),
                 new MemoryElement("base.bsl",source.replace("123","100")),new MemoryElement("result.bsl",source),"DefaultBslThreeSideTextMergeViewerCreator");
-            var compare=new org.eclipse.compare.CompareEditorInput(new org.eclipse.compare.CompareConfiguration()) {
+            java.util.function.Supplier<org.eclipse.compare.CompareEditorInput> compareFactory = () -> new org.eclipse.compare.CompareEditorInput(new org.eclipse.compare.CompareConfiguration()) {
                 protected Object prepareInput(IProgressMonitor monitor) { return input; }
                 @Override public Control createContents(Composite parent) {
-                    var viewer=factory.createViewer(parent,getCompareConfiguration(),workbench.getActiveWorkbenchWindow());
+                    getCompareConfiguration().setContainer(getContainer());
+                    var site = getContainer().getWorkbenchPart().getSite();
+                    check(site != null,"merge uses real editor site for native Xtext panes");
+                    var viewer=factory.createViewer(parent,getCompareConfiguration(),site);
                     viewer.setInput(input); return viewer.getControl();
                 }
             };
-            org.eclipse.compare.CompareUI.openCompareEditor(compare); pump(2500);
+            org.eclipse.compare.CompareUI.openCompareEditor(compareFactory.get()); pump(2500);
             List<StyledText> texts=new ArrayList<>(); collectText(workbench.getActiveWorkbenchWindow().getShell(),texts);
             int count=0;
             for(var text:texts) if(text.getText().contains("Сообщить")) {
@@ -405,6 +1252,28 @@ public class WorkbenchProbe implements IApplication {
             check(count>=3,"EDT comparison and merge shows at least three real BSL panes");
             page.setPartState(page.getActivePartReference(),IWorkbenchPage.STATE_MAXIMIZED);
             captureSurfaceShell(workbench.getActiveWorkbenchWindow().getShell(),"surface-edt-merge");
+            var mergeOriginals = new java.util.IdentityHashMap<StyledText,String>();
+            for(var text:texts) if(!text.isDisposed()) mergeOriginals.put(text,text.getText());
+            coordinator.apply(lightProfile,true); pump(1400);
+            for(var text:texts) if(!text.isDisposed() && text.getText().contains("Сообщить")) {
+                observeText("existing merge after mode switch",text,"Процедура");
+                check(mergeOriginals.get(text).equals(text.getText()),"existing merge source unchanged by mode switch");
+            }
+            // EDT caches existing merge panes. Reopening is required for their new palette.
+            page.closeAllEditors(false);
+            org.eclipse.compare.CompareUI.openCompareEditor(compareFactory.get()); pump(2500);
+            texts=new ArrayList<>(); collectText(workbench.getActiveWorkbenchWindow().getShell(),texts);
+            int lightPanes=0;
+            for(var text:texts) if(!text.isDisposed() && text.getText().contains("Сообщить")) {
+                var palette=PaletteCatalog.load(lightProfile);
+                check(rgb(palette,"editor.background").equals(text.getBackground().getRGB()),"Light merge pane "+lightPanes+" background");
+                observeText("Light merge-"+lightPanes,text,"Процедура");
+                check(rgb(palette,"keyword").equals(glyph(text,"Процедура")),"Light merge pane "+lightPanes+" keyword");
+                check(text.getText().contains("Процедура ПроверитьПалитру()"),"reopened Light merge pane "+lightPanes+" shows expected fixture");
+                lightPanes++;
+            }
+            check(lightPanes>=3,"Light merge shows three BSL panes");
+            captureSurfaceShell(workbench.getActiveWorkbenchWindow().getShell(),"surface-light-edt-merge");
             page.closeAllEditors(false);
             check(coordinator.restore(true).successful(),"surfaces restore");
             for(var entry:baseline.entrySet()) check(entry.getValue().equals(adapter.read(entry.getKey())),"surfaces restores exact original "+entry.getKey());
@@ -433,7 +1302,8 @@ public class WorkbenchProbe implements IApplication {
         Point imageSize=null;
         try {
             for(String id:PaletteCatalog.ids()) {
-                if(id.equals("darcula") || id.equals("monokai")) continue;
+
+                if(PaletteCatalog.mode(id) != ThemeMode.DARK || id.equals("darcula") || id.equals("monokai")) continue;
                 page.closeAllEditors(false);
                 coordinator.apply(id,true);
                 var editor=tryOpenBsl(); check(editor!=null,id+" gallery opens real BSL editor");
@@ -479,6 +1349,8 @@ public class WorkbenchProbe implements IApplication {
         var adapter=new EdtSettingsAdapter(PlatformUI.getWorkbench().getService(IThemeEngine.class),PlatformUI.getWorkbench().getThemeManager());
         check(coordinator.restore(true).successful(),"cleanup restores test settings");
         for(var entry:originals.entrySet()) check(entry.getValue().equals(adapter.read(entry.getKey())),"cleanup restored "+entry.getKey());
+        var fonts=new CodeFontSettings(); if(fonts.hasOriginal()) fonts.restore();
+        check(!fonts.hasOriginal(),"cleanup font journal cleared");
         var drafts=coordinator.paletteDrafts();
         for(String id:PaletteCatalog.ids()) drafts.resetPalette(id);
         coordinator.apply(null,true,drafts);
@@ -672,7 +1544,7 @@ public class WorkbenchProbe implements IApplication {
         selectRole(dialog,"keyword"); captureControl((Table)findData(dialog.getShell(),"palette.roles"),selectedId+"-roles");
         captureControl(findData(dialog.getShell(),"palette.preview"),selectedId+"-interface-preview");
         var combo=findCombo(dialog.getShell()); combo.setFocus(); combo.setListVisible(true);
-        var list=findFontTable(combo); check(list.getItemCount()==PaletteCatalog.profiles().size()+1,"native plus all registered palettes in popup");
+        var list=findFontTable(combo); check(list.getItemCount()==PaletteCatalog.profiles(ThemeMode.DARK).size()+1,"native plus all registered palettes in popup");
         check(profileLabel.equals(list.getItem(profileIndex).getText()),"popup includes selected profile label");
         list.setSelection(profileIndex); list.redraw(); list.update(); list.getShell().update();
         long deadline=System.nanoTime()+400_000_000L;
@@ -891,6 +1763,7 @@ public class WorkbenchProbe implements IApplication {
     private void captureControl(Control control,String name) throws Exception {
         for (Composite parent=control.getParent();parent!=null;parent=parent.getParent())
             if (parent instanceof org.eclipse.swt.custom.ScrolledComposite scroll) scroll.showControl(control);
+        control.getShell().layout(true,true); control.getShell().redraw();
         control.getDisplay().update(); long end=System.nanoTime()+350_000_000L;
         while (System.nanoTime()<end) { if (!control.getDisplay().readAndDispatch()) Thread.sleep(15); }
         Point screen=control.toDisplay(0,0); Rectangle visible=new Rectangle(screen.x,screen.y,control.getSize().x,control.getSize().y);
@@ -898,6 +1771,11 @@ public class WorkbenchProbe implements IApplication {
             Point origin=parent.toDisplay(parent.getClientArea().x,parent.getClientArea().y);
             Rectangle bounds=new Rectangle(origin.x,origin.y,parent.getClientArea().width,parent.getClientArea().height);
             visible=visible.intersection(bounds);
+        }
+        if(visible.isEmpty()) {
+            report.append("CAPTURE CONTROL ").append(control).append(" size=").append(control.getSize()).append(" visible=").append(control.isVisible()).append(" screen=").append(screen).append('\n');
+            for(Composite parent=control.getParent();parent!=null;parent=parent.getParent()) report.append("CAPTURE PARENT ").append(parent).append(" bounds=").append(parent.getBounds()).append(" client=").append(parent.getClientArea()).append(" visible=").append(parent.isVisible()).append(" deferred=").append(parent.getLayoutDeferred()).append('\n');
+            captureSurfaceShell(control.getShell(),"invisible-"+name);
         }
         check(!visible.isEmpty(),"safe capture visible control intersection: "+name);
         Image image=new Image(control.getDisplay(),visible.width,visible.height); GC gc=new GC(control);
@@ -924,7 +1802,7 @@ public class WorkbenchProbe implements IApplication {
             ReadableCombo profiles = findCombo(dialog.getShell());
             check(profiles != null && profiles != combo,"profile chooser uses separate readable popup");
             profiles.setFocus(); profiles.setListVisible(true); Table profileList = findFontTable(profiles);
-            check(profileList.getItemCount() == PaletteCatalog.profiles().size()+1,"profile popup contains native and all registered palettes");
+            check(profileList.getItemCount() == PaletteCatalog.profiles(ThemeMode.DARK).size()+1,"profile popup contains native and all registered palettes");
             for (int index=0;index<3;index++) {
                 profileList.setSelection(index); profileList.redraw(); profileList.update(); profileList.getShell().update();
                 long deadline = System.nanoTime()+300_000_000L;
@@ -1168,7 +2046,10 @@ public class WorkbenchProbe implements IApplication {
             byte[] source = Files.readAllBytes(java.nio.file.Path.of(System.getProperty("edt.probe.fixture")));
             if (!file.exists()) file.create(new ByteArrayInputStream(source),true,null); else file.setContents(new ByteArrayInputStream(source),true,false,null);
             file.setCharset("UTF-8",null);
-            var editor = IDE.openEditor(PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage(),file,"com._1c.g5.v8.dt.bsl.Bsl",true);
+            var editorPage = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage();
+            editorPage.setEditorAreaVisible(true);
+            var editor = IDE.openEditor(editorPage,file,"com._1c.g5.v8.dt.bsl.Bsl",true);
+            editorPage.activate(editor); editorPage.bringToTop(editor);
             pump(1500);
             StyledText text = findBsl(PlatformUI.getWorkbench().getActiveWorkbenchWindow().getShell());
             if(text==null && editor instanceof org.eclipse.xtext.ui.editor.XtextEditor xtext && xtext.getInternalSourceViewer()!=null) {

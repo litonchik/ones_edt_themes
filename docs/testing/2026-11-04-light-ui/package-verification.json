@@ -1,0 +1,9 @@
+{
+  "bundle": "plugins/ru.litonchik.edt.themes_0.1.22.202611041303.jar",
+  "classes": 40,
+  "class_major": 61,
+  "unchanged_files": 21,
+  "zip_sha256": "8659a415b3b5b965fbd858f0b40833e4fc002c000271d810055395c978facfb4",
+  "all_source_resources_and_plugin_xml_match": true,
+  "probe_absent": true
+}

@@ -18,7 +18,7 @@ $sources = @(Join-Path $projectRoot 'tests/workbench/WorkbenchProbe.java') + @(J
 if ($LASTEXITCODE -ne 0) { throw 'Probe javac failed' }
 Remove-Item -LiteralPath $argsFile
 $manifest = Join-Path $stage 'MANIFEST.MF'
-@('Manifest-Version: 1.0','Bundle-ManifestVersion: 2','Bundle-SymbolicName: ru.litonchik.edt.themes.probe;singleton:=true','Bundle-Version: 0.1.0','Fragment-Host: ru.litonchik.edt.themes','Bundle-RequiredExecutionEnvironment: JavaSE-17','Require-Bundle: org.eclipse.equinox.app,org.eclipse.ui.ide,org.eclipse.xtext.ui,org.eclipse.xtext,org.eclipse.emf.ecore,org.eclipse.jface.text,org.eclipse.e4.ui.model.workbench,org.eclipse.compare,com._1c.g5.v8.dt.qw.ui,com._1c.g5.v8.dt.compare.ui','') | Set-Content -Encoding utf8 $manifest
+@('Manifest-Version: 1.0','Bundle-ManifestVersion: 2','Bundle-SymbolicName: ru.litonchik.edt.themes.probe;singleton:=true','Bundle-Version: 0.1.0','Fragment-Host: ru.litonchik.edt.themes','Bundle-RequiredExecutionEnvironment: JavaSE-17','Require-Bundle: org.eclipse.equinox.app,org.eclipse.ui.ide,org.eclipse.xtext.ui,org.eclipse.xtext,org.eclipse.emf.ecore,org.eclipse.jface.text,org.eclipse.e4.ui.model.workbench,org.eclipse.compare,org.eclipse.ui.navigator,org.eclipse.team.core,org.eclipse.egit.core,org.eclipse.egit.ui,org.eclipse.jgit,com._1c.g5.v8.dt.qw.ui,com._1c.g5.v8.dt.compare.ui','') | Set-Content -Encoding utf8 $manifest
 @'
 <?xml version="1.0" encoding="UTF-8"?>
 <?eclipse version="3.4"?>
@@ -26,6 +26,8 @@ $manifest = Join-Path $stage 'MANIFEST.MF'
  <extension point="org.eclipse.core.runtime.applications" id="ru.litonchik.edt.themes.probe.probe"><application cardinality="singleton-global" thread="main" visible="true"><run class="ru.litonchik.edt.themes.testing.WorkbenchProbe"/></application></extension>
  <extension point="org.eclipse.ui.perspectives"><perspective id="ru.litonchik.edt.themes.probe.perspective" name="Probe" class="ru.litonchik.edt.themes.testing.ProbePerspective"/><perspective id="ru.litonchik.edt.themes.probe.gallery" name="Palette gallery" class="ru.litonchik.edt.themes.testing.ProbePerspective$Gallery"/></extension>
  <extension point="org.eclipse.ui.perspectives"><perspective id="ru.litonchik.edt.themes.probe.separators" name="Separator probe" class="ru.litonchik.edt.themes.testing.ProbePerspective"/></extension>
+ <extension point="org.eclipse.ui.views"><view id="ru.litonchik.edt.themes.probe.ui" name="UI fixture" class="ru.litonchik.edt.themes.testing.WorkbenchProbe$UiPanelView"/></extension>
+ <extension point="org.eclipse.ui.editors"><editor id="ru.litonchik.edt.themes.probe.protected" name="Protected content" class="ru.litonchik.edt.themes.testing.WorkbenchProbe$ProtectedContentEditor"/></extension>
 </fragment>
 '@ | Set-Content -Encoding utf8 (Join-Path $stage 'fragment.xml')
 & (Join-Path $JavaHome 'bin/jar.exe') "-J-Djava.io.tmpdir=$taskTemp" --create --file (Join-Path $plugins 'ru.litonchik.edt.themes.probe_0.1.0.jar') --manifest $manifest -C $stage .
