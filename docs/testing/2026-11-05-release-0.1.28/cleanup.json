@@ -1,0 +1,10 @@
+{
+  "cleanup_pass": 23,
+  "junction_removed": true,
+  "theme_files_absent": true,
+  "base_entries": 1267,
+  "uninstall": true,
+  "target_preserved": true,
+  "audit": true,
+  "reconcile": true
+}

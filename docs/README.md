@@ -62,3 +62,5 @@
 
 - [Выделение и Eclipse Forms](reference/selection-and-forms.md).
 - [Проверки исправления 0.1.28](testing/selection-validation.md).
+
+- [Релиз 0.1.28, GitHub Pages и проверка обновления по URL](testing/release-0.1.28-validation.md).
