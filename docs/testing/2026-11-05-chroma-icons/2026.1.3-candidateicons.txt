@@ -1,0 +1,1816 @@
+JVM 17.0.18
+PASS icons default off with absent own preference
+PASS BSL editor opened on test fixture
+PASS installed metadata base icon resources located, count=64
+PASS actual EDT CommonNavigator opened
+PASS actual EDT styled label provider available
+PASS native WorkbenchLabelProvider supplies metadata image
+PASS default-off keeps native image identity
+PASS font preference page exists
+PASS font size selector exists
+PASS icons checkbox starts off
+PASS icons preference Cancel accepted
+PASS Cancel does not enable icons
+PASS font preference page exists
+PASS font size selector exists
+BUTTON Тёмные expected=При&менить
+BUTTON Светлые expected=При&менить
+BUTTON  expected=При&менить
+BUTTON Применять палитру BSL expected=При&менить
+BUTTON Значки v8-chroma в Навигаторе expected=При&менить
+BUTTON Восстановить исходное оформление… expected=При&менить
+BUTTON  expected=При&менить
+BUTTON Вернуть цвет стиля expected=При&менить
+BUTTON Сбросить палитру expected=При&менить
+BUTTON  expected=При&менить
+BUTTON Вернуть исходный шрифт expected=При&менить
+BUTTON При&менить expected=При&менить
+PASS real preference Apply enables icons without palette
+PASS icons-only Apply preserves absent native theme preference
+PASS Apply automatically wraps actual EDT navigator
+PASS icons preference Cancel accepted
+PASS Cancel after Apply retains committed icons
+PASS font preference page exists
+PASS font size selector exists
+PASS icons preference Cancel accepted
+PASS Cancel of uncheck retains enabled icons
+PASS monokai palette apply preserves separate icon flag
+PASS monokai native base replaced accounting_flag
+PASS monokai exact upstream artwork accounting_flag
+PASS native image remains unmodified accounting_flag
+PASS monokai native base replaced accounting_register
+PASS monokai exact upstream artwork accounting_register
+PASS native image remains unmodified accounting_register
+PASS monokai native base replaced accumulation_register
+PASS monokai exact upstream artwork accumulation_register
+PASS native image remains unmodified accumulation_register
+PASS monokai native base replaced addressing_attribute
+PASS monokai exact upstream artwork addressing_attribute
+PASS native image remains unmodified addressing_attribute
+PASS monokai native base replaced attribute
+PASS monokai exact upstream artwork attribute
+PASS native image remains unmodified attribute
+PASS monokai native base replaced bot
+PASS monokai exact upstream artwork bot
+PASS native image remains unmodified bot
+PASS monokai native base replaced bot_dark
+PASS monokai exact upstream artwork bot_dark
+PASS native image remains unmodified bot_dark
+PASS monokai native base replaced business_process
+PASS monokai exact upstream artwork business_process
+PASS native image remains unmodified business_process
+PASS monokai native base replaced business_process_dark
+PASS monokai exact upstream artwork business_process_dark
+PASS native image remains unmodified business_process_dark
+PASS monokai native base replaced calculation_register
+PASS monokai exact upstream artwork calculation_register
+PASS native image remains unmodified calculation_register
+PASS monokai native base replaced catalog
+PASS monokai exact upstream artwork catalog
+PASS native image remains unmodified catalog
+PASS monokai native base replaced chart_of_accounts
+PASS monokai exact upstream artwork chart_of_accounts
+PASS native image remains unmodified chart_of_accounts
+PASS monokai native base replaced chart_of_calculation_types
+PASS monokai exact upstream artwork chart_of_calculation_types
+PASS native image remains unmodified chart_of_calculation_types
+PASS monokai native base replaced chart_of_characteristic_types
+PASS monokai exact upstream artwork chart_of_characteristic_types
+PASS native image remains unmodified chart_of_characteristic_types
+PASS monokai native base replaced command
+PASS monokai exact upstream artwork command
+PASS native image remains unmodified command
+PASS monokai native base replaced command_group
+PASS monokai exact upstream artwork command_group
+PASS native image remains unmodified command_group
+PASS monokai native base replaced common
+PASS monokai exact upstream artwork common
+PASS native image remains unmodified common
+PASS monokai native base replaced common_attribute
+PASS monokai exact upstream artwork common_attribute
+PASS native image remains unmodified common_attribute
+PASS monokai native base replaced common_form
+PASS monokai exact upstream artwork common_form
+PASS native image remains unmodified common_form
+PASS monokai native base replaced common_module
+PASS monokai exact upstream artwork common_module
+PASS native image remains unmodified common_module
+PASS monokai native base replaced common_template
+PASS monokai exact upstream artwork common_template
+PASS native image remains unmodified common_template
+PASS monokai native base replaced configuration
+PASS monokai exact upstream artwork configuration
+PASS native image remains unmodified configuration
+PASS monokai native base replaced constant
+PASS monokai exact upstream artwork constant
+PASS native image remains unmodified constant
+PASS monokai native base replaced data_processor
+PASS monokai exact upstream artwork data_processor
+PASS native image remains unmodified data_processor
+PASS monokai native base replaced data_processor_dark
+PASS monokai exact upstream artwork data_processor_dark
+PASS native image remains unmodified data_processor_dark
+PASS monokai native base replaced defined_type
+PASS monokai exact upstream artwork defined_type
+PASS native image remains unmodified defined_type
+PASS monokai native base replaced document
+PASS monokai exact upstream artwork document
+PASS native image remains unmodified document
+PASS monokai native base replaced document_journal
+PASS monokai exact upstream artwork document_journal
+PASS native image remains unmodified document_journal
+PASS monokai native base replaced document_numerator
+PASS monokai exact upstream artwork document_numerator
+PASS native image remains unmodified document_numerator
+PASS monokai native base replaced enum
+PASS monokai exact upstream artwork enum
+PASS native image remains unmodified enum
+PASS monokai native base replaced enum_dark
+PASS monokai exact upstream artwork enum_dark
+PASS native image remains unmodified enum_dark
+PASS monokai native base replaced enum_value
+PASS monokai exact upstream artwork enum_value
+PASS native image remains unmodified enum_value
+PASS monokai native base replaced event_subscription
+PASS monokai exact upstream artwork event_subscription
+PASS native image remains unmodified event_subscription
+PASS monokai native base replaced exchange_plan
+PASS monokai exact upstream artwork exchange_plan
+PASS native image remains unmodified exchange_plan
+PASS monokai native base replaced ext_dimension_accounting_flag
+PASS monokai exact upstream artwork ext_dimension_accounting_flag
+PASS native image remains unmodified ext_dimension_accounting_flag
+PASS monokai native base replaced form
+PASS monokai exact upstream artwork form
+PASS native image remains unmodified form
+PASS monokai native base replaced functional_option
+PASS monokai exact upstream artwork functional_option
+PASS native image remains unmodified functional_option
+PASS monokai native base replaced functional_option_dark
+PASS monokai exact upstream artwork functional_option_dark
+PASS native image remains unmodified functional_option_dark
+PASS monokai native base replaced http
+PASS monokai exact upstream artwork http
+PASS native image remains unmodified http
+PASS monokai native base replaced http_dark
+PASS monokai exact upstream artwork http_dark
+PASS native image remains unmodified http_dark
+PASS monokai native base replaced information_register
+PASS monokai exact upstream artwork information_register
+PASS native image remains unmodified information_register
+PASS monokai native base replaced language
+PASS monokai exact upstream artwork language
+PASS native image remains unmodified language
+PASS monokai native base replaced language_dark
+PASS monokai exact upstream artwork language_dark
+PASS native image remains unmodified language_dark
+PASS monokai native base replaced recalculation
+PASS monokai exact upstream artwork recalculation
+PASS native image remains unmodified recalculation
+PASS monokai native base replaced register_dimension
+PASS monokai exact upstream artwork register_dimension
+PASS native image remains unmodified register_dimension
+PASS monokai native base replaced register_resource
+PASS monokai exact upstream artwork register_resource
+PASS native image remains unmodified register_resource
+PASS monokai native base replaced report
+PASS monokai exact upstream artwork report
+PASS native image remains unmodified report
+PASS monokai native base replaced role
+PASS monokai exact upstream artwork role
+PASS native image remains unmodified role
+PASS monokai native base replaced scheduled_job
+PASS monokai exact upstream artwork scheduled_job
+PASS native image remains unmodified scheduled_job
+PASS monokai native base replaced sequence
+PASS monokai exact upstream artwork sequence
+PASS native image remains unmodified sequence
+PASS monokai native base replaced session_parameter
+PASS monokai exact upstream artwork session_parameter
+PASS native image remains unmodified session_parameter
+PASS monokai native base replaced settings_storage
+PASS monokai exact upstream artwork settings_storage
+PASS native image remains unmodified settings_storage
+PASS monokai native base replaced standard_attribute
+PASS monokai exact upstream artwork standard_attribute
+PASS native image remains unmodified standard_attribute
+PASS monokai native base replaced style
+PASS monokai exact upstream artwork style
+PASS native image remains unmodified style
+PASS monokai native base replaced style_item
+PASS monokai exact upstream artwork style_item
+PASS native image remains unmodified style_item
+PASS monokai native base replaced subsystem
+PASS monokai exact upstream artwork subsystem
+PASS native image remains unmodified subsystem
+PASS monokai native base replaced tabular_section
+PASS monokai exact upstream artwork tabular_section
+PASS native image remains unmodified tabular_section
+PASS monokai native base replaced task
+PASS monokai exact upstream artwork task
+PASS native image remains unmodified task
+PASS monokai native base replaced template
+PASS monokai exact upstream artwork template
+PASS native image remains unmodified template
+PASS monokai native base replaced web_service
+PASS monokai exact upstream artwork web_service
+PASS native image remains unmodified web_service
+PASS monokai native base replaced web_service_dark
+PASS monokai exact upstream artwork web_service_dark
+PASS native image remains unmodified web_service_dark
+PASS monokai native base replaced web_socket_client
+PASS monokai exact upstream artwork web_socket_client
+PASS native image remains unmodified web_socket_client
+PASS monokai native base replaced web_socket_client_dark
+PASS monokai exact upstream artwork web_socket_client_dark
+PASS native image remains unmodified web_socket_client_dark
+PASS monokai native base replaced ws_reference
+PASS monokai exact upstream artwork ws_reference
+PASS native image remains unmodified ws_reference
+PASS monokai DPI 100 meta-processor
+PASS monokai DPI artwork 100 meta-processor
+PASS monokai DPI 125 meta-processor
+PASS monokai DPI artwork 125 meta-processor
+PASS monokai DPI 150 meta-processor
+PASS monokai DPI artwork 150 meta-processor
+PASS monokai DPI 175 meta-processor
+PASS monokai DPI artwork 175 meta-processor
+PASS monokai DPI 200 meta-processor
+PASS monokai DPI artwork 200 meta-processor
+PASS monokai DPI 300 meta-processor
+PASS monokai DPI artwork 300 meta-processor
+PASS monokai DPI 400 meta-processor
+PASS monokai DPI artwork 400 meta-processor
+PASS monokai DPI 100 meta-common
+PASS monokai DPI artwork 100 meta-common
+PASS monokai DPI 125 meta-common
+PASS monokai DPI artwork 125 meta-common
+PASS monokai DPI 150 meta-common
+PASS monokai DPI artwork 150 meta-common
+PASS monokai DPI 175 meta-common
+PASS monokai DPI artwork 175 meta-common
+PASS monokai DPI 200 meta-common
+PASS monokai DPI artwork 200 meta-common
+PASS monokai DPI 300 meta-common
+PASS monokai DPI artwork 300 meta-common
+PASS monokai DPI 400 meta-common
+PASS monokai DPI artwork 400 meta-common
+PASS monokai DPI 100 meta-websocket
+PASS monokai DPI artwork 100 meta-websocket
+PASS monokai DPI 125 meta-websocket
+PASS monokai DPI artwork 125 meta-websocket
+PASS monokai DPI 150 meta-websocket
+PASS monokai DPI artwork 150 meta-websocket
+PASS monokai DPI 175 meta-websocket
+PASS monokai DPI artwork 175 meta-websocket
+PASS monokai DPI 200 meta-websocket
+PASS monokai DPI artwork 200 meta-websocket
+PASS monokai DPI 300 meta-websocket
+PASS monokai DPI artwork 300 meta-websocket
+PASS monokai DPI 400 meta-websocket
+PASS monokai DPI artwork 400 meta-websocket
+PASS monokai DPI 100 meta-subsystem
+PASS monokai DPI artwork 100 meta-subsystem
+PASS monokai DPI 125 meta-subsystem
+PASS monokai DPI artwork 125 meta-subsystem
+PASS monokai DPI 150 meta-subsystem
+PASS monokai DPI artwork 150 meta-subsystem
+PASS monokai DPI 175 meta-subsystem
+PASS monokai DPI artwork 175 meta-subsystem
+PASS monokai DPI 200 meta-subsystem
+PASS monokai DPI artwork 200 meta-subsystem
+PASS monokai DPI 300 meta-subsystem
+PASS monokai DPI artwork 300 meta-subsystem
+PASS monokai DPI 400 meta-subsystem
+PASS monokai DPI artwork 400 meta-subsystem
+PASS monokai DPI 100 meta-language
+PASS monokai DPI artwork 100 meta-language
+PASS monokai DPI 125 meta-language
+PASS monokai DPI artwork 125 meta-language
+PASS monokai DPI 150 meta-language
+PASS monokai DPI artwork 150 meta-language
+PASS monokai DPI 175 meta-language
+PASS monokai DPI artwork 175 meta-language
+PASS monokai DPI 200 meta-language
+PASS monokai DPI artwork 200 meta-language
+PASS monokai DPI 300 meta-language
+PASS monokai DPI artwork 300 meta-language
+PASS monokai DPI 400 meta-language
+PASS monokai DPI artwork 400 meta-language
+PASS monokai DPI 100 meta-accounting-register
+PASS monokai DPI artwork 100 meta-accounting-register
+PASS monokai DPI 125 meta-accounting-register
+PASS monokai DPI artwork 125 meta-accounting-register
+PASS monokai DPI 150 meta-accounting-register
+PASS monokai DPI artwork 150 meta-accounting-register
+PASS monokai DPI 175 meta-accounting-register
+PASS monokai DPI artwork 175 meta-accounting-register
+PASS monokai DPI 200 meta-accounting-register
+PASS monokai DPI artwork 200 meta-accounting-register
+PASS monokai DPI 300 meta-accounting-register
+PASS monokai DPI artwork 300 meta-accounting-register
+PASS monokai DPI 400 meta-accounting-register
+PASS monokai DPI artwork 400 meta-accounting-register
+PASS monokai DPI 100 meta-configuration
+PASS monokai DPI artwork 100 meta-configuration
+PASS monokai DPI 125 meta-configuration
+PASS monokai DPI artwork 125 meta-configuration
+PASS monokai DPI 150 meta-configuration
+PASS monokai DPI artwork 150 meta-configuration
+PASS monokai DPI 175 meta-configuration
+PASS monokai DPI artwork 175 meta-configuration
+PASS monokai DPI 200 meta-configuration
+PASS monokai DPI artwork 200 meta-configuration
+PASS monokai DPI 300 meta-configuration
+PASS monokai DPI artwork 300 meta-configuration
+PASS monokai DPI 400 meta-configuration
+PASS monokai DPI artwork 400 meta-configuration
+PASS monokai DPI 100 meta-scheduled-job
+PASS monokai DPI artwork 100 meta-scheduled-job
+PASS monokai DPI 125 meta-scheduled-job
+PASS monokai DPI artwork 125 meta-scheduled-job
+PASS monokai DPI 150 meta-scheduled-job
+PASS monokai DPI artwork 150 meta-scheduled-job
+PASS monokai DPI 175 meta-scheduled-job
+PASS monokai DPI artwork 175 meta-scheduled-job
+PASS monokai DPI 200 meta-scheduled-job
+PASS monokai DPI artwork 200 meta-scheduled-job
+PASS monokai DPI 300 meta-scheduled-job
+PASS monokai DPI artwork 300 meta-scheduled-job
+PASS monokai DPI 400 meta-scheduled-job
+PASS monokai DPI artwork 400 meta-scheduled-job
+PASS monokai DPI 100 meta-template
+PASS monokai DPI artwork 100 meta-template
+PASS monokai DPI 125 meta-template
+PASS monokai DPI artwork 125 meta-template
+PASS monokai DPI 150 meta-template
+PASS monokai DPI artwork 150 meta-template
+PASS monokai DPI 175 meta-template
+PASS monokai DPI artwork 175 meta-template
+PASS monokai DPI 200 meta-template
+PASS monokai DPI artwork 200 meta-template
+PASS monokai DPI 300 meta-template
+PASS monokai DPI artwork 300 meta-template
+PASS monokai DPI 400 meta-template
+PASS monokai DPI artwork 400 meta-template
+PASS monokai DPI 100 meta-enumeration-value
+PASS monokai DPI artwork 100 meta-enumeration-value
+PASS monokai DPI 125 meta-enumeration-value
+PASS monokai DPI artwork 125 meta-enumeration-value
+PASS monokai DPI 150 meta-enumeration-value
+PASS monokai DPI artwork 150 meta-enumeration-value
+PASS monokai DPI 175 meta-enumeration-value
+PASS monokai DPI artwork 175 meta-enumeration-value
+PASS monokai DPI 200 meta-enumeration-value
+PASS monokai DPI artwork 200 meta-enumeration-value
+PASS monokai DPI 300 meta-enumeration-value
+PASS monokai DPI artwork 300 meta-enumeration-value
+PASS monokai DPI 400 meta-enumeration-value
+PASS monokai DPI artwork 400 meta-enumeration-value
+PASS monokai DPI 100 meta-command
+PASS monokai DPI artwork 100 meta-command
+PASS monokai DPI 125 meta-command
+PASS monokai DPI artwork 125 meta-command
+PASS monokai DPI 150 meta-command
+PASS monokai DPI artwork 150 meta-command
+PASS monokai DPI 175 meta-command
+PASS monokai DPI artwork 175 meta-command
+PASS monokai DPI 200 meta-command
+PASS monokai DPI artwork 200 meta-command
+PASS monokai DPI 300 meta-command
+PASS monokai DPI artwork 300 meta-command
+PASS monokai DPI 400 meta-command
+PASS monokai DPI artwork 400 meta-command
+PASS monokai DPI 100 meta-document-journal
+PASS monokai DPI artwork 100 meta-document-journal
+PASS monokai DPI 125 meta-document-journal
+PASS monokai DPI artwork 125 meta-document-journal
+PASS monokai DPI 150 meta-document-journal
+PASS monokai DPI artwork 150 meta-document-journal
+PASS monokai DPI 175 meta-document-journal
+PASS monokai DPI artwork 175 meta-document-journal
+PASS monokai DPI 200 meta-document-journal
+PASS monokai DPI artwork 200 meta-document-journal
+PASS monokai DPI 300 meta-document-journal
+PASS monokai DPI artwork 300 meta-document-journal
+PASS monokai DPI 400 meta-document-journal
+PASS monokai DPI artwork 400 meta-document-journal
+PASS monokai DPI 100 meta-task
+PASS monokai DPI artwork 100 meta-task
+PASS monokai DPI 125 meta-task
+PASS monokai DPI artwork 125 meta-task
+PASS monokai DPI 150 meta-task
+PASS monokai DPI artwork 150 meta-task
+PASS monokai DPI 175 meta-task
+PASS monokai DPI artwork 175 meta-task
+PASS monokai DPI 200 meta-task
+PASS monokai DPI artwork 200 meta-task
+PASS monokai DPI 300 meta-task
+PASS monokai DPI artwork 300 meta-task
+PASS monokai DPI 400 meta-task
+PASS monokai DPI artwork 400 meta-task
+PASS monokai DPI 100 meta-role
+PASS monokai DPI artwork 100 meta-role
+PASS monokai DPI 125 meta-role
+PASS monokai DPI artwork 125 meta-role
+PASS monokai DPI 150 meta-role
+PASS monokai DPI artwork 150 meta-role
+PASS monokai DPI 175 meta-role
+PASS monokai DPI artwork 175 meta-role
+PASS monokai DPI 200 meta-role
+PASS monokai DPI artwork 200 meta-role
+PASS monokai DPI 300 meta-role
+PASS monokai DPI artwork 300 meta-role
+PASS monokai DPI 400 meta-role
+PASS monokai DPI artwork 400 meta-role
+PASS monokai DPI 100 meta-recalculation
+PASS monokai DPI artwork 100 meta-recalculation
+PASS monokai DPI 125 meta-recalculation
+PASS monokai DPI artwork 125 meta-recalculation
+PASS monokai DPI 150 meta-recalculation
+PASS monokai DPI artwork 150 meta-recalculation
+PASS monokai DPI 175 meta-recalculation
+PASS monokai DPI artwork 175 meta-recalculation
+PASS monokai DPI 200 meta-recalculation
+PASS monokai DPI artwork 200 meta-recalculation
+PASS monokai DPI 300 meta-recalculation
+PASS monokai DPI artwork 300 meta-recalculation
+PASS monokai DPI 400 meta-recalculation
+PASS monokai DPI artwork 400 meta-recalculation
+PASS monokai DPI 100 meta-business-process
+PASS monokai DPI artwork 100 meta-business-process
+PASS monokai DPI 125 meta-business-process
+PASS monokai DPI artwork 125 meta-business-process
+PASS monokai DPI 150 meta-business-process
+PASS monokai DPI artwork 150 meta-business-process
+PASS monokai DPI 175 meta-business-process
+PASS monokai DPI artwork 175 meta-business-process
+PASS monokai DPI 200 meta-business-process
+PASS monokai DPI artwork 200 meta-business-process
+PASS monokai DPI 300 meta-business-process
+PASS monokai DPI artwork 300 meta-business-process
+PASS monokai DPI 400 meta-business-process
+PASS monokai DPI artwork 400 meta-business-process
+PASS monokai DPI 100 meta-document-numerator
+PASS monokai DPI artwork 100 meta-document-numerator
+PASS monokai DPI 125 meta-document-numerator
+PASS monokai DPI artwork 125 meta-document-numerator
+PASS monokai DPI 150 meta-document-numerator
+PASS monokai DPI artwork 150 meta-document-numerator
+PASS monokai DPI 175 meta-document-numerator
+PASS monokai DPI artwork 175 meta-document-numerator
+PASS monokai DPI 200 meta-document-numerator
+PASS monokai DPI artwork 200 meta-document-numerator
+PASS monokai DPI 300 meta-document-numerator
+PASS monokai DPI artwork 300 meta-document-numerator
+PASS monokai DPI 400 meta-document-numerator
+PASS monokai DPI artwork 400 meta-document-numerator
+PASS monokai DPI 100 meta-information-register
+PASS monokai DPI artwork 100 meta-information-register
+PASS monokai DPI 125 meta-information-register
+PASS monokai DPI artwork 125 meta-information-register
+PASS monokai DPI 150 meta-information-register
+PASS monokai DPI artwork 150 meta-information-register
+PASS monokai DPI 175 meta-information-register
+PASS monokai DPI artwork 175 meta-information-register
+PASS monokai DPI 200 meta-information-register
+PASS monokai DPI artwork 200 meta-information-register
+PASS monokai DPI 300 meta-information-register
+PASS monokai DPI artwork 300 meta-information-register
+PASS monokai DPI 400 meta-information-register
+PASS monokai DPI artwork 400 meta-information-register
+PASS monokai DPI 100 meta-form
+PASS monokai DPI artwork 100 meta-form
+PASS monokai DPI 125 meta-form
+PASS monokai DPI artwork 125 meta-form
+PASS monokai DPI 150 meta-form
+PASS monokai DPI artwork 150 meta-form
+PASS monokai DPI 175 meta-form
+PASS monokai DPI artwork 175 meta-form
+PASS monokai DPI 200 meta-form
+PASS monokai DPI artwork 200 meta-form
+PASS monokai DPI 300 meta-form
+PASS monokai DPI artwork 300 meta-form
+PASS monokai DPI 400 meta-form
+PASS monokai DPI artwork 400 meta-form
+PASS monokai DPI 100 meta-document-sequence
+PASS monokai DPI artwork 100 meta-document-sequence
+PASS monokai DPI 125 meta-document-sequence
+PASS monokai DPI artwork 125 meta-document-sequence
+PASS monokai DPI 150 meta-document-sequence
+PASS monokai DPI artwork 150 meta-document-sequence
+PASS monokai DPI 175 meta-document-sequence
+PASS monokai DPI artwork 175 meta-document-sequence
+PASS monokai DPI 200 meta-document-sequence
+PASS monokai DPI artwork 200 meta-document-sequence
+PASS monokai DPI 300 meta-document-sequence
+PASS monokai DPI artwork 300 meta-document-sequence
+PASS monokai DPI 400 meta-document-sequence
+PASS monokai DPI artwork 400 meta-document-sequence
+PASS monokai DPI 100 meta-constant
+PASS monokai DPI artwork 100 meta-constant
+PASS monokai DPI 125 meta-constant
+PASS monokai DPI artwork 125 meta-constant
+PASS monokai DPI 150 meta-constant
+PASS monokai DPI artwork 150 meta-constant
+PASS monokai DPI 175 meta-constant
+PASS monokai DPI artwork 175 meta-constant
+PASS monokai DPI 200 meta-constant
+PASS monokai DPI artwork 200 meta-constant
+PASS monokai DPI 300 meta-constant
+PASS monokai DPI artwork 300 meta-constant
+PASS monokai DPI 400 meta-constant
+PASS monokai DPI artwork 400 meta-constant
+PASS monokai DPI 100 meta-web-service
+PASS monokai DPI artwork 100 meta-web-service
+PASS monokai DPI 125 meta-web-service
+PASS monokai DPI artwork 125 meta-web-service
+PASS monokai DPI 150 meta-web-service
+PASS monokai DPI artwork 150 meta-web-service
+PASS monokai DPI 175 meta-web-service
+PASS monokai DPI artwork 175 meta-web-service
+PASS monokai DPI 200 meta-web-service
+PASS monokai DPI artwork 200 meta-web-service
+PASS monokai DPI 300 meta-web-service
+PASS monokai DPI artwork 300 meta-web-service
+PASS monokai DPI 400 meta-web-service
+PASS monokai DPI artwork 400 meta-web-service
+PASS monokai DPI 100 meta-module
+PASS monokai DPI artwork 100 meta-module
+PASS monokai DPI 125 meta-module
+PASS monokai DPI artwork 125 meta-module
+PASS monokai DPI 150 meta-module
+PASS monokai DPI artwork 150 meta-module
+PASS monokai DPI 175 meta-module
+PASS monokai DPI artwork 175 meta-module
+PASS monokai DPI 200 meta-module
+PASS monokai DPI artwork 200 meta-module
+PASS monokai DPI 300 meta-module
+PASS monokai DPI artwork 300 meta-module
+PASS monokai DPI 400 meta-module
+PASS monokai DPI artwork 400 meta-module
+PASS monokai DPI 100 meta-calculation-plan
+PASS monokai DPI artwork 100 meta-calculation-plan
+PASS monokai DPI 125 meta-calculation-plan
+PASS monokai DPI artwork 125 meta-calculation-plan
+PASS monokai DPI 150 meta-calculation-plan
+PASS monokai DPI artwork 150 meta-calculation-plan
+PASS monokai DPI 175 meta-calculation-plan
+PASS monokai DPI artwork 175 meta-calculation-plan
+PASS monokai DPI 200 meta-calculation-plan
+PASS monokai DPI artwork 200 meta-calculation-plan
+PASS monokai DPI 300 meta-calculation-plan
+PASS monokai DPI artwork 300 meta-calculation-plan
+PASS monokai DPI 400 meta-calculation-plan
+PASS monokai DPI artwork 400 meta-calculation-plan
+PASS monokai DPI 100 meta-settings-storage
+PASS monokai DPI artwork 100 meta-settings-storage
+PASS monokai DPI 125 meta-settings-storage
+PASS monokai DPI artwork 125 meta-settings-storage
+PASS monokai DPI 150 meta-settings-storage
+PASS monokai DPI artwork 150 meta-settings-storage
+PASS monokai DPI 175 meta-settings-storage
+PASS monokai DPI artwork 175 meta-settings-storage
+PASS monokai DPI 200 meta-settings-storage
+PASS monokai DPI artwork 200 meta-settings-storage
+PASS monokai DPI 300 meta-settings-storage
+PASS monokai DPI artwork 300 meta-settings-storage
+PASS monokai DPI 400 meta-settings-storage
+PASS monokai DPI artwork 400 meta-settings-storage
+PASS monokai DPI 100 meta-exchange-plan
+PASS monokai DPI artwork 100 meta-exchange-plan
+PASS monokai DPI 125 meta-exchange-plan
+PASS monokai DPI artwork 125 meta-exchange-plan
+PASS monokai DPI 150 meta-exchange-plan
+PASS monokai DPI artwork 150 meta-exchange-plan
+PASS monokai DPI 175 meta-exchange-plan
+PASS monokai DPI artwork 175 meta-exchange-plan
+PASS monokai DPI 200 meta-exchange-plan
+PASS monokai DPI artwork 200 meta-exchange-plan
+PASS monokai DPI 300 meta-exchange-plan
+PASS monokai DPI artwork 300 meta-exchange-plan
+PASS monokai DPI 400 meta-exchange-plan
+PASS monokai DPI artwork 400 meta-exchange-plan
+PASS monokai DPI 100 meta-accounting-flag
+PASS monokai DPI artwork 100 meta-accounting-flag
+PASS monokai DPI 125 meta-accounting-flag
+PASS monokai DPI artwork 125 meta-accounting-flag
+PASS monokai DPI 150 meta-accounting-flag
+PASS monokai DPI artwork 150 meta-accounting-flag
+PASS monokai DPI 175 meta-accounting-flag
+PASS monokai DPI artwork 175 meta-accounting-flag
+PASS monokai DPI 200 meta-accounting-flag
+PASS monokai DPI artwork 200 meta-accounting-flag
+PASS monokai DPI 300 meta-accounting-flag
+PASS monokai DPI artwork 300 meta-accounting-flag
+PASS monokai DPI 400 meta-accounting-flag
+PASS monokai DPI artwork 400 meta-accounting-flag
+PASS monokai DPI 100 meta-http-service
+PASS monokai DPI artwork 100 meta-http-service
+PASS monokai DPI 125 meta-http-service
+PASS monokai DPI artwork 125 meta-http-service
+PASS monokai DPI 150 meta-http-service
+PASS monokai DPI artwork 150 meta-http-service
+PASS monokai DPI 175 meta-http-service
+PASS monokai DPI artwork 175 meta-http-service
+PASS monokai DPI 200 meta-http-service
+PASS monokai DPI artwork 200 meta-http-service
+PASS monokai DPI 300 meta-http-service
+PASS monokai DPI artwork 300 meta-http-service
+PASS monokai DPI 400 meta-http-service
+PASS monokai DPI artwork 400 meta-http-service
+PASS monokai DPI 100 meta-bot
+PASS monokai DPI artwork 100 meta-bot
+PASS monokai DPI 125 meta-bot
+PASS monokai DPI artwork 125 meta-bot
+PASS monokai DPI 150 meta-bot
+PASS monokai DPI artwork 150 meta-bot
+PASS monokai DPI 175 meta-bot
+PASS monokai DPI artwork 175 meta-bot
+PASS monokai DPI 200 meta-bot
+PASS monokai DPI artwork 200 meta-bot
+PASS monokai DPI 300 meta-bot
+PASS monokai DPI artwork 300 meta-bot
+PASS monokai DPI 400 meta-bot
+PASS monokai DPI artwork 400 meta-bot
+PASS monokai DPI 100 meta-catalog
+PASS monokai DPI artwork 100 meta-catalog
+PASS monokai DPI 125 meta-catalog
+PASS monokai DPI artwork 125 meta-catalog
+PASS monokai DPI 150 meta-catalog
+PASS monokai DPI artwork 150 meta-catalog
+PASS monokai DPI 175 meta-catalog
+PASS monokai DPI artwork 175 meta-catalog
+PASS monokai DPI 200 meta-catalog
+PASS monokai DPI artwork 200 meta-catalog
+PASS monokai DPI 300 meta-catalog
+PASS monokai DPI artwork 300 meta-catalog
+PASS monokai DPI 400 meta-catalog
+PASS monokai DPI artwork 400 meta-catalog
+PASS monokai DPI 100 meta-style
+PASS monokai DPI artwork 100 meta-style
+PASS monokai DPI 125 meta-style
+PASS monokai DPI artwork 125 meta-style
+PASS monokai DPI 150 meta-style
+PASS monokai DPI artwork 150 meta-style
+PASS monokai DPI 175 meta-style
+PASS monokai DPI artwork 175 meta-style
+PASS monokai DPI 200 meta-style
+PASS monokai DPI artwork 200 meta-style
+PASS monokai DPI 300 meta-style
+PASS monokai DPI artwork 300 meta-style
+PASS monokai DPI 400 meta-style
+PASS monokai DPI artwork 400 meta-style
+PASS monokai DPI 100 meta-command-group
+PASS monokai DPI artwork 100 meta-command-group
+PASS monokai DPI 125 meta-command-group
+PASS monokai DPI artwork 125 meta-command-group
+PASS monokai DPI 150 meta-command-group
+PASS monokai DPI artwork 150 meta-command-group
+PASS monokai DPI 175 meta-command-group
+PASS monokai DPI artwork 175 meta-command-group
+PASS monokai DPI 200 meta-command-group
+PASS monokai DPI artwork 200 meta-command-group
+PASS monokai DPI 300 meta-command-group
+PASS monokai DPI artwork 300 meta-command-group
+PASS monokai DPI 400 meta-command-group
+PASS monokai DPI artwork 400 meta-command-group
+PASS monokai DPI 100 meta-report
+PASS monokai DPI artwork 100 meta-report
+PASS monokai DPI 125 meta-report
+PASS monokai DPI artwork 125 meta-report
+PASS monokai DPI 150 meta-report
+PASS monokai DPI artwork 150 meta-report
+PASS monokai DPI 175 meta-report
+PASS monokai DPI artwork 175 meta-report
+PASS monokai DPI 200 meta-report
+PASS monokai DPI artwork 200 meta-report
+PASS monokai DPI 300 meta-report
+PASS monokai DPI artwork 300 meta-report
+PASS monokai DPI 400 meta-report
+PASS monokai DPI artwork 400 meta-report
+PASS monokai DPI 100 meta-session-parameter
+PASS monokai DPI artwork 100 meta-session-parameter
+PASS monokai DPI 125 meta-session-parameter
+PASS monokai DPI artwork 125 meta-session-parameter
+PASS monokai DPI 150 meta-session-parameter
+PASS monokai DPI artwork 150 meta-session-parameter
+PASS monokai DPI 175 meta-session-parameter
+PASS monokai DPI artwork 175 meta-session-parameter
+PASS monokai DPI 200 meta-session-parameter
+PASS monokai DPI artwork 200 meta-session-parameter
+PASS monokai DPI 300 meta-session-parameter
+PASS monokai DPI artwork 300 meta-session-parameter
+PASS monokai DPI 400 meta-session-parameter
+PASS monokai DPI artwork 400 meta-session-parameter
+PASS monokai DPI 100 meta-enumeration
+PASS monokai DPI artwork 100 meta-enumeration
+PASS monokai DPI 125 meta-enumeration
+PASS monokai DPI artwork 125 meta-enumeration
+PASS monokai DPI 150 meta-enumeration
+PASS monokai DPI artwork 150 meta-enumeration
+PASS monokai DPI 175 meta-enumeration
+PASS monokai DPI artwork 175 meta-enumeration
+PASS monokai DPI 200 meta-enumeration
+PASS monokai DPI artwork 200 meta-enumeration
+PASS monokai DPI 300 meta-enumeration
+PASS monokai DPI artwork 300 meta-enumeration
+PASS monokai DPI 400 meta-enumeration
+PASS monokai DPI artwork 400 meta-enumeration
+PASS monokai DPI 100 meta-functional-option
+PASS monokai DPI artwork 100 meta-functional-option
+PASS monokai DPI 125 meta-functional-option
+PASS monokai DPI artwork 125 meta-functional-option
+PASS monokai DPI 150 meta-functional-option
+PASS monokai DPI artwork 150 meta-functional-option
+PASS monokai DPI 175 meta-functional-option
+PASS monokai DPI artwork 175 meta-functional-option
+PASS monokai DPI 200 meta-functional-option
+PASS monokai DPI artwork 200 meta-functional-option
+PASS monokai DPI 300 meta-functional-option
+PASS monokai DPI artwork 300 meta-functional-option
+PASS monokai DPI 400 meta-functional-option
+PASS monokai DPI artwork 400 meta-functional-option
+PASS monokai DPI 100 meta-tabular-section
+PASS monokai DPI artwork 100 meta-tabular-section
+PASS monokai DPI 125 meta-tabular-section
+PASS monokai DPI artwork 125 meta-tabular-section
+PASS monokai DPI 150 meta-tabular-section
+PASS monokai DPI artwork 150 meta-tabular-section
+PASS monokai DPI 175 meta-tabular-section
+PASS monokai DPI artwork 175 meta-tabular-section
+PASS monokai DPI 200 meta-tabular-section
+PASS monokai DPI artwork 200 meta-tabular-section
+PASS monokai DPI 300 meta-tabular-section
+PASS monokai DPI artwork 300 meta-tabular-section
+PASS monokai DPI 400 meta-tabular-section
+PASS monokai DPI artwork 400 meta-tabular-section
+PASS monokai DPI 100 meta-dimension
+PASS monokai DPI artwork 100 meta-dimension
+PASS monokai DPI 125 meta-dimension
+PASS monokai DPI artwork 125 meta-dimension
+PASS monokai DPI 150 meta-dimension
+PASS monokai DPI artwork 150 meta-dimension
+PASS monokai DPI 175 meta-dimension
+PASS monokai DPI artwork 175 meta-dimension
+PASS monokai DPI 200 meta-dimension
+PASS monokai DPI artwork 200 meta-dimension
+PASS monokai DPI 300 meta-dimension
+PASS monokai DPI artwork 300 meta-dimension
+PASS monokai DPI 400 meta-dimension
+PASS monokai DPI artwork 400 meta-dimension
+PASS monokai DPI 100 meta-ws-reference
+PASS monokai DPI artwork 100 meta-ws-reference
+PASS monokai DPI 125 meta-ws-reference
+PASS monokai DPI artwork 125 meta-ws-reference
+PASS monokai DPI 150 meta-ws-reference
+PASS monokai DPI artwork 150 meta-ws-reference
+PASS monokai DPI 175 meta-ws-reference
+PASS monokai DPI artwork 175 meta-ws-reference
+PASS monokai DPI 200 meta-ws-reference
+PASS monokai DPI artwork 200 meta-ws-reference
+PASS monokai DPI 300 meta-ws-reference
+PASS monokai DPI artwork 300 meta-ws-reference
+PASS monokai DPI 400 meta-ws-reference
+PASS monokai DPI artwork 400 meta-ws-reference
+PASS monokai DPI 100 meta-style-element
+PASS monokai DPI artwork 100 meta-style-element
+PASS monokai DPI 125 meta-style-element
+PASS monokai DPI artwork 125 meta-style-element
+PASS monokai DPI 150 meta-style-element
+PASS monokai DPI artwork 150 meta-style-element
+PASS monokai DPI 175 meta-style-element
+PASS monokai DPI artwork 175 meta-style-element
+PASS monokai DPI 200 meta-style-element
+PASS monokai DPI artwork 200 meta-style-element
+PASS monokai DPI 300 meta-style-element
+PASS monokai DPI artwork 300 meta-style-element
+PASS monokai DPI 400 meta-style-element
+PASS monokai DPI artwork 400 meta-style-element
+PASS monokai DPI 100 meta-document
+PASS monokai DPI artwork 100 meta-document
+PASS monokai DPI 125 meta-document
+PASS monokai DPI artwork 125 meta-document
+PASS monokai DPI 150 meta-document
+PASS monokai DPI artwork 150 meta-document
+PASS monokai DPI 175 meta-document
+PASS monokai DPI artwork 175 meta-document
+PASS monokai DPI 200 meta-document
+PASS monokai DPI artwork 200 meta-document
+PASS monokai DPI 300 meta-document
+PASS monokai DPI artwork 300 meta-document
+PASS monokai DPI 400 meta-document
+PASS monokai DPI artwork 400 meta-document
+PASS monokai DPI 100 meta-calculation-register
+PASS monokai DPI artwork 100 meta-calculation-register
+PASS monokai DPI 125 meta-calculation-register
+PASS monokai DPI artwork 125 meta-calculation-register
+PASS monokai DPI 150 meta-calculation-register
+PASS monokai DPI artwork 150 meta-calculation-register
+PASS monokai DPI 175 meta-calculation-register
+PASS monokai DPI artwork 175 meta-calculation-register
+PASS monokai DPI 200 meta-calculation-register
+PASS monokai DPI artwork 200 meta-calculation-register
+PASS monokai DPI 300 meta-calculation-register
+PASS monokai DPI artwork 300 meta-calculation-register
+PASS monokai DPI 400 meta-calculation-register
+PASS monokai DPI artwork 400 meta-calculation-register
+PASS monokai DPI 100 meta-attribute
+PASS monokai DPI artwork 100 meta-attribute
+PASS monokai DPI 125 meta-attribute
+PASS monokai DPI artwork 125 meta-attribute
+PASS monokai DPI 150 meta-attribute
+PASS monokai DPI artwork 150 meta-attribute
+PASS monokai DPI 175 meta-attribute
+PASS monokai DPI artwork 175 meta-attribute
+PASS monokai DPI 200 meta-attribute
+PASS monokai DPI artwork 200 meta-attribute
+PASS monokai DPI 300 meta-attribute
+PASS monokai DPI artwork 300 meta-attribute
+PASS monokai DPI 400 meta-attribute
+PASS monokai DPI artwork 400 meta-attribute
+PASS monokai DPI 100 meta-accumulation-register
+PASS monokai DPI artwork 100 meta-accumulation-register
+PASS monokai DPI 125 meta-accumulation-register
+PASS monokai DPI artwork 125 meta-accumulation-register
+PASS monokai DPI 150 meta-accumulation-register
+PASS monokai DPI artwork 150 meta-accumulation-register
+PASS monokai DPI 175 meta-accumulation-register
+PASS monokai DPI artwork 175 meta-accumulation-register
+PASS monokai DPI 200 meta-accumulation-register
+PASS monokai DPI artwork 200 meta-accumulation-register
+PASS monokai DPI 300 meta-accumulation-register
+PASS monokai DPI artwork 300 meta-accumulation-register
+PASS monokai DPI 400 meta-accumulation-register
+PASS monokai DPI artwork 400 meta-accumulation-register
+PASS monokai DPI 100 meta-defined-type
+PASS monokai DPI artwork 100 meta-defined-type
+PASS monokai DPI 125 meta-defined-type
+PASS monokai DPI artwork 125 meta-defined-type
+PASS monokai DPI 150 meta-defined-type
+PASS monokai DPI artwork 150 meta-defined-type
+PASS monokai DPI 175 meta-defined-type
+PASS monokai DPI artwork 175 meta-defined-type
+PASS monokai DPI 200 meta-defined-type
+PASS monokai DPI artwork 200 meta-defined-type
+PASS monokai DPI 300 meta-defined-type
+PASS monokai DPI artwork 300 meta-defined-type
+PASS monokai DPI 400 meta-defined-type
+PASS monokai DPI artwork 400 meta-defined-type
+PASS monokai DPI 100 meta-event-subscription
+PASS monokai DPI artwork 100 meta-event-subscription
+PASS monokai DPI 125 meta-event-subscription
+PASS monokai DPI artwork 125 meta-event-subscription
+PASS monokai DPI 150 meta-event-subscription
+PASS monokai DPI artwork 150 meta-event-subscription
+PASS monokai DPI 175 meta-event-subscription
+PASS monokai DPI artwork 175 meta-event-subscription
+PASS monokai DPI 200 meta-event-subscription
+PASS monokai DPI artwork 200 meta-event-subscription
+PASS monokai DPI 300 meta-event-subscription
+PASS monokai DPI artwork 300 meta-event-subscription
+PASS monokai DPI 400 meta-event-subscription
+PASS monokai DPI artwork 400 meta-event-subscription
+PASS monokai DPI 100 meta-characteristic-plan
+PASS monokai DPI artwork 100 meta-characteristic-plan
+PASS monokai DPI 125 meta-characteristic-plan
+PASS monokai DPI artwork 125 meta-characteristic-plan
+PASS monokai DPI 150 meta-characteristic-plan
+PASS monokai DPI artwork 150 meta-characteristic-plan
+PASS monokai DPI 175 meta-characteristic-plan
+PASS monokai DPI artwork 175 meta-characteristic-plan
+PASS monokai DPI 200 meta-characteristic-plan
+PASS monokai DPI artwork 200 meta-characteristic-plan
+PASS monokai DPI 300 meta-characteristic-plan
+PASS monokai DPI artwork 300 meta-characteristic-plan
+PASS monokai DPI 400 meta-characteristic-plan
+PASS monokai DPI artwork 400 meta-characteristic-plan
+PASS monokai DPI 100 meta-account-plan
+PASS monokai DPI artwork 100 meta-account-plan
+PASS monokai DPI 125 meta-account-plan
+PASS monokai DPI artwork 125 meta-account-plan
+PASS monokai DPI 150 meta-account-plan
+PASS monokai DPI artwork 150 meta-account-plan
+PASS monokai DPI 175 meta-account-plan
+PASS monokai DPI artwork 175 meta-account-plan
+PASS monokai DPI 200 meta-account-plan
+PASS monokai DPI artwork 200 meta-account-plan
+PASS monokai DPI 300 meta-account-plan
+PASS monokai DPI artwork 300 meta-account-plan
+PASS monokai DPI 400 meta-account-plan
+PASS monokai DPI artwork 400 meta-account-plan
+PASS monokai DPI 100 meta-resource
+PASS monokai DPI artwork 100 meta-resource
+PASS monokai DPI 125 meta-resource
+PASS monokai DPI artwork 125 meta-resource
+PASS monokai DPI 150 meta-resource
+PASS monokai DPI artwork 150 meta-resource
+PASS monokai DPI 175 meta-resource
+PASS monokai DPI artwork 175 meta-resource
+PASS monokai DPI 200 meta-resource
+PASS monokai DPI artwork 200 meta-resource
+PASS monokai DPI 300 meta-resource
+PASS monokai DPI artwork 300 meta-resource
+PASS monokai DPI 400 meta-resource
+PASS monokai DPI artwork 400 meta-resource
+PASS monokai public viewer pipeline uses replacement
+PASS monokai lightweight status overlay remains on top
+PASS monokai new base remains under status overlay
+PASS status suffix is preserved
+PASS status foreground color is preserved
+PASS status font is preserved
+PASS modified/composite unknown native image is preserved
+PASS icon operations preserve BSL source and modification stamp
+PASS github-light-default palette apply preserves separate icon flag
+PASS github-light-default native base replaced accounting_flag
+PASS github-light-default exact upstream artwork accounting_flag
+PASS native image remains unmodified accounting_flag
+PASS github-light-default native base replaced accounting_register
+PASS github-light-default exact upstream artwork accounting_register
+PASS native image remains unmodified accounting_register
+PASS github-light-default native base replaced accumulation_register
+PASS github-light-default exact upstream artwork accumulation_register
+PASS native image remains unmodified accumulation_register
+PASS github-light-default native base replaced addressing_attribute
+PASS github-light-default exact upstream artwork addressing_attribute
+PASS native image remains unmodified addressing_attribute
+PASS github-light-default native base replaced attribute
+PASS github-light-default exact upstream artwork attribute
+PASS native image remains unmodified attribute
+PASS github-light-default native base replaced bot
+PASS github-light-default exact upstream artwork bot
+PASS native image remains unmodified bot
+PASS github-light-default native base replaced bot_dark
+PASS github-light-default exact upstream artwork bot_dark
+PASS native image remains unmodified bot_dark
+PASS github-light-default native base replaced business_process
+PASS github-light-default exact upstream artwork business_process
+PASS native image remains unmodified business_process
+PASS github-light-default native base replaced business_process_dark
+PASS github-light-default exact upstream artwork business_process_dark
+PASS native image remains unmodified business_process_dark
+PASS github-light-default native base replaced calculation_register
+PASS github-light-default exact upstream artwork calculation_register
+PASS native image remains unmodified calculation_register
+PASS github-light-default native base replaced catalog
+PASS github-light-default exact upstream artwork catalog
+PASS native image remains unmodified catalog
+PASS github-light-default native base replaced chart_of_accounts
+PASS github-light-default exact upstream artwork chart_of_accounts
+PASS native image remains unmodified chart_of_accounts
+PASS github-light-default native base replaced chart_of_calculation_types
+PASS github-light-default exact upstream artwork chart_of_calculation_types
+PASS native image remains unmodified chart_of_calculation_types
+PASS github-light-default native base replaced chart_of_characteristic_types
+PASS github-light-default exact upstream artwork chart_of_characteristic_types
+PASS native image remains unmodified chart_of_characteristic_types
+PASS github-light-default native base replaced command
+PASS github-light-default exact upstream artwork command
+PASS native image remains unmodified command
+PASS github-light-default native base replaced command_group
+PASS github-light-default exact upstream artwork command_group
+PASS native image remains unmodified command_group
+PASS github-light-default native base replaced common
+PASS github-light-default exact upstream artwork common
+PASS native image remains unmodified common
+PASS github-light-default native base replaced common_attribute
+PASS github-light-default exact upstream artwork common_attribute
+PASS native image remains unmodified common_attribute
+PASS github-light-default native base replaced common_form
+PASS github-light-default exact upstream artwork common_form
+PASS native image remains unmodified common_form
+PASS github-light-default native base replaced common_module
+PASS github-light-default exact upstream artwork common_module
+PASS native image remains unmodified common_module
+PASS github-light-default native base replaced common_template
+PASS github-light-default exact upstream artwork common_template
+PASS native image remains unmodified common_template
+PASS github-light-default native base replaced configuration
+PASS github-light-default exact upstream artwork configuration
+PASS native image remains unmodified configuration
+PASS github-light-default native base replaced constant
+PASS github-light-default exact upstream artwork constant
+PASS native image remains unmodified constant
+PASS github-light-default native base replaced data_processor
+PASS github-light-default exact upstream artwork data_processor
+PASS native image remains unmodified data_processor
+PASS github-light-default native base replaced data_processor_dark
+PASS github-light-default exact upstream artwork data_processor_dark
+PASS native image remains unmodified data_processor_dark
+PASS github-light-default native base replaced defined_type
+PASS github-light-default exact upstream artwork defined_type
+PASS native image remains unmodified defined_type
+PASS github-light-default native base replaced document
+PASS github-light-default exact upstream artwork document
+PASS native image remains unmodified document
+PASS github-light-default native base replaced document_journal
+PASS github-light-default exact upstream artwork document_journal
+PASS native image remains unmodified document_journal
+PASS github-light-default native base replaced document_numerator
+PASS github-light-default exact upstream artwork document_numerator
+PASS native image remains unmodified document_numerator
+PASS github-light-default native base replaced enum
+PASS github-light-default exact upstream artwork enum
+PASS native image remains unmodified enum
+PASS github-light-default native base replaced enum_dark
+PASS github-light-default exact upstream artwork enum_dark
+PASS native image remains unmodified enum_dark
+PASS github-light-default native base replaced enum_value
+PASS github-light-default exact upstream artwork enum_value
+PASS native image remains unmodified enum_value
+PASS github-light-default native base replaced event_subscription
+PASS github-light-default exact upstream artwork event_subscription
+PASS native image remains unmodified event_subscription
+PASS github-light-default native base replaced exchange_plan
+PASS github-light-default exact upstream artwork exchange_plan
+PASS native image remains unmodified exchange_plan
+PASS github-light-default native base replaced ext_dimension_accounting_flag
+PASS github-light-default exact upstream artwork ext_dimension_accounting_flag
+PASS native image remains unmodified ext_dimension_accounting_flag
+PASS github-light-default native base replaced form
+PASS github-light-default exact upstream artwork form
+PASS native image remains unmodified form
+PASS github-light-default native base replaced functional_option
+PASS github-light-default exact upstream artwork functional_option
+PASS native image remains unmodified functional_option
+PASS github-light-default native base replaced functional_option_dark
+PASS github-light-default exact upstream artwork functional_option_dark
+PASS native image remains unmodified functional_option_dark
+PASS github-light-default native base replaced http
+PASS github-light-default exact upstream artwork http
+PASS native image remains unmodified http
+PASS github-light-default native base replaced http_dark
+PASS github-light-default exact upstream artwork http_dark
+PASS native image remains unmodified http_dark
+PASS github-light-default native base replaced information_register
+PASS github-light-default exact upstream artwork information_register
+PASS native image remains unmodified information_register
+PASS github-light-default native base replaced language
+PASS github-light-default exact upstream artwork language
+PASS native image remains unmodified language
+PASS github-light-default native base replaced language_dark
+PASS github-light-default exact upstream artwork language_dark
+PASS native image remains unmodified language_dark
+PASS github-light-default native base replaced recalculation
+PASS github-light-default exact upstream artwork recalculation
+PASS native image remains unmodified recalculation
+PASS github-light-default native base replaced register_dimension
+PASS github-light-default exact upstream artwork register_dimension
+PASS native image remains unmodified register_dimension
+PASS github-light-default native base replaced register_resource
+PASS github-light-default exact upstream artwork register_resource
+PASS native image remains unmodified register_resource
+PASS github-light-default native base replaced report
+PASS github-light-default exact upstream artwork report
+PASS native image remains unmodified report
+PASS github-light-default native base replaced role
+PASS github-light-default exact upstream artwork role
+PASS native image remains unmodified role
+PASS github-light-default native base replaced scheduled_job
+PASS github-light-default exact upstream artwork scheduled_job
+PASS native image remains unmodified scheduled_job
+PASS github-light-default native base replaced sequence
+PASS github-light-default exact upstream artwork sequence
+PASS native image remains unmodified sequence
+PASS github-light-default native base replaced session_parameter
+PASS github-light-default exact upstream artwork session_parameter
+PASS native image remains unmodified session_parameter
+PASS github-light-default native base replaced settings_storage
+PASS github-light-default exact upstream artwork settings_storage
+PASS native image remains unmodified settings_storage
+PASS github-light-default native base replaced standard_attribute
+PASS github-light-default exact upstream artwork standard_attribute
+PASS native image remains unmodified standard_attribute
+PASS github-light-default native base replaced style
+PASS github-light-default exact upstream artwork style
+PASS native image remains unmodified style
+PASS github-light-default native base replaced style_item
+PASS github-light-default exact upstream artwork style_item
+PASS native image remains unmodified style_item
+PASS github-light-default native base replaced subsystem
+PASS github-light-default exact upstream artwork subsystem
+PASS native image remains unmodified subsystem
+PASS github-light-default native base replaced tabular_section
+PASS github-light-default exact upstream artwork tabular_section
+PASS native image remains unmodified tabular_section
+PASS github-light-default native base replaced task
+PASS github-light-default exact upstream artwork task
+PASS native image remains unmodified task
+PASS github-light-default native base replaced template
+PASS github-light-default exact upstream artwork template
+PASS native image remains unmodified template
+PASS github-light-default native base replaced web_service
+PASS github-light-default exact upstream artwork web_service
+PASS native image remains unmodified web_service
+PASS github-light-default native base replaced web_service_dark
+PASS github-light-default exact upstream artwork web_service_dark
+PASS native image remains unmodified web_service_dark
+PASS github-light-default native base replaced web_socket_client
+PASS github-light-default exact upstream artwork web_socket_client
+PASS native image remains unmodified web_socket_client
+PASS github-light-default native base replaced web_socket_client_dark
+PASS github-light-default exact upstream artwork web_socket_client_dark
+PASS native image remains unmodified web_socket_client_dark
+PASS github-light-default native base replaced ws_reference
+PASS github-light-default exact upstream artwork ws_reference
+PASS native image remains unmodified ws_reference
+PASS github-light-default DPI 100 meta-processor
+PASS github-light-default DPI artwork 100 meta-processor
+PASS github-light-default DPI 125 meta-processor
+PASS github-light-default DPI artwork 125 meta-processor
+PASS github-light-default DPI 150 meta-processor
+PASS github-light-default DPI artwork 150 meta-processor
+PASS github-light-default DPI 175 meta-processor
+PASS github-light-default DPI artwork 175 meta-processor
+PASS github-light-default DPI 200 meta-processor
+PASS github-light-default DPI artwork 200 meta-processor
+PASS github-light-default DPI 300 meta-processor
+PASS github-light-default DPI artwork 300 meta-processor
+PASS github-light-default DPI 400 meta-processor
+PASS github-light-default DPI artwork 400 meta-processor
+PASS github-light-default DPI 100 meta-common
+PASS github-light-default DPI artwork 100 meta-common
+PASS github-light-default DPI 125 meta-common
+PASS github-light-default DPI artwork 125 meta-common
+PASS github-light-default DPI 150 meta-common
+PASS github-light-default DPI artwork 150 meta-common
+PASS github-light-default DPI 175 meta-common
+PASS github-light-default DPI artwork 175 meta-common
+PASS github-light-default DPI 200 meta-common
+PASS github-light-default DPI artwork 200 meta-common
+PASS github-light-default DPI 300 meta-common
+PASS github-light-default DPI artwork 300 meta-common
+PASS github-light-default DPI 400 meta-common
+PASS github-light-default DPI artwork 400 meta-common
+PASS github-light-default DPI 100 meta-websocket
+PASS github-light-default DPI artwork 100 meta-websocket
+PASS github-light-default DPI 125 meta-websocket
+PASS github-light-default DPI artwork 125 meta-websocket
+PASS github-light-default DPI 150 meta-websocket
+PASS github-light-default DPI artwork 150 meta-websocket
+PASS github-light-default DPI 175 meta-websocket
+PASS github-light-default DPI artwork 175 meta-websocket
+PASS github-light-default DPI 200 meta-websocket
+PASS github-light-default DPI artwork 200 meta-websocket
+PASS github-light-default DPI 300 meta-websocket
+PASS github-light-default DPI artwork 300 meta-websocket
+PASS github-light-default DPI 400 meta-websocket
+PASS github-light-default DPI artwork 400 meta-websocket
+PASS github-light-default DPI 100 meta-subsystem
+PASS github-light-default DPI artwork 100 meta-subsystem
+PASS github-light-default DPI 125 meta-subsystem
+PASS github-light-default DPI artwork 125 meta-subsystem
+PASS github-light-default DPI 150 meta-subsystem
+PASS github-light-default DPI artwork 150 meta-subsystem
+PASS github-light-default DPI 175 meta-subsystem
+PASS github-light-default DPI artwork 175 meta-subsystem
+PASS github-light-default DPI 200 meta-subsystem
+PASS github-light-default DPI artwork 200 meta-subsystem
+PASS github-light-default DPI 300 meta-subsystem
+PASS github-light-default DPI artwork 300 meta-subsystem
+PASS github-light-default DPI 400 meta-subsystem
+PASS github-light-default DPI artwork 400 meta-subsystem
+PASS github-light-default DPI 100 meta-language
+PASS github-light-default DPI artwork 100 meta-language
+PASS github-light-default DPI 125 meta-language
+PASS github-light-default DPI artwork 125 meta-language
+PASS github-light-default DPI 150 meta-language
+PASS github-light-default DPI artwork 150 meta-language
+PASS github-light-default DPI 175 meta-language
+PASS github-light-default DPI artwork 175 meta-language
+PASS github-light-default DPI 200 meta-language
+PASS github-light-default DPI artwork 200 meta-language
+PASS github-light-default DPI 300 meta-language
+PASS github-light-default DPI artwork 300 meta-language
+PASS github-light-default DPI 400 meta-language
+PASS github-light-default DPI artwork 400 meta-language
+PASS github-light-default DPI 100 meta-accounting-register
+PASS github-light-default DPI artwork 100 meta-accounting-register
+PASS github-light-default DPI 125 meta-accounting-register
+PASS github-light-default DPI artwork 125 meta-accounting-register
+PASS github-light-default DPI 150 meta-accounting-register
+PASS github-light-default DPI artwork 150 meta-accounting-register
+PASS github-light-default DPI 175 meta-accounting-register
+PASS github-light-default DPI artwork 175 meta-accounting-register
+PASS github-light-default DPI 200 meta-accounting-register
+PASS github-light-default DPI artwork 200 meta-accounting-register
+PASS github-light-default DPI 300 meta-accounting-register
+PASS github-light-default DPI artwork 300 meta-accounting-register
+PASS github-light-default DPI 400 meta-accounting-register
+PASS github-light-default DPI artwork 400 meta-accounting-register
+PASS github-light-default DPI 100 meta-configuration
+PASS github-light-default DPI artwork 100 meta-configuration
+PASS github-light-default DPI 125 meta-configuration
+PASS github-light-default DPI artwork 125 meta-configuration
+PASS github-light-default DPI 150 meta-configuration
+PASS github-light-default DPI artwork 150 meta-configuration
+PASS github-light-default DPI 175 meta-configuration
+PASS github-light-default DPI artwork 175 meta-configuration
+PASS github-light-default DPI 200 meta-configuration
+PASS github-light-default DPI artwork 200 meta-configuration
+PASS github-light-default DPI 300 meta-configuration
+PASS github-light-default DPI artwork 300 meta-configuration
+PASS github-light-default DPI 400 meta-configuration
+PASS github-light-default DPI artwork 400 meta-configuration
+PASS github-light-default DPI 100 meta-scheduled-job
+PASS github-light-default DPI artwork 100 meta-scheduled-job
+PASS github-light-default DPI 125 meta-scheduled-job
+PASS github-light-default DPI artwork 125 meta-scheduled-job
+PASS github-light-default DPI 150 meta-scheduled-job
+PASS github-light-default DPI artwork 150 meta-scheduled-job
+PASS github-light-default DPI 175 meta-scheduled-job
+PASS github-light-default DPI artwork 175 meta-scheduled-job
+PASS github-light-default DPI 200 meta-scheduled-job
+PASS github-light-default DPI artwork 200 meta-scheduled-job
+PASS github-light-default DPI 300 meta-scheduled-job
+PASS github-light-default DPI artwork 300 meta-scheduled-job
+PASS github-light-default DPI 400 meta-scheduled-job
+PASS github-light-default DPI artwork 400 meta-scheduled-job
+PASS github-light-default DPI 100 meta-template
+PASS github-light-default DPI artwork 100 meta-template
+PASS github-light-default DPI 125 meta-template
+PASS github-light-default DPI artwork 125 meta-template
+PASS github-light-default DPI 150 meta-template
+PASS github-light-default DPI artwork 150 meta-template
+PASS github-light-default DPI 175 meta-template
+PASS github-light-default DPI artwork 175 meta-template
+PASS github-light-default DPI 200 meta-template
+PASS github-light-default DPI artwork 200 meta-template
+PASS github-light-default DPI 300 meta-template
+PASS github-light-default DPI artwork 300 meta-template
+PASS github-light-default DPI 400 meta-template
+PASS github-light-default DPI artwork 400 meta-template
+PASS github-light-default DPI 100 meta-enumeration-value
+PASS github-light-default DPI artwork 100 meta-enumeration-value
+PASS github-light-default DPI 125 meta-enumeration-value
+PASS github-light-default DPI artwork 125 meta-enumeration-value
+PASS github-light-default DPI 150 meta-enumeration-value
+PASS github-light-default DPI artwork 150 meta-enumeration-value
+PASS github-light-default DPI 175 meta-enumeration-value
+PASS github-light-default DPI artwork 175 meta-enumeration-value
+PASS github-light-default DPI 200 meta-enumeration-value
+PASS github-light-default DPI artwork 200 meta-enumeration-value
+PASS github-light-default DPI 300 meta-enumeration-value
+PASS github-light-default DPI artwork 300 meta-enumeration-value
+PASS github-light-default DPI 400 meta-enumeration-value
+PASS github-light-default DPI artwork 400 meta-enumeration-value
+PASS github-light-default DPI 100 meta-command
+PASS github-light-default DPI artwork 100 meta-command
+PASS github-light-default DPI 125 meta-command
+PASS github-light-default DPI artwork 125 meta-command
+PASS github-light-default DPI 150 meta-command
+PASS github-light-default DPI artwork 150 meta-command
+PASS github-light-default DPI 175 meta-command
+PASS github-light-default DPI artwork 175 meta-command
+PASS github-light-default DPI 200 meta-command
+PASS github-light-default DPI artwork 200 meta-command
+PASS github-light-default DPI 300 meta-command
+PASS github-light-default DPI artwork 300 meta-command
+PASS github-light-default DPI 400 meta-command
+PASS github-light-default DPI artwork 400 meta-command
+PASS github-light-default DPI 100 meta-document-journal
+PASS github-light-default DPI artwork 100 meta-document-journal
+PASS github-light-default DPI 125 meta-document-journal
+PASS github-light-default DPI artwork 125 meta-document-journal
+PASS github-light-default DPI 150 meta-document-journal
+PASS github-light-default DPI artwork 150 meta-document-journal
+PASS github-light-default DPI 175 meta-document-journal
+PASS github-light-default DPI artwork 175 meta-document-journal
+PASS github-light-default DPI 200 meta-document-journal
+PASS github-light-default DPI artwork 200 meta-document-journal
+PASS github-light-default DPI 300 meta-document-journal
+PASS github-light-default DPI artwork 300 meta-document-journal
+PASS github-light-default DPI 400 meta-document-journal
+PASS github-light-default DPI artwork 400 meta-document-journal
+PASS github-light-default DPI 100 meta-task
+PASS github-light-default DPI artwork 100 meta-task
+PASS github-light-default DPI 125 meta-task
+PASS github-light-default DPI artwork 125 meta-task
+PASS github-light-default DPI 150 meta-task
+PASS github-light-default DPI artwork 150 meta-task
+PASS github-light-default DPI 175 meta-task
+PASS github-light-default DPI artwork 175 meta-task
+PASS github-light-default DPI 200 meta-task
+PASS github-light-default DPI artwork 200 meta-task
+PASS github-light-default DPI 300 meta-task
+PASS github-light-default DPI artwork 300 meta-task
+PASS github-light-default DPI 400 meta-task
+PASS github-light-default DPI artwork 400 meta-task
+PASS github-light-default DPI 100 meta-role
+PASS github-light-default DPI artwork 100 meta-role
+PASS github-light-default DPI 125 meta-role
+PASS github-light-default DPI artwork 125 meta-role
+PASS github-light-default DPI 150 meta-role
+PASS github-light-default DPI artwork 150 meta-role
+PASS github-light-default DPI 175 meta-role
+PASS github-light-default DPI artwork 175 meta-role
+PASS github-light-default DPI 200 meta-role
+PASS github-light-default DPI artwork 200 meta-role
+PASS github-light-default DPI 300 meta-role
+PASS github-light-default DPI artwork 300 meta-role
+PASS github-light-default DPI 400 meta-role
+PASS github-light-default DPI artwork 400 meta-role
+PASS github-light-default DPI 100 meta-recalculation
+PASS github-light-default DPI artwork 100 meta-recalculation
+PASS github-light-default DPI 125 meta-recalculation
+PASS github-light-default DPI artwork 125 meta-recalculation
+PASS github-light-default DPI 150 meta-recalculation
+PASS github-light-default DPI artwork 150 meta-recalculation
+PASS github-light-default DPI 175 meta-recalculation
+PASS github-light-default DPI artwork 175 meta-recalculation
+PASS github-light-default DPI 200 meta-recalculation
+PASS github-light-default DPI artwork 200 meta-recalculation
+PASS github-light-default DPI 300 meta-recalculation
+PASS github-light-default DPI artwork 300 meta-recalculation
+PASS github-light-default DPI 400 meta-recalculation
+PASS github-light-default DPI artwork 400 meta-recalculation
+PASS github-light-default DPI 100 meta-business-process
+PASS github-light-default DPI artwork 100 meta-business-process
+PASS github-light-default DPI 125 meta-business-process
+PASS github-light-default DPI artwork 125 meta-business-process
+PASS github-light-default DPI 150 meta-business-process
+PASS github-light-default DPI artwork 150 meta-business-process
+PASS github-light-default DPI 175 meta-business-process
+PASS github-light-default DPI artwork 175 meta-business-process
+PASS github-light-default DPI 200 meta-business-process
+PASS github-light-default DPI artwork 200 meta-business-process
+PASS github-light-default DPI 300 meta-business-process
+PASS github-light-default DPI artwork 300 meta-business-process
+PASS github-light-default DPI 400 meta-business-process
+PASS github-light-default DPI artwork 400 meta-business-process
+PASS github-light-default DPI 100 meta-document-numerator
+PASS github-light-default DPI artwork 100 meta-document-numerator
+PASS github-light-default DPI 125 meta-document-numerator
+PASS github-light-default DPI artwork 125 meta-document-numerator
+PASS github-light-default DPI 150 meta-document-numerator
+PASS github-light-default DPI artwork 150 meta-document-numerator
+PASS github-light-default DPI 175 meta-document-numerator
+PASS github-light-default DPI artwork 175 meta-document-numerator
+PASS github-light-default DPI 200 meta-document-numerator
+PASS github-light-default DPI artwork 200 meta-document-numerator
+PASS github-light-default DPI 300 meta-document-numerator
+PASS github-light-default DPI artwork 300 meta-document-numerator
+PASS github-light-default DPI 400 meta-document-numerator
+PASS github-light-default DPI artwork 400 meta-document-numerator
+PASS github-light-default DPI 100 meta-information-register
+PASS github-light-default DPI artwork 100 meta-information-register
+PASS github-light-default DPI 125 meta-information-register
+PASS github-light-default DPI artwork 125 meta-information-register
+PASS github-light-default DPI 150 meta-information-register
+PASS github-light-default DPI artwork 150 meta-information-register
+PASS github-light-default DPI 175 meta-information-register
+PASS github-light-default DPI artwork 175 meta-information-register
+PASS github-light-default DPI 200 meta-information-register
+PASS github-light-default DPI artwork 200 meta-information-register
+PASS github-light-default DPI 300 meta-information-register
+PASS github-light-default DPI artwork 300 meta-information-register
+PASS github-light-default DPI 400 meta-information-register
+PASS github-light-default DPI artwork 400 meta-information-register
+PASS github-light-default DPI 100 meta-form
+PASS github-light-default DPI artwork 100 meta-form
+PASS github-light-default DPI 125 meta-form
+PASS github-light-default DPI artwork 125 meta-form
+PASS github-light-default DPI 150 meta-form
+PASS github-light-default DPI artwork 150 meta-form
+PASS github-light-default DPI 175 meta-form
+PASS github-light-default DPI artwork 175 meta-form
+PASS github-light-default DPI 200 meta-form
+PASS github-light-default DPI artwork 200 meta-form
+PASS github-light-default DPI 300 meta-form
+PASS github-light-default DPI artwork 300 meta-form
+PASS github-light-default DPI 400 meta-form
+PASS github-light-default DPI artwork 400 meta-form
+PASS github-light-default DPI 100 meta-document-sequence
+PASS github-light-default DPI artwork 100 meta-document-sequence
+PASS github-light-default DPI 125 meta-document-sequence
+PASS github-light-default DPI artwork 125 meta-document-sequence
+PASS github-light-default DPI 150 meta-document-sequence
+PASS github-light-default DPI artwork 150 meta-document-sequence
+PASS github-light-default DPI 175 meta-document-sequence
+PASS github-light-default DPI artwork 175 meta-document-sequence
+PASS github-light-default DPI 200 meta-document-sequence
+PASS github-light-default DPI artwork 200 meta-document-sequence
+PASS github-light-default DPI 300 meta-document-sequence
+PASS github-light-default DPI artwork 300 meta-document-sequence
+PASS github-light-default DPI 400 meta-document-sequence
+PASS github-light-default DPI artwork 400 meta-document-sequence
+PASS github-light-default DPI 100 meta-constant
+PASS github-light-default DPI artwork 100 meta-constant
+PASS github-light-default DPI 125 meta-constant
+PASS github-light-default DPI artwork 125 meta-constant
+PASS github-light-default DPI 150 meta-constant
+PASS github-light-default DPI artwork 150 meta-constant
+PASS github-light-default DPI 175 meta-constant
+PASS github-light-default DPI artwork 175 meta-constant
+PASS github-light-default DPI 200 meta-constant
+PASS github-light-default DPI artwork 200 meta-constant
+PASS github-light-default DPI 300 meta-constant
+PASS github-light-default DPI artwork 300 meta-constant
+PASS github-light-default DPI 400 meta-constant
+PASS github-light-default DPI artwork 400 meta-constant
+PASS github-light-default DPI 100 meta-web-service
+PASS github-light-default DPI artwork 100 meta-web-service
+PASS github-light-default DPI 125 meta-web-service
+PASS github-light-default DPI artwork 125 meta-web-service
+PASS github-light-default DPI 150 meta-web-service
+PASS github-light-default DPI artwork 150 meta-web-service
+PASS github-light-default DPI 175 meta-web-service
+PASS github-light-default DPI artwork 175 meta-web-service
+PASS github-light-default DPI 200 meta-web-service
+PASS github-light-default DPI artwork 200 meta-web-service
+PASS github-light-default DPI 300 meta-web-service
+PASS github-light-default DPI artwork 300 meta-web-service
+PASS github-light-default DPI 400 meta-web-service
+PASS github-light-default DPI artwork 400 meta-web-service
+PASS github-light-default DPI 100 meta-module
+PASS github-light-default DPI artwork 100 meta-module
+PASS github-light-default DPI 125 meta-module
+PASS github-light-default DPI artwork 125 meta-module
+PASS github-light-default DPI 150 meta-module
+PASS github-light-default DPI artwork 150 meta-module
+PASS github-light-default DPI 175 meta-module
+PASS github-light-default DPI artwork 175 meta-module
+PASS github-light-default DPI 200 meta-module
+PASS github-light-default DPI artwork 200 meta-module
+PASS github-light-default DPI 300 meta-module
+PASS github-light-default DPI artwork 300 meta-module
+PASS github-light-default DPI 400 meta-module
+PASS github-light-default DPI artwork 400 meta-module
+PASS github-light-default DPI 100 meta-calculation-plan
+PASS github-light-default DPI artwork 100 meta-calculation-plan
+PASS github-light-default DPI 125 meta-calculation-plan
+PASS github-light-default DPI artwork 125 meta-calculation-plan
+PASS github-light-default DPI 150 meta-calculation-plan
+PASS github-light-default DPI artwork 150 meta-calculation-plan
+PASS github-light-default DPI 175 meta-calculation-plan
+PASS github-light-default DPI artwork 175 meta-calculation-plan
+PASS github-light-default DPI 200 meta-calculation-plan
+PASS github-light-default DPI artwork 200 meta-calculation-plan
+PASS github-light-default DPI 300 meta-calculation-plan
+PASS github-light-default DPI artwork 300 meta-calculation-plan
+PASS github-light-default DPI 400 meta-calculation-plan
+PASS github-light-default DPI artwork 400 meta-calculation-plan
+PASS github-light-default DPI 100 meta-settings-storage
+PASS github-light-default DPI artwork 100 meta-settings-storage
+PASS github-light-default DPI 125 meta-settings-storage
+PASS github-light-default DPI artwork 125 meta-settings-storage
+PASS github-light-default DPI 150 meta-settings-storage
+PASS github-light-default DPI artwork 150 meta-settings-storage
+PASS github-light-default DPI 175 meta-settings-storage
+PASS github-light-default DPI artwork 175 meta-settings-storage
+PASS github-light-default DPI 200 meta-settings-storage
+PASS github-light-default DPI artwork 200 meta-settings-storage
+PASS github-light-default DPI 300 meta-settings-storage
+PASS github-light-default DPI artwork 300 meta-settings-storage
+PASS github-light-default DPI 400 meta-settings-storage
+PASS github-light-default DPI artwork 400 meta-settings-storage
+PASS github-light-default DPI 100 meta-exchange-plan
+PASS github-light-default DPI artwork 100 meta-exchange-plan
+PASS github-light-default DPI 125 meta-exchange-plan
+PASS github-light-default DPI artwork 125 meta-exchange-plan
+PASS github-light-default DPI 150 meta-exchange-plan
+PASS github-light-default DPI artwork 150 meta-exchange-plan
+PASS github-light-default DPI 175 meta-exchange-plan
+PASS github-light-default DPI artwork 175 meta-exchange-plan
+PASS github-light-default DPI 200 meta-exchange-plan
+PASS github-light-default DPI artwork 200 meta-exchange-plan
+PASS github-light-default DPI 300 meta-exchange-plan
+PASS github-light-default DPI artwork 300 meta-exchange-plan
+PASS github-light-default DPI 400 meta-exchange-plan
+PASS github-light-default DPI artwork 400 meta-exchange-plan
+PASS github-light-default DPI 100 meta-accounting-flag
+PASS github-light-default DPI artwork 100 meta-accounting-flag
+PASS github-light-default DPI 125 meta-accounting-flag
+PASS github-light-default DPI artwork 125 meta-accounting-flag
+PASS github-light-default DPI 150 meta-accounting-flag
+PASS github-light-default DPI artwork 150 meta-accounting-flag
+PASS github-light-default DPI 175 meta-accounting-flag
+PASS github-light-default DPI artwork 175 meta-accounting-flag
+PASS github-light-default DPI 200 meta-accounting-flag
+PASS github-light-default DPI artwork 200 meta-accounting-flag
+PASS github-light-default DPI 300 meta-accounting-flag
+PASS github-light-default DPI artwork 300 meta-accounting-flag
+PASS github-light-default DPI 400 meta-accounting-flag
+PASS github-light-default DPI artwork 400 meta-accounting-flag
+PASS github-light-default DPI 100 meta-http-service
+PASS github-light-default DPI artwork 100 meta-http-service
+PASS github-light-default DPI 125 meta-http-service
+PASS github-light-default DPI artwork 125 meta-http-service
+PASS github-light-default DPI 150 meta-http-service
+PASS github-light-default DPI artwork 150 meta-http-service
+PASS github-light-default DPI 175 meta-http-service
+PASS github-light-default DPI artwork 175 meta-http-service
+PASS github-light-default DPI 200 meta-http-service
+PASS github-light-default DPI artwork 200 meta-http-service
+PASS github-light-default DPI 300 meta-http-service
+PASS github-light-default DPI artwork 300 meta-http-service
+PASS github-light-default DPI 400 meta-http-service
+PASS github-light-default DPI artwork 400 meta-http-service
+PASS github-light-default DPI 100 meta-bot
+PASS github-light-default DPI artwork 100 meta-bot
+PASS github-light-default DPI 125 meta-bot
+PASS github-light-default DPI artwork 125 meta-bot
+PASS github-light-default DPI 150 meta-bot
+PASS github-light-default DPI artwork 150 meta-bot
+PASS github-light-default DPI 175 meta-bot
+PASS github-light-default DPI artwork 175 meta-bot
+PASS github-light-default DPI 200 meta-bot
+PASS github-light-default DPI artwork 200 meta-bot
+PASS github-light-default DPI 300 meta-bot
+PASS github-light-default DPI artwork 300 meta-bot
+PASS github-light-default DPI 400 meta-bot
+PASS github-light-default DPI artwork 400 meta-bot
+PASS github-light-default DPI 100 meta-catalog
+PASS github-light-default DPI artwork 100 meta-catalog
+PASS github-light-default DPI 125 meta-catalog
+PASS github-light-default DPI artwork 125 meta-catalog
+PASS github-light-default DPI 150 meta-catalog
+PASS github-light-default DPI artwork 150 meta-catalog
+PASS github-light-default DPI 175 meta-catalog
+PASS github-light-default DPI artwork 175 meta-catalog
+PASS github-light-default DPI 200 meta-catalog
+PASS github-light-default DPI artwork 200 meta-catalog
+PASS github-light-default DPI 300 meta-catalog
+PASS github-light-default DPI artwork 300 meta-catalog
+PASS github-light-default DPI 400 meta-catalog
+PASS github-light-default DPI artwork 400 meta-catalog
+PASS github-light-default DPI 100 meta-style
+PASS github-light-default DPI artwork 100 meta-style
+PASS github-light-default DPI 125 meta-style
+PASS github-light-default DPI artwork 125 meta-style
+PASS github-light-default DPI 150 meta-style
+PASS github-light-default DPI artwork 150 meta-style
+PASS github-light-default DPI 175 meta-style
+PASS github-light-default DPI artwork 175 meta-style
+PASS github-light-default DPI 200 meta-style
+PASS github-light-default DPI artwork 200 meta-style
+PASS github-light-default DPI 300 meta-style
+PASS github-light-default DPI artwork 300 meta-style
+PASS github-light-default DPI 400 meta-style
+PASS github-light-default DPI artwork 400 meta-style
+PASS github-light-default DPI 100 meta-command-group
+PASS github-light-default DPI artwork 100 meta-command-group
+PASS github-light-default DPI 125 meta-command-group
+PASS github-light-default DPI artwork 125 meta-command-group
+PASS github-light-default DPI 150 meta-command-group
+PASS github-light-default DPI artwork 150 meta-command-group
+PASS github-light-default DPI 175 meta-command-group
+PASS github-light-default DPI artwork 175 meta-command-group
+PASS github-light-default DPI 200 meta-command-group
+PASS github-light-default DPI artwork 200 meta-command-group
+PASS github-light-default DPI 300 meta-command-group
+PASS github-light-default DPI artwork 300 meta-command-group
+PASS github-light-default DPI 400 meta-command-group
+PASS github-light-default DPI artwork 400 meta-command-group
+PASS github-light-default DPI 100 meta-report
+PASS github-light-default DPI artwork 100 meta-report
+PASS github-light-default DPI 125 meta-report
+PASS github-light-default DPI artwork 125 meta-report
+PASS github-light-default DPI 150 meta-report
+PASS github-light-default DPI artwork 150 meta-report
+PASS github-light-default DPI 175 meta-report
+PASS github-light-default DPI artwork 175 meta-report
+PASS github-light-default DPI 200 meta-report
+PASS github-light-default DPI artwork 200 meta-report
+PASS github-light-default DPI 300 meta-report
+PASS github-light-default DPI artwork 300 meta-report
+PASS github-light-default DPI 400 meta-report
+PASS github-light-default DPI artwork 400 meta-report
+PASS github-light-default DPI 100 meta-session-parameter
+PASS github-light-default DPI artwork 100 meta-session-parameter
+PASS github-light-default DPI 125 meta-session-parameter
+PASS github-light-default DPI artwork 125 meta-session-parameter
+PASS github-light-default DPI 150 meta-session-parameter
+PASS github-light-default DPI artwork 150 meta-session-parameter
+PASS github-light-default DPI 175 meta-session-parameter
+PASS github-light-default DPI artwork 175 meta-session-parameter
+PASS github-light-default DPI 200 meta-session-parameter
+PASS github-light-default DPI artwork 200 meta-session-parameter
+PASS github-light-default DPI 300 meta-session-parameter
+PASS github-light-default DPI artwork 300 meta-session-parameter
+PASS github-light-default DPI 400 meta-session-parameter
+PASS github-light-default DPI artwork 400 meta-session-parameter
+PASS github-light-default DPI 100 meta-enumeration
+PASS github-light-default DPI artwork 100 meta-enumeration
+PASS github-light-default DPI 125 meta-enumeration
+PASS github-light-default DPI artwork 125 meta-enumeration
+PASS github-light-default DPI 150 meta-enumeration
+PASS github-light-default DPI artwork 150 meta-enumeration
+PASS github-light-default DPI 175 meta-enumeration
+PASS github-light-default DPI artwork 175 meta-enumeration
+PASS github-light-default DPI 200 meta-enumeration
+PASS github-light-default DPI artwork 200 meta-enumeration
+PASS github-light-default DPI 300 meta-enumeration
+PASS github-light-default DPI artwork 300 meta-enumeration
+PASS github-light-default DPI 400 meta-enumeration
+PASS github-light-default DPI artwork 400 meta-enumeration
+PASS github-light-default DPI 100 meta-functional-option
+PASS github-light-default DPI artwork 100 meta-functional-option
+PASS github-light-default DPI 125 meta-functional-option
+PASS github-light-default DPI artwork 125 meta-functional-option
+PASS github-light-default DPI 150 meta-functional-option
+PASS github-light-default DPI artwork 150 meta-functional-option
+PASS github-light-default DPI 175 meta-functional-option
+PASS github-light-default DPI artwork 175 meta-functional-option
+PASS github-light-default DPI 200 meta-functional-option
+PASS github-light-default DPI artwork 200 meta-functional-option
+PASS github-light-default DPI 300 meta-functional-option
+PASS github-light-default DPI artwork 300 meta-functional-option
+PASS github-light-default DPI 400 meta-functional-option
+PASS github-light-default DPI artwork 400 meta-functional-option
+PASS github-light-default DPI 100 meta-tabular-section
+PASS github-light-default DPI artwork 100 meta-tabular-section
+PASS github-light-default DPI 125 meta-tabular-section
+PASS github-light-default DPI artwork 125 meta-tabular-section
+PASS github-light-default DPI 150 meta-tabular-section
+PASS github-light-default DPI artwork 150 meta-tabular-section
+PASS github-light-default DPI 175 meta-tabular-section
+PASS github-light-default DPI artwork 175 meta-tabular-section
+PASS github-light-default DPI 200 meta-tabular-section
+PASS github-light-default DPI artwork 200 meta-tabular-section
+PASS github-light-default DPI 300 meta-tabular-section
+PASS github-light-default DPI artwork 300 meta-tabular-section
+PASS github-light-default DPI 400 meta-tabular-section
+PASS github-light-default DPI artwork 400 meta-tabular-section
+PASS github-light-default DPI 100 meta-dimension
+PASS github-light-default DPI artwork 100 meta-dimension
+PASS github-light-default DPI 125 meta-dimension
+PASS github-light-default DPI artwork 125 meta-dimension
+PASS github-light-default DPI 150 meta-dimension
+PASS github-light-default DPI artwork 150 meta-dimension
+PASS github-light-default DPI 175 meta-dimension
+PASS github-light-default DPI artwork 175 meta-dimension
+PASS github-light-default DPI 200 meta-dimension
+PASS github-light-default DPI artwork 200 meta-dimension
+PASS github-light-default DPI 300 meta-dimension
+PASS github-light-default DPI artwork 300 meta-dimension
+PASS github-light-default DPI 400 meta-dimension
+PASS github-light-default DPI artwork 400 meta-dimension
+PASS github-light-default DPI 100 meta-ws-reference
+PASS github-light-default DPI artwork 100 meta-ws-reference
+PASS github-light-default DPI 125 meta-ws-reference
+PASS github-light-default DPI artwork 125 meta-ws-reference
+PASS github-light-default DPI 150 meta-ws-reference
+PASS github-light-default DPI artwork 150 meta-ws-reference
+PASS github-light-default DPI 175 meta-ws-reference
+PASS github-light-default DPI artwork 175 meta-ws-reference
+PASS github-light-default DPI 200 meta-ws-reference
+PASS github-light-default DPI artwork 200 meta-ws-reference
+PASS github-light-default DPI 300 meta-ws-reference
+PASS github-light-default DPI artwork 300 meta-ws-reference
+PASS github-light-default DPI 400 meta-ws-reference
+PASS github-light-default DPI artwork 400 meta-ws-reference
+PASS github-light-default DPI 100 meta-style-element
+PASS github-light-default DPI artwork 100 meta-style-element
+PASS github-light-default DPI 125 meta-style-element
+PASS github-light-default DPI artwork 125 meta-style-element
+PASS github-light-default DPI 150 meta-style-element
+PASS github-light-default DPI artwork 150 meta-style-element
+PASS github-light-default DPI 175 meta-style-element
+PASS github-light-default DPI artwork 175 meta-style-element
+PASS github-light-default DPI 200 meta-style-element
+PASS github-light-default DPI artwork 200 meta-style-element
+PASS github-light-default DPI 300 meta-style-element
+PASS github-light-default DPI artwork 300 meta-style-element
+PASS github-light-default DPI 400 meta-style-element
+PASS github-light-default DPI artwork 400 meta-style-element
+PASS github-light-default DPI 100 meta-document
+PASS github-light-default DPI artwork 100 meta-document
+PASS github-light-default DPI 125 meta-document
+PASS github-light-default DPI artwork 125 meta-document
+PASS github-light-default DPI 150 meta-document
+PASS github-light-default DPI artwork 150 meta-document
+PASS github-light-default DPI 175 meta-document
+PASS github-light-default DPI artwork 175 meta-document
+PASS github-light-default DPI 200 meta-document
+PASS github-light-default DPI artwork 200 meta-document
+PASS github-light-default DPI 300 meta-document
+PASS github-light-default DPI artwork 300 meta-document
+PASS github-light-default DPI 400 meta-document
+PASS github-light-default DPI artwork 400 meta-document
+PASS github-light-default DPI 100 meta-calculation-register
+PASS github-light-default DPI artwork 100 meta-calculation-register
+PASS github-light-default DPI 125 meta-calculation-register
+PASS github-light-default DPI artwork 125 meta-calculation-register
+PASS github-light-default DPI 150 meta-calculation-register
+PASS github-light-default DPI artwork 150 meta-calculation-register
+PASS github-light-default DPI 175 meta-calculation-register
+PASS github-light-default DPI artwork 175 meta-calculation-register
+PASS github-light-default DPI 200 meta-calculation-register
+PASS github-light-default DPI artwork 200 meta-calculation-register
+PASS github-light-default DPI 300 meta-calculation-register
+PASS github-light-default DPI artwork 300 meta-calculation-register
+PASS github-light-default DPI 400 meta-calculation-register
+PASS github-light-default DPI artwork 400 meta-calculation-register
+PASS github-light-default DPI 100 meta-attribute
+PASS github-light-default DPI artwork 100 meta-attribute
+PASS github-light-default DPI 125 meta-attribute
+PASS github-light-default DPI artwork 125 meta-attribute
+PASS github-light-default DPI 150 meta-attribute
+PASS github-light-default DPI artwork 150 meta-attribute
+PASS github-light-default DPI 175 meta-attribute
+PASS github-light-default DPI artwork 175 meta-attribute
+PASS github-light-default DPI 200 meta-attribute
+PASS github-light-default DPI artwork 200 meta-attribute
+PASS github-light-default DPI 300 meta-attribute
+PASS github-light-default DPI artwork 300 meta-attribute
+PASS github-light-default DPI 400 meta-attribute
+PASS github-light-default DPI artwork 400 meta-attribute
+PASS github-light-default DPI 100 meta-accumulation-register
+PASS github-light-default DPI artwork 100 meta-accumulation-register
+PASS github-light-default DPI 125 meta-accumulation-register
+PASS github-light-default DPI artwork 125 meta-accumulation-register
+PASS github-light-default DPI 150 meta-accumulation-register
+PASS github-light-default DPI artwork 150 meta-accumulation-register
+PASS github-light-default DPI 175 meta-accumulation-register
+PASS github-light-default DPI artwork 175 meta-accumulation-register
+PASS github-light-default DPI 200 meta-accumulation-register
+PASS github-light-default DPI artwork 200 meta-accumulation-register
+PASS github-light-default DPI 300 meta-accumulation-register
+PASS github-light-default DPI artwork 300 meta-accumulation-register
+PASS github-light-default DPI 400 meta-accumulation-register
+PASS github-light-default DPI artwork 400 meta-accumulation-register
+PASS github-light-default DPI 100 meta-defined-type
+PASS github-light-default DPI artwork 100 meta-defined-type
+PASS github-light-default DPI 125 meta-defined-type
+PASS github-light-default DPI artwork 125 meta-defined-type
+PASS github-light-default DPI 150 meta-defined-type
+PASS github-light-default DPI artwork 150 meta-defined-type
+PASS github-light-default DPI 175 meta-defined-type
+PASS github-light-default DPI artwork 175 meta-defined-type
+PASS github-light-default DPI 200 meta-defined-type
+PASS github-light-default DPI artwork 200 meta-defined-type
+PASS github-light-default DPI 300 meta-defined-type
+PASS github-light-default DPI artwork 300 meta-defined-type
+PASS github-light-default DPI 400 meta-defined-type
+PASS github-light-default DPI artwork 400 meta-defined-type
+PASS github-light-default DPI 100 meta-event-subscription
+PASS github-light-default DPI artwork 100 meta-event-subscription
+PASS github-light-default DPI 125 meta-event-subscription
+PASS github-light-default DPI artwork 125 meta-event-subscription
+PASS github-light-default DPI 150 meta-event-subscription
+PASS github-light-default DPI artwork 150 meta-event-subscription
+PASS github-light-default DPI 175 meta-event-subscription
+PASS github-light-default DPI artwork 175 meta-event-subscription
+PASS github-light-default DPI 200 meta-event-subscription
+PASS github-light-default DPI artwork 200 meta-event-subscription
+PASS github-light-default DPI 300 meta-event-subscription
+PASS github-light-default DPI artwork 300 meta-event-subscription
+PASS github-light-default DPI 400 meta-event-subscription
+PASS github-light-default DPI artwork 400 meta-event-subscription
+PASS github-light-default DPI 100 meta-characteristic-plan
+PASS github-light-default DPI artwork 100 meta-characteristic-plan
+PASS github-light-default DPI 125 meta-characteristic-plan
+PASS github-light-default DPI artwork 125 meta-characteristic-plan
+PASS github-light-default DPI 150 meta-characteristic-plan
+PASS github-light-default DPI artwork 150 meta-characteristic-plan
+PASS github-light-default DPI 175 meta-characteristic-plan
+PASS github-light-default DPI artwork 175 meta-characteristic-plan
+PASS github-light-default DPI 200 meta-characteristic-plan
+PASS github-light-default DPI artwork 200 meta-characteristic-plan
+PASS github-light-default DPI 300 meta-characteristic-plan
+PASS github-light-default DPI artwork 300 meta-characteristic-plan
+PASS github-light-default DPI 400 meta-characteristic-plan
+PASS github-light-default DPI artwork 400 meta-characteristic-plan
+PASS github-light-default DPI 100 meta-account-plan
+PASS github-light-default DPI artwork 100 meta-account-plan
+PASS github-light-default DPI 125 meta-account-plan
+PASS github-light-default DPI artwork 125 meta-account-plan
+PASS github-light-default DPI 150 meta-account-plan
+PASS github-light-default DPI artwork 150 meta-account-plan
+PASS github-light-default DPI 175 meta-account-plan
+PASS github-light-default DPI artwork 175 meta-account-plan
+PASS github-light-default DPI 200 meta-account-plan
+PASS github-light-default DPI artwork 200 meta-account-plan
+PASS github-light-default DPI 300 meta-account-plan
+PASS github-light-default DPI artwork 300 meta-account-plan
+PASS github-light-default DPI 400 meta-account-plan
+PASS github-light-default DPI artwork 400 meta-account-plan
+PASS github-light-default DPI 100 meta-resource
+PASS github-light-default DPI artwork 100 meta-resource
+PASS github-light-default DPI 125 meta-resource
+PASS github-light-default DPI artwork 125 meta-resource
+PASS github-light-default DPI 150 meta-resource
+PASS github-light-default DPI artwork 150 meta-resource
+PASS github-light-default DPI 175 meta-resource
+PASS github-light-default DPI artwork 175 meta-resource
+PASS github-light-default DPI 200 meta-resource
+PASS github-light-default DPI artwork 200 meta-resource
+PASS github-light-default DPI 300 meta-resource
+PASS github-light-default DPI artwork 300 meta-resource
+PASS github-light-default DPI 400 meta-resource
+PASS github-light-default DPI artwork 400 meta-resource
+PASS github-light-default public viewer pipeline uses replacement
+PASS github-light-default lightweight status overlay remains on top
+PASS github-light-default new base remains under status overlay
+PASS status suffix is preserved
+PASS status foreground color is preserved
+PASS status font is preserved
+PASS modified/composite unknown native image is preserved
+PASS icon operations preserve BSL source and modification stamp
+PASS turning icons off restores native image identity
+PASS fixture native decorator identity restored
+PASS actual EDT native decorator identity restored
+PASS turning icons off restores absent own key
+PASS original native pixels preserved throughout
+PASS icons and Light palette left for restart

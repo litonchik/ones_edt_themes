@@ -1,0 +1,32 @@
+{
+  "2026.1.2-dark.png": {
+    "width": 884,
+    "height": 581,
+    "sha256": "e183d9c495093c3b18e19538478c4c13b32a7f70224d22226cd32d395a7f8763"
+  },
+  "2026.1.2-light.png": {
+    "width": 884,
+    "height": 581,
+    "sha256": "ee3c134ee2d240150b8bdd79971088dff0747b887c19b4890e1a9c182506a7e9"
+  },
+  "2026.1.3-dark.png": {
+    "width": 884,
+    "height": 581,
+    "sha256": "e183d9c495093c3b18e19538478c4c13b32a7f70224d22226cd32d395a7f8763"
+  },
+  "2026.1.3-light.png": {
+    "width": 884,
+    "height": 581,
+    "sha256": "ee3c134ee2d240150b8bdd79971088dff0747b887c19b4890e1a9c182506a7e9"
+  },
+  "2026.2.2-dark.png": {
+    "width": 884,
+    "height": 581,
+    "sha256": "ee05d03d9c1395b9af6fe9f628f74c1b7487a9038ed607a9f44df8f91c145a1e"
+  },
+  "2026.2.2-light.png": {
+    "width": 884,
+    "height": 581,
+    "sha256": "2a0ae637bde5cc282d708890985f82832e89b18537826a7e30784e1cda5cdaae"
+  }
+}

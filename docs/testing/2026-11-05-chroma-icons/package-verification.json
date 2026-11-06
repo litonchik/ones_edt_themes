@@ -1,0 +1,16 @@
+{
+  "bundle": "0.1.29.202611051427",
+  "zip_sha256": "84e21b1f6e9ca89457a71e3fb442410e14f6a512643ee9471ed0214b4fd4d60e",
+  "classes": 52,
+  "class_major": 61,
+  "changed_previous_classes": [
+    "ru/litonchik/edt/themes/runtime/ThemeStartup.class",
+    "ru/litonchik/edt/themes/ui/ThemePreferencePage.class"
+  ],
+  "unchanged_previous_classes": 42,
+  "new_classes": 8,
+  "png_assets": 686,
+  "svg_masters": 98,
+  "source_resources_match": true,
+  "test_code_absent": true
+}

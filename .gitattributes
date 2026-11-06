@@ -6,3 +6,8 @@
 *.zip binary
 # Preserve upstream notices byte-for-byte, including their line endings.
 bundles/ru.litonchik.edt.themes/resources/licenses/* -text
+
+# Keep pinned v8-chroma source hashes stable on Windows.
+bundles/ru.litonchik.edt.themes/resources/icons/chroma/svg/** -text
+scripts/vendor/chroma_icon_raster.py -text
+scripts/vendor/v8-chroma-LICENSE.txt -text

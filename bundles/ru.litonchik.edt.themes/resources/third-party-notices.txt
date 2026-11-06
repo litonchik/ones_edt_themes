@@ -219,3 +219,13 @@ and Hibernus. Text roles (including number) are darkened where necessary for
 at least 4.6:1 on editor/line/hover; error/warning use panel background.
 Directive uses MISC and disabled uses adapted COMMENT. Native BSL font styles
 remain in force. No upstream executable code, icons, fonts or CSS is included.
+
+
+v8-chroma metadata icons and SVG rasterizer
+Source: https://github.com/APonkratov/v8-chroma
+Commit: 5105ccf35ae63122a2a98c98230bebfd4ef849af
+Copyright (c) 2026 Aleksandr Ponkratov and v8-chroma contributors
+License: MIT; full text: resources/licenses/v8-chroma-LICENSE.txt
+49 original SVG masters per Light/Dark set are independently mapped to EDT metadata icons.
+PNG variants are generated from the SVG masters using the upstream rasterizer.
+No native injection engine, fingerprint tables, platform images or fonts are redistributed.

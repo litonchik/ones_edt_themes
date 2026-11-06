@@ -1,0 +1,596 @@
+{
+  "repository": "https://github.com/APonkratov/v8-chroma",
+  "commit": "5105ccf35ae63122a2a98c98230bebfd4ef849af",
+  "license": "MIT",
+  "scope": "metadata navigator; exact native base images only",
+  "files": [
+    {
+      "file": "icons/chroma/svg/light/meta-account-plan.svg",
+      "source": "assets/toolbar-icons/light/meta-account-plan.svg",
+      "git_blob": "902429d11714200d3c8be6e4bd4cf001cb4dd931",
+      "sha256": "a5dc10dccc6d801af93cd6b031397f0d707c7f98233fe66c1c4cc36891ef5fc2"
+    },
+    {
+      "file": "icons/chroma/svg/light/meta-accounting-flag.svg",
+      "source": "assets/toolbar-icons/light/meta-accounting-flag.svg",
+      "git_blob": "a9a305521e0aecdfe7798f9a9b43f646e44d1970",
+      "sha256": "a000d02f1e58f84670c1bb700be376edfda0b0094e28ce29718a762b021fbfef"
+    },
+    {
+      "file": "icons/chroma/svg/light/meta-accounting-register.svg",
+      "source": "assets/toolbar-icons/light/meta-accounting-register.svg",
+      "git_blob": "31dcef5526bd0cd254ada39ab3da6b9813c94c04",
+      "sha256": "877d0041656165f7f84559292aa0be5ac47bf4e437638d657e46aff72f2dfd0e"
+    },
+    {
+      "file": "icons/chroma/svg/light/meta-accumulation-register.svg",
+      "source": "assets/toolbar-icons/light/meta-accumulation-register.svg",
+      "git_blob": "43442d7366d1c10ee3d18f30fe1e41f16ded5076",
+      "sha256": "40e56e4d59363365defedc51d248e0cd67f1403641fd8e65887dc7897d218957"
+    },
+    {
+      "file": "icons/chroma/svg/light/meta-attribute.svg",
+      "source": "assets/toolbar-icons/light/meta-attribute.svg",
+      "git_blob": "d88490adb4de431a8a989c35ba747fefb8dc5459",
+      "sha256": "156de1f78cc1fde16b2061496e267c3f79d9854e6c30eeae9658d5dc623b84ad"
+    },
+    {
+      "file": "icons/chroma/svg/light/meta-bot.svg",
+      "source": "assets/toolbar-icons/light/meta-bot.svg",
+      "git_blob": "93e301ae2da333752185e49d9a401f65dedb162c",
+      "sha256": "b644f3028569c116d569f04a73794a81b78f7947f884dbd328665b1fcd8babbb"
+    },
+    {
+      "file": "icons/chroma/svg/light/meta-business-process.svg",
+      "source": "assets/toolbar-icons/light/meta-business-process.svg",
+      "git_blob": "78bb6ef926bda72622b2738f92252d04ec8fb1e1",
+      "sha256": "fe78ebdbec572c45344e24d0a557ad22a94d543d8edb5f2176b7d9f01de4ae6c"
+    },
+    {
+      "file": "icons/chroma/svg/light/meta-calculation-plan.svg",
+      "source": "assets/toolbar-icons/light/meta-calculation-plan.svg",
+      "git_blob": "89e993d5f96ba3bf31cd0378c80cf1ad1466e1a4",
+      "sha256": "a50546ea7a84a67071e704b7f44a97e851d0d6e36876f8f65a10c28015f17292"
+    },
+    {
+      "file": "icons/chroma/svg/light/meta-calculation-register.svg",
+      "source": "assets/toolbar-icons/light/meta-calculation-register.svg",
+      "git_blob": "43c38d4da981b659f94ad91815da4a75095edb34",
+      "sha256": "a3b3b95a97a0005c20359e9eb0e9ec054b26b96a0efc4200763e95b3187b4f23"
+    },
+    {
+      "file": "icons/chroma/svg/light/meta-catalog.svg",
+      "source": "assets/toolbar-icons/light/meta-catalog.svg",
+      "git_blob": "23a3108acd9c8f358f9ec8034ec3395a33675c1a",
+      "sha256": "03a748b06f2f5358dd23ece552af80a8eda21ab551c99a79c0ad3f68ee5b6585"
+    },
+    {
+      "file": "icons/chroma/svg/light/meta-characteristic-plan.svg",
+      "source": "assets/toolbar-icons/light/meta-characteristic-plan.svg",
+      "git_blob": "6b3a00b3e13891bab4b212c683dd32f42066a644",
+      "sha256": "9212040f6abae9a92fe62b1cab7c0279e819c93d9520b2f497511e4e32c8fc9a"
+    },
+    {
+      "file": "icons/chroma/svg/light/meta-command.svg",
+      "source": "assets/toolbar-icons/light/meta-command.svg",
+      "git_blob": "f6c13cd2251dcddb1952e6d77e8504d902fbd39d",
+      "sha256": "24064f5577980eb8181da16f22c53602bfdae6101979ea215e6591b7d7359103"
+    },
+    {
+      "file": "icons/chroma/svg/light/meta-command-group.svg",
+      "source": "assets/toolbar-icons/light/meta-command-group.svg",
+      "git_blob": "5be44f71c87b07d021e9d245647457dcc5259c7b",
+      "sha256": "e3ef7f84b2b0a0947aef95c207f9b4cd3713555650a6ab9fbd124e741b5c1e29"
+    },
+    {
+      "file": "icons/chroma/svg/light/meta-common.svg",
+      "source": "assets/toolbar-icons/light/meta-common.svg",
+      "git_blob": "20b89bf4da4d1d5695b4a38383a26a1d59214295",
+      "sha256": "8c5329d7238ec2b5fd2c6bc3030faeb10fc47aa99eb4783f920bc94dc33fe622"
+    },
+    {
+      "file": "icons/chroma/svg/light/meta-configuration.svg",
+      "source": "assets/toolbar-icons/light/meta-configuration.svg",
+      "git_blob": "e1eb0bc496d836aaa31d196b97f68c41699fd810",
+      "sha256": "47724ce29a0502fd7f1795602e0431f02a0df6423168e3400678d45228111f0b"
+    },
+    {
+      "file": "icons/chroma/svg/light/meta-constant.svg",
+      "source": "assets/toolbar-icons/light/meta-constant.svg",
+      "git_blob": "bc4e18742dd0d05a1bcefc4af0008a072229be41",
+      "sha256": "fda40a297482b787f957411ab8e993f563f870931a2cfbbe372063fcba9a64d7"
+    },
+    {
+      "file": "icons/chroma/svg/light/meta-defined-type.svg",
+      "source": "assets/toolbar-icons/light/meta-defined-type.svg",
+      "git_blob": "daefae7375baacf19c60bfc76941c3fdfc2ec1af",
+      "sha256": "9c5dbaf3d6743adf68bf8c7fe675cdcf4402a4faa14cd360f384cff9f76fc4d3"
+    },
+    {
+      "file": "icons/chroma/svg/light/meta-dimension.svg",
+      "source": "assets/toolbar-icons/light/meta-dimension.svg",
+      "git_blob": "dd0003fd891341a0a1298cbb74862df31d4133b9",
+      "sha256": "adbc458590aed505a0f2cf9636a59166cf1e5acf862d02366d0dd86576c7b35b"
+    },
+    {
+      "file": "icons/chroma/svg/light/meta-document.svg",
+      "source": "assets/toolbar-icons/light/meta-document.svg",
+      "git_blob": "d683caa8ffd34c335a8ad82cfde4e2094112bb6a",
+      "sha256": "bc9cd4cee4214b16ef5074cb65a85a10271c0bb8f688b068c63798f51eb3c2a4"
+    },
+    {
+      "file": "icons/chroma/svg/light/meta-document-journal.svg",
+      "source": "assets/toolbar-icons/light/meta-document-journal.svg",
+      "git_blob": "5c69e0e992501dc07db66ed86dbe8620519629a2",
+      "sha256": "2f3a0dbb3007e6d8bbb35410fb1e1bc18713c53a709505213339c4e2f985db37"
+    },
+    {
+      "file": "icons/chroma/svg/light/meta-document-numerator.svg",
+      "source": "assets/toolbar-icons/light/meta-document-numerator.svg",
+      "git_blob": "264535215d59af33574856389582fa8e27ae6504",
+      "sha256": "5725f0414e6b0f94bedb9e530c61eadbbff21c001f0a77d4966f2990f2ecf630"
+    },
+    {
+      "file": "icons/chroma/svg/light/meta-document-sequence.svg",
+      "source": "assets/toolbar-icons/light/meta-document-sequence.svg",
+      "git_blob": "49263247693c7a3675e6c2b160eb64afd842412c",
+      "sha256": "26141af41c238643c426ad833be0943d69114673a74df9f0aff1d2ecd207ff3f"
+    },
+    {
+      "file": "icons/chroma/svg/light/meta-enumeration.svg",
+      "source": "assets/toolbar-icons/light/meta-enumeration.svg",
+      "git_blob": "6d9bbfa5492551198fe576c24686d8dc34bce71e",
+      "sha256": "5bdc7e05abbfab4da5f0c61cd52c6773e61d4d68e1ea5c6a6e6efa7f6c3f7425"
+    },
+    {
+      "file": "icons/chroma/svg/light/meta-enumeration-value.svg",
+      "source": "assets/toolbar-icons/light/meta-enumeration-value.svg",
+      "git_blob": "5f6899065740cd45859f64c0981805e9126d9c68",
+      "sha256": "f5f8e3af455d61fdf3ee982a407a0c64da2d2e4310dfd84af1b5cd851e004a9f"
+    },
+    {
+      "file": "icons/chroma/svg/light/meta-event-subscription.svg",
+      "source": "assets/toolbar-icons/light/meta-event-subscription.svg",
+      "git_blob": "77c0f0fbec5f6de976da37a8806f967049221715",
+      "sha256": "340d13585eae340c8c648df3586ace2763ae5680c87c37e88a357ce2c0dc190a"
+    },
+    {
+      "file": "icons/chroma/svg/light/meta-exchange-plan.svg",
+      "source": "assets/toolbar-icons/light/meta-exchange-plan.svg",
+      "git_blob": "9a9c55aaf8757dbf93698ecb74ededa1abfb29a1",
+      "sha256": "d0eb857a9c452e4432e2bd550f8aee65c3ebb968e093ead6dc6051639a15134b"
+    },
+    {
+      "file": "icons/chroma/svg/light/meta-form.svg",
+      "source": "assets/toolbar-icons/light/meta-form.svg",
+      "git_blob": "de3bb65b0c56d613e98f6ed764badaadcecd0edf",
+      "sha256": "a170e5cb22e8207fafd9786148f9959077060a34b4147410684bdf17ea9d8fd2"
+    },
+    {
+      "file": "icons/chroma/svg/light/meta-functional-option.svg",
+      "source": "assets/toolbar-icons/light/meta-functional-option.svg",
+      "git_blob": "a87181943cc3df196bca737698cacec151ccd8a6",
+      "sha256": "5c6ee96bc763d07a3fda1a74587042f9b0db1b26df92893ddf1301b569adfad7"
+    },
+    {
+      "file": "icons/chroma/svg/light/meta-http-service.svg",
+      "source": "assets/toolbar-icons/light/meta-http-service.svg",
+      "git_blob": "fe80ab2e49e5fbcc079f03e3c18691bccd80e607",
+      "sha256": "7d8deb67b3882f7c82ddf9ef91aeab6a9447fda41d95c7b19ee305926d8859eb"
+    },
+    {
+      "file": "icons/chroma/svg/light/meta-information-register.svg",
+      "source": "assets/toolbar-icons/light/meta-information-register.svg",
+      "git_blob": "a0efe2888e34d1b27dc81ee9355e6f8fe75d47a2",
+      "sha256": "e4189c30d36983d90800eb2d441a00ddc1fac27094653409de0a5ffadbbaa5e8"
+    },
+    {
+      "file": "icons/chroma/svg/light/meta-language.svg",
+      "source": "assets/toolbar-icons/light/meta-language.svg",
+      "git_blob": "aa9bb182582acccac4df44de5b1d71ea50802164",
+      "sha256": "acacbf95a373943850a3c187090fe6f8d6514cea0d12d1066c20eceb0c503e15"
+    },
+    {
+      "file": "icons/chroma/svg/light/meta-module.svg",
+      "source": "assets/toolbar-icons/light/meta-module.svg",
+      "git_blob": "db4135b0ded9146214caccbc0cf555cdad96519e",
+      "sha256": "bf687173fdba79c9cfe7e4a9d81e626d86f266c5b4ab5d1f6a53bfbc41d90a34"
+    },
+    {
+      "file": "icons/chroma/svg/light/meta-processor.svg",
+      "source": "assets/toolbar-icons/light/meta-processor.svg",
+      "git_blob": "60723f71dffc0c18b4932439510452e28e023569",
+      "sha256": "bf06233e6bf09b75a3b619c040b078e45583f0925b8e43fa6f51076af2e58c5a"
+    },
+    {
+      "file": "icons/chroma/svg/light/meta-recalculation.svg",
+      "source": "assets/toolbar-icons/light/meta-recalculation.svg",
+      "git_blob": "3de1a3b93413a608e748fe4ad4c7e7700cb7706a",
+      "sha256": "8b61bdb40040acc430c5b73f85da0a8889b2f4620ef2fe9dae5b89d2d3722a2a"
+    },
+    {
+      "file": "icons/chroma/svg/light/meta-report.svg",
+      "source": "assets/toolbar-icons/light/meta-report.svg",
+      "git_blob": "a8a59eb746cadd308d42857500426851a88858b3",
+      "sha256": "3e55775373dc17e42ba94dfbb055294dab81252ea0fc6805e5bab7da321d5130"
+    },
+    {
+      "file": "icons/chroma/svg/light/meta-resource.svg",
+      "source": "assets/toolbar-icons/light/meta-resource.svg",
+      "git_blob": "4d181f8a3a23a11011a56267ebefb9c935c53ac3",
+      "sha256": "aee664ce40d7749952855841aad3214aeb942c54fa3b7d55874bfa5c1f782a80"
+    },
+    {
+      "file": "icons/chroma/svg/light/meta-role.svg",
+      "source": "assets/toolbar-icons/light/meta-role.svg",
+      "git_blob": "fb0d07b9a53f522aaf58fa377f08853e7ebbd79a",
+      "sha256": "9836f6aeea429280c6bea446b92a1e261295a56f3b84d9ea99fc3a7a4aff5144"
+    },
+    {
+      "file": "icons/chroma/svg/light/meta-scheduled-job.svg",
+      "source": "assets/toolbar-icons/light/meta-scheduled-job.svg",
+      "git_blob": "0a04e27e802e5029224aa7f0407692a3058bc516",
+      "sha256": "8a461f52027e210b85ced2eb3e75b686f41b05902a3b64a246102f5147d3e151"
+    },
+    {
+      "file": "icons/chroma/svg/light/meta-session-parameter.svg",
+      "source": "assets/toolbar-icons/light/meta-session-parameter.svg",
+      "git_blob": "edc00b6e7f5c5559bf7953dada243eaee7b4b2ad",
+      "sha256": "4af457b32b12266b46a2ed16cce6a9529ba321a80dc44e6855d5b1d8039e3f34"
+    },
+    {
+      "file": "icons/chroma/svg/light/meta-settings-storage.svg",
+      "source": "assets/toolbar-icons/light/meta-settings-storage.svg",
+      "git_blob": "aecc9d080e3b0fdde053ac277f33893213f7f034",
+      "sha256": "b44d3aacfb13683813670e112aab44bf5e92ea0be4f69de2dd18bf6363ec9105"
+    },
+    {
+      "file": "icons/chroma/svg/light/meta-style.svg",
+      "source": "assets/toolbar-icons/light/meta-style.svg",
+      "git_blob": "88944be9008e8cd4d746027bbc0df30609870902",
+      "sha256": "560d06b526d96da66ec1cbc88d4a190fb561ed3780b9f1d4cfc74f6dd49bb7ca"
+    },
+    {
+      "file": "icons/chroma/svg/light/meta-style-element.svg",
+      "source": "assets/toolbar-icons/light/meta-style-element.svg",
+      "git_blob": "a99c285a69749f3437412112e06cc4f862e12594",
+      "sha256": "bcfa45d310a876a7131bf3b6f98d183fda83f662993985ebdbe1d9b676e4b086"
+    },
+    {
+      "file": "icons/chroma/svg/light/meta-subsystem.svg",
+      "source": "assets/toolbar-icons/light/meta-subsystem.svg",
+      "git_blob": "f5c83fcaeb916d39d5893b70cb82a76edb6e9870",
+      "sha256": "9d07433e37a598990b03014ebebe3f4968803da2e3702ada384ec75a165b3e92"
+    },
+    {
+      "file": "icons/chroma/svg/light/meta-tabular-section.svg",
+      "source": "assets/toolbar-icons/light/meta-tabular-section.svg",
+      "git_blob": "9752862e4e7f44d76b3a59e85092518a67e46597",
+      "sha256": "33dc2ab3909ebf694b0762f4b69832ead459835cde900c37d934e568f7abe022"
+    },
+    {
+      "file": "icons/chroma/svg/light/meta-task.svg",
+      "source": "assets/toolbar-icons/light/meta-task.svg",
+      "git_blob": "aa28f33c77b5b80f24c82760c77e7dd73aa4e74c",
+      "sha256": "9152c3687e99f4a210c02645e3486a6f62d263d4b9a544763c67d848e2be2540"
+    },
+    {
+      "file": "icons/chroma/svg/light/meta-template.svg",
+      "source": "assets/toolbar-icons/light/meta-template.svg",
+      "git_blob": "32730477d41d4f40995e102b493a5ff74b3214a7",
+      "sha256": "82d617cdc0b195c93f233c8cedcfc6960741d92a0197fd7d8288470f7a2acbdc"
+    },
+    {
+      "file": "icons/chroma/svg/light/meta-web-service.svg",
+      "source": "assets/toolbar-icons/light/meta-web-service.svg",
+      "git_blob": "bfd72ef489d7f120f645b2c01526952539d0e0f1",
+      "sha256": "55ba5793144bc9ae2344421b9f449c24a3b56ab0ab7276e75d375fb401f82a1c"
+    },
+    {
+      "file": "icons/chroma/svg/light/meta-websocket.svg",
+      "source": "assets/toolbar-icons/light/meta-websocket.svg",
+      "git_blob": "4356e8243cc07b04a7698d5cd5d68a7e90addfc2",
+      "sha256": "cb5e7cf9d506eac5fd0982c4cdc641720cb7ae652c3afdd25e373b23add66458"
+    },
+    {
+      "file": "icons/chroma/svg/light/meta-ws-reference.svg",
+      "source": "assets/toolbar-icons/light/meta-ws-reference.svg",
+      "git_blob": "c3bff9a4e4abe151c7a93610627b52284fcbd24d",
+      "sha256": "76d0aa6c3744958f8e76ed6a6d4d50807e389fc5437bdb10d079e19da8ff23c3"
+    },
+    {
+      "file": "icons/chroma/svg/dark/meta-account-plan.svg",
+      "source": "assets/toolbar-icons/dark/meta-account-plan.svg",
+      "git_blob": "f68cb0e65be4c76a45da8ee41f8f5a298bb5b795",
+      "sha256": "dc9b191423aaecc94c3aebf97c319e41f2a0e8bd34a9a7fd29b4da79d79257ea"
+    },
+    {
+      "file": "icons/chroma/svg/dark/meta-accounting-flag.svg",
+      "source": "assets/toolbar-icons/dark/meta-accounting-flag.svg",
+      "git_blob": "af18a3d4761ffc81e70f872837491611817aae5d",
+      "sha256": "014559e889df85e1b3f6198c98a19c15488a1779eb930882ef507495b277c926"
+    },
+    {
+      "file": "icons/chroma/svg/dark/meta-accounting-register.svg",
+      "source": "assets/toolbar-icons/dark/meta-accounting-register.svg",
+      "git_blob": "4faa816a45ff8c959937f752b8e7581e681238b5",
+      "sha256": "9816016fc1e566959aa6d9b41098f916dd00e0113e23b913e6a51ade30b8c868"
+    },
+    {
+      "file": "icons/chroma/svg/dark/meta-accumulation-register.svg",
+      "source": "assets/toolbar-icons/dark/meta-accumulation-register.svg",
+      "git_blob": "3f8783bd1933bff0e8173182b8223228a8dd3239",
+      "sha256": "2dc02e4d3822009f16a2f59f5f87a8c657c7ef6210386530c4687b4d624475be"
+    },
+    {
+      "file": "icons/chroma/svg/dark/meta-attribute.svg",
+      "source": "assets/toolbar-icons/dark/meta-attribute.svg",
+      "git_blob": "56f4dbc2680c6e46c91bfc11eab03e629e2b089b",
+      "sha256": "3da806e423acc8e7627580a7d7690591a292b5813fe5ffba6efeebb7071585ac"
+    },
+    {
+      "file": "icons/chroma/svg/dark/meta-bot.svg",
+      "source": "assets/toolbar-icons/dark/meta-bot.svg",
+      "git_blob": "5ba4870e3a8f7c709e85d04ab6f86ac5d27788f3",
+      "sha256": "5fb9055a9c2061ab1eab2f4c2d117251ae4dcd6a7113003bac81be009d6d78ba"
+    },
+    {
+      "file": "icons/chroma/svg/dark/meta-business-process.svg",
+      "source": "assets/toolbar-icons/dark/meta-business-process.svg",
+      "git_blob": "2cbdcda76abd2f10d8da757817d521b7d8e44aa6",
+      "sha256": "7cb146eb7e6874796b1c877d778d416998420ce2c54f0439a362dd1250bbfce2"
+    },
+    {
+      "file": "icons/chroma/svg/dark/meta-calculation-plan.svg",
+      "source": "assets/toolbar-icons/dark/meta-calculation-plan.svg",
+      "git_blob": "8c14ff663d71faf5f1583485fc72643df8146a56",
+      "sha256": "cbb92c182bcac1b749beb51c7e94d04da0fbdcbaf21135dcbbfc0f93caa1b089"
+    },
+    {
+      "file": "icons/chroma/svg/dark/meta-calculation-register.svg",
+      "source": "assets/toolbar-icons/dark/meta-calculation-register.svg",
+      "git_blob": "5030bdf5bb604dc1eedee7cd3fb2469691243fe4",
+      "sha256": "6dfe4bd2d4832de3dbb5ca305d55a1d519ea971fe92fae271df269c1c30fab86"
+    },
+    {
+      "file": "icons/chroma/svg/dark/meta-catalog.svg",
+      "source": "assets/toolbar-icons/dark/meta-catalog.svg",
+      "git_blob": "d3e938d65dc9add264b62c803e7e029da38b773b",
+      "sha256": "564fe0735076dcc8572f0883a3575de1f8fae4ce033c5cfc5cb67519153550a8"
+    },
+    {
+      "file": "icons/chroma/svg/dark/meta-characteristic-plan.svg",
+      "source": "assets/toolbar-icons/dark/meta-characteristic-plan.svg",
+      "git_blob": "61cd9586e05c90a81587c7754f2fb3f2f76442b2",
+      "sha256": "3237b4cd9ccbddcf77f80adf3129d9ac619a7ac325b58f466088a6851893415a"
+    },
+    {
+      "file": "icons/chroma/svg/dark/meta-command.svg",
+      "source": "assets/toolbar-icons/dark/meta-command.svg",
+      "git_blob": "55cc89d4e51892ca0f78b6fa44cb6e8d4f51af62",
+      "sha256": "e2f6b44663d0801c402dcef0eee9b3b03a5d21d73f1e132c96a4380611477c71"
+    },
+    {
+      "file": "icons/chroma/svg/dark/meta-command-group.svg",
+      "source": "assets/toolbar-icons/dark/meta-command-group.svg",
+      "git_blob": "1ed4de926e7b01ef064c493716aa219cb3432fd6",
+      "sha256": "751f6873a65b35389b66229e674110e2d89c7e95cdfa88d212b630f48ed03260"
+    },
+    {
+      "file": "icons/chroma/svg/dark/meta-common.svg",
+      "source": "assets/toolbar-icons/dark/meta-common.svg",
+      "git_blob": "3456f1da579ea7ef3eb3f8b0f852168ae2d2459f",
+      "sha256": "038423724c3efd27a86faad8b08c50214594c5287133922963771f76c8c29ce9"
+    },
+    {
+      "file": "icons/chroma/svg/dark/meta-configuration.svg",
+      "source": "assets/toolbar-icons/dark/meta-configuration.svg",
+      "git_blob": "1cb0f9daf67935c01532ecaa50c05b422dbf6078",
+      "sha256": "50adbd15cb3bcaa33bfc37e2edade957004068098be89823bbb4957ba018245c"
+    },
+    {
+      "file": "icons/chroma/svg/dark/meta-constant.svg",
+      "source": "assets/toolbar-icons/dark/meta-constant.svg",
+      "git_blob": "9bb0182d3f92c22d558f4bde5c550dca3aee427b",
+      "sha256": "d857ce7a2b5ab1344a425221bd7811363b8d964f840cc62a975ebd7094af44a4"
+    },
+    {
+      "file": "icons/chroma/svg/dark/meta-defined-type.svg",
+      "source": "assets/toolbar-icons/dark/meta-defined-type.svg",
+      "git_blob": "8b294ec1387ca65e266cdffd82e435f2df2d965e",
+      "sha256": "c32fe0ab5f9d33536b746a121fd275ddf7b2772334b55cde5efe07946c43b5d3"
+    },
+    {
+      "file": "icons/chroma/svg/dark/meta-dimension.svg",
+      "source": "assets/toolbar-icons/dark/meta-dimension.svg",
+      "git_blob": "f94275b6bd6caf7cfa6d98bec4a46845dedd0df2",
+      "sha256": "7bdc540848f27c99b8afd2ba37b344eeb777e825e70db907a78c20c0b5ede8c8"
+    },
+    {
+      "file": "icons/chroma/svg/dark/meta-document.svg",
+      "source": "assets/toolbar-icons/dark/meta-document.svg",
+      "git_blob": "e083a01d30c8303cd6a03dc0d2d33b351cd97dbc",
+      "sha256": "e1bd4e32301d18a1536c9f3b3176e9a25fc9e7261ce19ad9a1647f07fdf90e24"
+    },
+    {
+      "file": "icons/chroma/svg/dark/meta-document-journal.svg",
+      "source": "assets/toolbar-icons/dark/meta-document-journal.svg",
+      "git_blob": "2088558de22464c21f9ed58349b9a2dfd14528ea",
+      "sha256": "c6a4a388ddcf51f0344a5097054b1a6f736f943a58ad8810d53ee03f95338bc9"
+    },
+    {
+      "file": "icons/chroma/svg/dark/meta-document-numerator.svg",
+      "source": "assets/toolbar-icons/dark/meta-document-numerator.svg",
+      "git_blob": "00d5ccf9b723446cbddb5998f8c422e8622331d8",
+      "sha256": "a29e3abd59513d5c4f940e0ff315a72ef172fb61a9027b5ce42eadee85df167c"
+    },
+    {
+      "file": "icons/chroma/svg/dark/meta-document-sequence.svg",
+      "source": "assets/toolbar-icons/dark/meta-document-sequence.svg",
+      "git_blob": "d1ab60b3a002ae2f5bc84cb6a3a002282546bacd",
+      "sha256": "8a13bf522c823916a40523703434a87a49dd482817fd6d2058e8838588a5da0b"
+    },
+    {
+      "file": "icons/chroma/svg/dark/meta-enumeration.svg",
+      "source": "assets/toolbar-icons/dark/meta-enumeration.svg",
+      "git_blob": "4bcf48473273d768e06e000a63ed5caef94423b3",
+      "sha256": "a3ab5ec6b9eb3779b7d16462435a9814dd21028e134f589b2b96172a0cc4c8fc"
+    },
+    {
+      "file": "icons/chroma/svg/dark/meta-enumeration-value.svg",
+      "source": "assets/toolbar-icons/dark/meta-enumeration-value.svg",
+      "git_blob": "ead74b006e5314baffe7ba7b619f4de5f518ee60",
+      "sha256": "ba1751dc7925a5852f47749d9de209412e04e7085952866edcee9c90417dcc42"
+    },
+    {
+      "file": "icons/chroma/svg/dark/meta-event-subscription.svg",
+      "source": "assets/toolbar-icons/dark/meta-event-subscription.svg",
+      "git_blob": "dd75cb6760b1dbb67791fb8d0637d636832f1e46",
+      "sha256": "3850378bedd8cbdec0c54d4ded60f0f9f8d4e1449a1b0d20328e9cad001039e5"
+    },
+    {
+      "file": "icons/chroma/svg/dark/meta-exchange-plan.svg",
+      "source": "assets/toolbar-icons/dark/meta-exchange-plan.svg",
+      "git_blob": "0fb2689c1dc8a2087f377b2192762342dfa6c2df",
+      "sha256": "e9fd2624cf9d59b8d9c4f3de90b621f660d917b9417dc82e70ab896162a02084"
+    },
+    {
+      "file": "icons/chroma/svg/dark/meta-form.svg",
+      "source": "assets/toolbar-icons/dark/meta-form.svg",
+      "git_blob": "45fb06f0ad091cb3e6d02265c32da1dc5a84b53c",
+      "sha256": "5ba9aa8f994e3228a865cc52538eb2ce6f10b332c0c4d4ce5f9f6870b2131693"
+    },
+    {
+      "file": "icons/chroma/svg/dark/meta-functional-option.svg",
+      "source": "assets/toolbar-icons/dark/meta-functional-option.svg",
+      "git_blob": "620269ce56dcecae31ea98659cf74077060fb3ab",
+      "sha256": "1c4fc4b4a2c2a873de413676fae0114c51179c35c95e447558c555e7f18fee4c"
+    },
+    {
+      "file": "icons/chroma/svg/dark/meta-http-service.svg",
+      "source": "assets/toolbar-icons/dark/meta-http-service.svg",
+      "git_blob": "0631cbccbade2e84261fa2b370242725c9a82ddd",
+      "sha256": "f5adac95a655d557346ca6717b30e2be2c87787edf11f411a37d31cc1b9d051f"
+    },
+    {
+      "file": "icons/chroma/svg/dark/meta-information-register.svg",
+      "source": "assets/toolbar-icons/dark/meta-information-register.svg",
+      "git_blob": "45246ed03574851c8d11eef138b338e3d6b3eb3e",
+      "sha256": "08c21efbe0ff8692e18b4062dae059d9b867a349a2e3689cbc3a17e58ce307fa"
+    },
+    {
+      "file": "icons/chroma/svg/dark/meta-language.svg",
+      "source": "assets/toolbar-icons/dark/meta-language.svg",
+      "git_blob": "a1dac7976efadbcca1fa90cdb7a3420940cc514b",
+      "sha256": "e597021cbe111bb72a90d0473ba63a810ddfae44d6f89614bd6ef35a3d6de13a"
+    },
+    {
+      "file": "icons/chroma/svg/dark/meta-module.svg",
+      "source": "assets/toolbar-icons/dark/meta-module.svg",
+      "git_blob": "a1a28165734e1ec8224bb26e93c27d968a3cf854",
+      "sha256": "d503619cf18c6e6b1f2bce07c295e585ff8fb4b143b06b9549c1f95806f863c0"
+    },
+    {
+      "file": "icons/chroma/svg/dark/meta-processor.svg",
+      "source": "assets/toolbar-icons/dark/meta-processor.svg",
+      "git_blob": "402bf6c744e03f7f8ff44f9611b97414be71914c",
+      "sha256": "2528cfac062e8b9785f354e6a5bf19381becd68421075f3948399de28eb72a7e"
+    },
+    {
+      "file": "icons/chroma/svg/dark/meta-recalculation.svg",
+      "source": "assets/toolbar-icons/dark/meta-recalculation.svg",
+      "git_blob": "ecdd98bc1463f7efedd42544e4d097887c360e01",
+      "sha256": "9ca4f4ab8566cdef6d69a117704dddce27abada7a17d28af69ca969dc7ed3861"
+    },
+    {
+      "file": "icons/chroma/svg/dark/meta-report.svg",
+      "source": "assets/toolbar-icons/dark/meta-report.svg",
+      "git_blob": "72f11e98b4c5eb0354126df07d6133d869e8336a",
+      "sha256": "3ceac812835527258acc765253db82bcda1ea6b91a729350ac562f1b656c2428"
+    },
+    {
+      "file": "icons/chroma/svg/dark/meta-resource.svg",
+      "source": "assets/toolbar-icons/dark/meta-resource.svg",
+      "git_blob": "ebb75eff341800fab26c1b6824fcc74ac25fe5be",
+      "sha256": "e8229c6661a63bda134c96959510b3fbae41635fc46f63665db135353d6c3573"
+    },
+    {
+      "file": "icons/chroma/svg/dark/meta-role.svg",
+      "source": "assets/toolbar-icons/dark/meta-role.svg",
+      "git_blob": "95e208453ff26d0beee3e9386beeedeb76912827",
+      "sha256": "c913ede459ff09b769a7fbadeb0ade22fc5cfbc64ccd518da325da90067bedb5"
+    },
+    {
+      "file": "icons/chroma/svg/dark/meta-scheduled-job.svg",
+      "source": "assets/toolbar-icons/dark/meta-scheduled-job.svg",
+      "git_blob": "31b2fa03240e8d9c5e788a809d76765fcb522acd",
+      "sha256": "3b4c98143d64df1d44f73161cfff2695d7efb2354a0772631e731b8db6968df4"
+    },
+    {
+      "file": "icons/chroma/svg/dark/meta-session-parameter.svg",
+      "source": "assets/toolbar-icons/dark/meta-session-parameter.svg",
+      "git_blob": "802adf6113c7642cf6c1d904cb96a1c2dd4ad886",
+      "sha256": "52119d0926e59de8fa5d7a766124fecf6052ba57edb56fb0cd559c73e1b8ff62"
+    },
+    {
+      "file": "icons/chroma/svg/dark/meta-settings-storage.svg",
+      "source": "assets/toolbar-icons/dark/meta-settings-storage.svg",
+      "git_blob": "fdd029a00790c1d56a7a8ad4d537194e4577ab3f",
+      "sha256": "2979b52fe3150319a4dc2eab8bcac846fa4b87ab1af9d8dc325496a1c3bde624"
+    },
+    {
+      "file": "icons/chroma/svg/dark/meta-style.svg",
+      "source": "assets/toolbar-icons/dark/meta-style.svg",
+      "git_blob": "96462e732496252c45f0d8ebd9b00a276b03291c",
+      "sha256": "3cbe0ff07c1decea90c67ca4b3c214c27e9554a6db8a52589502b91b2e978962"
+    },
+    {
+      "file": "icons/chroma/svg/dark/meta-style-element.svg",
+      "source": "assets/toolbar-icons/dark/meta-style-element.svg",
+      "git_blob": "83b015e312b92c5d2f5c150247a7ef00393ae8d3",
+      "sha256": "7629f488624d4c1e74c6ff1c75fcb8d93e023be429ba815b615f25e8457bc8da"
+    },
+    {
+      "file": "icons/chroma/svg/dark/meta-subsystem.svg",
+      "source": "assets/toolbar-icons/dark/meta-subsystem.svg",
+      "git_blob": "097713ab41187e09f4fca2b0f04290d63dfc2bbe",
+      "sha256": "24f6e22b20dd51ff3cf073b988b0de77763577d4aa3612c617c55a368ed0ac46"
+    },
+    {
+      "file": "icons/chroma/svg/dark/meta-tabular-section.svg",
+      "source": "assets/toolbar-icons/dark/meta-tabular-section.svg",
+      "git_blob": "15d5ef2f4d2352efc3f76c55f51cb34eedebe4b4",
+      "sha256": "6d8106c6654e271548ae6cdadc559d565c1b26bdf65d477568f9a75875453342"
+    },
+    {
+      "file": "icons/chroma/svg/dark/meta-task.svg",
+      "source": "assets/toolbar-icons/dark/meta-task.svg",
+      "git_blob": "fbfb69bcb0aef000d93460313e18326532864146",
+      "sha256": "f5ad7b0b35f46c3a0036b04e0efda5c03e3fbdc7be9c6be62cb82742e810f83e"
+    },
+    {
+      "file": "icons/chroma/svg/dark/meta-template.svg",
+      "source": "assets/toolbar-icons/dark/meta-template.svg",
+      "git_blob": "4ae8040cbf3d5339fe37a80e52d2d4068c0a38d5",
+      "sha256": "89cbb7e65d271c5cdfff96b3a6ed807495abff8109bc1a51fd1526967e84b77f"
+    },
+    {
+      "file": "icons/chroma/svg/dark/meta-web-service.svg",
+      "source": "assets/toolbar-icons/dark/meta-web-service.svg",
+      "git_blob": "129c5546e59e562a7e1c23454a4355e8da916b9d",
+      "sha256": "81283fcd2fbc17ca3c51da74465525609733a705142d4865a8b3d0e510e7f614"
+    },
+    {
+      "file": "icons/chroma/svg/dark/meta-websocket.svg",
+      "source": "assets/toolbar-icons/dark/meta-websocket.svg",
+      "git_blob": "0c06b00d3f7615e446bb606833d6f9bedf5e3fad",
+      "sha256": "8251d59a372d7687fd67b28cd74429d64d356ac346346376997f0bdc7ec06035"
+    },
+    {
+      "file": "icons/chroma/svg/dark/meta-ws-reference.svg",
+      "source": "assets/toolbar-icons/dark/meta-ws-reference.svg",
+      "git_blob": "3012118661912e2cb75a0e3df880123edb994345",
+      "sha256": "6a79971c0e191b1926fb44f8403e673b97d64cba592550aec01180605fef56fb"
+    }
+  ]
+}

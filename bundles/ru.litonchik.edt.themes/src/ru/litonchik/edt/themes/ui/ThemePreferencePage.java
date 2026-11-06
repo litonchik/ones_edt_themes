@@ -27,7 +27,9 @@ public final class ThemePreferencePage extends PreferencePage implements IWorkbe
     private ThemeMode mode = ThemeMode.DARK;
     private Button darkMode, lightMode;
     private final java.util.Map<ThemeMode,String> lastSelected = new java.util.EnumMap<>(ThemeMode.class);
-    private Button bsl;
+    private Button bsl, chromaIcons;
+    private Group iconPreview;
+    private final java.util.List<Label> iconSamples=new java.util.ArrayList<>();
     private ThemeCoordinator coordinator;
     private Button restore;
     private CodeFontSettings fonts;
@@ -48,7 +50,7 @@ public final class ThemePreferencePage extends PreferencePage implements IWorkbe
         scroll.setExpandHorizontal(true); scroll.setExpandVertical(true);
         Composite body = new Composite(scroll,SWT.NONE); body.setLayout(new GridLayout(1,false)); scroll.setContent(body);
         Label explanation = new Label(body,SWT.WRAP);
-        explanation.setText("Выберите светлую или тёмную палитру. Для полного обновления редакторов может потребоваться перезапуск.");
+        explanation.setText("Выберите палитру. После перехода между светлой и тёмной основой примените тему и перезапустите EDT.");
         GridData data = new GridData(SWT.FILL,SWT.TOP,true,false); data.widthHint = 460; explanation.setLayoutData(data);
         Composite modes = new Composite(body,SWT.NONE); modes.setLayout(new GridLayout(3,false));
         new Label(modes,SWT.NONE).setText("Палитры:");
@@ -60,6 +62,11 @@ public final class ThemePreferencePage extends PreferencePage implements IWorkbe
         lightMode.addListener(SWT.Selection,event -> { if (lightMode.getSelection()) selectMode(ThemeMode.LIGHT); });
         GridData profileData = new GridData(SWT.LEFT,SWT.CENTER,false,false); profileData.widthHint = 280; profiles.setLayoutData(profileData);
         bsl = new Button(body,SWT.CHECK); bsl.setText("Применять палитру BSL"); bsl.setSelection(true);
+        chromaIcons=new Button(body,SWT.CHECK);chromaIcons.setText("Значки Visual Studio в Навигаторе");chromaIcons.setData(ChromaIcons.KEY,Boolean.TRUE);chromaIcons.setSelection(ChromaIcons.isEnabled());
+        iconPreview=new Group(body,SWT.NONE);iconPreview.setText("Visual Studio Dark");iconPreview.setLayout(new RowLayout(SWT.HORIZONTAL));iconPreview.setLayoutData(new GridData(SWT.FILL,SWT.TOP,true,false));
+        for(String[] sample:new String[][]{{"meta-catalog","Справочник"},{"meta-document","Документ"},{"meta-enumeration","Перечисление"},{"meta-module","Модуль"}}){
+            var item=new Composite(iconPreview,SWT.NONE);item.setLayout(new RowLayout(SWT.HORIZONTAL));var image=new Label(item,SWT.NONE);image.setData("chroma.asset",sample[0]);iconSamples.add(image);new Label(item,SWT.NONE).setText(sample[1]);
+        }
         restore = new Button(body,SWT.PUSH); restore.setText("Восстановить исходное оформление…");
         try {
             coordinator = ThemeStartup.coordinator();
@@ -68,10 +75,10 @@ public final class ThemePreferencePage extends PreferencePage implements IWorkbe
             ThemeMode initialMode = active == null ? ThemeMode.fromCssId(engine.getActiveTheme().getId()) : PaletteCatalog.mode(active);
             showMode(initialMode,active); lastSelected.put(initialMode,active);
             bsl.setSelection(coordinator.includeBsl());
-            restore.setEnabled(coordinator.hasSnapshot());
+            restore.setEnabled(coordinator.hasSnapshot() || ChromaIcons.isEnabled());
             fonts = new CodeFontSettings();
             drafts = coordinator.paletteDrafts();
-        } catch (Exception e) { setErrorMessage(e.getMessage()); setValid(false); profiles.setEnabled(false); darkMode.setEnabled(false); lightMode.setEnabled(false); bsl.setEnabled(false); restore.setEnabled(false); }
+        } catch (Exception e) { setErrorMessage(e.getMessage()); setValid(false); profiles.setEnabled(false); darkMode.setEnabled(false); lightMode.setEnabled(false); bsl.setEnabled(false); chromaIcons.setEnabled(false); restore.setEnabled(false); }
         restore.addListener(SWT.Selection,event -> {
             if (!MessageDialog.openConfirm(getShell(),"Восстановить цвета","Вернуть исходную тему и цвета? Ручные изменения после включения профиля будут сохранены.")) return;
             try {
@@ -81,7 +88,7 @@ public final class ThemePreferencePage extends PreferencePage implements IWorkbe
                     result = coordinator.restore(true);
                     if (!result.successful()) throw new IllegalStateException("Ошибка восстановления: " + result.errorSummary());
                 }
-                profiles.select(0); refreshPalette(); restore.setEnabled(coordinator.hasSnapshot()); setMessage("Исходное оформление восстановлено. Личные палитры сохранены. Для редакторов может потребоваться перезапуск.");
+                ChromaIcons.setEnabled(false); chromaIcons.setSelection(false); profiles.select(0); refreshPalette(); restore.setEnabled(coordinator.hasSnapshot() || ChromaIcons.isEnabled()); setMessage("Исходное оформление восстановлено. Личные палитры сохранены. Для редакторов может потребоваться перезапуск.");
             } catch (Exception e) { setErrorMessage(e.getMessage()); ThemeStartup.report(e); }
         });
         if (drafts != null) paletteEditor = new PaletteEditor(body,drafts,this::updatePreviewStyling,error -> { setErrorMessage(error); setValid(error == null); },this::color);
@@ -109,7 +116,7 @@ public final class ThemePreferencePage extends PreferencePage implements IWorkbe
         String selected = lastSelected.containsKey(next) ? lastSelected.get(next) : PaletteCatalog.profiles(next).get(0).id();
         showMode(next,selected); refreshPalette();
     }
-    private void refreshPalette() { if (paletteEditor != null) paletteEditor.setProfile(selectedProfile(),bsl.getSelection()); updatePreviewStyling(); }
+    private void refreshPalette() { if(iconPreview!=null)iconPreview.setText(mode==ThemeMode.LIGHT?"Visual Studio Light":"Visual Studio Dark"); if(coordinator!=null)for(var label:iconSamples)label.setImage(ChromaIcons.image((String)label.getData("chroma.asset"),mode)); if (paletteEditor != null) paletteEditor.setProfile(selectedProfile(),bsl.getSelection()); updatePreviewStyling(); }
     private void createFontControls(Composite parent) {
         Group group = new Group(parent,SWT.NONE); group.setText("Шрифт кода");
         group.setLayout(new GridLayout(2,false)); group.setLayoutData(new GridData(SWT.FILL,SWT.TOP,true,false));
@@ -199,13 +206,17 @@ public final class ThemePreferencePage extends PreferencePage implements IWorkbe
         if (coordinator == null || paletteEditor == null || !paletteEditor.valid()) return false;
         try {
             if (profiles.getSelectionIndex() == 0) {
-                coordinator.apply(null,bsl.getSelection(),drafts);
-                restore.setEnabled(coordinator.hasSnapshot()); updatePreviewStyling(); applyFont(); setErrorMessage(null); return true;
+                // An icons/font-only Apply on native appearance must not reload CSS
+                // or materialize previously absent native theme preferences.
+                if(coordinator.hasSnapshot() || PaletteCatalog.ids().stream().anyMatch(id -> !drafts.touched(id).isEmpty()))
+                    coordinator.apply(null,bsl.getSelection(),drafts);
+                applyFont(); ChromaIcons.setEnabled(chromaIcons.getSelection()); restore.setEnabled(coordinator.hasSnapshot() || ChromaIcons.isEnabled()); updatePreviewStyling(); setErrorMessage(null); return true;
             }
             coordinator.apply(selectedProfile(),bsl.getSelection(),drafts);
             updatePreviewStyling();
             applyFont();
-            restore.setEnabled(coordinator.hasSnapshot());
+            ChromaIcons.setEnabled(chromaIcons.getSelection());
+            restore.setEnabled(coordinator.hasSnapshot() || ChromaIcons.isEnabled());
             setErrorMessage(null); setMessage("Профиль применён. При необходимости перезапустите EDT."); return true;
         } catch (Exception e) { setErrorMessage(e.getMessage()); ThemeStartup.report(e); return false; }
     }

@@ -1,5 +1,35 @@
 # Статус проекта edt_themes
 
+06.11.2026 пользователь подтвердил результат 0.1.29 («вроде всё ок») и
+разрешил push, релиз и публикацию через GitHub Pages. Используется проверенный
+ZIP 0.1.29.202611051520 без пересборки, SHA-256
+00bcd3c0a15db6d50285717a6d12b7c9c6ad067b9f387538111054f0043788c0.
+Предусмотрены проверка HTTPS-файлов, обновление 0.1.28 → 0.1.29 через URL
+в отдельной тестовой EDT и отдельная Cleanup/Reconcile/Uninstall/Audit.
+
+05.11.2026 по просьбе пользователя наборы значков в интерфейсе названы
+Visual Studio Light / Visual Studio Dark; флаг — «Значки Visual Studio
+в Навигаторе». Благодарность v8-chroma — в README; MIT notices и техническое
+происхождение сохранены. Пересборка и 121 unit tests — PASS; изменён только
+ThemePreferencePage.class, 51 прочих classes и все ресурсы побайтово прежние.
+Runtime-матрица для переименования не повторялась; проверка —
+`docs/testing/2026-11-05-chroma-icons/naming-verification.json`.
+Локальный ZIP обновлён; commit/push/release не выполнялись.
+
+05.11.2026 подготовлен локальный кандидат 0.1.29: необязательные значки
+метаданных v8-chroma (49 рисунков × Light/Dark, 98 SVG, 686 PNG).
+MIT и авторство сохранены, источник закреплён на 5105ccf.
+Флаг по умолчанию выключен, Apply/Cancel и original decorator identity
+проверены; Native CommonNavigator подключается через публичный viewer API,
+штатные отметки, текст, цвета и шрифты делегируются исходному декоратору.
+Готовность позднего label provider учитывается проверкой public viewer identity; неизменившиеся viewer не перерисовываются.
+121 unit tests и 8526 runtime PASS на трёх Windows EDT,
+restart/restore и Cleanup/Reconcile/Uninstall/Audit пройдены;
+базовые inventories сохранены, четыре junction удалены.
+42 прежних classes, 19 палитр и ZIP 0.1.17–0.1.28 побайтово сохранены.
+Только локальная поставка; commit/push/release не выполнялись.
+Отчёт — `docs/testing/chroma-icons-validation.md`.
+
 05.11.2026 опубликованы исходники и стабильный релиз v0.1.28, тег указывает
 на 2391ef8. GitHub Actions Unit tests / Publish update site — success;
 Pages отдаёт 0.1.28, оба вложения и все семь p2-файлов совпали с ZIP по HTTPS.

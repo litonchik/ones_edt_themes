@@ -1,0 +1,20 @@
+{
+  "display_names": [
+    "Visual Studio Light",
+    "Visual Studio Dark"
+  ],
+  "checkbox": "Значки Visual Studio в Навигаторе",
+  "before_bundle": "plugins/ru.litonchik.edt.themes_0.1.29.202611051427.jar",
+  "bundle": "plugins/ru.litonchik.edt.themes_0.1.29.202611051520.jar",
+  "before_zip_sha256": "84e21b1f6e9ca89457a71e3fb442410e14f6a512643ee9471ed0214b4fd4d60e",
+  "zip_sha256": "00bcd3c0a15db6d50285717a6d12b7c9c6ad067b9f387538111054f0043788c0",
+  "changed_classes": [
+    "ru/litonchik/edt/themes/ui/ThemePreferencePage.class"
+  ],
+  "unchanged_classes": 51,
+  "all_resources_and_extension_points_identical": true,
+  "preference_keys_unchanged": true,
+  "unit_tests": 121,
+  "runtime_repeated": false,
+  "stable_palettes_and_zips_unchanged": true
+}

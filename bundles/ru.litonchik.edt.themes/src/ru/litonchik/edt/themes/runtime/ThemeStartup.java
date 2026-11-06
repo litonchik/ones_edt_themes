@@ -8,7 +8,7 @@ import org.eclipse.ui.PlatformUI;
 public final class ThemeStartup implements IStartup {
     private static ThemeCoordinator coordinator;
     public static ThemeCoordinator coordinator() throws Exception {
-        if (coordinator == null) { coordinator = new ThemeCoordinator(); coordinator.start(); }
+        if (coordinator == null) { coordinator = new ThemeCoordinator(); coordinator.start(); ChromaIcons.start(); }
         return coordinator;
     }
     @Override public void earlyStartup() {
@@ -16,7 +16,7 @@ public final class ThemeStartup implements IStartup {
             try { coordinator(); new CodeFontSettings(); } catch (Exception e) { report(e); }
         });
     }
-    public static void stop() { ru.litonchik.edt.themes.edt.EditorRulerColors.stop(); ru.litonchik.edt.themes.edt.LightUiStyles.stop(); if (coordinator != null) { coordinator.close(); coordinator = null; } }
+    public static void stop() { ChromaIcons.stop(); ru.litonchik.edt.themes.edt.EditorRulerColors.stop(); ru.litonchik.edt.themes.edt.LightUiStyles.stop(); if (coordinator != null) { coordinator.close(); coordinator = null; } }
     public static void report(Throwable e) {
         Platform.getLog(ThemeStartup.class).log(new Status(IStatus.ERROR,SnapshotPreferences.PLUGIN_ID,"Темы EDT: " + e.getMessage(),e));
         if (PlatformUI.isWorkbenchRunning()) MessageDialog.openError(PlatformUI.getWorkbench().getActiveWorkbenchWindow() == null ? null : PlatformUI.getWorkbench().getActiveWorkbenchWindow().getShell(),"Темы EDT",e.getMessage());

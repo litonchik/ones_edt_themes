@@ -39,7 +39,7 @@ public class WorkbenchProbe implements IApplication {
     private void check(boolean condition, String message) {
         if (!condition) throw new AssertionError(message);
         report.append("PASS ").append(message).append('\n');
-        if ("surfaces".equals(System.getProperty("edt.probe.phase")) || System.getProperty("edt.probe.phase").startsWith("light") || System.getProperty("edt.probe.phase").startsWith("candidateselection")) try {
+        if ("surfaces".equals(System.getProperty("edt.probe.phase")) || System.getProperty("edt.probe.phase").startsWith("light") || System.getProperty("edt.probe.phase").startsWith("candidateselection") || System.getProperty("edt.probe.phase").startsWith("candidateicons")) try {
             Files.writeString(java.nio.file.Path.of(System.getProperty("edt.probe.report")),report.toString());
         } catch (java.io.IOException e) { throw new IllegalStateException(e); }
     }
@@ -84,6 +84,7 @@ public class WorkbenchProbe implements IApplication {
             var screen=freshShell.getMonitor().getClientArea(); freshShell.setLocation(screen.x,screen.y); freshShell.forceActive();
             freshWindow.getActivePage().setEditorAreaVisible(true); freshShell.layout(true,true); pump(500);
         }
+        if (System.getProperty("edt.probe.phase").startsWith("candidateicons")) { runIconChecks(); return; }
         if (System.getProperty("edt.probe.phase").startsWith("candidateselection")) { runSelectionChecks(); return; }
         if (System.getProperty("edt.probe.phase").startsWith("candidategit")) { runGitChecks(); return; }
         if (Set.of("candidaterulers","candidaterulersrestart").contains(System.getProperty("edt.probe.phase"))) { runRulerChecks(); return; }
@@ -464,6 +465,113 @@ public class WorkbenchProbe implements IApplication {
         decorator.dispose();
     }
 
+
+
+    /** Models an ordinary navigator group using the same public IWorkbenchAdapter contract. */
+    public static class IconRow implements org.eclipse.ui.model.IWorkbenchAdapter,org.eclipse.core.runtime.IAdaptable {
+        final String name;final org.eclipse.jface.resource.ImageDescriptor descriptor;boolean overlay;
+        IconRow(String name,org.eclipse.jface.resource.ImageDescriptor descriptor){this.name=name;this.descriptor=descriptor;}
+        @Override public Object[] getChildren(Object object){return new Object[0];}
+        @Override public org.eclipse.jface.resource.ImageDescriptor getImageDescriptor(Object object){return descriptor;}
+        @Override public String getLabel(Object object){return switch(name){
+            case "configuration" -> "Конфигурация";case "common" -> "Общие";case "catalog" -> "Справочники";case "document" -> "Документы";case "enum" -> "Перечисления";
+            case "report" -> "Отчёты";case "data_processor" -> "Обработки";case "information_register" -> "Регистры сведений";case "accumulation_register" -> "Регистры накопления";
+            case "accounting_register" -> "Регистры бухгалтерии";case "calculation_register" -> "Регистры расчёта";case "common_module" -> "Общие модули";case "subsystem" -> "Подсистемы";
+            case "constant" -> "Константы";case "role" -> "Роли";case "form" -> "Формы";case "exchange_plan" -> "Планы обмена";case "task" -> "Задачи";case "business_process" -> "Бизнес-процессы";
+            case "web_service" -> "Web-сервисы";case "http" -> "HTTP-сервисы";case "language" -> "Языки";case "style" -> "Стили";default -> name;};}
+        @Override public Object getParent(Object object){return null;}
+        @Override public <T>T getAdapter(Class<T> type){return type.isInstance(this)?type.cast(this):null;}
+    }
+    /** Test-only lightweight status marker; production icon decoration must leave it on top. */
+    public static class IconOverlay extends org.eclipse.jface.viewers.LabelProvider implements org.eclipse.jface.viewers.ILightweightLabelDecorator {
+        private final org.eclipse.jface.resource.ImageDescriptor marker;
+        static volatile Color color;static volatile Font font;
+        public IconOverlay(){var data=new ImageData(4,4,24,new PaletteData(0xFF0000,0xFF00,0xFF));for(int y=0;y<4;y++)for(int x=0;x<4;x++)data.setPixel(x,y,0xEF1161);marker=org.eclipse.jface.resource.ImageDescriptor.createFromImageData(data);}
+        @Override public void decorate(Object element,org.eclipse.jface.viewers.IDecoration decoration){if(element instanceof IconRow row && row.overlay){decoration.addOverlay(marker,org.eclipse.jface.viewers.IDecoration.TOP_RIGHT);decoration.addSuffix(" [status]");if(color!=null)decoration.setForegroundColor(color);if(font!=null)decoration.setFont(font);}}
+    }
+    private int imageAlpha(ImageData data,ImageData mask,int x,int y){return mask.getPixel(x,y)==0?0:data.alpha>=0?data.alpha:data.getAlpha(x,y);}
+    private boolean iconPixels(ImageData a,ImageData b,int width){
+        if(a.width!=b.width || a.height!=b.height)return false;var am=a.getTransparencyMask();var bm=b.getTransparencyMask();
+        for(int y=0;y<a.height;y++)for(int x=0;x<Math.min(width,a.width);x++){
+            int aa=imageAlpha(a,am,x,y),ba=imageAlpha(b,bm,x,y);if(Math.abs(aa-ba)>2)return false;
+            RGB ar=a.palette.getRGB(a.getPixel(x,y)),br=b.palette.getRGB(b.getPixel(x,y));
+            for(int delta:new int[]{Math.abs(ar.red*aa-br.red*ba),Math.abs(ar.green*aa-br.green*ba),Math.abs(ar.blue*aa-br.blue*ba)})if(delta>510)return false;
+        }return true;
+    }
+    private ImageData iconExpected(String asset,ThemeMode mode,int size) throws Exception {
+        try(var input=IconCatalog.class.getResourceAsStream("/resources/icons/chroma/png/"+mode.name().toLowerCase(java.util.Locale.ROOT)+"/"+size+"/"+asset+".png")){if(input==null)throw new AssertionError("Missing icon asset");return new ImageData(input);}
+    }
+    private void cancelIconsDialog(PreferenceDialog dialog){for(Object node:dialog.getPreferenceManager().getElements(PreferenceManager.PRE_ORDER)){var item=(IPreferenceNode)node;if(item.getId().equals("ru.litonchik.edt.themes.preferences"))check(item.getPage().performCancel(),"icons preference Cancel accepted");}dialog.close();}
+    private void runIconChecks() throws Exception {
+        var wb=PlatformUI.getWorkbench();var page=wb.getActiveWorkbenchWindow().getActivePage();var coordinator=ThemeStartup.coordinator();var engine=wb.getService(IThemeEngine.class);
+        var prefs=InstanceScope.INSTANCE.getNode("ru.litonchik.edt.themes");boolean restart=System.getProperty("edt.probe.phase").endsWith("restart");
+        var adapter=new EdtSettingsAdapter(engine,wb.getThemeManager());var originals=new Properties();var saved=java.nio.file.Path.of(System.getProperty("edt.probe.images"),"icons-originals.properties");
+        if(restart){try(var reader=Files.newBufferedReader(saved)){originals.load(reader);}check(ChromaIcons.isEnabled(),"icons enabled flag survives JVM restart");check("github-light-default".equals(coordinator.activeProfile()),"icon restart retains Light palette");}
+        else{
+            if(coordinator.hasSnapshot())check(coordinator.restore(true).successful(),"icons initial restore");
+            ChromaIcons.setEnabled(false);check(prefs.get(ChromaIcons.KEY,null)==null,"icons default off with absent own preference");
+
+        }
+        var bsl=tryOpenBsl();var editor=(org.eclipse.xtext.ui.editor.XtextEditor)page.getActiveEditor();String text=editor.getDocument().get();long stamp=((org.eclipse.jface.text.IDocumentExtension4)editor.getDocument()).getModificationStamp();
+        var fixture=(UiPanelView)page.showView("ru.litonchik.edt.themes.probe.ui");for(var child:fixture.root.getChildren())child.dispose();fixture.root.setLayout(new org.eclipse.swt.layout.GridLayout());
+        var viewer=new org.eclipse.jface.viewers.TreeViewer(fixture.root,SWT.BORDER|SWT.FULL_SELECTION);viewer.getTree().setLayoutData(new org.eclipse.swt.layout.GridData(SWT.FILL,SWT.FILL,true,true));
+        viewer.setContentProvider(new org.eclipse.jface.viewers.ITreeContentProvider(){@Override public Object[] getElements(Object input){return (Object[])input;}@Override public Object[] getChildren(Object parent){return new Object[0];}@Override public Object getParent(Object element){return null;}@Override public boolean hasChildren(Object element){return false;}});
+        var baseProvider=new org.eclipse.ui.model.WorkbenchLabelProvider();var originalDecorator=wb.getDecoratorManager().getLabelDecorator();var labels=new org.eclipse.jface.viewers.DecoratingStyledCellLabelProvider(baseProvider,originalDecorator,null);viewer.setLabelProvider(labels);ChromaIcons.registerViewer(viewer);
+        var nativeBundle=Platform.getBundle("com._1c.g5.v8.dt.md.ui.shared");var rows=new LinkedHashMap<String,IconRow>();
+        for(String name:IconCatalog.nativeNames().keySet()){var url=nativeBundle.getEntry("icons/obj16/"+name+".png");if(url!=null)rows.put(name,new IconRow(name,org.eclipse.jface.resource.ImageDescriptor.createFromURL(url)));}
+        check(rows.size()>=50,"installed metadata base icon resources located, count="+rows.size());
+        var visible=new LinkedHashMap<String,IconRow>();for(String name:List.of("configuration","common","catalog","document","enum","report","data_processor","information_register","accumulation_register","accounting_register","calculation_register","common_module","subsystem","constant","role","form","exchange_plan","task","business_process","web_service","http","language","style"))if(rows.containsKey(name))visible.put(IconCatalog.nativeNames().get(name),rows.get(name));
+        for(var entry:rows.entrySet())visible.putIfAbsent(IconCatalog.nativeNames().get(entry.getKey()),entry.getValue());viewer.setInput(visible.values().toArray());fixture.root.layout(true,true);pump(250);
+        var nativeNavigator=page.showView("com._1c.g5.v8.dt.ui2.navigator");check(nativeNavigator instanceof org.eclipse.ui.navigator.CommonNavigator,"actual EDT CommonNavigator opened");
+        var nativeViewer=((org.eclipse.ui.navigator.CommonNavigator)nativeNavigator).getCommonViewer();page.activate(nativeNavigator);nativeViewer.getControl().redraw();nativeViewer.getControl().update();pump(900);
+        check(nativeViewer.getLabelProvider() instanceof org.eclipse.jface.viewers.DecoratingStyledCellLabelProvider,"actual EDT styled label provider available");
+        var nativeLabels=(org.eclipse.jface.viewers.DecoratingStyledCellLabelProvider)nativeViewer.getLabelProvider();var currentNative=nativeLabels.getLabelDecorator();var nativeOriginal=currentNative instanceof ChromaIconDecorator wrapper?wrapper.original():currentNative;
+        if(restart)check(currentNative instanceof ChromaIconDecorator,"restart automatically wraps actual EDT navigator; current="+currentNative.getClass().getName()+" fixture="+labels.getLabelDecorator().getClass().getName()+" found="+(page.findView("com._1c.g5.v8.dt.ui2.navigator")==nativeNavigator)+" tree="+nativeViewer.getControl().getClass().getName()+" pages="+Arrays.stream(wb.getWorkbenchWindows()).map(w->Arrays.stream(w.getPages()).map(p->String.valueOf(p.findView("com._1c.g5.v8.dt.ui2.navigator"))).toList()).toList());
+        var catalog=rows.get("catalog");var nativeImage=baseProvider.getImage(catalog);check(nativeImage!=null,"native WorkbenchLabelProvider supplies metadata image");var originalPixels=nativeImage.getImageData(100);
+        if(!restart){
+            // Exercise the native default with no explicit themeid, including on reused test copies.
+            var nativeThemePrefs=InstanceScope.INSTANCE.getNode(EdtSettingsAdapter.CSS_NODE);nativeThemePrefs.remove("themeid");nativeThemePrefs.flush();
+            var baseline=new LinkedHashMap<SettingKey,OriginalValue>();for(String id:List.of("github-light-default","monokai"))for(var key:adapter.plan(PaletteCatalog.load(id),true).keySet())baseline.putIfAbsent(key,adapter.read(key));
+            for(var entry:baseline.entrySet())originals.setProperty("pref|"+entry.getKey().scope()+"|"+entry.getKey().node()+"|"+entry.getKey().key(),entry.getValue().present()?entry.getValue().value():"<absent>");
+            try(var writer=Files.newBufferedWriter(saved)){originals.store(writer,"Original native preferences before icon tests");}
+            check(labels.getImage(catalog)==nativeImage,"default-off keeps native image identity");
+            var dialog=fontDialog();var toggle=(Button)findButton(dialog.getShell(),"Значки Visual Studio в Навигаторе");check(toggle!=null && !toggle.getSelection(),"icons checkbox starts off");toggle.setSelection(true);cancelIconsDialog(dialog);check(!ChromaIcons.isEnabled(),"Cancel does not enable icons");
+            dialog=fontDialog();toggle=(Button)findButton(dialog.getShell(),"Значки Visual Studio в Навигаторе");toggle.setSelection(true);findApply(dialog.getShell()).notifyListeners(SWT.Selection,new Event());pump(350);check(ChromaIcons.isEnabled(),"real preference Apply enables icons without palette");check(adapter.read(new SettingKey("instance",EdtSettingsAdapter.CSS_NODE,"themeid")).equals(OriginalValue.absent()),"icons-only Apply preserves absent native theme preference");check(nativeLabels.getLabelDecorator() instanceof ChromaIconDecorator,"Apply automatically wraps actual EDT navigator");cancelIconsDialog(dialog);check(ChromaIcons.isEnabled(),"Cancel after Apply retains committed icons");
+            dialog=fontDialog();((Button)findButton(dialog.getShell(),"Значки Visual Studio в Навигаторе")).setSelection(false);cancelIconsDialog(dialog);check(ChromaIcons.isEnabled(),"Cancel of uncheck retains enabled icons");
+        }
+        for(String profile:restart?List.of("github-light-default"):List.of("monokai","github-light-default")){
+            if(!restart)coordinator.apply(profile,true);var mode=PaletteCatalog.mode(profile);pump(350);
+            check(ChromaIcons.isEnabled(),profile+" palette apply preserves separate icon flag");
+            for(var entry:rows.entrySet()){
+                var original=baseProvider.getImage(entry.getValue());var before=original.getImageData(100);var replacement=ChromaIcons.replacement(original);
+                check(replacement!=null,profile+" native base replaced "+entry.getKey());
+                check(iconPixels(replacement.getImageData(100),iconExpected(IconCatalog.nativeNames().get(entry.getKey()),mode,16),16),profile+" exact upstream artwork "+entry.getKey());
+                check(iconPixels(before,original.getImageData(100),16),"native image remains unmodified "+entry.getKey());
+            }
+            for(String asset:IconCatalog.assets())for(int zoom:new int[]{100,125,150,175,200,300,400}){
+                var data=ChromaIcons.image(asset,mode).getImageData(zoom);int size=Math.round(16f*zoom/100);check(data.width==size && data.height==size,profile+" DPI "+zoom+" "+asset);
+                check(iconPixels(data,iconExpected(asset,mode,size),size),profile+" DPI artwork "+zoom+" "+asset);
+            }
+            check(iconPixels(labels.getImage(catalog).getImageData(100),iconExpected("meta-catalog",mode,16),16),profile+" public viewer pipeline uses replacement");
+            var document=rows.get("document");IconOverlay.color=wb.getThemeManager().getCurrentTheme().getColorRegistry().get("com._1c.g5.v8.dt.theming.ui.FOREGROUND_COLOR_ACCENT");IconOverlay.font=JFaceResources.getFontRegistry().getBold(JFaceResources.DEFAULT_FONT);document.overlay=true;wb.getDecoratorManager().update("ru.litonchik.edt.themes.probe.iconOverlay");pump(500);
+            Image decorated=labels.getImage(document);long deadline=System.nanoTime()+java.util.concurrent.TimeUnit.SECONDS.toNanos(3);
+            while(System.nanoTime()<deadline){var data=decorated.getImageData(100);if(data.palette.getRGB(data.getPixel(14,1)).equals(new RGB(239,17,97)))break;pump(100);decorated=labels.getImage(document);}
+            var decoratedData=decorated.getImageData(100);check(decoratedData.palette.getRGB(decoratedData.getPixel(14,1)).equals(new RGB(239,17,97)),profile+" lightweight status overlay remains on top");
+            check(iconPixels(decoratedData,iconExpected("meta-document",mode,16),11),profile+" new base remains under status overlay");check(labels.getLabelDecorator().decorateText(baseProvider.getText(document),document).endsWith(" [status]"),"status suffix is preserved");check(IconOverlay.color.getRGB().equals(labels.getForeground(document).getRGB()),"status foreground color is preserved");check(Arrays.equals(IconOverlay.font.getFontData(),labels.getFont(document).getFontData()),"status font is preserved");
+            viewer.refresh();page.activate(fixture);page.setPartState(page.findViewReference("ru.litonchik.edt.themes.probe.ui"),IWorkbenchPage.STATE_MAXIMIZED);pump(300);captureSurfaceShell(wb.getActiveWorkbenchWindow().getShell(),"icons-"+mode.name().toLowerCase(java.util.Locale.ROOT));page.setPartState(page.findViewReference("ru.litonchik.edt.themes.probe.ui"),IWorkbenchPage.STATE_RESTORED);
+            document.overlay=false;wb.getDecoratorManager().update("ru.litonchik.edt.themes.probe.iconOverlay");pump(150);
+            var altered=baseProvider.getImage(catalog).getImageData(100);var alteredMask=altered.getTransparencyMask();outer:for(int y=0;y<altered.height;y++)for(int x=0;x<altered.width;x++)if(imageAlpha(altered,alteredMask,x,y)>200){altered.setPixel(x,y,altered.palette.getPixel(new RGB(17,244,93)));break outer;}var unknown=new Image(wb.getDisplay(),altered);
+            try{check(ChromaIcons.replacement(unknown)==null,"modified/composite unknown native image is preserved");}finally{unknown.dispose();}
+            check(text.equals(editor.getDocument().get()) && stamp==((org.eclipse.jface.text.IDocumentExtension4)editor.getDocument()).getModificationStamp(),"icon operations preserve BSL source and modification stamp");
+        }
+        ChromaIcons.setEnabled(false);pump(350);check(labels.getImage(catalog)==nativeImage,"turning icons off restores native image identity");check(labels.getLabelDecorator()==originalDecorator,"fixture native decorator identity restored");check(nativeLabels.getLabelDecorator()==nativeOriginal,"actual EDT native decorator identity restored");check(prefs.get(ChromaIcons.KEY,null)==null,"turning icons off restores absent own key");check(iconPixels(originalPixels,nativeImage.getImageData(100),16),"original native pixels preserved throughout");
+        if(restart){
+            check(coordinator.restore(true).successful(),"icon palette restore succeeded");
+            for(String key:originals.stringPropertyNames()){var parts=key.split("\\|",4);var value=originals.getProperty(key);check((value.equals("<absent>")?OriginalValue.absent():OriginalValue.of(value)).equals(adapter.read(new SettingKey(parts[1],parts[2],parts[3]))),"icons exact native preference restore "+key);}
+            for(String id:PaletteCatalog.ids())check(coordinator.paletteDrafts().overrides(id).isEmpty(),"icons keep personal palette independent "+id);
+            var owned=ChromaIcons.image("meta-catalog",ThemeMode.LIGHT);page.hideView(fixture);page.hideView(nativeNavigator);ChromaIcons.stop();check(owned.isDisposed(),"owned icon cache disposed on stop");check(!coordinator.hasSnapshot() && coordinator.activeProfile()==null,"icon test releases theme journal and profile");
+        }else{ChromaIcons.setEnabled(true);check(ChromaIcons.isEnabled() && "github-light-default".equals(coordinator.activeProfile()),"icons and Light palette left for restart");}
+    }
 
     private java.util.List<Text> stagingIdentities(Control root) {
         var found=new ArrayList<Text>();
@@ -1344,6 +1452,7 @@ public class WorkbenchProbe implements IApplication {
         }
     }
     private void runCleanup() throws Exception {
+        ChromaIcons.setEnabled(false);check(!ChromaIcons.isEnabled(),"cleanup disables optional icons");
         var coordinator=ThemeStartup.coordinator();
         var originals=new SnapshotPreferences().load().original();
         var adapter=new EdtSettingsAdapter(PlatformUI.getWorkbench().getService(IThemeEngine.class),PlatformUI.getWorkbench().getThemeManager());

@@ -28,6 +28,7 @@ $manifest = Join-Path $stage 'MANIFEST.MF'
  <extension point="org.eclipse.ui.perspectives"><perspective id="ru.litonchik.edt.themes.probe.separators" name="Separator probe" class="ru.litonchik.edt.themes.testing.ProbePerspective"/></extension>
  <extension point="org.eclipse.ui.views"><view id="ru.litonchik.edt.themes.probe.ui" name="UI fixture" class="ru.litonchik.edt.themes.testing.WorkbenchProbe$UiPanelView"/></extension>
  <extension point="org.eclipse.ui.editors"><editor id="ru.litonchik.edt.themes.probe.protected" name="Protected content" class="ru.litonchik.edt.themes.testing.WorkbenchProbe$ProtectedContentEditor"/></extension>
+ <extension point="org.eclipse.ui.decorators"><decorator id="ru.litonchik.edt.themes.probe.iconOverlay" label="Icon status fixture" state="true" lightweight="true" class="ru.litonchik.edt.themes.testing.WorkbenchProbe$IconOverlay"><enablement><objectClass name="ru.litonchik.edt.themes.testing.WorkbenchProbe$IconRow"/></enablement></decorator></extension>
 </fragment>
 '@ | Set-Content -Encoding utf8 (Join-Path $stage 'fragment.xml')
 & (Join-Path $JavaHome 'bin/jar.exe') "-J-Djava.io.tmpdir=$taskTemp" --create --file (Join-Path $plugins 'ru.litonchik.edt.themes.probe_0.1.0.jar') --manifest $manifest -C $stage .
