@@ -1,0 +1,72 @@
+{
+  "version": "0.1.29",
+  "bundle": "0.1.29.202611051520",
+  "pages_metadata_matches": true,
+  "html_pages_match": true,
+  "previous_release_zip_verified": true,
+  "files": [
+    {
+      "url": "https://github.com/litonchik/ones_edt_themes/releases/download/v0.1.29/edt-themes-0.1.29.zip",
+      "http": 200,
+      "bytes": 1213986,
+      "sha256": "00bcd3c0a15db6d50285717a6d12b7c9c6ad067b9f387538111054f0043788c0",
+      "matches_local": true
+    },
+    {
+      "url": "https://github.com/litonchik/ones_edt_themes/releases/download/v0.1.29/edt-themes-0.1.29.zip.sha256",
+      "http": 200,
+      "bytes": 89,
+      "sha256": "c4faf4f162f6196a7d3af23fb4f6e0969112adc0f8560d37c8ec677c7ba55ee5",
+      "matches_local": true
+    },
+    {
+      "url": "https://litonchik.github.io/ones_edt_themes/repository/artifacts.jar",
+      "http": 200,
+      "bytes": 1030,
+      "sha256": "419cd68e78dbe5892ba429d05fcf6a7900cfa6e763cba690160c3a54fa97f000",
+      "matches_zip": true
+    },
+    {
+      "url": "https://litonchik.github.io/ones_edt_themes/repository/artifacts.xml.xz",
+      "http": 200,
+      "bytes": 964,
+      "sha256": "bdd5c054f2709be8cb4304b37dcf56d2eeac55dd26e5e687147da95c5b85ec12",
+      "matches_zip": true
+    },
+    {
+      "url": "https://litonchik.github.io/ones_edt_themes/repository/content.jar",
+      "http": 200,
+      "bytes": 4381,
+      "sha256": "443ec8a172cf536a6d4e6852a2b0169224c13d0fce9c6525cd4cb670d91877dc",
+      "matches_zip": true
+    },
+    {
+      "url": "https://litonchik.github.io/ones_edt_themes/repository/content.xml.xz",
+      "http": 200,
+      "bytes": 3848,
+      "sha256": "da2d8f164bc18f03cf0d674e2272218fff1d527e420e7b024f8d4afd4f0a9e01",
+      "matches_zip": true
+    },
+    {
+      "url": "https://litonchik.github.io/ones_edt_themes/repository/features/ru.litonchik.edt.themes.feature_0.1.29.202611051520.jar",
+      "http": 200,
+      "bytes": 1402,
+      "sha256": "4bfc2c5ebf905e13841caea0a9a285b90460c91c7a6c2c74b9794f269b6d4e37",
+      "matches_zip": true
+    },
+    {
+      "url": "https://litonchik.github.io/ones_edt_themes/repository/p2.index",
+      "http": 200,
+      "bytes": 176,
+      "sha256": "5e8e3b639e5d6c2df091f8838d8e9f13770dbdbb077d06aeb0b4b0a5a69d43b0",
+      "matches_zip": true
+    },
+    {
+      "url": "https://litonchik.github.io/ones_edt_themes/repository/plugins/ru.litonchik.edt.themes_0.1.29.202611051520.jar",
+      "http": 200,
+      "bytes": 1360735,
+      "sha256": "3714fef7666c241cccdf90d66bd06ef46feff1748dcc88fb0904825286bc1692",
+      "matches_zip": true
+    }
+  ]
+}

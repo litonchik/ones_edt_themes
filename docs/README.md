@@ -66,3 +66,5 @@
 - [Релиз 0.1.28, GitHub Pages и проверка обновления по URL](testing/release-0.1.28-validation.md).
 
 - [Значки Visual Studio Light / Dark](reference/chroma-icons.md), [исследование](research/2026-11-05-chroma-icons.md), [проверки](testing/chroma-icons-validation.md).
+
+- [Релиз 0.1.29, GitHub Pages и проверка обновления по URL](testing/release-0.1.29-validation.md).
