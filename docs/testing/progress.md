@@ -1,5 +1,14 @@
 # Журнал исполнения — docs/superpowers/plans/2026-10-13-edt-themes-mvp.md
 
+09.11.2026 опубликован стабильный релиз v0.1.30 (4e431cf), без пересборки
+проверенного ZIP. Unit tests и Publish update site — success. Pages сообщает
+0.1.30; два вложения и семь p2-файлов побайтово совпали по публичным HTTPS URL.
+В изолированной EDT 2026.1.3+25 подтверждено обновление 0.1.29 → 0.1.30
+через URL; SHA установленного bundle совпал с релизом. Cleanup/Reconcile/
+Uninstall/Audit — PASS; все 1267 baseline entries идентичны, theme/probe
+удалены, монитор остановлен, updates keys и временный junction удалены.
+Рабочая EDT не менялась. Отчёт — `docs/testing/release-0.1.30-validation.md`.
+
 09.11.2026 пользователь разрешил релиз 0.1.30 и проверку GitHub Pages.
 Используется проверенный ZIP 0.1.30.202611091114 без пересборки, SHA-256
 b4d7738513fc72967d9c926a38305bbdea05bdda61f33c6a53b6e3c34aaae1fe.

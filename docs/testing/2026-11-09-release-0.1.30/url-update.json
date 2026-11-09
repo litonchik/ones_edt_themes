@@ -1,0 +1,11 @@
+{
+  "installed_bundle_sha256": "35097cf92b933e5088e294c924ab4ee69acb0891361fa038b34f8a4e086e5224",
+  "method": "p2 director remove/install same feature from HTTPS repository",
+  "from": "0.1.29.202611051520",
+  "jvm": "17.0.18",
+  "previous_bundle_sha256": "3714fef7666c241cccdf90d66bd06ef46feff1748dcc88fb0904825286bc1692",
+  "to": "0.1.30.202611091114",
+  "edt": "2026.1.3+25",
+  "repository": "https://litonchik.github.io/ones_edt_themes/repository/",
+  "matches_release": true
+}

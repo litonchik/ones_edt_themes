@@ -1,0 +1,29 @@
+[
+  {
+    "id": 42611716447,
+    "name": "Unit tests",
+    "event": "push",
+    "status": "completed",
+    "conclusion": "success",
+    "head_sha": "4e431cff6e8816f64e0ce538d4b62eb892590f51",
+    "html_url": "https://github.com/litonchik/ones_edt_themes/actions/runs/42611716447"
+  },
+  {
+    "id": 42611717040,
+    "name": "Publish update site",
+    "event": "release",
+    "status": "completed",
+    "conclusion": "success",
+    "head_sha": "4e431cff6e8816f64e0ce538d4b62eb892590f51",
+    "html_url": "https://github.com/litonchik/ones_edt_themes/actions/runs/42611717040"
+  },
+  {
+    "id": 42611669771,
+    "name": "Unit tests",
+    "event": "push",
+    "status": "completed",
+    "conclusion": "success",
+    "head_sha": "4e431cff6e8816f64e0ce538d4b62eb892590f51",
+    "html_url": "https://github.com/litonchik/ones_edt_themes/actions/runs/42611669771"
+  }
+]

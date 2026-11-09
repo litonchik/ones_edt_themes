@@ -74,3 +74,5 @@
 - [Историческая проверка локального примера](testing/update-preview-validation.md).
 
 - [Производственный индикатор без примера, подготовка к push](testing/update-production-validation.md).
+
+- [Релиз 0.1.30, GitHub Pages и проверка обновления по URL](testing/release-0.1.30-validation.md).

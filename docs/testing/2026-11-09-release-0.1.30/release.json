@@ -1,0 +1,23 @@
+{
+  "id": 439068123,
+  "tag": "v0.1.30",
+  "url": "https://github.com/litonchik/ones_edt_themes/releases/tag/v0.1.30",
+  "target_commit": "4e431cff6e8816f64e0ce538d4b62eb892590f51",
+  "draft": false,
+  "prerelease": false,
+  "published_at": "2026-11-09T11:46:48Z",
+  "assets": [
+    {
+      "name": "edt-themes-0.1.30.zip",
+      "size": 1249516,
+      "digest": "sha256:b4d7738513fc72967d9c926a38305bbdea05bdda61f33c6a53b6e3c34aaae1fe",
+      "browser_download_url": "https://github.com/litonchik/ones_edt_themes/releases/download/v0.1.30/edt-themes-0.1.30.zip"
+    },
+    {
+      "name": "edt-themes-0.1.30.zip.sha256",
+      "size": 89,
+      "digest": "sha256:ed98f5c7cf1a0b76f8bff2e488f30075658ffc3ddaaf0deddf3ec080f92c8124",
+      "browser_download_url": "https://github.com/litonchik/ones_edt_themes/releases/download/v0.1.30/edt-themes-0.1.30.zip.sha256"
+    }
+  ]
+}
