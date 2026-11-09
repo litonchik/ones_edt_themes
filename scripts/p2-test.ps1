@@ -21,7 +21,7 @@ $configurator = Get-ChildItem -LiteralPath (Join-Path $copy 'plugins') -Filter '
 $work = Join-Path $projectRoot ('.work/p2-'+[Guid]::NewGuid().ToString('N').Substring(0,8))
 $config = Join-Path $work 'configuration'
 $taskTemp = Join-Path $projectRoot '.work/jar-temp'
-$testHome = Join-Path $projectRoot '.work/test-home'
+$testHome = Join-Path $WorkRoot 'p2-test-home'
 New-Item -ItemType Directory -Force -Path (Join-Path $config 'org.eclipse.equinox.simpleconfigurator'),$taskTemp,$testHome | Out-Null
 $info = Join-Path $copy 'configuration/org.eclipse.equinox.simpleconfigurator/bundles.info'
 $before = @(Get-Content -LiteralPath $info | Where-Object {$_ -notmatch '^#|^ru\.litonchik\.edt\.themes' } | ForEach-Object { ($_ -split ',')[0..1] -join ',' })
@@ -49,7 +49,7 @@ if ($Action -eq 'Install') {
         if (-not $siteUri.IsAbsoluteUri -or $siteUri.Scheme -ne 'https') { throw 'Нужен абсолютный HTTPS URL p2-репозитория' }
         $repository = $siteUri.AbsoluteUri
     } else {
-        if (-not $Zip) { $Zip = Join-Path $projectRoot 'dist/edt-themes-0.1.29.zip' }
+        if (-not $Zip) { $Zip = Join-Path $projectRoot 'dist/edt-themes-0.1.30.zip' }
         $zipPath = (Resolve-Path -LiteralPath $Zip).Path
         $repository = 'jar:'+([uri]$zipPath).AbsoluteUri+'!/'
     }

@@ -6,6 +6,25 @@
   </extension>
   <extension point="org.eclipse.ui.preferencePages">
     <page id="ru.litonchik.edt.themes.preferences" category="org.eclipse.ui.preferencePages.Views" name="%pageName" class="ru.litonchik.edt.themes.ui.ThemePreferencePage"/>
+    <page id="ru.litonchik.edt.themes.updates" category="ru.litonchik.edt.themes.preferences" name="%updatesPageName" class="ru.litonchik.edt.themes.ui.UpdatesPreferencePage"/>
+  </extension>
+  <extension point="org.eclipse.ui.commands">
+    <command id="ru.litonchik.edt.themes.showUpdate" name="Обновление Темы EDT"/>
+  </extension>
+  <extension point="org.eclipse.ui.handlers">
+    <handler commandId="ru.litonchik.edt.themes.showUpdate" class="ru.litonchik.edt.themes.ui.ShowUpdateDetailsHandler"/>
+  </extension>
+  <extension point="org.eclipse.core.expressions.propertyTesters">
+    <propertyTester id="ru.litonchik.edt.themes.updateTester" namespace="ru.litonchik.edt.themes" properties="updateAvailable" type="java.lang.Object" class="ru.litonchik.edt.themes.ui.UpdateAvailablePropertyTester"/>
+  </extension>
+  <extension point="org.eclipse.ui.menus">
+    <menuContribution locationURI="toolbar:org.eclipse.ui.trim.status">
+      <toolbar id="ru.litonchik.edt.themes.updateToolbar">
+        <command commandId="ru.litonchik.edt.themes.showUpdate" id="ru.litonchik.edt.themes.updateStatus" icon="resources/icons/update.png" tooltip="Темы EDT: обновления" style="push">
+          <visibleWhen checkEnabled="false"><test property="ru.litonchik.edt.themes.updateAvailable" value="true" forcePluginActivation="true"/></visibleWhen>
+        </command>
+      </toolbar>
+    </menuContribution>
   </extension>
   <extension point="org.eclipse.ui.startup"><startup class="ru.litonchik.edt.themes.runtime.ThemeStartup"/></extension>
 </plugin>

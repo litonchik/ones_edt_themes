@@ -1,0 +1,12 @@
+JVM 17.0.18
+PASS restart restores cached available indicator before a network request
+PASS cached release survives JVM restart
+PASS native status command registered
+PASS BSL editor opened on test fixture
+PASS restart indicator visible in actual status trim
+PASS daily schedule avoids a repeated check after restart
+PASS manual check can bypass daily interval
+PASS restart manual check finishes
+PASS current version clears cached status on restart
+PASS disabled preference survives monitor lifecycle
+PASS restart never invokes an update command automatically

@@ -68,3 +68,9 @@
 - [Значки Visual Studio Light / Dark](reference/chroma-icons.md), [исследование](research/2026-11-05-chroma-icons.md), [проверки](testing/chroma-icons-validation.md).
 
 - [Релиз 0.1.29, GitHub Pages и проверка обновления по URL](testing/release-0.1.29-validation.md).
+
+- [Индикатор обновлений](reference/update-indicator.md), [исследование](research/2026-11-06-update-notifications.md) и [проверки 0.1.30](testing/update-indicator-validation.md).
+
+- [Историческая проверка локального примера](testing/update-preview-validation.md).
+
+- [Производственный индикатор без примера, подготовка к push](testing/update-production-validation.md).

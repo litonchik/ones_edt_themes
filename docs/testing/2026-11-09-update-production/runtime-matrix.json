@@ -1,0 +1,68 @@
+{
+  "version": "0.1.30",
+  "bundle": "0.1.30.202611091114",
+  "zip_sha256": "b4d7738513fc72967d9c926a38305bbdea05bdda61f33c6a53b6e3c34aaae1fe",
+  "unit_tests": 137,
+  "publication_tests": 6,
+  "runtime_pass": 90,
+  "runtime_fail": 0,
+  "matrix": [
+    {
+      "edt": "2026.1.3",
+      "java_major": "17",
+      "production_pass": 30,
+      "fail": 0,
+      "installed_bundle_matches_zip": true,
+      "components": {
+        "org.eclipse.platform": "4.30.0.v20231201-0110",
+        "org.eclipse.swt": "3.124.200.v20231113-1355",
+        "org.eclipse.jface": "3.32.0.v20231107-0834",
+        "org.eclipse.ui.workbench": "3.131.0.v20231201-0512",
+        "org.eclipse.equinox.p2.ui.sdk": "1.3.200.v20230921-0854",
+        "org.eclipse.core.expressions": "3.9.200.v20230921-0857",
+        "com._1c.g5.v8.dt.bsl.ui": "23.0.1.v202609041212"
+      }
+    },
+    {
+      "edt": "2026.1.2",
+      "java_major": "17",
+      "production_pass": 30,
+      "fail": 0,
+      "installed_bundle_matches_zip": true,
+      "components": {
+        "org.eclipse.platform": "4.30.0.v20231201-0110",
+        "org.eclipse.swt": "3.124.200.v20231113-1355",
+        "org.eclipse.jface": "3.32.0.v20231107-0834",
+        "org.eclipse.ui.workbench": "3.131.0.v20231201-0512",
+        "org.eclipse.equinox.p2.ui.sdk": "1.3.200.v20230921-0854",
+        "org.eclipse.core.expressions": "3.9.200.v20230921-0857",
+        "com._1c.g5.v8.dt.bsl.ui": "23.0.1.v202607090722"
+      }
+    },
+    {
+      "edt": "2026.2.2",
+      "java_major": "25",
+      "production_pass": 30,
+      "fail": 0,
+      "installed_bundle_matches_zip": true,
+      "components": {
+        "org.eclipse.platform": "4.38.0.v20251120-1800",
+        "org.eclipse.swt": "3.132.0.v20251120-0906",
+        "org.eclipse.jface": "3.38.100.v20251108-1551",
+        "org.eclipse.ui.workbench": "3.137.0.v20251114-0005",
+        "org.eclipse.equinox.p2.ui.sdk": "1.3.500.v20250521-0421",
+        "org.eclipse.core.expressions": "3.9.500.v20250608-0434",
+        "com._1c.g5.v8.dt.bsl.ui": "24.0.0.v202610211527"
+      }
+    }
+  ],
+  "compared_candidate_bundle": "plugins/ru.litonchik.edt.themes_0.1.30.202611061054.jar",
+  "changed_classes": [
+    "ru/litonchik/edt/themes/runtime/UpdateNotifications.class"
+  ],
+  "unchanged_classes": 71,
+  "existing_resources_unchanged": true,
+  "no_preview_symbols_in_production_bytecode": true,
+  "class_major": 61,
+  "test_code_absent": true
+}

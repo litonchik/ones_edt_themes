@@ -1,0 +1,50 @@
+JVM 25.0.2
+PASS preview starts inactive with no indicator
+PASS BSL editor opened on test fixture
+PASS preview indicator has enough visible area for its full icon
+PASS explicit preview works while automatic checking is disabled
+PASS preview opens no window and preserves editor focus
+PASS tooltip clearly marks a fictitious next-version preview
+PASS preview preserves actual state and every update preference
+PASS preview starts no release-source request
+PASS unchanged Apply preserves preview and preferences
+PASS installer rejects preview before invoking native update command
+PASS explicit indicator click opens clearly named preview details
+PASS preview details are modeless
+PASS preview disables both installation and release-page buttons
+PASS programmatic selection cannot bypass preview action guards
+PASS preview leaves repository registration and enable flags unchanged
+PASS closing preview details restores prior real indicator state
+PASS preview details leave no fictitious version or timestamp in preferences
+PASS updates preference page registered
+PASS settings expose the preview button
+PASS settings explicitly identify active preview
+PASS Cancel closes settings while preserving the visible transient preview
+PASS updates preference page registered
+PASS settings button can end an existing preview
+BUTTON Проверять обновления в фоне и показывать индикатор expected=При&менить
+BUTTON Проверить сейчас expected=При&менить
+BUTTON Сведения об обновлении expected=При&менить
+BUTTON Завершить пример expected=При&менить
+BUTTON Восстановить значения по &умолчанию expected=При&менить
+BUTTON При&менить expected=При&менить
+PASS unchanged Apply through settings does not clear preview or rewrite preferences
+PASS settings OK succeeds during preview
+PASS OK leaves preview visible for local inspection
+PASS enabling background checks preserves explicit preview
+PASS explicit disable transition ends preview
+PASS all preview and settings actions perform zero feed or installer calls
+PASS real cached update fixture is available
+PASS preview overlays a real update without replacing it
+PASS ending preview restores the original cached update exactly
+PASS manual check starts and ends preview
+PASS manual source entered
+PASS manual check returns to actual checking state
+PASS unchanged enabled flag does not cancel an active real check
+PASS real update finishes under preview
+PASS real result remains independent of preview overlay
+PASS ending preview reveals genuine update with normal tooltip
+PASS only explicit real check persists a release
+PASS monitor stop removes transient preview
+PASS monitor restart restores real cache without preview
+PASS preview leaves palette journal empty

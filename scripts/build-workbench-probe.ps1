@@ -18,7 +18,9 @@ $sources = @(Join-Path $projectRoot 'tests/workbench/WorkbenchProbe.java') + @(J
 if ($LASTEXITCODE -ne 0) { throw 'Probe javac failed' }
 Remove-Item -LiteralPath $argsFile
 $manifest = Join-Path $stage 'MANIFEST.MF'
-@('Manifest-Version: 1.0','Bundle-ManifestVersion: 2','Bundle-SymbolicName: ru.litonchik.edt.themes.probe;singleton:=true','Bundle-Version: 0.1.0','Fragment-Host: ru.litonchik.edt.themes','Bundle-RequiredExecutionEnvironment: JavaSE-17','Require-Bundle: org.eclipse.equinox.app,org.eclipse.ui.ide,org.eclipse.xtext.ui,org.eclipse.xtext,org.eclipse.emf.ecore,org.eclipse.jface.text,org.eclipse.e4.ui.model.workbench,org.eclipse.compare,org.eclipse.ui.navigator,org.eclipse.team.core,org.eclipse.egit.core,org.eclipse.egit.ui,org.eclipse.jgit,com._1c.g5.v8.dt.qw.ui,com._1c.g5.v8.dt.compare.ui','') | Set-Content -Encoding utf8 $manifest
+$manifestLines = @('Manifest-Version: 1.0','Bundle-ManifestVersion: 2','Bundle-SymbolicName: ru.litonchik.edt.themes.probe;singleton:=true','Bundle-Version: 0.1.0','Fragment-Host: ru.litonchik.edt.themes','Bundle-RequiredExecutionEnvironment: JavaSE-17','Require-Bundle: org.eclipse.core.net,org.eclipse.core.commands,org.eclipse.equinox.p2.core,org.eclipse.equinox.p2.repository,org.eclipse.equinox.p2.metadata.repository,org.eclipse.equinox.p2.artifact.repository,org.eclipse.equinox.app,org.eclipse.ui.ide,org.eclipse.xtext.ui,org.eclipse.xtext,org.eclipse.emf.ecore,org.eclipse.jface.text,org.eclipse.e4.ui.model.workbench,org.eclipse.compare,org.eclipse.ui.navigator,org.eclipse.team.core,org.eclipse.egit.core,org.eclipse.egit.ui,org.eclipse.jgit,com._1c.g5.v8.dt.qw.ui,com._1c.g5.v8.dt.compare.ui','')
+$wrappedManifest = foreach($line in $manifestLines) { while($line.Length -gt 70) { $line.Substring(0,70); $line = ' ' + $line.Substring(70) }; $line }
+$wrappedManifest | Set-Content -Encoding utf8 $manifest
 @'
 <?xml version="1.0" encoding="UTF-8"?>
 <?eclipse version="3.4"?>

@@ -1,0 +1,31 @@
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.443 s -- in ru.litonchik.edt.themes.AyuLightTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.09 s -- in ru.litonchik.edt.themes.ChromaIconsTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.510 s -- in ru.litonchik.edt.themes.CodePreviewTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.072 s -- in ru.litonchik.edt.themes.GitDecorationColorsTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.090 s -- in ru.litonchik.edt.themes.LightThemeTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.043 s -- in ru.litonchik.edt.themes.NightOwlLightTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.046 s -- in ru.litonchik.edt.themes.NoctisHibernusTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.043 s -- in ru.litonchik.edt.themes.NoctisLilacTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.038 s -- in ru.litonchik.edt.themes.NoctisLuxTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in ru.litonchik.edt.themes.PaletteCatalogTest
+[INFO] Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.136 s -- in ru.litonchik.edt.themes.PaletteCoverageTest
+[INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s -- in ru.litonchik.edt.themes.PaletteDraftsTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in ru.litonchik.edt.themes.ProfileStateTest
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.116 s -- in ru.litonchik.edt.themes.ReleaseFeedClientTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s -- in ru.litonchik.edt.themes.ReleaseInfoTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s -- in ru.litonchik.edt.themes.RuntimePlatformTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s -- in ru.litonchik.edt.themes.SnapshotEncodingTest
+[INFO] Tests run: 28, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.042 s -- in ru.litonchik.edt.themes.SnapshotServiceTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.035 s -- in ru.litonchik.edt.themes.VisualStudioLightTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.030 s -- in ru.litonchik.edt.themes.WinterLightTest
+[INFO] Tests run: 137, Failures: 0, Errors: 0, Skipped: 0
+[INFO] BUILD SUCCESS
+[INFO] Total time:  41.678 s
+[INFO] Finished at: 2026-11-09T14:14:29+03:00
+[INFO] edt-themes-parent .................................. SUCCESS [  0.232 s]
+[INFO] ru.litonchik.edt.themes ............................ SUCCESS [ 29.122 s]
+[INFO] ru.litonchik.edt.themes.feature .................... SUCCESS [  1.179 s]
+[INFO] ru.litonchik.edt.themes.repository ................. SUCCESS [  2.434 s]
+[INFO] BUILD SUCCESS
+[INFO] Total time:  57.270 s
+[INFO] Finished at: 2026-11-09T14:15:29+03:00

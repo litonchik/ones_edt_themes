@@ -1,0 +1,36 @@
+JVM 17.0.18
+PASS production starts without a fictitious update
+PASS updates preference page registered
+PASS production settings contain no preview control
+PASS real manual check remains available
+PASS real manual check starts with automatic checks disabled
+PASS public older release fixture finishes as current
+PASS older release cannot create a cached or visible update
+PASS future release check starts
+PASS controlled future source entered
+PASS unchanged Apply does not cancel a running request
+PASS BSL editor opened on test fixture
+PASS genuine source result becomes available
+PASS production indicator has full visible area
+PASS production update steals no editor focus and opens no window
+PASS production tooltip contains only actual source version
+PASS only actual source result enters release cache
+PASS updates preference page registered
+PASS available-update settings still contain no preview control
+PASS settings display actual release status
+BUTTON Проверять обновления в фоне и показывать индикатор expected=При&менить
+BUTTON Проверить сейчас expected=При&менить
+BUTTON Сведения об обновлении expected=При&менить
+BUTTON Восстановить значения по &умолчанию expected=При&менить
+BUTTON При&менить expected=При&менить
+PASS unchanged settings Apply preserves available state
+PASS Cancel preserves committed background flag
+PASS explicit production icon click opens details
+PASS production details remain modeless
+PASS real release actions are available
+PASS opening actual release details does not start installer
+PASS only explicit Update invokes native command
+PASS explicit installer enables fixed project site
+PASS closing real details preserves genuine update
+PASS explicit disable hides production indicator
+PASS production checks leave monitor stopped and appearance journal empty

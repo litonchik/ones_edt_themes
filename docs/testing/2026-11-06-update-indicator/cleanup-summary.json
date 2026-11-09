@@ -1,0 +1,35 @@
+{
+  "update_test_preferences_removed": true,
+  "matrix": [
+    {
+      "cleanup_pass": 25,
+      "theme_and_probe_absent": true,
+      "update_monitor_stopped": true,
+      "p2_audit": true,
+      "edt": "2026.1.3",
+      "p2_uninstall": true,
+      "base_entries": 1267
+    },
+    {
+      "p2_uninstall": true,
+      "base_entries": 1257,
+      "update_monitor_stopped": true,
+      "p2_audit": true,
+      "edt": "2026.1.2",
+      "cleanup_pass": 25,
+      "theme_and_probe_absent": true
+    },
+    {
+      "update_monitor_stopped": true,
+      "p2_uninstall": true,
+      "base_entries": 1234,
+      "edt": "2026.2.2",
+      "p2_audit": true,
+      "theme_and_probe_absent": true,
+      "cleanup_pass": 25
+    }
+  ],
+  "working_edt_unchanged": true,
+  "targets_preserved": true,
+  "temporary_junctions_removed": 4
+}

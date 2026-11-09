@@ -1,0 +1,78 @@
+JVM 17.0.18
+PASS native status command registered
+PASS BSL editor opened on test fixture
+PASS updates default enabled without an explicit preference
+PASS up-to-date startup has no indicator
+PASS native p2 provisioning agent available
+PASS explicit check starts in background
+PASS current release check finishes
+PASS network source executes outside UI thread
+PASS older public release is not offered as an update
+PASS no-update result creates no window and steals no focus
+PASS slow update request starts
+PASS slow worker entered
+PASS duplicate check is not queued while another is running
+PASS UI timer and typing continue during a slow network request
+PASS future stable release becomes available
+PASS check preserves user edits and document modification stamp
+PASS available release adds no popup and does not take editor focus
+PASS available release never invokes update/install command automatically
+PASS background check leaves p2 repository registration unchanged
+PASS available indicator has enough visible area for its full icon
+PASS native update indicator is enabled for user selection
+PASS indicator tooltip names the available version
+PASS checker creates no palette journal
+PASS monokai retains fully visible passive indicator
+PASS github-light-default retains fully visible passive indicator
+PASS status screenshots restore original appearance
+PASS new workbench window receives the same passive indicator
+PASS selection explicitly opens release details
+PASS details shell is modeless
+PASS opening details does not start update wizard
+PASS only explicit Update button invokes native command
+PASS explicit Update action registers and enables the fixed HTTPS p2 site
+PASS updates preference page registered
+PASS updates page reads saved enable flag
+PASS Cancel leaves enable flag unchanged
+PASS updates preference page registered
+BUTTON Проверять обновления в фоне и показывать индикатор expected=При&менить
+BUTTON Проверить сейчас expected=При&менить
+BUTTON Сведения об обновлении expected=При&менить
+BUTTON Восстановить значения по &умолчанию expected=При&менить
+BUTTON При&менить expected=При&менить
+PASS Apply disables background checks and hides indicator
+PASS Cancel after Apply keeps committed setting
+PASS disabled monitor performs no scheduled request
+PASS manual check is allowed with automatic checks disabled
+PASS offline response finishes
+PASS network error is passive and creates no dialog
+PASS manual check for equal version starts
+PASS equal version check finishes
+PASS equal stable version clears old notification and ignores build qualifier
+PASS native Eclipse proxy service available
+PASS noninteractive Eclipse proxy route HTTP 200
+PASS noninteractive Eclipse proxy route HTTP 401
+PASS noninteractive Eclipse proxy route HTTP 407
+PASS explicit Eclipse proxy receives absolute request URL
+PASS origin and proxy challenges never invoke global interactive authenticator
+PASS checker preserves JVM global authenticator
+PASS proxy bypass request succeeds
+PASS Eclipse non-proxy hosts are respected
+PASS real bounded HTTP client completes on target JVM
+PASS target JVM parses metadata through production HTTP connection factory
+PASS proxy fixture restores global authenticator
+PASS proxy fixture restores exact plaintext preference presence and values
+PASS live HTTPS release feed request completes
+PASS live HTTPS release feed is readable; error=none
+PASS live HTTPS source returns stable release 0.1.29
+PASS live HTTPS check creates no windows
+PASS shutdown test starts a slow worker
+PASS shutdown worker entered
+PASS stop never waits for network or UI confirmation, ms=0
+PASS cancelled worker exits
+PASS late cancelled result writes neither preferences nor available release
+PASS monitor stop hides status indicator
+PASS monitor can restart after cancellation
+PASS restart fixture leaves cached available version
+PASS all background and settings actions leave native update command count unchanged
+PASS update testing leaves palette journal empty

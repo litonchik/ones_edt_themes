@@ -1,0 +1,45 @@
+{
+  "version": "0.1.30",
+  "bundle": "0.1.30.202611061225",
+  "zip_sha256": "7459542046c1457017de81b18f5432d35e2106f36e099ec4ba97d3b62d0c8451",
+  "unit_tests": 137,
+  "runtime_pass": 129,
+  "runtime_fail": 0,
+  "matrix": [
+    {
+      "edt": "2026.1.3",
+      "java_major": "17",
+      "preview_pass": 43,
+      "fail": 0,
+      "installed_bundle_matches_zip": true
+    },
+    {
+      "edt": "2026.1.2",
+      "java_major": "17",
+      "preview_pass": 43,
+      "fail": 0,
+      "installed_bundle_matches_zip": true
+    },
+    {
+      "edt": "2026.2.2",
+      "java_major": "25",
+      "preview_pass": 43,
+      "fail": 0,
+      "installed_bundle_matches_zip": true
+    }
+  ],
+  "previous_candidate_bundle": "plugins/ru.litonchik.edt.themes_0.1.30.202611061054.jar",
+  "changed_classes": [
+    "ru/litonchik/edt/themes/runtime/UpdateInstaller.class",
+    "ru/litonchik/edt/themes/runtime/UpdateNotifications$2.class",
+    "ru/litonchik/edt/themes/runtime/UpdateNotifications$3.class",
+    "ru/litonchik/edt/themes/runtime/UpdateNotifications.class",
+    "ru/litonchik/edt/themes/ui/ShowUpdateDetailsHandler.class",
+    "ru/litonchik/edt/themes/ui/UpdateDetails.class",
+    "ru/litonchik/edt/themes/ui/UpdatesPreferencePage.class"
+  ],
+  "unchanged_classes": 65,
+  "existing_resources_unchanged": true,
+  "class_major": 61,
+  "test_code_absent": true
+}

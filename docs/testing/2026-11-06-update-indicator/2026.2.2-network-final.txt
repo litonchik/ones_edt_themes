@@ -1,0 +1,21 @@
+JVM 25.0.2
+PASS native Eclipse proxy service available
+PASS noninteractive Eclipse proxy route HTTP 200
+PASS noninteractive Eclipse proxy route HTTP 401
+PASS noninteractive Eclipse proxy route HTTP 407
+PASS explicit Eclipse proxy receives absolute request URL
+PASS origin and proxy challenges never invoke global interactive authenticator
+PASS checker preserves JVM global authenticator
+PASS proxy bypass request succeeds
+PASS Eclipse non-proxy hosts are respected
+PASS real bounded HTTP client completes on target JVM
+PASS target JVM parses metadata through production HTTP connection factory
+PASS SOCKS route is refused before opening a connection
+PASS SOCKS cannot reach the global interactive authenticator
+PASS proxy fixture restores global authenticator
+PASS proxy fixture restores exact plaintext preference presence and values
+PASS live HTTPS release feed request completes
+PASS live HTTPS release feed is readable; error=none
+PASS live HTTPS source returns stable release 0.1.29
+PASS live HTTPS check creates no windows
+PASS targeted network check leaves appearance journal empty

@@ -39,11 +39,12 @@ public class WorkbenchProbe implements IApplication {
     private void check(boolean condition, String message) {
         if (!condition) throw new AssertionError(message);
         report.append("PASS ").append(message).append('\n');
-        if ("surfaces".equals(System.getProperty("edt.probe.phase")) || System.getProperty("edt.probe.phase").startsWith("light") || System.getProperty("edt.probe.phase").startsWith("candidateselection") || System.getProperty("edt.probe.phase").startsWith("candidateicons")) try {
+        if ("surfaces".equals(System.getProperty("edt.probe.phase")) || System.getProperty("edt.probe.phase").startsWith("light") || System.getProperty("edt.probe.phase").startsWith("candidateselection") || System.getProperty("edt.probe.phase").startsWith("candidateicons") || System.getProperty("edt.probe.phase").startsWith("candidateupdates")) try {
             Files.writeString(java.nio.file.Path.of(System.getProperty("edt.probe.report")),report.toString());
         } catch (java.io.IOException e) { throw new IllegalStateException(e); }
     }
     @Override public Object start(IApplicationContext context) throws Exception {
+        if("candidateupdates".equals(System.getProperty("edt.probe.phase"))){var p=InstanceScope.INSTANCE.getNode(SnapshotPreferences.PLUGIN_ID);for(String key:p.keys())if(key.startsWith(UpdateNotifications.PREFIX))p.remove(key);p.flush();}
         String disabled = String.join(";",Arrays.stream(Platform.getExtensionRegistry().getConfigurationElementsFor("org.eclipse.ui.startup")).map(e -> e.getContributor().getName()).distinct().filter(id -> !id.equals("com._1c.g5.v8.dt.theming.ui")).toList());
         InstanceScope.INSTANCE.getNode("org.eclipse.ui.workbench").put("PLUGINS_NOT_ACTIVATED_ON_STARTUP",disabled);
         Display display = PlatformUI.createDisplay();
@@ -51,7 +52,7 @@ public class WorkbenchProbe implements IApplication {
             PlatformUI.createAndRunWorkbench(display,new WorkbenchAdvisor() {
                 @Override public String getInitialWindowPerspectiveId() { return "ru.litonchik.edt.themes.probe.perspective"; }
                 @Override public WorkbenchWindowAdvisor createWorkbenchWindowAdvisor(IWorkbenchWindowConfigurer c) {
-                    return new WorkbenchWindowAdvisor(c) { @Override public void preWindowOpen() { c.setInitialSize(new Point(900,640)); c.setTitle("EDT Themes — isolated runtime probe"); } };
+                    return new WorkbenchWindowAdvisor(c) { @Override public void preWindowOpen() { c.setInitialSize(new Point(900,640)); c.setTitle("EDT Themes — isolated runtime probe"); if(System.getProperty("edt.probe.phase").startsWith("candidateupdates"))c.setShowStatusLine(true); } };
                 }
                 @Override public void postStartup() {
                     display.timerExec(5000,() -> {
@@ -84,6 +85,9 @@ public class WorkbenchProbe implements IApplication {
             var screen=freshShell.getMonitor().getClientArea(); freshShell.setLocation(screen.x,screen.y); freshShell.forceActive();
             freshWindow.getActivePage().setEditorAreaVisible(true); freshShell.layout(true,true); pump(500);
         }
+        if ("candidateupdatenetwork".equals(System.getProperty("edt.probe.phase"))) { var c=ThemeStartup.coordinator();UpdateNotifications.stop();runUpdateProxyChecks();liveUpdateFeedCheck();check(!c.hasSnapshot(),"targeted network check leaves appearance journal empty");return; }
+        if ("candidateupdatesproduction".equals(System.getProperty("edt.probe.phase"))) { runUpdateProductionChecks(); return; }
+        if (System.getProperty("edt.probe.phase").startsWith("candidateupdates")) { runUpdateChecks(); return; }
         if (System.getProperty("edt.probe.phase").startsWith("candidateicons")) { runIconChecks(); return; }
         if (System.getProperty("edt.probe.phase").startsWith("candidateselection")) { runSelectionChecks(); return; }
         if (System.getProperty("edt.probe.phase").startsWith("candidategit")) { runGitChecks(); return; }
@@ -1451,6 +1455,183 @@ public class WorkbenchProbe implements IApplication {
             check(coordinator.activeProfile()==null && !coordinator.hasSnapshot(),"gallery clears active profile and journal");
         }
     }
+
+    private Control updateControl(Control root,String key){
+        if(root==null || root.isDisposed())return null;if(Boolean.TRUE.equals(root.getData(key)))return root;
+        if(root instanceof Composite composite)for(var child:composite.getChildren()){var result=updateControl(child,key);if(result!=null)return result;}return null;
+    }
+    private void until(java.util.function.BooleanSupplier condition,String message) throws Exception {
+        long end=System.nanoTime()+java.util.concurrent.TimeUnit.SECONDS.toNanos(6);while(!condition.getAsBoolean() && System.nanoTime()<end)pump(20);
+        if(!condition.getAsBoolean() && message.contains("visible area")){
+            var window=PlatformUI.getWorkbench().getActiveWorkbenchWindow();
+            for(Control control=updateLink(window)==null?null:updateLink(window).getParent();control!=null;control=control.getParent())report.append("LAYOUT ").append(control.getClass().getName()).append(" bounds=").append(control.getBounds()).append(" natural=").append(control.computeSize(SWT.DEFAULT,SWT.DEFAULT)).append(" data=").append(control.getLayoutData()).append('\n');
+            captureSurfaceShell(window.getShell(),"update-status-layout-problem");
+        }
+        check(condition.getAsBoolean(),message);
+    }
+    private ToolItem updateLink(IWorkbenchWindow window){return updateItem(window.getShell());}
+    private ToolItem updateItem(Control control){
+        if(control instanceof ToolBar toolbar)for(var item:toolbar.getItems())if(item.getToolTipText()!=null && item.getToolTipText().startsWith("Темы EDT:"))return item;
+        if(control instanceof Composite composite)for(var child:composite.getChildren()){var result=updateItem(child);if(result!=null)return result;}return null;
+    }
+    private boolean readableUpdateIndicator(IWorkbenchWindow window){
+        var item=updateLink(window);if(item==null || item.isDisposed() || !item.getParent().isVisible() || item.getImage()==null)return false;
+        var natural=item.getImage().getBounds();var bounds=item.getBounds();var at=item.getParent().toDisplay(bounds.x,bounds.y);var area=new Rectangle(at.x,at.y,bounds.width,bounds.height);
+        for(Composite parent=item.getParent();parent!=null;parent=parent.getParent()){var client=parent.getClientArea();var origin=parent.toDisplay(client.x,client.y);area=area.intersection(new Rectangle(origin.x,origin.y,client.width,client.height));}
+        return area.width>=natural.width && area.height>=natural.height;
+    }
+    private void wakeUpdateTimer(){for(var job:org.eclipse.core.runtime.jobs.Job.getJobManager().find(null))if(job.getName().equals("Темы EDT: ожидание проверки обновлений"))job.wakeUp(0);}
+    private Set<Shell> visibleShells(){var result=Collections.newSetFromMap(new IdentityHashMap<Shell,Boolean>());for(var shell:PlatformUI.getWorkbench().getDisplay().getShells())if(!shell.isDisposed() && shell.isVisible())result.add(shell);return result;}
+    private PreferenceDialog updatesDialog() throws Exception {
+        var dialog=PreferencesUtil.createPreferenceDialogOn(PlatformUI.getWorkbench().getActiveWorkbenchWindow().getShell(),"ru.litonchik.edt.themes.updates",null,null);check(dialog!=null,"updates preference page registered");dialog.setBlockOnOpen(false);dialog.open();pump(200);return dialog;
+    }
+    private void cancelUpdatesDialog(PreferenceDialog dialog){for(Object value:dialog.getPreferenceManager().getElements(PreferenceManager.PRE_ORDER)){var node=(IPreferenceNode)value;if(node.getId().equals("ru.litonchik.edt.themes.updates"))node.getPage().performCancel();}dialog.close();}
+    private static final class UpdateProbeSource implements ReleaseSource {
+        final java.util.concurrent.atomic.AtomicInteger calls=new java.util.concurrent.atomic.AtomicInteger();volatile boolean blocked,fail,entered;volatile Thread thread;volatile ReleaseInfo result=new ReleaseInfo(ReleaseVersion.parse("0.1.29"));
+        @Override public ReleaseInfo read(java.util.function.BooleanSupplier cancelled) throws java.io.IOException {
+            calls.incrementAndGet();entered=true;thread=Thread.currentThread();try{
+                while(blocked && !cancelled.getAsBoolean())try{Thread.sleep(10);}catch(InterruptedException e){Thread.currentThread().interrupt();throw new java.io.InterruptedIOException();}
+                if(cancelled.getAsBoolean())throw new java.io.InterruptedIOException();if(fail)throw new java.io.IOException("controlled offline response");return result;
+            }finally{entered=false;}
+        }
+    }
+    private Map<String,String> plainProxySnapshot(org.osgi.service.prefs.Preferences node) throws Exception {
+        var result=new LinkedHashMap<String,String>();plainProxySnapshot(node,"",result);return result;
+    }
+    private void plainProxySnapshot(org.osgi.service.prefs.Preferences node,String prefix,Map<String,String> result) throws Exception {
+        for(String key:node.keys())result.put(prefix+key,node.get(key,null));for(String child:node.childrenNames())plainProxySnapshot(node.node(child),prefix+child+"/",result);
+    }
+    private void restorePlainProxy(org.osgi.service.prefs.Preferences node,Map<String,String> saved) throws Exception {
+        for(String path:plainProxySnapshot(node).keySet())if(!saved.containsKey(path)){int slash=path.lastIndexOf('/');var target=slash<0?node:node.node(path.substring(0,slash));target.remove(path.substring(slash+1));}
+        for(var entry:saved.entrySet()){int slash=entry.getKey().lastIndexOf('/');var target=slash<0?node:node.node(entry.getKey().substring(0,slash));target.put(entry.getKey().substring(slash+1),entry.getValue());}node.flush();
+    }
+    private void liveUpdateFeedCheck() throws Exception {
+        var result=new java.util.concurrent.atomic.AtomicReference<ReleaseInfo>();var error=new java.util.concurrent.atomic.AtomicReference<Exception>();var shells=visibleShells();
+        var thread=new Thread(() -> {try{result.set(new ReleaseFeedClient(ReleaseFeedClient.FEED,EclipseProxyConnections::open,1500).read(() -> false));}catch(Exception e){error.set(e);}});thread.setDaemon(true);thread.start();
+        until(() -> result.get()!=null || error.get()!=null,"live HTTPS release feed request completes");
+        check(error.get()==null,"live HTTPS release feed is readable; error="+(error.get()==null?"none":error.get().getClass().getSimpleName()));
+        check(result.get().version().compareTo(ReleaseVersion.parse("0.1.29"))>=0,"live HTTPS source returns stable release "+result.get().version());check(visibleShells().equals(shells),"live HTTPS check creates no windows");
+    }
+    private void runUpdateProxyChecks() throws Exception {
+        var configuration=org.eclipse.core.runtime.preferences.ConfigurationScope.INSTANCE.getNode("org.eclipse.core.net");var instance=InstanceScope.INSTANCE.getNode("org.eclipse.core.net");
+        var configurationBefore=plainProxySnapshot(configuration);var instanceBefore=plainProxySnapshot(instance);
+        var context=org.osgi.framework.FrameworkUtil.getBundle(UpdateInstaller.class).getBundleContext();
+        var reference=context.getServiceReference(org.eclipse.core.net.proxy.IProxyService.class);check(reference!=null,"native Eclipse proxy service available");var proxyService=context.getService(reference);
+        var proxyData=proxyService.getProxyData(org.eclipse.core.net.proxy.IProxyData.HTTP_PROXY_TYPE);
+        var socksData=proxyService.getProxyData(org.eclipse.core.net.proxy.IProxyData.SOCKS_PROXY_TYPE);String oldSocksHost=socksData.getHost(),oldSocksUser=socksData.getUserId(),oldSocksPassword=socksData.getPassword();int oldSocksPort=socksData.getPort();
+        boolean oldEnabled=proxyService.isProxiesEnabled(),oldSystem=proxyService.isSystemProxiesEnabled();var oldBypass=proxyService.getNonProxiedHosts();
+        String oldHost=proxyData.getHost(),oldUser=proxyData.getUserId(),oldPassword=proxyData.getPassword();int oldPort=proxyData.getPort();
+        var oldAuth=java.net.Authenticator.getDefault();var globalAuthCalls=new java.util.concurrent.atomic.AtomicInteger();
+        var auth=new java.net.Authenticator(){@Override protected java.net.PasswordAuthentication getPasswordAuthentication(){globalAuthCalls.incrementAndGet();return null;}};
+        var reply=new java.util.concurrent.atomic.AtomicInteger(200);var first=new java.util.concurrent.atomic.AtomicReference<String>();
+        try(var server=new java.net.ServerSocket(0,50,java.net.InetAddress.getByName("127.0.0.1"))){
+            var worker=new Thread(() -> {while(!server.isClosed())try(var socket=server.accept()){
+                socket.setSoTimeout(2000);var reader=new java.io.BufferedReader(new java.io.InputStreamReader(socket.getInputStream(),java.nio.charset.StandardCharsets.US_ASCII));first.set(reader.readLine());for(String line;(line=reader.readLine())!=null && !line.isEmpty();){}
+                String body="{\"version\":\"0.1.31\",\"bundle_version\":\"0.1.31.fixture\",\"release_url\":\""+ReleaseInfo.PROJECT+"0.1.31\"}";
+                String text="HTTP/1.1 "+reply.get()+" Test\r\nConnection: close\r\nWWW-Authenticate: Basic realm=\"test\"\r\nProxy-Authenticate: Basic realm=\"test\"\r\nContent-Length: "+body.length()+"\r\n\r\n"+body;socket.getOutputStream().write(text.getBytes(java.nio.charset.StandardCharsets.US_ASCII));socket.getOutputStream().flush();
+            }catch(Exception e){if(!server.isClosed())return;}});worker.setDaemon(true);worker.start();
+            proxyService.setSystemProxiesEnabled(false);proxyService.setProxiesEnabled(true);proxyService.setNonProxiedHosts(new String[0]);proxyData.setHost("127.0.0.1");proxyData.setPort(server.getLocalPort());proxyData.setUserid(null);proxyData.setPassword(null);proxyService.setProxyData(new org.eclipse.core.net.proxy.IProxyData[]{proxyData});
+            java.net.Authenticator.setDefault(auth);
+            for(int code:new int[]{200,401,407}){
+                reply.set(code);var connection=EclipseProxyConnections.open(java.net.URI.create("http://example.invalid/feed"));connection.setConnectTimeout(1000);connection.setReadTimeout(1000);
+                try{check(connection.getResponseCode()==code,"noninteractive Eclipse proxy route HTTP "+code);}finally{connection.disconnect();}
+            }
+            check(first.get().startsWith("GET http://example.invalid/feed"),"explicit Eclipse proxy receives absolute request URL");check(globalAuthCalls.get()==0,"origin and proxy challenges never invoke global interactive authenticator");check(java.net.Authenticator.getDefault()==auth,"checker preserves JVM global authenticator");
+            proxyService.setNonProxiedHosts(new String[]{"127.*"});reply.set(200);var direct=EclipseProxyConnections.open(java.net.URI.create("http://127.0.0.1:"+server.getLocalPort()+"/feed"));direct.setReadTimeout(1000);try{check(direct.getResponseCode()==200,"proxy bypass request succeeds");}finally{direct.disconnect();}check(first.get().startsWith("GET /feed"),"Eclipse non-proxy hosts are respected");
+            var fetched=new java.util.concurrent.atomic.AtomicReference<ReleaseInfo>();var error=new java.util.concurrent.atomic.AtomicReference<Exception>();
+            var http=new Thread(() -> {try{fetched.set(new ReleaseFeedClient(java.net.URI.create("http://127.0.0.1:"+server.getLocalPort()+"/feed"),EclipseProxyConnections::open,1000).read(() -> false));}catch(Exception e){error.set(e);}});http.setDaemon(true);http.start();
+            until(() -> fetched.get()!=null || error.get()!=null,"real bounded HTTP client completes on target JVM");check(error.get()==null && fetched.get().version().equals(ReleaseVersion.parse("0.1.31")),"target JVM parses metadata through production HTTP connection factory");
+            proxyData.setHost(null);proxyData.setPort(-1);socksData.setHost("127.0.0.1");socksData.setPort(server.getLocalPort());socksData.setUserid(null);socksData.setPassword(null);proxyService.setProxyData(new org.eclipse.core.net.proxy.IProxyData[]{proxyData,socksData});
+            boolean refused=false;try{var rejected=EclipseProxyConnections.open(java.net.URI.create("http://example.invalid/feed"));rejected.disconnect();}catch(java.io.IOException e){refused=e.getMessage().contains("SOCKS");}
+            check(refused,"SOCKS route is refused before opening a connection");check(globalAuthCalls.get()==0,"SOCKS cannot reach the global interactive authenticator");
+        }finally{
+            proxyData.setHost(oldHost);proxyData.setPort(oldPort);proxyData.setUserid(oldUser);proxyData.setPassword(oldPassword);socksData.setHost(oldSocksHost);socksData.setPort(oldSocksPort);socksData.setUserid(oldSocksUser);socksData.setPassword(oldSocksPassword);proxyService.setProxyData(new org.eclipse.core.net.proxy.IProxyData[]{proxyData,socksData});proxyService.setNonProxiedHosts(oldBypass);proxyService.setSystemProxiesEnabled(oldSystem);proxyService.setProxiesEnabled(oldEnabled);context.ungetService(reference);java.net.Authenticator.setDefault(oldAuth);restorePlainProxy(configuration,configurationBefore);restorePlainProxy(instance,instanceBefore);
+        }
+        check(java.net.Authenticator.getDefault()==oldAuth,"proxy fixture restores global authenticator");
+        check(plainProxySnapshot(configuration).equals(configurationBefore) && plainProxySnapshot(instance).equals(instanceBefore),"proxy fixture restores exact plaintext preference presence and values");
+    }
+
+
+    private void runUpdateProductionChecks() throws Exception {
+        var wb=PlatformUI.getWorkbench();var window=wb.getActiveWorkbenchWindow();var display=wb.getDisplay();var coordinator=ThemeStartup.coordinator();
+        UpdateNotifications.stop();var prefs=InstanceScope.INSTANCE.getNode(SnapshotPreferences.PLUGIN_ID);for(String key:prefs.keys())if(key.startsWith(UpdateNotifications.PREFIX))prefs.remove(key);prefs.flush();
+        UpdateNotifications.setEnabled(false);var source=new UpdateProbeSource();UpdateNotifications.start(source,java.time.Clock.systemUTC());pump(150);
+        check(!UpdateNotifications.available() && !readableUpdateIndicator(window),"production starts without a fictitious update");
+        var dialog=updatesDialog();check(updateControl(dialog.getShell(),"themes.update.preview")==null,"production settings contain no preview control");
+        check(((Button)updateControl(dialog.getShell(),"themes.update.check")).getEnabled(),"real manual check remains available");cancelUpdatesDialog(dialog);
+        check(UpdateNotifications.checkNow(),"real manual check starts with automatic checks disabled");until(() -> UpdateNotifications.state().phase()==UpdateNotifications.Phase.CURRENT,"public older release fixture finishes as current");
+        check(!UpdateNotifications.available() && prefs.get(UpdateNotifications.LATEST,null)==null && !readableUpdateIndicator(window),"older release cannot create a cached or visible update");
+        UpdateNotifications.setEnabled(true);source.blocked=true;source.result=new ReleaseInfo(ReleaseVersion.parse("0.1.31"));check(UpdateNotifications.checkNow(),"future release check starts");until(() -> source.entered,"controlled future source entered");
+        UpdateNotifications.setEnabled(true);check(UpdateNotifications.state().phase()==UpdateNotifications.Phase.CHECKING,"unchanged Apply does not cancel a running request");
+        tryOpenBsl();var editor=(org.eclipse.xtext.ui.editor.XtextEditor)window.getActivePage().getActiveEditor();editor.setFocus();pump(100);var focus=display.getFocusControl();var shells=visibleShells();source.blocked=false;
+        until(UpdateNotifications::available,"genuine source result becomes available");until(() -> readableUpdateIndicator(window),"production indicator has full visible area");
+        check(display.getFocusControl()==focus && visibleShells().equals(shells),"production update steals no editor focus and opens no window");
+        check(updateLink(window).getToolTipText().contains("0.1.31") && !updateLink(window).getToolTipText().contains("пример"),"production tooltip contains only actual source version");
+        check(prefs.get(UpdateNotifications.LATEST,"").equals("0.1.31"),"only actual source result enters release cache");captureSurfaceShell(window.getShell(),"update-production-status");
+        dialog=updatesDialog();check(updateControl(dialog.getShell(),"themes.update.preview")==null,"available-update settings still contain no preview control");
+        var status=(Label)updateControl(dialog.getShell(),"themes.update.status");check(status.getText().contains("0.1.31") && !status.getText().contains("Предпросмотр"),"settings display actual release status");
+        findApply(dialog.getShell()).notifyListeners(SWT.Selection,new Event());pump(80);check(UpdateNotifications.available() && UpdateNotifications.state().phase()==UpdateNotifications.Phase.AVAILABLE,"unchanged settings Apply preserves available state");
+        captureSurfaceShell(dialog.getShell(),"update-production-settings");var toggle=(Button)updateControl(dialog.getShell(),"themes.update.enabled");toggle.setSelection(false);cancelUpdatesDialog(dialog);check(UpdateNotifications.isEnabled(),"Cancel preserves committed background flag");
+        var calls=new java.util.concurrent.atomic.AtomicInteger();var handlers=window.getService(org.eclipse.ui.handlers.IHandlerService.class);
+        var activation=handlers.activateHandler(UpdateInstaller.COMMAND,new org.eclipse.core.commands.AbstractHandler(){@Override public Object execute(org.eclipse.core.commands.ExecutionEvent event){calls.incrementAndGet();return null;}});
+        var context=org.osgi.framework.FrameworkUtil.getBundle(UpdateInstaller.class).getBundleContext();var ref=context.getServiceReference(org.eclipse.equinox.p2.core.IProvisioningAgent.class);var agent=context.getService(ref);
+        var metadata=(org.eclipse.equinox.p2.repository.metadata.IMetadataRepositoryManager)agent.getService(org.eclipse.equinox.p2.repository.metadata.IMetadataRepositoryManager.SERVICE_NAME);var artifacts=(org.eclipse.equinox.p2.repository.artifact.IArtifactRepositoryManager)agent.getService(org.eclipse.equinox.p2.repository.artifact.IArtifactRepositoryManager.SERVICE_NAME);
+        boolean hadMetadata=metadata.contains(UpdateInstaller.SITE),hadArtifacts=artifacts.contains(UpdateInstaller.SITE),me=metadata.isEnabled(UpdateInstaller.SITE),ae=artifacts.isEnabled(UpdateInstaller.SITE);
+        try{
+            updateLink(window).notifyListeners(SWT.Selection,new Event());pump(80);var details=(Shell)window.getShell().getData(ru.litonchik.edt.themes.ui.UpdateDetails.ID);
+            check(details!=null && !details.isDisposed(),"explicit production icon click opens details");check((details.getStyle()&(SWT.APPLICATION_MODAL|SWT.PRIMARY_MODAL|SWT.SYSTEM_MODAL))==0,"production details remain modeless");
+            var install=(Button)updateControl(details,"themes.update.install");check(install.getEnabled() && findButton(details,"Что нового").getEnabled(),"real release actions are available");
+            check(calls.get()==0,"opening actual release details does not start installer");captureSurfaceShell(details,"update-production-details");install.notifyListeners(SWT.Selection,new Event());
+            check(calls.get()==1,"only explicit Update invokes native command");check(metadata.contains(UpdateInstaller.SITE) && metadata.isEnabled(UpdateInstaller.SITE) && artifacts.contains(UpdateInstaller.SITE) && artifacts.isEnabled(UpdateInstaller.SITE),"explicit installer enables fixed project site");
+            findButton(details,"Закрыть").notifyListeners(SWT.Selection,new Event());check(UpdateNotifications.available(),"closing real details preserves genuine update");
+        }finally{handlers.deactivateHandler(activation);if(hadMetadata)metadata.setEnabled(UpdateInstaller.SITE,me);else metadata.removeRepository(UpdateInstaller.SITE);if(hadArtifacts)artifacts.setEnabled(UpdateInstaller.SITE,ae);else artifacts.removeRepository(UpdateInstaller.SITE);context.ungetService(ref);}
+        UpdateNotifications.setEnabled(false);pump(80);check(!readableUpdateIndicator(window),"explicit disable hides production indicator");UpdateNotifications.stop();pump(80);
+        check(!UpdateNotifications.isRunning() && !coordinator.hasSnapshot() && coordinator.activeProfile()==null,"production checks leave monitor stopped and appearance journal empty");
+    }
+
+    private void runUpdateChecks() throws Exception {
+        var wb=PlatformUI.getWorkbench();var window=wb.getActiveWorkbenchWindow();var page=window.getActivePage();var display=wb.getDisplay();var coordinator=ThemeStartup.coordinator();
+        boolean restart=System.getProperty("edt.probe.phase").endsWith("restart");var prefs=InstanceScope.INSTANCE.getNode(SnapshotPreferences.PLUGIN_ID);
+        var clockFile=java.nio.file.Path.of(System.getProperty("edt.probe.images"),"updates-clock.txt");long now=restart?Long.parseLong(Files.readString(clockFile))+1000:System.currentTimeMillis();var clock=java.time.Clock.fixed(java.time.Instant.ofEpochMilli(now),java.time.ZoneOffset.UTC);
+        if(restart){check(UpdateNotifications.available(),"restart restores cached available indicator before a network request");check("0.1.31".equals(prefs.get(UpdateNotifications.LATEST,null)),"cached release survives JVM restart");}
+        UpdateNotifications.stop();
+        if(!restart){for(String key:prefs.keys())if(key.startsWith(UpdateNotifications.PREFIX))prefs.remove(key);prefs.flush();}
+        var source=new UpdateProbeSource();UpdateNotifications.start(source,clock);pump(200);
+        until(() -> window.getService(org.eclipse.ui.commands.ICommandService.class).getCommand(ru.litonchik.edt.themes.ui.ShowUpdateDetailsHandler.COMMAND).isDefined(),"native status command registered");
+        var calls=new java.util.concurrent.atomic.AtomicInteger();var handlers=window.getService(org.eclipse.ui.handlers.IHandlerService.class);
+        var activation=handlers.activateHandler(UpdateInstaller.COMMAND,new org.eclipse.core.commands.AbstractHandler(){@Override public Object execute(org.eclipse.core.commands.ExecutionEvent event){calls.incrementAndGet();return null;}});
+        try{
+            var opened=tryOpenBsl();var editor=(org.eclipse.xtext.ui.editor.XtextEditor)page.getActiveEditor();var document=editor.getDocument();String original=document.get();editor.setFocus();pump(200);
+            if(restart){
+                check(readableUpdateIndicator(window),"restart indicator visible in actual status trim");wakeUpdateTimer();pump(250);check(source.calls.get()==0,"daily schedule avoids a repeated check after restart");
+                check(UpdateNotifications.checkNow(),"manual check can bypass daily interval");until(() -> UpdateNotifications.state().phase()!=UpdateNotifications.Phase.CHECKING,"restart manual check finishes");check(!UpdateNotifications.available() && !readableUpdateIndicator(window),"current version clears cached status on restart");
+                UpdateNotifications.setEnabled(false);UpdateNotifications.stop();UpdateNotifications.start(source,clock);wakeUpdateTimer();pump(250);check(!UpdateNotifications.available() && source.calls.get()==1,"disabled preference survives monitor lifecycle");check(calls.get()==0,"restart never invokes an update command automatically");return;
+            }
+            check(UpdateNotifications.isEnabled() && prefs.get(UpdateNotifications.ENABLED,null)==null,"updates default enabled without an explicit preference");check(!readableUpdateIndicator(window),"up-to-date startup has no indicator");
+            var context=org.osgi.framework.FrameworkUtil.getBundle(UpdateInstaller.class).getBundleContext();var agentRef=context.getServiceReference(org.eclipse.equinox.p2.core.IProvisioningAgent.class);check(agentRef!=null,"native p2 provisioning agent available");var agent=context.getService(agentRef);
+            var metadata=(org.eclipse.equinox.p2.repository.metadata.IMetadataRepositoryManager)agent.getService(org.eclipse.equinox.p2.repository.metadata.IMetadataRepositoryManager.SERVICE_NAME);var artifacts=(org.eclipse.equinox.p2.repository.artifact.IArtifactRepositoryManager)agent.getService(org.eclipse.equinox.p2.repository.artifact.IArtifactRepositoryManager.SERVICE_NAME);
+            boolean hadMetadata=metadata.contains(UpdateInstaller.SITE),hadArtifacts=artifacts.contains(UpdateInstaller.SITE),metadataEnabled=metadata.isEnabled(UpdateInstaller.SITE),artifactsEnabled=artifacts.isEnabled(UpdateInstaller.SITE);
+            try{
+                var shells=visibleShells();var focus=display.getFocusControl();check(UpdateNotifications.checkNow(),"explicit check starts in background");until(() -> UpdateNotifications.state().phase()!=UpdateNotifications.Phase.CHECKING,"current release check finishes");check(source.thread!=display.getThread(),"network source executes outside UI thread");check(!UpdateNotifications.available(),"older public release is not offered as an update");check(visibleShells().equals(shells) && display.getFocusControl()==focus,"no-update result creates no window and steals no focus");captureSurfaceShell(window.getShell(),"update-status-current");
+                source.blocked=true;source.result=new ReleaseInfo(ReleaseVersion.parse("0.1.31"));check(UpdateNotifications.checkNow(),"slow update request starts");until(() -> source.entered,"slow worker entered");check(!UpdateNotifications.checkNow(),"duplicate check is not queued while another is running");
+                var heartbeat=new java.util.concurrent.atomic.AtomicInteger();display.timerExec(20,heartbeat::incrementAndGet);document.replace(0,0,"// typing while update check is running\r\n");String typed=document.get();long stamp=((org.eclipse.jface.text.IDocumentExtension4)document).getModificationStamp();editor.setFocus();pump(180);focus=display.getFocusControl();shells=visibleShells();
+                check(heartbeat.get()==1 && source.entered,"UI timer and typing continue during a slow network request");source.blocked=false;until(UpdateNotifications::available,"future stable release becomes available");pump(100);
+                check(document.get().equals(typed) && ((org.eclipse.jface.text.IDocumentExtension4)document).getModificationStamp()==stamp,"check preserves user edits and document modification stamp");check(display.getFocusControl()==focus && visibleShells().equals(shells),"available release adds no popup and does not take editor focus");check(calls.get()==0,"available release never invokes update/install command automatically");check(metadata.contains(UpdateInstaller.SITE)==hadMetadata && artifacts.contains(UpdateInstaller.SITE)==hadArtifacts,"background check leaves p2 repository registration unchanged");
+                until(() -> readableUpdateIndicator(window),"available indicator has enough visible area for its full icon");check(updateLink(window).getEnabled(),"native update indicator is enabled for user selection");check(updateLink(window).getToolTipText().contains("0.1.31"),"indicator tooltip names the available version");check(!coordinator.hasSnapshot(),"checker creates no palette journal");
+                for(String profile:List.of("monokai","github-light-default")){coordinator.apply(profile,true);pump(400);check(UpdateNotifications.available() && readableUpdateIndicator(window),profile+" retains fully visible passive indicator");captureSurfaceShell(window.getShell(),"update-status-"+(profile.equals("monokai")?"dark":"light"));}check(coordinator.restore(true).successful(),"status screenshots restore original appearance");
+                var second=wb.openWorkbenchWindow(page.getPerspective().getId(),org.eclipse.core.resources.ResourcesPlugin.getWorkspace().getRoot());pump(300);check(updateLink(second)!=null && readableUpdateIndicator(second),"new workbench window receives the same passive indicator");second.close();window.getShell().setActive();pump(150);
+                updateLink(window).notifyListeners(SWT.Selection,new Event());pump(100);var details=(Shell)window.getShell().getData(ru.litonchik.edt.themes.ui.UpdateDetails.ID);check(details!=null && !details.isDisposed(),"selection explicitly opens release details");check((details.getStyle()&(SWT.APPLICATION_MODAL|SWT.PRIMARY_MODAL|SWT.SYSTEM_MODAL))==0,"details shell is modeless");check(calls.get()==0,"opening details does not start update wizard");captureSurfaceShell(details,"update-details");findButton(details,"Обновить").notifyListeners(SWT.Selection,new Event());check(calls.get()==1,"only explicit Update button invokes native command");check(metadata.contains(UpdateInstaller.SITE) && metadata.isEnabled(UpdateInstaller.SITE) && artifacts.contains(UpdateInstaller.SITE) && artifacts.isEnabled(UpdateInstaller.SITE),"explicit Update action registers and enables the fixed HTTPS p2 site");findButton(details,"Закрыть").notifyListeners(SWT.Selection,new Event());
+            }finally{if(hadMetadata)metadata.setEnabled(UpdateInstaller.SITE,metadataEnabled);else metadata.removeRepository(UpdateInstaller.SITE);if(hadArtifacts)artifacts.setEnabled(UpdateInstaller.SITE,artifactsEnabled);else artifacts.removeRepository(UpdateInstaller.SITE);context.ungetService(agentRef);}
+            var dialog=updatesDialog();var toggle=(Button)updateControl(dialog.getShell(),"themes.update.enabled");check(toggle!=null && toggle.getSelection(),"updates page reads saved enable flag");captureSurfaceShell(dialog.getShell(),"update-settings");toggle.setSelection(false);cancelUpdatesDialog(dialog);check(UpdateNotifications.isEnabled(),"Cancel leaves enable flag unchanged");
+            dialog=updatesDialog();toggle=(Button)updateControl(dialog.getShell(),"themes.update.enabled");toggle.setSelection(false);findApply(dialog.getShell()).notifyListeners(SWT.Selection,new Event());pump(100);check(!UpdateNotifications.isEnabled() && !readableUpdateIndicator(window),"Apply disables background checks and hides indicator");cancelUpdatesDialog(dialog);check(!UpdateNotifications.isEnabled(),"Cancel after Apply keeps committed setting");
+            int before=source.calls.get();wakeUpdateTimer();pump(150);check(source.calls.get()==before,"disabled monitor performs no scheduled request");source.fail=true;var shells=visibleShells();check(UpdateNotifications.checkNow(),"manual check is allowed with automatic checks disabled");until(() -> UpdateNotifications.state().phase()!=UpdateNotifications.Phase.CHECKING,"offline response finishes");check(UpdateNotifications.state().phase()==UpdateNotifications.Phase.FAILED && visibleShells().equals(shells),"network error is passive and creates no dialog");
+            source.fail=false;UpdateNotifications.setEnabled(true);source.result=new ReleaseInfo(UpdateNotifications.installed());check(UpdateNotifications.checkNow(),"manual check for equal version starts");until(() -> UpdateNotifications.state().phase()!=UpdateNotifications.Phase.CHECKING,"equal version check finishes");check(!UpdateNotifications.available() && prefs.get(UpdateNotifications.LATEST,null)==null,"equal stable version clears old notification and ignores build qualifier");
+            runUpdateProxyChecks();liveUpdateFeedCheck();
+            source.blocked=true;source.result=new ReleaseInfo(ReleaseVersion.parse("0.1.32"));check(UpdateNotifications.checkNow(),"shutdown test starts a slow worker");until(() -> source.entered,"shutdown worker entered");long last=prefs.getLong(UpdateNotifications.LAST,0),start=System.nanoTime();UpdateNotifications.stop();long elapsed=java.util.concurrent.TimeUnit.NANOSECONDS.toMillis(System.nanoTime()-start);check(elapsed<500,"stop never waits for network or UI confirmation, ms="+elapsed);until(() -> !source.entered,"cancelled worker exits");pump(100);check(prefs.getLong(UpdateNotifications.LAST,0)==last && prefs.get(UpdateNotifications.LATEST,null)==null,"late cancelled result writes neither preferences nor available release");check(!readableUpdateIndicator(window),"monitor stop hides status indicator");
+            source.blocked=false;source.result=new ReleaseInfo(ReleaseVersion.parse("0.1.31"));UpdateNotifications.start(source,clock);check(UpdateNotifications.checkNow(),"monitor can restart after cancellation");until(UpdateNotifications::available,"restart fixture leaves cached available version");Files.writeString(clockFile,Long.toString(now));document.set(original);check(calls.get()==1,"all background and settings actions leave native update command count unchanged");check(!coordinator.hasSnapshot() && coordinator.activeProfile()==null,"update testing leaves palette journal empty");
+        }finally{handlers.deactivateHandler(activation);}
+    }
+
     private void runCleanup() throws Exception {
         ChromaIcons.setEnabled(false);check(!ChromaIcons.isEnabled(),"cleanup disables optional icons");
         var coordinator=ThemeStartup.coordinator();
@@ -1466,6 +1647,7 @@ public class WorkbenchProbe implements IApplication {
         for(String id:PaletteCatalog.ids()) check(coordinator.paletteDrafts().overrides(id).isEmpty(),"cleanup cleared test personal keys "+id);
         check(new SnapshotPreferences().load().original().isEmpty(),"cleanup journal empty");
         check(coordinator.activeProfile()==null,"cleanup active profile cleared");
+        UpdateNotifications.stop();var updatePrefs=InstanceScope.INSTANCE.getNode(SnapshotPreferences.PLUGIN_ID);for(String key:updatePrefs.keys())if(key.startsWith(UpdateNotifications.PREFIX))updatePrefs.remove(key);updatePrefs.flush();check(!UpdateNotifications.isRunning(),"cleanup stops update monitor");
     }
     private void runWinterSeparatorChecks() throws Exception {
         String id="winter-is-coming-dark-blue";

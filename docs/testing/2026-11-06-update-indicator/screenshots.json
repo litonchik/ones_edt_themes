@@ -1,0 +1,77 @@
+{
+  "2026.1.2-update-details.png": {
+    "width": 460,
+    "height": 131,
+    "sha256": "86989ef5e152f3d5dd087e5a0eec6142aef2d1e0423650cf489a76aefc155f33"
+  },
+  "2026.1.2-update-settings.png": {
+    "width": 679,
+    "height": 516,
+    "sha256": "1e388374fe7f9a0157e906a029999c54c5cf4ab2809212195648019a5f69ad04"
+  },
+  "2026.1.2-update-status-current.png": {
+    "width": 884,
+    "height": 581,
+    "sha256": "ce5c4fb1183e14aebf780268a2135d7f5a42ab34b0f710d1a283da0337a9711e"
+  },
+  "2026.1.2-update-status-dark.png": {
+    "width": 884,
+    "height": 581,
+    "sha256": "718006a75f61642017b8424669dce99fd5ce4a15749a474771296dea4b898044"
+  },
+  "2026.1.2-update-status-light.png": {
+    "width": 884,
+    "height": 581,
+    "sha256": "526b7dbcd9c2983743a62b7d19a8dfb3744c870d50542f34506d445b8f772445"
+  },
+  "2026.1.3-update-details.png": {
+    "width": 460,
+    "height": 131,
+    "sha256": "86989ef5e152f3d5dd087e5a0eec6142aef2d1e0423650cf489a76aefc155f33"
+  },
+  "2026.1.3-update-settings.png": {
+    "width": 679,
+    "height": 516,
+    "sha256": "1e388374fe7f9a0157e906a029999c54c5cf4ab2809212195648019a5f69ad04"
+  },
+  "2026.1.3-update-status-current.png": {
+    "width": 884,
+    "height": 581,
+    "sha256": "19e66a385635b2e7271da907cfa6bf6a453f1d8ac3994170d7d2e340c953a778"
+  },
+  "2026.1.3-update-status-dark.png": {
+    "width": 884,
+    "height": 581,
+    "sha256": "686776baef41e1f7d4a595a74ae8ca08b75510203fa973f463c89d0e0393a198"
+  },
+  "2026.1.3-update-status-light.png": {
+    "width": 884,
+    "height": 581,
+    "sha256": "f244f1392f45594ceb1a38e532ea36eb1ef4aa60e81edac6d497bb769c50278e"
+  },
+  "2026.2.2-update-details.png": {
+    "width": 460,
+    "height": 131,
+    "sha256": "86989ef5e152f3d5dd087e5a0eec6142aef2d1e0423650cf489a76aefc155f33"
+  },
+  "2026.2.2-update-settings.png": {
+    "width": 679,
+    "height": 517,
+    "sha256": "eab637a91445a7a98ddb9c3d23fc3240716067d8495a9fb3192c1cb230c22735"
+  },
+  "2026.2.2-update-status-current.png": {
+    "width": 884,
+    "height": 581,
+    "sha256": "291130d08e53b4b49c26786b1143e5c9bf7223900e0e62483f730142d2877bc6"
+  },
+  "2026.2.2-update-status-dark.png": {
+    "width": 884,
+    "height": 581,
+    "sha256": "4cea8cbd8e4a69f21ea5e16e1eaacf5d83dbcf8b31d8de5e07d821dadbc5da9b"
+  },
+  "2026.2.2-update-status-light.png": {
+    "width": 884,
+    "height": 581,
+    "sha256": "7d15069e1a9867111d5065bf476d1a3e24176a3cfbdd4d0f2e41e1cfec087bd5"
+  }
+}

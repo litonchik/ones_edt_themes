@@ -1,0 +1,56 @@
+[
+  {
+    "file": "2026.1.3-update-preview-status.png",
+    "width": 884,
+    "height": 581,
+    "sha256": "f1cab1ff9ff2df50223f403c856707216104d7e4627fc04358e074fc94a5ad74"
+  },
+  {
+    "file": "2026.1.3-update-preview-details.png",
+    "width": 460,
+    "height": 116,
+    "sha256": "2f163f08afc4c004e45676be29ab1505123ded021e56e2ad4fbeb47063d347d4"
+  },
+  {
+    "file": "2026.1.3-update-preview-settings.png",
+    "width": 679,
+    "height": 516,
+    "sha256": "33222cd41299aa9a3c3a556ca12b743ed141f4212e66a78ca06aceae9bb714c1"
+  },
+  {
+    "file": "2026.1.2-update-preview-status.png",
+    "width": 884,
+    "height": 581,
+    "sha256": "f1cab1ff9ff2df50223f403c856707216104d7e4627fc04358e074fc94a5ad74"
+  },
+  {
+    "file": "2026.1.2-update-preview-details.png",
+    "width": 460,
+    "height": 116,
+    "sha256": "2f163f08afc4c004e45676be29ab1505123ded021e56e2ad4fbeb47063d347d4"
+  },
+  {
+    "file": "2026.1.2-update-preview-settings.png",
+    "width": 679,
+    "height": 516,
+    "sha256": "893bf5c030ca91babb53ce425bb23bc1cf7ddcf7a335a4ed05e281768b6ea00b"
+  },
+  {
+    "file": "2026.2.2-update-preview-status.png",
+    "width": 884,
+    "height": 581,
+    "sha256": "2b94c3cbf621e3fba7f3ba92b1f99c84b8dc0951b6030171411c8eb983d557d3"
+  },
+  {
+    "file": "2026.2.2-update-preview-details.png",
+    "width": 460,
+    "height": 116,
+    "sha256": "2f163f08afc4c004e45676be29ab1505123ded021e56e2ad4fbeb47063d347d4"
+  },
+  {
+    "file": "2026.2.2-update-preview-settings.png",
+    "width": 679,
+    "height": 517,
+    "sha256": "344a2bd7793f0fa2185ba7c7cab705a204628f52c34567641fee354ce198f7f7"
+  }
+]
