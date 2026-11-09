@@ -1,10 +1,10 @@
 # Установка и использование тем EDT
 
-Версия **0.1.29** содержит **GitHub Light Default**, **Winter is Coming (Light)**,
+Версия **0.1.30** содержит **GitHub Light Default**, **Winter is Coming (Light)**,
 **Night Owl Light**, **Ayu Light (Bordered)**, **Noctis Lux**, **Visual Studio Light (C/C++)**, **Noctis Hibernus** и **Noctis Lilac**
 в группе «Светлые». Версия доступна через сайт обновлений и
-[GitHub Releases](https://github.com/litonchik/ones_edt_themes/releases/tag/v0.1.29).
-Для офлайн-установки используйте `edt-themes-0.1.29.zip` и соответствующий `.zip.sha256`.
+[GitHub Releases](https://github.com/litonchik/ones_edt_themes/releases/tag/v0.1.30).
+Для офлайн-установки используйте `edt-themes-0.1.30.zip` и соответствующий `.zip.sha256`.
 
 После обновления повторно нажмите **Применить** у выбранной палитры,
 чтобы обновить цвета Git-подписей, выделения строк и полей Eclipse Forms.
@@ -248,7 +248,7 @@ BSL включает девять проверенных категорий: в�
 [Возможности, ограничения и лицензия](reference/chroma-icons.md).
 Установка доступна через GitHub Pages или ZIP из Releases.
 
-## Готовящаяся версия 0.1.30: индикатор обновлений
+## Индикатор обновлений (с 0.1.30)
 
 При новой версии внизу появляется значок со стрелкой. Наведение показывает номер;
 нажатие открывает немодальные сведения. Установка запускается только кнопкой
